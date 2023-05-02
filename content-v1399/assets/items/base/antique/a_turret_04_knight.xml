@@ -1,0 +1,423 @@
+<item.SpriteItem id="1166" name="Tumba do Cavaleiro Assombrada" desc="Aqui repousa um cavaleiro assombrado" tags="trap,misc,magic,turret,rare" icon="items/base/antique/icon_a_turret_04_knight.png" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="1100" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-1.2" max="0.49,0.6,1.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="fire" script="scripts/item/action_turret.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Fire" event="fire"/>
+  </actions>
+  <data>
+    <entry key="action_attributes" value="shadow-10"/>
+    <entry key="action_attributes_secondary" value="speed-20,health-20"/>
+  </data>
+  <textures>
+    <texture id="coffin" source="items/base/antique/a_tomb_01_coffin.png" cols="2" rows="1"/>
+    <texture id="cover" source="items/base/antique/a_tomb_02_knight.png" cols="2" rows="1"/>
+    <texture id="book" source="items/base/antique/a_turret_04_knight.png" cols="2" rows="1"/>
+    <texture id="flare effect" source="items/base/consumables/magic/effect_generic_flare.png" cols="4" rows="1"/>
+    <texture id="vial glow effect" source="items/base/consumables/magic/effect_generic_vialglow.png" cols="2" rows="1"/>
+    <texture id="raygun effect" source="items/base/consumables/magic/effect_generic_rayguncharge.png" cols="4" rows="1"/>
+    <texture id="zap effect" source="items/base/consumables/magic/proj_generic_zap.png" cols="1" rows="4"/>
+    <texture id="shockball effect" source="items/base/consumables/magic/proj_generic_shockball.png" cols="1" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tomb">
+      <box min="-0.49,0,-1.2" max="0.49,0.6,1.2"/>
+      <layers>
+        <layer id="coffin 01" texture="coffin" y="30">
+          <view angle="45" x="-3" y="27" hm="true"/>
+          <view angle="135" col="1" x="-2" y="24"/>
+          <view angle="225" col="1" x="2" y="24" hm="true"/>
+          <view angle="315" x="3" y="27"/>
+        </layer>
+        <layer id="coffin 02" texture="coffin" y="30">
+          <view angle="45" x="-3" y="27" hm="true"/>
+          <view angle="135" col="1" x="-2" y="24"/>
+          <view angle="225" col="1" x="2" y="24" hm="true"/>
+          <view angle="315" x="3" y="27"/>
+        </layer>
+        <layer id="cover" texture="cover" y="30">
+          <view angle="45" x="-3" y="-17" hm="true"/>
+          <view angle="135" col="1" x="-5" y="-22"/>
+          <view angle="225" col="1" x="5" y="-23" hm="true"/>
+          <view angle="315" x="4" y="-17"/>
+        </layer>
+        <layer id="book" texture="book" y="30">
+          <view angle="45" x="-3" y="-33" hm="true"/>
+          <view angle="135" col="1" x="-15" y="-33"/>
+          <view angle="225" col="1" x="16" y="-33" hm="true"/>
+          <view angle="315" x="4" y="-33"/>
+        </layer>
+        <layer id="glow" texture="flare effect">
+          <view angle="45" col="3" x="11" y="-31"/>
+          <view angle="135" col="3" x="17" y="-15"/>
+          <view angle="225" col="3" x="-17" y="-15"/>
+          <view angle="315" col="3" x="-11" y="-31"/>
+        </layer>
+        <layer id="small glow 01" texture="vial glow effect">
+          <view angle="45" x="63" y="-72"/>
+          <view angle="135" x="62" y="-11"/>
+          <view angle="225" x="-62" y="-11"/>
+          <view angle="315" x="-63" y="-72"/>
+        </layer>
+        <layer id="small glow 02" texture="vial glow effect">
+          <view angle="45" x="45" y="-80"/>
+          <view angle="135" x="52" y="-26"/>
+          <view angle="225" x="-52" y="-26"/>
+          <view angle="315" x="-45" y="-80"/>
+        </layer>
+        <layer id="small glow 03" texture="vial glow effect">
+          <view angle="45" col="1" x="26" y="-78"/>
+          <view angle="135" col="1" x="35" y="-42"/>
+          <view angle="225" col="1" x="-35" y="-42"/>
+          <view angle="315" col="1" x="-26" y="-78"/>
+        </layer>
+        <layer id="small glow 04" texture="vial glow effect">
+          <view angle="45" x="11" y="-68"/>
+          <view angle="135" x="16" y="-43"/>
+          <view angle="225" x="-16" y="-43"/>
+          <view angle="315" x="-11" y="-68"/>
+        </layer>
+        <layer id="raygun 01" texture="raygun effect">
+          <view angle="45" x="10" y="-27"/>
+          <view angle="135" x="15" y="-13"/>
+          <view angle="225" x="-17" y="-13"/>
+          <view angle="315" x="-13" y="-26"/>
+        </layer>
+        <layer id="raygun 02" texture="raygun effect">
+          <view angle="45" col="1" x="10" y="-27"/>
+          <view angle="135" col="1" x="15" y="-13"/>
+          <view angle="225" col="1" x="-17" y="-13"/>
+          <view angle="315" col="1" x="-13" y="-26"/>
+        </layer>
+        <layer id="raygun 03" texture="raygun effect">
+          <view angle="45" col="2" x="10" y="-27"/>
+          <view angle="135" col="2" x="15" y="-13"/>
+          <view angle="225" col="2" x="-17" y="-13"/>
+          <view angle="315" col="2" x="-13" y="-26"/>
+        </layer>
+        <layer id="raygun 04" texture="raygun effect">
+          <view angle="45" col="3" x="10" y="-27"/>
+          <view angle="135" col="3" x="15" y="-13"/>
+          <view angle="225" col="3" x="-17" y="-13"/>
+          <view angle="315" col="3" x="-13" y="-26"/>
+        </layer>
+        <layer id="zap 01" texture="zap effect" y="50">
+          <view angle="45" x="12" y="-92"/>
+          <view angle="135" x="16" y="-80"/>
+          <view angle="225" x="-16" y="-80"/>
+          <view angle="315" x="-12" y="-92"/>
+        </layer>
+        <layer id="zap 02" texture="zap effect" y="50">
+          <view angle="45" row="1" x="12" y="-92"/>
+          <view angle="135" row="1" x="16" y="-80"/>
+          <view angle="225" row="1" x="-16" y="-80"/>
+          <view angle="315" row="1" x="-12" y="-92"/>
+        </layer>
+        <layer id="zap 03" texture="zap effect" y="50">
+          <view angle="45" row="2" x="12" y="-92"/>
+          <view angle="135" row="2" x="16" y="-80"/>
+          <view angle="225" row="2" x="-16" y="-80"/>
+          <view angle="315" row="2" x="-12" y="-92"/>
+        </layer>
+        <layer id="zap 04" texture="zap effect" y="50">
+          <view angle="45" row="3" x="12" y="-92"/>
+          <view angle="135" row="3" x="16" y="-80"/>
+          <view angle="225" row="3" x="-16" y="-80"/>
+          <view angle="315" row="3" x="-12" y="-92"/>
+        </layer>
+        <layer id="zap 05" texture="zap effect" y="50">
+          <view angle="45" row="2" x="12" y="-92" hm="true"/>
+          <view angle="135" row="2" x="16" y="-80" hm="true"/>
+          <view angle="225" row="2" x="-16" y="-80" hm="true"/>
+          <view angle="315" row="2" x="-12" y="-92" hm="true"/>
+        </layer>
+        <layer id="zap 06" texture="zap effect" y="50">
+          <view angle="45" row="3" x="12" y="-92" vm="true"/>
+          <view angle="135" row="3" x="16" y="-80" vm="true"/>
+          <view angle="225" row="3" x="-16" y="-80" vm="true"/>
+          <view angle="315" row="3" x="-12" y="-92" vm="true"/>
+        </layer>
+        <layer id="shock" texture="shockball effect">
+          <view angle="45" row="2" x="13" y="-42"/>
+          <view angle="135" row="2" x="16" y="-28"/>
+          <view angle="225" row="2" x="-15" y="-28"/>
+          <view angle="315" row="2" x="-11" y="-42"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="magic 01">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="small glow 01" color="0x5cd65c" a="0.4" blend="add"/>
+        </frame>
+        <frame id="magic 02">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="small glow 02" color="0x5cd65c" a="0.5" blend="add"/>
+        </frame>
+        <frame id="magic 03">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="small glow 03" color="0x5cd65c" a="0.6" blend="add"/>
+        </frame>
+        <frame id="magic 04">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="small glow 04" color="0x5cd65c" a="0.7" blend="add"/>
+        </frame>
+        <frame id="magic 05">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="zap 02" color="0x5cd65c" blend="add"/>
+          <layerref id="zap 01" color="0x84e084" blend="add"/>
+          <layerref id="zap 03" color="0x5cd65c" blend="add"/>
+          <layerref id="zap 04" color="0x5cd65c" blend="add"/>
+        </frame>
+        <frame id="magic 06">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="zap 02" color="0x84e084" a="0.8" blend="add"/>
+          <layerref id="zap 01" color="0x84e084" blend="add"/>
+          <layerref id="zap 05" color="0x5cd65c" blend="add"/>
+        </frame>
+        <frame id="magic 07">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="zap 02" color="0x5cd65c" blend="add"/>
+          <layerref id="zap 01" color="0x84e084" blend="add"/>
+          <layerref id="zap 03" color="0x5cd65c" blend="add"/>
+          <layerref id="zap 06" color="0x5cd65c" blend="add"/>
+        </frame>
+        <frame id="magic 08">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="zap 02" color="0x84e084" a="0.7" blend="add"/>
+          <layerref id="zap 01" color="0x84e084" blend="add"/>
+          <layerref id="zap 04" color="0x5cd65c" blend="add"/>
+        </frame>
+        <frame id="magic 09">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="zap 02" color="0x5cd65c" a="0.75" blend="add"/>
+          <layerref id="zap 01" color="0x84e084" a="0.75" blend="add"/>
+          <layerref id="zap 03" color="0x5cd65c" a="0.75" blend="add"/>
+          <layerref id="zap 04" color="0x5cd65c" a="0.75" blend="add"/>
+          <layerref id="raygun 01" color="0x5cd65c" a="0.4" blend="add"/>
+        </frame>
+        <frame id="magic 10">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="zap 02" color="0x84e084" a="0.3" blend="add"/>
+          <layerref id="zap 01" color="0x84e084" a="0.5" blend="add"/>
+          <layerref id="zap 05" color="0x5cd65c" a="0.5" blend="add"/>
+          <layerref id="raygun 02" color="0x5cd65c" a="0.6" blend="add"/>
+        </frame>
+        <frame id="magic 11">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="zap 02" color="0x5cd65c" a="0.25" blend="add"/>
+          <layerref id="zap 01" color="0x84e084" a="0.25" blend="add"/>
+          <layerref id="zap 03" color="0x5cd65c" a="0.25" blend="add"/>
+          <layerref id="zap 06" color="0x5cd65c" a="0.25" blend="add"/>
+          <layerref id="raygun 03" color="0x5cd65c" a="0.4" blend="add"/>
+        </frame>
+        <frame id="magic 12">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="zap 02" color="0x84e084" a="0.1" blend="add"/>
+          <layerref id="zap 01" color="0x84e084" a="0.1" blend="add"/>
+          <layerref id="zap 04" color="0x5cd65c" a="0.1" blend="add"/>
+          <layerref id="raygun 04" color="0x5cd65c" a="0.2" blend="add"/>
+        </frame>
+        <frame id="magic 13">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="shock" color="0x5cd65c" blend="add"/>
+          <layerref id="glow" color="0x5cd65c" blend="add"/>
+          <layerref id="zap 05" blend="add"/>
+        </frame>
+        <frame id="magic 14">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="shock" color="0x5cd65c" a="0.5" blend="add"/>
+          <layerref id="glow" color="0x5cd65c" a="0.8" blend="add"/>
+          <layerref id="zap 03" blend="add"/>
+        </frame>
+        <frame id="magic 15">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="shock" color="0x5cd65c" a="0.25" blend="add"/>
+          <layerref id="glow" color="0x5cd65c" a="0.6" blend="add"/>
+        </frame>
+        <frame id="magic 16">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="glow" color="0x5cd65c" a="0.4" blend="add"/>
+        </frame>
+        <frame id="magic 17">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+          <layerref id="glow" color="0x5cd65c" a="0.2" blend="add"/>
+        </frame>
+        <frame id="idle">
+          <layerref id="coffin 01" color="0x999999"/>
+          <layerref id="coffin 02" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="book"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="1">
+          <frameref id="idle"/>
+        </animation>
+        <animation id="In" framerate="16" loop="false">
+          <frameref id="magic 01" duration="2"/>
+          <frameref id="magic 02" duration="2"/>
+          <frameref id="magic 03" duration="2"/>
+          <frameref id="magic 04" duration="2"/>
+          <frameref id="magic 05"/>
+          <frameref id="magic 06"/>
+          <frameref id="magic 07"/>
+          <frameref id="magic 08"/>
+          <frameref id="magic 09"/>
+          <frameref id="magic 10"/>
+          <frameref id="magic 11"/>
+          <frameref id="magic 12"/>
+          <frameref id="idle"/>
+          <frameref id="magic 13"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="magic 14"/>
+          <frameref id="magic 15"/>
+          <frameref id="magic 16"/>
+          <frameref id="magic 17"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.8" z="0.2" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+        <layer id="Light_01" texture="Light" align="middle">
+          <view angle="45" x="5" y="-3"/>
+          <view angle="135" x="6" y="5"/>
+          <view angle="225" x="-8" y="3"/>
+          <view angle="315" x="-6" y="-6"/>
+        </layer>
+        <layer id="Light_02" texture="Light" align="middle">
+          <view angle="45" x="4" y="-1"/>
+          <view angle="135" x="3" y="3"/>
+          <view angle="225" x="-4"/>
+          <view angle="315" x="-3" y="-3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light_01" color="0x84f093" a="0.3"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light_02" color="0x84f093" a="0.6"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0x84f093" a="0.8"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0x84f093"/>
+        </frame>
+        <frame id="Idle">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.75" z="0.3" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="45" x="-6" y="4"/>
+          <view angle="135"/>
+          <view angle="225" x="3"/>
+          <view angle="315" x="8" y="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" a="0.4"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

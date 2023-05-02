@@ -1,0 +1,27 @@
+<item.SpriteItem id="1433" name="Tapete Vermelho" desc="Para entradas triunfantes." tags="floor" icon="items/base/modern/icon_m_rug_04_redcarpet.png" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="13" tokens="130" minLevel="1" minLevelType="4" minCPLevel="1">
+  <volume>
+    <box min="-0.45,-0.001,-0.45" max="0.45,0,0.45"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="red carpet" source="items/base/modern/m_rug_04_redcarpet.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="red carpet" layer="surface">
+      <box min="-0.45,-0.001,-0.45" max="0.45,0,0.45"/>
+      <layers>
+        <layer id="red carpet" texture="red carpet">
+          <view y="32"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

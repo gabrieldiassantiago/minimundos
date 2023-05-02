@@ -1,0 +1,161 @@
+<item.ChairItem id="2830" name="Luxe Toilet" desc="A modern bathroom toilet" tags="chair,misc" icon="items/base/modern/icon_m_bathroom_33_moderntoilet.png" price="85" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <seats>
+    <seat x="0.1" y="0.6">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.49,0,-0.3" max="0.49,1.25,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="select" script="scripts/item/select_flushtoilet_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="defaultAnimation" value="Open"/>
+    <entry key="aiUseInWorldEffects" value="hygiene-3"/>
+    <entry key="itemToiletClose" value="Flush"/>
+    <entry key="itemToiletCloseTip" value="Flush the toilet"/>
+    <entry key="itemToiletOpen" value="Flush Off"/>
+    <entry key="itemToiletOpenTip" value="Stop flushing the toilet"/>
+  </data>
+  <textures>
+    <texture id="main" source="items/base/modern/m_bathroom_33_moderntoilet.png" cols="2" rows="1"/>
+    <texture id="flush" source="items/base/modern/m_bathroom_33_moderntoilet_flush.png" cols="2" rows="2"/>
+    <texture id="tank" source="items/base/modern/m_bathroom_33_moderntoilet_tank.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="flushing" source="items/base/modern/m_bathroom_33_moderntoilet_flushing.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="LeftArm">
+      <box min="-0.49,0,-0.3" max="0.49,1.25,0.3"/>
+      <layers>
+        <layer id="main" texture="main" align="middle">
+          <view angle="45" x="-6" y="-49"/>
+          <view angle="135" x="6" y="-49" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="9" y="-36" alpha="0"/>
+          <view angle="315" col="1" x="-9" y="-36" hm="true"/>
+        </layer>
+        <layer id="flush_01" texture="flush">
+          <view angle="45" x="8" y="-34"/>
+          <view angle="135" x="-7" y="-34" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-13" y="-41" alpha="0"/>
+          <view angle="315" col="1" x="14" y="-41" hm="true"/>
+        </layer>
+        <layer id="flush_02" texture="flush">
+          <view angle="45" row="1" x="8" y="-34"/>
+          <view angle="135" row="1" x="-7" y="-34" alpha="0" hm="true"/>
+          <view angle="225" col="1" row="1" x="-13" y="-41" alpha="0"/>
+          <view angle="315" col="1" row="1" x="14" y="-41" hm="true"/>
+        </layer>
+        <layer id="tank" texture="tank">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" x="25" y="-20"/>
+          <view angle="315" x="-25" y="-20" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="main"/>
+          <layerref id="tank"/>
+        </frame>
+        <frame id="flush_01">
+          <layerref id="main"/>
+          <layerref id="flush_01"/>
+          <layerref id="tank"/>
+        </frame>
+        <frame id="flush_02">
+          <layerref id="main"/>
+          <layerref id="flush_02"/>
+          <layerref id="tank"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="4">
+          <frameref id="idle"/>
+        </animation>
+        <animation id="Closed" framerate="4">
+          <frameref id="flush_01">
+            <sample id="flushing"/>
+          </frameref>
+          <frameref id="flush_02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="RightArm">
+      <box min="-0.49,0,-0.3" max="0.49,1.25,0.3"/>
+      <layers>
+        <layer id="main" texture="main" align="middle">
+          <view angle="45" x="-6" y="-49" alpha="0"/>
+          <view angle="135" x="6" y="-49" hm="true"/>
+          <view angle="225" col="1" x="9" y="-36"/>
+          <view angle="315" col="1" x="-9" y="-36" alpha="0" hm="true"/>
+        </layer>
+        <layer id="flush_01" texture="flush">
+          <view angle="45" x="8" y="-34" alpha="0"/>
+          <view angle="135" x="-7" y="-34" hm="true"/>
+          <view angle="225" col="1" x="-13" y="-41"/>
+          <view angle="315" col="1" x="14" y="-41" alpha="0" hm="true"/>
+        </layer>
+        <layer id="flush_02" texture="flush">
+          <view angle="45" row="1" x="8" y="-34" alpha="0"/>
+          <view angle="135" row="1" x="-7" y="-34" hm="true"/>
+          <view angle="225" col="1" row="1" x="-13" y="-41"/>
+          <view angle="315" col="1" row="1" x="14" y="-41" alpha="0" hm="true"/>
+        </layer>
+        <layer id="tank" texture="tank">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" x="25" y="-20"/>
+          <view angle="315" x="-25" y="-20" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="main"/>
+          <layerref id="tank"/>
+        </frame>
+        <frame id="flush_01">
+          <layerref id="main"/>
+          <layerref id="flush_01"/>
+          <layerref id="tank"/>
+        </frame>
+        <frame id="flush_02">
+          <layerref id="main"/>
+          <layerref id="flush_02"/>
+          <layerref id="tank"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="4">
+          <frameref id="idle"/>
+        </animation>
+        <animation id="Closed" framerate="4">
+          <frameref id="flush_01"/>
+          <frameref id="flush_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

@@ -1,0 +1,194 @@
+<item.SpriteItem id="3555" name="Caldeira do Terror" desc="Uma caldeira com chama verde." tags="light,halloween,rare" icon="items/base/gothic/icon_g_torch_04_iron.png" price="115" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,0.7,0.35"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemTurnOnIcon" value="context/item/action/icon_fire_light.png"/>
+    <entry key="itemTurnOn" value="Light"/>
+    <entry key="itemTurnOffIcon" value="context/item/action/icon_fire_put_out.png"/>
+    <entry key="itemTurnOff" value="Put Out"/>
+  </data>
+  <textures>
+    <texture id="Flame" source="items/base/shared/s_flame_big_g.png" cols="2" rows="2"/>
+    <texture id="torch" source="items/base/gothic/g_torch_02_iron.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="eyes" source="items/base/gothic/g_torch_02_iron_eyes.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Torch">
+      <box min="-0.35,0,-0.35" max="0.35,0.7,0.35"/>
+      <layers>
+        <layer id="Flame01" texture="Flame">
+          <view y="-5"/>
+        </layer>
+        <layer id="Flame02" texture="Flame">
+          <view col="1" x="2" y="-5"/>
+        </layer>
+        <layer id="Flame03" texture="Flame">
+          <view row="1" y="-5"/>
+        </layer>
+        <layer id="Flame04" texture="Flame">
+          <view col="1" row="1" x="1" y="-5"/>
+        </layer>
+        <layer id="Flame01_h" texture="Flame">
+          <view y="-5" hm="true"/>
+        </layer>
+        <layer id="torch" texture="torch">
+          <view angle="45" y="22"/>
+          <view angle="135" y="22" hm="true"/>
+          <view angle="225" y="22"/>
+          <view angle="315" y="22" hm="true"/>
+        </layer>
+        <layer id="torch_front" texture="torch">
+          <view angle="45" col="1" y="22"/>
+          <view angle="135" col="1" y="22" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+        <layer id="diffuse" texture="Light">
+          <view y="-2"/>
+        </layer>
+        <layer id="eyes" texture="eyes">
+          <view angle="45" y="-13"/>
+          <view angle="135" y="-13" hm="true"/>
+          <view angle="225" y="-13"/>
+          <view angle="315" y="-13" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="torch"/>
+          <layerref id="diffuse" color="0xec5d40" a="0.6"/>
+          <layerref id="Flame01"/>
+          <layerref id="torch_front"/>
+          <layerref id="eyes" blend="hardlight"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="torch"/>
+          <layerref id="diffuse" color="0xec5d40" a="0.6"/>
+          <layerref id="Flame02"/>
+          <layerref id="torch_front"/>
+          <layerref id="eyes" a="0.8" blend="hardlight"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="torch"/>
+          <layerref id="diffuse" color="0xec5d40" a="0.6"/>
+          <layerref id="Flame03"/>
+          <layerref id="torch_front"/>
+          <layerref id="eyes" a="0.9" blend="hardlight"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="torch"/>
+          <layerref id="diffuse" color="0xec5d40" a="0.6"/>
+          <layerref id="Flame04"/>
+          <layerref id="torch_front"/>
+          <layerref id="eyes" a="0.8" blend="hardlight"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="torch"/>
+          <layerref id="diffuse" color="0xec5d40" a="0.6"/>
+          <layerref id="Flame01_h"/>
+          <layerref id="torch_front"/>
+          <layerref id="eyes" a="0.7" blend="hardlight"/>
+        </frame>
+        <frame id="off">
+          <layerref id="torch"/>
+          <layerref id="torch_front"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="3">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.5" s="7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xadf5b7"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xadf5b7" a="0.97"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xadf5b7" a="0.95"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="3">
+          <frameref id="Frame01"/>
+          <frameref id="Frame03" duration="2"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.7" s="1.2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" a="0.3"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,116 @@
+<item.SpriteItem id="7460" name="Globo de Neve Congelado" desc="Um globo de neve congelado [21 of 25]" tags="rare,misc" icon="items/base/consumables/clothing/accessory/acc_945_janbox_21_icon.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1.27,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="defaultAnimation" value="On"/>
+  </data>
+  <textures>
+    <texture id="globe" source="items/base/consumables/clothing/accessory/acc_945_janbox_21_item.png" cols="1" rows="1"/>
+    <texture id="snow" source="items/base/consumables/clothing/accessory/acc_945_janbox_21_snow.png" cols="6" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="snowglobe">
+      <box min="-0.49,0,-0.49" max="0.49,1.27,0.49"/>
+      <layers>
+        <layer id="snowglobe" texture="globe">
+          <view angle="45" y="35"/>
+          <view angle="135" y="35" hm="true"/>
+          <view angle="225" y="35"/>
+          <view angle="315" y="35" hm="true"/>
+        </layer>
+        <layer id="snow_01" texture="snow">
+          <view angle="45" y="35"/>
+          <view angle="135" y="35" hm="true"/>
+          <view angle="225" y="35"/>
+          <view angle="315" y="35" hm="true"/>
+        </layer>
+        <layer id="snow_02" texture="snow">
+          <view angle="45" col="1" y="35"/>
+          <view angle="135" col="1" y="35" hm="true"/>
+          <view angle="225" col="1" y="35"/>
+          <view angle="315" col="1" y="35" hm="true"/>
+        </layer>
+        <layer id="snow_03" texture="snow">
+          <view angle="45" col="2" y="35"/>
+          <view angle="135" col="2" y="35" hm="true"/>
+          <view angle="225" col="2" y="35"/>
+          <view angle="315" col="2" y="35" hm="true"/>
+        </layer>
+        <layer id="snow_04" texture="snow">
+          <view angle="45" col="3" y="35"/>
+          <view angle="135" col="3" y="35" hm="true"/>
+          <view angle="225" col="3" y="35"/>
+          <view angle="315" col="3" y="35" hm="true"/>
+        </layer>
+        <layer id="snow_05" texture="snow">
+          <view angle="45" col="4" y="35"/>
+          <view angle="135" col="4" y="35" hm="true"/>
+          <view angle="225" col="4" y="35"/>
+          <view angle="315" col="4" y="35" hm="true"/>
+        </layer>
+        <layer id="snow_06" texture="snow">
+          <view angle="45" col="5" y="35"/>
+          <view angle="135" col="5" y="35" hm="true"/>
+          <view angle="225" col="5" y="35"/>
+          <view angle="315" col="5" y="35" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_00">
+          <layerref id="snowglobe"/>
+        </frame>
+        <frame id="Frame_01">
+          <layerref id="snowglobe"/>
+          <layerref id="snow_01" a="0.75"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="snowglobe"/>
+          <layerref id="snow_02"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="snowglobe"/>
+          <layerref id="snow_03"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="snowglobe"/>
+          <layerref id="snow_04"/>
+        </frame>
+        <frame id="Frame_05">
+          <layerref id="snowglobe"/>
+          <layerref id="snow_05"/>
+        </frame>
+        <frame id="Frame_06">
+          <layerref id="snowglobe"/>
+          <layerref id="snow_06"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+          <frameref id="Frame_05"/>
+          <frameref id="Frame_06"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="Frame_00"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

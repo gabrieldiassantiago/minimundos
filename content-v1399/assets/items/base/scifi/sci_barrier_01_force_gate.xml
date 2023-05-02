@@ -1,0 +1,272 @@
+<item.SpriteItem id="1204" name="Porta da Divisória Espacial" desc="As pessoas tem que passar pelas áreas da estação espacial." tags="misc" icon="items/base/scifi/icon_sci_barrier_01_force_gate.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="35" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.4,0,-0.5" max="0.4,1.84,0.5"/>
+  </volume>
+  <events>
+    <event id="close" script="scripts/item/close_gate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+  </events>
+  <actions>
+    <action id="Open" state="true" event="open"/>
+    <action id="Close" state="true" event="close"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="gate" source="items/base/scifi/sci_barrier_01_force.png" cols="5" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_forcefield.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="open right">
+      <box min="-0.4,0,0.4" max="0.4,1.84,0.5"/>
+      <layers>
+        <layer id="post behind" texture="gate" y="32">
+          <view angle="45" col="2"/>
+          <view angle="135" col="2" alpha="0" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" hm="true"/>
+        </layer>
+        <layer id="post in front" texture="gate" y="32">
+          <view angle="45" col="1" alpha="0"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="post behind"/>
+          <layerref id="post in front"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="post behind" a="0"/>
+          <layerref id="post in front" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open left">
+      <box min="-0.4,0,-0.5" max="0.4,1.84,-0.4"/>
+      <layers>
+        <layer id="post behind" texture="gate" y="32">
+          <view angle="45" col="2" alpha="0"/>
+          <view angle="135" col="2" hm="true"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="2" alpha="0" hm="true"/>
+        </layer>
+        <layer id="post in front" texture="gate" y="32">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" alpha="0" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="post behind"/>
+          <layerref id="post in front"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="post behind" a="0"/>
+          <layerref id="post in front" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="closed">
+      <box min="-0.1,0,-0.5" max="0.1,1.84,0.5"/>
+      <layers>
+        <layer id="post behind" texture="gate" y="32">
+          <view angle="45" col="2"/>
+          <view angle="135" col="2" hm="true"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="2" hm="true"/>
+        </layer>
+        <layer id="closed" texture="gate" y="32">
+          <view angle="45" col="3"/>
+          <view angle="135" col="3" hm="true"/>
+          <view angle="225" col="3"/>
+          <view angle="315" col="3" hm="true"/>
+        </layer>
+        <layer id="post in front" texture="gate" y="32">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+        <layer id="highlight 01" texture="gate" y="3">
+          <view angle="45" row="1"/>
+          <view angle="135" row="1" hm="true"/>
+          <view angle="225" row="1"/>
+          <view angle="315" row="1" hm="true"/>
+        </layer>
+        <layer id="highlight 02" texture="gate" y="3">
+          <view angle="45" row="1"/>
+          <view angle="135" row="1" hm="true"/>
+          <view angle="225" row="1"/>
+          <view angle="315" row="1" hm="true"/>
+        </layer>
+        <layer id="lights" texture="gate" y="32">
+          <view angle="45" col="4"/>
+          <view angle="135" col="4" hm="true"/>
+          <view angle="225" col="4"/>
+          <view angle="315" col="4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="post behind" a="0"/>
+          <layerref id="closed" a="0"/>
+          <layerref id="post in front" a="0"/>
+        </frame>
+        <frame id="closed 01">
+          <layerref id="post behind"/>
+          <layerref id="closed" a="0.9" blend="hardlight"/>
+          <layerref id="highlight 01" y="-10" a="0.1" blend="add"/>
+          <layerref id="highlight 02" y="110" a="0.1" blend="add"/>
+          <layerref id="post in front"/>
+          <layerref id="lights" color="0x66ff" blend="add"/>
+        </frame>
+        <frame id="closed 02">
+          <layerref id="post behind"/>
+          <layerref id="closed" blend="hardlight"/>
+          <layerref id="highlight 01" a="0.1" blend="add"/>
+          <layerref id="highlight 02" y="100" a="0.1" blend="add"/>
+          <layerref id="post in front"/>
+          <layerref id="lights" color="0x66ff" a="0.9" blend="add"/>
+        </frame>
+        <frame id="closed 03">
+          <layerref id="post behind"/>
+          <layerref id="closed" blend="hardlight"/>
+          <layerref id="highlight 01" y="10" a="0.1" blend="add"/>
+          <layerref id="highlight 02" y="90" a="0.1" blend="add"/>
+          <layerref id="post in front"/>
+          <layerref id="lights" color="0x66ff" blend="add"/>
+        </frame>
+        <frame id="closed 04">
+          <layerref id="post behind"/>
+          <layerref id="closed" a="0.8" blend="hardlight"/>
+          <layerref id="highlight 01" y="20" a="0.1" blend="add"/>
+          <layerref id="highlight 02" y="80" a="0.1" blend="add"/>
+          <layerref id="post in front"/>
+          <layerref id="lights" color="0x66ff" a="0.9" blend="add"/>
+        </frame>
+        <frame id="closed 05">
+          <layerref id="post behind"/>
+          <layerref id="closed" blend="hardlight"/>
+          <layerref id="highlight 01" y="30" a="0.1" blend="add"/>
+          <layerref id="highlight 02" y="70" a="0.1" blend="add"/>
+          <layerref id="post in front"/>
+          <layerref id="lights" color="0x66ff" blend="add"/>
+        </frame>
+        <frame id="closed 06">
+          <layerref id="post behind"/>
+          <layerref id="closed" a="0.85" blend="hardlight"/>
+          <layerref id="highlight 01" y="40" a="0.1" blend="add"/>
+          <layerref id="highlight 02" y="60" a="0.1" blend="add"/>
+          <layerref id="post in front"/>
+          <layerref id="lights" color="0x66ff" a="0.9" blend="add"/>
+        </frame>
+        <frame id="closed 07">
+          <layerref id="post behind"/>
+          <layerref id="closed" blend="hardlight"/>
+          <layerref id="highlight 01" y="50" a="0.1" blend="add"/>
+          <layerref id="highlight 02" y="50" a="0.1" blend="add"/>
+          <layerref id="post in front"/>
+          <layerref id="lights" color="0x66ff" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="closed 01"/>
+          <frameref id="closed 02"/>
+          <frameref id="closed 03"/>
+          <frameref id="closed 04"/>
+          <frameref id="closed 05"/>
+          <frameref id="closed 06"/>
+          <frameref id="closed 07"/>
+          <frameref id="closed 06"/>
+          <frameref id="closed 05"/>
+          <frameref id="closed 04"/>
+          <frameref id="closed 03"/>
+          <frameref id="closed 02"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.95" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x5cafe9"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.95" s="6" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x80d5ec" a="0.35"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

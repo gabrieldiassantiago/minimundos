@@ -1,0 +1,176 @@
+<item.WidgetItem id="1048" name="Jogo de Disparos Arcade" desc="Uma máquina arcade com jogo de disparos." tags="widget,misc" icon="items/base/modern/icon_m_arcade_09_shooter.png" price="350" tokens="3500" minLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_arcade.swf" minCPLevel="1">
+  <volume>
+    <box min="-0.5,0,-0.4" max="1.35,2.2,1.4"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <actions>
+    <action id="Complete">
+      <eval>
+        <func type="range" id="Score" input="score"/>
+        <func type="relational" id="Game Name" input="name" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+    <action id="Ranking">
+      <eval>
+        <func type="range" id="Rank" input="rank"/>
+        <func type="relational" id="Game Name" input="name" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_xml_path" value="widgets/assets/arcade/control.mxml"/>
+    <entry key="arcade_genre" value="shooter"/>
+    <entry key="arcade_art" value="shooter"/>
+    <entry key="widget_background_override" value="widget/GrafittiBG.jpg"/>
+    <entry key="show_advert" value="false"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="iframeWidget" value="true"/>
+  </data>
+  <navigate position="infront" sitRange="2.00" standRange="2.00" targetRange="2.00" usableRange="-1.00"/>
+  <textures>
+    <texture id="screen box" source="items/base/modern/m_arcade_06_screen.png" cols="2" rows="1"/>
+    <texture id="control box" source="items/base/modern/m_arcade_09_control.png" cols="2" rows="1"/>
+    <texture id="tennis texture" source="items/base/modern/m_arcade_09_shooter.png" cols="2" rows="1"/>
+    <texture id="logo" source="items/base/modern/m_arcade_09_logo.png" cols="2" rows="1"/>
+    <texture id="screen" source="items/base/modern/m_arcade_09_screen.png" cols="1" rows="1"/>
+    <texture id="speaker" source="items/base/modern/m_arcade_09_speaker.png" cols="2" rows="1"/>
+    <texture id="animation" source="items/base/modern/m_arcade_09_anim.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_arcade_large.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Arcade" x="0.3" z="0.5">
+      <box min="-0.8,0,-0.9" max="1.05,2.2,0.9"/>
+      <layers>
+        <layer id="cabinet" texture="screen box">
+          <view angle="45" x="-29" y="32"/>
+          <view angle="135" x="29" y="32" hm="true"/>
+          <view angle="225" col="1" x="33" y="59" hm="true"/>
+          <view angle="315" col="1" x="-33" y="59"/>
+        </layer>
+        <layer id="control box" texture="control box">
+          <view angle="45" x="37" y="70"/>
+          <view angle="135" x="-37" y="70" hm="true"/>
+          <view angle="225" col="1" x="-54" y="32" hm="true"/>
+          <view angle="315" col="1" x="54" y="32"/>
+        </layer>
+        <layer id="screen01" texture="animation">
+          <view angle="45" x="-21" y="-73"/>
+          <view angle="135" x="21" y="-73" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen02" texture="animation">
+          <view angle="45" col="1" x="-21" y="-73"/>
+          <view angle="135" col="1" x="21" y="-73" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="screen03" texture="animation">
+          <view angle="45" col="2" x="-21" y="-73"/>
+          <view angle="135" col="2" x="21" y="-73" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+        <layer id="tennis texture" texture="tennis texture">
+          <view angle="45" x="-40" y="22"/>
+          <view angle="135" x="40" y="22" hm="true"/>
+          <view angle="225" col="1" x="29" y="52" hm="true"/>
+          <view angle="315" col="1" x="-29" y="52"/>
+        </layer>
+        <layer id="logo" texture="logo">
+          <view angle="45" x="-19" y="-160"/>
+          <view angle="135" col="1" x="19" y="-160"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="speaker" texture="speaker">
+          <view angle="45" x="-60" y="28"/>
+          <view angle="135" x="61" y="28" hm="true"/>
+          <view angle="225" col="1" x="-24" y="48" hm="true"/>
+          <view angle="315" col="1" x="25" y="48"/>
+        </layer>
+        <layer id="speaker01" texture="speaker">
+          <view angle="45" x="30" y="-17"/>
+          <view angle="135" x="-30" y="-17" hm="true"/>
+          <view angle="225" x="65" y="2"/>
+          <view angle="315" x="-65" y="2" hm="true"/>
+        </layer>
+        <layer id="screen" texture="screen">
+          <view angle="45" x="-21" y="-73"/>
+          <view angle="135" x="21" y="-73" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="speaker01"/>
+          <layerref id="cabinet"/>
+          <layerref id="control box"/>
+          <layerref id="screen01"/>
+          <layerref id="tennis texture"/>
+          <layerref id="logo"/>
+          <layerref id="screen"/>
+          <layerref id="screen01"/>
+          <layerref id="speaker"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="speaker01"/>
+          <layerref id="cabinet"/>
+          <layerref id="control box"/>
+          <layerref id="screen02"/>
+          <layerref id="tennis texture"/>
+          <layerref id="logo"/>
+          <layerref id="screen"/>
+          <layerref id="screen02"/>
+          <layerref id="speaker"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="speaker01"/>
+          <layerref id="cabinet"/>
+          <layerref id="control box"/>
+          <layerref id="screen03"/>
+          <layerref id="tennis texture"/>
+          <layerref id="screen"/>
+          <layerref id="logo"/>
+          <layerref id="screen03"/>
+          <layerref id="speaker"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="1">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.5" s="6.4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="10"/>
+          <view angle="135" x="2" y="4" hm="true"/>
+          <view angle="225" col="1" x="-5" y="1"/>
+          <view angle="315" col="1" x="-5" y="-5" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

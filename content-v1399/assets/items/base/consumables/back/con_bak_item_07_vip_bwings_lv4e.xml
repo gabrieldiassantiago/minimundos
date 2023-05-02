@@ -1,0 +1,37 @@
+<item.SpriteItem id="3197" name="Asas de Fada Mistério" desc="Uma das mais importantes asas encantadas do MiniMundos." tags="consumable,actionbar,wear,back,girl,action_wearable_toggle,slave_catalog_colorize,unsearchable" icon="items/base/consumables/back/icon_con_bak_item_07_vip_bwings_lv4e.png" price="25920" minLevel="80" minLevelType="4" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" premium="Y">
+  <volume>
+    <box min="-0.43,0,-0.43" max="0.43,0.4,0"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+25,nature+40"/>
+    <entry key="action_attributes_secondary" value="speed+80,health+80"/>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/fairywings.xml"/>
+  </data>
+  <textures>
+    <texture id="vip_bwings_level4" source="items/base/consumables/back/con_bak_item_07_vip_bwings_lv4e.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.43,0,-0.43" max="0.43,0.4,0"/>
+      <layers>
+        <layer id="bwings_level4" texture="vip_bwings_level4">
+          <view angle="45" x="-7" y="26"/>
+          <view angle="135" x="7" y="26" hm="true"/>
+          <view angle="225" col="1" x="9" y="26"/>
+          <view angle="315" col="1" x="-9" y="26" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

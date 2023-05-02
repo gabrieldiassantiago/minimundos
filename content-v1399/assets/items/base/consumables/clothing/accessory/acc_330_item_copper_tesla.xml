@@ -1,0 +1,40 @@
+<item.SpriteItem id="5051" name="Bastão Iluminado Play" desc="Um energizante bastão do poder" tags="rare,actionbar,consumable,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_330_icon_copper_tesla.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="1000">
+  <volume>
+    <box min="-0.18,0,-0.18" max="0.18,2.1,0.18"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="nature+25"/>
+    <entry key="action_attributes_secondary" value="speed+30,health+20"/>
+  </data>
+  <textures>
+    <texture id="Gardening Fork" source="items/base/consumables/clothing/accessory/acc_330_item_copper_tesla.png" cols="1" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/clothing/accessory/acc_198_item_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Gardening Fork">
+      <box min="-0.18,0,-0.18" max="0.18,2.1,0.18"/>
+      <layers>
+        <layer id="Gardening Fork" texture="Gardening Fork">
+          <view angle="45" y="20" hm="true"/>
+          <view angle="135" y="20"/>
+          <view angle="225" y="20" hm="true"/>
+          <view angle="315" y="20"/>
+        </layer>
+        <layer id="Shadow" texture="shadow">
+          <view y="5" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

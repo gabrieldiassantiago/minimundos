@@ -1,0 +1,167 @@
+<item.SpriteItem id="0" name="Snow Hare" desc="A Bunny head" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bunny" source="items/base/consumables/head/con_head_204_hare.png" cols="5" rows="1"/>
+    <texture id="ears" source="items/base/consumables/head/con_head_204_hare_ears.png" cols="5" rows="2"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_204_hare_eyes.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="bunny" texture="bunny">
+          <view angle="0" col="2" x="3" y="12"/>
+          <view angle="45" x="2" y="13"/>
+          <view angle="90" col="1" y="17"/>
+          <view angle="135" x="-3" y="13" hm="true"/>
+          <view angle="180" col="2" x="-3" y="12" hm="true"/>
+          <view angle="225" col="3" x="2" y="11"/>
+          <view angle="270" col="4" y="9"/>
+          <view angle="315" col="3" x="-2" y="11" hm="true"/>
+        </layer>
+        <layer id="ears_down" texture="ears">
+          <view angle="0" col="2" row="1" x="-17" y="36"/>
+          <view angle="45" row="1" x="-19" y="27"/>
+          <view angle="90" col="1" row="1" x="-1" y="24"/>
+          <view angle="135" row="1" x="18" y="27" hm="true"/>
+          <view angle="180" col="2" row="1" x="17" y="36" hm="true"/>
+          <view angle="225" col="3" row="1" x="22" y="46"/>
+          <view angle="270" col="4" row="1" x="1" y="41"/>
+          <view angle="315" col="3" row="1" x="-22" y="46" hm="true"/>
+        </layer>
+        <layer id="ears_up" texture="ears">
+          <view angle="0" col="2" x="-17" y="2"/>
+          <view angle="45" x="-19" y="-9"/>
+          <view angle="90" col="1" x="-1" y="-5"/>
+          <view angle="135" x="18" y="-9" hm="true"/>
+          <view angle="180" col="2" x="17" y="2" hm="true"/>
+          <view angle="225" col="3" x="22" y="12"/>
+          <view angle="270" col="4" x="1" y="17"/>
+          <view angle="315" col="3" x="-22" y="12" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="9" y="-1"/>
+          <view angle="45" x="3" y="-2"/>
+          <view angle="90" col="1" y="-2"/>
+          <view angle="135" x="-4" y="-2" hm="true"/>
+          <view angle="180" col="2" x="-9" y="-1" hm="true"/>
+          <view angle="225" col="3" x="-12" y="-8"/>
+          <view angle="270" col="4" y="9"/>
+          <view angle="315" col="3" x="12" y="-8" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="bunny"/>
+          <layerref id="ears_down"/>
+        </frame>
+        <frame id="01_blink">
+          <layerref id="bunny"/>
+          <layerref id="ears_down"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="02">
+          <layerref id="bunny"/>
+          <layerref id="ears_up"/>
+        </frame>
+        <frame id="02_blink">
+          <layerref id="bunny"/>
+          <layerref id="ears_up"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="jump01">
+          <layerref id="bunny" y="1"/>
+          <layerref id="ears_down" y="1"/>
+          <layerref id="blink" y="1"/>
+        </frame>
+        <frame id="jump02">
+          <layerref id="bunny" y="-2"/>
+          <layerref id="ears_up" y="-2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="6">
+          <frameref id="01_blink"/>
+          <frameref id="01" duration="8"/>
+          <frameref id="01_blink"/>
+          <frameref id="01"/>
+          <frameref id="01_blink"/>
+          <frameref id="01" duration="14"/>
+          <frameref id="01_blink"/>
+          <frameref id="01" duration="8"/>
+          <frameref id="01_blink"/>
+          <frameref id="01"/>
+          <frameref id="01_blink"/>
+          <frameref id="01" duration="14"/>
+          <frameref id="jump01"/>
+          <frameref id="jump02"/>
+          <frameref id="02_blink"/>
+          <frameref id="02" duration="8"/>
+          <frameref id="02_blink"/>
+          <frameref id="02"/>
+          <frameref id="02_blink"/>
+          <frameref id="02" duration="14"/>
+          <frameref id="02_blink"/>
+          <frameref id="02" duration="8"/>
+          <frameref id="02_blink"/>
+          <frameref id="02"/>
+          <frameref id="02_blink"/>
+          <frameref id="02" duration="14"/>
+          <frameref id="02_blink"/>
+          <frameref id="02" duration="8"/>
+          <frameref id="02_blink"/>
+          <frameref id="02"/>
+          <frameref id="02_blink"/>
+          <frameref id="02" duration="14"/>
+        </animation>
+        <animation id="Sit" framerate="6">
+          <frameref id="01_blink"/>
+          <frameref id="01" duration="8"/>
+          <frameref id="01_blink"/>
+          <frameref id="01"/>
+          <frameref id="01_blink"/>
+          <frameref id="01" duration="14"/>
+          <frameref id="01_blink"/>
+          <frameref id="01" duration="8"/>
+          <frameref id="01_blink"/>
+          <frameref id="01"/>
+          <frameref id="01_blink"/>
+          <frameref id="01" duration="14"/>
+          <frameref id="jump01"/>
+          <frameref id="jump02"/>
+          <frameref id="02_blink"/>
+          <frameref id="02" duration="8"/>
+          <frameref id="02_blink"/>
+          <frameref id="02"/>
+          <frameref id="02_blink"/>
+          <frameref id="02" duration="14"/>
+          <frameref id="02_blink"/>
+          <frameref id="02" duration="8"/>
+          <frameref id="02_blink"/>
+          <frameref id="02"/>
+          <frameref id="02_blink"/>
+          <frameref id="02" duration="14"/>
+          <frameref id="02_blink"/>
+          <frameref id="02" duration="8"/>
+          <frameref id="02_blink"/>
+          <frameref id="02"/>
+          <frameref id="02_blink"/>
+          <frameref id="02" duration="14"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="01"/>
+          <frameref id="01_blink"/>
+          <frameref id="02_blink"/>
+          <frameref id="jump01"/>
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,49 @@
+<item.WidgetItem id="5385" name="Livro de Feitiços" desc="Mensagens que vem dos túmulos" tags="rare,widget,halloween" icon="items/base/gothic/icon_g_halloween_11_spellbook.png" price="10" minLevel="1" minLevelType="4" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" viewDirection="vertical" widget="widgets/widget_guestbook.swf">
+  <volume>
+    <box min="-0.24,0,-0.4" max="0.24,0.35,0.4"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <navigate sitRange="2.00" standRange="2.00" targetRange="1.00" usableRange="-1.00"/>
+  <data>
+    <entry key="frame" value="modern"/>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_xml_path" value="widgets/assets/guestbook/control-ui.mxml"/>
+    <entry key="config_xml_path" value="widgets/assets/guestbook/config-ui.mxml"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Book" source="items/base/gothic/g_halloween_11_spellbook.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Book">
+      <box min="-0.24,0,-0.4" max="0.24,0.35,0.4"/>
+      <layers>
+        <layer id="CloseBook" texture="Book">
+          <view angle="45" x="-2" y="27"/>
+          <view angle="135" row="1" x="3" y="28"/>
+          <view angle="225" row="1" x="-3" y="29" hm="true"/>
+          <view angle="315" x="6" y="24" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Close_00">
+          <layerref id="CloseBook"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="8">
+          <frameref id="Close_00"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

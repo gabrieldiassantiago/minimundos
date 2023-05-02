@@ -1,0 +1,45 @@
+<item.SpriteItem id="1682" name="Raio de Cola" desc="Deixe seu inimigo atordoado e grudento." tags="consumable,actionbar,group_shadow,scifi,gun,bad,reusable,usable,action_consumable_target" icon="items/base/consumables/magic/icon_con_item_47_gluegun.png" price="3700" tokens="37000" minLevel="1" minCPLevel="10" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.7,0.2"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="10"/>
+    <entry key="action_attributes" value="shadow-20"/>
+    <entry key="action_attributes_secondary" value="speed-50,health-90"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_shoot.png"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/magic/con_item_47_gluegun.png" cols="5" rows="1"/>
+    <texture id="stand" source="items/base/consumables/magic/con_item_generic_gunstand.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,0.7,0.2"/>
+      <layers>
+        <layer id="stand" texture="stand" y="10">
+          <view angle="45" y="3"/>
+          <view angle="135" y="3" hm="true"/>
+          <view angle="225" col="1" y="3"/>
+          <view angle="315" col="1" y="3" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Texture" y="10">
+          <view angle="45" x="-1" y="-33"/>
+          <view angle="135" x="1" y="-33" hm="true"/>
+          <view angle="225" col="3" x="3" y="-28" hm="true"/>
+          <view angle="315" col="3" x="-3" y="-28"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

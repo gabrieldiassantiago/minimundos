@@ -1,0 +1,77 @@
+<item.SpriteItem id="0" name="Mudball Projectile" desc="A mudball projectile effect." dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.08,-0.08,-0.08" max="0.08,0.08,0.08"/>
+  </volume>
+  <textures>
+    <texture id="trail" source="items/base/consumables/magic/proj_96_mud.png" cols="3" rows="2"/>
+    <texture id="mud" source="items/base/consumables/magic/con_item_96_mudball.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Mudball">
+      <box min="-0.08,-0.08,-0.08" max="0.08,0.08,0.08"/>
+      <layers>
+        <layer id="mud" type="group">
+          <layer id="Snowball" texture="mud" y="8">
+            <view angle="0"/>
+            <view angle="45"/>
+            <view angle="90"/>
+            <view angle="135"/>
+            <view angle="180"/>
+            <view angle="225"/>
+            <view angle="270"/>
+            <view angle="315"/>
+          </layer>
+          <layer id="Trail 01" texture="trail" y="60">
+            <view angle="0" col="2" x="-26" y="-44" hm="true"/>
+            <view angle="45" x="-11" y="-43"/>
+            <view angle="90" col="1" x="6" y="-47"/>
+            <view angle="135" x="12" y="-43" hm="true"/>
+            <view angle="180" col="2" x="25" y="-44"/>
+            <view angle="225" x="12" y="-20" hm="true" vm="true"/>
+            <view angle="270" col="1" x="6" y="-18" vm="true"/>
+            <view angle="315" x="-12" y="-20" vm="true"/>
+          </layer>
+          <layer id="Trail 02" texture="trail" y="60">
+            <view angle="0" col="2" row="1" x="-26" y="-47" hm="true"/>
+            <view angle="45" row="1" x="-11" y="-46"/>
+            <view angle="90" col="1" row="1" x="7" y="-49"/>
+            <view angle="135" row="1" x="12" y="-47" hm="true"/>
+            <view angle="180" col="2" row="1" x="25" y="-47"/>
+            <view angle="225" row="1" x="12" y="-16" hm="true" vm="true"/>
+            <view angle="270" col="1" row="1" x="7" y="-15" vm="true"/>
+            <view angle="315" row="1" x="-12" y="-17" vm="true"/>
+          </layer>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Proj Snowball" type="group">
+          <frame id="Snowball 01">
+            <layerref id="Trail 02"/>
+            <layerref id="Snowball"/>
+          </frame>
+          <frame id="Snowball 02">
+            <layerref id="Trail 01"/>
+            <layerref id="Snowball"/>
+          </frame>
+          <frame id="Snowball Idle">
+            <layerref id="Snowball"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Snowball Idle"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="Snowball 01">
+            <sample id="woosh"/>
+          </frameref>
+          <frameref id="Snowball 02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

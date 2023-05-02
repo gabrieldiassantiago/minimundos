@@ -1,0 +1,45 @@
+<item.SpriteItem id="5036" name="Controle Confuso" desc="Emite sons que deixam o seu inimigo confuso." tags="unsearchable,consumable,actionbar,group_shadow,action_consumable_target,scifi,gun,bad,reusable,usable,destroy" icon="items/base/consumables/magic/icon_con_item_65_confuser_destroy.png" price="900" tokens="9000" minLevel="1" minLevelType="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.17,0,-0.12" max="0.17,0.1,0.12"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="6"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_shoot.png"/>
+    <entry key="action_attributes" value="shadow-10"/>
+    <entry key="action_attributes_secondary" value="speed-25,health-10"/>
+  </data>
+  <textures>
+    <texture id="shad" source="items/base/consumables/magic/con_item_65_confuser_shad.png" cols="1" rows="1"/>
+    <texture id="weapon" source="items/base/consumables/magic/con_item_65_confuser.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.17,0,-0.12" max="0.17,0.1,0.12"/>
+      <layers>
+        <layer id="shad" texture="shad" y="10">
+          <view angle="45" x="-2" y="10" hm="true"/>
+          <view angle="135" x="2" y="10"/>
+          <view angle="225" x="-2" y="10" hm="true"/>
+          <view angle="315" x="2" y="10"/>
+        </layer>
+        <layer id="weapon" texture="weapon" y="10">
+          <view angle="45" col="3" x="-14" y="3" hm="true"/>
+          <view angle="135" col="3" x="14" y="3"/>
+          <view angle="225" x="13" y="19"/>
+          <view angle="315" x="-13" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

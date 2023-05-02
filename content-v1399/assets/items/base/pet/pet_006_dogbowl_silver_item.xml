@@ -1,0 +1,117 @@
+<item.SpriteItem id="4798" name="Tigela de Cão Prata Play" desc="Uma tigela que contém água e ração" tags="misc,seasonal" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none" icon="items/base/pet/pet_006_dogbowl_silver_icon.png" price="10">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.15,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Empty" state="true" event="animate(00)"/>
+    <action id="Little Water" state="true" event="animate(01)"/>
+    <action id="Lots of Water" state="true" event="animate(02)"/>
+    <action id="Little Food" state="true" event="animate(03)"/>
+    <action id="Some Food" state="true" event="animate(04)"/>
+    <action id="Lots of Food" state="true" event="animate(05)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="6"/>
+    <entry key="00" value="Empty"/>
+    <entry key="01" value="Little Water"/>
+    <entry key="02" value="Lots of Water"/>
+    <entry key="03" value="Little Food"/>
+    <entry key="04" value="Some Food"/>
+    <entry key="05" value="Lots of Food"/>
+  </data>
+  <textures>
+    <texture id="Bowl" source="items/base/pet/pet_006_dogbowl_silver_item.png" cols="6" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Bowl">
+      <box min="-0.2,0,-0.2" max="0.2,0.15,0.2"/>
+      <layers>
+        <layer id="Empty" texture="Bowl">
+          <view angle="45" x="1" y="19"/>
+          <view angle="135" y="19" hm="true"/>
+          <view angle="225" x="1" y="19"/>
+          <view angle="315" y="19" hm="true"/>
+        </layer>
+        <layer id="LittleWater" texture="Bowl">
+          <view angle="45" col="1" x="-1" y="19"/>
+          <view angle="135" col="1" x="2" y="19" hm="true"/>
+          <view angle="225" col="1" x="-1" y="19"/>
+          <view angle="315" col="1" x="2" y="19" hm="true"/>
+        </layer>
+        <layer id="LotsWater" texture="Bowl">
+          <view angle="45" col="2" x="-2" y="19"/>
+          <view angle="135" col="2" x="3" y="19" hm="true"/>
+          <view angle="225" col="2" x="-2" y="19"/>
+          <view angle="315" col="2" x="3" y="19" hm="true"/>
+        </layer>
+        <layer id="LittleFood" texture="Bowl">
+          <view angle="45" col="3" x="-2" y="18"/>
+          <view angle="135" col="3" x="3" y="18" hm="true"/>
+          <view angle="225" col="3" x="-2" y="18"/>
+          <view angle="315" col="3" x="3" y="18" hm="true"/>
+        </layer>
+        <layer id="SomeFood" texture="Bowl">
+          <view angle="45" col="4" x="-3" y="18"/>
+          <view angle="135" col="4" x="4" y="18" hm="true"/>
+          <view angle="225" col="4" x="-3" y="18"/>
+          <view angle="315" col="4" x="4" y="18" hm="true"/>
+        </layer>
+        <layer id="LotsFood" texture="Bowl">
+          <view angle="45" col="5" x="-3" y="18"/>
+          <view angle="135" col="5" x="4" y="18" hm="true"/>
+          <view angle="225" col="5" x="-3" y="18"/>
+          <view angle="315" col="5" x="4" y="18" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Empty">
+          <layerref id="Empty"/>
+        </frame>
+        <frame id="LittleWater">
+          <layerref id="LittleWater"/>
+        </frame>
+        <frame id="LotsWater">
+          <layerref id="LotsWater"/>
+        </frame>
+        <frame id="LittleFood">
+          <layerref id="LittleFood"/>
+        </frame>
+        <frame id="SomeFood">
+          <layerref id="SomeFood"/>
+        </frame>
+        <frame id="LotsFood">
+          <layerref id="LotsFood"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00">
+          <frameref id="Empty"/>
+        </animation>
+        <animation id="01">
+          <frameref id="LittleWater"/>
+        </animation>
+        <animation id="02">
+          <frameref id="LotsWater"/>
+        </animation>
+        <animation id="03">
+          <frameref id="LittleFood"/>
+        </animation>
+        <animation id="04">
+          <frameref id="SomeFood"/>
+        </animation>
+        <animation id="05">
+          <frameref id="LotsFood"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

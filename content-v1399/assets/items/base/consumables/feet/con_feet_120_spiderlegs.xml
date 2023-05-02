@@ -1,0 +1,50 @@
+<item.SpriteItem id="5365" name="Patas de Aranha Play" desc="Uma criatura horripilante" tags="rare,consumable,actionbar,wear,feet,action_ridable_toggle" icon="items/base/consumables/feet/con_feet_120_spiderlegs_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="1000">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,1.4,0.48"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_rideable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+50"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_108_ufo_shadow.png" cols="1" rows="1"/>
+    <texture id="base" source="items/base/consumables/feet/con_feet_120_spiderlegs_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.48,0,-0.48" max="0.48,1.4,0.48"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" y="58"/>
+          <view angle="135" y="58" hm="true"/>
+          <view angle="225" col="1" y="60" hm="true"/>
+          <view angle="315" col="1" y="60"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" x="-3" y="67"/>
+          <view angle="135" x="3" y="67" hm="true"/>
+          <view angle="225" x="10" y="72"/>
+          <view angle="315" x="-10" y="72" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="shadow"/>
+          <layerref id="base"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

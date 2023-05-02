@@ -1,0 +1,88 @@
+<item.SpriteItem id="3111" name="Pia de Jardim Eco" desc="Uma pia de jardim ecológica." tags="misc" icon="items/base/outdoor/icon_o_kitchen_09_sink.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="75" tokens="750">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,1.06,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/outdoor/o_kitchen_03_standard.png" cols="2" rows="1"/>
+    <texture id="sink" source="items/base/outdoor/o_kitchen_09_sink.png" cols="2" rows="1"/>
+    <texture id="water" source="items/base/modern/m_kitchen_35_water.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Unit">
+      <box min="-0.48,0,-0.48" max="0.48,1.06,0.48"/>
+      <layers>
+        <layer id="Base" texture="base">
+          <view angle="45" x="-2" y="37"/>
+          <view angle="135" y="37" hm="true"/>
+          <view angle="225" col="1" x="2" y="43"/>
+          <view angle="315" col="1" x="-4" y="44" hm="true"/>
+        </layer>
+        <layer id="Sink" texture="sink">
+          <view angle="45" x="4" y="-61"/>
+          <view angle="135" x="-5" y="-60" hm="true"/>
+          <view angle="225" col="1" x="-6" y="-61"/>
+          <view angle="315" col="1" x="4" y="-61" hm="true"/>
+        </layer>
+        <layer id="Water01" texture="water">
+          <view angle="45" x="8" y="-68"/>
+          <view angle="135" x="-10" y="-68"/>
+          <view angle="225" x="-7" y="-75"/>
+          <view angle="315" x="5" y="-76"/>
+        </layer>
+        <layer id="Water02" texture="water">
+          <view angle="45" col="1" x="8" y="-68"/>
+          <view angle="135" col="1" x="-10" y="-68"/>
+          <view angle="225" col="1" x="-7" y="-75"/>
+          <view angle="315" col="1" x="5" y="-76"/>
+        </layer>
+        <layer id="Water03" texture="water">
+          <view angle="45" col="2" x="8" y="-68"/>
+          <view angle="135" col="2" x="-10" y="-68"/>
+          <view angle="225" col="2" x="-7" y="-75"/>
+          <view angle="315" col="2" x="5" y="-76"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Base"/>
+          <layerref id="Sink"/>
+        </frame>
+        <frame id="On01">
+          <layerref id="Base"/>
+          <layerref id="Sink"/>
+          <layerref id="Water01"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Base"/>
+          <layerref id="Sink"/>
+          <layerref id="Water02"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Base"/>
+          <layerref id="Sink"/>
+          <layerref id="Water03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On" framerate="8">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

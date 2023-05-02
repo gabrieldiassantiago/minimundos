@@ -1,0 +1,110 @@
+<f id="ZombieSuit" parentId="Suits">
+  <g id="ZombieSuit">
+    <c id="ZombieSkeletonTorsoColorMaster" sId="ZombieSkeletonTorso" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor"/>
+    <c id="ZombiePantsColor" c="4534274" a="1.00" b="58.8" ct="1.58" lId="ZombiePants_Color1"/>
+    <s id="ZombieSkeletonTorso" cId="Torso" s="items/base/consumables/clothing/suits/suit_04_torso.png" pri="1"/>
+    <g id="SkeletonPants" name="SkeletonLegs" icon="items/base/consumables/clothing/suits/icon_legs_trouser.png">
+      <s id="ZombieSkeletonPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_04_leg_idle.png"/>
+      <s id="ZombieSkeletonPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_04_leg_walk1.png"/>
+      <s id="ZombieSkeletonPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_04_leg_walk2.png"/>
+      <s id="ZombieSkeletonPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_04_leg_walk3.png"/>
+      <s id="ZombieSkeletonPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_04_leg_walk4.png"/>
+      <s id="ZombieSkeletonSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_04_sit_lower.png"/>
+      <s id="ZombieSkeletonSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_04_sit_lower.png"/>
+      <c sId="ZombieSkeletonPantIdleBase" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonPantWalk1Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonPantWalk2Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonPantWalk3Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonPantWalk4Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonSitUpperBase" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonSitLowerBase" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+    </g>
+    <g id="SkeletonArms" icon="$bm/icon_m_retro.png">
+      <s id="ZombieSkeletonArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_04_arm_idle.png" pri="1"/>
+      <s id="ZombieSkeletonArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_04_arm_walk1.png" pri="1"/>
+      <s id="ZombieSkeletonArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_04_arm_walk2.png" pri="1"/>
+      <s id="ZombieSkeletonArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_04_arm_walk3.png" pri="1"/>
+      <s id="ZombieSkeletonArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_04_arm_sit.png" pri="1"/>
+      <c sId="ZombieSkeletonArmIdleBase" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonArmWalk1Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonArmWalk2Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonArmWalk3Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonArmSitBase" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <s id="ZombieSkeletonArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_04_arm_throw.png" pri="1"/>
+      <s id="ZombieSkeletonArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_04_arm_raise.png" pri="1"/>
+      <c sId="ZombieSkeletonArmThrowBase" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonArmRaiseBase" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <s id="ZombieSkeletonHandIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_04_hand_idle.png" pri="3"/>
+      <s id="ZombieSkeletonHandWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_04_hand_walk1.png" pri="3"/>
+      <s id="ZombieSkeletonHandWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_04_hand_arm_walk2.png" pri="3"/>
+      <s id="ZombieSkeletonHandWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_04_hand_arm_walk3.png" pri="3"/>
+      <s id="ZombieSkeletonHandSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_04_hand_sit_arm.png" pri="3"/>
+      <c sId="ZombieSkeletonHandIdleBase" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonHandWalk1Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonHandWalk2Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonHandWalk3Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkeletonHandSitBase" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <s id="ZombieSkelHandWave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_04_hand_raise_wave1.png" pri="1"/>
+      <s id="ZombieSkelHandWave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_04_hand_raise_wave2.png" pri="1"/>
+      <s id="ZombieSkelHandHold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_04_hand_throw_hold.png"/>
+      <s id="ZombieSkelHandOpen" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_04_hand_throw_open.png" pri="1"/>
+      <s id="ZombieSkelHandPoint" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_04_hand_throw_point.png" pri="1"/>
+      <s id="ZombieSkelHandStop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_04_hand_throw_stop.png" pri="1"/>
+      <s id="ZombieSkelHandThrow" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_04_hand_throw_throw.png" pri="1"/>
+      <s id="ZombieSkelHandThumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_04_hand_throw_thumbs.png" pri="1"/>
+      <c sId="ZombieSkelHandWave1" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkelHandWave2" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkelHandHold" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkelHandOpen" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkelHandPoint" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkelHandStop" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkelHandThrow" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieSkelHandThumbs" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+    </g>
+    <g id="SkeletonFeet" icon="$bm/icon_shoe_standard.png">
+      <s id="ZombieFootIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_04_foot_idle.png" pri="3"/>
+      <s id="ZombieFootWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_04_foot_walk1.png" pri="3"/>
+      <s id="ZombieFootWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_04_foot_walk2.png" pri="3"/>
+      <s id="ZombieFootWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_04_foot_walk3.png" pri="3"/>
+      <s id="ZombieFootWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_04_foot_walk4.png" pri="3"/>
+      <s id="ZombieFootSit" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_04_foot_sit_lower.png" pri="3"/>
+      <c sId="ZombieFootIdleBase" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieFootWalk1Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieFootWalk2Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieFootWalk3Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieFootWalk4Base" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+      <c sId="ZombieFootSit" c="7119192" a="0.60" b="4.7" ct="2.00" lId="ZombieSkeletonColor" lw="N"/>
+    </g>
+    <g id="TurnJeans" name="Pants" icon="$bu/icon_legs_trouser.png">
+      <s id="ZombiePantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_24_leg_idle.png" pri="3"/>
+      <s id="ZombiePantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_24_leg_walk1.png" pri="3"/>
+      <s id="ZombiePantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_24_leg_walk2.png" pri="3"/>
+      <s id="ZombiePantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_24_leg_walk3.png" pri="3"/>
+      <s id="ZombiePantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_24_leg_walk4.png" pri="3"/>
+      <s id="ZombieSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_24_sit_upper.png" pri="3"/>
+      <s id="ZombieSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/bot03/bot03_24_sit_lower.png" pri="3"/>
+      <c sId="ZombiePantIdleBase" c="4534274" a="1.00" b="58.8" ct="1.58" lId="ZombiePants_Color1" lw="N"/>
+      <c sId="ZombiePantWalk1Base" c="4534274" a="1.00" b="58.8" ct="1.58" lId="ZombiePants_Color1" lw="N"/>
+      <c sId="ZombiePantWalk2Base" c="4534274" a="1.00" b="58.8" ct="1.58" lId="ZombiePants_Color1" lw="N"/>
+      <c sId="ZombiePantWalk3Base" c="4534274" a="1.00" b="58.8" ct="1.58" lId="ZombiePants_Color1" lw="N"/>
+      <c sId="ZombiePantWalk4Base" c="4534274" a="1.00" b="58.8" ct="1.58" lId="ZombiePants_Color1" lw="N"/>
+      <c sId="ZombieSitUpperBase" c="4534274" a="1.00" b="58.8" ct="1.58" lId="ZombiePants_Color1" lw="N"/>
+      <c sId="ZombieSitLowerBase" c="4534274" a="1.00" b="58.8" ct="1.58" lId="ZombiePants_Color1" lw="N"/>
+    </g>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+  <ds id="Top06"/>
+</f>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="A sugar maple" dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/outdoor/icon_o_tree_05_mapletree.png" id="883" name="Maple Tree" tags="plant" price="55" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.49,2.5,0.49" min="-0.49,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/outdoor/o_tree_05_mapletree.png"/>
+  </textures>
+  <nodes>
+    <node id="Tree">
+      <box max="0.49,2.5,0.49" min="-0.49,0,-0.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="38">
+          <view angle="45" x="16" y="10"/>
+          <view angle="135" mirror="true" x="-16" y="10"/>
+          <view angle="225" x="16" y="10"/>
+          <view angle="315" mirror="true" x="-16" y="10"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

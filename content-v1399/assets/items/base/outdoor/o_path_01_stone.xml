@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="Perfeito par jardins." dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" gridActive="false" icon="items/base/outdoor/icon_o_path_01_stone.png" id="870" name="Caminho de Pedra" tags="floor" minLevel="1" minCPLevel="1" price="13" tokens="130">
+  <volume>
+    <box max="0.49,0,0.49" min="-0.49,-0.01,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture cols="2" id="Texture" rows="1" source="items/base/outdoor/o_path_01_stone.png"/>
+  </textures>
+  <nodes>
+    <node id="Path" layer="surface">
+      <box max="0.49,0,0.49" min="-0.49,-0.01,-0.49"/>
+      <layers>
+        <layer id="Stone_Path" texture="Texture">
+          <view angle="45" x="2" y="40"/>
+          <view angle="135" col="1" mirror="true" x="-2" y="40"/>
+          <view angle="225" x="2" y="40"/>
+          <view angle="315" col="1" mirror="true" x="-2" y="40"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,42 @@
+<item.SpriteItem desc="Dê um toque de sofisticação para a sua casa." dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" gridActive="false" icon="items/base/gothic/icon_g_rug_02_large_patterna.png" id="364" name="Tapete Sofisticado" tags="floor" price="40" tokens="400" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.76,0,1.43" min="-0.76,-0.001,-1.43"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture cols="1" id="Pattern" rows="1" source="items/base/gothic/g_rug_02_large_patterna.png"/>
+    <texture cols="1" id="Rug" rows="1" source="items/base/gothic/g_rug_02_large_base.png"/>
+  </textures>
+  <nodes>
+    <node id="Rug" layer="surface">
+      <box max="0.76,0,1.43" min="-0.76,-0.001,-1.43"/>
+      <layers>
+        <layer align="middle" id="base" texture="Rug">
+          <view angle="45"/>
+          <view angle="135" mirror="true"/>
+          <view angle="225"/>
+          <view angle="315" mirror="true"/>
+        </layer>
+        <layer align="middle" id="pattern" texture="Pattern">
+          <view alpha="0.8" angle="45"/>
+          <view alpha="0.8" angle="135" mirror="true"/>
+          <view alpha="0.8" angle="225"/>
+          <view alpha="0.8" angle="315" mirror="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Patterned rug">
+          <layerref color="0xff56899f" id="base"/>
+          <layerref id="pattern"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,115 @@
+<item.SpriteItem id="6775" name="Gato Egípcio Deluxe" desc="Um gato preto milenar egípcio [6 de 8]" tags="rare,consumable,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_792_cathand_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2962,0,-0.1" max="0.3346,0.4,0.1"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="shadow+25"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+25"/>
+  </data>
+  <textures>
+    <texture id="hat" source="items/base/consumables/clothing/accessory/acc_792_cathand_itembase.png" cols="2" rows="1"/>
+    <texture id="tail" source="items/base/consumables/clothing/accessory/acc_792_cathand_itemtail.png" cols="2" rows="3"/>
+    <texture id="blink" source="items/base/consumables/clothing/accessory/acc_792_cathand_eye.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2962,0,-0.1" max="0.3346,0.4,0.1"/>
+      <layers>
+        <layer id="base" texture="hat">
+          <view angle="45" x="6" y="18"/>
+          <view angle="135" x="-6" y="18" hm="true"/>
+          <view angle="225" col="1" x="-6" y="13"/>
+          <view angle="315" col="1" x="6" y="13" hm="true"/>
+        </layer>
+        <layer id="tail_01" texture="tail">
+          <view angle="45" x="-21" y="-6"/>
+          <view angle="135" x="21" y="-6" hm="true"/>
+          <view angle="225" col="1" x="19" y="14"/>
+          <view angle="315" col="1" x="-19" y="14" hm="true"/>
+        </layer>
+        <layer id="tail_02" texture="tail">
+          <view angle="45" row="1" x="-21" y="-6"/>
+          <view angle="135" row="1" x="21" y="-6" hm="true"/>
+          <view angle="225" col="1" row="1" x="19" y="14"/>
+          <view angle="315" col="1" row="1" x="-19" y="14" hm="true"/>
+        </layer>
+        <layer id="tail_03" texture="tail">
+          <view angle="45" row="2" x="-21" y="-6"/>
+          <view angle="135" row="2" x="21" y="-6" hm="true"/>
+          <view angle="225" col="1" row="2" x="19" y="14"/>
+          <view angle="315" col="1" row="2" x="-19" y="14" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="45" x="20" y="-5"/>
+          <view angle="135" x="-19" y="-5" hm="true"/>
+          <view angle="225" col="1" x="-6" y="13" alpha="0"/>
+          <view angle="315" col="1" x="6" y="13" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="base"/>
+          <layerref id="tail_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="base"/>
+          <layerref id="tail_02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="base"/>
+          <layerref id="tail_03"/>
+        </frame>
+        <frame id="blink01">
+          <layerref id="base"/>
+          <layerref id="tail_01"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="blink03">
+          <layerref id="base"/>
+          <layerref id="tail_03"/>
+          <layerref id="blink"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="blink01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="blink03"/>
+          <frameref id="03"/>
+          <frameref id="blink03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

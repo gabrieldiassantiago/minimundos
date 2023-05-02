@@ -1,0 +1,71 @@
+<item.SpriteItem id="2275" name="Peru" desc="Um peru." tags="admin,outdoor,misc,pickup" icon="items/base/outdoor/icon_turkey.png" minLevel="1" minCPLevel="1" dropTargetType="floor" dropTargetList="floor, table,avatar" dropTargetClamp="floor" price="72">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.9,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_pick_up.as"/>
+    <event id="action" script="scripts/item/action_pick_up.as"/>
+  </events>
+  <actions>
+    <action id="Pick Up"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture01" source="items/base/outdoor/o_turkey.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.9,0.3"/>
+      <layers>
+        <layer id="Layer" texture="Texture01" y="-4">
+          <view angle="45" y="15"/>
+          <view angle="135" y="15" hm="true"/>
+          <view angle="225" col="1" x="3" y="7"/>
+          <view angle="315" col="1" x="-4" y="8" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="key1">
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="key2">
+          <layerref id="Layer" a="0.8"/>
+        </frame>
+        <frame id="key3">
+          <layerref id="Layer" a="0.5"/>
+        </frame>
+        <frame id="key4">
+          <layerref id="Layer" a="0.2"/>
+        </frame>
+        <frame id="key5">
+          <layerref id="Layer" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Visible" framerate="4" syncFrames="false">
+          <frameref id="key1"/>
+        </animation>
+        <animation id="Invisible" framerate="4" syncFrames="false">
+          <frameref id="key5"/>
+        </animation>
+        <animation id="Show" framerate="8" loop="false" syncFrames="false">
+          <frameref id="key5"/>
+          <frameref id="key4"/>
+          <frameref id="key3"/>
+          <frameref id="key2"/>
+          <frameref id="key1"/>
+        </animation>
+        <animation id="Hide" framerate="8" loop="false" syncFrames="false">
+          <frameref id="key1"/>
+          <frameref id="key2"/>
+          <frameref id="key3"/>
+          <frameref id="key4"/>
+          <frameref id="key5"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

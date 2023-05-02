@@ -1,0 +1,27 @@
+<f id="Top06_56_AlaskanCoat" parentId="Top06">
+  <g id="Torso" name="Torso" icon="$bm/icon_m_retro.png">
+    <s id="torso" cId="Torso" s="items/base/consumables/clothing/top06/top06_56_torso.png" pri="6"/>
+  </g>
+  <g id="Arm" name="Arm" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_56ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_56_idle.png" pri="6"/>
+    <s id="Top06_56ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_56_walk1.png" pri="6"/>
+    <s id="Top06_56ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_56_walk2.png" pri="6"/>
+    <s id="Top06_56ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_56_walk3.png" pri="6"/>
+    <s id="Top06_56ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_56_sit.png" pri="6"/>
+    <s id="Top06_56ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_56_throw.png" pri="6"/>
+    <s id="Top06_56ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_56_raise.png" pri="6"/>
+  </g>
+  <g id="Leg" name="Leg" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_56BottomIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_56_leg_idle.png" pri="6"/>
+    <s id="Top06_56BottomWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_56_leg_walk1.png" pri="6"/>
+    <s id="Top06_56BottomWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_56_leg_walk2.png" pri="6"/>
+    <s id="Top06_56BottomWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_56_leg_walk3.png" pri="6"/>
+    <s id="Top06_56BottomWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_56_leg_walk4.png" pri="6"/>
+    <s id="Top06_56BottomSit" cId="LegSitUpper" s="items/base/consumables/clothing/top06/top06_56_leg_sit.png" pri="6"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_56" icon="items/base/consumables/clothing/top06/top06_56_alaskanfur_icon.png" w="48" h="48"/>
+    <s id="IconTop06_56Base" cId="IconTop06_56" s="items/base/consumables/clothing/top06/top06_56_alaskanfur_icon.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

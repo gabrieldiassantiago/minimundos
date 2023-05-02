@@ -1,0 +1,31 @@
+<item.SpriteItem id="0" name="Beans" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Laptop" source="items/base/consumables/clothing/accessory/acc_565_cuteice_hand.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Star" texture="Laptop">
+          <view angle="0" col="2" y="7"/>
+          <view angle="45" x="2" y="10"/>
+          <view angle="90" col="1" y="12"/>
+          <view angle="135" x="-3" y="10" hm="true"/>
+          <view angle="180" col="2" x="-2" y="7" hm="true"/>
+          <view angle="225" col="3" x="-2" y="7" hm="true"/>
+          <view angle="270" col="4" x="2" y="6"/>
+          <view angle="315" col="3" x="2" y="7"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

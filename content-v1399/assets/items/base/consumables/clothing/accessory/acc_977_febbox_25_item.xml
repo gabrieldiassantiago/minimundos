@@ -1,0 +1,44 @@
+<item.SpriteItem id="7522" name="Presente Estampado de Fevereiro" desc="Esta caixa de presente se transformará no dia 4 de Março [25 de 25]" tags="rare,destroy,actionbar,consumable,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_977_febbox_25_icon.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.6,0.2"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+25"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/accessory/acc_977_febbox_25_item.png" cols="5" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/clothing/accessory/acc_977_febbox_25_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,0.6,0.2"/>
+      <layers>
+        <layer id="Shadow" texture="shadow">
+          <view angle="45" x="-1" y="14"/>
+          <view angle="135" x="1" y="14" hm="true"/>
+          <view angle="225" x="-1" y="14"/>
+          <view angle="315" x="1" y="14" hm="true"/>
+        </layer>
+        <layer id="Box" texture="Base">
+          <view angle="45" col="1" x="1" y="12"/>
+          <view angle="135" col="1" x="-1" y="12" hm="true"/>
+          <view angle="225" col="3" x="-1" y="11"/>
+          <view angle="315" col="3" x="1" y="11" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

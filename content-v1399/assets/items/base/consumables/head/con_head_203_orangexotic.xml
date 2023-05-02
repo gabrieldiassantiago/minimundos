@@ -1,0 +1,105 @@
+<item.SpriteItem id="0" name="Ferret" desc="A Ferret head" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head01" source="items/base/consumables/head/con_head_203_orangexotic01.png" cols="5" rows="1"/>
+    <texture id="blink01" source="items/base/consumables/head/con_head_203_orangexotic_blink01.png" cols="3" rows="1"/>
+    <texture id="head02" source="items/base/consumables/head/con_head_203_orangexotic02.png" cols="5" rows="1"/>
+    <texture id="blink02" source="items/base/consumables/head/con_head_203_orangexotic_blink02.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head01" texture="head01">
+          <view angle="0" col="2" x="-1" y="26"/>
+          <view angle="45" y="27"/>
+          <view angle="90" col="1" y="27"/>
+          <view angle="135" x="-1" y="27" hm="true"/>
+          <view angle="180" col="2" x="1" y="26" hm="true"/>
+          <view angle="225" col="3" y="26"/>
+          <view angle="270" col="4" x="1" y="25"/>
+          <view angle="315" col="3" x="-1" y="26" hm="true"/>
+        </layer>
+        <layer id="blink01" texture="blink01">
+          <view angle="0" col="2" x="17" y="6"/>
+          <view angle="45" x="9" y="7"/>
+          <view angle="90" col="1" x="1" y="8"/>
+          <view angle="135" x="-10" y="7" hm="true"/>
+          <view angle="180" col="2" x="-17" y="6" hm="true"/>
+          <view angle="225" col="2" x="-21" y="-3" alpha="0"/>
+          <view angle="270" col="1" y="33" alpha="0"/>
+          <view angle="315" col="2" x="21" y="-2" alpha="0" hm="true"/>
+        </layer>
+        <layer id="head02" texture="head02">
+          <view angle="0" col="2" x="-1" y="26"/>
+          <view angle="45" y="27"/>
+          <view angle="90" col="1" y="27"/>
+          <view angle="135" x="-1" y="27" hm="true"/>
+          <view angle="180" col="2" x="1" y="26" hm="true"/>
+          <view angle="225" col="3" y="26"/>
+          <view angle="270" col="4" x="1" y="25"/>
+          <view angle="315" col="3" x="-1" y="26" hm="true"/>
+        </layer>
+        <layer id="blink02" texture="blink02">
+          <view angle="0" col="2" x="17" y="4"/>
+          <view angle="45" x="8" y="7"/>
+          <view angle="90" col="1" y="7"/>
+          <view angle="135" x="-10" y="7" hm="true"/>
+          <view angle="180" col="2" x="-18" y="4" hm="true"/>
+          <view angle="225" col="2" x="-21" y="-3" alpha="0"/>
+          <view angle="270" col="1" y="33" alpha="0"/>
+          <view angle="315" col="2" x="21" y="-2" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="blink01">
+          <layerref id="head01"/>
+          <layerref id="blink01"/>
+        </frame>
+        <frame id="head01">
+          <layerref id="head01"/>
+        </frame>
+        <frame id="head02">
+          <layerref id="head02"/>
+        </frame>
+        <frame id="blink02">
+          <layerref id="head02"/>
+          <layerref id="blink02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="blink01"/>
+          <frameref id="head01" duration="10"/>
+          <frameref id="blink01"/>
+          <frameref id="head01"/>
+          <frameref id="blink01"/>
+          <frameref id="head01" duration="10"/>
+          <frameref id="blink01"/>
+          <frameref id="head01" duration="10"/>
+          <frameref id="blink01"/>
+          <frameref id="head02"/>
+          <frameref id="blink02"/>
+          <frameref id="head02"/>
+          <frameref id="blink02"/>
+          <frameref id="head02" duration="10"/>
+          <frameref id="blink02"/>
+          <frameref id="head02"/>
+          <frameref id="blink02"/>
+          <frameref id="head02" duration="10"/>
+          <frameref id="blink02"/>
+          <frameref id="head02"/>
+          <frameref id="blink02"/>
+          <frameref id="head02" duration="14"/>
+          <frameref id="head01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

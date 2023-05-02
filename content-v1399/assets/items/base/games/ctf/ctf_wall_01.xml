@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="1570" name="Parede de  Pique Bandeira" desc="Limite dos labirintos." tags="admin,misc,ctf" icon="items/base/games/ctf/icon_ctf_wall_01.png" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="30" tokens="300">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.13,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="wall" source="items/base/games/ctf/ctf_wall_01.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" z="0.5">
+      <box min="-0.49,0,-0.99" max="0.49,2.13,0.99"/>
+      <layers>
+        <layer id="wall" texture="wall">
+          <view angle="45" y="45"/>
+          <view angle="135" y="45" hm="true"/>
+          <view angle="225" y="45"/>
+          <view angle="315" y="45" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

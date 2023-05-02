@@ -1,0 +1,58 @@
+<item.SpriteItem desc="Pe-ri-go" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/magic/icon_con_item_38_dblhappy.png" id="1374" name="Dinamites" tags="rare,consumable,actionbar,real,hand,usable,stackable,action_consumable" price="100" minLevel="1" minLevelType="4" minCPLevel="1" tokens="1000">
+  <volume>
+    <box max="0.1,0.52,0.1" min="-0.1,0,-0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_consumable.as"/>
+    <event id="action" script="scripts/item/action_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture cols="1" id="happy" rows="1" source="items/base/consumables/magic/con_item_38_dblhappy.png"/>
+  </textures>
+  <nodes>
+    <node id="happy">
+      <box max="0.1,0.52,0.1" min="-0.1,0,-0.1"/>
+      <layers>
+        <layer id="happy" texture="happy" y="10">
+          <view angle="45" y="-3"/>
+          <view angle="135" hm="true" y="-3"/>
+          <view angle="225" y="-3"/>
+          <view angle="315" hm="true" y="-3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="happy"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref a="0.66" id="happy"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref a="0.33" id="happy"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref a="0" id="happy"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="In">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation framerate="4" id="Loop">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation framerate="8" id="Out" loop="false">
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,35 @@
+<item.SpriteItem id="3520" name="Magic Entrance Halloween" desc="An item" tags="admin" icon="items/base/shop/towncenter/icon_tc_mys_entrance.png" minLevel="1" minCPLevel="1" dropTargetType="wall" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,3.5,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="mouseOver" script="scripts/item/mouse_over_navigate.as"/>
+  </events>
+  <actions>
+    <action id="Activate"/>
+  </actions>
+  <navigate usableRange="20" standRange="20" accessibleRange="20"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="mouseOverImageSource" value="images/space/icon_shop_alchemy.png"/>
+    <entry key="mouseOverButtonText" value="ENTER SHOP"/>
+    <entry key="selectable" value="false"/>
+  </data>
+  <textures>
+    <texture id="face" source="items/base/shop/towncenter/tc_mys_entrance_halloween.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,3.5,0.49"/>
+      <layers>
+        <layer id="base" texture="face">
+          <view y="-21"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

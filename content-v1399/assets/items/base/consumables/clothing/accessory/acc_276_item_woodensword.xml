@@ -1,0 +1,34 @@
+<item.SpriteItem id="4754" name="Espada de Madeira Play" desc="Uma espada feita de madeira" tags="consumable,hand,usable,wear,stackable,actionbar,rare,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_276_icon_woodensword.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="10">
+  <volume>
+    <box min="-0.37,0,-0.25" max="0.37,0.1,0.25"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Weapon" source="items/base/consumables/clothing/accessory/acc_276_item_woodensword.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Broadsword">
+      <box min="-0.37,0,-0.25" max="0.37,0.1,0.25"/>
+      <layers>
+        <layer id="Weapon" texture="Weapon">
+          <view angle="45" y="27"/>
+          <view angle="135" y="27" hm="true"/>
+          <view angle="225" col="1" y="27" hm="true"/>
+          <view angle="315" col="1" y="27"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

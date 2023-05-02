@@ -1,0 +1,64 @@
+<f id="Top05_24Gloves" parentId="Top05">
+  <g id="Gloves" icon="$bm/icon_m_longsleeve.png">
+    <s id="GloveArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top05/top05_24_glove_idle.png"/>
+    <s id="GloveArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top05/top05_24_glove_walk1.png"/>
+    <s id="GloveArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top05/top05_24_glove_walk2.png"/>
+    <s id="GloveArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top05/top05_24_glove_walk3.png"/>
+    <s id="UnderArmorArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top05/top05_24_glove_sit.png"/>
+    <c sId="GloveArmIdleBase" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+    <c sId="GloveArmWalk1Base" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+    <c sId="GloveArmWalk2Base" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+    <c sId="GloveArmWalk3Base" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+    <c sId="UnderArmorArmSitBase" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+    <s id="GloveArmThrowBase" cId="ArmRaiseWave1" s="items/base/consumables/clothing/top05/top05_24_glove_wave1.png"/>
+    <s id="GloveArmRaiseBase" cId="ArmRaiseWave2" s="items/base/consumables/clothing/top05/top05_24_glove_wave2.png"/>
+    <c sId="GloveArmThrowBase" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+    <c sId="GloveArmRaiseBase" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+    <s id="GloveArmThrowHold" cId="ArmThrowHold" s="items/base/consumables/clothing/top05/top05_24_glove_hold.png"/>
+    <s id="GloveArmThrowOpen" cId="ArmThrowOpen" s="items/base/consumables/clothing/top05/top05_24_glove_open.png"/>
+    <s id="GloveArmThrowPoint" cId="ArmThrowPoint" s="items/base/consumables/clothing/top05/top05_24_glove_point.png"/>
+    <s id="GloveArmThrowStop" cId="ArmThrowStop" s="items/base/consumables/clothing/top05/top05_24_glove_stop.png"/>
+    <s id="GloveArmThrowThrow" cId="ArmThrowThrow" s="items/base/consumables/clothing/top05/top05_24_glove_throw.png"/>
+    <s id="GloveArmThrowThumb" cId="ArmThrowThumb" s="items/base/consumables/clothing/top05/top05_24_glove_thumbs.png"/>
+    <c sId="GloveArmThrowHold" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+    <c sId="GloveArmThrowOpen" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+    <c sId="GloveArmThrowPoint" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+    <c sId="GloveArmThrowStop" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+    <c sId="GloveArmThrowThrow" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+    <c sId="GloveArmThrowThumb" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop05_24" icon="items/base/consumables/clothing/top05/top05_24_icon_b.png" w="48" h="48"/>
+    <s id="IconTop05_24Base2" cId="IconTop05_24" s="items/base/shared/s_vipbadge.png" pri="1"/>
+    <s id="IconTop05_24Base1" cId="IconTop05_24" s="items/base/consumables/clothing/top05/top05_24_icon_b.png" pri="1"/>
+    <c sId="IconTop05_24Base1" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top05_24Color1" name="Color" desc="Choose a color" sel="Blue" seld="Blue">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.50" b="81.9" ct="0.20" lId="Top05_24_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="81.8" ct="1.12" lId="Top05_24_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.85" b="56.1" ct="0.41" lId="Top05_24_Color1"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16747173" a="0.73" b="62.4" ct="0.52" lId="Top05_24_Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="0.87" b="60.5" ct="1.13" lId="Top05_24_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="15533317" a="0.58" b="22.8" ct="0.68" lId="Top05_24_Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16744448" a="0.85" b="37.7" ct="0.62" lId="Top05_24_Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16768256" a="0.92" b="49.2" ct="0.38" lId="Top05_24_Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="0.56" b="24.0" ct="0.92" lId="Top05_24_Color1"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="0.87" b="61.7" ct="1.57" lId="Top05_24_Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="194486" a="0.79" b="31.8" ct="0.46" lId="Top05_24_Color1"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="232575" a="0.84" b="63.7" ct="1.43" lId="Top05_24_Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.80" b="43.1" ct="1.15" lId="Top05_24_Color1"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="21713" a="0.46" b="9.5" ct="1.12" lId="Top05_24_Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="16384212" a="0.31" b="-0.3" ct="0.85" lId="Top05_24_Color1"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.74" b="34.5" ct="1.07" lId="Top05_24_Color1"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11238690" a="0.73" b="30.1" ct="0.89" lId="Top05_24_Color1"/>
+      <c id="Olive" icon="$bu/icon_olive.png" c="10390041" a="0.68" b="23.6" ct="0.88" lId="Top05_24_Color1"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="9719552" a="0.53" b="15.9" ct="0.88" lId="Top05_24_Color1"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="12517940" a="0.35" b="-2.2" ct="0.67" lId="Top05_24_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="8882055" a="0.24" b="-30.7" ct="0.88" lId="Top05_24_Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top05_24Color1"/>
+    </wizbox>
+  </g>
+</f>

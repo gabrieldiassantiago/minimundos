@@ -1,0 +1,118 @@
+<item.SpriteItem id="0" name="Hand Heli" desc="VIP item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.5,0,-0.3" max="0.5,0.5,0.3"/>
+  </volume>
+  <textures>
+    <texture id="propeller" source="items/base/consumables/magic/con_vip_01_handheli_propeller.png" cols="3" rows="1"/>
+    <texture id="machine" source="items/base/consumables/magic/con_vip_01_handheli_machine.png" cols="3" rows="1"/>
+    <texture id="handle" source="items/base/consumables/magic/con_vip_01_handheli_handle.png" cols="6" rows="1"/>
+    <texture id="patch" source="items/base/consumables/magic/con_vip_01_handheli_machine_patch.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.5,0,-0.3" max="0.5,0.5,0.3"/>
+      <layers>
+        <layer id="machine" texture="machine">
+          <view angle="0" col="2" x="-8" y="-97" hm="true"/>
+          <view angle="45" x="-5" y="-98"/>
+          <view angle="90" col="1" y="-107"/>
+          <view angle="135" x="4" y="-98" hm="true"/>
+          <view angle="180" col="2" x="8" y="-97"/>
+          <view angle="225" x="4" y="-93"/>
+          <view angle="270" col="1" y="-98"/>
+          <view angle="315" x="-5" y="-92" hm="true"/>
+        </layer>
+        <layer id="machine_patch" texture="patch">
+          <view angle="0" col="2" x="-8" y="-97" hm="true"/>
+          <view angle="45" x="-5" y="-98" alpha="0"/>
+          <view angle="90" y="-107" alpha="0"/>
+          <view angle="135" x="4" y="-98" alpha="0" hm="true"/>
+          <view angle="180" x="8" y="-97" alpha="0"/>
+          <view angle="225" x="35" y="-134"/>
+          <view angle="270" y="-98" alpha="0"/>
+          <view angle="315" x="-37" y="-133" hm="true"/>
+        </layer>
+        <layer id="handle" texture="handle">
+          <view angle="0" col="2" x="-8" y="-126" alpha="0" hm="true"/>
+          <view angle="45" x="-36" y="-90"/>
+          <view angle="90" col="1" x="-44" y="-107"/>
+          <view angle="135" x="34" y="-90" hm="true"/>
+          <view angle="180" col="2" x="7" y="-126" alpha="0"/>
+          <view angle="225" col="3" x="-27" y="-85"/>
+          <view angle="270" col="5" x="-44" y="-98"/>
+          <view angle="315" col="3" x="25" y="-84" hm="true"/>
+        </layer>
+        <layer id="handle01" texture="handle">
+          <view angle="0" col="2" x="-8" y="-82" hm="true"/>
+          <view angle="45" x="25" y="-122"/>
+          <view angle="90" col="1" x="43" y="-107"/>
+          <view angle="135" x="-27" y="-122" hm="true"/>
+          <view angle="180" col="2" x="7" y="-82"/>
+          <view angle="225" col="4" x="34" y="-117"/>
+          <view angle="270" col="5" x="43" y="-98" hm="true"/>
+          <view angle="315" col="4" x="-36" y="-116" hm="true"/>
+        </layer>
+        <layer id="propeller" texture="propeller">
+          <view angle="0" x="-9" y="-150"/>
+          <view angle="45" x="-6" y="-151"/>
+          <view angle="90" x="-1" y="-153"/>
+          <view angle="135" x="3" y="-151"/>
+          <view angle="180" x="7" y="-150"/>
+          <view angle="225" x="3" y="-146"/>
+          <view angle="270" x="-1" y="-144"/>
+          <view angle="315" x="-6" y="-145"/>
+        </layer>
+        <layer id="propeller01" texture="propeller">
+          <view angle="0" col="1" x="-9" y="-150"/>
+          <view angle="45" col="1" x="-6" y="-151"/>
+          <view angle="90" col="1" x="-1" y="-153"/>
+          <view angle="135" col="1" x="3" y="-151"/>
+          <view angle="180" col="1" x="7" y="-150"/>
+          <view angle="225" col="1" x="3" y="-146"/>
+          <view angle="270" col="1" x="-1" y="-144"/>
+          <view angle="315" col="1" x="-6" y="-145"/>
+        </layer>
+        <layer id="propeller02" texture="propeller">
+          <view angle="0" col="2" x="-9" y="-150"/>
+          <view angle="45" col="2" x="-6" y="-151"/>
+          <view angle="90" col="2" x="-1" y="-153"/>
+          <view angle="135" col="2" x="3" y="-151"/>
+          <view angle="180" col="2" x="7" y="-150"/>
+          <view angle="225" col="2" x="3" y="-146"/>
+          <view angle="270" col="2" x="-1" y="-144"/>
+          <view angle="315" col="2" x="-6" y="-145"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="machine"/>
+          <layerref id="handle"/>
+          <layerref id="handle01"/>
+          <layerref id="machine_patch"/>
+          <layerref id="propeller"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="machine"/>
+          <layerref id="handle"/>
+          <layerref id="handle01"/>
+          <layerref id="machine_patch"/>
+          <layerref id="propeller01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="machine"/>
+          <layerref id="handle"/>
+          <layerref id="handle01"/>
+          <layerref id="machine_patch"/>
+          <layerref id="propeller02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

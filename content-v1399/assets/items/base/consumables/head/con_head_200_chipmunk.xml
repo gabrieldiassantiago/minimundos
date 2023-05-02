@@ -1,0 +1,117 @@
+<item.SpriteItem id="0" name="St. Bernard" desc="St. Bernard head" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bunny" source="items/base/consumables/head/con_head_200_chipmunk.png" cols="5" rows="4"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_200_chipmunk_blink.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="15" y="-1" hm="true"/>
+          <view angle="45" x="6" y="-1"/>
+          <view angle="90" col="1" y="-3"/>
+          <view angle="135" x="-7" y="-1" hm="true"/>
+          <view angle="180" col="2" x="-16" y="-1"/>
+          <view angle="225" col="3" x="-19" y="-10"/>
+          <view angle="270" col="1" row="1" y="33"/>
+          <view angle="315" col="3" x="18" y="-10" hm="true"/>
+        </layer>
+        <layer id="head01" texture="bunny">
+          <view angle="0" col="2" x="5" y="16" hm="true"/>
+          <view angle="45" x="1" y="17"/>
+          <view angle="90" col="1" y="19"/>
+          <view angle="135" x="-2" y="17" hm="true"/>
+          <view angle="180" col="2" x="-6" y="16"/>
+          <view angle="225" col="3" x="1" y="16"/>
+          <view angle="270" col="4" x="-1" y="18"/>
+          <view angle="315" col="3" x="-2" y="16" hm="true"/>
+        </layer>
+        <layer id="head02" texture="bunny">
+          <view angle="0" col="2" row="1" x="5" y="16" hm="true"/>
+          <view angle="45" row="1" x="1" y="17"/>
+          <view angle="90" col="1" row="1" y="19"/>
+          <view angle="135" row="1" x="-2" y="17" hm="true"/>
+          <view angle="180" col="2" row="1" x="-6" y="16"/>
+          <view angle="225" col="3" row="1" x="1" y="16"/>
+          <view angle="270" col="4" row="1" x="-1" y="18"/>
+          <view angle="315" col="3" row="1" x="-2" y="16" hm="true"/>
+        </layer>
+        <layer id="head03" texture="bunny">
+          <view angle="0" col="2" row="2" x="5" y="16" hm="true"/>
+          <view angle="45" row="2" x="1" y="17"/>
+          <view angle="90" col="1" row="2" y="19"/>
+          <view angle="135" row="2" x="-2" y="17" hm="true"/>
+          <view angle="180" col="2" row="2" x="-6" y="16"/>
+          <view angle="225" col="3" row="2" x="1" y="16"/>
+          <view angle="270" col="4" row="2" x="-1" y="18"/>
+          <view angle="315" col="3" row="2" x="-2" y="16" hm="true"/>
+        </layer>
+        <layer id="head04" texture="bunny">
+          <view angle="0" col="2" row="3" x="5" y="16" hm="true"/>
+          <view angle="45" row="3" x="1" y="17"/>
+          <view angle="90" col="1" row="3" y="19"/>
+          <view angle="135" row="3" x="-2" y="17" hm="true"/>
+          <view angle="180" col="2" row="3" x="-6" y="16"/>
+          <view angle="225" col="3" row="3" x="1" y="16"/>
+          <view angle="270" col="4" row="3" x="-1" y="18"/>
+          <view angle="315" col="3" row="3" x="-2" y="16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="blink">
+          <layerref id="head01"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="head01">
+          <layerref id="head01"/>
+        </frame>
+        <frame id="head02">
+          <layerref id="head02"/>
+        </frame>
+        <frame id="head03">
+          <layerref id="head03"/>
+        </frame>
+        <frame id="head04">
+          <layerref id="head04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="head01" duration="8"/>
+          <frameref id="blink"/>
+          <frameref id="head01" duration="10"/>
+          <frameref id="blink"/>
+          <frameref id="head01"/>
+          <frameref id="blink"/>
+          <frameref id="head01" duration="6"/>
+          <frameref id="head01"/>
+          <frameref id="head02"/>
+          <frameref id="head03"/>
+          <frameref id="head04"/>
+          <frameref id="head01"/>
+          <frameref id="head02"/>
+          <frameref id="head03"/>
+          <frameref id="head04"/>
+          <frameref id="head01" duration="4"/>
+          <frameref id="head02"/>
+          <frameref id="head03"/>
+          <frameref id="head04"/>
+          <frameref id="head01"/>
+          <frameref id="head02"/>
+          <frameref id="head03"/>
+          <frameref id="head04"/>
+          <frameref id="blink"/>
+          <frameref id="head01" duration="4"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

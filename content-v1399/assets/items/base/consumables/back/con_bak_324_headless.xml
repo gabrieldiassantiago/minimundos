@@ -1,0 +1,103 @@
+<item.SpriteItem id="0" name="Headless Cape" desc="A cape" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="cape_decal" source="items/base/mystery/mystery_28_wear_decal.png" cols="5" rows="4"/>
+    <texture id="cape_base" source="items/base/consumables/back/con_bak_324_headless.png" cols="5" rows="4"/>
+    <texture id="sit_base" source="items/base/mystery/mystery_28_sit_base.png" cols="2" rows="1"/>
+    <texture id="sit_decal" source="items/base/mystery/mystery_28_sit_decal.png" cols="2" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="cape" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="Base_01" texture="cape_base">
+          <view angle="0" col="2" x="-18" y="71"/>
+          <view angle="45" x="-10" y="68"/>
+          <view angle="90" col="1" y="70"/>
+          <view angle="135" x="10" y="68" hm="true"/>
+          <view angle="180" col="2" x="18" y="71" hm="true"/>
+          <view angle="225" col="3" x="11" y="73" hm="true"/>
+          <view angle="270" col="4" y="72"/>
+          <view angle="315" col="3" x="-11" y="73"/>
+        </layer>
+        <layer id="Base_02" texture="cape_base">
+          <view angle="0" col="2" row="1" x="-18" y="71"/>
+          <view angle="45" row="1" x="-10" y="68"/>
+          <view angle="90" col="1" row="1" y="70"/>
+          <view angle="135" row="1" x="10" y="68" hm="true"/>
+          <view angle="180" col="2" row="1" x="18" y="71" hm="true"/>
+          <view angle="225" col="3" row="1" x="11" y="73" hm="true"/>
+          <view angle="270" col="4" row="1" y="72"/>
+          <view angle="315" col="3" row="1" x="-11" y="73"/>
+        </layer>
+        <layer id="Base_03" texture="cape_base">
+          <view angle="0" col="2" row="2" x="-18" y="71"/>
+          <view angle="45" row="2" x="-10" y="68"/>
+          <view angle="90" col="1" row="2" y="70"/>
+          <view angle="135" row="2" x="10" y="68" hm="true"/>
+          <view angle="180" col="2" row="2" x="18" y="71" hm="true"/>
+          <view angle="225" col="3" row="2" x="11" y="73" hm="true"/>
+          <view angle="270" col="4" row="2" y="72"/>
+          <view angle="315" col="3" row="2" x="-11" y="73"/>
+        </layer>
+        <layer id="Base_04" texture="cape_base">
+          <view angle="0" col="2" row="3" x="-18" y="71"/>
+          <view angle="45" row="3" x="-10" y="68"/>
+          <view angle="90" col="1" row="3" y="70"/>
+          <view angle="135" row="3" x="10" y="68" hm="true"/>
+          <view angle="180" col="2" row="3" x="18" y="71" hm="true"/>
+          <view angle="225" col="3" row="3" x="11" y="73" hm="true"/>
+          <view angle="270" col="4" row="3" y="72"/>
+          <view angle="315" col="3" row="3" x="-11" y="73"/>
+        </layer>
+        <layer id="sit_base" texture="sit_base">
+          <view angle="45" x="5" y="55"/>
+          <view angle="135" x="-5" y="55" hm="true"/>
+          <view angle="225" col="1" x="-4" y="45" hm="true"/>
+          <view angle="315" col="1" x="4" y="45"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="red_01">
+          <layerref id="Base_01"/>
+        </frame>
+        <frame id="red_02">
+          <layerref id="Base_02"/>
+        </frame>
+        <frame id="red_03">
+          <layerref id="Base_03"/>
+        </frame>
+        <frame id="red_04">
+          <layerref id="Base_04"/>
+        </frame>
+        <frame id="sit_red">
+          <layerref id="sit_base"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="red_04"/>
+          <frameref id="red_03"/>
+          <frameref id="red_02"/>
+          <frameref id="red_01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,432 @@
+<item.SpriteItem id="1167" name="Sarcófago Amaldiçoado do Egito" desc="Um sarcófago amaldiçoado do Egito" tags="trap,misc,magic,turret,rare" icon="items/base/antique/icon_a_turret_04_mummy.png" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="1100" tokens="11000" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-1.2" max="0.49,0.45,1.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="fire" script="scripts/item/action_turret.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Fire" event="fire"/>
+  </actions>
+  <data>
+    <entry key="action_attributes" value="shadow-10"/>
+    <entry key="action_attributes_secondary" value="speed-20,health-20"/>
+  </data>
+  <textures>
+    <texture id="coffin" source="items/base/antique/a_tomb_01_coffin.png" cols="2" rows="1"/>
+    <texture id="cover" source="items/base/antique/a_tomb_01_mummy.png" cols="2" rows="1"/>
+    <texture id="body" source="items/base/antique/a_tomb_01_body.png" cols="2" rows="1"/>
+    <texture id="hieroglphics" source="items/base/antique/a_turret_04_mummy.png" cols="2" rows="1"/>
+    <texture id="vial glow effect" source="items/base/consumables/magic/effect_generic_vialglow.png" cols="2" rows="1"/>
+    <texture id="shockball effect" source="items/base/consumables/magic/proj_generic_shockball.png" cols="1" rows="3"/>
+    <texture id="zap effect" source="items/base/consumables/magic/proj_generic_zap.png" cols="1" rows="4"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="sarcophagus">
+      <box min="-0.49,0,-1.2" max="0.49,0.45,1.2"/>
+      <layers>
+        <layer id="coffin 01" texture="coffin" y="30">
+          <view angle="45" x="-3" y="27" hm="true"/>
+          <view angle="135" col="1" x="-2" y="24"/>
+          <view angle="225" col="1" x="2" y="24" hm="true"/>
+          <view angle="315" x="3" y="27"/>
+        </layer>
+        <layer id="coffin 02" texture="coffin" y="30">
+          <view angle="45" x="-3" y="27" hm="true"/>
+          <view angle="135" col="1" x="-2" y="24"/>
+          <view angle="225" col="1" x="2" y="24" hm="true"/>
+          <view angle="315" x="3" y="27"/>
+        </layer>
+        <layer id="cover" texture="cover" y="30">
+          <view angle="45" x="-2" y="-22" hm="true"/>
+          <view angle="135" col="1" x="-1" y="-23"/>
+          <view angle="225" col="1" x="1" y="-23" hm="true"/>
+          <view angle="315" x="2" y="-22"/>
+        </layer>
+        <layer id="body" texture="body" y="30">
+          <view angle="45" x="-3" y="-22" hm="true"/>
+          <view angle="135" col="1" x="-3" y="-25"/>
+          <view angle="225" col="1" x="5" y="-25" hm="true"/>
+          <view angle="315" x="3" y="-22"/>
+        </layer>
+        <layer id="body01" texture="body" y="30">
+          <view angle="45" x="-3" y="-22" hm="true"/>
+          <view angle="135" col="1" x="-3" y="-25"/>
+          <view angle="225" col="1" x="5" y="-25" hm="true"/>
+          <view angle="315" x="3" y="-22"/>
+        </layer>
+        <layer id="glyphs 01" texture="hieroglphics" y="30">
+          <view angle="45" x="14" y="26" hm="true"/>
+          <view angle="135" col="1" x="-17" y="24"/>
+          <view angle="225" col="1" x="16" y="24" hm="true"/>
+          <view angle="315" x="-15" y="25"/>
+        </layer>
+        <layer id="glyphs 02" texture="hieroglphics" y="30">
+          <view angle="45" x="14" y="26" hm="true"/>
+          <view angle="135" col="1" x="-17" y="24"/>
+          <view angle="225" col="1" x="16" y="24" hm="true"/>
+          <view angle="315" x="-15" y="25"/>
+        </layer>
+        <layer id="left eye glow" texture="vial glow effect">
+          <view angle="45" x="54" y="-64"/>
+          <view angle="135" x="54" y="-3"/>
+          <view angle="225" x="-63" y="-7"/>
+          <view angle="315" x="-63" y="-60"/>
+        </layer>
+        <layer id="right eye glow" texture="vial glow effect">
+          <view angle="45" x="62" y="-61"/>
+          <view angle="135" x="62" y="-7"/>
+          <view angle="225" x="-56" y="-3"/>
+          <view angle="315" x="-56" y="-64"/>
+        </layer>
+        <layer id="shock 01" texture="shockball effect">
+          <view angle="45" x="59" y="-48"/>
+          <view angle="135" x="58" y="8"/>
+          <view angle="225" x="-58" y="8"/>
+          <view angle="315" x="-59" y="-48"/>
+        </layer>
+        <layer id="shock 02" texture="shockball effect">
+          <view angle="45" row="1" x="59" y="-48"/>
+          <view angle="135" row="1" x="58" y="8"/>
+          <view angle="225" row="1" x="-58" y="8"/>
+          <view angle="315" row="1" x="-59" y="-48"/>
+        </layer>
+        <layer id="shock 03" texture="shockball effect">
+          <view angle="45" row="2" x="59" y="-48"/>
+          <view angle="135" row="2" x="58" y="8"/>
+          <view angle="225" row="2" x="-58" y="8"/>
+          <view angle="315" row="2" x="-59" y="-48"/>
+        </layer>
+        <layer id="zap 01" texture="zap effect">
+          <view angle="45" row="2" x="59" y="-48"/>
+          <view angle="135" row="2" x="58" y="8"/>
+          <view angle="225" row="2" x="-58" y="8"/>
+          <view angle="315" row="2" x="-59" y="-48"/>
+        </layer>
+        <layer id="zap 02" texture="zap effect">
+          <view angle="45" row="3" x="59" y="-48"/>
+          <view angle="135" row="3" x="58" y="8"/>
+          <view angle="225" row="3" x="-58" y="8"/>
+          <view angle="315" row="3" x="-59" y="-48"/>
+        </layer>
+        <layer id="zap 03" texture="zap effect">
+          <view angle="45" row="1" x="59" y="-48"/>
+          <view angle="135" row="1" x="58" y="8"/>
+          <view angle="225" row="1" x="-58" y="8"/>
+          <view angle="315" row="1" x="-59" y="-48"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+        </frame>
+        <frame id="magic 01">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="left eye glow" color="0xb9ffaf" a="0.5" blend="screen"/>
+          <layerref id="right eye glow" color="0xb9ffaf" a="0.5" blend="screen"/>
+        </frame>
+        <frame id="magic 02">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="cover"/>
+          <layerref id="left eye glow" color="0xb9ffaf" blend="screen"/>
+          <layerref id="right eye glow" color="0xb9ffaf" blend="screen"/>
+        </frame>
+        <frame id="magic 03">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="cover" y="-4"/>
+          <layerref id="left eye glow" y="-4" color="0xb9ffaf" a="0.8" blend="screen"/>
+          <layerref id="right eye glow" y="-4" color="0xb9ffaf" a="0.8" blend="screen"/>
+        </frame>
+        <frame id="magic 04">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-8"/>
+          <layerref id="left eye glow" y="-8" color="0xb9ffaf" blend="screen"/>
+          <layerref id="right eye glow" y="-8" color="0xb9ffaf" blend="screen"/>
+        </frame>
+        <frame id="magic 05">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-7"/>
+          <layerref id="left eye glow" y="-7" color="0xb9ffaf" a="0.8" blend="screen"/>
+          <layerref id="right eye glow" y="-7" color="0xb9ffaf" a="0.8" blend="screen"/>
+        </frame>
+        <frame id="magic 06">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-6"/>
+          <layerref id="left eye glow" y="-6" color="0xb9ffaf" blend="screen"/>
+          <layerref id="right eye glow" y="-6" color="0xb9ffaf" blend="screen"/>
+        </frame>
+        <frame id="magic 07">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-5"/>
+          <layerref id="left eye glow" y="-5" color="0xb9ffaf" a="0.8" blend="screen"/>
+          <layerref id="right eye glow" y="-5" color="0xb9ffaf" a="0.8" blend="screen"/>
+        </frame>
+        <frame id="magic 08">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-6"/>
+          <layerref id="left eye glow" y="-6" color="0xb9ffaf" blend="screen"/>
+          <layerref id="right eye glow" y="-6" color="0xb9ffaf" blend="screen"/>
+          <layerref id="shock 01" y="-6" color="0xcc00" blend="add"/>
+        </frame>
+        <frame id="magic 09">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-7"/>
+          <layerref id="left eye glow" y="-7" color="0xb9ffaf" a="0.8" blend="screen"/>
+          <layerref id="right eye glow" y="-7" color="0xb9ffaf" a="0.8" blend="screen"/>
+          <layerref id="shock 02" y="-7" color="0xcc00" blend="add"/>
+        </frame>
+        <frame id="magic 10">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-8"/>
+          <layerref id="left eye glow" y="-8" color="0xb9ffaf" blend="screen"/>
+          <layerref id="right eye glow" y="-8" color="0xb9ffaf" blend="screen"/>
+          <layerref id="shock 03" y="-8" color="0xcc00" blend="add"/>
+        </frame>
+        <frame id="magic 11">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-7"/>
+          <layerref id="left eye glow" y="-7" color="0xb9ffaf" a="0.8" blend="screen"/>
+          <layerref id="right eye glow" y="-7" color="0xb9ffaf" a="0.8" blend="screen"/>
+          <layerref id="shock 01" y="-7" color="0xcc00" blend="add"/>
+          <layerref id="zap 01" y="-7" a="0.6" blend="add"/>
+        </frame>
+        <frame id="magic 12">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-6"/>
+          <layerref id="left eye glow" y="-6" color="0xb9ffaf" blend="screen"/>
+          <layerref id="right eye glow" y="-6" color="0xb9ffaf" blend="screen"/>
+          <layerref id="shock 02" y="-6" color="0xcc00" blend="add"/>
+          <layerref id="zap 02" y="-6" blend="add"/>
+        </frame>
+        <frame id="magic 13">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-5"/>
+          <layerref id="left eye glow" y="-5" color="0xb9ffaf" a="0.8" blend="screen"/>
+          <layerref id="right eye glow" y="-5" color="0xb9ffaf" a="0.8" blend="screen"/>
+          <layerref id="shock 01" y="-5" color="0xcc00" blend="add"/>
+          <layerref id="zap 01" y="-5" a="0.6" blend="add"/>
+        </frame>
+        <frame id="magic 14">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-6"/>
+          <layerref id="left eye glow" y="-6" color="0xb9ffaf" blend="screen"/>
+          <layerref id="right eye glow" y="-6" color="0xb9ffaf" blend="screen"/>
+          <layerref id="shock 01" y="-6" color="0xcc00" blend="add"/>
+          <layerref id="zap 02" y="-6" a="0.6" blend="add"/>
+          <layerref id="zap 03" y="-6" color="0x33ff99" a="0.5" blend="add"/>
+        </frame>
+        <frame id="magic 15">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-7"/>
+          <layerref id="left eye glow" y="-7" color="0xb9ffaf" a="0.8" blend="screen"/>
+          <layerref id="right eye glow" y="-7" color="0xb9ffaf" a="0.8" blend="screen"/>
+          <layerref id="shock 01" y="-7" color="0xcc00" blend="add"/>
+          <layerref id="zap 01" y="-7" a="0.6" blend="add"/>
+          <layerref id="zap 03" y="-7" color="0x33ff99" blend="add"/>
+        </frame>
+        <frame id="magic 16">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-8"/>
+          <layerref id="left eye glow" y="-8" color="0xb9ffaf" blend="screen"/>
+          <layerref id="right eye glow" y="-8" color="0xb9ffaf" blend="screen"/>
+        </frame>
+        <frame id="magic 17">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-8"/>
+          <layerref id="left eye glow" y="-8" color="0xb9ffaf" a="0.66" blend="screen"/>
+          <layerref id="right eye glow" y="-8" color="0xb9ffaf" a="0.66" blend="screen"/>
+        </frame>
+        <frame id="magic 18">
+          <layerref id="coffin 01" color="0xf3c1b9"/>
+          <layerref id="coffin 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="glyphs 01" color="0xf3c1b9"/>
+          <layerref id="glyphs 02" color="0xfff999" a="0.7" blend="overlay"/>
+          <layerref id="body"/>
+          <layerref id="cover" y="-8"/>
+          <layerref id="left eye glow" y="-8" color="0xb9ffaf" a="0.33" blend="screen"/>
+          <layerref id="right eye glow" y="-8" color="0xb9ffaf" a="0.33" blend="screen"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="idle"/>
+        </animation>
+        <animation id="In" framerate="8" loop="false" syncOffsets="0,1">
+          <frameref id="magic 01"/>
+          <frameref id="magic 02"/>
+          <frameref id="magic 03"/>
+          <frameref id="magic 04"/>
+          <frameref id="magic 10"/>
+          <frameref id="magic 11"/>
+          <frameref id="magic 12"/>
+          <frameref id="magic 13"/>
+          <frameref id="magic 14"/>
+          <frameref id="magic 15"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="magic 16"/>
+          <frameref id="magic 17"/>
+          <frameref id="magic 18" duration="2"/>
+          <frameref id="idle"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.7" z="0.85" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+        <layer id="Light_01" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="Light_02" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light_01" color="0x84f093" a="0.3"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light_02" color="0x84f093" a="0.6"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0x84f093" a="0.8"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0x84f093"/>
+        </frame>
+        <frame id="Idle">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.7" z="0.85" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="45" x="-6" y="4"/>
+          <view angle="135"/>
+          <view angle="225" x="3"/>
+          <view angle="315" x="8" y="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" a="0.4"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

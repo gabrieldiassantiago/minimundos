@@ -1,0 +1,224 @@
+<item.ChairItem id="6309" name="Beliche Palavras Nordic" desc="Um beliche colorido de metal" tags="chair,misc,slave_catalog_colorize,unsearchable" icon="items/base/modern/icon_m_bedroom_18_bunkbed_text.png" price="440" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" chairType="bed">
+  <seats>
+    <seat x="0.3" y="2.2" z="0.5">
+      <ap x="1" z="-1"/>
+      <ap z="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="2" z="-1"/>
+      <ap x="3" z="-1"/>
+      <ap x="3"/>
+      <ap x="-1"/>
+    </seat>
+    <seat x="0.3" y="0.2" z="0.5">
+      <ap x="1" z="2"/>
+      <ap z="2"/>
+      <ap x="2" z="2"/>
+      <ap x="3" z="2"/>
+      <ap x="3" z="1"/>
+      <ap x="-1" z="2"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.48,0,-0.48" max="2.48,2.4,1.48"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="activate" script="scripts/item/activate_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="deactivate" script="scripts/item/deactivate_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/metalbunkbeds.xml"/>
+  </data>
+  <textures>
+    <texture id="Bed" source="items/base/modern/m_bedroom_18_bunkbed_bed_text.png" cols="2" rows="2"/>
+    <texture id="Sides" source="items/base/modern/m_bedroom_18_bunkbed_sides.png" cols="2" rows="2"/>
+    <texture id="Ladder" source="items/base/modern/m_bedroom_18_bunkbed_ladder.png" cols="2" rows="1"/>
+    <texture id="End" source="items/base/modern/m_bedroom_18_bunkbed_end.png" cols="2" rows="1"/>
+    <texture id="Pillow" source="items/base/modern/m_bedroom_18_bunkbed_pillow_text.png" cols="2" rows="3"/>
+    <texture id="Shadow" source="items/base/modern/m_bedroom_17_bunkbed_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind">
+      <box min="-0.48,0,-0.48" max="2.48,2.4,1.48"/>
+      <layers>
+        <layer id="Bed01" texture="Bed">
+          <view angle="45" x="68" y="54"/>
+          <view angle="135" row="1" x="-3" y="83"/>
+          <view angle="225" col="1" x="-98" y="30"/>
+          <view angle="315" col="1" row="1" x="36"/>
+        </layer>
+        <layer id="Bed02" texture="Bed">
+          <view angle="45" x="68" y="-90"/>
+          <view angle="135" row="1" x="-3" y="-63"/>
+          <view angle="225" col="1" x="-99" y="-114"/>
+          <view angle="315" col="1" row="1" x="36" y="-145"/>
+        </layer>
+        <layer id="End_Back" texture="End">
+          <view angle="45" col="1" x="-7" y="15"/>
+          <view angle="135" col="1" x="71" y="45" hm="true"/>
+          <view angle="225" col="1" x="-175" y="-7"/>
+          <view angle="315" col="1" x="112" y="-38" hm="true"/>
+        </layer>
+        <layer id="PillowTop" texture="Pillow">
+          <view angle="45" row="1" x="21" y="-167"/>
+          <view angle="135" x="41" y="-143"/>
+          <view angle="225" col="1" row="1" x="-48" y="-147" alpha="0"/>
+          <view angle="315" col="1" x="-14" y="-173" alpha="0"/>
+        </layer>
+        <layer id="Side_TopBack" texture="Sides">
+          <view angle="45" row="1" x="104" y="-111"/>
+          <view angle="135" x="-40" y="-83" hm="true"/>
+          <view angle="225" col="1" x="-74" y="-141"/>
+          <view angle="315" row="1" x="2" y="-166" hm="true"/>
+        </layer>
+        <layer id="Side_Bottom_Back" texture="Sides">
+          <view angle="45" col="1" row="1" x="96" y="30"/>
+          <view angle="135" col="1" row="1" x="-39" y="64" hm="true"/>
+          <view angle="225" col="1" row="1" x="-73" y="9"/>
+          <view angle="315" col="1" row="1" x="10" y="-25" hm="true"/>
+        </layer>
+        <layer id="PillowBottom" texture="Pillow">
+          <view angle="45" row="1" x="23" y="-24"/>
+          <view angle="135" x="41" y="7"/>
+          <view angle="225" col="1" row="1" x="-46" y="2" alpha="0"/>
+          <view angle="315" col="1" x="-11" y="-27" alpha="0"/>
+        </layer>
+        <layer id="LadderBack" texture="Ladder">
+          <view angle="45" x="88" y="101" alpha="0"/>
+          <view angle="135" x="-94" y="92" hm="true"/>
+          <view angle="225" col="1" x="-121" y="-34"/>
+          <view angle="315" col="1" x="122" y="-27" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Shadow" texture="Shadow">
+          <view angle="45" x="64" y="96"/>
+          <view angle="135" y="119" hm="true"/>
+          <view angle="225" x="-100" y="69"/>
+          <view angle="315" x="40" y="38" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Shadow"/>
+          <layerref id="End_Back" color="0x4950f0"/>
+          <layerref id="LadderBack" color="0x4950f0"/>
+          <layerref id="Side_Bottom_Back" color="0x4950f0"/>
+          <layerref id="Side_TopBack" color="0x4950f0"/>
+          <layerref id="Bed01"/>
+          <layerref id="Bed02"/>
+          <layerref id="PillowBottom"/>
+          <layerref id="PillowTop"/>
+        </frame>
+        <frame id="On">
+          <layerref id="Shadow"/>
+          <layerref id="End_Back" color="0x4950f0"/>
+          <layerref id="LadderBack" color="0x4950f0"/>
+          <layerref id="Side_Bottom_Back" color="0x4950f0"/>
+          <layerref id="Side_TopBack" color="0x4950f0"/>
+          <layerref id="Bed01"/>
+          <layerref id="Bed02"/>
+          <layerref id="PillowBottom"/>
+          <layerref id="PillowTop"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="-0.48,0,-0.48" max="2.48,2.4,1.48"/>
+      <layers>
+        <layer id="End_Front" texture="End">
+          <view angle="45" x="142" y="89"/>
+          <view angle="135" x="-76" y="117" hm="true"/>
+          <view angle="225" x="-30" y="67"/>
+          <view angle="315" x="-34" y="35" hm="true"/>
+        </layer>
+        <layer id="Side_TopFront" texture="Sides">
+          <view angle="45" x="37" y="-77"/>
+          <view angle="135" row="1" x="28" y="-50" hm="true"/>
+          <view angle="225" row="1" x="-132" y="-101"/>
+          <view angle="315" col="1" x="70" y="-133" hm="true"/>
+        </layer>
+        <layer id="LadderFront" texture="Ladder">
+          <view angle="45" x="83" y="85"/>
+          <view angle="135" x="50" y="2" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-46" y="-2" alpha="0"/>
+          <view angle="315" col="1" x="122" y="-41" hm="true"/>
+        </layer>
+        <layer id="SheetTop" texture="Pillow">
+          <view angle="45" row="2" x="64" y="-124"/>
+          <view angle="135" row="2" x="3" y="-95" hm="true"/>
+          <view angle="225" col="1" row="2" x="-76" y="-144" alpha="0"/>
+          <view angle="315" col="1" row="2" x="14" y="-174" alpha="0" hm="true"/>
+        </layer>
+        <layer id="SheetBottom" texture="Pillow">
+          <view angle="45" row="2" x="64" y="20"/>
+          <view angle="135" row="2" x="3" y="52" hm="true"/>
+          <view angle="225" col="1" row="2" x="-76" y="-144" alpha="0"/>
+          <view angle="315" col="1" row="2" x="14" y="-174" alpha="0" hm="true"/>
+        </layer>
+        <layer id="PillowBottom" texture="Pillow">
+          <view angle="45" row="1" x="15" y="-28" alpha="0"/>
+          <view angle="135" x="50" y="2" alpha="0"/>
+          <view angle="225" col="1" row="1" x="-47" y="4"/>
+          <view angle="315" col="1" x="-12" y="-22"/>
+        </layer>
+        <layer id="Side_Bottom" texture="Sides">
+          <view angle="45" col="1" row="1" x="36" y="64"/>
+          <view angle="135" col="1" row="1" x="28" y="96" hm="true"/>
+          <view angle="225" col="1" row="1" x="-130" y="43"/>
+          <view angle="315" col="1" row="1" x="69" y="13" hm="true"/>
+        </layer>
+        <layer id="PillowTop" texture="Pillow">
+          <view angle="45" row="1" x="21" y="-167" alpha="0"/>
+          <view angle="135" x="41" y="-145" alpha="0"/>
+          <view angle="225" col="1" row="1" x="-48" y="-142"/>
+          <view angle="315" col="1" x="-14" y="-169"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="PillowTop"/>
+          <layerref id="Side_TopFront" color="0x4950f0"/>
+          <layerref id="Side_Bottom" color="0x4950f0"/>
+          <layerref id="LadderFront" color="0x4950f0"/>
+          <layerref id="PillowBottom"/>
+          <layerref id="End_Front" color="0x4950f0"/>
+        </frame>
+        <frame id="On">
+          <layerref id="SheetTop"/>
+          <layerref id="SheetBottom"/>
+          <layerref id="PillowTop"/>
+          <layerref id="Side_TopFront" color="0x4950f0"/>
+          <layerref id="PillowBottom"/>
+          <layerref id="Side_Bottom" color="0x4950f0"/>
+          <layerref id="LadderFront" color="0x4950f0"/>
+          <layerref id="End_Front" color="0x4950f0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

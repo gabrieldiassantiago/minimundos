@@ -1,0 +1,35 @@
+<item.SpriteItem name="Esqui Alpine Zoom" desc="Um par de esquis para deslizar sobre a neve" tags="consumable,actionbar,wear,feet,action_wearable_toggle" icon="items/base/consumables/feet/icon_con_feet_item_14_ski.png" minLevel="120" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="1737" price="3200" minLevelType="2" premium="Y">
+  <volume>
+    <box min="-0.44,0,-0.22" max="0.44,0.3,0.22"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+35"/>
+  </data>
+  <textures>
+    <texture id="board" source="items/base/consumables/feet/con_feet_item_14_ski.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.44,0,-0.22" max="0.44,0.3,0.22"/>
+      <layers>
+        <layer id="board" texture="board">
+          <view angle="45" x="-2" y="25"/>
+          <view angle="135" x="2" y="25" hm="true"/>
+          <view angle="225" col="1" x="2" y="30"/>
+          <view angle="315" col="1" x="-2" y="30" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

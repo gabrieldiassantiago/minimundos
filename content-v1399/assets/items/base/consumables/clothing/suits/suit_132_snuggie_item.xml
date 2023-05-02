@@ -1,0 +1,44 @@
+<item.SpriteItem id="6552" name="Confortável Roupão de Lã Apex" desc="Um roupão super confortável" tags="consumable,clothing,actionbar,wear,suits,action_wearable_toggle" icon="items/base/consumables/clothing/suits/suit_132_snuggie_icon_a.png" price="1155" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_132_frag_snuggie.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="hoody" source="items/base/consumables/clothing/suits/suit_132_snuggie_item.png" cols="2" rows="1"/>
+    <texture id="mannequin" source="items/base/consumables/clothing/suits/suit_mannequin_wood.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+      <layers>
+        <layer id="mannequin" texture="mannequin" y="30">
+          <view angle="45" y="-10"/>
+          <view angle="135" y="-10" hm="true"/>
+          <view angle="225" col="1" x="1" y="-8"/>
+          <view angle="315" col="1" x="1" y="-8" hm="true"/>
+        </layer>
+        <layer id="hoody" texture="hoody" y="-33">
+          <view angle="45" x="-2" y="46"/>
+          <view angle="135" x="3" y="46" hm="true"/>
+          <view angle="225" col="1" x="6" y="46"/>
+          <view angle="315" col="1" x="-2" y="46" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,58 @@
+<item.SpriteItem id="0" name="Glue gun hit" desc="A glue gun hit effect." dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="hit_03_snowball" source="items/base/consumables/magic/hit_47_gluegun.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="splat" source="items/base/consumables/magic/sndfx_splat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="Hit 01" texture="hit_03_snowball" y="15">
+          <view y="-81"/>
+        </layer>
+        <layer id="Hit 02" texture="hit_03_snowball" y="15">
+          <view col="1" y="-64"/>
+        </layer>
+        <layer id="Hit 03" texture="hit_03_snowball" y="15">
+          <view col="2" y="-48"/>
+        </layer>
+        <layer id="Hit 04" texture="hit_03_snowball" y="15">
+          <view col="3" y="-36"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Hit 01">
+          <layerref id="Hit 01"/>
+        </frame>
+        <frame id="Hit 02">
+          <layerref id="Hit 02"/>
+        </frame>
+        <frame id="Hit 03">
+          <layerref id="Hit 03"/>
+        </frame>
+        <frame id="Hit 04">
+          <layerref id="Hit 04" a="0.8"/>
+        </frame>
+        <frame id="Hit 05">
+          <layerref id="Hit 04" a="0.4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="4" loop="false">
+          <frameref id="Hit 01" duration="2">
+            <sample id="splat"/>
+          </frameref>
+          <frameref id="Hit 02"/>
+          <frameref id="Hit 03"/>
+          <frameref id="Hit 04"/>
+          <frameref id="Hit 05"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

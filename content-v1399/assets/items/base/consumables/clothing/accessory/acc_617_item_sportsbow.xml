@@ -1,0 +1,34 @@
+<item.SpriteItem name="Arco e Flecha Play" desc="Um arco e flecha profissional" tags="consumable,usable,hand,wear,actionbar,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_617_icon_sportsbow.png" price="790" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="6079">
+  <volume>
+    <box min="-0.15,0,-0.3" max="0.15,1.25,0.3"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="bow" source="items/base/consumables/clothing/accessory/acc_617_item_sportsbow.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.3" max="0.15,1.25,0.3"/>
+      <layers>
+        <layer id="bow" texture="bow">
+          <view angle="45" x="-9" y="33"/>
+          <view angle="135" x="9" y="33" hm="true"/>
+          <view angle="225" col="1" x="13" y="41"/>
+          <view angle="315" col="1" x="-13" y="41" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

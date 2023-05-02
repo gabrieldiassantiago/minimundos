@@ -1,0 +1,44 @@
+<item.SpriteItem id="0" name="Katana" desc="Katana" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.05,0,-0.135" max="-0.05,0,-0.135"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/brands/walkingdead/wd_02_katana_back.png" cols="4" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" x="-0.05" z="-0.135" depthBias="0.01">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="base" texture="base" y="1">
+          <view angle="0" col="3" row="1" x="8" y="77"/>
+          <view angle="45" x="15" y="83"/>
+          <view angle="90" col="1" x="7" y="89"/>
+          <view angle="135" col="2" x="-4" y="86"/>
+          <view angle="180" col="3" x="-7" y="88"/>
+          <view angle="225" row="1" x="-11" y="80"/>
+          <view angle="270" col="1" row="1" x="-9" y="73"/>
+          <view angle="315" col="2" row="1" x="4" y="72"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="base"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="base" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

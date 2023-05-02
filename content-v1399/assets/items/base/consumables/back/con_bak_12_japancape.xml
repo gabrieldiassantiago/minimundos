@@ -1,0 +1,90 @@
+<item.SpriteItem desc="Japanese Cape" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" entity="false" icon="items/base/consumables/back/icon_con_head_15_level1.png" name="Japan Cape" tags="wearable, consumable, actionbar" id="0">
+  <volume>
+    <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+  </volume>
+  <textures>
+    <texture id="Sit" source="items/base/consumables/back/con_bak_12_japancape_sit.png" cols="2" rows="1"/>
+    <texture id="Top" source="items/base/consumables/back/con_bak_12_japancape_top.png" cols="6" rows="1"/>
+    <texture id="Bottom" source="items/base/consumables/back/con_bak_12_japancape_bottom.png" cols="3" rows="6"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+      <layers>
+        <layer id="CapeF1" texture="Bottom">
+          <view angle="0" row="2" x="-10" y="52" hm="true"/>
+          <view angle="45" row="1" x="-8" y="47" hm="true"/>
+          <view angle="90" x="1" y="46"/>
+          <view angle="135" row="1" x="6" y="47"/>
+          <view angle="180" row="2" x="10" y="53"/>
+          <view angle="225" row="3" x="3" y="55"/>
+          <view angle="270" row="4" y="54"/>
+          <view angle="315" row="5" x="-7" y="54"/>
+        </layer>
+        <layer id="CapeF2" texture="Bottom">
+          <view angle="0" col="1" row="2" x="-10" y="52" hm="true"/>
+          <view angle="45" col="1" row="1" x="-8" y="47" hm="true"/>
+          <view angle="90" col="1" x="1" y="46"/>
+          <view angle="135" col="1" row="1" x="6" y="47"/>
+          <view angle="180" col="1" row="2" x="10" y="53"/>
+          <view angle="225" col="1" row="3" x="3" y="55"/>
+          <view angle="270" col="1" row="4" y="54"/>
+          <view angle="315" col="1" row="5" x="-7" y="54"/>
+        </layer>
+        <layer id="CapeF3" texture="Bottom">
+          <view angle="0" col="2" row="2" x="-10" y="53" hm="true"/>
+          <view angle="45" col="2" row="1" x="-9" y="48" hm="true"/>
+          <view angle="90" col="2" x="1" y="46"/>
+          <view angle="135" col="2" row="1" x="7" y="48"/>
+          <view angle="180" col="2" row="2" x="10" y="54"/>
+          <view angle="225" col="2" row="3" x="3" y="55"/>
+          <view angle="270" col="2" row="4" y="54"/>
+          <view angle="315" col="2" row="5" x="-7" y="54"/>
+        </layer>
+        <layer id="Sit" texture="Sit">
+          <view angle="45" x="1" y="34"/>
+          <view angle="135" x="-3" y="33" hm="true"/>
+          <view angle="225" col="1" x="-3" y="29"/>
+          <view angle="315" col="1" x="1" y="29" hm="true"/>
+        </layer>
+        <layer id="TopPiece" texture="Top">
+          <view angle="0" col="2" x="2" y="23" hm="true"/>
+          <view angle="45" col="1" x="-1" y="23" hm="true"/>
+          <view angle="90" x="1" y="23"/>
+          <view angle="135" col="1" x="-1" y="23"/>
+          <view angle="180" col="2" x="-2" y="23"/>
+          <view angle="225" col="3" x="-2" y="20"/>
+          <view angle="270" col="4" y="18"/>
+          <view angle="315" col="5" x="1" y="19"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="CapeF1"/>
+          <layerref id="TopPiece"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="CapeF2"/>
+          <layerref id="TopPiece"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="CapeF3"/>
+          <layerref id="TopPiece"/>
+        </frame>
+        <frame id="Sit">
+          <layerref id="Sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Flap" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

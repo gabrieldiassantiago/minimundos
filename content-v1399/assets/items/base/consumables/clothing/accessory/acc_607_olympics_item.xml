@@ -1,0 +1,49 @@
+<item.SpriteItem id="6059" name="Tocha dos Jogos Glória" desc="Um agradecimento por jogar MiniMundos em Agosto 2016" tags="rare,consumable,light,actionbar,wear,hand,usable,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_607_olympics_icon.png" price="1" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.1" max="0.35,0.2,0.1"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+10"/>
+    <entry key="action_attributes_secondary" value="speed+20,health+16"/>
+  </data>
+  <textures>
+    <texture id="torch" source="items/base/consumables/clothing/accessory/acc_607_olympics_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.1" max="0.35,0.2,0.1"/>
+      <layers>
+        <layer id="mistletoe" texture="torch">
+          <view angle="45" y="23"/>
+          <view angle="135" y="23" hm="true"/>
+          <view angle="225" col="1" y="20" hm="true"/>
+          <view angle="315" col="1" y="20"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="mistletoe"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

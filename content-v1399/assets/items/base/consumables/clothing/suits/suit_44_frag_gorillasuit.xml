@@ -1,0 +1,104 @@
+<f id="GorillaSuit" parentId="Suits">
+  <g id="Torso">
+    <s id="GorillaTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_44_gorilla_torso.png" pri="1"/>
+    <c sId="FurrTorsoBase" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+  </g>
+  <g id="TopTshirtLogo" name="Arms">
+    <s id="GorillaArmIdle" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_44_gorilla_arm_idle.png" pri="1"/>
+    <s id="GorillaArmWalk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_44_gorilla_arm_walk1.png" pri="1"/>
+    <s id="GorillaArmWalk2" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_44_gorilla_arm_walk2.png" pri="1"/>
+    <s id="GorillaArmWalk3" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_44_gorilla_arm_walk3.png" pri="1"/>
+    <s id="GorillaArmSit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_44_gorilla_arm_sit.png" pri="1"/>
+    <c sId="FurrArmIdle" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrArmWalk1" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrArmWalk2" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrArmWalk3" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrArmWalk4" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <s id="GorillaArmThrow" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_44_gorilla_arm_throw.png" pri="1"/>
+    <s id="GorillaArmRaise" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_44_gorilla_arm_raise.png" pri="1"/>
+    <c sId="FurrArmThrow" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrArmRaise" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+  </g>
+  <g id="Hands" icon="$bm/icon_m_longsleeve.png">
+    <s id="GorillaHandIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_idle.png"/>
+    <s id="GloveArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_walk1.png"/>
+    <s id="GloveArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_walk2.png"/>
+    <s id="GloveArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_walk3.png"/>
+    <c sId="GloveArmIdleBase" c="16777215" lId="Top01_Color12" lw="N"/>
+    <c sId="GloveArmWalk1Base" c="16777215" lId="Top01_Color12" lw="N"/>
+    <c sId="GloveArmWalk2Base" c="16777215" lId="Top01_Color12" lw="N"/>
+    <c sId="GloveArmWalk3Base" c="16777215" lId="Top01_Color12" lw="N"/>
+    <c sId="UnderArmorArmSitBase" c="16777215" lId="Top01_Color12" lw="N"/>
+    <s id="GloveArmThrowBase" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_wave1.png"/>
+    <s id="GloveArmRaiseBase" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_wave2.png"/>
+    <c sId="GloveArmThrowBase" c="16777215" lId="Top01_Color12" lw="N"/>
+    <c sId="GloveArmRaiseBase" c="16777215" lId="Top01_Color12" lw="N"/>
+    <s id="GloveArmThrowHold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_hold.png"/>
+    <s id="GloveArmThrowOpen" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_open.png"/>
+    <s id="GloveArmThrowPoint" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_point.png"/>
+    <s id="GloveArmThrowStop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_stop.png"/>
+    <s id="GloveArmThrowThrow" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_throw.png"/>
+    <s id="GloveArmThrowThumb" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_thumbs.png"/>
+    <c sId="GloveArmThrowHold" c="16777215" lId="Top01_Color12" lw="N"/>
+    <c sId="GloveArmThrowOpen" c="16777215" lId="Top01_Color12" lw="N"/>
+    <c sId="GloveArmThrowPoint" c="16777215" lId="Top01_Color12" lw="N"/>
+    <c sId="GloveArmThrowStop" c="16777215" lId="Top01_Color12" lw="N"/>
+    <c sId="GloveArmThrowThrow" c="16777215" lId="Top01_Color12" lw="N"/>
+    <c sId="GloveArmThrowThumb" c="16777215" lId="Top01_Color12" lw="N"/>
+    <s id="GloveArmSit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_44_gorilla_hands_sit.png"/>
+  </g>
+  <g id="SkinnyChexBase" name="Legs" icon="$bu/icon_legs_trouser.png">
+    <s id="GorillaLegIdle" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_44_gorilla_leg_idle.png" pri="1"/>
+    <s id="GorillaLegWalk1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_44_gorilla_leg_walk1.png" pri="1"/>
+    <s id="GorillaLegWalk2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_44_gorilla_leg_walk2.png" pri="1"/>
+    <s id="GorillaLegWalk3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_44_gorilla_leg_walk3.png" pri="1"/>
+    <s id="GorillaLegWalk4" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_44_gorilla_leg_walk4.png" pri="1"/>
+    <s id="GorillaLegSitUpper" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_44_gorilla_leg_situpper.png" pri="1"/>
+    <s id="GorillaLegSitLower" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_44_gorilla_leg_sitlower.png" pri="1"/>
+    <c sId="FurrLegIdle" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrLegWalk1" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrLegWalk2" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrLegWalk3" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrLegWalk4" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrLegSitUpper" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrLegSitLower" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+  </g>
+  <g id="StandardShoe" name="Feet" icon="$bm/icon_shoe_standard.png">
+    <s id="GorillaFeetIdle" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_44_gorilla_foot_idle.png" pri="2"/>
+    <s id="GorillaFeetWalk1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_44_gorilla_foot_walk1.png" pri="2"/>
+    <s id="GorillaFeetWalk2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_44_gorilla_foot_walk2.png" pri="2"/>
+    <s id="GorillaFeetWalk3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_44_gorilla_foot_walk3.png" pri="2"/>
+    <s id="GorillaFeetWalk4" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_44_gorilla_foot_walk4.png" pri="2"/>
+    <s id="GorillaFeetSit" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_44_gorilla_foot_sit.png" pri="2"/>
+    <c sId="FurrFeetIdle" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrFeetWalk1" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrFeetWalk2" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrFeetWalk3" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrFeetWalk4" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+    <c sId="FurrFeetSit" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_02" icon="items/base/consumables/clothing/suits/suit_44_icon_gorilla.png" w="48" h="48"/>
+    <s id="IconTop01_02Base" cId="IconTop01_02" s="items/base/consumables/clothing/suits/suit_44_icon_gorilla.png"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_02Color1" name="Color" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="16775389" a="0.28" b="52.8" ct="0.56" lId="Top01_Color1"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+  <ds id="Top06"/>
+</f>

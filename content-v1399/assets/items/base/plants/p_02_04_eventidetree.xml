@@ -1,0 +1,90 @@
+<item.SpriteItem name="Semente de Aurorina" desc="Um saquinho de sementes de aurorina, que simbolizam alegria de viver." tags="seed,stackable,plant,goldonly,market" icon="items/base/plants/p_02_04_eventidetree_seed.png" minLevel="40" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="1978" price="12" minLevelType="6" tokens="120">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="waterHours" value="28"/>
+    <entry key="matureHours" value="40"/>
+    <entry key="matureWaterHours" value="168"/>
+    <entry key="harvestMin" value="1"/>
+    <entry key="harvestMax" value="3"/>
+    <entry key="harvestXPReward" value="148"/>
+  </data>
+  <textures>
+    <texture id="Seed" source="items/base/plants/p_02_04_eventidetree_seed.png" cols="1" rows="1"/>
+    <texture id="Leaves0" source="items/base/plants/p_sprout_01_leaves0.png" cols="1" rows="1"/>
+    <texture id="Branches0" source="items/base/plants/p_sprout_01_branches0.png" cols="1" rows="1"/>
+    <texture id="Leaves1" source="items/base/plants/p_02_04_eventidetree_leaves1.png" cols="1" rows="1"/>
+    <texture id="Branches1" source="items/base/plants/p_02_04_eventidetree_branches1.png" cols="1" rows="1"/>
+    <texture id="Leaves2" source="items/base/plants/p_02_04_eventidetree_leaves2.png" cols="1" rows="1"/>
+    <texture id="Branches2" source="items/base/plants/p_02_04_eventidetree_branches2.png" cols="1" rows="1"/>
+    <texture id="Flowers" source="items/base/plants/p_02_04_eventidetree_flowers.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Flower">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Seed" type="group">
+          <layer id="Seed1" texture="Seed" align="middle">
+            <view angle="45" y="-14"/>
+            <view angle="135" y="-14" hm="true"/>
+            <view angle="225" y="-14"/>
+            <view angle="315" y="-14" hm="true"/>
+          </layer>
+        </layer>
+        <layer id="Branches" type="group">
+          <layer id="Branches0" texture="Branches0">
+            <view y="1"/>
+          </layer>
+          <layer id="Branches1" texture="Branches1">
+            <view y="1"/>
+          </layer>
+          <layer id="Branches2" texture="Branches2">
+            <view y="4"/>
+          </layer>
+        </layer>
+        <layer id="Leaves" type="group">
+          <layer id="Leaves0" texture="Leaves0">
+            <view/>
+          </layer>
+          <layer id="Leaves1" texture="Leaves1">
+            <view x="-2" y="-39"/>
+          </layer>
+          <layer id="Leaves2" texture="Leaves2">
+            <view x="-2" y="-53"/>
+          </layer>
+        </layer>
+        <layer id="Flowers" texture="Flowers">
+          <view y="-56"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Seed">
+          <layerref id="Seed1"/>
+        </frame>
+        <frame id="Plant0">
+          <layerref id="Branches0"/>
+          <layerref id="Leaves0"/>
+        </frame>
+        <frame id="Plant1">
+          <layerref id="Branches1"/>
+          <layerref id="Leaves1"/>
+        </frame>
+        <frame id="Plant2">
+          <layerref id="Branches2"/>
+          <layerref id="Leaves2"/>
+        </frame>
+        <frame id="Flowers">
+          <layerref id="Branches2"/>
+          <layerref id="Leaves2"/>
+          <layerref id="Flowers"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

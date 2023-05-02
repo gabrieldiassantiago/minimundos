@@ -1,0 +1,191 @@
+<item.SpriteItem id="6224" name="Cetro de Caveira do Sr. Charada" desc="Um cetro de caveira desbloqueado." tags="rare,consumable,actionbar,wear,hand,usable,action_holdable_toggle" icon="items/base/mystery/mystery_29_icon.png" price="99" minLevel="1" minCPLevel="1" dropTargetType="floor" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,0.5,0.4"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+10"/>
+    <entry key="action_attributes_secondary" value="health+10,speed+10"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/mystery/mystery_29_item.png" cols="2" rows="1"/>
+    <texture id="sparkle" source="items/base/consumables/clothing/accessory/acc_482_goldhula_sparkle.png" cols="3" rows="1"/>
+    <texture id="glitter" source="items/base/mystery/mystery_29_sparkle.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="deer">
+      <box min="-0.4,0,-0.4" max="0.4,0.5,0.4"/>
+      <layers>
+        <layer id="deer" texture="Texture">
+          <view angle="45" x="-2" y="16"/>
+          <view angle="135" x="2" y="16" hm="true"/>
+          <view angle="225" col="1" x="-1" y="16"/>
+          <view angle="315" col="1" x="1" y="16" hm="true"/>
+        </layer>
+        <layer id="sparkle_01" texture="sparkle" y="-98">
+          <view angle="45" x="12" y="5"/>
+          <view angle="135" x="-11" y="5"/>
+          <view angle="225" x="-16" y="6"/>
+          <view angle="315" x="17" y="3"/>
+        </layer>
+        <layer id="sparkle_02" texture="sparkle" y="-98">
+          <view angle="45" col="1" x="12" y="5"/>
+          <view angle="135" col="1" x="-11" y="5"/>
+          <view angle="225" col="1" x="-16" y="6"/>
+          <view angle="315" col="1" x="17" y="3"/>
+        </layer>
+        <layer id="sparkle_03" texture="sparkle" y="-98">
+          <view angle="45" col="2" x="12" y="5"/>
+          <view angle="135" col="2" x="-11" y="5"/>
+          <view angle="225" col="2" x="-16" y="6"/>
+          <view angle="315" col="2" x="17" y="3"/>
+        </layer>
+        <layer id="sparkle_04" texture="sparkle" y="-98">
+          <view angle="45" col="1" x="12" y="5" hm="true"/>
+          <view angle="135" col="1" x="-11" y="5" hm="true"/>
+          <view angle="225" col="1" x="-16" y="6" hm="true"/>
+          <view angle="315" col="1" x="17" y="3" hm="true"/>
+        </layer>
+        <layer id="sparkle_05" texture="sparkle" y="-98">
+          <view angle="45" x="12" y="5" hm="true"/>
+          <view angle="135" x="-11" y="5" hm="true"/>
+          <view angle="225" x="-16" y="6" hm="true"/>
+          <view angle="315" x="17" y="3" hm="true"/>
+        </layer>
+        <layer id="sparkle_06" texture="sparkle" y="-98">
+          <view angle="45" y="25"/>
+          <view angle="135" y="25"/>
+          <view angle="225" x="17" y="11"/>
+          <view angle="315" x="-16" y="11"/>
+        </layer>
+        <layer id="sparkle_07" texture="sparkle" y="-98">
+          <view angle="45" col="1" y="25"/>
+          <view angle="135" col="1" y="25"/>
+          <view angle="225" col="1" x="17" y="11"/>
+          <view angle="315" col="1" x="-16" y="11"/>
+        </layer>
+        <layer id="sparkle_08" texture="sparkle" y="-98">
+          <view angle="45" col="2" y="25"/>
+          <view angle="135" col="2" y="25"/>
+          <view angle="225" col="2" x="17" y="11"/>
+          <view angle="315" col="2" x="-16" y="11"/>
+        </layer>
+        <layer id="sparkle_09" texture="sparkle" y="-98">
+          <view angle="45" col="1" y="25" hm="true"/>
+          <view angle="135" col="1" y="25" hm="true"/>
+          <view angle="225" col="1" x="17" y="11" hm="true"/>
+          <view angle="315" col="1" x="-16" y="11" hm="true"/>
+        </layer>
+        <layer id="sparkle_10" texture="sparkle" y="-98">
+          <view angle="45" y="25" hm="true"/>
+          <view angle="135" y="25" hm="true"/>
+          <view angle="225" x="17" y="11" hm="true"/>
+          <view angle="315" x="-16" y="11" hm="true"/>
+        </layer>
+        <layer id="glitter" texture="glitter" y="-98">
+          <view angle="45" x="-4" y="15"/>
+          <view angle="135" x="4" y="15" hm="true"/>
+          <view angle="225" col="3" x="-1" y="16" hm="true"/>
+          <view angle="315" col="3" x="1" y="16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle_01">
+          <layerref id="deer"/>
+          <layerref id="glitter" a="0.5"/>
+        </frame>
+        <frame id="Idle_02">
+          <layerref id="deer"/>
+          <layerref id="glitter" a="0.6"/>
+        </frame>
+        <frame id="Idle_03">
+          <layerref id="deer"/>
+          <layerref id="glitter" a="0.8"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="deer"/>
+          <layerref id="sparkle_01"/>
+          <layerref id="glitter" a="0.6"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="deer"/>
+          <layerref id="sparkle_02"/>
+          <layerref id="glitter" a="0.5"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="deer"/>
+          <layerref id="sparkle_03"/>
+          <layerref id="glitter" a="0.5"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="deer"/>
+          <layerref id="sparkle_04"/>
+          <layerref id="glitter" a="0.4"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="deer"/>
+          <layerref id="sparkle_05"/>
+          <layerref id="glitter" a="0.3"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="deer"/>
+          <layerref id="sparkle_06" a="0.8"/>
+          <layerref id="glitter" a="0.3"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="deer"/>
+          <layerref id="sparkle_07"/>
+          <layerref id="glitter" a="0.4"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="deer"/>
+          <layerref id="sparkle_08"/>
+          <layerref id="glitter" a="0.5"/>
+        </frame>
+        <frame id="Frame09">
+          <layerref id="deer"/>
+          <layerref id="sparkle_09"/>
+          <layerref id="glitter" a="0.6"/>
+        </frame>
+        <frame id="Frame10">
+          <layerref id="deer"/>
+          <layerref id="sparkle_10"/>
+          <layerref id="glitter" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="10">
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+          <frameref id="Idle_03" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+          <frameref id="Idle_03" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame09"/>
+          <frameref id="Frame10"/>
+          <frameref id="Idle_03" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

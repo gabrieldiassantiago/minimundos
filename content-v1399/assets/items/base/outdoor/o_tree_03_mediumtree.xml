@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="A medium sized tree" dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/outdoor/icon_o_tree_03_mediumtree.png" id="881" name="Medium Tree" tags="plant" price="40" tokens="400" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.49,2.45,0.49" min="-0.49,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/outdoor/o_tree_03_mediumtree.png"/>
+  </textures>
+  <nodes>
+    <node id="Tree">
+      <box max="0.49,2.45,0.49" min="-0.49,0,-0.49"/>
+      <layers>
+        <layer id="Medium Tree" texture="Texture" y="11">
+          <view angle="45" x="1" y="24"/>
+          <view angle="135" mirror="true" x="-1" y="24"/>
+          <view angle="225" x="1" y="24"/>
+          <view angle="315" mirror="true" x="-1" y="24"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

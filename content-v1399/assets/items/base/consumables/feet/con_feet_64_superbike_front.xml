@@ -1,0 +1,134 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_64_superbike_angled.png" cols="2" rows="1"/>
+    <texture id="front_back" source="items/base/consumables/feet/con_feet_64_superbike_frontback.png" cols="2" rows="1"/>
+    <texture id="feet" source="items/base/consumables/feet/con_feet_64_superbike_legs.png" cols="2" rows="1"/>
+    <texture id="kickstand" source="items/base/consumables/feet/con_feet_33_scooter_kickstand.png" cols="4" rows="1"/>
+    <texture id="beam_light" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="feet_leather" source="items/base/consumables/feet/con_feet_64_superbike_legs.png" cols="2" rows="1"/>
+    <texture id="tire" source="items/base/consumables/feet/con_feet_64_superbike_tire.png" cols="1" rows="5"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="kickstand" texture="kickstand">
+          <view angle="0" col="3" alpha="0"/>
+          <view angle="45" x="4" y="17"/>
+          <view angle="90" col="1" x="-1" y="24"/>
+          <view angle="135" x="-5" y="17" hm="true"/>
+          <view angle="180" col="3" alpha="0" hm="true"/>
+          <view angle="225" col="2" alpha="0" hm="true"/>
+          <view angle="270" col="1" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+        <layer id="base" texture="base" y="45">
+          <view angle="0" col="2" alpha="0"/>
+          <view angle="45" x="4" y="5"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" x="-5" y="5" hm="true"/>
+          <view angle="180" col="2" alpha="0" hm="true"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="front_back" texture="front_back" y="45">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" x="-1" y="15"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="feet" texture="feet">
+          <view angle="0" alpha="0" hm="true"/>
+          <view angle="45" x="-11" y="1"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" x="10" y="1" hm="true"/>
+          <view angle="180" alpha="0"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="270" col="1" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="tire" texture="tire" y="45">
+          <view angle="0" col="2" alpha="0"/>
+          <view angle="45" x="9" y="-7"/>
+          <view angle="90" row="2" y="36"/>
+          <view angle="135" x="-10" y="-7" hm="true"/>
+          <view angle="180" col="2" alpha="0" hm="true"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="kickstand"/>
+          <layerref id="base"/>
+          <layerref id="front_back"/>
+          <layerref id="feet"/>
+        </frame>
+        <frame id="Sit"/>
+        <frame id="Walk">
+          <layerref id="base"/>
+          <layerref id="front_back"/>
+          <layerref id="feet"/>
+          <layerref id="tire"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Walk"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="beam_light" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="19" y="-9"/>
+          <view angle="90" y="-5"/>
+          <view angle="135" x="-17" y="-9" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf9f8db" a="0.8" blend="add"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Walk" framerate="6">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,27 @@
+<item.SpriteItem id="3231" name="Vitória Régia" desc="Uma planta aquática da amazônia" tags="table" icon="items/base/outdoor/icon_o_lilypad_01_large.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar,water" dropTargetClamp="none" price="35" tokens="700">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.1,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/outdoor/o_lilypad_01_large.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="table">
+      <box min="-0.49,0,-0.49" max="0.49,0.1,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="-10">
+          <view angle="45" x="1" y="40"/>
+          <view angle="135" x="1" y="40" hm="true"/>
+          <view angle="225" x="1" y="40"/>
+          <view angle="315" x="1" y="40" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

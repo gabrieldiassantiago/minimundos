@@ -1,0 +1,27 @@
+<f id="Top05_19Stethoscope" parentId="Top05">
+  <g id="stethoscope" name="stethoscope" icon="$bu/icon_necklace_heart.png">
+    <s id="NecklaceMedHeartBase" cId="Torso" s="items/base/consumables/clothing/top05/top05_19_stethoscope.png" pri="6.2"/>
+    <c sId="NecklaceMedHeartBase" c="2858731" a="0.84" b="51.1" ct="1.71" lId="Top05_19_Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop05_19" icon="items/base/consumables/clothing/top05/top05_19_icon_stethoscope_a.png" w="48" h="48"/>
+    <s id="IconTop05_19VIP" cId="IconTop05_19" s="items/base/shared/s_vipbadge.png"/>
+    <s id="IconTop05_19Base" cId="IconTop05_19" s="items/base/consumables/clothing/top05/top05_19_icon_stethoscope_1.png"/>
+    <c sId="IconTop05_19Base" c="2858731" a="0.84" b="51.1" ct="1.71" lId="Top05_19_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top05_19_Color1" name="Color" desc="Choose a color" sel="Blue" seld="Blue">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.88" b="56.5" ct="1.92" lId="Top05_19_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="54.8" ct="1.90" lId="Top05_19_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="54.0" ct="1.72" lId="Top05_19_Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="46.3" ct="1.91" lId="Top05_19_Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="51.1" ct="1.71" lId="Top05_19_Color1"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="2858731" a="0.69" b="28.9" ct="1.00" lId="Top05_19_Color1"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.91" b="70.6" ct="1.55" lId="Top05_19_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="1.00" b="52.8" ct="0.91" lId="Top05_19_Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top05_19_Color1"/>
+    </wizbox>
+  </g>
+</f>

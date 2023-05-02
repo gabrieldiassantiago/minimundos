@@ -1,0 +1,52 @@
+<item.SpriteItem id="2054" name="Cabeça Zumbi Zuto" desc="Uma mágica assustadora que transforma o Mini em Zumbi." tags="consumable,actionbar,group_shadow,magic,bad,usable,stackable,craftable2,action_consumable_target,market" icon="items/base/consumables/magic/icon_con_item_74_eternalzombie.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="8" tokens="80">
+  <volume>
+    <box min="-0.15,0,-0.25" max="0.15,0.65,0.25"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="10"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="ingredient_1" value="1969"/>
+    <entry key="ingredient_2" value="905"/>
+    <entry key="ingredient_quantity_1" value="1"/>
+    <entry key="ingredient_quantity_2" value="3"/>
+    <entry key="product_quantity" value="5"/>
+    <entry key="xp_level_required" value="50"/>
+    <entry key="xp_rewarded" value="500"/>
+    <entry key="action_attributes" value="shadow-10"/>
+    <entry key="action_attributes_secondary" value="health-25,speed-35"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_cast.png"/>
+  </data>
+  <textures>
+    <texture id="scroll" source="items/base/consumables/magic/con_item_18_scroll.png" cols="1" rows="1"/>
+    <texture id="logo" source="items/base/consumables/magic/con_item_74_eternalzombie.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="scroll">
+      <box min="-0.15,0,-0.25" max="0.15,0.65,0.25"/>
+      <layers>
+        <layer id="scroll" texture="scroll">
+          <view angle="45" y="22"/>
+          <view angle="135" y="22" hm="true"/>
+          <view angle="225" y="22"/>
+          <view angle="315" y="22" hm="true"/>
+        </layer>
+        <layer id="logo" texture="logo">
+          <view angle="45" x="2" y="-9"/>
+          <view angle="135" x="-2" y="-9" hm="true"/>
+          <view angle="225" x="2" y="-9"/>
+          <view angle="315" x="-2" y="-9" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

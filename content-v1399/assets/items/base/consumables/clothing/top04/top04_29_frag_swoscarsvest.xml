@@ -1,0 +1,44 @@
+<f id="Top04_29SwoscarsVest" parentId="Top04">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top04_29TorsoBase" cId="Torso" s="items/base/consumables/clothing/top04/top04_29_swoscarsvest_m.png" pri="4"/>
+      <c sId="Top04_29TorsoBase" c="8161172" a="1.00" b="58.8" ct="1.21" lId="Top04_29_Color" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="Top04_29TorsoBase" cId="Torso" s="items/base/consumables/clothing/top04/top04_29_swoscarsvest_f.png" pri="4"/>
+      <c sId="Top04_29TorsoBase" c="8161172" a="1.00" b="58.8" ct="1.21" lId="Top04_29_Color" lw="N"/>
+    </g>
+  </b>
+  <g id="Icon">
+    <t id="IconTop04_29" icon="items/base/consumables/clothing/top04/top04_29_swoscarsvest_icon_a.png" w="48" h="48"/>
+    <s id="IconTop04_29Base" cId="IconTop04_29" s="items/base/consumables/clothing/top04/top04_29_swoscarsvest_icon_1.png"/>
+    <c sId="IconTop04_29Base" c="8161172" a="1.00" b="58.8" ct="1.21" lId="Top04_29_Color" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top04_29_Color" name="Color" desc="Choose a color" sel="Grey" seld="Grey">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="1.00" b="77.9" ct="1.38" lId="Top04_29_Color"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="8161172" a="1.00" b="58.8" ct="1.21" lId="Top04_29_Color"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="13736943" a="1.00" b="49.5" ct="0.78" lId="Top04_29_Color"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16745924" a="0.69" b="45.5" ct="0.89" lId="Top04_29_Color"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="0.89" b="49.6" ct="1.53" lId="Top04_29_Color"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="47.5" ct="2.00" lId="Top04_29_Color"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16742144" a="0.87" b="47.2" ct="1.10" lId="Top04_29_Color"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.78" b="42.6" ct="0.72" lId="Top04_29_Color"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="0.53" b="18.7" ct="0.88" lId="Top04_29_Color"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="186662" a="0.47" b="-5.2" ct="0.62" lId="Top04_29_Color"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.70" b="32.3" ct="0.92" lId="Top04_29_Color"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="101519" a="0.92" b="43.1" ct="1.14" lId="Top04_29_Color"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.81" b="43.0" ct="1.04" lId="Top04_29_Color"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="1274856" a="0.48" b="-4.7" ct="0.75" lId="Top04_29_Color"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9121937" a="0.88" b="35.3" ct="1.19" lId="Top04_29_Color"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.91" b="39.8" ct="1.10" lId="Top04_29_Color"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="7026435" a="0.77" b="38.6" ct="1.02" lId="Top04_29_Color"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5375011" a="0.85" b="59.2" ct="1.62" lId="Top04_29_Color"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="1.00" b="57.7" ct="1.41" lId="Top04_29_Color"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=310; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top04_29_Color"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

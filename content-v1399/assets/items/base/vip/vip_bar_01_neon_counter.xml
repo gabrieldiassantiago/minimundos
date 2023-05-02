@@ -1,0 +1,55 @@
+<item.SpriteItem id="1478" name="Balcão da MiniBalada" desc="Exclusivo balcão com luz de neón." tags="admin,table" icon="items/base/vip/icon_vip_bar_01_neon_counter.png" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="30" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,1.15,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Counter" source="items/base/vip/vip_bar_01_neon_counter.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.49" max="0.4,1.15,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Counter">
+          <view angle="45" y="36"/>
+          <view angle="135" y="36" hm="true"/>
+          <view angle="225" y="36"/>
+          <view angle="315" y="36" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="6" y="-12"/>
+          <view angle="135" x="-6" y="-12"/>
+          <view angle="225" x="6" y="-12"/>
+          <view angle="315" x="-6" y="-12"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xccff"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

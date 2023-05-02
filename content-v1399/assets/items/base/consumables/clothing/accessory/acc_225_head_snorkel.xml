@@ -1,0 +1,31 @@
+<item.SpriteItem id="0" name="Safari hat" desc="An item" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/clothing/accessory/acc_225_head_snorkel.png" cols="4" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="0" x="16" y="28"/>
+          <view angle="45" col="1" x="5" y="18"/>
+          <view angle="90" col="2" x="-4" y="23"/>
+          <view angle="135" col="3" x="-17" y="17"/>
+          <view angle="180" row="1" x="-17" y="11"/>
+          <view angle="225" col="1" row="1" x="-5" y="10"/>
+          <view angle="270" col="2" row="1" x="3" y="17"/>
+          <view angle="315" col="3" row="1" x="4" y="20"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

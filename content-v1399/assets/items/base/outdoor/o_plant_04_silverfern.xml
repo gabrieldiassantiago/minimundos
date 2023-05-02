@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="A silver fern" dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/outdoor/icon_o_plant_04_silverfern.png" id="848" name="Silver Fern" tags="plant" price="25" tokens="250" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.48,0.5,0.48" min="-0.48,0,-0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="silver fern" rows="1" source="items/base/outdoor/o_plant_04_silverfern.png"/>
+  </textures>
+  <nodes>
+    <node id="silver fern">
+      <box max="0.48,0.5,0.48" min="-0.48,0,-0.48"/>
+      <layers>
+        <layer id="silver fern" texture="silver fern">
+          <view angle="45" x="2" y="35"/>
+          <view angle="135" mirror="true" x="-4" y="35"/>
+          <view angle="225" x="2" y="35"/>
+          <view angle="315" mirror="true" x="-4" y="35"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

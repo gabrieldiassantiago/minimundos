@@ -1,0 +1,137 @@
+<item.WidgetItem id="1878" name="Alçapão da Nave" desc="Para passar entre os andares da nave." tags="door,widget" icon="items/base/scifi/icon_sci_door_02_hatch.png" price="145" tokens="1450" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_portal.swf">
+  <volume>
+    <box min="-0.35,0,-0.45" max="1.35,0.1,1.45"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+  </events>
+  <actions>
+    <action id="Navigate" trigger="false" event="navigate"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="portalType" value="door"/>
+    <entry key="maxLinkedSpaces" value="1"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <navigate sitRange="1.00" standRange="1.00" targetRange="1.00" usableRange="-1.00"/>
+  <textures>
+    <texture id="hatch" source="items/base/scifi/sci_door_02_hatch.png" cols="2" rows="1"/>
+    <texture id="decal" source="items/base/scifi/sci_door_02_hatch_decal.png" cols="1" rows="1"/>
+    <texture id="diffuse" source="items/base/shared/s_fx_flare_halo_spread.png" cols="1" rows="1"/>
+    <texture id="intense" source="items/base/shared/s_fx_flare_bulb.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="door" x="0.5" z="0.5">
+      <box min="-0.85,0,-0.95" max="0.85,0.1,0.95"/>
+      <layers>
+        <layer id="base" texture="hatch" y="56">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="base decal" texture="decal" y="33">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="lid" texture="hatch" y="56">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Open">
+          <layerref id="base"/>
+          <layerref id="base decal"/>
+        </frame>
+        <frame id="Closed">
+          <layerref id="base"/>
+          <layerref id="lid"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="1" loop="false">
+          <frameref id="Open"/>
+        </animation>
+        <animation id="Closed" framerate="1" loop="false">
+          <frameref id="Closed"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.5" z="0.5" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="diffuse" texture="diffuse" align="middle">
+          <view y="-29"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="diffuse" color="0xa7e6fe" a="0.6"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="diffuse" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="1" loop="false">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Closed" framerate="1" loop="false">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" x="0.5" z="0.5" s="0.8" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="intense top" texture="intense" align="middle">
+          <view angle="45" x="16" y="-9"/>
+          <view angle="135" x="-6" y="-9"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="intense bottom" texture="intense" align="middle">
+          <view angle="45" x="16" y="14"/>
+          <view angle="135" x="-6" y="14"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="intense top" color="0xe1f6fe" a="0.8"/>
+          <layerref id="intense bottom" color="0xe1f6fe" a="0.8"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="intense top" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="1" loop="false">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Closed" framerate="1" loop="false">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

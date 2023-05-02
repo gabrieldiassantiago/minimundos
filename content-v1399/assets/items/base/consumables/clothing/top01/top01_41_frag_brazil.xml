@@ -1,0 +1,63 @@
+<f id="Top01_41_Brazil" parentId="Top01">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top01_41TorsoMaleBase" cId="Torso" s="$bm/tshirt_torso.png" pri="1"/>
+      <c sId="Top01_41TorsoMaleBase" c="16775168" a="1.00" b="41.0" ct="1.14" lId="Top01_Color1" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_41TorsoFemaleBase" cId="Torso" s="$bf/tshirt_torso.png" pri="1"/>
+      <c sId="Top01_41TorsoFemaleBase" c="16775168" a="1.00" b="41.0" ct="1.14" lId="Top01_Color1" lw="N"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Top01_41ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_short_arm_idle.png" pri="1"/>
+    <s id="Top01_41ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_short_arm_walk1.png" pri="1"/>
+    <s id="Top01_41ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_short_arm_walk2.png" pri="1"/>
+    <s id="Top01_41ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_short_arm_walk3.png" pri="1"/>
+    <s id="Top01_41ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_short_arm_sit.png" pri="1"/>
+    <s id="Top01_41ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_short_arm_throw.png" pri="1"/>
+    <s id="Top01_41ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_short_arm_raise.png" pri="1"/>
+    <c sId="Top01_41ArmIdleBase" c="16775168" a="1.00" b="41.0" ct="1.14" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_41ArmWalk1Base" c="16775168" a="1.00" b="41.0" ct="1.14" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_41ArmWalk2Base" c="16775168" a="1.00" b="41.0" ct="1.14" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_41ArmWalk3Base" c="16775168" a="1.00" b="41.0" ct="1.14" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_41ArmSitBase" c="16775168" a="1.00" b="41.0" ct="1.14" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_41ArmThrowBase" c="16775168" a="1.00" b="41.0" ct="1.14" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_41ArmRaiseBase" c="16775168" a="1.00" b="41.0" ct="1.14" lId="Top01_Color1" lw="N"/>
+    <s id="Top01_41ArmIdleStripe" cId="ArmIdle" s="items/base/consumables/clothing/top01/top01_14_stripe_idle.png" pri="1.1"/>
+    <c sId="Top01_41ArmIdleStripe" c="1359105" a="1.00" b="49.6" ct="0.73" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_41ArmWalk1Stripe" cId="ArmWalk1" s="items/base/consumables/clothing/top01/top01_14_stripe_walk1.png" pri="1.1"/>
+    <c sId="Top01_41ArmWalk1Stripe" c="1359105" a="1.00" b="49.6" ct="0.73" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_41ArmWalk2Stripe" cId="ArmWalk2" s="items/base/consumables/clothing/top01/top01_14_stripe_walk2.png" pri="1.1"/>
+    <c sId="Top01_41ArmWalk2Stripe" c="1359105" a="1.00" b="49.6" ct="0.73" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_41ArmWalk3Stripe" cId="ArmWalk3" s="items/base/consumables/clothing/top01/top01_14_stripe_walk3.png" pri="1.1"/>
+    <c sId="Top01_41ArmWalk3Stripe" c="1359105" a="1.00" b="49.6" ct="0.73" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_41ArmThrowStripe" cId="ArmThrow" s="items/base/consumables/clothing/top01/top01_14_stripe_throw.png" pri="1.1"/>
+    <c sId="Top01_41ArmThrowStripe" c="1359105" a="1.00" b="49.6" ct="0.73" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_41ArmSitStripe" cId="ArmSit" s="items/base/consumables/clothing/top01/top01_14_stripe_sit.png" pri="1.1"/>
+    <c sId="Top01_41ArmSitStripe" c="1359105" a="1.00" b="49.6" ct="0.73" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_41ArmRaiseStripe" cId="ArmRaise" s="items/base/consumables/clothing/top01/top01_14_stripe_raise.png" pri="1.1"/>
+    <c sId="Top01_41ArmRaiseStripe" c="1359105" a="1.00" b="49.6" ct="0.73" lId="Top01_Color2" lw="N"/>
+    <s name="brazil" cId="IconTop01_03" s="items/base/consumables/clothing/top01/top01_41_logo_m_brazil.png" pri="2"/>
+    <s cId="Torso" s="items/base/consumables/clothing/top01/top01_41_logo_m_brazil.png" pri="1.1"/>
+    <s id="Top01_41Collar" cId="Torso" s="items/base/consumables/clothing/top01/top01_41_brazil_collar.png" pri="1.1"/>
+    <c sId="Top01_41Collar" c="1359105" a="1.00" b="49.6" ct="0.73" lId="Top01_Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_41" icon="items/base/consumables/clothing/top01/top01_41_icon_brazil.png" w="48" h="48"/>
+    <s id="IconTop01_41IconBase" cId="IconTop01_41" s="items/base/consumables/clothing/top01/top01_41_icon_brazil.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_17Color1" name="Color 1" desc="Choose a color" sel="Yellow" seld="GreenDark">
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16775168" a="1.00" b="41.0" ct="1.14" lId="Top01_Color1"/>
+    </b>
+    <b id="Top01_17Color2" name="Color 2" desc="Choose a color" sel="Green" seld="Orange">
+      <c id="Green" icon="$bu/icon_greendark.png" c="1359105" a="1.00" b="49.6" ct="0.73" lId="Top01_Color2"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=325; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top01_41Color1"/>
+      <wizchoice id="Color2" name="Color2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top01_41Color2"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

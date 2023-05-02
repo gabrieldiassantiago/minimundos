@@ -1,0 +1,64 @@
+<item.SpriteItem desc="Para evitar acidentes." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/urban/icon_u_misc_02a_roadblock_door.png" id="2610" name="Barreira de Construção" tags="admin,door" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.15,0,-0.49" max="0.15,0.8,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="close" script="scripts/item/close_gate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+    <event id="action" script="scripts/item/action_gate.as"/>
+  </events>
+  <actions>
+    <action id="Open" state="true" event="open"/>
+    <action id="Close" state="true" event="close"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="door" source="items/base/urban/u_misc_02_roadblock.png" cols="1" rows="1"/>
+    <texture id="run" source="items/base/modern/m_door_run.png" cols="1" rows="1"/>
+    <texture id="handle" source="items/base/antique/a_door_handle_brass.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Door">
+      <box min="-0.15,0,-0.49" max="0.15,0.8,0.49"/>
+      <layers>
+        <layer id="Closed" texture="door">
+          <view angle="45" y="32"/>
+          <view angle="135" y="32" hm="true"/>
+          <view angle="225" y="32"/>
+          <view angle="315" y="32" hm="true"/>
+        </layer>
+        <layer id="Open" texture="door">
+          <view angle="45" y="32"/>
+          <view angle="135" y="32" hm="true"/>
+          <view angle="225" y="32"/>
+          <view angle="315" y="32" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Closed" color="0xfae9da"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="Open" color="0xefc8c1"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="Closed">
+      <frame id="Frame">
+        <noderef id="Door" frame="Closed"/>
+      </frame>
+    </animation>
+    <animation id="Open">
+      <frame id="Frame">
+        <noderef id="Door" x="0.45" z="0.48" a="270" frame="Open"/>
+      </frame>
+    </animation>
+  </animations>
+</item.SpriteItem>

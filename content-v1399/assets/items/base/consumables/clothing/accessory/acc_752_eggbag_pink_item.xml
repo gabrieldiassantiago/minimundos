@@ -1,0 +1,36 @@
+<item.SpriteItem id="6573" name="Mochila Oval Rosa Play" desc="Uma mochila em formato de ovo rosa" tags="rare,consumable,back,wear,actionbar,action_wearable_toggle" icon="items/base/consumables/clothing/accessory/acc_752_eggbag_pink_icon.png" price="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.23,0,-0.23" max="0.23,0.6,0.23"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top07/top07_54_frag_pink.xml"/>
+    <entry key="action_attributes_secondary" value="health+25"/>
+  </data>
+  <textures>
+    <texture id="eggbag" source="items/base/consumables/clothing/accessory/acc_752_eggbag_pink_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.23,0,-0.23" max="0.23,0.6,0.23"/>
+      <layers>
+        <layer id="eggbag" texture="eggbag">
+          <view angle="45" y="18"/>
+          <view angle="135" y="18" hm="true"/>
+          <view angle="225" col="1" y="20" hm="true"/>
+          <view angle="315" col="1" y="20"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,34 @@
+<item.SpriteItem id="1553" name="Carteira de Escola" desc="Apoie seus cadernos e faça logo a lição." tags="table" icon="items/base/modern/icon_m_table_01_school.png" tokens="350" minLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" minLevelType="2" price="35" minCPLevel="1">
+  <volume>
+    <box min="-0.35,0,-0.5" max="0.35,0.7,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_table_01_school.png" cols="1" rows="1"/>
+    <texture id="Texture01" source="items/base/modern/m_table_01_school_panel.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.5" max="0.35,0.7,0.5"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-1" y="36"/>
+          <view angle="135" x="1" y="36" hm="true"/>
+          <view angle="225" x="-1" y="36"/>
+          <view angle="315" x="1" y="36" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view angle="45" y="37" alpha="0"/>
+          <view angle="135" y="37" alpha="0" hm="true"/>
+          <view angle="225" x="19" y="-17"/>
+          <view angle="315" x="-19" y="-17" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

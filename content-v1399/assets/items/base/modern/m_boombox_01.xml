@@ -1,0 +1,201 @@
+<item.WidgetItem desc="Um aparelho de som para animar a sua festa." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/modern/icon_m_boombox_orange.png" id="377" name="Aparelho de Som Portátil" tags="appliance,widget" widget="widgets/widget_youtube.swf" price="175" tokens="1750" minLevel="1" minLevelType="1" minCPLevel="1">
+  <volume>
+    <box min="-0.3,0,-0.42" max="0.3,0.85,0.42"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Start" trigger="false" event="widget_action(START)"/>
+    <action id="Stop" trigger="false" event="widget_action(STOP)"/>
+    <action id="Next" trigger="false" event="widget_action(NEXT)"/>
+    <action id="Play Specific Video" trigger="false" event="widget_action(PLAYVIDEO)">
+      <params>
+        <param type="string" id="Video Title" label="Publisher - Video Title"/>
+      </params>
+    </action>
+    <action id="Video Change">
+      <eval>
+        <func type="relational" id="Video Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="itemUseWidget" value="Watch"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_watch.png"/>
+  </data>
+  <navigate position="infront" sitRange="8.00" standRange="5.00" targetRange="2.00" usableRange="-1.00"/>
+  <textures>
+    <texture id="music notes" source="items/base/shared/s_music_notes.png" cols="2" rows="1"/>
+    <texture id="boombox" source="items/base/modern/m_boombox_01.png" cols="2" rows="1"/>
+    <texture id="orange" source="items/base/modern/m_boombox_01_orange.png" cols="1" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_screen_tv_steampunk.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="boombox">
+      <box min="-0.2,0,-0.45" max="0.2,0.4,0.45"/>
+      <layers>
+        <layer id="boombox" texture="boombox">
+          <view angle="45" x="-1" y="21"/>
+          <view angle="135" x="1" y="21" hm="true"/>
+          <view angle="225" col="1" x="2" y="22" hm="true"/>
+          <view angle="315" col="1" x="-2" y="22"/>
+        </layer>
+        <layer id="note01 100%" texture="music notes">
+          <view angle="45"/>
+          <view angle="135" x="16" y="-6"/>
+          <view angle="225" x="2" y="6"/>
+          <view angle="315" x="20" y="6"/>
+        </layer>
+        <layer id="note01 66%" texture="music notes">
+          <view angle="45" alpha="0.66"/>
+          <view angle="135" x="16" y="-6" alpha="0.66"/>
+          <view angle="225" x="2" y="6" alpha="0.66"/>
+          <view angle="315" x="20" y="6" alpha="0.66"/>
+        </layer>
+        <layer id="note01 33%" texture="music notes">
+          <view angle="45" alpha="0.33"/>
+          <view angle="135" x="16" y="-6" alpha="0.33"/>
+          <view angle="225" x="2" y="6" alpha="0.33"/>
+          <view angle="315" x="20" y="6" alpha="0.33"/>
+        </layer>
+        <layer id="note02 100%" texture="music notes">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" x="16" y="-6"/>
+          <view angle="225" col="1" x="2" y="6"/>
+          <view angle="315" col="1" x="20" y="6"/>
+        </layer>
+        <layer id="note02 66%" texture="music notes">
+          <view angle="45" col="1" alpha="0.66"/>
+          <view angle="135" col="1" x="16" y="-6" alpha="0.66"/>
+          <view angle="225" col="1" x="2" y="6" alpha="0.66"/>
+          <view angle="315" col="1" x="20" y="6" alpha="0.66"/>
+        </layer>
+        <layer id="note02 33%" texture="music notes">
+          <view angle="45" col="1" alpha="0.33"/>
+          <view angle="135" col="1" x="16" y="-6" alpha="0.33"/>
+          <view angle="225" col="1" x="2" y="6" alpha="0.33"/>
+          <view angle="315" col="1" x="20" y="6" alpha="0.33"/>
+        </layer>
+        <layer id="note01 0%" texture="music notes">
+          <view angle="45" alpha="0"/>
+          <view angle="135" x="16" y="-6" alpha="0"/>
+          <view angle="225" x="2" y="6" alpha="0"/>
+          <view angle="315" x="20" y="6" alpha="0"/>
+        </layer>
+        <layer id="orange" texture="orange">
+          <view angle="45" x="9" y="-3"/>
+          <view angle="135" x="-8" y="-3" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame 01">
+          <layerref id="boombox"/>
+          <layerref id="note01 66%" x="-11" y="-42"/>
+          <layerref id="orange"/>
+        </frame>
+        <frame id="Frame 02">
+          <layerref id="boombox"/>
+          <layerref id="note01 100%" x="-17" y="-67"/>
+          <layerref id="orange"/>
+        </frame>
+        <frame id="Frame 03">
+          <layerref id="boombox"/>
+          <layerref id="note01 100%" x="-3" y="-92"/>
+          <layerref id="note02 66%" x="-7" y="-46"/>
+          <layerref id="orange"/>
+        </frame>
+        <frame id="Frame 04">
+          <layerref id="boombox"/>
+          <layerref id="note01 100%" x="-5" y="-113"/>
+          <layerref id="note02 100%" x="-19" y="-63"/>
+          <layerref id="orange"/>
+        </frame>
+        <frame id="Frame 05">
+          <layerref id="boombox"/>
+          <layerref id="note01 66%" x="-8" y="-129"/>
+          <layerref id="note02 100%" x="-12" y="-92"/>
+          <layerref id="orange"/>
+        </frame>
+        <frame id="Frame 06">
+          <layerref id="boombox"/>
+          <layerref id="note01 33%" x="-10" y="-137"/>
+          <layerref id="note02 100%" x="-4" y="-114"/>
+          <layerref id="orange"/>
+        </frame>
+        <frame id="Frame 07">
+          <layerref id="boombox"/>
+          <layerref id="note02 66%" x="2" y="-126"/>
+          <layerref id="note01 0%" x="4" y="-137"/>
+          <layerref id="orange"/>
+        </frame>
+        <frame id="Frame 08">
+          <layerref id="boombox"/>
+          <layerref id="note02 33%" x="4" y="-137"/>
+          <layerref id="orange"/>
+        </frame>
+        <frame id="Frame 09">
+          <layerref id="boombox"/>
+          <layerref id="note01 0%" x="4" y="-137"/>
+          <layerref id="orange"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Stopped" framerate="4">
+          <frameref id="Frame 09"/>
+        </animation>
+        <animation id="Playing" framerate="4">
+          <frameref id="Frame 01"/>
+          <frameref id="Frame 02"/>
+          <frameref id="Frame 03"/>
+          <frameref id="Frame 04"/>
+          <frameref id="Frame 05"/>
+          <frameref id="Frame 06"/>
+          <frameref id="Frame 07"/>
+          <frameref id="Frame 08"/>
+          <frameref id="Frame 09"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.22" y="0.5" z="0.5" s="0.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="-62" y="79"/>
+          <view angle="135" x="-47" y="15" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xebd37a"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0xebd37a"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Playing" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Stopped" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

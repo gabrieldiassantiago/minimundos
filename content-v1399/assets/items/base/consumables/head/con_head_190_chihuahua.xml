@@ -1,0 +1,59 @@
+<item.SpriteItem id="0" name="Christian the Chihuahua" desc="A Chihuahua head" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bunny" source="items/base/consumables/head/con_head_190_chihuahua.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_190_chihuahua_blink.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="bunny" texture="bunny">
+          <view angle="0" col="2" x="-2" y="12" hm="true"/>
+          <view angle="45" x="-3" y="17"/>
+          <view angle="90" col="1" x="1" y="17"/>
+          <view angle="135" x="2" y="17" hm="true"/>
+          <view angle="180" col="2" x="2" y="12"/>
+          <view angle="225" col="3" x="1" y="11"/>
+          <view angle="270" col="4" y="10"/>
+          <view angle="315" col="3" x="-1" y="11" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="17" y="6" hm="true"/>
+          <view angle="45" x="10" y="5"/>
+          <view angle="90" col="1" y="8"/>
+          <view angle="135" x="-12" y="5" hm="true"/>
+          <view angle="180" col="2" x="-18" y="6"/>
+          <view angle="225" col="3" x="-32" y="-13"/>
+          <view angle="270" col="1" row="1" y="33"/>
+          <view angle="315" col="3" x="31" y="-15" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="blink">
+          <layerref id="bunny"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="normal">
+          <layerref id="bunny"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="normal" duration="15"/>
+          <frameref id="blink"/>
+          <frameref id="normal" duration="10"/>
+          <frameref id="blink"/>
+          <frameref id="normal"/>
+          <frameref id="blink"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,258 @@
+<item.SpriteItem id="5533" name="Traje Anjo Congelado" desc="Um maravilhoso traje de anjo congelante" tags="rare,action_wearable_toggle,back,nopvp,consumable,clothing,actionbar,wear,suits" icon="items/base/consumables/clothing/suits/suit_82_ice_icon.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_82_frag_ice.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes" value="frost+50"/>
+    <entry key="action_attributes_secondary" value="speed+100,health+100"/>
+  </data>
+  <textures>
+    <texture id="robot" source="items/base/consumables/clothing/suits/suit_82_ice_item.png" cols="2" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/feet/icon_con_feet_37_shadow.png" cols="2" rows="1"/>
+    <texture id="dust" source="items/base/consumables/clothing/suits/suit_82_ice_dust.png" cols="1" rows="1"/>
+    <texture id="swirl" source="items/base/consumables/clothing/suits/suit_82_ice_surface.png" cols="4" rows="1"/>
+    <texture id="jetpack" source="items/base/consumables/clothing/suits/suit_82_ice_wings.png" cols="5" rows="3"/>
+    <texture id="surface" source="items/base/consumables/clothing/suits/suit_82_ice_surface.png" cols="4" rows="1"/>
+    <texture id="flame" source="items/base/consumables/back/con_bak_01_jetpack_flame_large.png" cols="1" rows="1"/>
+    <texture id="hood" source="items/base/consumables/clothing/suits/suit_82_ice_item_hood.png" cols="2" rows="1"/>
+    <texture id="halo" source="items/base/consumables/clothing/suits/suit_82_ice_head.png" cols="3" rows="1"/>
+    <texture id="fragrance" source="items/base/consumables/clothing/suits/suit_82_ice_halo.png" cols="4" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Light02" source="items/base/consumables/magic/halo_glow_lighting.png" cols="1" rows="1"/>
+    <texture id="Light03" source="items/base/shared/s_fx_flare_circle_floor.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+      <layers>
+        <layer id="Robot" texture="robot" y="15">
+          <view angle="45" y="-50"/>
+          <view angle="135" y="-50" hm="true"/>
+          <view angle="225" col="1" x="1" y="-50"/>
+          <view angle="315" col="1" x="1" y="-50" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="30"/>
+          <view angle="135" y="30"/>
+          <view angle="225" y="30"/>
+          <view angle="315" y="30"/>
+        </layer>
+        <layer id="dust_01" texture="dust">
+          <view y="30"/>
+        </layer>
+        <layer id="dust_02" texture="dust">
+          <view y="30" hm="true"/>
+        </layer>
+        <layer id="swirl_01" texture="swirl">
+          <view y="50"/>
+        </layer>
+        <layer id="swirl_02" texture="swirl">
+          <view col="1" y="50"/>
+        </layer>
+        <layer id="swirl_03" texture="swirl">
+          <view col="2" y="50"/>
+        </layer>
+        <layer id="swirl_04" texture="swirl">
+          <view col="3" y="50"/>
+        </layer>
+        <layer id="jetpack_back01" texture="jetpack">
+          <view angle="45" x="-20" y="-30"/>
+          <view angle="135" x="20" y="-30" hm="true"/>
+          <view angle="225" col="2" y="-30" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="jetpack_back02" texture="jetpack">
+          <view angle="45" row="1" x="-20" y="-30"/>
+          <view angle="135" row="1" x="20" y="-30" hm="true"/>
+          <view angle="225" col="2" y="-30" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="jetpack_back03" texture="jetpack">
+          <view angle="45" row="2" x="-20" y="-30"/>
+          <view angle="135" row="2" x="20" y="-30" hm="true"/>
+          <view angle="225" col="2" y="-30" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="jetpack_front01" texture="jetpack">
+          <view angle="45" x="-10" y="-100" alpha="0"/>
+          <view angle="135" x="10" y="-100" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="25" y="-10" hm="true"/>
+          <view angle="315" col="3" x="-25" y="-10"/>
+        </layer>
+        <layer id="jetpack_front02" texture="jetpack">
+          <view angle="45" x="-10" y="-100" alpha="0"/>
+          <view angle="135" x="10" y="-100" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="1" x="25" y="-10" hm="true"/>
+          <view angle="315" col="3" row="1" x="-25" y="-10"/>
+        </layer>
+        <layer id="jetpack_front03" texture="jetpack">
+          <view angle="45" x="-10" y="-100" alpha="0"/>
+          <view angle="135" x="10" y="-100" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="2" x="25" y="-10" hm="true"/>
+          <view angle="315" col="3" row="2" x="-25" y="-10"/>
+        </layer>
+        <layer id="hood_front" texture="hood">
+          <view angle="45" x="2" y="-133"/>
+          <view angle="135" x="-2" y="-133" hm="true"/>
+          <view angle="225" col="1" y="-130" alpha="0"/>
+          <view angle="315" col="1" y="-130" hm="true"/>
+        </layer>
+        <layer id="hood_back" texture="hood">
+          <view angle="45" x="2" y="-133" alpha="0"/>
+          <view angle="135" x="-2" y="-133" alpha="0" hm="true"/>
+          <view angle="225" col="1" y="-130"/>
+          <view angle="315" col="1" y="-130" hm="true"/>
+        </layer>
+        <layer id="halo_01" texture="halo">
+          <view y="-170"/>
+        </layer>
+        <layer id="halo_02" texture="halo">
+          <view col="1" y="-170"/>
+        </layer>
+        <layer id="halo_03" texture="halo">
+          <view col="2" y="-170"/>
+        </layer>
+        <layer id="frag_01" texture="fragrance">
+          <view x="-2" y="-7"/>
+        </layer>
+        <layer id="frag_02" texture="fragrance">
+          <view col="1" x="-2" y="-7"/>
+        </layer>
+        <layer id="frag_03" texture="fragrance">
+          <view col="2" x="-2" y="-7"/>
+        </layer>
+        <layer id="frag_04" texture="fragrance">
+          <view col="3" x="-2" y="-7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="jetpack_back01"/>
+          <layerref id="shadow"/>
+          <layerref id="swirl_01" a="0.8"/>
+          <layerref id="dust_01"/>
+          <layerref id="Robot"/>
+          <layerref id="hood_back"/>
+          <layerref id="jetpack_front01"/>
+          <layerref id="hood_front"/>
+          <layerref id="halo_01"/>
+          <layerref id="frag_01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="jetpack_back02" y="1"/>
+          <layerref id="shadow"/>
+          <layerref id="swirl_02" a="0.8"/>
+          <layerref id="dust_02"/>
+          <layerref id="Robot" y="1"/>
+          <layerref id="hood_back" y="1"/>
+          <layerref id="jetpack_front02" y="1"/>
+          <layerref id="hood_front" y="1"/>
+          <layerref id="halo_02" y="1"/>
+          <layerref id="frag_02" y="1"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="jetpack_back03" y="2"/>
+          <layerref id="shadow"/>
+          <layerref id="swirl_03" a="0.8"/>
+          <layerref id="dust_01"/>
+          <layerref id="Robot" y="2"/>
+          <layerref id="hood_back" y="2"/>
+          <layerref id="jetpack_front03" y="2"/>
+          <layerref id="hood_front" y="2"/>
+          <layerref id="halo_03" y="2"/>
+          <layerref id="frag_03" y="2"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="jetpack_back02" y="1"/>
+          <layerref id="shadow"/>
+          <layerref id="swirl_04" x="5" a="0.8"/>
+          <layerref id="dust_02"/>
+          <layerref id="Robot" y="1"/>
+          <layerref id="hood_back" y="1"/>
+          <layerref id="jetpack_front02" y="1"/>
+          <layerref id="hood_front" y="1"/>
+          <layerref id="halo_02" y="1"/>
+          <layerref id="frag_04" y="1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="halo_01" texture="halo">
+          <view y="-170"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On_01">
+          <layerref id="halo_01" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6">
+          <frameref id="On_01"/>
+        </animation>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Halo" texture="Light" align="middle">
+          <view y="-100" alpha="0.5"/>
+        </layer>
+        <layer id="Light" texture="Light02" align="middle">
+          <view y="-66"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Halo"/>
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Surface" texture="Light03">
+          <view y="50"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Surface"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

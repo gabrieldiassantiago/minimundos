@@ -1,0 +1,35 @@
+<item.SpriteItem id="6796" name="Fragrância Campo de Força" desc="Use senhas únicas e difíceis de adivinhar" tags="consumable,actionbar,fragrance,action_wearable_toggle,wear,usable" icon="items/base/consumables/fragrances/fra_28_forcefield_icon.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" tokens="2500" premium="Y">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.42,0.1"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_perfume.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+10,health+10"/>
+  </data>
+  <textures>
+    <texture id="texture" source="items/base/consumables/fragrances/fra_28_forcefield.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.42,0.1"/>
+      <layers>
+        <layer id="texture" texture="texture" y="6">
+          <view angle="45" y="1"/>
+          <view angle="135" y="1" hm="true"/>
+          <view angle="225" y="1"/>
+          <view angle="315" y="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

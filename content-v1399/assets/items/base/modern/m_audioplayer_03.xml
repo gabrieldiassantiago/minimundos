@@ -1,0 +1,209 @@
+<item.WidgetItem id="1551" name="Som Estério SoundCloud Imeem" desc="Personalizável com músicas do SoundCloud com a marca que você confia." tags="appliance,widget" icon="items/base/modern/icon_m_audioplayer_03.png" minLevel="1" minLevelType="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_soundcloud.swf" minCPLevel="1" price="175">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.8,1.3"/>
+  </volume>
+  <events>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Start" trigger="false" event="widget_action(START)"/>
+    <action id="Stop" trigger="false" event="widget_action(STOP)"/>
+    <action id="Next" trigger="false" event="widget_action(NEXT)"/>
+    <action id="Play Specific Track" trigger="false" event="widget_action(PLAYTRACK)">
+      <params>
+        <param type="string" id="Track Title" label="Artist - Track Title"/>
+      </params>
+    </action>
+    <action id="Track Change">
+      <eval>
+        <func type="relational" id="Artist or track title" input="title" operator="equal" label="Artist - Track Title" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="widget_min_load_wait" value="30000"/>
+    <entry key="widget_max_load_wait" value="31000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="hasEditSecurity" value="true"/>
+    <entry key="widget_background_override" value="widget/imeemBG.jpg"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="itemUseWidget" value="Ouça"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_play_music.png"/>
+  </data>
+  <navigate sitRange="8.00" standRange="5.00" targetRange="2.00"/>
+  <textures>
+    <texture id="audioset" source="items/base/modern/m_audioplayer_03.png" cols="2" rows="1"/>
+    <texture id="music notes" source="items/base/shared/s_music_notes.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_stereos.png" cols="2" rows="1"/>
+    <texture id="addons" source="items/base/modern/m_audioplayer_03_anm.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="audioplayer" z="0.5">
+      <box min="-0.3,0,-0.8" max="0.3,0.8,0.8"/>
+      <layers>
+        <layer id="screen" texture="addons">
+          <view angle="45" x="12" y="-20"/>
+          <view angle="135" x="-12" y="-20" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="audioplayer" texture="audioset">
+          <view angle="45" y="42"/>
+          <view angle="135" x="-1" y="42" hm="true"/>
+          <view angle="225" col="1" x="2" y="43" hm="true"/>
+          <view angle="315" col="1" x="-2" y="43"/>
+        </layer>
+        <layer id="note01 100%" texture="music notes">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="note01 66%" texture="music notes">
+          <view angle="45" alpha="0.66"/>
+          <view angle="135" alpha="0.66"/>
+          <view angle="225" alpha="0.66"/>
+          <view angle="315" alpha="0.66"/>
+        </layer>
+        <layer id="note01 33%" texture="music notes">
+          <view angle="45" alpha="0.33"/>
+          <view angle="135" alpha="0.33"/>
+          <view angle="225" alpha="0.33"/>
+          <view angle="315" alpha="0.33"/>
+        </layer>
+        <layer id="note02 100%" texture="music notes">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="note02 66%" texture="music notes">
+          <view angle="45" col="1" alpha="0.66"/>
+          <view angle="135" col="1" alpha="0.66"/>
+          <view angle="225" col="1" alpha="0.66"/>
+          <view angle="315" col="1" alpha="0.66"/>
+        </layer>
+        <layer id="note02 33%" texture="music notes">
+          <view angle="45" col="1" alpha="0.33"/>
+          <view angle="135" col="1" alpha="0.33"/>
+          <view angle="225" col="1" alpha="0.33"/>
+          <view angle="315" col="1" alpha="0.33"/>
+        </layer>
+        <layer id="leftspeakers" texture="addons">
+          <view angle="45" col="1" x="-21" y="27"/>
+          <view angle="135" col="1" x="21" y="27" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="rightspeakers" texture="addons">
+          <view angle="45" col="2" x="50" y="-9"/>
+          <view angle="135" col="2" x="-50" y="-9" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame 01">
+          <layerref id="audioplayer"/>
+          <layerref id="note01 66%" x="-11" y="-42"/>
+          <layerref id="leftspeakers"/>
+          <layerref id="rightspeakers"/>
+          <layerref id="screen"/>
+        </frame>
+        <frame id="Frame 02">
+          <layerref id="audioplayer"/>
+          <layerref id="note01 100%" x="-17" y="-67"/>
+        </frame>
+        <frame id="Frame 03">
+          <layerref id="audioplayer"/>
+          <layerref id="note01 100%" x="-3" y="-92"/>
+          <layerref id="note02 66%" x="-7" y="-46"/>
+          <layerref id="leftspeakers"/>
+          <layerref id="rightspeakers"/>
+          <layerref id="screen"/>
+        </frame>
+        <frame id="Frame 04">
+          <layerref id="audioplayer"/>
+          <layerref id="note01 100%" x="-5" y="-113"/>
+          <layerref id="note02 100%" x="-19" y="-63"/>
+        </frame>
+        <frame id="Frame 05">
+          <layerref id="audioplayer"/>
+          <layerref id="note01 66%" x="-8" y="-129"/>
+          <layerref id="note02 100%" x="-12" y="-92"/>
+          <layerref id="leftspeakers"/>
+          <layerref id="rightspeakers"/>
+        </frame>
+        <frame id="Frame 06">
+          <layerref id="audioplayer"/>
+          <layerref id="note01 33%" x="-10" y="-137"/>
+          <layerref id="note02 100%" x="-4" y="-114"/>
+          <layerref id="screen"/>
+        </frame>
+        <frame id="Frame 07">
+          <layerref id="audioplayer"/>
+          <layerref id="note02 66%" x="2" y="-126"/>
+          <layerref id="note01 100%" x="4" y="-137" a="0"/>
+          <layerref id="leftspeakers"/>
+          <layerref id="rightspeakers"/>
+        </frame>
+        <frame id="Frame 08">
+          <layerref id="audioplayer"/>
+          <layerref id="note02 33%" x="4" y="-137"/>
+          <layerref id="screen"/>
+        </frame>
+        <frame id="Frame 09">
+          <layerref id="audioplayer"/>
+          <layerref id="note01 100%" x="4" y="-137" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Stopped" framerate="2">
+          <frameref id="Frame 09"/>
+        </animation>
+        <animation id="Playing" framerate="2">
+          <frameref id="Frame 01"/>
+          <frameref id="Frame 02"/>
+          <frameref id="Frame 03"/>
+          <frameref id="Frame 04"/>
+          <frameref id="Frame 05"/>
+          <frameref id="Frame 06"/>
+          <frameref id="Frame 07"/>
+          <frameref id="Frame 08"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.22" y="0.5" z="0.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" x="6" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x9ed0f2"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0x9ed0f2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Playing" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Stopped" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

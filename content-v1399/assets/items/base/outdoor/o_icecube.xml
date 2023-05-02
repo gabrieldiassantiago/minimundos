@@ -1,0 +1,59 @@
+<item.SpriteItem id="1648" name="Cubo de Gelo" desc="Sólido e não derrete." tags="misc" icon="items/base/outdoor/icon_o_icecube_01.png" minLevel="1" dropTargetType="table" dropTargetList="floor, avatar,avatar" dropTargetClamp="none" minCPLevel="1" price="25" tokens="250">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.95,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="block" source="items/base/outdoor/o_icecube_01.png" cols="1" rows="1"/>
+    <texture id="ice shadow" source="items/base/outdoor/o_icecube_shadow.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0.95,0.49"/>
+      <layers>
+        <layer id="Layer" texture="ice shadow">
+          <view y="38"/>
+        </layer>
+        <layer id="block" texture="block" y="34">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="0.22" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xaae3f2" a="0.25"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,83 @@
+<item.SpriteItem id="5233" name="Play Stars &amp; Stripes Flag" desc="A large waving flag of the USA" tags="rare,actionbar,consumable,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_417_mericaflag_icon.png" price="1295" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.13,0,-0.13" max="0.13,0.8,0.13"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+25"/>
+  </data>
+  <textures>
+    <texture id="Pole" source="items/base/consumables/clothing/accessory/acc_417_mericaflag_itempole.png" cols="1" rows="1"/>
+    <texture id="Flag" source="items/base/consumables/clothing/accessory/acc_417_mericaflag_itemflag.png" cols="4" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.13,0,-0.13" max="0.13,0.8,0.13"/>
+      <layers>
+        <layer id="Pole" texture="Pole">
+          <view angle="45" y="25"/>
+          <view angle="135" y="25" hm="true"/>
+          <view angle="225" y="25"/>
+          <view angle="315" y="25" hm="true"/>
+        </layer>
+        <layer id="Flag01" texture="Flag" y="-20">
+          <view angle="45" x="33" y="-58"/>
+          <view angle="135" x="-33" y="-58" hm="true"/>
+          <view angle="225" row="1" x="-31" y="-89" hm="true"/>
+          <view angle="315" row="1" x="31" y="-89"/>
+        </layer>
+        <layer id="Flag02" texture="Flag" y="-20">
+          <view angle="45" col="1" x="33" y="-58"/>
+          <view angle="135" col="1" x="-33" y="-58" hm="true"/>
+          <view angle="225" col="1" row="1" x="-31" y="-89" hm="true"/>
+          <view angle="315" col="1" row="1" x="31" y="-89"/>
+        </layer>
+        <layer id="Flag03" texture="Flag" y="-20">
+          <view angle="45" col="2" x="33" y="-58"/>
+          <view angle="135" col="2" x="-33" y="-58" hm="true"/>
+          <view angle="225" col="2" row="1" x="-31" y="-89" hm="true"/>
+          <view angle="315" col="2" row="1" x="31" y="-89"/>
+        </layer>
+        <layer id="Flag04" texture="Flag" y="-20">
+          <view angle="45" col="3" x="33" y="-58"/>
+          <view angle="135" col="3" x="-33" y="-58" hm="true"/>
+          <view angle="225" col="3" row="1" x="-31" y="-89" hm="true"/>
+          <view angle="315" col="3" row="1" x="31" y="-89"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Pole"/>
+          <layerref id="Flag01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Pole"/>
+          <layerref id="Flag02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Pole"/>
+          <layerref id="Flag03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Pole"/>
+          <layerref id="Flag04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

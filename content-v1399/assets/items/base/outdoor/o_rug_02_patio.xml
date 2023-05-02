@@ -1,0 +1,60 @@
+<item.SpriteItem desc="Piso de pedras para exterior." dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" gridActive="false" icon="items/base/outdoor/icon_o_rug_02_patio.png" id="876" name="Calçada de Pedras" tags="floor" price="90" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="1.5,0,1.5" min="-0.5,-0.001,-1.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/outdoor/o_rug_02_patio.png"/>
+  </textures>
+  <nodes>
+    <node id="deck" layer="surface">
+      <box max="1.5,0,1.5" min="-0.5,-0.001,-1.5"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="65" y="10"/>
+          <view angle="135" mirror="true" x="-66" y="10"/>
+          <view angle="225" x="-1" y="-22"/>
+          <view angle="315" mirror="true" y="-22"/>
+        </layer>
+        <layer id="Layer01" texture="Texture">
+          <view angle="45" x="1" y="42"/>
+          <view angle="135" mirror="true" x="-2" y="42"/>
+          <view angle="225" x="-65" y="10"/>
+          <view angle="315" mirror="true" x="64" y="10"/>
+        </layer>
+        <layer id="Layer02" texture="Texture">
+          <view angle="45" x="-63" y="74"/>
+          <view angle="135" mirror="true" x="62" y="74"/>
+          <view angle="225" x="-129" y="42"/>
+          <view angle="315" mirror="true" x="128" y="42"/>
+        </layer>
+        <layer id="Layer03" texture="Texture">
+          <view angle="45" x="129" y="42"/>
+          <view angle="135" mirror="true" x="-130" y="42"/>
+          <view angle="225" x="63" y="10"/>
+          <view angle="315" mirror="true" x="-64" y="10"/>
+        </layer>
+        <layer id="Layer04" texture="Texture">
+          <view angle="45" x="65" y="74"/>
+          <view angle="135" mirror="true" x="-66" y="74"/>
+          <view angle="225" x="-1" y="42"/>
+          <view angle="315" mirror="true" y="42"/>
+        </layer>
+        <layer id="Layer05" texture="Texture">
+          <view angle="45" x="1" y="106"/>
+          <view angle="135" mirror="true" x="-2" y="106"/>
+          <view angle="225" x="-65" y="74"/>
+          <view angle="315" mirror="true" x="64" y="74"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

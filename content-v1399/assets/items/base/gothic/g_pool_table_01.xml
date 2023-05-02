@@ -1,0 +1,149 @@
+<item.WidgetItem id="361" name="Mesa de Sinuca" desc="Dispute partidas de verdade com esta mesa impressionante." tags="table,widget" icon="items/base/gothic/icon_g_pool_table_01.png" price="300" tokens="3000" minLevel="1" minLevelType="3" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" viewDirection="vertical" widget="widgets/widget_pool.swf" minCPLevel="1">
+  <volume>
+    <box min="-1.2,0,-1.45" max="0.2,0.9128,1.45"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+  </events>
+  <data>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_xml_path" value="widgets/assets/pooltable/control.mxml"/>
+    <entry key="config_xml_path" value="widgets/assets/pooltable/config.mxml"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="itemUseWidget" value="Play"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_play_pool.png"/>
+  </data>
+  <textures>
+    <texture id="ball_03" source="items/base/gothic/g_pool_ball_03.png" cols="1" rows="2"/>
+    <texture id="Texture" source="items/base/gothic/g_pool_table_01.png" cols="1" rows="1"/>
+    <texture id="ball_02" source="items/base/gothic/g_pool_ball_02.png" cols="1" rows="2"/>
+    <texture id="ball_01" source="items/base/gothic/g_pool_ball_01.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_square.png" cols="1" rows="1"/>
+    <texture id="Intense Light" source="items/base/shared/s_fx_flare_pool.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="p_table" x="-0.5">
+      <box min="-0.7,0,-1.45" max="0.7,0.9128,1.45"/>
+      <layers>
+        <layer id="base" texture="Texture">
+          <view angle="45" x="1" y="68"/>
+          <view angle="135" x="-1" y="69" hm="true"/>
+          <view angle="225" x="1" y="68"/>
+          <view angle="315" x="-1" y="69" hm="true"/>
+        </layer>
+        <layer id="top" texture="ball_01">
+          <view angle="45" x="-49" y="-27" hm="true"/>
+          <view angle="135" col="1" x="-51" y="-78"/>
+          <view angle="225" col="1" x="52" y="-79" hm="true"/>
+          <view angle="315" x="51" y="-25"/>
+        </layer>
+        <layer id="top01" texture="ball_02">
+          <view angle="45" x="-24" y="-24" hm="true"/>
+          <view angle="135" row="1" x="-32" y="-52"/>
+          <view angle="225" row="1" x="29" y="-52" hm="true"/>
+          <view angle="315" x="28" y="-22"/>
+        </layer>
+        <layer id="top02" texture="ball_03">
+          <view angle="45" x="-13" y="-23" hm="true"/>
+          <view angle="135" row="1" x="-1" y="-20" hm="true"/>
+          <view angle="225" row="1" y="-24"/>
+          <view angle="315" x="21" y="-18"/>
+        </layer>
+        <layer id="white" texture="ball_01" align="middle">
+          <view angle="45" col="2" x="43" y="-89"/>
+          <view angle="135" col="2" x="40" y="-41"/>
+          <view angle="225" col="2" x="-47" y="-43"/>
+          <view angle="315" col="2" x="-51" y="-89"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="base"/>
+          <layerref id="top"/>
+          <layerref id="white"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="base"/>
+          <layerref id="top01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="base"/>
+          <layerref id="top02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="racked" framerate="1" loop="false">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="broken" framerate="1" loop="false">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="broken02" framerate="1" loop="false">
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="-0.5" s="4.6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="2" y="-7"/>
+          <view angle="135" y="-7"/>
+          <view angle="225" x="-1" y="-8"/>
+          <view angle="315" x="1" y="-9"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xfcdada" a="0.56"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="-0.1094" s="5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense Light" align="middle">
+          <view angle="45" x="-5" y="-15"/>
+          <view angle="135" x="10" y="-15" hm="true"/>
+          <view angle="225" x="9" y="-10"/>
+          <view angle="315" x="-7" y="-10" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf39b8a" a="0.2" blend="hardlight"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

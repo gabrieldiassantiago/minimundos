@@ -1,0 +1,58 @@
+<item.SpriteItem name="Decalque Chama" desc="Uma chama decalque de parede animada" tags="wall" icon="items/base/modern/icon_m_walldecal_33_flames.png" price="15" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" id="5963">
+  <volume>
+    <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="lights" source="items/base/modern/m_walldecal_33_flames.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="wall" depthBias="-2">
+      <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+      <layers>
+        <layer id="flames 01" texture="lights" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="flames 02" texture="lights" align="middle">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="flames 03" texture="lights" align="middle">
+          <view angle="45" col="2"/>
+          <view angle="135" col="2" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Flame01">
+          <layerref id="flames 01"/>
+        </frame>
+        <frame id="Flame02">
+          <layerref id="flames 02"/>
+        </frame>
+        <frame id="Flame03">
+          <layerref id="flames 03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Flame02"/>
+          <frameref id="Flame01"/>
+          <frameref id="Flame03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

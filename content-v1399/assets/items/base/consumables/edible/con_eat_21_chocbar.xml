@@ -1,0 +1,35 @@
+<item.SpriteItem id="936" name="Barra de Chocolate" desc="Uma barrinha de chocolate para animar o seu dia." tags="consumable,food,actionbar,group_edible,edible,stackable,action_edible,market" icon="items/base/consumables/edible/icon_con_eat_21_chocbar.png" price="3" tokens="30" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.07" max="0.2,0.06,0.07"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_edible.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_edible.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_edible.as"/>
+    <event id="action" script="scripts/item/action_edible.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="food-100"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture id="chocbar" source="items/base/consumables/edible/icon_con_eat_21_chocbar.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.07" max="0.2,0.06,0.07"/>
+      <layers>
+        <layer id="chocbar" texture="chocbar">
+          <view angle="45" y="21"/>
+          <view angle="135" y="21" hm="true"/>
+          <view angle="225" y="21"/>
+          <view angle="315" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

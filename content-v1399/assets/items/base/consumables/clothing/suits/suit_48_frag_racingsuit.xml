@@ -1,0 +1,223 @@
+<f id="RacingSuit" parentId="Suits">
+  <g id="Torso">
+    <s id="RacingTorsoBadges" cId="Torso" s="items/base/consumables/clothing/suits/suit_48_torso_badges.png" pri="1.2"/>
+    <s id="RacingTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_48_torso_base.png" pri="1"/>
+    <c sId="RacingTorsoBase" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <s id="RacingTorsoDecal" cId="Torso" s="items/base/consumables/clothing/suits/suit_48_torso_decal.png" pri="1"/>
+    <c sId="RacingTorsoDecal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+  </g>
+  <g id="TopTshirtLogo" name="Arms">
+    <s id="RacingArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/arm_jacket_idle.png" pri="1"/>
+    <s id="RacingArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/arm_jacket_walk1.png" pri="1"/>
+    <s id="RacingArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/arm_jacket_walk2.png" pri="1"/>
+    <s id="RacingArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/arm_jacket_walk3.png" pri="1"/>
+    <s id="RacingArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/arm_jacket_sit.png" pri="1"/>
+    <c sId="RacingArmIdleBase" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingArmWalk1Base" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingArmWalk2Base" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingArmWalk3Base" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingArmSitBase" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <s id="RacingArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/arm_jacket_throw.png" pri="1"/>
+    <s id="RacingArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/arm_jacket_raise.png" pri="1"/>
+    <c sId="RacingArmThrowBase" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingArmRaiseBase" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <s id="RacingArmIdleDecal" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_48_arm_idle_decal.png" pri="1"/>
+    <s id="RacingArmWalk1Decal" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_48_arm_walk1_decal.png" pri="1"/>
+    <s id="RacingArmWalk2Decal" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_48_arm_walk2_decal.png" pri="1"/>
+    <s id="RacingArmWalk3Decal" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_48_arm_walk3_decal.png" pri="1"/>
+    <s id="RacingArmSitDecal" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_48_arm_sit_decal.png" pri="1"/>
+    <c sId="RacingArmIdleDecal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingArmWalk1Decal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingArmWalk2Decal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingArmWalk3Decal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingArmSitDecal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <s id="RacingArmThrowDecal" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_48_arm_throw_decal.png" pri="1"/>
+    <s id="RacingArmRaiseDecal" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_48_arm_raise_decal.png" pri="1"/>
+    <c sId="RacingArmThrowDecal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingArmRaiseDecal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+  </g>
+  <g id="Hands" icon="$bm/icon_m_retro.png">
+    <s id="RacingHandIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_48_hand_idle_base.png"/>
+    <s id="RacingHandWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_48_hand_walk1_base.png"/>
+    <s id="RacingHandWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_48_hand_walk2_base.png"/>
+    <s id="RacingHandWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_48_hand_walk3_base.png"/>
+    <s id="RacingHandSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_48_hand_sit_base.png"/>
+    <c sId="RacingHandIdleBase" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingHandWalk1Base" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingHandWalk2Base" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingHandWalk3Base" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingHandSitBase" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <s id="RacingHandWave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_48_hand_wave1_base.png"/>
+    <s id="RacingHandWave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_48_hand_wave2_base.png"/>
+    <s id="RacingHandHold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_48_hand_hold_base.png"/>
+    <s id="RacingHandOpen" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_48_hand_open_base.png"/>
+    <s id="RacingHandPoint" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_48_hand_point_base.png"/>
+    <s id="RacingHandStop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_48_hand_stop_base.png"/>
+    <s id="RacingHandThrow" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_48_hand_throw_base.png"/>
+    <s id="RacingHandThumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_48_hand_thumbs_base.png"/>
+    <c sId="RacingHandWave1" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingHandWave2" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingHandHold" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingHandOpen" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingHandPoint" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingHandStop" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingHandThrow" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingHandThumbs" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <s id="RacingHandIdleDecal" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_48_hand_idle_decal.png" pri="2"/>
+    <s id="RacingHandWalk1Decal" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_48_hand_walk1_decal.png" pri="2"/>
+    <s id="RacingHandWalk2Decal" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_48_hand_walk2_decal.png" pri="2"/>
+    <s id="RacingHandWalk3Decal" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_48_hand_walk3_decal.png" pri="2"/>
+    <s id="RacingHandSitDecal" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_48_hand_sit_decal.png" pri="2"/>
+    <c sId="RacingHandIdleDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingHandWalk1Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingHandWalk2Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingHandWalk3Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingHandSitDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <s id="RacingHandWave1Decal" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_48_hand_wave1_decal.png" pri="2"/>
+    <s id="RacingHandWave2Decal" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_48_hand_wave2_decal.png" pri="2"/>
+    <s id="RacingHandHoldDecal" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_48_hand_hold_decal.png" pri="2"/>
+    <s id="RacingHandOpenDecal" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_48_hand_open_decal.png" pri="2"/>
+    <s id="RacingHandPointDecal" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_48_hand_point_decal.png" pri="2"/>
+    <s id="RacingHandStopDecal" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_48_hand_stop_decal.png" pri="2"/>
+    <s id="RacingHandThrowDecal" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_48_hand_throw_decal.png" pri="2"/>
+    <s id="RacingHandThumbsDecal" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_48_hand_thumbs_decal.png" pri="2"/>
+    <c sId="RacingHandWave1Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingHandWave2Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingHandHoldDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingHandOpenDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingHandPointDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingHandStopDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingHandThrowDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingHandThumbsDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+  </g>
+  <g id="SkinnyChexBase" name="Legs" icon="$bu/icon_legs_trouser.png">
+    <s id="RacingLegIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_01_idle.png" pri="1"/>
+    <s id="RacingLegWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_01_walk1.png" pri="1"/>
+    <s id="RacingLegWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_01_walk2.png" pri="1"/>
+    <s id="RacingLegWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_01_walk3.png" pri="1"/>
+    <s id="RacingLegWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_01_walk4.png" pri="1"/>
+    <s id="RacingLegSitUpperbase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_01_sit_upper.png" pri="1"/>
+    <s id="RacingLegSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/bot03/bot03_01_lower.png" pri="1"/>
+    <c sId="RacingLegIdleBase" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingLegWalk1Base" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingLegWalk2Base" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingLegWalk3Base" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingLegWalk4Base" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingLegSitUpperbase" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingLegSitLowerBase" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <s id="RacingLegIdleDecal" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_48_leg_idle_decal.png" pri="1.1"/>
+    <s id="RacingLegWalk1Decal" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_48_leg_walk1_decal.png" pri="1.1"/>
+    <s id="RacingLegWalk2Decal" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_48_leg_walk2_decal.png" pri="1.1"/>
+    <s id="RacingLegWalk3Decal" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_48_leg_walk3_decal.png" pri="1.1"/>
+    <s id="RacingLegWalk4Decal" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_48_leg_walk4_decal.png" pri="1.1"/>
+    <s id="RacingLegSitUpperDecal" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_48_leg_sit_upper_decal.png" pri="1.1"/>
+    <s id="RacingLegSitLowerDecal" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_48_leg_sit_lower_decal.png" pri="1.1"/>
+    <c sId="RacingLegIdleDecal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingLegWalk1Decal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingLegWalk2Decal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingLegWalk3Decal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingLegWalk4Decal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingLegSitUpperDecal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingLegSitLowerDecal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+  </g>
+  <g id="Feet" icon="$bm/icon_shoe_standard.png">
+    <s id="RacingFootIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_15_b_idle.png"/>
+    <s id="RacingFootWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_15_b_walk1.png"/>
+    <s id="RacingFootWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_15_b_walk2.png"/>
+    <s id="RacingFootWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_15_b_walk3.png"/>
+    <s id="RacingFootWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_15_b_walk4.png"/>
+    <s id="RacingFootSit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_15_b_sit.png"/>
+    <c sId="RacingFootIdleBase" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingFootWalk1Base" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingFootWalk2Base" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingFootWalk3Base" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingFootWalk4Base" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="RacingFootSit" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <s id="RacingFootDecalIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_10_idle.png" pri="0.1"/>
+    <s id="RacingFootDecalWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_10_walk1.png" pri="0.1"/>
+    <s id="RacingFootDecalWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_10_walk2.png" pri="0.1"/>
+    <s id="RacingFootDecalWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_10_walk3.png" pri="0.1"/>
+    <s id="RacingFootDecalWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_10_walk4.png" pri="0.1"/>
+    <s id="RacingFootDecalSit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_10_sit.png" pri="0.1"/>
+    <c sId="RacingFootDecalIdleBase" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingFootDecalWalk1Base" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingFootDecalWalk2Base" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingFootDecalWalk3Base" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingFootDecalWalk4Base" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+    <c sId="RacingFootDecalSit" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="Icon_RacingSuit" icon="items/base/consumables/clothing/suits/suit_39_icon_furry.png" w="48" h="48" exurl="items/base/consumables/clothing/suits/suit_48_icon_racing.png"/>
+    <s id="IconRacing_Decal" cId="Icon_RacingSuit" s="items/base/consumables/clothing/suits/icon_suit_48_racing_2.png" pri="1.1"/>
+    <s id="IconRacing_Base" cId="Icon_RacingSuit" s="items/base/consumables/clothing/suits/icon_suit_48_racing_1.png" pri="1"/>
+    <c sId="IconRacing_Base" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1" lw="N"/>
+    <c sId="IconRacing_Decal" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="RacingSuit_Color1" name="Color1" desc="Choose a color" sel="Yellow" seld="Yellow">
+      <c id="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="66.9" ct="1.54" lId="RacingSuit_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7237230" a="1.00" b="65.3" ct="1.54" lId="RacingSuit_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="46.3" ct="1.14" lId="RacingSuit_Color1"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16238289" a="1.00" b="28.8" ct="1.95" lId="RacingSuit_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.71" b="44.3" ct="1.05" lId="RacingSuit_Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="9719070" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color1"/>
+      <c id="Green" name="Green" icon="$bu/icon_green.png" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color1"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="47.4" ct="1.04" lId="RacingSuit_Color1"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="38.3" ct="1.61" lId="RacingSuit_Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="46.3" ct="1.14" lId="RacingSuit_Color1"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="8758471" a="1.00" b="51.1" ct="1.54" lId="RacingSuit_Color1"/>
+      <c id="FadedBlue" name="Faded blue" icon="$bu/icon_fadedblue.png" c="4745356" a="1.00" b="64.1" ct="2.00" lId="RacingSuit_Color1"/>
+      <c id="MedBlue" name="Jean blue" icon="$bu/icon_medblue.png" c="3297909" a="1.00" b="64.1" ct="2.00" lId="RacingSuit_Color1"/>
+      <c id="DarkBlue" icon="$bu/icon_darkblue.png" c="3822448" a="1.00" b="51.1" ct="1.54" lId="RacingSuit_Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="6041443" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color1"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.6" ct="0.76" lId="RacingSuit_Color1"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5525030" a="1.00" b="65.3" ct="1.54" lId="RacingSuit_Color1"/>
+      <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="4338962" a="0.92" b="65.3" ct="2.00" lId="RacingSuit_Color1"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.87" b="49.1" ct="1.05" lId="RacingSuit_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="4013373" a="1.00" b="66.8" ct="2.00" lId="RacingSuit_Color1"/>
+    </b>
+    <b id="RacingSuit_Color2" name="Color2" desc="Choose a color" sel="Green" seld="Green">
+      <c id="White" icon="$bu/icon_white.png" c="12105912" a="0.95" b="66.9" ct="1.54" lId="RacingSuit_Color2"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7237230" a="1.00" b="36.9" ct="1.54" lId="RacingSuit_Color2"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="25.7" ct="0.73" lId="RacingSuit_Color2"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16238289" a="1.00" b="3.0" ct="0.85" lId="RacingSuit_Color2"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="44.3" ct="1.05" lId="RacingSuit_Color2"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="9719070" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.85" b="23.6" ct="1.15" lId="RacingSuit_Color2"/>
+      <c id="Green" name="Green" icon="$bu/icon_green.png" c="3826479" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="47.4" ct="1.04" lId="RacingSuit_Color2"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.98" b="22.5" ct="1.25" lId="RacingSuit_Color2"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="12.8" ct="0.62" lId="RacingSuit_Color2"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="8758471" a="1.00" b="4.7" ct="1.13" lId="RacingSuit_Color2"/>
+      <c id="FadedBlue" name="Faded blue" icon="$bu/icon_fadedblue.png" c="4745356" a="1.00" b="64.1" ct="2.00" lId="RacingSuit_Color2"/>
+      <c id="MedBlue" name="Jean blue" icon="$bu/icon_medblue.png" c="3297909" a="1.00" b="64.1" ct="2.00" lId="RacingSuit_Color2"/>
+      <c id="DarkBlue" icon="$bu/icon_darkblue.png" c="3822448" a="1.00" b="51.1" ct="1.54" lId="RacingSuit_Color2"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="6041443" a="1.00" b="68.1" ct="1.54" lId="RacingSuit_Color2"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="4.7" ct="0.45" lId="RacingSuit_Color2"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5525030" a="1.00" b="65.3" ct="1.54" lId="RacingSuit_Color2"/>
+      <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="4338962" a="1.00" b="65.3" ct="1.54" lId="RacingSuit_Color2"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.87" b="49.1" ct="1.05" lId="RacingSuit_Color2"/>
+      <c id="Black" icon="$bu/icon_black.png" c="4013373" a="1.00" b="41.7" ct="2.00" lId="RacingSuit_Color2"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="RacingSuit_Color1"/>
+      <wizchoice id="Color2" name="Color2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="RacingSuit_Color2"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+</f>

@@ -1,0 +1,56 @@
+<item.SpriteItem id="929" name="Pizza" desc="Uma pizza tradicional." tags="consumable,food,actionbar,group_edible,edible,stackable,action_edible,market" icon="items/base/consumables/edible/icon_con_eat_14_pizza.png" price="3" tokens="30" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.07,0.25"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_edible.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_edible.as"/>
+    <event id="action" script="scripts/item/action_edible.as"/>
+    <event id="select" script="scripts/item/select_edible.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="food-100"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture id="pizza" source="items/base/consumables/edible/con_eat_14_pizza.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="eat" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,0.07,0.25"/>
+      <layers>
+        <layer id="pizza" texture="pizza">
+          <view angle="45" y="25"/>
+          <view angle="135" y="25" hm="true"/>
+          <view angle="225" y="25"/>
+          <view angle="315" y="25" hm="true"/>
+          <view angle="0" y="25"/>
+          <view angle="90" x="1" y="25"/>
+          <view angle="180" y="25"/>
+          <view angle="270" y="25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="pizza"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

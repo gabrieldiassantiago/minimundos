@@ -1,0 +1,112 @@
+<item.SpriteItem id="0" name="Holographic Wings" desc="A pair of cool holographic wings" icon="items/base/consumables/back/icon_con_bak_238_holographic_wings.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+  </volume>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Light01" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Light02" source="items/base/shared/s_fx_flare_circle_floor.png" cols="1" rows="1"/>
+    <texture id="Holographic Wings" source="items/base/consumables/back/con_bak_238_holographic_wings.png" cols="3" rows="5"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="up" texture="Holographic Wings">
+          <view angle="0" row="4" y="75" hm="true"/>
+          <view angle="45" row="3" y="80" hm="true"/>
+          <view angle="90" y="80"/>
+          <view angle="135" row="3" y="80"/>
+          <view angle="180" row="4" y="75"/>
+          <view angle="225" row="2" x="-2" y="73"/>
+          <view angle="270" y="80"/>
+          <view angle="315" row="2" x="2" y="73" hm="true"/>
+        </layer>
+        <layer id="down" texture="Holographic Wings">
+          <view angle="0" col="1" row="4" x="1" y="75" hm="true"/>
+          <view angle="45" col="1" row="3" x="1" y="80" hm="true"/>
+          <view angle="90" col="1" x="-1" y="80"/>
+          <view angle="135" col="1" row="3" x="-1" y="80"/>
+          <view angle="180" col="1" row="4" x="-1" y="75"/>
+          <view angle="225" col="1" row="2" x="-3" y="73"/>
+          <view angle="270" col="1" x="-2" y="80"/>
+          <view angle="315" col="1" row="2" x="3" y="73" hm="true"/>
+        </layer>
+        <layer id="sit" texture="Holographic Wings">
+          <view angle="0" col="2" row="4" y="75" hm="true"/>
+          <view angle="45" col="2" row="3" y="80" hm="true"/>
+          <view angle="90" col="2" y="80"/>
+          <view angle="135" col="2" row="3" y="80"/>
+          <view angle="180" col="2" row="4" y="75"/>
+          <view angle="225" col="2" row="2" x="-2" y="73"/>
+          <view angle="270" col="2" row="1" y="70"/>
+          <view angle="315" col="2" row="2" x="2" y="73" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="F01">
+          <layerref id="up"/>
+        </frame>
+        <frame id="F02">
+          <layerref id="down"/>
+        </frame>
+        <frame id="F03">
+          <layerref id="sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="F01">
+            <sample id="flap" loops="-1"/>
+          </frameref>
+          <frameref id="F02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="F03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="-0.12" y="-0.5" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light01" align="middle">
+          <view angle="45" y="-11"/>
+          <view angle="135" x="-3" y="-10"/>
+          <view angle="225" x="-2" y="-13"/>
+          <view angle="315" y="-15"/>
+          <view angle="0" x="1" y="-10"/>
+          <view angle="90" x="-1" y="-5"/>
+          <view angle="180" x="-1" y="-8"/>
+          <view angle="270" x="1" y="-16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x45e0e1"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x45e0e1" a="0.95"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0x45e0e1" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

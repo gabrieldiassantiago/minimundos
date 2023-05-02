@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="A type of grass found on sand dunes" dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/outdoor/icon_o_plant_01_marram_single.png" id="845" name="Marram Grass" tags="plant" price="25" tokens="250" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.4,1,0.4" min="-0.4,0,-0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="grass" rows="1" source="items/base/outdoor/o_plant_01_marram.png"/>
+  </textures>
+  <nodes>
+    <node id="grass">
+      <box max="0.4,1,0.4" min="-0.4,0,-0.4"/>
+      <layers>
+        <layer id="Layer" texture="grass">
+          <view angle="45" x="-2" y="28"/>
+          <view angle="135" mirror="true" x="2" y="28"/>
+          <view angle="225" x="-2" y="28"/>
+          <view angle="315" mirror="true" x="2" y="28"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

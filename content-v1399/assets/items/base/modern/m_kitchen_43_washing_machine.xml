@@ -1,0 +1,30 @@
+<item.SpriteItem id="3290" name="Lavadora de Roupas Deluxe" desc="Uma rápida e economica máquina de lavar." tags="misc" icon="items/base/modern/icon_m_kitchen_43_washing_machine.png" price="85" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.42,0,-0.42" max="0.42,1.35,0.42"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Washing Machine" source="items/base/modern/m_kitchen_43_washing_machine.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.42,0,-0.42" max="0.42,1.35,0.42"/>
+      <layers>
+        <layer id="Layer" texture="Washing Machine" y="30">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1" x="6"/>
+          <view angle="315" col="1" x="-8" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

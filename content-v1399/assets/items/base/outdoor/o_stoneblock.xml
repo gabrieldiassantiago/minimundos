@@ -1,0 +1,40 @@
+<item.SpriteItem desc="Um bloco de pedra de areia." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/outdoor/icon_o_stoneblock.png" id="853" name="Bloco de Arenito" tags="misc" price="25" tokens="250" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.49,0.95,0.49" min="-0.49,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="stone block" rows="1" source="items/base/outdoor/o_stoneblock.png"/>
+    <texture cols="4" id="Texture" rows="1" source="items/base/outdoor/o_stoneblock_02.png"/>
+  </textures>
+  <nodes>
+    <node id="stone block">
+      <box max="0.49,0.95,0.49" min="-0.49,0,-0.49"/>
+      <layers>
+        <layer id="stone block" texture="stone block" y="30">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="symbol" texture="Texture" y="30">
+          <view angle="45" x="-27" y="-13"/>
+          <view alpha="0" angle="135" col="1"/>
+          <view alpha="0" angle="225" col="1"/>
+          <view angle="315" col="2" x="30" y="-11"/>
+        </layer>
+        <layer id="crack" texture="Texture" y="30">
+          <view angle="45" col="3" x="23" y="-2"/>
+          <view angle="135" col="1" x="-33" y="-13"/>
+          <view alpha="0" angle="225" col="3"/>
+          <view alpha="0" angle="315" col="3"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

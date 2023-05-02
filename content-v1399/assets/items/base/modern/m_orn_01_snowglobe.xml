@@ -1,0 +1,84 @@
+<item.SpriteItem desc="Um globo natalino." dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" icon="items/base/modern/icon_m_orn_01_snowglobe.png" id="1365" name="Globo Boneco de Neve" tags="rare,misc" price="50" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.25,0.55,0.25" min="-0.25,0,-0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action event="toggle" id="Toggle" trigger="false"/>
+    <action event="animate(On)" id="On" state="true"/>
+    <action event="animate(Off)" id="Off" state="true"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="defaultAnimation" value="Off"/>
+  </data>
+  <textures>
+    <texture cols="2" id="globe" rows="1" source="items/base/modern/m_orn_01_snowglobe.png"/>
+    <texture cols="3" id="snow" rows="1" source="items/base/modern/m_orn_01_snow.png"/>
+  </textures>
+  <nodes>
+    <node id="snowglobe">
+      <box max="0.25,0.55,0.25" min="-0.25,0,-0.25"/>
+      <layers>
+        <layer id="snowglobe" texture="globe">
+          <view angle="45" y="20"/>
+          <view angle="135" hm="true" y="20"/>
+          <view angle="225" col="1" y="20"/>
+          <view angle="315" col="1" hm="true" y="20"/>
+        </layer>
+        <layer id="snow_01" texture="snow">
+          <view angle="45" x="-1"/>
+          <view angle="135" hm="true" x="1"/>
+          <view angle="225" x="-1"/>
+          <view angle="315" hm="true" x="1"/>
+        </layer>
+        <layer id="snow_02" texture="snow">
+          <view angle="45" col="1" x="-1"/>
+          <view angle="135" col="1" hm="true" x="1"/>
+          <view angle="225" col="1" x="-1"/>
+          <view angle="315" col="1" hm="true" x="1"/>
+        </layer>
+        <layer id="snow_03" texture="snow">
+          <view angle="45" col="2" x="-1"/>
+          <view angle="135" col="2" hm="true" x="1"/>
+          <view angle="225" col="2" x="-1"/>
+          <view angle="315" col="2" hm="true" x="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_00">
+          <layerref id="snowglobe"/>
+        </frame>
+        <frame id="Frame_01">
+          <layerref id="snowglobe"/>
+          <layerref a="0.75" id="snow_01"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="snowglobe"/>
+          <layerref a="0.85" id="snow_02"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="snowglobe"/>
+          <layerref id="snow_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="2" id="Off">
+          <frameref id="Frame_00"/>
+        </animation>
+        <animation framerate="2" id="On">
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

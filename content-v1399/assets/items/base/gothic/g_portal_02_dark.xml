@@ -1,0 +1,147 @@
+<item.WidgetItem id="1932" name="Portal Vortex" desc="Portal para outros mundos." tags="door,widget" icon="items/base/gothic/icon_g_portal_02_dark.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_portal.swf" price="190">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,2.2,0.48"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+  </events>
+  <actions>
+    <action id="Navigate" trigger="false" event="navigate"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="portalType" value="portal"/>
+    <entry key="maxLinkedSpaces" value="6"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <navigate sitRange="1.00" standRange="1.00" targetRange="1.00" usableRange="-1.00"/>
+  <textures>
+    <texture id="inside" source="items/base/gothic/g_portal_02_dark_bg.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="Particles" source="items/base/gothic/g_portal_02_dark.png" cols="2" rows="2"/>
+    <texture id="floor_circle" source="items/base/shared/s_fx_flare_circle_floor.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Portal">
+      <box min="-0.48,0,-0.48" max="0.48,2.2,0.48"/>
+      <layers>
+        <layer id="back" texture="inside">
+          <view angle="45" x="-3" y="-38"/>
+          <view angle="135" x="5" y="-38" hm="true"/>
+          <view angle="225" x="-3" y="-38"/>
+          <view angle="315" x="5" y="-38" hm="true"/>
+        </layer>
+        <layer id="frame" texture="frame">
+          <view angle="45" x="-2" y="59"/>
+          <view angle="135" x="2" y="59" hm="true"/>
+          <view angle="225" x="-2" y="59"/>
+          <view angle="315" x="2" y="59" hm="true"/>
+        </layer>
+        <layer id="particles01" texture="Particles">
+          <view angle="45" x="-3" y="-18"/>
+          <view angle="135" x="4" y="-18" hm="true"/>
+          <view angle="225" x="-3" y="-18"/>
+          <view angle="315" x="4" y="-18" hm="true"/>
+        </layer>
+        <layer id="particles02" texture="Particles">
+          <view angle="45" col="1" x="-3" y="-18"/>
+          <view angle="135" col="1" x="4" y="-18" hm="true"/>
+          <view angle="225" col="1" x="-3" y="-18"/>
+          <view angle="315" col="1" x="4" y="-18" hm="true"/>
+        </layer>
+        <layer id="particles03" texture="Particles">
+          <view angle="45" row="1" x="-3" y="-18"/>
+          <view angle="135" row="1" x="4" y="-18" hm="true"/>
+          <view angle="225" row="1" x="-3" y="-18"/>
+          <view angle="315" row="1" x="4" y="-18" hm="true"/>
+        </layer>
+        <layer id="particles04" texture="Particles">
+          <view angle="45" col="1" row="1" x="-3" y="-18"/>
+          <view angle="135" col="1" row="1" x="4" y="-18" hm="true"/>
+          <view angle="225" col="1" row="1" x="-3" y="-18"/>
+          <view angle="315" col="1" row="1" x="4" y="-18" hm="true"/>
+        </layer>
+        <layer id="floor_circle" texture="floor_circle">
+          <view y="45"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="red_01">
+          <layerref id="floor_circle" color="0xff0000" a="0.3" blend="add"/>
+          <layerref id="back" color="0x0"/>
+          <layerref id="particles01" a="0.8"/>
+          <layerref id="particles01" color="0xf58b8b" blend="add"/>
+        </frame>
+        <frame id="red_02">
+          <layerref id="floor_circle" color="0xff0000" a="0.3" blend="add"/>
+          <layerref id="back"/>
+          <layerref id="particles02" a="0.8"/>
+          <layerref id="particles02" color="0xf58b8b" blend="add"/>
+        </frame>
+        <frame id="red_03">
+          <layerref id="floor_circle" color="0xff0000" a="0.3" blend="add"/>
+          <layerref id="back"/>
+          <layerref id="particles03" a="0.8"/>
+          <layerref id="particles03" color="0xf69797" blend="add"/>
+        </frame>
+        <frame id="red_04">
+          <layerref id="floor_circle" color="0xff0000" a="0.3" blend="add"/>
+          <layerref id="back"/>
+          <layerref id="particles04" a="0.8"/>
+          <layerref id="particles04" color="0xf69191" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="animation">
+          <frameref id="red_01"/>
+          <frameref id="red_02"/>
+          <frameref id="red_03"/>
+          <frameref id="red_04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.2" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="1" hm="true"/>
+          <view angle="135" x="2"/>
+          <view angle="225" x="1" hm="true"/>
+          <view angle="315" x="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light" color="0xf5ab9c"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Intense" y="1.4" s="2.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-1"/>
+          <view angle="135" x="3" hm="true"/>
+          <view angle="225" x="-1"/>
+          <view angle="315" x="3" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light" color="0xfce0e0" a="0.5"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

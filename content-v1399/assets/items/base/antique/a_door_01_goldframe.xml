@@ -1,0 +1,45 @@
+<item.WidgetItem desc="Uma porta com detalhes dourados." dropTargetClamp="floor" dropTargetList="wall,avatar" dropTargetType="none" gridActive="false" icon="items/base/antique/icon_a_door_01_goldframe.png" id="1412" name="Porta Dourada" tags="door,widget" widget="widgets/widget_portal.swf" price="110" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.1,1.38,0.7" min="0,-1.14,-0.7"/>
+  </volume>
+  <events>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+  </events>
+  <actions>
+    <action event="navigate" id="Navigate" trigger="false"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="portalType" value="door"/>
+    <entry key="maxLinkedSpaces" value="1"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <navigate sitRange="1.00" standRange="1.00"/>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/antique/a_door_01_goldframe.png"/>
+  </textures>
+  <nodes>
+    <node id="Door">
+      <box max="0.1,1.38,0.7" min="0,-1.14,-0.7"/>
+      <layers>
+        <layer align="middle" id="Door" texture="Texture">
+          <view angle="45" x="2"/>
+          <view angle="135" hm="true" x="-4"/>
+          <view alpha="0.55" angle="225" x="-3" y="-3"/>
+          <view alpha="0.55" angle="315" hm="true" x="3" y="-3"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

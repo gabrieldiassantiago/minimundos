@@ -1,0 +1,66 @@
+<f id="Top06_18_Bieber" parentId="Top06">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top06_04TorsoBaseM" cId="Torso" s="items/base/consumables/clothing/top06/top06_18_torso_bieber_m.png" pri="6"/>
+      <c sId="Top06_04TorsoBaseM" c="13223875" b="43.1" ct="0.23" lId="Top06_18_Color1" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="Top06_04TorsoBaseF" cId="Torso" s="items/base/consumables/clothing/top06/top06_18_torso_bieber_f.png" pri="6"/>
+      <c sId="Top06_04TorsoBaseF" c="9507603" a="0.73" b="17.2" ct="0.95" lId="Top06_18_Color1" lw="N"/>
+    </g>
+  </b>
+  <g id="SportJacketTorso" name="Jacket" icon="$bm/icon_m_retro.png">
+    <s id="Top06_03ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_18_arm_idle.png" pri="6"/>
+    <s id="Top06_03ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_18_arm_walk1.png" pri="6"/>
+    <s id="Top06_03ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_18_arm_walk2.png" pri="6"/>
+    <s id="Top06_03ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_18_arm_walk3.png" pri="6"/>
+    <s id="Top06_03ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_18_arm_sit.png" pri="6"/>
+    <c sId="Top06_04TorsoBase" c="13223875" b="43.1" ct="0.23" lId="Top06_18_Color1" lw="N"/>
+    <c sId="Top06_03ArmIdleBase" c="13223875" b="43.1" ct="0.23" lId="Top06_18_Color1" lw="N"/>
+    <c sId="Top06_03ArmWalk1Base" c="13223875" b="43.1" ct="0.23" lId="Top06_18_Color1" lw="N"/>
+    <c sId="Top06_03ArmWalk2Base" c="13223875" b="43.1" ct="0.23" lId="Top06_18_Color1" lw="N"/>
+    <c sId="Top06_03ArmWalk3Base" c="13223875" b="43.1" ct="0.23" lId="Top06_18_Color1" lw="N"/>
+    <c sId="Top06_03ArmSitBase" c="13223875" b="43.1" ct="0.23" lId="Top06_18_Color1" lw="N"/>
+    <s id="Top06_03ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_18_arm_throw.png" pri="6"/>
+    <s id="Top06_03ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_18_arm_raise.png" pri="6"/>
+    <c sId="Top06_03ArmThrowBase" c="13223875" b="43.1" ct="0.23" lId="Top06_18_Color1" lw="N"/>
+    <c sId="Top06_03ArmRaiseBase" c="13223875" b="43.1" ct="0.23" lId="Top06_18_Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_04" icon="items/base/consumables/clothing/top06/top06_18_icon_bieber_b.png" w="48" h="48"/>
+    <s id="IconTop06_04Base" cId="IconTop06_04" s="items/base/consumables/clothing/top06/top06_18_icon_bieber_a.png" pri="1"/>
+    <c sId="IconTop06_04Base" c="13223875" b="43.1" ct="0.23" lId="Top06_18_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <wizbox id="UI" uiInitScript="width=300; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top06_18_Color1"/>
+    </wizbox>
+    <b id="Top06_18_Color1" name="Color" desc="Choose a color" sel="White" seld="Purple">
+      <g id="White" icon="$bu/icon_white.png">
+        <c c="13223875" b="43.1" ct="0.23" lId="Top06_18_Color1"/>
+      </g>
+      <g id="Red" icon="$bu/icon_red.png">
+        <c c="9507603" a="0.73" b="29.8" ct="0.95" lId="Top06_18_Color1"/>
+      </g>
+      <g id="Yellow" icon="$bu/icon_yellow.png">
+        <c c="14278656" a="1.00" b="25.2" ct="1.19" lId="Top06_18_Color1"/>
+      </g>
+      <g id="Green" icon="$bu/icon_green.png">
+        <c c="2134024" a="0.77" b="21.6" ct="1.19" lId="Top06_18_Color1"/>
+      </g>
+      <g id="Indigo" icon="$bu/icon_indigo.png">
+        <c c="46490" a="0.80" b="27.2" ct="1.19" lId="Top06_18_Color1"/>
+      </g>
+      <g id="LightBlue" icon="$bu/icon_lightblue.png">
+        <c c="14335" a="0.60" b="15.6" ct="1.02" lId="Top06_18_Color1"/>
+      </g>
+      <g id="Purple" icon="$bu/icon_purple.png">
+        <c c="9835694" a="0.61" b="3.0" ct="0.81" lId="Top06_18_Color1"/>
+      </g>
+      <g id="Black" icon="$bu/icon_black.png">
+        <c c="4013373" a="0.84" b="42.6" ct="1.38" lId="Top06_18_Color1"/>
+      </g>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

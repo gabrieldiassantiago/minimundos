@@ -1,0 +1,96 @@
+<item.SpriteItem id="3363" name="Orbz Vazio" desc="Um orbz vazio para fabricar." tags="misc" icon="items/base/consumables/magic/icon_con_item_102_blackorbz.png" price="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.33,0.15"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="orbz" source="items/base/consumables/magic/con_item_102_blackorbz.png" cols="3" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/magic/con_item_101_natureorbz_shadow.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="orbz">
+      <box min="-0.15,0,-0.15" max="0.15,0.33,0.15"/>
+      <layers>
+        <layer id="shadow" texture="shadow" y="-24">
+          <view y="39"/>
+        </layer>
+        <layer id="orbz_01" texture="orbz" y="-24">
+          <view angle="45" y="28"/>
+          <view angle="135" y="28" hm="true"/>
+          <view angle="225" y="28"/>
+          <view angle="315" y="28" hm="true"/>
+        </layer>
+        <layer id="orbz_02" texture="orbz" y="-24">
+          <view angle="45" col="1" y="28"/>
+          <view angle="135" col="1" y="28" hm="true"/>
+          <view angle="225" col="1" y="28"/>
+          <view angle="315" col="1" y="28" hm="true"/>
+        </layer>
+        <layer id="orbz_03" texture="orbz" y="-24">
+          <view angle="45" col="2" y="28"/>
+          <view angle="135" col="2" y="28" hm="true"/>
+          <view angle="225" col="2" y="28"/>
+          <view angle="315" col="2" y="28" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="shadow"/>
+          <layerref id="orbz_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="shadow"/>
+          <layerref id="orbz_02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="shadow"/>
+          <layerref id="orbz_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-5"/>
+          <view angle="135" y="-5"/>
+          <view angle="225" y="-5"/>
+          <view angle="315" y="-5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x2d4ab1"/>
+        </frame>
+        <frame id="On01">
+          <layerref id="Light" color="0x2d4ab1" a="0.95"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light" color="0x2d4ab1" a="0.9"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="On" duration="2"/>
+          <frameref id="On01" duration="2"/>
+          <frameref id="On02" duration="2"/>
+          <frameref id="On01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="A tree fern" dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/outdoor/icon_o_plant_03_ponga.png" id="847" name="Tree Fern" tags="plant" price="35" tokens="350" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.4,2.8,0.4" min="-0.4,0,-0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="shadow" rows="1" source="items/base/modern/m_plant_10_palm_shadow.png"/>
+    <texture cols="1" id="ponga" rows="1" source="items/base/outdoor/o_plant_03_ponga.png"/>
+  </textures>
+  <nodes>
+    <node id="ponga">
+      <box max="0.4,2.8,0.4" min="-0.4,0,-0.4"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="39"/>
+          <view angle="135" mirror="true" y="39"/>
+          <view angle="225" mirror="true" y="39"/>
+          <view angle="315" y="39"/>
+        </layer>
+        <layer id="ponga" texture="ponga">
+          <view angle="45" x="-10" y="20"/>
+          <view angle="135" mirror="true" x="10" y="20"/>
+          <view angle="225" x="-10" y="20"/>
+          <view angle="315" mirror="true" x="10" y="20"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

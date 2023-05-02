@@ -1,0 +1,152 @@
+<item.ChairItem id="5695" name="Privada Master Deluxe" desc="Uma moderna e luxuosa privada" tags="rare,chair,misc" icon="items/base/modern/icon_m_bathroom_37_goldtoilet.png" price="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <seats>
+    <seat x="0.05" y="0.6">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.49,0,-0.3" max="0.48,1.1,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_container_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="defaultAnimation" value="Open"/>
+    <entry key="aiUseInWorldEffects" value="hygiene-3"/>
+    <entry key="itemContainerOpenIcon" value="context/item/action/icon_toilet_open.png"/>
+    <entry key="itemContainerCloseIcon" value="context/item/action/icon_toilet_close.png"/>
+  </data>
+  <textures>
+    <texture id="main" source="items/base/modern/m_bathroom_37_goldtoilet_main.png" cols="2" rows="1"/>
+    <texture id="lids" source="items/base/modern/m_bathroom_37_goldtoilet_lids.png" cols="4" rows="1"/>
+    <texture id="back" source="items/base/modern/m_bathroom_37_goldtoilet_back.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="LeftArm">
+      <box min="-0.49,0,-0.3" max="0.48,1.1,0.3"/>
+      <layers>
+        <layer id="main" texture="main" align="middle">
+          <view angle="45" x="-4" y="-48"/>
+          <view angle="135" x="4" y="-484" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="9" y="-30" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-7" y="-33"/>
+        </layer>
+        <layer id="back" texture="back">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" x="17" y="-17" hm="true"/>
+          <view angle="315" x="-26" y="-14" alpha="0"/>
+        </layer>
+        <layer id="lidup" texture="lids">
+          <view angle="45" x="-14" y="-43"/>
+          <view angle="135" x="14" y="-43" alpha="0" hm="true"/>
+          <view angle="225" col="2" x="13" y="-30"/>
+          <view angle="315" col="2" x="-13" y="-22" alpha="0"/>
+        </layer>
+        <layer id="liddown" texture="lids">
+          <view angle="45" col="1" x="6" y="-6"/>
+          <view angle="135" col="1" x="-1" y="-18" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="-8" y="-17" alpha="0" hm="true"/>
+          <view angle="315" col="3" x="8" y="-17" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="openlid">
+          <layerref id="main"/>
+          <layerref id="back"/>
+          <layerref id="lidup"/>
+        </frame>
+        <frame id="closedlid">
+          <layerref id="main"/>
+          <layerref id="back"/>
+          <layerref id="liddown"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="4">
+          <frameref id="openlid"/>
+        </animation>
+        <animation id="Closed" framerate="4">
+          <frameref id="closedlid"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="RightArm">
+      <box min="-0.49,0,-0.3" max="0.48,1.1,0.3"/>
+      <layers>
+        <layer id="main" texture="main" align="middle">
+          <view angle="45" x="-9" y="-44" alpha="0"/>
+          <view angle="135" x="4" y="-48" hm="true"/>
+          <view angle="225" col="1" x="7" y="-33" hm="true"/>
+          <view angle="315" col="1" x="-9" y="-30" alpha="0"/>
+        </layer>
+        <layer id="flusher" texture="flusher">
+          <view angle="45" x="-33" y="-70" alpha="0"/>
+          <view angle="135" col="1" x="4" y="-82"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="back" texture="back">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" x="25" y="-14" alpha="0" hm="true"/>
+          <view angle="315" x="-18" y="-17"/>
+        </layer>
+        <layer id="lidup" texture="lids">
+          <view angle="45" x="-14" y="-43" alpha="0"/>
+          <view angle="135" x="14" y="-43" hm="true"/>
+          <view angle="225" col="2" x="13" y="-22" alpha="0" hm="true"/>
+          <view angle="315" col="2" x="-13" y="-30" hm="true"/>
+        </layer>
+        <layer id="liddown" texture="lids">
+          <view angle="45" col="1" x="1" y="-18" alpha="0"/>
+          <view angle="135" col="1" x="-6" y="-6" hm="true"/>
+          <view angle="225" col="3" x="-18" y="-13"/>
+          <view angle="315" col="3" x="18" y="-14" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="openlid">
+          <layerref id="main"/>
+          <layerref id="flusher"/>
+          <layerref id="lidup"/>
+          <layerref id="back"/>
+        </frame>
+        <frame id="closedlid">
+          <layerref id="main"/>
+          <layerref id="flusher"/>
+          <layerref id="liddown"/>
+          <layerref id="back"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="4">
+          <frameref id="openlid"/>
+        </animation>
+        <animation id="Closed" framerate="4">
+          <frameref id="closedlid"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

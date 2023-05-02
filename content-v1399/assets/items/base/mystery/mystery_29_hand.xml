@@ -1,0 +1,231 @@
+<item.SpriteItem id="0" name="Swuffy Bunny" desc="A cute bunny soft toy" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.02,-0.58,-0.15" max="0.32,-0.18,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/mystery/mystery_29_hand.png" cols="5" rows="1"/>
+    <texture id="sparkle" source="items/base/consumables/clothing/accessory/acc_482_goldhula_sparkle.png" cols="3" rows="1"/>
+    <texture id="glitter" source="items/base/mystery/mystery_29_sparkle.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" x="0.17" y="-0.58">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="deer" texture="Texture">
+          <view angle="0" col="2" x="-5" y="19" hm="true"/>
+          <view angle="45" x="-8" y="15"/>
+          <view angle="90" col="1" x="-4" y="15"/>
+          <view angle="135" x="6" y="15" hm="true"/>
+          <view angle="180" col="2" x="7" y="17"/>
+          <view angle="225" col="3" x="1" y="17"/>
+          <view angle="270" col="4" x="-1" y="19"/>
+          <view angle="315" col="3" x="-6" y="20" hm="true"/>
+        </layer>
+        <layer id="sparkle_01" texture="sparkle" y="-115">
+          <view angle="0" y="5"/>
+          <view angle="45" x="8" y="5"/>
+          <view angle="90" x="10" y="7"/>
+          <view angle="135" x="-10" y="5"/>
+          <view angle="180" x="-6" y="2"/>
+          <view angle="225" x="-13" y="6"/>
+          <view angle="270" x="8"/>
+          <view angle="315" x="8" y="6"/>
+        </layer>
+        <layer id="sparkle_02" texture="sparkle" y="-115">
+          <view angle="0" col="1" y="5"/>
+          <view angle="45" col="1" x="8" y="5"/>
+          <view angle="90" col="1" x="10" y="7"/>
+          <view angle="135" col="1" x="-10" y="5"/>
+          <view angle="180" col="1" x="-6" y="2"/>
+          <view angle="225" col="1" x="-13"/>
+          <view angle="270" col="1" x="8"/>
+          <view angle="315" col="1" x="8" y="6"/>
+        </layer>
+        <layer id="sparkle_03" texture="sparkle" y="-115">
+          <view angle="0" col="2" y="5"/>
+          <view angle="45" col="2" x="8" y="5"/>
+          <view angle="90" col="2" x="10" y="7"/>
+          <view angle="135" col="2" x="-10" y="5"/>
+          <view angle="180" col="2" x="-6" y="2"/>
+          <view angle="225" col="2" x="-13"/>
+          <view angle="270" col="2" x="8"/>
+          <view angle="315" col="2" x="8" y="6"/>
+        </layer>
+        <layer id="sparkle_04" texture="sparkle" y="-115">
+          <view angle="0" col="1" y="5" hm="true"/>
+          <view angle="45" col="1" x="8" y="5" hm="true"/>
+          <view angle="90" col="1" x="10" y="7" hm="true"/>
+          <view angle="135" col="1" x="-10" y="5" hm="true"/>
+          <view angle="180" col="1" x="-6" y="2" hm="true"/>
+          <view angle="225" col="1" x="-13"/>
+          <view angle="270" col="1" x="8" hm="true"/>
+          <view angle="315" col="1" x="8" y="6" hm="true"/>
+        </layer>
+        <layer id="sparkle_05" texture="sparkle" y="-115">
+          <view angle="0" y="5" hm="true"/>
+          <view angle="45" x="8" y="5" hm="true"/>
+          <view angle="90" x="10" y="7" hm="true"/>
+          <view angle="135" x="-10" y="5" hm="true"/>
+          <view angle="180" x="-6" y="2" hm="true"/>
+          <view angle="225" x="-13" y="6" hm="true"/>
+          <view angle="270" x="8" hm="true"/>
+          <view angle="315" x="8" y="6" hm="true"/>
+        </layer>
+        <layer id="sparkle_06" texture="sparkle" y="-115">
+          <view angle="0" x="-15"/>
+          <view angle="45" x="-2" y="25"/>
+          <view angle="90" x="-4" y="27"/>
+          <view angle="135" x="2" y="25"/>
+          <view angle="180" x="14" y="20"/>
+          <view angle="225" x="-4" y="5"/>
+          <view angle="270" x="8" alpha="0"/>
+          <view angle="315" x="4" y="5"/>
+        </layer>
+        <layer id="sparkle_07" texture="sparkle" y="-115">
+          <view angle="0" col="1" x="-15" y="9"/>
+          <view angle="45" col="1" x="-2" y="25"/>
+          <view angle="90" col="1" x="-4" y="27"/>
+          <view angle="135" col="1" x="2" y="25"/>
+          <view angle="180" col="1" x="14" y="20"/>
+          <view angle="225" col="1" x="-4" y="5"/>
+          <view angle="270" col="1" x="8" alpha="0"/>
+          <view angle="315" col="1" x="4" y="5"/>
+        </layer>
+        <layer id="sparkle_08" texture="sparkle" y="-115">
+          <view angle="0" col="2" x="-15" y="9"/>
+          <view angle="45" col="2" x="-2" y="25"/>
+          <view angle="90" col="2" x="-4" y="27"/>
+          <view angle="135" col="2" x="2" y="25"/>
+          <view angle="180" col="2" x="14" y="20"/>
+          <view angle="225" col="2" x="-4"/>
+          <view angle="270" col="2" x="8" alpha="0"/>
+          <view angle="315" col="2" x="4" y="5"/>
+        </layer>
+        <layer id="sparkle_09" texture="sparkle" y="-115">
+          <view angle="0" col="1" x="-15" y="5" hm="true"/>
+          <view angle="45" col="1" x="-2" y="25" hm="true"/>
+          <view angle="90" col="1" x="-4" y="27" hm="true"/>
+          <view angle="135" col="1" x="2" y="25" hm="true"/>
+          <view angle="180" col="1" x="14" y="20" hm="true"/>
+          <view angle="225" col="1" x="-4" hm="true"/>
+          <view angle="270" col="1" x="8" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="4" y="5" hm="true"/>
+        </layer>
+        <layer id="sparkle_10" texture="sparkle" y="-115">
+          <view angle="0" x="-15" hm="true"/>
+          <view angle="45" x="-2" y="25" hm="true"/>
+          <view angle="90" x="-4" y="27" hm="true"/>
+          <view angle="135" x="2" y="25" hm="true"/>
+          <view angle="180" x="14" y="20" hm="true"/>
+          <view angle="225" x="-4" hm="true"/>
+          <view angle="270" x="8" alpha="0" hm="true"/>
+          <view angle="315" x="4" y="5" hm="true"/>
+        </layer>
+        <layer id="glitter" texture="glitter" y="-115">
+          <view angle="0" col="2" x="-3" y="7"/>
+          <view angle="45" x="5" y="15"/>
+          <view angle="90" col="1" x="-4" y="15"/>
+          <view angle="135" x="-8" y="15" hm="true"/>
+          <view angle="180" col="2" x="4" y="7" hm="true"/>
+          <view angle="225" col="3" x="1" y="-3" hm="true"/>
+          <view angle="270" col="4" x="2" y="-3"/>
+          <view angle="315" col="3" x="-4" y="-1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle_01">
+          <layerref id="deer"/>
+          <layerref id="glitter" a="0.5"/>
+        </frame>
+        <frame id="Idle_02">
+          <layerref id="deer"/>
+          <layerref id="glitter" a="0.6"/>
+        </frame>
+        <frame id="Idle_03">
+          <layerref id="deer"/>
+          <layerref id="glitter" a="0.8"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="deer"/>
+          <layerref id="sparkle_01"/>
+          <layerref id="glitter" a="0.7"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="deer"/>
+          <layerref id="sparkle_02"/>
+          <layerref id="glitter" a="0.5"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="deer"/>
+          <layerref id="sparkle_03"/>
+          <layerref id="glitter" a="0.5"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="deer"/>
+          <layerref id="sparkle_04"/>
+          <layerref id="glitter" a="0.4"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="deer"/>
+          <layerref id="sparkle_05"/>
+          <layerref id="glitter" a="0.3"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="deer"/>
+          <layerref id="sparkle_06" a="0.8"/>
+          <layerref id="glitter" a="0.3"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="deer"/>
+          <layerref id="sparkle_07"/>
+          <layerref id="glitter" a="0.4"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="deer"/>
+          <layerref id="sparkle_08"/>
+          <layerref id="glitter" a="0.5"/>
+        </frame>
+        <frame id="Frame09">
+          <layerref id="deer"/>
+          <layerref id="sparkle_09"/>
+          <layerref id="glitter" a="0.6"/>
+        </frame>
+        <frame id="Frame10">
+          <layerref id="deer"/>
+          <layerref id="sparkle_10"/>
+          <layerref id="glitter" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="10">
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+          <frameref id="Idle_03" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+          <frameref id="Idle_03" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame09"/>
+          <frameref id="Frame10"/>
+          <frameref id="Idle_03" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

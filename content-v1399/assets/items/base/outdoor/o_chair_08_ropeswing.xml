@@ -1,0 +1,170 @@
+<item.ChairItem id="4573" name="Balanço de Pneu" desc="Um balanço para sua casa na árvore" tags="chair" icon="items/base/outdoor/icon_o_chair_08_ropeswing.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="220">
+  <seats>
+    <seat x="-0.2" y="0.5">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.3,0,-0.4" max="0.3,2.5,0.4"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="picnic seat" source="items/base/outdoor/o_chair_08_ropeswing.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/outdoor/o_chair_08_ropeswing_cap.png" cols="1" rows="1"/>
+    <texture id="Texture01" source="items/base/outdoor/o_chair_08_ropeswing_branch.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-0.3,0,-0.4" max="0.3,2.5,0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture01" y="-175"/>
+        <layer id="bench01" texture="picnic seat" y="25">
+          <view angle="45" alpha="0"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="bench02" texture="picnic seat" x="1" y="26">
+          <view angle="45" alpha="0"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="bench03" texture="picnic seat" x="-1" y="24">
+          <view angle="45" alpha="0"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Texture">
+          <view angle="45"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Layer02" texture="Texture" x="1" y="1">
+          <view angle="45"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Layer03" texture="Texture" x="-1" y="-1">
+          <view angle="45"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="bench01"/>
+          <layerref id="Layer01"/>
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="bench02"/>
+          <layerref id="Layer02"/>
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="bench03"/>
+          <layerref id="Layer03"/>
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="3">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="LeftArm">
+      <box min="-0.3,0,-0.4" max="0.3,2.5,0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture01" y="-175"/>
+        <layer id="bench01" texture="picnic seat" y="25">
+          <view angle="45"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="bench02" texture="picnic seat" x="1" y="26">
+          <view angle="45"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="bench03" texture="picnic seat" x="-1" y="24">
+          <view angle="45"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Texture">
+          <view angle="45" alpha="0"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer02" texture="Texture" x="1" y="1">
+          <view angle="45" alpha="0"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer03" texture="Texture" x="-1" y="-1">
+          <view angle="45" alpha="0"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="bench01"/>
+          <layerref id="Layer01"/>
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="bench02"/>
+          <layerref id="Layer02"/>
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="bench03"/>
+          <layerref id="Layer03"/>
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="3">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

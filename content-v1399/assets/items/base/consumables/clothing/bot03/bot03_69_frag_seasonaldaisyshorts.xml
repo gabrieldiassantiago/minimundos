@@ -1,0 +1,26 @@
+<f id="Bot03_69DaisyDukesA" parentId="Bot03">
+  <g id="ShortPants" name="Shorts" icon="$bm/iconm_legs_shorts.png">
+    <s id="ShortPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_11_idle.png" pri="3"/>
+    <s id="ShortPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_11_walk1.png" pri="3"/>
+    <s id="ShortPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_11_walk2.png" pri="3"/>
+    <s id="ShortPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_11_walk3.png" pri="3"/>
+    <s id="ShortPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_11_walk4.png" pri="3"/>
+    <s id="ShortSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_11_sit.png" pri="3"/>
+    <c sId="ShortPantIdleBase" c="16737620" a="1.00" b="69.0" ct="1.61" lId="Bot03_69Color" lw="N"/>
+    <c sId="ShortPantWalk1Base" c="16737620" a="1.00" b="69.0" ct="1.61" lId="Bot03_69Color" lw="N"/>
+    <c sId="ShortPantWalk2Base" c="16737620" a="1.00" b="69.0" ct="1.61" lId="Bot03_69Color" lw="N"/>
+    <c sId="ShortPantWalk3Base" c="16737620" a="1.00" b="69.0" ct="1.61" lId="Bot03_69Color" lw="N"/>
+    <c sId="ShortPantWalk4Base" c="16737620" a="1.00" b="69.0" ct="1.61" lId="Bot03_69Color" lw="N"/>
+    <c sId="ShortSitUpperBase" c="16737620" a="1.00" b="69.0" ct="1.61" lId="Bot03_69Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop03_69" icon="items/base/consumables/clothing/bot03/bot03_11_icon_daisydukes_1.png" w="48" h="48" exurl="items/base/consumables/clothing/bot03/bot03_69_icon_seasonaldaisyshorts.png"/>
+    <s id="IconTop03_69Base" cId="IconTop03_69" s="items/base/consumables/clothing/bot03/bot03_69_icon_seasonaldaisyshorts.png"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot03_66Color" name="Color" desc="Choose a color" sel="Grey" seld="Grey">
+      <c id="Grey" icon="$bu/icon_grey.png" c="16737620" a="1.00" b="69.0" ct="1.61" lId="Bot03_69Color"/>
+    </b>
+  </g>
+  <ds id="JSBottom"/>
+</f>

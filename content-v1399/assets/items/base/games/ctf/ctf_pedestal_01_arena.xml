@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem name="Pedestal da Arena" desc="Em pedra de muita qualidade. Com garantia contra rachaduras." tags="admin,table" icon="items/base/games/ctf/icon_ctf_pedestal_01_arena.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" id="2133">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1.15,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/games/ctf/ctf_pedestal_01_arena.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,1.15,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="52">
+          <view/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,380 @@
+<item.WidgetItem desc="Equipamento profissional para você tocar suas músicas pelo YouTube" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/modern/icon_m_djstand.png" id="637" name="Pickap de DJ" tags="widget" viewDirection="vertical" widget="widgets/widget_youtube.swf" price="175" tokens="1750" minLevel="1" minLevelType="1" minCPLevel="1">
+  <volume>
+    <box min="-0.3,0,-0.42" max="0.3,0.85,0.42"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Start" trigger="false" event="widget_action(START)"/>
+    <action id="Stop" trigger="false" event="widget_action(STOP)"/>
+    <action id="Next" trigger="false" event="widget_action(NEXT)"/>
+    <action id="Play Specific Video" trigger="false" event="widget_action(PLAYVIDEO)">
+      <params>
+        <param type="string" id="Video Title" label="Publisher - Video Title"/>
+      </params>
+    </action>
+    <action id="Video Change">
+      <eval>
+        <func type="relational" id="Video Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="itemUseWidget" value="Watch"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_watch.png"/>
+  </data>
+  <navigate position="infront" sitRange="8.00" standRange="5.00" targetRange="2.00" usableRange="-1.00"/>
+  <textures>
+    <texture cols="2" id="speakers" rows="1" source="items/base/modern/m_djstand_speakers.png"/>
+    <texture cols="3" id="record" rows="1" source="items/base/modern/m_djstand_record.png"/>
+    <texture cols="2" id="music notes" rows="1" source="items/base/shared/s_music_notes.png"/>
+    <texture cols="2" id="dj stand" rows="1" source="items/base/modern/m_djstand.png"/>
+    <texture cols="2" id="wobble" rows="1" source="items/base/modern/m_djstand_speakers_02.png"/>
+  </textures>
+  <nodes>
+    <node id="dj stand">
+      <box max="0.46,1.7,1.38" min="-0.38,0,-1.38"/>
+      <layers>
+        <layer id="speaker behind" texture="speakers">
+          <view angle="45" x="68" y="-9"/>
+          <view angle="135" hm="true" x="-69" y="-6"/>
+          <view angle="225" col="1" x="57" y="-13"/>
+          <view angle="315" col="1" hm="true" x="-60" y="-11"/>
+        </layer>
+        <layer id="dj stand" texture="dj stand">
+          <view angle="45" x="-5" y="30"/>
+          <view angle="135" hm="true" x="5" y="30"/>
+          <view angle="225" col="1" x="7" y="41"/>
+          <view angle="315" col="1" hm="true" x="-7" y="41"/>
+        </layer>
+        <layer id="speaker animation a" texture="wobble">
+          <view angle="45" x="-61" y="-49"/>
+          <view angle="135" hm="true" x="61" y="-49"/>
+          <view alpha="0" angle="225" x="-73" y="54"/>
+          <view alpha="0" angle="315" hm="true" x="71" y="56"/>
+        </layer>
+        <layer id="speaker animation b" texture="wobble">
+          <view angle="45" x="72" y="-115"/>
+          <view angle="135" hm="true" x="-73" y="-112"/>
+          <view alpha="0" angle="225" x="57" y="-13"/>
+          <view alpha="0" angle="315" hm="true" x="-60" y="-11"/>
+        </layer>
+        <layer id="centre speaker animation" texture="wobble">
+          <view angle="45" col="1" x="22" y="7"/>
+          <view angle="135" col="1" hm="true" x="-22" y="7"/>
+          <view alpha="0" angle="225" col="3"/>
+          <view alpha="0" angle="315" col="3"/>
+        </layer>
+        <layer id="speaker in front" texture="speakers">
+          <view angle="45" x="-65" y="57"/>
+          <view angle="135" hm="true" x="65" y="57"/>
+          <view angle="225" col="1" x="-73" y="54"/>
+          <view angle="315" col="1" hm="true" x="71" y="56"/>
+        </layer>
+        <layer id="note01 100%" texture="music notes">
+          <view angle="45" x="39" y="11"/>
+          <view angle="135" x="-13" y="11"/>
+          <view angle="225" x="1" y="-27"/>
+          <view angle="315" x="24" y="-29"/>
+        </layer>
+        <layer id="note01 66%" texture="music notes">
+          <view alpha="0.66" angle="45" x="39" y="11"/>
+          <view alpha="0.66" angle="135" x="-13" y="11"/>
+          <view alpha="0.66" angle="225" x="1" y="-27"/>
+          <view alpha="0.66" angle="315" x="24" y="-29"/>
+        </layer>
+        <layer id="note01 33%" texture="music notes">
+          <view alpha="0.33" angle="45" x="39" y="11"/>
+          <view alpha="0.33" angle="135" x="-13" y="11"/>
+          <view alpha="0.33" angle="225" x="1" y="-27"/>
+          <view alpha="0.33" angle="315" x="24" y="-29"/>
+        </layer>
+        <layer id="note02 100%" texture="music notes">
+          <view angle="45" col="1" x="39" y="11"/>
+          <view angle="135" col="1" x="-13" y="11"/>
+          <view angle="225" col="1" x="1" y="-27"/>
+          <view angle="315" col="1" x="24" y="-29"/>
+        </layer>
+        <layer id="note02 66%" texture="music notes">
+          <view alpha="0.66" angle="45" col="1" x="39" y="11"/>
+          <view alpha="0.66" angle="135" col="1" x="-13" y="11"/>
+          <view alpha="0.66" angle="225" col="1" x="1" y="-27"/>
+          <view alpha="0.66" angle="315" col="1" x="24" y="-29"/>
+        </layer>
+        <layer id="note02 33%" texture="music notes">
+          <view alpha="0.33" angle="45" col="1" x="39" y="11"/>
+          <view alpha="0.33" angle="135" col="1" x="-13" y="11"/>
+          <view alpha="0.33" angle="225" col="1" x="1" y="-27"/>
+          <view alpha="0.33" angle="315" col="1" x="24" y="-29"/>
+        </layer>
+        <layer id="note01 0%" texture="music notes">
+          <view alpha="0" angle="45" x="39" y="11"/>
+          <view alpha="0" angle="135" x="-13" y="11"/>
+          <view alpha="0" angle="225" x="1" y="-27"/>
+          <view alpha="0" angle="315" x="24" y="-29"/>
+        </layer>
+        <layer id="record a 01" texture="record">
+          <view angle="45" col="2" x="24" y="-78"/>
+          <view angle="135" hm="true" x="30" y="-50"/>
+          <view angle="225" col="2" x="-22" y="-36"/>
+          <view angle="315" col="2" x="-32" y="-63"/>
+        </layer>
+        <layer id="record a 02" texture="record">
+          <view angle="45" col="1" x="24" y="-78"/>
+          <view angle="135" col="1" hm="true" x="30" y="-50"/>
+          <view angle="225" col="1" x="-22" y="-36"/>
+          <view angle="315" col="1" x="-32" y="-63"/>
+        </layer>
+        <layer id="record a 03" texture="record">
+          <view angle="45" x="24" y="-78"/>
+          <view angle="135" col="2" hm="true" x="30" y="-50"/>
+          <view angle="225" x="-22" y="-36"/>
+          <view angle="315" x="-32" y="-63"/>
+        </layer>
+        <layer id="record b 01" texture="record">
+          <view angle="45" col="2" x="-31" y="-50"/>
+          <view angle="135" hm="true" x="-24" y="-77"/>
+          <view angle="225" col="2" x="32" y="-63"/>
+          <view angle="315" col="2" x="22" y="-36"/>
+        </layer>
+        <layer id="record b 02" texture="record">
+          <view angle="45" col="1" x="-31" y="-50"/>
+          <view angle="135" col="1" hm="true" x="-24" y="-77"/>
+          <view angle="225" col="1" x="32" y="-63"/>
+          <view angle="315" col="1" x="22" y="-36"/>
+        </layer>
+        <layer id="record b 03" texture="record">
+          <view angle="45" x="-31" y="-50"/>
+          <view angle="135" col="2" hm="true" x="-24" y="-77"/>
+          <view angle="225" x="32" y="-63"/>
+          <view angle="315" x="22" y="-36"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame 01">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 66%" x="-11" y="-42"/>
+          <layerref id="record a 01"/>
+          <layerref id="record b 01"/>
+          <layerref id="speaker in front"/>
+          <layerref id="speaker animation a"/>
+          <layerref id="speaker animation b"/>
+          <layerref id="centre speaker animation"/>
+        </frame>
+        <frame id="Frame 02">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 100%" x="-17" y="-67"/>
+          <layerref id="record a 02"/>
+          <layerref id="record b 02"/>
+          <layerref id="speaker in front"/>
+        </frame>
+        <frame id="Frame 03">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 100%" x="-3" y="-92"/>
+          <layerref id="note02 66%" x="-7" y="-46"/>
+          <layerref id="record a 03"/>
+          <layerref id="record b 03"/>
+          <layerref id="speaker in front"/>
+          <layerref id="speaker animation a"/>
+          <layerref id="speaker animation b"/>
+          <layerref id="centre speaker animation"/>
+        </frame>
+        <frame id="Frame 04">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 100%" x="-5" y="-113"/>
+          <layerref id="note02 100%" x="-19" y="-63"/>
+          <layerref id="record a 01"/>
+          <layerref id="record b 01"/>
+          <layerref id="speaker in front"/>
+        </frame>
+        <frame id="Frame 05">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 66%" x="-8" y="-129"/>
+          <layerref id="note02 100%" x="-12" y="-92"/>
+          <layerref id="record a 02"/>
+          <layerref id="record b 02"/>
+          <layerref id="speaker in front"/>
+          <layerref id="speaker animation a"/>
+          <layerref id="speaker animation b"/>
+          <layerref id="centre speaker animation"/>
+        </frame>
+        <frame id="Frame 06">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 33%" x="-10" y="-137"/>
+          <layerref id="note02 100%" x="-4" y="-114"/>
+          <layerref id="record a 03"/>
+          <layerref id="record b 03"/>
+          <layerref id="speaker in front"/>
+        </frame>
+        <frame id="Frame 07">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note02 66%" x="2" y="-126"/>
+          <layerref id="note01 0%" x="4" y="-137"/>
+          <layerref id="record a 01"/>
+          <layerref id="record b 01"/>
+          <layerref id="speaker in front"/>
+          <layerref id="speaker animation a"/>
+          <layerref id="speaker animation b"/>
+          <layerref id="centre speaker animation"/>
+        </frame>
+        <frame id="Frame 08">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note02 33%" x="4" y="-137"/>
+          <layerref id="record a 02"/>
+          <layerref id="record b 02"/>
+          <layerref id="speaker in front"/>
+        </frame>
+        <frame id="Frame 09">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 0%" x="4" y="-137"/>
+          <layerref id="record a 03"/>
+          <layerref id="record b 03"/>
+          <layerref id="speaker in front"/>
+          <layerref id="speaker animation a"/>
+          <layerref id="speaker animation b"/>
+          <layerref id="centre speaker animation"/>
+        </frame>
+        <frame id="Frame 10">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 66%" x="-11" y="-42"/>
+          <layerref id="record a 01"/>
+          <layerref id="record b 01"/>
+          <layerref id="speaker in front"/>
+        </frame>
+        <frame id="Frame 11">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 100%" x="-17" y="-67"/>
+          <layerref id="record a 02"/>
+          <layerref id="record b 02"/>
+          <layerref id="speaker in front"/>
+          <layerref id="speaker animation a"/>
+          <layerref id="speaker animation b"/>
+          <layerref id="centre speaker animation"/>
+        </frame>
+        <frame id="Frame 12">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 100%" x="-3" y="-92"/>
+          <layerref id="note02 66%" x="-7" y="-46"/>
+          <layerref id="record a 03"/>
+          <layerref id="record b 03"/>
+          <layerref id="speaker in front"/>
+        </frame>
+        <frame id="Frame 13">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 100%" x="-5" y="-113"/>
+          <layerref id="note02 100%" x="-19" y="-63"/>
+          <layerref id="record a 01"/>
+          <layerref id="record b 01"/>
+          <layerref id="speaker in front"/>
+          <layerref id="speaker animation a"/>
+          <layerref id="speaker animation b"/>
+          <layerref id="centre speaker animation"/>
+        </frame>
+        <frame id="Frame 14">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 66%" x="-8" y="-129"/>
+          <layerref id="note02 100%" x="-12" y="-92"/>
+          <layerref id="record a 02"/>
+          <layerref id="record b 02"/>
+          <layerref id="speaker in front"/>
+        </frame>
+        <frame id="Frame 15">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 33%" x="-10" y="-137"/>
+          <layerref id="note02 100%" x="-4" y="-114"/>
+          <layerref id="record a 03"/>
+          <layerref id="record b 03"/>
+          <layerref id="speaker in front"/>
+          <layerref id="speaker animation a"/>
+          <layerref id="speaker animation b"/>
+          <layerref id="centre speaker animation"/>
+        </frame>
+        <frame id="Frame 16">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note02 66%" x="2" y="-126"/>
+          <layerref id="note01 0%" x="4" y="-137"/>
+          <layerref id="record a 01"/>
+          <layerref id="record b 01"/>
+          <layerref id="speaker in front"/>
+        </frame>
+        <frame id="Frame 17">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note02 33%" x="4" y="-137"/>
+          <layerref id="record a 02"/>
+          <layerref id="record b 02"/>
+          <layerref id="speaker in front"/>
+          <layerref id="speaker animation a"/>
+          <layerref id="speaker animation b"/>
+          <layerref id="centre speaker animation"/>
+        </frame>
+        <frame id="Frame 18">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="note01 0%" x="4" y="-137"/>
+          <layerref id="record a 03"/>
+          <layerref id="record b 03"/>
+          <layerref id="speaker in front"/>
+        </frame>
+        <frame id="stopped">
+          <layerref id="speaker behind"/>
+          <layerref id="dj stand"/>
+          <layerref id="speaker in front"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Stopped">
+          <frameref id="stopped"/>
+        </animation>
+        <animation framerate="4" id="Playing">
+          <frameref id="Frame 01"/>
+          <frameref id="Frame 02"/>
+          <frameref id="Frame 03"/>
+          <frameref id="Frame 04"/>
+          <frameref id="Frame 05"/>
+          <frameref id="Frame 06"/>
+          <frameref id="Frame 07"/>
+          <frameref id="Frame 08"/>
+          <frameref id="Frame 09"/>
+          <frameref id="Frame 10"/>
+          <frameref id="Frame 11"/>
+          <frameref id="Frame 12"/>
+          <frameref id="Frame 13"/>
+          <frameref id="Frame 14"/>
+          <frameref id="Frame 15"/>
+          <frameref id="Frame 16"/>
+          <frameref id="Frame 17"/>
+          <frameref id="Frame 18"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

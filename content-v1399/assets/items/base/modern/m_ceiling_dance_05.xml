@@ -1,0 +1,157 @@
+<item.SpriteItem id="3125" name="Canhão de Luz Sonix" desc="Um canhão de luz para festas." tags="misc" icon="items/base/modern/icon_m_ceiling_dance_05.png" minLevel="1" minCPLevel="1" gridActive="false" gridSnap="true" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="125" tokens="1250">
+  <volume>
+    <box min="-0.49,3.05,-0.49" max="0.49,3.25,0.49"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="grid" source="items/base/modern/m_discoball_ceiling.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/modern/m_ceiling_dance_05_light.png" cols="2" rows="1"/>
+    <texture id="beam" source="items/base/modern/m_ceiling_dance_05_beam.png" cols="2" rows="1"/>
+    <texture id="cast" source="items/base/modern/m_ceiling_dance_05_cast.png" cols="1" rows="1"/>
+    <texture id="ball off" source="items/base/modern/m_ceiling_dance_05_body.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="ball" y="0.25" depthBias="-2">
+      <box min="-0.49,2.8,-0.49" max="0.49,3,0.49"/>
+      <layers>
+        <layer id="ball" texture="ball off" y="-150">
+          <view angle="45" y="-44"/>
+          <view angle="135" col="1" y="-44"/>
+          <view angle="225" col="1" y="-44" hm="true"/>
+          <view angle="315" y="-44" hm="true"/>
+        </layer>
+        <layer id="Grid" texture="grid" y="-198">
+          <view angle="45" y="-16" alpha="0.55"/>
+          <view angle="135" y="-16" alpha="0.55" hm="true"/>
+          <view angle="225" y="-16" alpha="0.55"/>
+          <view angle="315" y="-16" alpha="0.55" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="ball_off">
+          <layerref id="ball"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="ball_on">
+          <layerref id="ball"/>
+          <layerref id="Grid"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="ball_on"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="ball_off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="beam" y="0.25" depthBias="-1">
+      <box min="-0.49,2.8,-0.49" max="0.49,3,0.49"/>
+      <layers>
+        <layer id="beam_off" texture="beam">
+          <view angle="45" y="104" alpha="0"/>
+          <view angle="135" y="104" alpha="0" hm="true"/>
+          <view angle="225" y="104" alpha="0"/>
+          <view angle="315" y="104" alpha="0" hm="true"/>
+        </layer>
+        <layer id="beam_on" texture="beam">
+          <view angle="45" x="-49" y="79"/>
+          <view angle="135" col="1" x="-53" y="49"/>
+          <view angle="225" col="1" x="53" y="49" hm="true"/>
+          <view angle="315" x="51" y="81" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="beam_off"/>
+        </frame>
+        <frame id="on">
+          <layerref id="beam_on"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="on"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="cast_01" y="0.25">
+      <box min="-0.49,2.8,-0.49" max="0.49,3,0.49"/>
+      <layers>
+        <layer id="cast_off" texture="cast">
+          <view angle="45" y="104" alpha="0"/>
+          <view angle="135" y="104" alpha="0" hm="true"/>
+          <view angle="225" y="104" alpha="0"/>
+          <view angle="315" y="104" alpha="0" hm="true"/>
+        </layer>
+        <layer id="cast_on" texture="cast">
+          <view angle="45" x="-64" y="76"/>
+          <view angle="135" x="-64" y="11"/>
+          <view angle="225" x="64" y="11"/>
+          <view angle="315" x="64" y="76"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="cast_off"/>
+        </frame>
+        <frame id="on">
+          <layerref id="cast_on"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="on"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-7" y="-26"/>
+          <view angle="135" col="1" x="-7" y="-40"/>
+          <view angle="225" col="1" x="7" y="-40" hm="true"/>
+          <view angle="315" x="8" y="-26" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

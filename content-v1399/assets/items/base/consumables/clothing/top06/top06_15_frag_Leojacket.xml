@@ -1,0 +1,62 @@
+<f id="Top06_15_LeoJacket" parentId="Top06">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Top06_15TorsoBaseM" cId="Torso" s="items/base/consumables/clothing/top06/top06_15_torso_base_m.png" pri="6"/>
+      <c sId="Top06_15TorsoBaseM" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top06_15Color1" lw="N"/>
+      <s id="Top06_15TorsoDecalM" cId="Torso" s="items/base/consumables/clothing/top06/top06_15_torso_decal_m.png" pri="6"/>
+      <c sId="Top06_15TorsoDecalM" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top06_15Color2" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="Top06_15TorsoBaseF" cId="Torso" s="items/base/consumables/clothing/top06/top06_15_torso_base_f.png" pri="6"/>
+      <c sId="Top06_15TorsoBaseF" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top06_15Color1" lw="N"/>
+      <s id="Top06_15TorsoDecalF" cId="Torso" s="items/base/consumables/clothing/top06/top06_15_torso_decal_f.png" pri="6"/>
+      <c sId="Top06_15TorsoDecalF" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top06_15Color2" lw="N"/>
+    </g>
+  </b>
+  <g id="FurJacketTorso" name="LeoJacket" icon="$bm/icon_m_retro.png">
+    <s id="Top06_15ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_15_arm_idle.png" pri="6"/>
+    <s id="Top06_15ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_15_arm_walk1.png" pri="6"/>
+    <s id="Top06_15ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_15_arm_walk2.png" pri="6"/>
+    <s id="Top06_15ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_15_arm_walk3.png" pri="6"/>
+    <s id="Top06_15ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_15_arm_sit.png" pri="6"/>
+    <s id="Top06_15ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_15_arm_throw.png" pri="6"/>
+    <s id="Top06_15ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_15_arm_raise.png" pri="6"/>
+    <c sId="Top06_15ArmIdleBase" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top06_15Color1" lw="N"/>
+    <c sId="Top06_15ArmWalk1Base" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top06_15Color1" lw="N"/>
+    <c sId="Top06_15ArmWalk2Base" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top06_15Color1" lw="N"/>
+    <c sId="Top06_15ArmWalk3Base" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top06_15Color1" lw="N"/>
+    <c sId="Top06_15ArmSitBase" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top06_15Color1" lw="N"/>
+    <c sId="Top06_15ArmThrowBase" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top06_15Color1" lw="N"/>
+    <c sId="Top06_15ArmRaiseBase" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top06_15Color1" lw="N"/>
+    <s id="Top06_15ArmIdleDecal" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_15_arm_decal_idle.png" pri="6"/>
+    <s id="Top06_15ArmWalk1Decal" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_15_arm_decal_walk1.png" pri="6"/>
+    <s id="Top06_15ArmWalk2Decal" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_15_arm_decal_walk2.png" pri="6"/>
+    <s id="Top06_15ArmWalk3Decal" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_15_arm_decal_walk3.png" pri="6"/>
+    <s id="Top06_15ArmSitDecal" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_15_arm_decal_sit.png" pri="6"/>
+    <s id="Top06_15ArmThrowDecal" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_15_arm_decal_throw.png" pri="6"/>
+    <s id="Top06_15ArmRaiseDecal" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_15_arm_decal_raise.png" pri="6"/>
+    <c sId="Top06_15ArmIdleDecal" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top06_15Color2" lw="N"/>
+    <c sId="Top06_15ArmWalk1Decal" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top06_15Color2" lw="N"/>
+    <c sId="Top06_15ArmWalk2Decal" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top06_15Color2" lw="N"/>
+    <c sId="Top06_15ArmWalk3Decal" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top06_15Color2" lw="N"/>
+    <c sId="Top06_15ArmSitDecal" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top06_15Color2" lw="N"/>
+    <c sId="Top06_15ArmThrowDecal" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top06_15Color2" lw="N"/>
+    <c sId="Top06_15ArmRaiseDecal" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top06_15Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_15" icon="items/base/consumables/clothing/top06/top06_15_icon_leojacket_a.png" w="48" h="48"/>
+    <s id="IconTop06_15Base" cId="IconTop06_15" s="items/base/consumables/clothing/top06/top06_15_icon_leojacket_a.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <wizbox id="UI" uiInitScript="width=300; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top06_15Color1"/>
+    </wizbox>
+    <b id="Top06_15Color1" name="Color " desc="Choose a color" sel="Orange" seld="Orange">
+      <g id="Orange" name="Orange" icon="$bu/icon_orange.png">
+        <c id="Orange" name="Orange" icon="$bu/icon_apricot.png" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top06_15Color1"/>
+        <c id="DarkOrange" name="DarkOrange" icon="$bu/icon_orange.png" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top06_15Color2"/>
+      </g>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

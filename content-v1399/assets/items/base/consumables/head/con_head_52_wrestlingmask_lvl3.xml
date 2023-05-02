@@ -1,0 +1,47 @@
+<item.SpriteItem id="0" name="Wrestler head Level 3" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0.05,-0.3" max="0.3,0.66,0.3"/>
+  </volume>
+  <textures>
+    <texture id="level3" source="items/base/consumables/head/con_head_52_wrestlingmask_lvl3.png" cols="5" rows="1"/>
+    <texture id="Bare" source="items/base/consumables/head/con_head_52_wrestlingmask_face.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" y="0.05">
+      <box min="-0.3,0,-0.3" max="0.3,0.61,0.3"/>
+      <layers>
+        <layer id="level3" texture="level3" y="16">
+          <view angle="0" x="11" y="7" hm="true"/>
+          <view angle="45" col="1" x="-3" y="9"/>
+          <view angle="90" col="2" x="-1" y="8"/>
+          <view angle="135" col="1" x="3" y="9" hm="true"/>
+          <view angle="180" x="-11" y="7"/>
+          <view angle="225" col="3" y="3"/>
+          <view angle="270" col="4" x="1" y="7"/>
+          <view angle="315" col="3" y="3" hm="true"/>
+        </layer>
+        <layer id="Bare" texture="Bare" y="16">
+          <view angle="0" col="2" x="27" y="3" hm="true"/>
+          <view angle="45" col="1" x="13" y="10"/>
+          <view angle="90" y="8"/>
+          <view angle="135" col="1" x="-13" y="9" hm="true"/>
+          <view angle="180" col="2" x="-27" y="3"/>
+          <view angle="225" col="1" x="-2" y="2" alpha="0"/>
+          <view angle="270" col="2" y="6" alpha="0"/>
+          <view angle="315" col="1" x="2" y="2" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Bare"/>
+          <layerref id="level3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,75 @@
+<item.ChairItem id="6503" name="Trono Antigo do Sr. Charada" desc="Um trono muito almejado por todos" tags="rare,chair,misc" icon="items/base/mystery/mystery_33_icon.png" minLevel="1" minCPLevel="1" dropTargetType="floor" dropTargetList="floor,avatar" dropTargetClamp="none" price="999">
+  <seats>
+    <seat x="0.03" y="0.52">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.47,0,-0.47" max="0.47,0.92,0.47"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/mystery/mystery_33_item.png" cols="2" rows="1"/>
+    <texture id="Texture01" source="items/base/mystery/mystery_33_parts.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-0.47,0,-0.47" max="0.47,0.92,0.47"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45" col="1" x="-2" y="-77" alpha="0"/>
+          <view angle="135" x="-2" y="-74" hm="true"/>
+          <view angle="225" x="-1" y="-68" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-1" y="-74"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view angle="45" x="-20" y="-7"/>
+          <view angle="135" col="1" y="-2" alpha="0"/>
+          <view angle="225" col="1" x="-10" y="-22" hm="true"/>
+          <view angle="315" y="-3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="LeftArm">
+      <box min="-0.49,0,-0.49" max="0.49,2.05,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45" y="-74"/>
+          <view angle="135" x="2" y="-77" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-1" y="-74" hm="true"/>
+          <view angle="315" x="-1" y="-68" alpha="0"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view angle="45" alpha="0"/>
+          <view angle="135" x="18" y="-7" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" x="8" y="-22"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

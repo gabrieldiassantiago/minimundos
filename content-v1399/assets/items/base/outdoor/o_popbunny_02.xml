@@ -1,0 +1,71 @@
+<item.SpriteItem id="5076" name="Bunny Grab Two" desc="Yoink!" tags="admin,misc,magic" icon="items/base/outdoor/icon_o_popbunny_02.png" price="150" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="VisibleMarker" state="true" event="00(00)"/>
+    <action id="Invisible" state="true" event="01(01)"/>
+    <action id="VisibleBunny" state="true" event="02(02)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="3"/>
+    <entry key="00" value="00"/>
+    <entry key="01" value="01"/>
+    <entry key="02" value="02"/>
+  </data>
+  <textures>
+    <texture id="hole" source="items/base/outdoor/o_popbunny.png" cols="1" rows="1"/>
+    <texture id="bunny" source="items/base/mystery/mystery_02_hand.png" cols="5" rows="4"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0,0.49"/>
+      <layers>
+        <layer id="bunny" texture="bunny">
+          <view angle="45" y="8"/>
+          <view angle="135" y="8" hm="true"/>
+          <view angle="225" col="3" y="8"/>
+          <view angle="315" col="3" x="1" y="8" hm="true"/>
+        </layer>
+        <layer id="hole" texture="hole">
+          <view angle="45" x="1" y="24"/>
+          <view angle="135" x="1" y="24"/>
+          <view angle="225" x="1" y="24"/>
+          <view angle="315" x="1" y="24"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Visible">
+          <layerref id="hole"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="hole" a="0"/>
+        </frame>
+        <frame id="On">
+          <layerref id="hole"/>
+          <layerref id="bunny"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="8">
+          <frameref id="Visible"/>
+        </animation>
+        <animation id="01" framerate="2">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="02" framerate="8">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

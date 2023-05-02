@@ -1,0 +1,40 @@
+<f id="Bot02_11Ugg" parentId="Bot02">
+  <g id="UggBootBase" icon="$bf/icon_shoe_bootpoint.png">
+    <s id="Bot02_11IdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_11_idle.png" pri="3.1"/>
+    <s id="Bot02_11Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_11_walk1.png" pri="3.1"/>
+    <s id="Bot02_11Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_11_walk2.png" pri="3.1"/>
+    <s id="Bot02_11Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_11_walk3.png" pri="3.1"/>
+    <s id="Bot02_11Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_11_walk4.png" pri="3.1"/>
+    <s id="Bot02_11Sit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_11_sit.png" pri="3.1"/>
+    <c name="shoe" sId="Bot02_11IdleBase" c="10251579" a="0.99" b="70.2" ct="2.00" lId="Bot02_Color1" lw="N"/>
+    <c name="shoe" sId="Bot02_11Walk1Base" c="10251579" a="0.99" b="70.2" ct="2.00" lId="Bot02_Color1" lw="N"/>
+    <c name="shoe" sId="Bot02_11Walk2Base" c="10251579" a="0.99" b="70.2" ct="2.00" lId="Bot02_Color1" lw="N"/>
+    <c name="shoe" sId="Bot02_11Walk3Base" c="10251579" a="0.99" b="70.2" ct="2.00" lId="Bot02_Color1" lw="N"/>
+    <c name="shoe" sId="Bot02_11Walk4Base" c="10251579" a="0.99" b="70.2" ct="2.00" lId="Bot02_Color1" lw="N"/>
+    <c name="shoe" sId="Bot02_11Sit" c="10251579" a="0.99" b="70.2" ct="2.00" lId="Bot02_Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot02_11" w="48" h="48"/>
+    <s id="IconBot02_11Base" cId="IconBot02_11" s="items/base/consumables/clothing/bot02/bot02_11_icon.png"/>
+    <c sId="IconBot02_11Base" c="10251579" a="0.99" b="70.2" ct="2.00" lId="Bot02_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot02_11Color1" name="Color" desc="Choose a color" sel="Kaki" seld="Kaki">
+      <c id="White" icon="$bu/icon_white.png" c="13223875" a="1.00" b="90.8" ct="1.75" lId="Bot02_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="81.6" ct="1.90" lId="Bot02_Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="15898290" a="1.00" b="66.1" ct="2.00" lId="Bot02_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="14234162" a="0.86" b="70.2" ct="2.00" lId="Bot02_Color1"/>
+      <c id="BlueDark" icon="$bu/icon_medblue.png" c="2838178" a="0.79" b="65.3" ct="1.61" lId="Bot02_Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="8335484" a="1.00" b="83.9" ct="2.00" lId="Bot02_Color1"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="10915419" a="0.99" b="77.9" ct="2.00" lId="Bot02_Color1"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="12092186" a="0.99" b="74.2" ct="1.38" lId="Bot02_Color1"/>
+      <c id="Olive" icon="$bu/icon_olive.png" c="7888940" a="1.00" b="80.6" ct="1.95" lId="Bot02_Color1"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="5191945" a="0.96" b="83.0" ct="2.00" lId="Bot02_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="4013373" a="0.79" b="57.2" ct="2.00" lId="Bot02_Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot02_11Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSFeet"/>
+</f>

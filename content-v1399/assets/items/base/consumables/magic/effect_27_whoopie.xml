@@ -1,0 +1,225 @@
+<item.SpriteItem id="0" name="Whoopie FX" desc="Whoopie cushion effect" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.28,0,-0.28" max="0.28,0.06,0.28"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="fx_whoopie" source="items/base/consumables/magic/effect_27_whoopie_impact.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="fart" source="items/base/consumables/magic/sndfx_fart.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Behind">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="pop" texture="fx_whoopie" y="-35">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="pop01">
+          <layerref id="pop"/>
+        </frame>
+        <frame id="pop02">
+          <layerref id="pop" a="0.3"/>
+        </frame>
+        <frame id="pop03">
+          <layerref id="pop" a="0.1" blend="screen"/>
+        </frame>
+        <frame id="blank">
+          <layerref id="pop" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="whoopie" framerate="4" loop="false">
+          <frameref id="pop01"/>
+          <frameref id="pop02"/>
+          <frameref id="pop03"/>
+          <frameref id="blank"/>
+          <frameref id="blank"/>
+          <frameref id="blank"/>
+          <frameref id="blank"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="small_01" texture="fx_whoopie" y="-35">
+          <view col="1"/>
+        </layer>
+        <layer id="small_02" texture="fx_whoopie" y="-35">
+          <view col="1"/>
+        </layer>
+        <layer id="small_03" texture="fx_whoopie" y="-35">
+          <view col="1"/>
+        </layer>
+        <layer id="small_04" texture="fx_whoopie" y="-35">
+          <view col="1"/>
+        </layer>
+        <layer id="small_05" texture="fx_whoopie" y="-35">
+          <view col="1"/>
+        </layer>
+        <layer id="large_01" texture="fx_whoopie" y="-35">
+          <view col="2"/>
+        </layer>
+        <layer id="large_02" texture="fx_whoopie" y="-35">
+          <view col="2"/>
+        </layer>
+        <layer id="large_03" texture="fx_whoopie" y="-35">
+          <view col="2"/>
+        </layer>
+        <layer id="large_04" texture="fx_whoopie" y="-35">
+          <view col="2"/>
+        </layer>
+        <layer id="large_05" texture="fx_whoopie" y="-35">
+          <view col="2"/>
+        </layer>
+        <layer id="large_06" texture="fx_whoopie" y="-35">
+          <view col="2"/>
+        </layer>
+        <layer id="large_07" texture="fx_whoopie" y="-35">
+          <view col="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="cloud01">
+          <layerref id="small_01" x="10" y="-23" a="0.5"/>
+          <layerref id="small_02" x="-6" y="-20"/>
+          <layerref id="small_03" x="-25" y="-10" a="0.5"/>
+          <layerref id="small_04" y="10"/>
+          <layerref id="small_05" x="10" y="8" a="0.5"/>
+          <layerref id="large_01" x="9" y="3" a="0.5"/>
+          <layerref id="large_02" x="-5" y="6"/>
+          <layerref id="large_03" x="16" y="-13" a="0.5"/>
+          <layerref id="large_04" x="16" y="-13"/>
+          <layerref id="large_05" x="-22" y="-21" a="0.5"/>
+          <layerref id="large_06" x="-35" y="-5"/>
+        </frame>
+        <frame id="cloud02">
+          <layerref id="small_01" x="20" y="-23"/>
+          <layerref id="small_02" x="-12" y="-20"/>
+          <layerref id="small_03" x="-35" y="-10"/>
+          <layerref id="small_04" y="10"/>
+          <layerref id="small_05" x="20" y="8"/>
+          <layerref id="large_01" x="13" y="3"/>
+          <layerref id="large_02" x="-6" y="8"/>
+          <layerref id="large_03" x="20" y="-13"/>
+          <layerref id="large_04" x="17" y="-13"/>
+          <layerref id="large_05" x="-28" y="-21"/>
+          <layerref id="large_06" x="-40" y="-5"/>
+        </frame>
+        <frame id="cloud03">
+          <layerref id="small_01" x="20" y="-23" a="0.8"/>
+          <layerref id="small_02" x="-12" y="-20" a="0.8"/>
+          <layerref id="small_03" x="-35" y="-10" a="0.8"/>
+          <layerref id="small_04" y="10" a="0.8"/>
+          <layerref id="small_05" x="20" y="8" a="0.8"/>
+          <layerref id="large_01" x="13" y="3" a="0.8"/>
+          <layerref id="large_02" x="-6" y="8" a="0.8"/>
+          <layerref id="large_03" x="20" y="-13" a="0.8"/>
+          <layerref id="large_04" x="17" y="-13" a="0.8"/>
+          <layerref id="large_05" x="-28" y="-21" a="0.8"/>
+          <layerref id="large_06" x="-40" y="-5" a="0.8"/>
+        </frame>
+        <frame id="cloud04">
+          <layerref id="small_01" x="20" y="-23" a="0.6"/>
+          <layerref id="small_02" x="-12" y="-20" a="0.3"/>
+          <layerref id="small_03" x="-35" y="-10" a="0.6"/>
+          <layerref id="small_04" y="10" a="0.3"/>
+          <layerref id="small_05" x="20" y="8" a="0.6"/>
+          <layerref id="large_01" x="13" y="3" a="0.3"/>
+          <layerref id="large_02" x="-6" y="8" a="0.6"/>
+          <layerref id="large_03" x="20" y="-13" a="0.3"/>
+          <layerref id="large_04" x="17" y="-13" a="0.6"/>
+          <layerref id="large_05" x="-28" y="-21" a="0.3"/>
+          <layerref id="large_06" x="-40" y="-5" a="0.6"/>
+        </frame>
+        <frame id="cloud05">
+          <layerref id="small_01" x="5" y="-23" a="0.2"/>
+          <layerref id="small_02" x="-20" y="-20" a="0.2"/>
+          <layerref id="small_03" x="-40" y="-10" a="0.2"/>
+          <layerref id="small_04" y="10" a="0.2"/>
+          <layerref id="small_05" x="20" y="8" a="0.2"/>
+          <layerref id="large_01" x="13" y="3" a="0.2"/>
+          <layerref id="large_02" x="-6" y="8" a="0.2"/>
+          <layerref id="large_03" x="20" y="-13" a="0.2"/>
+          <layerref id="large_04" x="17" y="-13" a="0.2"/>
+          <layerref id="large_05" x="-28" y="-21" a="0.2"/>
+          <layerref id="large_06" x="-40" y="-5" a="0.2"/>
+        </frame>
+        <frame id="cloud06">
+          <layerref id="small_01" x="30" y="-23" a="0.1"/>
+          <layerref id="small_02" x="-20" y="-20" a="0.1"/>
+          <layerref id="small_03" x="-45" y="-10" a="0.1"/>
+          <layerref id="small_04" y="10" a="0.1"/>
+          <layerref id="small_05" x="20" y="8" a="0.1"/>
+          <layerref id="large_01" x="13" y="3" a="0.1"/>
+          <layerref id="large_02" x="-6" y="8" a="0.1"/>
+          <layerref id="large_03" x="20" y="-13" a="0.1"/>
+          <layerref id="large_04" x="17" y="-13" a="0.1"/>
+          <layerref id="large_05" x="-28" y="-21" a="0.1"/>
+          <layerref id="large_06" x="-40" y="-5" a="0.1"/>
+        </frame>
+        <frame id="cloud07">
+          <layerref id="small_01" x="30" y="-23" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="whoopie" framerate="4" loop="false">
+          <frameref id="cloud01">
+            <sample id="fart"/>
+          </frameref>
+          <frameref id="cloud02"/>
+          <frameref id="cloud03"/>
+          <frameref id="cloud04"/>
+          <frameref id="cloud04"/>
+          <frameref id="cloud05"/>
+          <frameref id="cloud06"/>
+          <frameref id="cloud07"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.8" s="1.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xa8f6a2"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xa8f6a2" a="0.7"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xa8f6a2" a="0.4"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xa8f6a2" a="0.2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Whoopie" framerate="4" loop="false">
+          <frameref id="01"/>
+          <frameref id="02" duration="2"/>
+          <frameref id="03" duration="2"/>
+          <frameref id="04" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

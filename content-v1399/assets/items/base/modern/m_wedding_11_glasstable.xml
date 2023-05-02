@@ -1,0 +1,45 @@
+<item.SpriteItem name="Mesa Gótica Halloween Tulsa" desc="Uma mesa assombrada de vidro" tags="rare,misc" icon="items/base/modern/icon_m_wedding_11_glasstable.png" price="110" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="7302">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1.1,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Table" source="items/base/modern/m_wedding_08_halloweencake_table.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="cake">
+      <box min="-0.49,0,-0.49" max="0.49,1.1,0.49"/>
+      <layers>
+        <layer id="cake" texture="cake" y="-2">
+          <view angle="45" col="1" y="-43"/>
+          <view angle="135" col="1" y="-43" hm="true"/>
+          <view angle="225" col="2" y="-43"/>
+          <view angle="315" col="2" y="-43" hm="true"/>
+        </layer>
+        <layer id="Layer" texture="Table">
+          <view angle="45" x="1" y="29"/>
+          <view angle="135" y="29" hm="true"/>
+          <view angle="225" y="29"/>
+          <view angle="315" y="29" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Layer"/>
+          <layerref id="cake"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,48 @@
+<item.SpriteItem id="0" name="candy cane" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.0875,-0.0469,-0.15" max="0.2125,0.2031,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="cane" source="items/base/consumables/edible/con_hand_candycane.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="eat" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" x="0.0625" y="-0.0469">
+      <box min="-0.15,0,-0.15" max="0.15,0.25,0.15"/>
+      <layers>
+        <layer id="cane" texture="cane">
+          <view angle="45" x="-1" y="11" hm="true"/>
+          <view angle="135" x="-1" y="11"/>
+          <view angle="225" col="2" x="-2" y="11"/>
+          <view angle="315" col="2" x="2" y="12" hm="true"/>
+          <view angle="90" col="3" x="1" y="10" hm="true"/>
+          <view angle="180" col="1" x="-1" y="10"/>
+          <view angle="270" col="3" x="1" y="9" hm="true"/>
+          <view angle="0" col="1" y="11" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="cane"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

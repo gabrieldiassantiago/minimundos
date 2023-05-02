@@ -1,0 +1,77 @@
+<item.SpriteItem id="2835" name="Gaveteiro do Banheiro de Luxo" desc="Um gaveteiro em madeira de lei." tags="table,misc" icon="items/base/modern/icon_m_bathroom_36_drawers.png" price="55" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1.11,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Closed" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Counter" source="items/base/modern/m_bathroom_36_base.png" cols="2" rows="1"/>
+    <texture id="Drawers" source="items/base/modern/m_bathroom_36_drawer.png" cols="2" rows="1"/>
+    <texture id="closed" source="items/base/modern/m_bathroom_36_closed.png" cols="2" rows="1"/>
+    <texture id="shadow" source="items/base/modern/m_bathroom_36_shadow.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,1.11,0.49"/>
+      <layers>
+        <layer id="Base" texture="Counter">
+          <view angle="45" x="-9" y="1"/>
+          <view angle="135" x="7" y="1" hm="true"/>
+          <view angle="225" col="1" x="8" y="10"/>
+          <view angle="315" col="1" x="-7" y="9" hm="true"/>
+        </layer>
+        <layer id="drawer open" texture="Drawers">
+          <view angle="45" x="19" y="-17"/>
+          <view angle="135" x="-21" y="-17" hm="true"/>
+          <view angle="225" col="1" x="-19" y="-37"/>
+          <view angle="315" col="1" x="20" y="-38" hm="true"/>
+        </layer>
+        <layer id="drawer closed" texture="closed">
+          <view angle="45" x="12" y="-40"/>
+          <view angle="135" x="-14" y="-40" hm="true"/>
+          <view angle="225" col="1" x="-15" y="-55"/>
+          <view angle="315" col="1" x="16" y="-56" hm="true"/>
+        </layer>
+        <layer id="Shadow" texture="shadow">
+          <view angle="45" x="-8" y="29"/>
+          <view angle="135" col="1" x="12" y="28" hm="true"/>
+          <view angle="225" col="1" x="9" y="39"/>
+          <view angle="315" col="1" x="-10" y="39" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Shadow"/>
+          <layerref id="Base"/>
+          <layerref id="drawer closed"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="Shadow"/>
+          <layerref id="Base"/>
+          <layerref id="drawer open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="2">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open" framerate="2">
+          <frameref id="Open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

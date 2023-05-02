@@ -1,0 +1,48 @@
+<item.SpriteItem name="Escudo Rubi Play" desc="Um belíssimo escudo (7 de 9)" tags="rare,consumable,actionbar,left_hand,usable,wear,action_holdable_toggle,nopvp" icon="items/base/consumables/clothing/accessory/acc_526_lv2shield_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="5923">
+  <volume>
+    <box min="-0.37,0,-0.37" max="0.37,1.17,0.37"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_hold" script="scripts/item/action_wearable.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="select" script="scripts/item/select_holdable_container.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+10"/>
+    <entry key="action_attributes_secondary" value="health+15,speed+15"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/accessory/acc_517_item_lv2torch_base.png" cols="1" rows="1"/>
+    <texture id="Shield" source="items/base/consumables/clothing/accessory/acc_526_lv2shield_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.37,0,-0.37" max="0.37,1.17,0.37"/>
+      <layers>
+        <layer id="base" texture="Base" y="-11">
+          <view angle="45" y="30"/>
+          <view angle="135" y="30" hm="true"/>
+          <view angle="225" y="30"/>
+          <view angle="315" y="30" hm="true"/>
+        </layer>
+        <layer id="Shield" texture="Shield" y="45">
+          <view angle="45" x="3" y="-16"/>
+          <view angle="135" x="-3" y="-16" hm="true"/>
+          <view angle="225" col="1" x="-1" y="-16" hm="true"/>
+          <view angle="315" col="1" x="1" y="-16"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations>
+        <animation id="Open" framerate="2"/>
+        <animation id="Closed"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

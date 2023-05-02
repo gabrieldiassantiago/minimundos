@@ -1,0 +1,65 @@
+<item.SpriteItem id="5386" name="Bandeira Elemento" desc="Uma bandeira que simboliza os elementos" tags="rare,misc,halloween" icon="items/base/gothic/icon_g_halloween_12_elementflag.png" price="10" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table, avatar,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="flag" source="items/base/gothic/g_halloween_12_elementflag.png" cols="3" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="nodes">
+      <box min="-0.49,0,-0.49" max="0.49,2,0.49"/>
+      <layers>
+        <layer id="flag01" texture="flag" y="100">
+          <view angle="45" y="-86"/>
+          <view angle="135" y="-86" hm="true"/>
+          <view angle="225" row="1" y="-86"/>
+          <view angle="315" row="1" y="-86" hm="true"/>
+        </layer>
+        <layer id="flag02" texture="flag" y="100">
+          <view angle="45" col="1" y="-86"/>
+          <view angle="135" col="1" y="-86" hm="true"/>
+          <view angle="225" col="1" row="1" y="-86"/>
+          <view angle="315" col="1" row="1" y="-86" hm="true"/>
+        </layer>
+        <layer id="flag03" texture="flag" y="100">
+          <view angle="45" col="2" y="-86"/>
+          <view angle="135" col="2" y="-86" hm="true"/>
+          <view angle="225" col="2" row="1" y="-86"/>
+          <view angle="315" col="2" row="1" y="-86" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="flag01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="flag02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="flag03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

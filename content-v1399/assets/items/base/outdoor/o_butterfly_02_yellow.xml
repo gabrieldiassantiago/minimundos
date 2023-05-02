@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="2869" name="Borboleta Amarela" desc="Amarela como o Sol, preciosa como o Ouro." tags="admin,misc" icon="items/base/outdoor/icon_o_butterfly_02_yellow.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,1.1,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_pick_up.as"/>
+    <event id="action" script="scripts/item/action_pick_up.as"/>
+  </events>
+  <actions>
+    <action id="Pick Up" event="action"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="singleClickNavigate" value="false"/>
+  </data>
+  <textures>
+    <texture id="powerup" source="items/base/shared/s_bigbutterfly_yellow.png" cols="4" rows="3"/>
+    <texture id="sparks" source="items/base/consumables/magic/hit_95_miniburst.png" cols="4" rows="2"/>
+    <texture id="shad" source="items/base/games/shared/s_powerup_01_shad.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="particles" source="items/base/mystery/mystery_15_sparkles.png" cols="3" rows="2"/>
+    <texture id="intense" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+    <texture id="lensflare" source="items/base/mystery/mystery_15_lensflare.png" cols="1" rows="1"/>
+    <texture id="diffuse" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="power-up" source="items/base/consumables/magic/sndfx_pickup.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="powerup">
+      <box min="-0.25,0,-0.25" max="0.25,1.1,0.25"/>
+      <layers>
+        <layer id="shad" texture="shad">
+          <view y="24"/>
+        </layer>
+        <layer id="powerup 01" texture="powerup" y="-75">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1" hm="true"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="powerup 02" texture="powerup" y="-72">
+          <view angle="45" row="1"/>
+          <view angle="135" row="1" hm="true"/>
+          <view angle="225" col="1" row="1" y="-1" hm="true"/>
+          <view angle="315" col="1" row="1" y="-1"/>
+        </layer>
+        <layer id="powerup 03" texture="powerup" y="-74">
+          <view angle="45" row="2"/>
+          <view angle="135" row="2" hm="true"/>
+          <view angle="225" col="1" row="2" y="-2" hm="true"/>
+          <view angle="315" col="1" row="2" y="-2"/>
+        </layer>
+        <layer id="sparks 01" texture="sparks" y="-80">
+          <view col="3" y="10"/>
+        </layer>
+        <layer id="sparks 02" texture="sparks" y="-80">
+          <view col="1" y="10"/>
+        </layer>
+        <layer id="sparks 03" texture="sparks" y="-80">
+          <view col="2" y="10"/>
+        </layer>
+        <layer id="sparks 04" texture="sparks" y="-80">
+          <view y="10"/>
+        </layer>
+        <layer id="sparks 05" texture="sparks" y="-80">
+          <view row="1" y="10"/>
+        </layer>
+        <layer id="sparks 06" texture="sparks" y="-80">
+          <view col="1" row="1" y="10"/>
+        </layer>
+        <layer id="sparks 07" texture="sparks" y="-80">
+          <view col="2" row="1" y="10"/>
+        </layer>
+        <layer id="sparks 08" texture="sparks" y="-80">
+          <view col="3" row="1" y="10"/>
+        </layer>
+        <layer id="Glow" texture="Light">
+          <view y="-61"/>
+        </layer>
+        <layer id="drop01" texture="particles" y="-75">
+          <view angle="45" y="10"/>
+          <view angle="135" y="10"/>
+          <view angle="225" y="19"/>
+          <view angle="315" y="18"/>
+        </layer>
+        <layer id="drop02" texture="particles" y="-75">
+          <view angle="45" col="2" y="10"/>
+          <view angle="135" col="2" y="10"/>
+          <view angle="225" col="2" y="19"/>
+          <view angle="315" col="2" y="18"/>
+        </layer>
+        <layer id="drop03" texture="particles" y="-75">
+          <view angle="45" col="1" row="1" y="10"/>
+          <view angle="135" col="1" row="1" y="10"/>
+          <view angle="225" col="1" row="1" y="19"/>
+          <view angle="315" col="1" row="1" y="18"/>
+        </layer>
+        <layer id="lens" texture="lensflare">
+          <view x="6" y="-32"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="powerup 01">
+          <layerref id="lens" color="0xf1efab" a="0.5"/>
+          <layerref id="shad" a="0.9"/>
+          <layerref id="powerup 01"/>
+          <layerref id="Glow" color="0xf5a4b3" a="0.2" blend="add"/>
+          <layerref id="drop01"/>
+        </frame>
+        <frame id="powerup 02">
+          <layerref id="lens" color="0xf1efab" a="0.5"/>
+          <layerref id="shad" a="0.9"/>
+          <layerref id="powerup 03"/>
+          <layerref id="Glow" color="0xf5a4b3" a="0.2" blend="add"/>
+          <layerref id="drop02"/>
+        </frame>
+        <frame id="powerup 03">
+          <layerref id="lens" color="0xf1efab" a="0.5"/>
+          <layerref id="shad"/>
+          <layerref id="powerup 01"/>
+          <layerref id="Glow" color="0xf5a4b3" a="0.2" blend="add"/>
+          <layerref id="drop03"/>
+        </frame>
+        <frame id="powerup 04">
+          <layerref id="lens" color="0xf1efab" a="0.5"/>
+          <layerref id="shad" a="0.9"/>
+          <layerref id="powerup 02"/>
+          <layerref id="Glow" color="0xf5a4b3" a="0.2" blend="add"/>
+          <layerref id="drop02"/>
+        </frame>
+        <frame id="show 01">
+          <layerref id="shad" a="0.2"/>
+          <layerref id="powerup 03" a="0.2"/>
+        </frame>
+        <frame id="show 02">
+          <layerref id="shad" a="0.4"/>
+          <layerref id="powerup 03" a="0.4"/>
+        </frame>
+        <frame id="show 03">
+          <layerref id="shad" a="0.7"/>
+          <layerref id="powerup 03" a="0.7"/>
+        </frame>
+        <frame id="show 04">
+          <layerref id="shad" a="0.9"/>
+          <layerref id="powerup 02" a="0.9"/>
+        </frame>
+        <frame id="blank">
+          <layerref id="powerup 01" a="0"/>
+        </frame>
+        <frame id="out 01">
+          <layerref id="shad"/>
+          <layerref id="powerup 01" color="0xffef0a" blend="add"/>
+          <layerref id="sparks 04" color="0xfcf66c" blend="add"/>
+        </frame>
+        <frame id="out 02">
+          <layerref id="shad" a="0.8"/>
+          <layerref id="powerup 01" color="0xffef0a" a="0.5" blend="add"/>
+          <layerref id="sparks 03" color="0xfcf66c" blend="add"/>
+        </frame>
+        <frame id="out 03">
+          <layerref id="shad" a="0.5"/>
+          <layerref id="powerup 01" color="0xffef0a" a="0.2" blend="add"/>
+          <layerref id="sparks 02" color="0xfcf66c" blend="add"/>
+        </frame>
+        <frame id="out 04">
+          <layerref id="sparks 01" color="0xffef0a" blend="add"/>
+        </frame>
+        <frame id="out 05">
+          <layerref id="sparks 05" color="0xffef0a" blend="add"/>
+        </frame>
+        <frame id="out 06">
+          <layerref id="sparks 06" color="0xffef0a" a="0.2" blend="add"/>
+        </frame>
+        <frame id="out 07">
+          <layerref id="sparks 07" color="0xffef0a" blend="add"/>
+        </frame>
+        <frame id="out 08">
+          <layerref id="sparks 08" color="0xffef0a" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Visible" framerate="8" syncFrames="false">
+          <frameref id="powerup 01"/>
+          <frameref id="powerup 02"/>
+          <frameref id="powerup 03"/>
+          <frameref id="powerup 04"/>
+        </animation>
+        <animation id="Invisible" framerate="4" loop="false" syncFrames="false">
+          <frameref id="blank"/>
+        </animation>
+        <animation id="Show" framerate="8" loop="false" syncFrames="false">
+          <frameref id="blank"/>
+          <frameref id="show 01"/>
+          <frameref id="show 02"/>
+          <frameref id="show 03"/>
+          <frameref id="show 04"/>
+        </animation>
+        <animation id="Hide" framerate="8" loop="false" syncFrames="false">
+          <frameref id="out 01">
+            <sample id="power-up"/>
+          </frameref>
+          <frameref id="out 02"/>
+          <frameref id="out 03"/>
+          <frameref id="out 04"/>
+          <frameref id="out 05"/>
+          <frameref id="out 06"/>
+          <frameref id="out 07"/>
+          <frameref id="out 08"/>
+          <frameref id="blank"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="-0.04" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="light" texture="diffuse" align="middle" y="-20">
+          <view x="-1" y="-33"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="light" color="0xece887"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="light" color="0xece887" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Visible" framerate="9">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Invisible" framerate="9">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Show" framerate="9">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Hide" framerate="9">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

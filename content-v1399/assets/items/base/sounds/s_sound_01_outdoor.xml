@@ -1,0 +1,107 @@
+<item.SpriteItem id="2646" name="Sons Externos" desc="Sons Externos" tags="floor,sounds" icon="items/base/sounds/icon_s_sound_01_outdoor.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="125">
+  <volume>
+    <box min="-0.48,-0.001,-0.48" max="0.48,0,0.48"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="items/base/sounds/action_sound.as"/>
+    <event id="select" script="items/base/sounds/select_sound.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="items/base/sounds/toggle_sound.as"/>
+    <event id="cycle" script="items/base/sounds/cycle_sound.as"/>
+    <event id="update" script="items/base/sounds/update_sound.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Urban On" state="true" event="animate(On_01)"/>
+    <action id="Urban Off" state="true" event="animate(Off_01)"/>
+    <action id="Rural On" state="true" event="animate(On_02)"/>
+    <action id="Rural Off" state="true" event="animate(Off_02)"/>
+    <action id="Waves On" state="true" event="animate(On_03)"/>
+    <action id="Waves Off" state="true" event="animate(Off_03)"/>
+    <action id="Swamp On" state="true" event="animate(On_04)"/>
+    <action id="Swamp Off" state="true" event="animate(Off_04)"/>
+  </actions>
+  <navigate usableRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="updatePeriod" value="1000"/>
+    <entry key="count" value="4"/>
+    <entry key="01" value="Urban"/>
+    <entry key="02" value="Rural"/>
+    <entry key="03" value="Waves"/>
+    <entry key="04" value="Swamp"/>
+  </data>
+  <textures>
+    <texture id="spawn" source="items/base/sounds/s_sound_01_outdoor.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="FrogsA" source="items/base/sounds/o_sound_frogs_swamp.mp3" group="Ambient"/>
+    <sound id="FrogsB" source="items/base/sounds/o_sound_frogs_swamp_02.mp3" group="Ambient"/>
+    <sound id="FrogsC" source="items/base/sounds/o_sound_frogs_swamp_03.mp3" group="Ambient"/>
+    <sound id="FrogsChorus" source="items/base/sounds/o_frog_chorus_01.mp3" group="Ambient"/>
+    <sound id="Waves" source="items/base/sounds/o_sound_waves.mp3" group="Ambient"/>
+    <sound id="Urban" source="items/base/sounds/o_sound_urban.mp3" group="Ambient"/>
+    <sound id="Farm" source="items/base/sounds/o_sound_country.mp3" group="Ambient"/>
+    <sound id="Rooster" source="items/base/sounds/o_sound_rooster.mp3" group="Ambient"/>
+    <sound id="Horn" source="items/base/sounds/o_sound_horn.mp3" group="Ambient"/>
+  </sounds>
+  <nodes>
+    <node id="Spawn" s="0.7" layer="surface">
+      <box min="-0.48,-0.001,-0.48" max="0.48,0,0.48"/>
+      <layers>
+        <layer id="spawn" texture="spawn">
+          <view x="-1" y="27"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="spawn"/>
+        </frame>
+        <frame id="FrameOff">
+          <layerref id="spawn" color="0x9ed0f2" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off_01">
+          <frameref id="FrameOff"/>
+        </animation>
+        <animation id="Off_02">
+          <frameref id="FrameOff"/>
+        </animation>
+        <animation id="Off_03">
+          <frameref id="FrameOff"/>
+        </animation>
+        <animation id="Off_04">
+          <frameref id="FrameOff"/>
+        </animation>
+        <animation id="On_01">
+          <frameref id="Frame">
+            <sample id="Urban" vol="0.2" attn="40" loops="-1"/>
+            <sample id="Horn" loops="1" pr="0.2" dr="3"/>
+          </frameref>
+        </animation>
+        <animation id="On_02">
+          <frameref id="Frame">
+            <sample id="Rooster" loops="1" pr="0.2" dr="2"/>
+            <sample id="Farm" vol="0.4" attn="40" loops="-1"/>
+          </frameref>
+        </animation>
+        <animation id="On_03" framerate="2">
+          <frameref id="Frame">
+            <sample id="Waves" vol="0.4" attn="40" loops="-1"/>
+          </frameref>
+        </animation>
+        <animation id="On_04">
+          <frameref id="Frame">
+            <sample id="FrogsChorus" vol="0.25" attn="50" loops="-1"/>
+            <sample id="FrogsA" pr="0.1" dr="2"/>
+            <sample id="FrogsB" pr="0.1" dr="2"/>
+            <sample id="FrogsC" pr="0.1" dr="2"/>
+          </frameref>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

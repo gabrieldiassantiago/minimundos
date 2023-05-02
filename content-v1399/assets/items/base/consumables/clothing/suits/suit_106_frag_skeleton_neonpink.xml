@@ -1,0 +1,84 @@
+<f id="Neon_Pink_Skeleton" parentId="Suits">
+  <g id="SkeletonSuit">
+    <c id="SkeletonTorsoColorMaster" sId="SkeletonTorso" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor"/>
+    <c id="SkeletonBottomColorMaster" sId="FurryHandIdleBase" c="16733626" a="1.00" b="43.1" ct="0.66" lId="SkeletonBottomColor"/>
+    <s id="SkeletonTorso" cId="Torso" s="items/base/consumables/clothing/suits/suit_105_torso.png" pri="1"/>
+    <g id="SkeletonLegs" name="SkeletonLegs" icon="items/base/consumables/clothing/suits/icon_legs_trouser.png">
+      <s id="SkeletonPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_105_leg_idle.png"/>
+      <s id="SkeletonPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_105_leg_walk1.png"/>
+      <s id="SkeletonPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_105_leg_walk2.png"/>
+      <s id="SkeletonPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_105_leg_walk3.png"/>
+      <s id="SkeletonPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_105_leg_walk4.png"/>
+      <s id="SkeletonSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_105_sit.png"/>
+      <s id="SkeletonSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_105_sit.png"/>
+      <c sId="SkeletonPantIdleBase" c="16733626" a="1.00" b="43.1" ct="0.66" lId="SkeletonBottomColor" lw="N"/>
+      <c sId="SkeletonPantWalk1Base" c="16733626" a="1.00" b="43.1" ct="0.66" lId="SkeletonBottomColor" lw="N"/>
+      <c sId="SkeletonPantWalk2Base" c="16733626" a="1.00" b="43.1" ct="0.66" lId="SkeletonBottomColor" lw="N"/>
+      <c sId="SkeletonPantWalk3Base" c="16733626" a="1.00" b="43.1" ct="0.66" lId="SkeletonBottomColor" lw="N"/>
+      <c sId="SkeletonPantWalk4Base" c="16733626" a="1.00" b="43.1" ct="0.66" lId="SkeletonBottomColor" lw="N"/>
+      <c sId="SkeletonSitUpperBase" c="16733626" a="1.00" b="43.1" ct="0.66" lId="SkeletonBottomColor" lw="N"/>
+      <c sId="SkeletonSitLowerBase" c="16733626" a="1.00" b="43.1" ct="0.66" lId="SkeletonBottomColor" lw="N"/>
+    </g>
+    <g id="SkeletonArms" icon="$bm/icon_m_retro.png">
+      <s id="SkeletonArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_105_arm_idle.png" pri="1"/>
+      <s id="SkeletonArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_105_arm_walk1.png" pri="1"/>
+      <s id="SkeletonArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_105_arm_walk2.png" pri="1"/>
+      <s id="SkeletonArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_105_arm_walk3.png" pri="1"/>
+      <s id="SkeletonArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_105_arm_sit.png" pri="1"/>
+      <c sId="SkeletonArmIdleBase" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkeletonArmWalk1Base" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkeletonArmWalk2Base" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkeletonArmWalk3Base" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkeletonArmSitBase" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <s id="SkeletonArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_105_arm_throw.png" pri="1"/>
+      <s id="SkeletonArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_105_arm_raise.png" pri="1"/>
+      <c sId="SkeletonArmRaiseBase" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkeletonArmThrowBase" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <s id="SkeletonHandIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_105_hand_idle.png" pri="3"/>
+      <s id="SkeletonHandWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_105_hand_walk1.png" pri="3"/>
+      <s id="SkeletonHandWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_105_hand_walk2.png" pri="3"/>
+      <s id="SkeletonHandWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_105_hand_walk3.png" pri="3"/>
+      <s id="SkeletonHandSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_105_hand_sit_arm.png" pri="3"/>
+      <c sId="SkeletonHandIdleBase" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkeletonHandWalk1Base" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkeletonHandWalk2Base" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkeletonHandWalk3Base" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <s id="SkelHandWave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_105_hand_raise_wave1.png" pri="1"/>
+      <s id="SkelHandWave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_105_hand_raise_wave2.png" pri="1"/>
+      <s id="SkelHandHold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_105_hand_throw_hold.png"/>
+      <s id="SkelHandOpen" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_105_hand_throw_open.png" pri="1"/>
+      <s id="SkelHandPoint" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_105_hand_throw_point.png" pri="1"/>
+      <s id="SkelHandStop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_105_hand_throw_stop.png" pri="1"/>
+      <s id="SkelHandThrow" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_105_hand_throw_throw.png" pri="1"/>
+      <s id="SkelHandThumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_105_hand_throw_thumbs.png" pri="1"/>
+      <c sId="SkeletonHandSitBase" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkelHandWave1" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkelHandWave2" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkelHandHold" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkelHandOpen" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkelHandPoint" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkelHandStop" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkelHandThumbs" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+      <c sId="SkelHandThrow" c="16733626" a="1.00" b="46.6" ct="0.82" lId="SkeletonJacketColor" lw="N"/>
+    </g>
+  </g>
+  <g id="Icon">
+    <t id="Icon_PinkSkeleton" icon="items/base/consumables/clothing/suits/suit_106_pinkskeleton_icon.png" w="48" h="48"/>
+    <s id="Icon_PinkSkeleton_suit" cId="Icon_PinkSkeleton" s="items/base/consumables/clothing/suits/suit_106_pinkskeleton_icon.png"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+  <ds id="Top06"/>
+</f>

@@ -1,0 +1,129 @@
+<item.SpriteItem id="3059" name="Relógio Cuco" desc="Um relógio Cuco de parede. Cucooo-cucoo!" tags="rare,misc,wall,kudos" icon="items/base/antique/icon_a_collect_24_cuckooclock.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,-0.75,-0.45" max="0.4,1.1,0.45"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="clock" source="items/base/antique/a_collect_24_cuckooclock.png" cols="1" rows="1"/>
+    <texture id="bird" source="items/base/antique/a_collect_24_cuckooclock_bird.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="cuckoo" source="items/base/antique/snfx_cuckoo.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="clock">
+      <box min="0,-0.75,-0.45" max="0.4,1.1,0.45"/>
+      <layers>
+        <layer id="Bird00" texture="bird">
+          <view angle="45" x="34" y="-28" hm="true"/>
+          <view angle="135" x="-35" y="-27"/>
+          <view angle="225" y="-91" alpha="0"/>
+          <view angle="315" y="-91" alpha="0"/>
+        </layer>
+        <layer id="Bird01" texture="bird">
+          <view angle="45" col="1" x="34" y="-28" hm="true"/>
+          <view angle="135" col="1" x="-35" y="-27"/>
+          <view angle="225" col="1" y="-91" alpha="0"/>
+          <view angle="315" col="1" y="-91" alpha="0"/>
+        </layer>
+        <layer id="Bird02" texture="bird">
+          <view angle="45" col="2" x="34" y="-28" hm="true"/>
+          <view angle="135" col="2" x="-35" y="-27"/>
+          <view angle="225" row="1" y="-91" alpha="0"/>
+          <view angle="315" row="1" y="-91" alpha="0"/>
+        </layer>
+        <layer id="Bird03" texture="bird">
+          <view angle="45" col="3" x="34" y="-28" hm="true"/>
+          <view angle="135" col="3" x="-35" y="-27"/>
+          <view angle="225" col="1" row="1" y="-91" alpha="0"/>
+          <view angle="315" col="1" row="1" y="-91" alpha="0"/>
+        </layer>
+        <layer id="Bird04" texture="bird">
+          <view angle="45" col="4" x="34" y="-28" hm="true"/>
+          <view angle="135" col="4" x="-35" y="-27"/>
+          <view angle="225" col="1" row="1" y="-91" alpha="0"/>
+          <view angle="315" col="1" row="1" y="-91" alpha="0"/>
+        </layer>
+        <layer id="clock" texture="clock">
+          <view angle="45" x="10" y="86" hm="true"/>
+          <view angle="135" x="-11" y="87"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="clock"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="clock"/>
+          <layerref id="Bird00"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="clock"/>
+          <layerref id="Bird04"/>
+          <layerref id="Bird01"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="clock"/>
+          <layerref id="Bird04"/>
+          <layerref id="Bird02"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="clock"/>
+          <layerref id="Bird04"/>
+          <layerref id="Bird03"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="clock"/>
+          <layerref id="Bird04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="On" framerate="8" loop="false">
+          <frameref id="Frame06" duration="2"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03" duration="5"/>
+          <frameref id="Frame04">
+            <sample id="cuckoo" vol="0.7"/>
+          </frameref>
+          <frameref id="Frame05"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03" duration="3"/>
+          <frameref id="Frame04">
+            <sample id="cuckoo"/>
+          </frameref>
+          <frameref id="Frame05"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03" duration="3"/>
+          <frameref id="Frame04">
+            <sample id="cuckoo"/>
+          </frameref>
+          <frameref id="Frame05"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03" duration="5"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame06"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

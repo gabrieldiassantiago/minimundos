@@ -1,0 +1,50 @@
+<item.SpriteItem name="Butterfly Bush Spell" desc="A small leafy plant" tags="head,admin,bubble,admin,plant" icon="items/base/outdoor/o_butterflyspell_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" id="5770">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1,0.49"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="action_attributes_secondary" value="speed-50"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="bush" source="items/base/outdoor/o_butterflyspell_item.png" cols="1" rows="1"/>
+    <texture id="bee" source="items/base/outdoor/o_bee_01.png" cols="5" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="bush">
+      <box min="-0.49,0,-0.49" max="0.49,1,0.49"/>
+      <layers>
+        <layer id="bush" texture="bush">
+          <view angle="45" y="30"/>
+          <view angle="135" y="30" hm="true"/>
+          <view angle="225" y="30"/>
+          <view angle="315" y="30" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="bush">
+          <layerref id="bush"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2" loop="false">
+          <frameref id="bush"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncFrames="false"/>
+        <animation id="Out" framerate="4" loop="false" syncFrames="false">
+          <frameref id="bush"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

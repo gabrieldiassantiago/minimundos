@@ -1,0 +1,25 @@
+<f id="Top06_100_halloween" parentId="Top06">
+  <b id="Gender" sel="Male">
+    <g id="Male" name="Male" icon="$bf/icon_legs_longskirt.png">
+      <s id="Top06_100TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_100_halloween_torso_m.png" pri="6"/>
+    </g>
+    <g id="Female" name="Female" icon="$bf/icon_legs_longskirt.png">
+      <s id="Top06_100TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_100_halloween_torso_f.png" pri="6"/>
+    </g>
+  </b>
+  <g id="Arm" name="Arm" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_100ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_100_idle.png" pri="6"/>
+    <s id="Top06_100ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_100_walk1.png" pri="6"/>
+    <s id="Top06_100ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_100_walk2.png" pri="6"/>
+    <s id="Top06_100ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_100_walk3.png" pri="6"/>
+    <s id="Top06_100ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_100_sit.png" pri="6"/>
+    <s id="Top06_100ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_100_throw.png" pri="6"/>
+    <s id="Top06_100ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_100_raise.png" pri="6"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_100" icon="items/base/consumables/clothing/top06/top06_100_halloween_icon.png" w="48" h="48"/>
+    <s id="IconTop06_100Rare" cId="IconTop06_100" s="items/base/consumables/clothing/top01/top01_rare.png" pri="1.1" vis="false"/>
+    <s id="IconTop06_100Base" cId="IconTop06_100" s="items/base/consumables/clothing/top06/top06_100_halloween_icon.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

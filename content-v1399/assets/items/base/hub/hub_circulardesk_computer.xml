@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="1755" name="Information Counter Computer" desc="A circular counter with computer" tags="admin,hub" icon="items/base/hub/icon_hub_circulardesk.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,1.15,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Counter" source="items/base/hub/hub_circulardesk.png" cols="2" rows="1"/>
+    <texture id="computer" source="items/base/hub/hub_circulardesk_computer.png" cols="1" rows="2"/>
+    <texture id="keyboard" source="items/base/hub/hub_circulardesk_computer_kbd.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" z="0.5">
+      <box min="-0.4,0,-0.99" max="0.4,1.15,0.99"/>
+      <layers>
+        <layer id="Layer" texture="Counter">
+          <view angle="45" x="19" y="70"/>
+          <view angle="135" x="-23" y="70" hm="true"/>
+          <view angle="225" col="1" x="8" y="64" hm="true"/>
+          <view angle="315" col="1" x="-12" y="64"/>
+        </layer>
+        <layer id="Layer01" texture="computer">
+          <view angle="45" x="-24" y="-46" hm="true"/>
+          <view angle="135" x="2" y="-50"/>
+          <view angle="225" row="1" x="21" y="-22" hm="true"/>
+          <view angle="315" row="1" x="-2" y="-15"/>
+        </layer>
+        <layer id="Layer02" texture="keyboard">
+          <view angle="45" x="-24" y="-46" alpha="0" hm="true"/>
+          <view angle="135" x="2" y="-50" alpha="0"/>
+          <view angle="225" x="61" y="-22" hm="true"/>
+          <view angle="315" x="6" y="15"/>
+        </layer>
+        <layer id="Layer03" texture="keyboard">
+          <view angle="45" x="-24" y="-46" alpha="0" hm="true"/>
+          <view angle="135" x="2" y="-50" alpha="0"/>
+          <view angle="225" x="8" y="5" hm="true"/>
+          <view angle="315" x="-47" y="-11"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

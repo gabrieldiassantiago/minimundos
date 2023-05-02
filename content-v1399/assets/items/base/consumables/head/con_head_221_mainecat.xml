@@ -1,0 +1,132 @@
+<item.SpriteItem id="0" name="Persian Cat" desc="Collectible (April 2013)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="cat" source="items/base/consumables/head/con_head_221_mainecat.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_221_mainecat_blink.png" cols="3" rows="1"/>
+    <texture id="lick" source="items/base/consumables/head/con_head_221_mainecat_lick.png" cols="3" rows="4"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="cat" texture="cat">
+          <view angle="0" col="2" x="-4" y="21"/>
+          <view angle="45" x="5" y="23"/>
+          <view angle="90" col="1" y="25"/>
+          <view angle="135" x="-6" y="23" hm="true"/>
+          <view angle="180" col="2" x="4" y="21" hm="true"/>
+          <view angle="225" col="3" x="1" y="18" hm="true"/>
+          <view angle="270" col="4" y="22"/>
+          <view angle="315" col="3" x="-2" y="18"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="19" y="8"/>
+          <view angle="45" x="9" y="7"/>
+          <view angle="90" col="1" x="-1" y="11"/>
+          <view angle="135" x="-11" y="7" hm="true"/>
+          <view angle="180" col="2" x="-20" y="8" hm="true"/>
+          <view angle="225" col="3" x="1" y="20" alpha="0" hm="true"/>
+          <view angle="270" col="4" y="22" alpha="0"/>
+          <view angle="315" col="3" x="-2" y="20" alpha="0"/>
+        </layer>
+        <layer id="lick_01" texture="lick">
+          <view angle="0" col="2" x="23" y="8"/>
+          <view angle="45" x="14" y="12"/>
+          <view angle="90" col="1" x="-3" y="16"/>
+          <view angle="135" x="-16" y="12" hm="true"/>
+          <view angle="180" col="1" x="-24" y="8" hm="true"/>
+          <view angle="225" col="2" x="1" y="20" alpha="0" hm="true"/>
+          <view angle="270" col="2" y="22" alpha="0"/>
+          <view angle="315" col="2" x="-2" y="20" alpha="0"/>
+        </layer>
+        <layer id="lick_02" texture="lick">
+          <view angle="0" col="2" row="1" x="23" y="8"/>
+          <view angle="45" row="1" x="14" y="12"/>
+          <view angle="90" col="1" row="1" x="-3" y="16"/>
+          <view angle="135" row="1" x="-16" y="12" hm="true"/>
+          <view angle="180" col="1" row="1" x="-24" y="8" hm="true"/>
+          <view angle="225" col="2" row="1" x="1" y="20" alpha="0" hm="true"/>
+          <view angle="270" col="2" row="1" y="22" alpha="0"/>
+          <view angle="315" col="2" row="1" x="-2" y="20" alpha="0"/>
+        </layer>
+        <layer id="lick_03" texture="lick">
+          <view angle="0" col="2" row="2" x="23" y="8"/>
+          <view angle="45" row="2" x="14" y="12"/>
+          <view angle="90" col="1" row="2" x="-3" y="16"/>
+          <view angle="135" row="2" x="-16" y="12" hm="true"/>
+          <view angle="180" col="1" row="2" x="-24" y="8" hm="true"/>
+          <view angle="225" col="2" row="2" x="1" y="20" alpha="0" hm="true"/>
+          <view angle="270" col="2" row="2" y="22" alpha="0"/>
+          <view angle="315" col="2" row="2" x="-2" y="20" alpha="0"/>
+        </layer>
+        <layer id="lick_04" texture="lick">
+          <view angle="0" col="2" row="3" x="23" y="8"/>
+          <view angle="45" row="3" x="14" y="12"/>
+          <view angle="90" col="1" row="3" x="-3" y="16"/>
+          <view angle="135" row="3" x="-16" y="12" hm="true"/>
+          <view angle="180" col="1" row="3" x="-24" y="8" hm="true"/>
+          <view angle="225" col="2" row="3" x="1" y="20" alpha="0" hm="true"/>
+          <view angle="270" col="2" row="3" y="22" alpha="0"/>
+          <view angle="315" col="2" row="3" x="-2" y="20" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="cat"/>
+        </frame>
+        <frame id="blink">
+          <layerref id="cat"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="lick_01">
+          <layerref id="cat"/>
+          <layerref id="lick_01"/>
+        </frame>
+        <frame id="lick_02">
+          <layerref id="cat"/>
+          <layerref id="lick_02"/>
+        </frame>
+        <frame id="lick_03">
+          <layerref id="cat"/>
+          <layerref id="lick_03"/>
+        </frame>
+        <frame id="lick_04">
+          <layerref id="cat"/>
+          <layerref id="lick_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="10"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="20"/>
+          <frameref id="blink"/>
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="10"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="20"/>
+          <frameref id="blink"/>
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="10"/>
+          <frameref id="blink"/>
+          <frameref id="lick_01"/>
+          <frameref id="lick_02"/>
+          <frameref id="lick_03"/>
+          <frameref id="lick_04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

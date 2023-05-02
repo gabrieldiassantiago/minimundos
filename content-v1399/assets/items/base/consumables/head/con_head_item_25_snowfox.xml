@@ -1,0 +1,42 @@
+<item.SpriteItem desc="O primeiro item colecionável do MiniMundos, tão raro como tirar férias no Pólo Norte." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/head/icon_con_head_item_25_snowfox.png" id="1344" name="Traje de Raposa Branca" tags="rare,consumable,actionbar,wear,head,costume,animal,collectible,action_wearable_toggle" price="2000" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.36,0.69,0.35" min="-0.36,0,-0.35"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="shadow+10"/>
+    <entry key="action_attributes_secondary" value="speed+20,health+20"/>
+  </data>
+  <textures>
+    <texture cols="5" id="fox" rows="1" source="items/base/consumables/head/con_head_25_snowfox.png"/>
+    <texture cols="1" id="tail" rows="1" source="items/base/consumables/back/con_bak_item_09_snowfox.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.36,0.69,0.35" min="-0.36,0,-0.35"/>
+      <layers>
+        <layer id="tail" texture="tail" y="3">
+          <view angle="45" y="28"/>
+          <view angle="135" hm="true" y="28"/>
+          <view angle="225" y="28"/>
+          <view angle="315" hm="true" y="28"/>
+        </layer>
+        <layer id="fox" texture="fox">
+          <view angle="45" col="1" x="-1" y="4"/>
+          <view angle="135" col="1" hm="true" x="1" y="4"/>
+          <view angle="225" col="3" y="7"/>
+          <view angle="315" col="3" hm="true" y="7"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

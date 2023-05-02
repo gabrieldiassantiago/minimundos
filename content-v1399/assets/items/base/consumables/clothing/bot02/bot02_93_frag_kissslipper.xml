@@ -1,0 +1,29 @@
+<f id="Bot02_93KissSlipper" parentId="Bot02">
+  <g id="Slipper_Base" name="Slipper_Base" icon="$bm/icon_shoe_standard.png">
+    <s id="Bot02_93Idle" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_93_idle.png" pri="2"/>
+    <s id="Bot02_93Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_93_walk1.png" pri="2"/>
+    <s id="Bot02_93Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_93_walk2.png" pri="2"/>
+    <s id="Bot02_93Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_93_walk3.png" pri="2"/>
+    <s id="Bot02_93Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_93_walk4.png" pri="2"/>
+    <s id="Bot02_93SitBase" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_93_sit.png" pri="2"/>
+  </g>
+  <g id="NoShoe" name="Bare feet" icon="$bu/icon_shoe_foot.png">
+    <s id="JumpFootIdleBase" cId="LegIdle" s="$bu/foot_idle.png" pri="0.5"/>
+    <s id="JumpWalk1Base" cId="LegWalk1" s="$bu/foot_walk1.png" pri="0.5"/>
+    <s id="JumpWalk2Base" cId="LegWalk2" s="$bu/foot_walk2.png" pri="0.5"/>
+    <s id="JumpWalk3Base" cId="LegWalk3" s="$bu/foot_walk3.png" pri="0.5"/>
+    <s id="JumpWalk4Base" cId="LegWalk4" s="$bu/foot_walk4.png" pri="0.5"/>
+    <s id="JumpSit" cId="LegSitLower" s="$bu/foot_sit.png" pri="0.5"/>
+    <c sId="JumpFootIdleBase" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="JumpWalk1Base" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="JumpWalk2Base" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="JumpWalk3Base" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="JumpWalk4Base" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="JumpSit" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot02_93" icon="items/base/consumables/clothing/bot02/bot02_93_kissslipper_icon.png" w="48" h="48"/>
+    <s id="IconBot02_93Base" cId="IconBot02_93" s="items/base/consumables/clothing/bot02/bot02_93_kissslipper_icon.png"/>
+  </g>
+  <ds id="JSFeet"/>
+</f>

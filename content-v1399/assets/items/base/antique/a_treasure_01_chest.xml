@@ -1,0 +1,139 @@
+<item.SpriteItem id="1036" name="Arca do Tesouro" desc="Você não imagina quanto ouro tem dentro" tags="misc" icon="items/base/antique/icon_a_treasure_01_chest.png" minLevel="1" dropTargetType="none" dropTargetList="floor, table, avatar,avatar" dropTargetClamp="none" minCPLevel="1" price="75">
+  <volume>
+    <box min="-0.28,0,-0.4" max="0.28,0.5,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="lock" source="items/base/antique/a_treasure_01_chestlock.png" cols="1" rows="1"/>
+    <texture id="chest" source="items/base/antique/a_treasure_01_chest.png" cols="1" rows="1"/>
+    <texture id="hatch" source="items/base/antique/a_treasure_01_chesttop.png" cols="3" rows="1"/>
+    <texture id="jewel" source="items/base/antique/a_treasure_01_jewel.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_pool.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Chest">
+      <box min="-0.28,0,-0.4" max="0.28,0.5,0.4"/>
+      <layers>
+        <layer id="chest" texture="chest">
+          <view angle="45" y="29"/>
+          <view angle="135" y="29" hm="true"/>
+          <view angle="225" y="29"/>
+          <view angle="315" y="29" hm="true"/>
+        </layer>
+        <layer id="lock" texture="lock">
+          <view angle="45" x="18" y="6"/>
+          <view angle="135" x="-18" y="6" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="hatch close" texture="hatch">
+          <view angle="45" y="-3"/>
+          <view angle="135" y="-3" hm="true"/>
+          <view angle="225" y="-3"/>
+          <view angle="315" y="-3" hm="true"/>
+        </layer>
+        <layer id="hatch open" texture="hatch">
+          <view angle="45" col="1" y="-3"/>
+          <view angle="135" col="1" y="-3" hm="true"/>
+          <view angle="225" col="2" x="1" y="-3"/>
+          <view angle="315" col="2" x="-1" y="-3" hm="true"/>
+        </layer>
+        <layer id="jewel" texture="jewel">
+          <view angle="45" x="4" y="11"/>
+          <view angle="135" col="1" x="-9" y="5"/>
+          <view angle="225" y="29" alpha="0"/>
+          <view angle="315" y="29" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="closed">
+          <layerref id="chest"/>
+          <layerref id="lock"/>
+          <layerref id="hatch close"/>
+        </frame>
+        <frame id="open">
+          <layerref id="chest"/>
+          <layerref id="jewel"/>
+          <layerref id="lock"/>
+          <layerref id="hatch open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="1.7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="2" y="-12"/>
+          <view angle="135" x="3" y="-12" hm="true"/>
+          <view angle="225" y="-17"/>
+          <view angle="315" x="3" y="-16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf9f8db"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.0938" s="1.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="4" y="-7"/>
+          <view angle="135" y="-7" hm="true"/>
+          <view angle="225" x="-1" y="-8" alpha="0"/>
+          <view angle="315" x="1" y="-9" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Light" a="0"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="Light" color="0xe7c95c" a="0.33"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="Open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

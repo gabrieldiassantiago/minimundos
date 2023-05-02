@@ -1,0 +1,35 @@
+<item.SpriteItem id="6546" name="Trevo da Sorte" desc="Obrigado por jogar MiniMundos" tags="rare,consumable,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_743_clover_icon.png" price="1" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.3,0.07,0.2"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="nature+5,speed+5"/>
+  </data>
+  <textures>
+    <texture id="clover" source="items/base/consumables/clothing/accessory/acc_743_clover_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.2,0,-0.2" max="0.3,0.07,0.2"/>
+      <layers>
+        <layer id="clover" texture="clover">
+          <view angle="45" y="17"/>
+          <view angle="135" y="17" hm="true"/>
+          <view angle="225" col="1" y="17"/>
+          <view angle="315" col="1" y="17" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

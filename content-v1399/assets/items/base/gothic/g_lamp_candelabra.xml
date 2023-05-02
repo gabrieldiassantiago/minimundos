@@ -1,0 +1,241 @@
+<item.SpriteItem id="354" name="Candelábro Gótico" desc="Para iluminar seus momentos de paz." tags="light" icon="items/base/gothic/icon_g_lamp_candelabra.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="40" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,2.07,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Candelabra" source="items/base/gothic/g_lamp_candelabra.png" cols="1" rows="1"/>
+    <texture id="Flame" source="items/base/shared/s_candle_flame.png" cols="2" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Candelabre">
+      <box min="-0.4,0,-0.4" max="0.4,1.85,0.4"/>
+      <layers>
+        <layer id="Candelabra" texture="Candelabra">
+          <view angle="45" y="14"/>
+          <view angle="135" x="-1" y="14" hm="true"/>
+          <view angle="225" y="14"/>
+          <view angle="315" x="-1" y="14" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Flames" y="1.85">
+      <box min="-0.38,0,-0.38" max="0.38,0.22,0.38"/>
+      <layers>
+        <layer id="Flame1" type="group">
+          <layer id="Flame01" texture="Flame">
+            <view angle="45" x="24" y="32"/>
+            <view angle="135" x="-21" y="31"/>
+            <view angle="225" x="-23" y="8"/>
+            <view angle="315" x="25" y="8"/>
+          </layer>
+          <layer id="Flame02" texture="Flame">
+            <view angle="45" col="1" x="24" y="32"/>
+            <view angle="135" col="1" x="-21" y="31"/>
+            <view angle="225" col="1" x="-23" y="8"/>
+            <view angle="315" col="1" x="25" y="8"/>
+          </layer>
+          <layer id="Flame03" texture="Flame">
+            <view angle="45" row="1" x="24" y="32"/>
+            <view angle="135" row="1" x="-21" y="31"/>
+            <view angle="225" row="1" x="-23" y="8"/>
+            <view angle="315" row="1" x="25" y="8"/>
+          </layer>
+          <layer id="Flame04" texture="Flame">
+            <view angle="45" col="1" row="1" x="24" y="32"/>
+            <view angle="135" col="1" row="1" x="-21" y="31"/>
+            <view angle="225" col="1" row="1" x="-23" y="8"/>
+            <view angle="315" col="1" row="1" x="25" y="8"/>
+          </layer>
+        </layer>
+        <layer id="Flame2" type="group">
+          <layer id="Flame05" texture="Flame">
+            <view angle="45" col="1" x="2" y="9"/>
+            <view angle="135" col="1" y="9"/>
+            <view angle="225" col="1" x="2" y="9"/>
+            <view angle="315" col="1" y="9"/>
+          </layer>
+          <layer id="Flame06" texture="Flame">
+            <view angle="45" row="1" x="2" y="9"/>
+            <view angle="135" row="1" y="9"/>
+            <view angle="225" row="1" x="2" y="9"/>
+            <view angle="315" row="1" y="9"/>
+          </layer>
+          <layer id="Flame07" texture="Flame">
+            <view angle="45" col="1" row="1" x="2" y="9"/>
+            <view angle="135" col="1" row="1" y="9"/>
+            <view angle="225" col="1" row="1" x="2" y="9"/>
+            <view angle="315" col="1" row="1" y="9"/>
+          </layer>
+          <layer id="Flame08" texture="Flame">
+            <view angle="45" x="2" y="9"/>
+            <view angle="135" y="9"/>
+            <view angle="225" x="2" y="9"/>
+            <view angle="315" y="9"/>
+          </layer>
+        </layer>
+        <layer id="Flame3" type="group">
+          <layer id="Flame09" texture="Flame">
+            <view angle="45" row="1" x="-23" y="8"/>
+            <view angle="135" row="1" x="25" y="8"/>
+            <view angle="225" row="1" x="23" y="31"/>
+            <view angle="315" row="1" x="-21" y="31"/>
+          </layer>
+          <layer id="Flame10" texture="Flame">
+            <view angle="45" col="1" row="1" x="-23" y="8"/>
+            <view angle="135" col="1" row="1" x="25" y="8"/>
+            <view angle="225" col="1" row="1" x="23" y="31"/>
+            <view angle="315" col="1" row="1" x="-21" y="31"/>
+          </layer>
+          <layer id="Flame11" texture="Flame">
+            <view angle="45" x="-23" y="8"/>
+            <view angle="135" x="25" y="8"/>
+            <view angle="225" x="23" y="31"/>
+            <view angle="315" x="-21" y="31"/>
+          </layer>
+          <layer id="Flame12" texture="Flame">
+            <view angle="45" col="1" x="-23" y="8"/>
+            <view angle="135" col="1" x="25" y="8"/>
+            <view angle="225" col="1" x="23" y="31"/>
+            <view angle="315" col="1" x="-21" y="31"/>
+          </layer>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Flame01"/>
+          <layerref id="Flame05"/>
+          <layerref id="Flame09"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Flame02"/>
+          <layerref id="Flame06"/>
+          <layerref id="Flame10"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Flame03"/>
+          <layerref id="Flame07"/>
+          <layerref id="Flame11"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Flame04"/>
+          <layerref id="Flame08"/>
+          <layerref id="Flame12"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Flame01" a="0"/>
+          <layerref id="Flame05" a="0"/>
+          <layerref id="Flame09" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Frame05"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.8" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xffd2ae"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xffd2ae" a="0.97"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xffd2ae" a="0.95"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame03" duration="2"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="2.01" s="1.1" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light a" texture="Intense" align="middle">
+          <view angle="45" x="-20" y="-1"/>
+          <view angle="135" x="24" y="-5"/>
+          <view angle="225" x="-20" y="-1"/>
+          <view angle="315" x="24" y="-5"/>
+        </layer>
+        <layer id="Light b" texture="Intense" align="middle">
+          <view angle="45" x="22" y="13"/>
+          <view angle="135" x="-19" y="12"/>
+          <view angle="225" x="23" y="13"/>
+          <view angle="315" x="-21" y="14"/>
+        </layer>
+        <layer id="Light c" texture="Intense" align="middle">
+          <view angle="45"/>
+          <view angle="135" x="-1"/>
+          <view angle="225"/>
+          <view angle="315" x="-1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light a" a="0.33"/>
+          <layerref id="Light b" a="0.33"/>
+          <layerref id="Light c" a="0.33"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light a" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

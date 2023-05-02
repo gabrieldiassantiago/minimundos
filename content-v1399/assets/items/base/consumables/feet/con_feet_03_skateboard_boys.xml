@@ -1,0 +1,50 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_03_skateboard_boys_main.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="board" texture="base">
+          <view angle="0" col="2" x="10" y="26"/>
+          <view angle="45" x="9" y="36"/>
+          <view angle="90" col="1" y="41"/>
+          <view angle="135" x="-8" y="33" hm="true"/>
+          <view angle="180" col="2" x="-8" y="26"/>
+          <view angle="225" y="29"/>
+          <view angle="270" col="1" y="32"/>
+          <view angle="315" x="1" y="31" hm="true"/>
+        </layer>
+        <layer id="sit" texture="base">
+          <view angle="45" x="4" y="26" alpha="0" hm="true"/>
+          <view angle="135" x="-5" y="33" alpha="0"/>
+          <view angle="225" x="-5" y="23" alpha="0" hm="true"/>
+          <view angle="315" x="15" y="19" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="board"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

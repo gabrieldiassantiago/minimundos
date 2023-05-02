@@ -1,0 +1,236 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="Cloud" source="items/base/consumables/surfaces/sur_12_carpet_surface.png" cols="3" rows="3"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_circle_floor.png" cols="1" rows="1"/>
+    <texture id="roll" source="items/base/consumables/surfaces/sur_12_carpet_roll_surface.png" cols="4" rows="2"/>
+    <texture id="flash" source="items/base/consumables/surfaces/sur_12_carpet_flash_surface.png" cols="1" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/surfaces/sur_12_carpet_shadow_surface.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Diffuse" x="-0.245" y="-0.0312" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="light" texture="light">
+          <view angle="0" x="25" y="45" hm="true"/>
+          <view angle="45" x="16" y="50"/>
+          <view angle="90" y="53"/>
+          <view angle="135" x="-16" y="50" hm="true"/>
+          <view angle="180" x="-19" y="45"/>
+          <view angle="225" x="-16" y="37"/>
+          <view angle="270" y="34"/>
+          <view angle="315" x="16" y="37" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="on">
+          <layerref id="light" color="0xf5f9e0"/>
+        </frame>
+        <frame id="off">
+          <layerref id="light" color="0xf7fae6" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="7">
+          <frameref id="off" duration="5"/>
+          <frameref id="on"/>
+          <frameref id="off"/>
+          <frameref id="on"/>
+          <frameref id="off"/>
+          <frameref id="on"/>
+          <frameref id="off" duration="5"/>
+          <frameref id="on"/>
+          <frameref id="off"/>
+          <frameref id="on"/>
+          <frameref id="off" duration="3"/>
+          <frameref id="on"/>
+          <frameref id="on"/>
+          <frameref id="off"/>
+          <frameref id="on"/>
+        </animation>
+        <animation id="Walk">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="carpet_01" texture="Cloud">
+          <view angle="0" col="2" x="5" y="40"/>
+          <view angle="45" x="8" y="44"/>
+          <view angle="90" col="1" y="52"/>
+          <view angle="135" x="-8" y="44" hm="true"/>
+          <view angle="180" col="2" x="-5" y="40" hm="true"/>
+          <view angle="225" x="-7" y="34" hm="true" vm="true"/>
+          <view angle="270" col="1" y="37" vm="true"/>
+          <view angle="315" x="7" y="34" vm="true"/>
+        </layer>
+        <layer id="carpet_02" texture="Cloud">
+          <view angle="0" col="2" row="1" x="5" y="40"/>
+          <view angle="45" row="1" x="8" y="44"/>
+          <view angle="90" col="1" row="1" y="52"/>
+          <view angle="135" row="1" x="-8" y="44" hm="true"/>
+          <view angle="180" col="2" row="1" x="-5" y="40" hm="true"/>
+          <view angle="225" row="1" x="-7" y="34" hm="true" vm="true"/>
+          <view angle="270" col="1" row="1" y="37" vm="true"/>
+          <view angle="315" row="1" x="7" y="34" vm="true"/>
+        </layer>
+        <layer id="carpet_03" texture="Cloud">
+          <view angle="0" col="2" row="2" x="5" y="40"/>
+          <view angle="45" row="2" x="8" y="44"/>
+          <view angle="90" col="1" row="2" y="52"/>
+          <view angle="135" row="2" x="-8" y="44" hm="true"/>
+          <view angle="180" col="2" row="2" x="-5" y="40" hm="true"/>
+          <view angle="225" row="2" x="-7" y="34" hm="true" vm="true"/>
+          <view angle="270" col="1" row="2" y="37" vm="true"/>
+          <view angle="315" row="2" x="7" y="34" vm="true"/>
+        </layer>
+        <layer id="roll_01" texture="roll">
+          <view angle="0" col="2" x="51" y="31"/>
+          <view angle="45" col="1" x="47" y="50"/>
+          <view angle="90" y="70"/>
+          <view angle="135" col="1" x="-47" y="50" hm="true"/>
+          <view angle="180" col="2" x="-51" y="31" hm="true"/>
+          <view angle="225" col="3" x="-48" y="5" hm="true"/>
+          <view angle="270"/>
+          <view angle="315" col="3" x="48" y="5"/>
+        </layer>
+        <layer id="roll_02" texture="roll">
+          <view angle="0" col="2" row="1" x="51" y="31"/>
+          <view angle="45" col="1" row="1" x="47" y="50"/>
+          <view angle="90" row="1" y="70"/>
+          <view angle="135" col="1" row="1" x="-47" y="50" hm="true"/>
+          <view angle="180" col="2" row="1" x="-51" y="31" hm="true"/>
+          <view angle="225" col="3" row="1" x="-48" y="5" hm="true"/>
+          <view angle="270" row="1"/>
+          <view angle="315" col="3" row="1" x="48" y="5"/>
+        </layer>
+        <layer id="flash_01" texture="flash">
+          <view x="16" y="37"/>
+        </layer>
+        <layer id="flash_02" texture="flash">
+          <view x="14" y="65"/>
+        </layer>
+        <layer id="flash_03" texture="flash">
+          <view x="26" y="52"/>
+        </layer>
+        <layer id="flash_04" texture="flash">
+          <view x="-33" y="41"/>
+        </layer>
+        <layer id="flash_05" texture="flash">
+          <view x="-23" y="56"/>
+        </layer>
+        <layer id="shadow_01" texture="shadow">
+          <view x="-21" y="60" hm="true"/>
+        </layer>
+        <layer id="shadow_02" texture="shadow">
+          <view x="-20" y="28"/>
+        </layer>
+        <layer id="shadow_03" texture="shadow">
+          <view x="-41" y="47"/>
+        </layer>
+        <layer id="shadow_04" texture="shadow">
+          <view x="40" y="55"/>
+        </layer>
+        <layer id="shadow_05" texture="shadow">
+          <view x="29" y="35"/>
+        </layer>
+        <layer id="shadow_06" texture="shadow">
+          <view x="-10" y="23"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle_01">
+          <layerref id="carpet_03"/>
+          <layerref id="carpet_01"/>
+          <layerref id="roll_01"/>
+        </frame>
+        <frame id="Idle_02">
+          <layerref id="carpet_03"/>
+          <layerref id="carpet_01" a="0.75"/>
+          <layerref id="roll_01" a="0.75"/>
+        </frame>
+        <frame id="Idle_03">
+          <layerref id="carpet_03"/>
+          <layerref id="carpet_01" a="0.5"/>
+          <layerref id="roll_01" a="0.5"/>
+        </frame>
+        <frame id="Idle_04">
+          <layerref id="carpet_03"/>
+          <layerref id="carpet_01" a="0.25"/>
+          <layerref id="roll_01" a="0.25"/>
+        </frame>
+        <frame id="Idle_05">
+          <layerref id="carpet_03"/>
+          <layerref id="carpet_01" a="0"/>
+          <layerref id="roll_01" a="0"/>
+        </frame>
+        <frame id="Walk_01">
+          <layerref id="carpet_02"/>
+          <layerref id="roll_01"/>
+        </frame>
+        <frame id="Walk_02">
+          <layerref id="carpet_02"/>
+          <layerref id="roll_02"/>
+        </frame>
+        <frame id="flash_01">
+          <layerref id="carpet_03"/>
+          <layerref id="shadow_01" a="0.25"/>
+          <layerref id="flash_01" a="0.5"/>
+        </frame>
+        <frame id="flash_02">
+          <layerref id="carpet_03"/>
+          <layerref id="shadow_02" a="0.35"/>
+          <layerref id="flash_02" a="0.7"/>
+        </frame>
+        <frame id="flash_03">
+          <layerref id="carpet_03"/>
+          <layerref id="shadow_03" a="0.5"/>
+          <layerref id="flash_03"/>
+        </frame>
+        <frame id="flash_04">
+          <layerref id="carpet_03"/>
+          <layerref id="shadow_04" a="0.35"/>
+          <layerref id="flash_04" a="0.7"/>
+        </frame>
+        <frame id="flash_05">
+          <layerref id="carpet_03"/>
+          <layerref id="shadow_05" a="0.5"/>
+          <layerref id="flash_05"/>
+        </frame>
+        <frame id="flash_06">
+          <layerref id="carpet_03"/>
+          <layerref id="shadow_06" a="0.3"/>
+          <layerref id="flash_05" a="0.5"/>
+          <layerref id="flash_03" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="7">
+          <frameref id="Idle_05" duration="5"/>
+          <frameref id="flash_01"/>
+          <frameref id="Idle_05"/>
+          <frameref id="flash_02"/>
+          <frameref id="Idle_05"/>
+          <frameref id="flash_03"/>
+          <frameref id="Idle_05" duration="5"/>
+          <frameref id="flash_04"/>
+          <frameref id="Idle_05"/>
+          <frameref id="flash_01"/>
+          <frameref id="Idle_05" duration="3"/>
+          <frameref id="flash_05"/>
+          <frameref id="flash_06"/>
+          <frameref id="Idle_05"/>
+          <frameref id="flash_02"/>
+        </animation>
+        <animation id="Walk">
+          <frameref id="Walk_01"/>
+          <frameref id="Walk_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

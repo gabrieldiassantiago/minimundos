@@ -1,0 +1,310 @@
+<item.SpriteItem id="6391" name="Árvore de Natal do Sr. Charada" desc="Uma árvore de Natal mecânica construida pelo Sr. Charada" tags="rare,misc" icon="items/base/mystery/mystery_32_icon.png" price="999" minLevel="1" minCPLevel="1" dropTargetType="floor" dropTargetList="floor,avatar,table" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-1.2" max="1.3,1.6,0.2"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="Tree" source="items/base/mystery/mystery_32_item.png" cols="1" rows="1"/>
+    <texture id="Sparkle" source="items/base/consumables/clothing/accessory/acc_sparkle.png" cols="3" rows="1"/>
+    <texture id="Texture" source="items/base/consumables/surfaces/sur_10_refraction_surface.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Diffuse01" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="Texture" align="middle">
+          <view angle="45" x="1" y="9"/>
+          <view angle="135" x="-31"/>
+          <view angle="225" y="-17"/>
+          <view angle="315" x="34" y="-5"/>
+        </layer>
+        <layer id="Light02" texture="Texture" align="middle">
+          <view angle="45" col="1" x="1" y="9"/>
+          <view angle="135" col="1" x="-31"/>
+          <view angle="225" col="1" y="-17"/>
+          <view angle="315" col="1" x="34" y="-5"/>
+        </layer>
+        <layer id="Light03" texture="Texture" align="middle">
+          <view angle="45" col="2" x="1" y="9"/>
+          <view angle="135" col="2" x="-31"/>
+          <view angle="225" col="2" y="-17"/>
+          <view angle="315" col="2" x="34" y="-5"/>
+        </layer>
+        <layer id="Light04" texture="Texture" align="middle">
+          <view angle="45" col="3" x="1" y="9"/>
+          <view angle="135" col="3" x="-31"/>
+          <view angle="225" col="3" y="-17"/>
+          <view angle="315" col="3" x="34" y="-5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="sparkle">
+          <layerref id="Light01" a="0.5"/>
+        </frame>
+        <frame id="sparkle01">
+          <layerref id="Light02" a="0.5"/>
+        </frame>
+        <frame id="sparkle02">
+          <layerref id="Light03" a="0.5"/>
+        </frame>
+        <frame id="sparkle03">
+          <layerref id="Light04" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="sparkle"/>
+          <frameref id="sparkle01"/>
+          <frameref id="sparkle02"/>
+          <frameref id="sparkle03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Lightning Lamp" x="0.5" z="-0.5">
+      <box min="-0.8,0,-0.7" max="0.8,1.6,0.7"/>
+      <layers>
+        <layer id="tree" texture="Tree" y="-61">
+          <view x="-6" y="118"/>
+        </layer>
+        <layer id="reflect_01" texture="Sparkle">
+          <view x="-60" y="-80"/>
+        </layer>
+        <layer id="reflect_02" texture="Sparkle">
+          <view col="1" x="-60" y="-80"/>
+        </layer>
+        <layer id="reflect_03" texture="Sparkle">
+          <view col="2" x="-60" y="-80"/>
+        </layer>
+        <layer id="reflect_04" texture="Sparkle">
+          <view col="1" x="-60" y="-80" hm="true"/>
+        </layer>
+        <layer id="reflect_05" texture="Sparkle">
+          <view x="-60" y="-80" hm="true"/>
+        </layer>
+        <layer id="reflect_a" texture="Sparkle">
+          <view x="5" y="-260"/>
+        </layer>
+        <layer id="reflect_b" texture="Sparkle">
+          <view col="1" x="5" y="-260"/>
+        </layer>
+        <layer id="reflect_c" texture="Sparkle">
+          <view col="2" x="5" y="-260"/>
+        </layer>
+        <layer id="reflect_d" texture="Sparkle">
+          <view col="1" x="5" y="-260" hm="true"/>
+        </layer>
+        <layer id="reflect_e" texture="Sparkle">
+          <view x="5" y="-260" hm="true"/>
+        </layer>
+        <layer id="reflect_06" texture="Sparkle">
+          <view x="20" y="-105"/>
+        </layer>
+        <layer id="reflect_07" texture="Sparkle">
+          <view col="1" x="20" y="-105"/>
+        </layer>
+        <layer id="reflect_08" texture="Sparkle">
+          <view col="2" x="20" y="-105"/>
+        </layer>
+        <layer id="reflect_09" texture="Sparkle">
+          <view col="1" x="20" y="-105" hm="true"/>
+        </layer>
+        <layer id="reflect_10" texture="Sparkle">
+          <view x="20" y="-105" hm="true"/>
+        </layer>
+        <layer id="reflect_f" texture="Sparkle">
+          <view x="-5" y="-5"/>
+        </layer>
+        <layer id="reflect_g" texture="Sparkle">
+          <view col="1" x="-5" y="-5"/>
+        </layer>
+        <layer id="reflect_h" texture="Sparkle">
+          <view col="2" x="-5" y="-5"/>
+        </layer>
+        <layer id="reflect_i" texture="Sparkle">
+          <view col="1" x="-5" y="-5" hm="true"/>
+        </layer>
+        <layer id="reflect_j" texture="Sparkle">
+          <view x="-5" y="-5" hm="true"/>
+        </layer>
+        <layer id="reflect_11" texture="Sparkle">
+          <view x="50" y="-45"/>
+        </layer>
+        <layer id="reflect_12" texture="Sparkle">
+          <view col="1" x="50" y="-45"/>
+        </layer>
+        <layer id="reflect_13" texture="Sparkle">
+          <view col="2" x="50" y="-45"/>
+        </layer>
+        <layer id="reflect_14" texture="Sparkle">
+          <view col="1" x="50" y="-45" hm="true"/>
+        </layer>
+        <layer id="reflect_15" texture="Sparkle">
+          <view x="50" y="-45" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Tree">
+          <layerref id="tree"/>
+        </frame>
+        <frame id="Frame_01">
+          <layerref id="tree"/>
+          <layerref id="reflect_01"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="tree"/>
+          <layerref id="reflect_02"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="tree"/>
+          <layerref id="reflect_03"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="tree"/>
+          <layerref id="reflect_04"/>
+        </frame>
+        <frame id="Frame_05">
+          <layerref id="tree"/>
+          <layerref id="reflect_05"/>
+        </frame>
+        <frame id="Frame_a">
+          <layerref id="tree"/>
+          <layerref id="reflect_a"/>
+        </frame>
+        <frame id="Frame_b">
+          <layerref id="tree"/>
+          <layerref id="reflect_b"/>
+        </frame>
+        <frame id="Frame_c">
+          <layerref id="tree"/>
+          <layerref id="reflect_c"/>
+        </frame>
+        <frame id="Frame_d">
+          <layerref id="tree"/>
+          <layerref id="reflect_d"/>
+        </frame>
+        <frame id="Frame_e">
+          <layerref id="tree"/>
+          <layerref id="reflect_e"/>
+        </frame>
+        <frame id="Frame_06">
+          <layerref id="tree"/>
+          <layerref id="reflect_06"/>
+        </frame>
+        <frame id="Frame_07">
+          <layerref id="tree"/>
+          <layerref id="reflect_07"/>
+        </frame>
+        <frame id="Frame_08">
+          <layerref id="tree"/>
+          <layerref id="reflect_08"/>
+        </frame>
+        <frame id="Frame_09">
+          <layerref id="tree"/>
+          <layerref id="reflect_09"/>
+        </frame>
+        <frame id="Frame_10">
+          <layerref id="tree"/>
+          <layerref id="reflect_10"/>
+        </frame>
+        <frame id="Frame_f">
+          <layerref id="tree"/>
+          <layerref id="reflect_f"/>
+        </frame>
+        <frame id="Frame_g">
+          <layerref id="tree"/>
+          <layerref id="reflect_g"/>
+        </frame>
+        <frame id="Frame_h">
+          <layerref id="tree"/>
+          <layerref id="reflect_h"/>
+        </frame>
+        <frame id="Frame_i">
+          <layerref id="tree"/>
+          <layerref id="reflect_i"/>
+        </frame>
+        <frame id="Frame_j">
+          <layerref id="tree"/>
+          <layerref id="reflect_j"/>
+        </frame>
+        <frame id="Frame_11">
+          <layerref id="tree"/>
+          <layerref id="reflect_11"/>
+        </frame>
+        <frame id="Frame_12">
+          <layerref id="tree"/>
+          <layerref id="reflect_12"/>
+        </frame>
+        <frame id="Frame_13">
+          <layerref id="tree"/>
+          <layerref id="reflect_13"/>
+        </frame>
+        <frame id="Frame_14">
+          <layerref id="tree"/>
+          <layerref id="reflect_14"/>
+        </frame>
+        <frame id="Frame_15">
+          <layerref id="tree"/>
+          <layerref id="reflect_15"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="15">
+          <frameref id="Tree" duration="20"/>
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+          <frameref id="Frame_05"/>
+          <frameref id="Frame_a"/>
+          <frameref id="Frame_b"/>
+          <frameref id="Frame_c"/>
+          <frameref id="Frame_d"/>
+          <frameref id="Frame_e"/>
+          <frameref id="Tree" duration="30"/>
+          <frameref id="Frame_06"/>
+          <frameref id="Frame_07"/>
+          <frameref id="Frame_08"/>
+          <frameref id="Frame_09"/>
+          <frameref id="Frame_10"/>
+          <frameref id="Frame_f"/>
+          <frameref id="Frame_g"/>
+          <frameref id="Frame_h"/>
+          <frameref id="Frame_i"/>
+          <frameref id="Frame_j"/>
+          <frameref id="Tree" duration="10"/>
+          <frameref id="Frame_a"/>
+          <frameref id="Frame_b"/>
+          <frameref id="Frame_c"/>
+          <frameref id="Frame_d"/>
+          <frameref id="Frame_e"/>
+          <frameref id="Tree" duration="30"/>
+          <frameref id="Frame_11"/>
+          <frameref id="Frame_12"/>
+          <frameref id="Frame_13"/>
+          <frameref id="Frame_14"/>
+          <frameref id="Frame_15"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Tree" align="middle">
+          <view angle="45" x="-4" y="-85"/>
+          <view angle="135" x="-67" y="-114"/>
+          <view angle="225" x="-4" y="-149"/>
+          <view angle="315" x="60" y="-118"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="sparkle">
+          <layerref id="Light" a="0.75"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

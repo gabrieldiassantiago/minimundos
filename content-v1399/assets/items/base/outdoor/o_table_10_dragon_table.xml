@@ -1,0 +1,47 @@
+<item.SpriteItem id="6885" name="Mesa Dragão Tulsa" desc="Estilo e elegância para você" tags="rare,table" icon="items/base/outdoor/icon_o_table_10_dragon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1.49,0,-1.48" max="1.48,1,1.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="TableBase" source="items/base/outdoor/o_table_10_dragon_table.png" cols="2" rows="1"/>
+    <texture id="TableGlass" source="items/base/outdoor/o_table_10_dragon_glass.png" cols="1" rows="1"/>
+    <texture id="TableShadow" source="items/base/outdoor/o_table_10_dragon_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Table">
+      <box min="-1.49,0,-1.48" max="1.48,1,1.48"/>
+      <layers>
+        <layer id="table" texture="TableBase">
+          <view angle="45" x="-8" y="43"/>
+          <view angle="135" x="8" y="43" hm="true"/>
+          <view angle="225" col="1" x="21" y="41"/>
+          <view angle="315" col="1" x="-21" y="41" hm="true"/>
+        </layer>
+        <layer id="Glass" texture="TableGlass">
+          <view angle="45" y="35"/>
+          <view angle="135" y="35"/>
+          <view angle="225" y="35"/>
+          <view angle="315" y="35"/>
+        </layer>
+        <layer id="Shadow" texture="TableShadow">
+          <view angle="45" y="73" alpha="0.75"/>
+          <view angle="135" y="73" alpha="0.75"/>
+          <view angle="225" y="73" alpha="0.75"/>
+          <view angle="315" y="73" alpha="0.75"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Shadow"/>
+          <layerref id="table"/>
+          <layerref id="Glass"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

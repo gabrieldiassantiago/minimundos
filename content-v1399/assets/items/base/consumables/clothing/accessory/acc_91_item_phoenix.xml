@@ -1,0 +1,43 @@
+<item.SpriteItem id="3838" name="Mochila Fófi Fênix" desc="Uma mochila fofa de fênix." tags="craftable4,craftable_sewing,back,consumable,wear,actionbar,clothing,action_wearable_toggle,market" icon="items/base/consumables/clothing/accessory/acc_91_icon_phoenix.png" price="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2962,0,-0.2962" max="0.3346,0.2,0.2962"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="ingredient_1" value="2390"/>
+    <entry key="ingredient_2" value="3818"/>
+    <entry key="ingredient_3" value="2387"/>
+    <entry key="ingredient_quantity_1" value="2"/>
+    <entry key="ingredient_quantity_2" value="1"/>
+    <entry key="ingredient_quantity_3" value="4"/>
+    <entry key="product_quantity" value="1"/>
+    <entry key="xp_level_required" value="115"/>
+    <entry key="xp_rewarded" value="1000"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/accessory/acc_frag_red_strap.xml"/>
+  </data>
+  <textures>
+    <texture id="hat" source="items/base/consumables/clothing/accessory/acc_91_item_phoenix.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2962,0,-0.2962" max="0.3346,0.2,0.2962"/>
+      <layers>
+        <layer id="hat" texture="hat">
+          <view angle="45" x="-4" y="22"/>
+          <view angle="135" x="4" y="22" hm="true"/>
+          <view angle="225" col="1" x="5" y="31"/>
+          <view angle="315" col="1" x="-5" y="31" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

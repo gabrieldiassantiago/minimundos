@@ -1,0 +1,36 @@
+<item.SpriteItem desc="Abençoadas com proteção." dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" icon="items/base/consumables/back/icon_con_bak_item_02_awings_l2.png" id="1132" name="Asas de Anjo" tags="consumable,actionbar,wear,back,action_wearable_toggle" price="6000" minLevel="40" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.25,0.5,0.25" min="-0.25,0,-0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+10"/>
+    <entry key="action_attributes_secondary" value="speed+20,health+40"/>
+  </data>
+  <textures>
+    <texture cols="1" id="awings_level2" rows="1" source="items/base/consumables/back/con_bak_item_02_awings_l2.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.25,0.5,0.25" min="-0.25,0,-0.25"/>
+      <layers>
+        <layer id="awings_level1" texture="awings_level2">
+          <view angle="45" x="5" y="21"/>
+          <view angle="135" hm="true" x="-4" y="20"/>
+          <view angle="225" x="5" y="21"/>
+          <view angle="315" hm="true" x="-4" y="20"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

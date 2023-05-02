@@ -1,0 +1,40 @@
+<item.SpriteItem id="6789" name="Escudo Protetor" desc="Use senhas únicas e difíceis de adivinhar" tags="consumable,actionbar,left_hand,usable,wear,action_holdable_toggle,nopvp" icon="items/base/consumables/clothing/accessory/acc_796_pshield_icon.png" price="25" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" tokens="250">
+  <volume>
+    <box min="-0.1,0,-0.2" max="0.1,0.5,0.2"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_hold" script="scripts/item/action_wearable.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="select" script="scripts/item/select_holdable_container.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+10,health+10"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/accessory/acc_796_pshield_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.1,0,-0.2" max="0.1,0.5,0.2"/>
+      <layers>
+        <layer id="base" texture="Base" y="-11">
+          <view angle="45" y="21"/>
+          <view angle="135" y="21" hm="true"/>
+          <view angle="225" col="1" y="21"/>
+          <view angle="315" col="1" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations>
+        <animation id="Open" framerate="2"/>
+        <animation id="Closed"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

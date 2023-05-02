@@ -1,0 +1,161 @@
+<item.SpriteItem id="0" name="Battle Dragon Wings" desc="A pair of wings" icon="items/base/consumables/back/con_bak_270_fantasymonthwings_icon.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="WingsMain" source="items/base/consumables/back/con_bak_272_battledragon_blue.png" cols="3" rows="5"/>
+    <texture id="WingsSit" source="items/base/consumables/back/con_bak_272_battledragon_sit_blue.png" cols="2" rows="1"/>
+    <texture id="GroundFX" source="items/base/consumables/back/con_bak_272_battledragon_groundfx_blue.png" cols="2" rows="2"/>
+    <texture id="SmokeFX" source="items/base/consumables/back/con_bak_272_battledragon_smokefx_blue.png" cols="2" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="Wingframe1a" texture="WingsMain">
+          <view angle="0" x="1" y="89"/>
+          <view angle="45" row="1" x="-16" y="86"/>
+          <view angle="90" row="2" x="-47" y="68"/>
+          <view angle="135" row="1" x="16" y="86" hm="true"/>
+          <view angle="180" x="-1" y="89" hm="true"/>
+          <view angle="225" row="4" x="20" y="98" hm="true"/>
+          <view angle="270" row="3" x="115" y="80"/>
+          <view angle="315" row="4" x="-20" y="98"/>
+        </layer>
+        <layer id="Wingframe1b" texture="WingsMain">
+          <view angle="0" x="1" y="89" alpha="0"/>
+          <view angle="45" row="1" x="-16" y="86" alpha="0"/>
+          <view angle="90" row="2" x="47" y="68" hm="true"/>
+          <view angle="135" row="1" x="16" y="86" alpha="0" hm="true"/>
+          <view angle="180" x="-1" y="89" alpha="0" hm="true"/>
+          <view angle="225" row="4" x="20" y="98" alpha="0" hm="true"/>
+          <view angle="270" row="3" x="-115" y="80" hm="true"/>
+          <view angle="315" row="4" x="-20" y="98" alpha="0"/>
+        </layer>
+        <layer id="Wingframe2a" texture="WingsMain">
+          <view angle="0" col="1" x="-22" y="39"/>
+          <view angle="45" col="1" row="1" x="-26" y="56"/>
+          <view angle="90" col="1" row="2" x="-28" y="46"/>
+          <view angle="135" col="1" row="1" x="26" y="56" hm="true"/>
+          <view angle="180" col="1" x="22" y="39" hm="true"/>
+          <view angle="225" col="1" row="4" x="30" y="60" hm="true"/>
+          <view angle="270" col="1" row="3" x="41" y="65"/>
+          <view angle="315" col="1" row="4" x="-30" y="60"/>
+        </layer>
+        <layer id="Wingframe2b" texture="WingsMain">
+          <view angle="0" col="1" x="-22" y="39" alpha="0"/>
+          <view angle="45" col="1" row="1" x="-26" y="56" alpha="0"/>
+          <view angle="90" col="1" row="2" x="28" y="46" hm="true"/>
+          <view angle="135" col="1" row="1" x="26" y="56" alpha="0" hm="true"/>
+          <view angle="180" col="1" x="22" y="39" alpha="0" hm="true"/>
+          <view angle="225" col="1" row="4" x="30" y="60" alpha="0" hm="true"/>
+          <view angle="270" col="1" row="3" x="-41" y="65" hm="true"/>
+          <view angle="315" col="1" row="4" x="-30" y="60" alpha="0"/>
+        </layer>
+        <layer id="Wingframe3a" texture="WingsMain">
+          <view angle="0" col="2" x="39" y="147"/>
+          <view angle="45" col="2" row="1" x="43" y="163"/>
+          <view angle="90" col="2" row="2" x="-54" y="149"/>
+          <view angle="135" col="2" row="1" x="-43" y="163" hm="true"/>
+          <view angle="180" col="2" x="-39" y="147" hm="true"/>
+          <view angle="225" col="2" row="4" x="-40" y="120" hm="true"/>
+          <view angle="270" col="2" row="3" x="58" y="113"/>
+          <view angle="315" col="2" row="4" x="40" y="120"/>
+        </layer>
+        <layer id="Wingframe3b" texture="WingsMain">
+          <view angle="0" col="2" x="39" y="147" alpha="0"/>
+          <view angle="45" col="2" row="1" x="43" y="163" alpha="0"/>
+          <view angle="90" col="2" row="2" x="54" y="149" hm="true"/>
+          <view angle="135" col="2" row="1" x="-43" y="163" alpha="0" hm="true"/>
+          <view angle="180" col="2" x="-39" y="147" alpha="0" hm="true"/>
+          <view angle="225" col="2" row="4" x="-40" y="120" alpha="0" hm="true"/>
+          <view angle="270" col="2" row="3" x="-58" y="113" hm="true"/>
+          <view angle="315" col="2" row="4" x="40" y="120" alpha="0"/>
+        </layer>
+        <layer id="Sit" texture="WingsSit">
+          <view angle="45" x="-5" y="59"/>
+          <view angle="135" x="5" y="59" hm="true"/>
+          <view angle="225" col="1" x="18" y="72"/>
+          <view angle="315" col="1" x="-18" y="72" hm="true"/>
+        </layer>
+        <layer id="GroundFX01" texture="GroundFX">
+          <view y="146"/>
+        </layer>
+        <layer id="GroundFX02" texture="GroundFX">
+          <view col="1" y="146"/>
+        </layer>
+        <layer id="GroundFX03" texture="GroundFX">
+          <view row="1" y="146"/>
+        </layer>
+        <layer id="GroundFX04" texture="GroundFX">
+          <view col="1" row="1" y="146"/>
+        </layer>
+        <layer id="SmokeFX01A" texture="SmokeFX">
+          <view x="-24" y="113"/>
+        </layer>
+        <layer id="SmokeFX02A" texture="SmokeFX">
+          <view col="1" x="-24" y="113"/>
+        </layer>
+        <layer id="SmokeFX03A" texture="SmokeFX">
+          <view row="1" x="-24" y="113"/>
+        </layer>
+        <layer id="SmokeFX04A" texture="SmokeFX">
+          <view row="1" x="-24" y="113"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="GroundFX02" color="0xbfbfbf" a="0.75"/>
+          <layerref id="SmokeFX03A" a="0"/>
+          <layerref id="SmokeFX02A" a="0.35"/>
+          <layerref id="Wingframe1a"/>
+          <layerref id="Wingframe1b"/>
+        </frame>
+        <frame id="02">
+          <layerref id="GroundFX01" color="0xbfbfbf" a="0.75"/>
+          <layerref id="SmokeFX04A" a="0.15"/>
+          <layerref id="SmokeFX01A" a="0.4"/>
+          <layerref id="Wingframe2a"/>
+          <layerref id="Wingframe2b"/>
+        </frame>
+        <frame id="03">
+          <layerref id="GroundFX03" color="0xbfbfbf" a="0.75"/>
+          <layerref id="SmokeFX03A" a="0.2"/>
+          <layerref id="Wingframe3a"/>
+          <layerref id="Wingframe3b"/>
+        </frame>
+        <frame id="04">
+          <layerref id="GroundFX04" color="0xbfbfbf" a="0.75"/>
+          <layerref id="SmokeFX01A" a="0.25"/>
+          <layerref id="SmokeFX04A" a="0.2"/>
+          <layerref id="Wingframe1a"/>
+          <layerref id="Wingframe1b"/>
+        </frame>
+        <frame id="Sit">
+          <layerref id="Sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6">
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

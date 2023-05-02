@@ -1,0 +1,38 @@
+<f id="Top01_166_USAflag" parentId="Top01">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top01_166_TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_166_usaflag_torso_m.png" pri="1"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_166_TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_166_usaflag_torso_f.png" pri="1"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt">
+    <s id="Top01_166ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top01/top01_154_idle.png" pri="1"/>
+    <s id="Top01_166ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top01/top01_154_walk1.png" pri="1"/>
+    <s id="Top01_166ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top01/top01_154_walk2.png" pri="1"/>
+    <s id="Top01_166ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top01/top01_154_walk3.png" pri="1"/>
+    <s id="Top01_166ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top01/top01_154_sit.png" pri="1"/>
+    <c sId="Top01_166ArmIdleBase" c="10592673" a="0.84" b="60.8" ct="1.11" lId="Top01_166_Color" lw="N"/>
+    <c sId="Top01_166ArmWalk1Base" c="10592673" a="0.84" b="60.8" ct="1.11" lId="Top01_166_Color" lw="N"/>
+    <c sId="Top01_166ArmWalk2Base" c="10592673" a="0.84" b="60.8" ct="1.11" lId="Top01_166_Color" lw="N"/>
+    <c sId="Top01_166ArmWalk3Base" c="10592673" a="0.84" b="60.8" ct="1.11" lId="Top01_166_Color" lw="N"/>
+    <c sId="Top01_166ArmSitBase" c="10592673" a="0.84" b="60.8" ct="1.11" lId="Top01_166_Color" lw="N"/>
+    <s id="Top01_166ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top01/top01_154_throw.png" pri="1"/>
+    <s id="Top01_166ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top01/top01_154_raise.png" pri="1"/>
+    <c sId="Top01_166ArmThrowBase" c="10592673" a="0.84" b="60.8" ct="1.11" lId="Top01_166_Color" lw="N"/>
+    <c sId="Top01_166ArmRaiseBase" c="10592673" a="0.84" b="60.8" ct="1.11" lId="Top01_166_Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_166" icon="items/base/consumables/clothing/top01/top01_166_usaflag_icon_a.png" w="48" h="48"/>
+    <s id="IconTop01_166IconBase" cId="IconTop01_166" s="items/base/consumables/clothing/top01/top01_166_usaflag_icon_1.png" pri="1"/>
+    <c sId="IconTop01_166IconBase" c="10592673" a="0.84" b="60.8" ct="1.11" lId="Top01_166_Color" lw="N"/>
+    <s id="IconTop01_166IconDecal" cId="IconTop01_166" s="items/base/consumables/clothing/top01/top01_166_usaflag_icon_2.png" pri="1.1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_166_Color" name="Color" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.84" b="60.8" ct="1.11" lId="Top01_166_Color"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

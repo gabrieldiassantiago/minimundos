@@ -1,0 +1,175 @@
+<item.SpriteItem id="6023" name="Frozen Relic" desc="The second collectible from the frozen depths" tags="rare,actionbar,consumable,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_602_icon_relic_frozen.png" price="1" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4121,0,-0.1813" max="0.4377,0.2231,0.2197"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="frost+10"/>
+    <entry key="action_attributes_secondary" value="speed+10,health+10"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/suits/suit_110_magefire_item_base.png" cols="1" rows="1"/>
+    <texture id="Relic" source="items/base/consumables/clothing/accessory/acc_602_item_relic_frozen.png" cols="2" rows="1"/>
+    <texture id="Wipe" source="items/base/consumables/clothing/accessory/acc_601_item_relic_wipe.png" cols="2" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Forest Relic">
+      <box min="-0.4121,0,-0.1813" max="0.4377,0.2231,0.2197"/>
+      <layers>
+        <layer id="Base" texture="Base">
+          <view angle="45" y="26"/>
+          <view angle="135" y="26" hm="true"/>
+          <view angle="225" y="26"/>
+          <view angle="315" y="26" hm="true"/>
+        </layer>
+        <layer id="Relic01" texture="Relic">
+          <view angle="45" y="-22"/>
+          <view angle="135" col="1" y="-22"/>
+          <view angle="225" col="1" y="-22" hm="true"/>
+          <view angle="315" y="-22" hm="true"/>
+        </layer>
+        <layer id="Wipe01" texture="Wipe">
+          <view angle="45" y="-22"/>
+          <view angle="135" col="1" y="-22"/>
+          <view angle="225" y="-22"/>
+          <view angle="315" col="1" y="-22"/>
+        </layer>
+        <layer id="Wipe02" texture="Wipe">
+          <view angle="45" row="1" y="-22"/>
+          <view angle="135" col="1" row="1" y="-22"/>
+          <view angle="225" row="1" y="-22"/>
+          <view angle="315" col="1" row="1" y="-22"/>
+        </layer>
+        <layer id="Wipe03" texture="Wipe">
+          <view angle="45" row="2" y="-22"/>
+          <view angle="135" col="1" row="2" y="-22"/>
+          <view angle="225" row="2" y="-22"/>
+          <view angle="315" col="1" row="2" y="-22"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Base"/>
+          <layerref id="Relic01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Base"/>
+          <layerref id="Relic01" y="1"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Base"/>
+          <layerref id="Relic01" y="2"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Base"/>
+          <layerref id="Relic01" y="1"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Base"/>
+          <layerref id="Relic01"/>
+          <layerref id="Wipe01"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="Base"/>
+          <layerref id="Relic01" y="-1"/>
+          <layerref id="Wipe02" y="-1"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="Base"/>
+          <layerref id="Relic01" y="-2"/>
+          <layerref id="Wipe03" y="-2"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="Base"/>
+          <layerref id="Relic01" y="-3"/>
+        </frame>
+        <frame id="Frame09">
+          <layerref id="Base"/>
+          <layerref id="Relic01" y="-2"/>
+        </frame>
+        <frame id="Frame10">
+          <layerref id="Base"/>
+          <layerref id="Relic01" y="-1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame09"/>
+          <frameref id="Frame10"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-12"/>
+          <view angle="135" y="-12"/>
+          <view angle="225" y="-12"/>
+          <view angle="315" y="-12"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x3891d0"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="45" y="-20" alpha="0.5"/>
+          <view angle="135" y="-20" alpha="0.5"/>
+          <view angle="225" y="-20" alpha="0.5"/>
+          <view angle="315" y="-20" alpha="0.5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xe9e575" a="0.75" blend="overlay"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,125 @@
+<item.ChairItem id="5689" name="Cama de Casal Master Deluxe" desc="Uma moderna e luxuosa cama de casal" tags="rare,chair,misc" icon="items/base/modern/icon_m_bedroom_14_royal_bed.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" chairType="bed">
+  <seats>
+    <seat x="0.4" y="0.5" z="-0.6">
+      <ap x="1" z="-2"/>
+      <ap x="3"/>
+      <ap x="3" z="-1"/>
+      <ap x="3" z="-2"/>
+      <ap x="2" z="-2"/>
+      <ap z="-2"/>
+      <ap x="-1" z="-2"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1"/>
+    </seat>
+    <seat x="0.4" y="0.5" z="0.6">
+      <ap x="1" z="2"/>
+      <ap x="3"/>
+      <ap x="3" z="1"/>
+      <ap x="3" z="2"/>
+      <ap x="2" z="2"/>
+      <ap z="2"/>
+      <ap x="-1" z="2"/>
+      <ap x="-1" z="1"/>
+      <ap x="-1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.48,0,-1.48" max="2.48,0.62,1.48"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="activate" script="scripts/item/activate_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="deactivate" script="scripts/item/deactivate_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="board" source="items/base/modern/m_bedroom_14_base.png" cols="2" rows="1"/>
+    <texture id="duvet" source="items/base/modern/m_bedroom_14_duvet.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind">
+      <box min="-0.48,0,-1.48" max="2.48,0.62,1.48"/>
+      <layers>
+        <layer id="headboard" texture="board">
+          <view angle="45" x="61" y="136"/>
+          <view angle="135" x="-62" y="136" hm="true"/>
+          <view angle="225" col="1" x="31" y="30" alpha="0"/>
+          <view angle="315" x="-25" y="30" alpha="0" hm="true"/>
+        </layer>
+        <layer id="duvet" texture="duvet">
+          <view angle="45" x="80" y="81" alpha="0"/>
+          <view angle="135" x="-82" y="81" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-91" y="-4"/>
+          <view angle="315" col="1" x="90" y="-4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="headboard"/>
+          <layerref id="duvet"/>
+        </frame>
+        <frame id="On">
+          <layerref id="headboard"/>
+          <layerref id="duvet"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="-0.48,0,-1.48" max="2.48,0.62,1.48"/>
+      <layers>
+        <layer id="headboard" texture="board">
+          <view angle="45" x="-27" alpha="0"/>
+          <view angle="135" x="22" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-61" y="75"/>
+          <view angle="315" col="1" x="61" y="75" hm="true"/>
+        </layer>
+        <layer id="duvet" texture="duvet">
+          <view angle="45" x="80" y="81"/>
+          <view angle="135" x="-82" y="81" hm="true"/>
+          <view angle="225" col="1" x="-61" y="75" alpha="0"/>
+          <view angle="315" col="1" x="61" y="75" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="headboard"/>
+          <layerref id="base"/>
+          <layerref id="duvet"/>
+          <layerref id="pillow"/>
+        </frame>
+        <frame id="On">
+          <layerref id="headboard"/>
+          <layerref id="base"/>
+          <layerref id="duvet"/>
+          <layerref id="pillow"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

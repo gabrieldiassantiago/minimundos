@@ -1,0 +1,117 @@
+<item.SpriteItem id="0" name="Liquid Nitrogen Bazooka Projectile" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="proj_generic" source="items/base/consumables/magic/proj_52_nbazooka.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="laser" source="items/base/consumables/magic/sndfx_expl_three.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+      <layers>
+        <layer id="Trail 01" texture="proj_generic" y="52">
+          <view y="-29"/>
+        </layer>
+        <layer id="Trail 02" texture="proj_generic" y="52">
+          <view y="-29" hm="true"/>
+        </layer>
+        <layer id="Trail 03" texture="proj_generic" y="52">
+          <view y="-29" hm="true" vm="true"/>
+        </layer>
+        <layer id="Trail 04" texture="proj_generic" y="52">
+          <view y="-29" vm="true"/>
+        </layer>
+        <layer id="Trail 05" texture="proj_generic" y="52">
+          <view y="-29" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Trail 01" blend="lighten"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Trail 02" blend="lighten"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Trail 03" blend="lighten"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Trail 04" blend="lighten"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Trail 05" blend="lighten"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="01">
+            <sample id="laser" vol="0.7"/>
+          </frameref>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.1" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x75e8e9"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.1" s="3" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x9feff0" a="0.3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

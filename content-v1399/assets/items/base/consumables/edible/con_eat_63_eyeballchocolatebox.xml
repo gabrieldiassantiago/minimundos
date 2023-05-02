@@ -1,0 +1,54 @@
+<item.SpriteItem id="4124" name="Caixa de Olhos" desc="Um caixa de suculentos olhos" tags="consumable,food,actionbar,group_edible,edible,stackable,halloween,rare,action_edible,market" icon="items/base/consumables/edible/icon_con_eat_63_eyeballchocolatebox.png" price="30" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" tokens="600">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.15,0.25"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_edible.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_edible.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_edible.as"/>
+    <event id="select" script="scripts/item/select_edible.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="chocbox" source="items/base/consumables/edible/con_eat_63_eyeballchocolatebox.png" cols="2" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="eat" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,0.15,0.25"/>
+      <layers>
+        <layer id="chocbox" texture="chocbox">
+          <view angle="0" col="1" x="-4" y="21" hm="true"/>
+          <view angle="45" y="21"/>
+          <view angle="90" col="1" x="3" y="21"/>
+          <view angle="135" x="-1" y="21" hm="true"/>
+          <view angle="180" col="1" x="-4" y="21" hm="true"/>
+          <view angle="225" y="21"/>
+          <view angle="270" col="1" x="3" y="21"/>
+          <view angle="315" x="-1" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="chocbox"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

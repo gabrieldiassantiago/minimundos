@@ -1,0 +1,102 @@
+<item.WidgetItem id="2673" name="Juke-Box Retro Sonix" desc="Escute música no seu quarto usando YouTube" tags="seasonal,appliance,widget" icon="items/base/antique/icon_a_jukebox_scoops.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none" widget="widgets/widget_youtube.swf" price="125">
+  <volume>
+    <box min="-0.35,0,-0.48" max="0.35,2.1,0.48"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+  </events>
+  <actions>
+    <action id="Video Change">
+      <eval>
+        <func type="relational" id="Video Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <navigate position="infront" sitRange="8.00" standRange="5.00" targetRange="2.00" usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+  </data>
+  <textures>
+    <texture id="tv" source="items/base/antique/a_jukebox_scoops.png" cols="1" rows="1"/>
+    <texture id="backing" source="items/base/antique/a_jukebox_back.png" cols="1" rows="1"/>
+    <texture id="bubbles" source="items/base/antique/a_jukebox_bubbles.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="televison">
+      <box min="-0.35,0,-0.48" max="0.35,2.1,0.48"/>
+      <layers>
+        <layer id="WidgetLayer" type="panel" texture="tv" w="0.4" h="0.4" y="-15">
+          <view angle="45" x="5" y="-24"/>
+          <view angle="135" col="1" x="-4" y="-24"/>
+        </layer>
+        <layer id="base" texture="tv" y="6">
+          <view angle="45" y="30"/>
+          <view angle="135" y="30" hm="true"/>
+          <view angle="225" x="1" y="30"/>
+          <view angle="315" x="-1" y="30" hm="true"/>
+        </layer>
+        <layer id="back" texture="backing" y="6">
+          <view angle="45" y="30" alpha="0"/>
+          <view angle="135" y="30" alpha="0" hm="true"/>
+          <view angle="225" x="21" y="17"/>
+          <view angle="315" x="-21" y="17" hm="true"/>
+        </layer>
+        <layer id="bubbles01" texture="bubbles" y="6">
+          <view angle="45" x="25" y="-18"/>
+          <view angle="135" x="-26" y="-18" hm="true"/>
+          <view angle="225" x="1" y="30" alpha="0"/>
+          <view angle="315" x="-1" y="30" alpha="0" hm="true"/>
+        </layer>
+        <layer id="bubbles02" texture="bubbles" y="6">
+          <view angle="45" col="1" x="25" y="-18"/>
+          <view angle="135" col="1" x="-26" y="-18" hm="true"/>
+          <view angle="225" x="1" y="30" alpha="0"/>
+          <view angle="315" x="-1" y="30" alpha="0" hm="true"/>
+        </layer>
+        <layer id="bubbles03" texture="bubbles" y="6">
+          <view angle="45" col="2" x="25" y="-18"/>
+          <view angle="135" col="2" x="-26" y="-18" hm="true"/>
+          <view angle="225" x="1" y="30" alpha="0"/>
+          <view angle="315" x="-1" y="30" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="WidgetLayer"/>
+          <layerref id="base"/>
+          <layerref id="back"/>
+          <layerref id="bubbles01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="WidgetLayer"/>
+          <layerref id="base"/>
+          <layerref id="back"/>
+          <layerref id="bubbles02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="WidgetLayer"/>
+          <layerref id="base"/>
+          <layerref id="back"/>
+          <layerref id="bubbles03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,38 @@
+<item.SpriteItem id="0" name="Drum" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="FX_sparkes" source="items/base/consumables/clothing/accessory/acc_196_hand_drum.png" cols="4" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Sparkles">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="layer1" texture="FX_sparkes" y="-28">
+          <view angle="0" col="3" row="1" x="-15" y="47"/>
+          <view angle="45" y="45"/>
+          <view angle="90" col="1" x="16" y="53"/>
+          <view angle="135" col="2" x="10" y="45"/>
+          <view angle="180" col="3" x="15" y="52"/>
+          <view angle="225" row="1" x="5" y="60"/>
+          <view angle="270" col="1" row="1" x="-10" y="50"/>
+          <view angle="315" col="2" row="1" x="-10" y="47"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="layer1"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

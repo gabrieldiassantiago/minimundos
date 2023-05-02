@@ -1,0 +1,62 @@
+<item.SpriteItem id="7185" name="Leo Decapitado" desc="Obrigado por jogar MiniMundos" tags="rare,nopvp,actionbar,misc,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_874_icon_severedhead.png" price="1" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" tokens="10">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.3,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+5,speed+5"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/accessory/acc_874_item_severedhead_base.png" cols="1" rows="1"/>
+    <texture id="Head" source="items/base/consumables/clothing/accessory/acc_874_item_severedhead.png" cols="2" rows="1"/>
+    <texture id="Glass" source="items/base/consumables/clothing/accessory/acc_874_item_severedhead_glass.png" cols="1" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/clothing/accessory/acc_111_hand_giftbasket_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="deer">
+      <box min="-0.25,0,-0.25" max="0.25,0.3,0.25"/>
+      <layers>
+        <layer id="Head" texture="Base">
+          <view angle="45" y="23"/>
+          <view angle="135" y="23" hm="true"/>
+          <view angle="225" y="23"/>
+          <view angle="315" y="23" hm="true"/>
+        </layer>
+        <layer id="Base" texture="Head">
+          <view angle="45" x="1" y="-3" hm="true"/>
+          <view angle="135" x="-1" y="-3"/>
+          <view angle="225" col="1" y="-3"/>
+          <view angle="315" col="1" y="-3" hm="true"/>
+        </layer>
+        <layer id="Glass" texture="Glass">
+          <view angle="45" y="5"/>
+          <view angle="135" y="5"/>
+          <view angle="225" y="5"/>
+          <view angle="315" y="5"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="3"/>
+          <view angle="135" y="3"/>
+          <view angle="225" y="3"/>
+          <view angle="315" y="3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Head"/>
+          <layerref id="Base"/>
+          <layerref id="shadow"/>
+          <layerref id="Glass" a="0.75"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

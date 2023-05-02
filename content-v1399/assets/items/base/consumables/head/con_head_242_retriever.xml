@@ -1,0 +1,109 @@
+<item.SpriteItem id="0" name="Persian Cat" desc="Collectible (April 2013)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="cat" source="items/base/consumables/head/con_head_242_retriever.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_242_retriever_blink.png" cols="3" rows="1"/>
+    <texture id="tongue" source="items/base/consumables/head/con_head_242_retriever_tongue.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="cat" texture="cat">
+          <view angle="0" col="2" x="4" y="18"/>
+          <view angle="45" x="-1" y="18"/>
+          <view angle="90" col="1" y="19"/>
+          <view angle="135" y="18" hm="true"/>
+          <view angle="180" col="2" x="-3" y="18" hm="true"/>
+          <view angle="225" col="3" x="2" y="16" hm="true"/>
+          <view angle="270" col="4" x="-1" y="16"/>
+          <view angle="315" col="3" x="-2" y="16"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="18" y="1"/>
+          <view angle="45" x="10" y="1"/>
+          <view angle="90" col="1" y="4"/>
+          <view angle="135" x="-11" y="1" hm="true"/>
+          <view angle="180" col="2" x="-17" y="1" hm="true"/>
+          <view angle="225" col="3" x="1" y="20" alpha="0" hm="true"/>
+          <view angle="270" col="4" y="22" alpha="0"/>
+          <view angle="315" col="3" x="-2" y="20" alpha="0"/>
+        </layer>
+        <layer id="tongue" texture="tongue">
+          <view angle="0" col="2" x="22" y="17"/>
+          <view angle="45" x="15" y="22"/>
+          <view angle="90" col="1" x="-2" y="25"/>
+          <view angle="135" x="-16" y="22" hm="true"/>
+          <view angle="180" col="2" x="-21" y="17" hm="true"/>
+          <view angle="225" col="2" x="1" y="20" alpha="0" hm="true"/>
+          <view angle="270" col="2" y="22" alpha="0"/>
+          <view angle="315" col="2" x="-2" y="20" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="cat"/>
+        </frame>
+        <frame id="blink">
+          <layerref id="cat"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="tongue_01">
+          <layerref id="cat"/>
+          <layerref id="tongue"/>
+        </frame>
+        <frame id="tongue_02">
+          <layerref id="cat" y="1"/>
+          <layerref id="tongue" y="1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="10"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="30"/>
+          <frameref id="blink"/>
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="10"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="20"/>
+          <frameref id="blink"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

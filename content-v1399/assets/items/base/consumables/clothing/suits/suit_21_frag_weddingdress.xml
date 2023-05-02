@@ -1,0 +1,41 @@
+<f id="WeddingDress" parentId="Suits">
+  <g id="WeddingDress">
+    <b id="WeddingTorso" min="2" max="2" sel="WeddingTorsoBase">
+      <s id="WeddingTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_21_torso.png" pri="1"/>
+    </b>
+    <b id="WeddingLegs" min="2" max="2" sel="WeddingBottomBase">
+      <g id="WeddingBottomBase" icon="$bu/icon_legs_trouser.png">
+        <s id="WeddingPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_21_leg_idle.png" pri="3"/>
+        <s id="WeddingPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_21_leg_walk1.png" pri="3"/>
+        <s id="WeddingPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_21_leg_walk2.png" pri="3"/>
+        <s id="WeddingPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_21_leg_walk3.png" pri="3"/>
+        <s id="WeddingPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_21_leg_walk4.png" pri="3"/>
+        <s id="WeddingSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_21_leg_sit_upper.png" pri="3"/>
+        <s id="WeddingSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_21_leg_sit_lower.png" pri="3"/>
+      </g>
+    </b>
+    <b id="WeddingArms" min="2" max="2" sel="WeddingArmsBase">
+      <g id="WeddingArmsBase" icon="$bm/icon_m_retro.png">
+        <s id="WeddingArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_21_arm_idle.png" pri="1"/>
+        <s id="WeddingArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_21_arm_walk1.png" pri="1"/>
+        <s id="WeddingArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_21_arm_walk2.png" pri="1"/>
+        <s id="WeddingArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_21_arm_walk3.png" pri="1"/>
+        <s id="WeddingArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_21_arm_sit.png" pri="1"/>
+        <s id="WeddingArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_21_arm_throw.png" pri="1"/>
+        <s id="WeddingArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_21_arm_raise.png" pri="1"/>
+      </g>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot01"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+</f>

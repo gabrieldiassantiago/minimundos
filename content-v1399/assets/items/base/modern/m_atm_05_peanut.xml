@@ -1,0 +1,126 @@
+<item.WidgetItem id="1613" name="Peanut Labs Atm" desc="Earn gold at this ATM" tags="admin,widget" icon="items/base/modern/icon_m_atm_05_peanut.png" price="99" minLevel="1" minLevelType="2" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_url_iframe.swf" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.16,0.49"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <data>
+    <entry key="frame" value="modern"/>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_button" value="EARN GOLD"/>
+    <entry key="control_button_tooltip" value="Earn gold through by completing Peanut Labs offers"/>
+    <entry key="widget_background_override" value="widget/blueBG.jpg"/>
+    <entry key="widget_iframe_override" value="widget/CleanWhiteIFrameBG.jpg"/>
+    <entry key="widget_iframe_file" value="payment/peanutlabs/iframe.html"/>
+    <entry key="widget_iframe_bg" value="widget/CleanWhiteIFrameBG.jpg"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="iframeWidget" value="true"/>
+  </data>
+  <navigate position="infront" sitRange="2.00" standRange="3.00" targetRange="3.00" usableRange="-1.00" accessibleRange="3"/>
+  <textures>
+    <texture id="Base" source="items/base/modern/m_atm_04_gambit.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_atm_peanut.png" cols="1" rows="1"/>
+    <texture id="screen" source="items/base/modern/m_atm_04_gambit_screen.png" cols="2" rows="1"/>
+    <texture id="sign" source="items/base/modern/m_atm_05_peanut_sign.png" cols="2" rows="1"/>
+    <texture id="decal" source="items/base/modern/m_atm_05_peanut_decal.png" cols="1" rows="1"/>
+    <texture id="light_02" source="items/base/shared/s_fx_flare_screen_atm_peanut_logo.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/modern/m_atm_05_peanut_logo.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,2.16,0.49"/>
+      <layers>
+        <layer id="signbak" texture="sign" y="39">
+          <view angle="45" col="1" x="-7" y="-184" alpha="0"/>
+          <view angle="135" x="7" y="-184" alpha="0"/>
+          <view angle="225" col="1" x="10" y="-178"/>
+          <view angle="315" x="-11" y="-178"/>
+        </layer>
+        <layer id="Base" texture="Base" y="39">
+          <view angle="45" y="-2"/>
+          <view angle="135" y="-2" hm="true"/>
+          <view angle="225" col="1" y="-2" hm="true"/>
+          <view angle="315" col="1" y="-2"/>
+        </layer>
+        <layer id="decal" texture="decal">
+          <view angle="45" x="12" y="-21"/>
+          <view angle="135" x="-13" y="-21" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="logo" texture="Texture" y="-90">
+          <view angle="45" x="-2" y="-30"/>
+          <view angle="135" col="1" y="-30"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="screen" texture="screen" y="39">
+          <view angle="45" x="9" y="-118"/>
+          <view angle="135" x="-9" y="-118" hm="true"/>
+          <view angle="225" col="1" y="-2" alpha="0" hm="true"/>
+          <view angle="315" col="1" y="-2" alpha="0"/>
+        </layer>
+        <layer id="signf" texture="sign" y="39">
+          <view angle="45" col="1" x="-7" y="-184"/>
+          <view angle="135" x="7" y="-184"/>
+          <view angle="225" col="1" x="10" y="-178" alpha="0"/>
+          <view angle="315" x="-11" y="-178" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" x="0.3594" y="1.3313" z="-0.1" s="1.05" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-1"/>
+          <view angle="135" x="15" y="4" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse01" y="2.6406" z="-0.1562" s="3.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light_02" align="middle">
+          <view angle="45" x="2"/>
+          <view angle="135" x="5" y="3" hm="true"/>
+          <view angle="225" x="1" y="5"/>
+          <view angle="315" x="-6" y="2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

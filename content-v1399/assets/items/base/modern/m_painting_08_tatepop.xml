@@ -1,0 +1,30 @@
+<item.SpriteItem name="Guto MiniMundos em Pop Art" desc="Um quadro da Guto MiniMundos em Pop Art" tags="wall,rare" icon="items/base/modern/icon_m_painting_08_tatepop.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" id="4042" price="1000">
+  <volume>
+    <box min="0,-0.82,-0.95" max="0.001,1,0.95"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="lights" source="items/base/modern/m_painting_08_tatepop.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="lights">
+      <box min="0,-0.82,-0.95" max="0.001,1,0.95"/>
+      <layers>
+        <layer id="light 01" texture="lights" align="middle">
+          <view angle="45"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,43 @@
+<item.SpriteItem id="6422" name="Leo Vudu" desc="Seja gentil" tags="rare,hand,nopvp,actionbar,usable,wear,action_holdable_toggle" icon="items/base/modern/icon_m_toy_item_10_voodoodan.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.28,0,-0.28" max="0.28,0.82,0.28"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+50"/>
+    <entry key="action_attributes_secondary" value="health+50,speed+50"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_toy_10_voodoodan.png" cols="5" rows="1"/>
+    <texture id="shadow" source="items/base/modern/m_trophy_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="deer">
+      <box min="-0.28,0,-0.28" max="0.28,0.82,0.28"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="18"/>
+          <view angle="135" y="18"/>
+          <view angle="225" y="18"/>
+          <view angle="315" y="18"/>
+        </layer>
+        <layer id="deer" texture="Texture">
+          <view angle="45" x="-7" y="13"/>
+          <view angle="135" x="7" y="13" hm="true"/>
+          <view angle="225" col="3" x="6" y="12"/>
+          <view angle="315" col="3" x="-6" y="12" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,37 @@
+<item.SpriteItem id="3260" name="Árvore Esculpida Citrus (Amarela)" desc="Uma árvore amarela delicadamente esculpida." tags="plant,master_catalog_colorize" icon="items/base/outdoor/icon_o_plant_yellow_tall.png" price="95" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table, avatar,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,2.3,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="plant" source="items/base/outdoor/o_plant_yellow_tall.png" cols="1" rows="1"/>
+    <texture id="pot" source="items/base/outdoor/o_plant_base_tall.png" cols="1" rows="1"/>
+  </textures>
+  <data>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/sculptedtrees.xml"/>
+  </data>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,2.3,0.25"/>
+      <layers>
+        <layer id="pot" texture="pot">
+          <view angle="45" y="8"/>
+          <view angle="135" y="8" hm="true"/>
+          <view angle="225" y="8"/>
+          <view angle="315" y="8" hm="true"/>
+        </layer>
+        <layer id="plant" texture="plant">
+          <view angle="45" y="-18"/>
+          <view angle="135" y="-18" hm="true"/>
+          <view angle="225" y="-18"/>
+          <view angle="315" y="-18" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

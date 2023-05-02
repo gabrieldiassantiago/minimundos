@@ -1,0 +1,35 @@
+<item.SpriteItem id="3214" name="Magic Shop Entrance Rug" desc="An item" tags="admin" icon="items/base/shop/towncenter/icon_tc_mys_entrance_rug.png" minLevel="1" minCPLevel="1" dropTargetType="wall" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.5,1.2,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="mouseOver" script="scripts/item/mouse_over_navigate.as"/>
+  </events>
+  <actions>
+    <action id="Activate"/>
+  </actions>
+  <navigate standRange="20.00" usableRange="20.00" accessibleRange="20.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="mouseOverImageSource" value="images/space/icon_towncenter_BR.png"/>
+    <entry key="mouseOverButtonText" value="Praça Central"/>
+    <entry key="selectable" value="false"/>
+  </data>
+  <textures>
+    <texture id="face" source="items/base/shop/towncenter/tc_mys_entrance_rug.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.5,0,-0.5" max="0.5,1.2,0.5"/>
+      <layers>
+        <layer id="base" texture="face">
+          <view x="-1" y="33"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

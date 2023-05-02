@@ -1,0 +1,40 @@
+<item.SpriteItem id="5465" name="Caixa do Tesouro Sr. Charada" desc="Conte aos seus amigos - juntos vocês podem abrir este item!" tags="rare,misc,action_holdable_toggle,actionbar,hand" icon="items/base/mystery/mystery_treasurebox_small_icon.png" minLevel="1" minCPLevel="1" dropTargetType="floor" dropTargetList="floor,avatar" dropTargetClamp="none" price="99">
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,0.5,0.4"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/mystery/mystery_treasurebox_small_world.png" cols="1" rows="1"/>
+    <texture id="decal" source="items/base/mystery/mystery_treasurebox_small_decal.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Mystery Box">
+      <box min="-0.4,0,-0.4" max="0.4,0.5,0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" y="35"/>
+          <view angle="135" y="35" hm="true"/>
+          <view angle="225" y="35"/>
+          <view angle="315" y="35" hm="true"/>
+        </layer>
+        <layer id="decal" texture="decal">
+          <view angle="45" x="18" y="3"/>
+          <view angle="135" col="1" x="-16" y="1"/>
+          <view angle="225" x="18" y="3"/>
+          <view angle="315" col="1" x="-16" y="1"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+</item.SpriteItem>

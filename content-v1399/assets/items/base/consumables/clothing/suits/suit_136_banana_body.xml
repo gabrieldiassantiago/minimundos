@@ -1,0 +1,54 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.08,0,0" max="-0.08,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/clothing/suits/suit_136_banana_body.png" cols="5" rows="1"/>
+    <texture id="sit" source="items/base/consumables/clothing/suits/suit_136_banana_sit.png" cols="2" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" x="-0.08">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="body_01" texture="base">
+          <view angle="0" col="2" x="5" y="-6"/>
+          <view angle="45" x="5" y="-6"/>
+          <view angle="90" col="1" y="-6"/>
+          <view angle="135" x="-5" y="-6" hm="true"/>
+          <view angle="180" col="2" x="-5" y="-6" hm="true"/>
+          <view angle="225" col="3" x="-3" y="-6" hm="true"/>
+          <view angle="270" col="4" y="-6"/>
+          <view angle="315" col="3" x="3" y="-6"/>
+        </layer>
+        <layer id="sit" texture="base">
+          <view angle="45" x="-24" y="10"/>
+          <view angle="135" x="24" y="10" hm="true"/>
+          <view angle="225" col="3" x="27" y="40" hm="true"/>
+          <view angle="315" col="3" x="-27" y="40"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="base">
+          <layerref id="body_01"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="base"/>
+        </animation>
+        <animation id="Walk">
+          <frameref id="base"/>
+        </animation>
+        <animation id="Sit">
+          <frameref id="sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,30 @@
+<item.SpriteItem id="1475" name="Canto de Sofá Master" desc="Um canto de sofá elegante." tags="chair" icon="items/base/vip/icon_vip_couch_01_black_corner.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="110" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.87,0.49"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/vip/vip_couch_01_black_corner.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="seat">
+      <box min="-0.49,0,-0.49" max="0.49,0.87,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45" y="-26"/>
+          <view angle="135" col="1" x="-2" y="-29"/>
+          <view angle="225" col="2" y="-37"/>
+          <view angle="315" col="1" x="2" y="-29" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+  <data>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+</item.SpriteItem>

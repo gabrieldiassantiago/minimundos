@@ -1,0 +1,82 @@
+<item.WidgetItem id="2015" name="Flickr Digital" desc="Personalizável com imagens do Flickr" tags="misc,widget,user_content" icon="items/base/modern/icon_m_photoframe_02_lcd.png" price="150" minLevel="1" minLevelType="4" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none" widget="widgets/widget_flickr.swf">
+  <volume>
+    <box min="-0.25,0,-0.4" max="0.25,0.6,0.4"/>
+  </volume>
+  <events>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <actions>
+    <action id="First" trigger="false" event="widget_action(FIRST)"/>
+    <action id="Last" trigger="false" event="widget_action(LAST)"/>
+    <action id="Next" trigger="false" event="widget_action(NEXT)"/>
+    <action id="Previous" trigger="false" event="widget_action(PREVIOUS)"/>
+    <action id="Show Specific Image" trigger="false" event="widget_action(SHOWIMAGE)">
+      <params>
+        <param type="string" id="Image Title" label="Enter image title"/>
+      </params>
+    </action>
+    <action id="Image Change">
+      <eval>
+        <func type="relational" id="Image Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+    <action id="Enlarge Image">
+      <eval>
+        <func type="relational" id="Image Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="frame" value="digital"/>
+    <entry key="renderWidth" value="365"/>
+    <entry key="renderHeight" value="255"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate position="infront" sitRange="4.00" standRange="3.00" targetRange="1.00" usableRange="-1.00" accessibleRange="2.00"/>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_photoframe_02_lcd_frame.png" cols="2" rows="1"/>
+    <texture id="Texture01" source="items/base/modern/m_photoframe_02_lcd_support.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Frame">
+      <box min="-0.25,0,-0.4" max="0.25,0.6,0.4"/>
+      <layers>
+        <layer id="decal" texture="Texture01" align="middle">
+          <view angle="45" x="-25" y="-17"/>
+          <view angle="135" x="-12" y="-50" alpha="0"/>
+          <view angle="225" col="1" x="14" y="-14"/>
+          <view angle="315" col="2" x="2" y="-4"/>
+        </layer>
+        <layer id="Frame" texture="Texture" align="middle">
+          <view angle="45" x="7" y="-16"/>
+          <view angle="135" x="-7" y="-16" hm="true"/>
+          <view angle="225" col="1" x="-9" y="-23"/>
+          <view angle="315" col="1" x="9" y="-23" hm="true"/>
+        </layer>
+        <layer id="WidgetLayer" type="panel" texture="Texture" w="0.47" h="0.32">
+          <view angle="45" x="8" y="-21"/>
+          <view angle="135" col="1" x="-6" y="-21"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Frame"/>
+          <layerref id="decal"/>
+          <layerref id="WidgetLayer"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

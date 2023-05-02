@@ -1,0 +1,65 @@
+<f id="GhostSuit" parentId="Suits">
+  <g id="GhostSuit">
+    <b id="Ghost_Arms" min="2" max="2" sel="ArmHands">
+      <g id="ArmHands" icon="$bm/icon_m_retro.png">
+        <s id="Ghost_Arm_Idle" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_124_ghost_arm_idle.png" pri="1"/>
+        <s id="Ghost_Arm_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_124_ghost_arm_walk1.png" pri="1"/>
+        <s id="Ghost_Arm_Walk2" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_124_ghost_arm_walk2.png" pri="1"/>
+        <s id="Ghost_Arm_Walk3" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_124_ghost_arm_walk3.png" pri="1"/>
+        <s id="Ghost_Arm_Sit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_124_ghost_arm_sit.png" pri="1"/>
+        <s id="Ghost_Arm_Throw" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_124_ghost_arm_throw.png" pri="1"/>
+        <s id="Ghost_Arm_Raise" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_124_ghost_arm_raise.png" pri="1"/>
+        <s id="Ghost_Hand_Idle" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_52_hand_idle.png" pri="1"/>
+        <s id="Ghost_Hand_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_52_hand_walk1.png" pri="1"/>
+        <s id="Ghost_Hand_Walk2" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_52_hand_arm_walk2.png" pri="1"/>
+        <s id="Ghost_Hand_Walk3" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_52_hand_arm_walk3.png" pri="1"/>
+        <s id="Ghost_Hand_Sit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_52_hand_sit_arm.png" pri="1"/>
+        <s id="Ghost_Hand_Wave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_52_hand_raise_wave1.png" pri="1"/>
+        <s id="Ghost_Hand_Wave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_52_hand_raise_wave2.png" pri="1"/>
+        <s id="Ghost_Hand_Hold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_52_hand_throw_hold.png" pri="1"/>
+        <s id="Ghost_Hand_Open" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_52_hand_throw_open.png" pri="1"/>
+        <s id="Ghost_Hand_Point" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_52_hand_throw_point.png" pri="1"/>
+        <s id="Ghost_Hand_Stop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_52_hand_throw_stop.png" pri="1"/>
+        <s id="Ghost_Hand_Throw" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_52_hand_throw_throw.png" pri="1"/>
+        <s id="Ghost_Hand_Thumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_52_hand_throw_thumbs.png" pri="1"/>
+        <c sId="Ghost_Hand_Idle" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+        <c sId="Ghost_Hand_Walk1" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+        <c sId="Ghost_Hand_Walk2" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+        <c sId="Ghost_Hand_Walk3" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+        <c sId="Ghost_Hand_Sit" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+        <c sId="Ghost_Hand_Wave1" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+        <c sId="Ghost_Hand_Wave2" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+        <c sId="Ghost_Hand_Open" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+        <c sId="Ghost_Hand_Hold" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+        <c sId="Ghost_Hand_Point" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+        <c sId="Ghost_Hand_Stop" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+        <c sId="Ghost_Hand_Throw" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+        <c sId="Ghost_Hand_Thumbs" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor" lw="N"/>
+      </g>
+    </b>
+  </g>
+  <g id="Icon">
+    <t id="Icon_Ghost" icon="items/base/consumables/clothing/suits/suit_124_ghost_icon.png" w="48" h="48"/>
+    <s id="Icon_Ghost_suit" cId="Icon_Ghost" s="items/base/consumables/clothing/suits/suit_124_ghost_icon.png"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Suit_GhostColor" name="Color" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="16775389" b="255.0" ct="-0.73" lId="Suit_GhostColor"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="JSFeet"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+</f>

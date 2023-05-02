@@ -1,0 +1,119 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/clothing/accessory/acc_647_butterfly.png" cols="5" rows="2"/>
+    <texture id="strings" source="items/base/consumables/clothing/accessory/acc_647_butterfly_strings.png" cols="5" rows="1"/>
+    <texture id="sparkle" source="items/base/consumables/clothing/accessory/acc_647_butterfly_sparkle.png" cols="5" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="bird_01" texture="base">
+          <view angle="0" col="2" x="-8" y="-67" hm="true"/>
+          <view angle="45" x="1" y="-69"/>
+          <view angle="90" col="1" x="9" y="-66"/>
+          <view angle="135" x="-1" y="-69" hm="true"/>
+          <view angle="180" col="2" x="8" y="-67"/>
+          <view angle="225" col="3" x="18" y="-66"/>
+          <view angle="270" col="4" x="-10" y="-71"/>
+          <view angle="315" col="3" x="-18" y="-66" hm="true"/>
+        </layer>
+        <layer id="bird_02" texture="base">
+          <view angle="0" col="2" row="1" x="-8" y="-67" hm="true"/>
+          <view angle="45" row="1" x="1" y="-69"/>
+          <view angle="90" col="1" row="1" x="9" y="-66"/>
+          <view angle="135" row="1" x="-1" y="-69" hm="true"/>
+          <view angle="180" col="2" row="1" x="8" y="-67"/>
+          <view angle="225" col="3" row="1" x="18" y="-66"/>
+          <view angle="270" col="4" row="1" x="-10" y="-71"/>
+          <view angle="315" col="3" row="1" x="-18" y="-66" hm="true"/>
+        </layer>
+        <layer id="strings" texture="strings">
+          <view angle="0" col="2" x="4" y="3" hm="true"/>
+          <view angle="45" x="3" y="7"/>
+          <view angle="90" col="1" x="3" y="8"/>
+          <view angle="135" x="-3" y="7" hm="true"/>
+          <view angle="180" col="2" x="-4" y="3"/>
+          <view angle="225" col="3" x="2" y="-2"/>
+          <view angle="270" col="4" x="1" y="-2"/>
+          <view angle="315" col="3" x="-2" y="-2" hm="true"/>
+        </layer>
+        <layer id="sparkle_01" texture="sparkle">
+          <view angle="0" col="2" x="4" y="3" hm="true"/>
+          <view angle="45" x="3" y="7"/>
+          <view angle="90" col="1" x="3" y="8"/>
+          <view angle="135" x="-3" y="7" hm="true"/>
+          <view angle="180" col="2" x="-4" y="3"/>
+          <view angle="225" col="3" x="2" y="-2"/>
+          <view angle="270" col="4" x="1" y="-2"/>
+          <view angle="315" col="3" x="-2" y="-2" hm="true"/>
+        </layer>
+        <layer id="sparkle_02" texture="sparkle">
+          <view angle="0" col="2" row="1" x="4" y="3" hm="true"/>
+          <view angle="45" row="1" x="3" y="7"/>
+          <view angle="90" col="1" row="1" x="3" y="8"/>
+          <view angle="135" row="1" x="-3" y="7" hm="true"/>
+          <view angle="180" col="2" row="1" x="-4" y="3"/>
+          <view angle="225" col="3" row="1" x="2" y="-2"/>
+          <view angle="270" col="4" row="1" x="1" y="-2"/>
+          <view angle="315" col="3" row="1" x="-2" y="-2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="sit"/>
+        <frame id="Idle01">
+          <layerref id="strings" a="0.5"/>
+          <layerref id="sparkle_01"/>
+          <layerref id="sparkle_02" a="0.1"/>
+          <layerref id="bird_01"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="strings" y="1" a="0.5"/>
+          <layerref id="sparkle_01" y="1" a="0.7"/>
+          <layerref id="sparkle_02" y="1" a="0.4"/>
+          <layerref id="bird_02" y="1"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="strings" y="2" a="0.5"/>
+          <layerref id="sparkle_01" y="2" a="0.4"/>
+          <layerref id="sparkle_02" y="2" a="0.7"/>
+          <layerref id="bird_01" y="2"/>
+        </frame>
+        <frame id="Idle04">
+          <layerref id="strings" a="0.5"/>
+          <layerref id="sparkle_01" a="0.1"/>
+          <layerref id="sparkle_02"/>
+          <layerref id="bird_02"/>
+        </frame>
+        <frame id="Idle05">
+          <layerref id="strings" y="1" a="0.5"/>
+          <layerref id="sparkle_01" y="1" a="0.4"/>
+          <layerref id="sparkle_02" y="1" a="0.7"/>
+          <layerref id="bird_01" y="1"/>
+        </frame>
+        <frame id="Idle06">
+          <layerref id="strings" y="2" a="0.5"/>
+          <layerref id="sparkle_01" y="2" a="0.7"/>
+          <layerref id="sparkle_02" y="2" a="0.4"/>
+          <layerref id="bird_02" y="2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle05"/>
+          <frameref id="Idle06"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

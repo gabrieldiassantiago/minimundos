@@ -1,0 +1,51 @@
+<item.SpriteItem id="0" name="sharkfin" desc="An item" tags="wearable, consumable, actionbar" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+  </volume>
+  <textures>
+    <texture id="Sit" source="items/base/consumables/clothing/accessory/acc_228_back_sharkfin.png" cols="2" rows="2"/>
+    <texture id="Fin" source="items/base/consumables/clothing/accessory/acc_228_back_sharkfin.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+      <layers>
+        <layer id="Fin" texture="Fin">
+          <view angle="0" col="1" x="-9" y="19"/>
+          <view angle="45" x="-4" y="22"/>
+          <view angle="90" x="1" y="37" alpha="0"/>
+          <view angle="135" x="2" y="22" hm="true"/>
+          <view angle="180" col="1" x="9" y="19" hm="true"/>
+          <view angle="225" row="1" x="4" y="18"/>
+          <view angle="270" col="1" row="1" y="14"/>
+          <view angle="315" row="1" x="-4" y="18" hm="true"/>
+        </layer>
+        <layer id="Sit" texture="Sit">
+          <view angle="45" x="-4" y="20"/>
+          <view angle="135" x="4" y="20" hm="true"/>
+          <view angle="225" row="1" x="4" y="16"/>
+          <view angle="315" row="1" x="-4" y="16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame001">
+          <layerref id="Fin"/>
+        </frame>
+        <frame id="Sit">
+          <layerref id="Sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame001"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="Frame001"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

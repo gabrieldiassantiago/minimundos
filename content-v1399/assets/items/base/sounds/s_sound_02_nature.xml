@@ -1,0 +1,97 @@
+<item.SpriteItem id="2647" name="Sons da natureza" desc="Sons da natureza" tags="floor,sounds" icon="items/base/sounds/icon_s_sound_02_nature.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="125">
+  <volume>
+    <box min="-0.48,-0.001,-0.48" max="0.48,0,0.48"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="items/base/sounds/action_sound.as"/>
+    <event id="select" script="items/base/sounds/select_sound.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="items/base/sounds/toggle_sound.as"/>
+    <event id="cycle" script="items/base/sounds/cycle_sound.as"/>
+    <event id="update" script="items/base/sounds/update_sound.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Birds On" state="true" event="animate(On_01)"/>
+    <action id="Birds Off" state="true" event="animate(Off_01)"/>
+    <action id="Night On" state="true" event="animate(On_02)"/>
+    <action id="Night Off" state="true" event="animate(Off_02)"/>
+    <action id="Wind On" state="true" event="animate(On_03)"/>
+    <action id="Wind Off" state="true" event="animate(Off_03)"/>
+    <action id="Rain On" state="true" event="animate(On_04)"/>
+    <action id="Rain Off" state="true" event="animate(Off_04)"/>
+  </actions>
+  <navigate usableRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="updatePeriod" value="1000"/>
+    <entry key="count" value="4"/>
+    <entry key="01" value="Birds"/>
+    <entry key="02" value="Night"/>
+    <entry key="03" value="Wind"/>
+    <entry key="04" value="Rain"/>
+  </data>
+  <textures>
+    <texture id="spawn" source="items/base/sounds/s_sound_02_nature.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="Night" source="items/base/sounds/o_sound_night.mp3" group="Ambient"/>
+    <sound id="Wind" source="items/base/sounds/o_sound_wind.mp3" group="Ambient"/>
+    <sound id="Rain" source="items/base/sounds/o_sound_rain.mp3" group="Ambient"/>
+    <sound id="Birds" source="items/base/sounds/o_sound_birds.mp3" group="Ambient"/>
+  </sounds>
+  <nodes>
+    <node id="Spawn" s="0.7" layer="surface">
+      <box min="-0.48,-0.001,-0.48" max="0.48,0,0.48"/>
+      <layers>
+        <layer id="spawn" texture="spawn">
+          <view x="-1" y="27"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="spawn"/>
+        </frame>
+        <frame id="FrameOff">
+          <layerref id="spawn" color="0x9ed0f2" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off_01">
+          <frameref id="FrameOff"/>
+        </animation>
+        <animation id="Off_02">
+          <frameref id="FrameOff"/>
+        </animation>
+        <animation id="Off_03">
+          <frameref id="FrameOff"/>
+        </animation>
+        <animation id="Off_04">
+          <frameref id="FrameOff"/>
+        </animation>
+        <animation id="On_01">
+          <frameref id="Frame">
+            <sample id="Birds" vol="0.25" attn="40" loops="-1"/>
+          </frameref>
+        </animation>
+        <animation id="On_02">
+          <frameref id="Frame">
+            <sample id="Night" attn="40" loops="-1"/>
+          </frameref>
+        </animation>
+        <animation id="On_03" framerate="2">
+          <frameref id="Frame">
+            <sample id="Wind" vol="0.2" attn="40" loops="-1" dr="1"/>
+          </frameref>
+        </animation>
+        <animation id="On_04">
+          <frameref id="Frame">
+            <sample id="Rain" vol="0.4" attn="40" loops="-1"/>
+          </frameref>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

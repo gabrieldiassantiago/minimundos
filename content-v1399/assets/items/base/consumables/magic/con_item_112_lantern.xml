@@ -1,0 +1,49 @@
+<item.SpriteItem id="3567" name="Lampião Assombrada" desc="Um lampião para assombrar os caminhos." tags="consumable,light,actionbar,wear,hand,real,usable,halloween,rare,action_holdable_toggle" icon="items/base/consumables/magic/icon_con_item_112_lantern.png" price="160" tokens="1600" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.16,0,-0.16" max="0.16,0.5,0.16"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="10"/>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="candle" source="items/base/consumables/magic/con_item_43_lantern_base.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/consumables/magic/con_item_43_lantern_handle.png" cols="3" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/magic/con_item_43_lantern_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Bomb">
+      <box min="-0.16,0,-0.16" max="0.16,0.5,0.16"/>
+      <layers>
+        <layer id="Bomb02" texture="shadow" y="5">
+          <view angle="45" y="9"/>
+          <view angle="135" y="9" hm="true"/>
+          <view angle="225" y="9"/>
+          <view angle="315" y="9" hm="true"/>
+        </layer>
+        <layer id="Bomb" texture="candle">
+          <view angle="45" y="9"/>
+          <view angle="135" y="9" hm="true"/>
+          <view angle="225" y="9"/>
+          <view angle="315" y="9" hm="true"/>
+        </layer>
+        <layer id="Bomb01" texture="Texture" y="-24">
+          <view angle="45" y="9"/>
+          <view angle="135" y="9" hm="true"/>
+          <view angle="225" y="9"/>
+          <view angle="315" y="9" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

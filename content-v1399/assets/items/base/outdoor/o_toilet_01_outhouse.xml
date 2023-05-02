@@ -1,0 +1,151 @@
+<item.ChairItem desc="Banheiro ''vintage'', hehe." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/outdoor/icon_o_toilet_01_outhouse.png" id="2637" name="Patente" tags="craftable4,chair,stackable,market" minLevel="1" minCPLevel="1" price="150">
+  <seats>
+    <seat x="-0.08" y="0.38" z="-0.16">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,2,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="activate" script="scripts/item/activate_chair.as"/>
+    <event id="deactivate" script="scripts/item/deactivate_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="hygiene-3"/>
+    <entry key="ingredient_1" value="1524"/>
+    <entry key="ingredient_2" value="829"/>
+    <entry key="ingredient_3" value="1972"/>
+    <entry key="ingredient_quantity_1" value="1"/>
+    <entry key="ingredient_quantity_2" value="6"/>
+    <entry key="ingredient_quantity_3" value="12"/>
+    <entry key="product_quantity" value="1"/>
+    <entry key="xp_level_required" value="90"/>
+    <entry key="xp_rewarded" value="900"/>
+  </data>
+  <textures>
+    <texture id="shell" source="items/base/outdoor/o_toilet_01_outhouse.png" cols="2" rows="1"/>
+    <texture id="back" source="items/base/outdoor/o_toilet_01_back.png" cols="2" rows="1"/>
+    <texture id="door" source="items/base/outdoor/o_toilet_01_door.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind">
+      <box min="-0.48,0,-0.48" max="0.48,2,0.48"/>
+      <layers>
+        <layer id="back_off" texture="back">
+          <view angle="45" x="2" y="50"/>
+          <view angle="135" x="-2" y="50" hm="true"/>
+          <view angle="225" x="4" y="53"/>
+          <view angle="315" x="-4" y="53" hm="true"/>
+        </layer>
+        <layer id="back_on" texture="back">
+          <view angle="45" col="1" x="2" y="50"/>
+          <view angle="135" col="1" x="-2" y="50" hm="true"/>
+          <view angle="225" col="1" x="4" y="53"/>
+          <view angle="315" col="1" x="-4" y="53" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="back_off"/>
+        </frame>
+        <frame id="On">
+          <layerref id="back_on"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="-0.48,0,-0.48" max="0.48,2,0.48"/>
+      <layers>
+        <layer id="shell" texture="shell">
+          <view angle="45" x="1" y="34"/>
+          <view angle="135" x="-1" y="34" hm="true"/>
+          <view angle="225" col="1" x="-1" y="34"/>
+          <view angle="315" col="1" x="1" y="34" hm="true"/>
+        </layer>
+        <layer id="Door_Open" texture="door">
+          <view angle="45" col="1" x="42" y="50"/>
+          <view angle="135" col="1" x="-42" y="50" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="Door_Closed" texture="door">
+          <view angle="45" x="34" y="28"/>
+          <view angle="135" x="-34" y="28" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="shell"/>
+          <layerref id="Door_Open"/>
+        </frame>
+        <frame id="On">
+          <layerref id="shell"/>
+          <layerref id="Door_Closed"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-22"/>
+          <view angle="135" y="-22"/>
+          <view angle="225" y="-22"/>
+          <view angle="315" y="-22"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+        <frame id="On">
+          <layerref id="Light" color="0xede98d"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

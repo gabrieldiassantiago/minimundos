@@ -1,0 +1,32 @@
+<f id="HeartsHoodie" parentId="Suits">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="heartshoodie_Torso_M" cId="Torso" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_torso_m.png" pri="6"/>
+    </g>
+    <g id="Female">
+      <s id="heartshoodie_Torso_F" cId="Torso" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_torso_f.png" pri="6"/>
+    </g>
+  </b>
+  <g id="Pants" icon="$bu/icon_skinny_trouser.png">
+    <s id="heartshoodie_IdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_leg_idle.png" pri="6"/>
+    <s id="heartshoodie_Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_leg_walk1.png" pri="6"/>
+    <s id="heartshoodie_Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_leg_walk2.png" pri="6"/>
+    <s id="heartshoodie_Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_leg_walk3.png" pri="6"/>
+    <s id="heartshoodie_Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_leg_walk4.png" pri="6"/>
+    <s id="heartshoodie_SitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_leg_sit.png" pri="6"/>
+  </g>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="heartshoodie_ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_arm_idle.png" pri="6"/>
+    <s id="heartshoodie_ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_arm_walk1.png" pri="6"/>
+    <s id="heartshoodie_ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_arm_walk2.png" pri="6"/>
+    <s id="heartshoodie_ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_arm_walk3.png" pri="6"/>
+    <s id="heartshoodie_ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_arm_sit.png" pri="6"/>
+    <s id="heartshoodie_ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_arm_throw.png" pri="6"/>
+    <s id="heartshoodie_ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_arm_raise.png" pri="6"/>
+  </g>
+  <g id="Icon">
+    <t id="Icon_heartshoodie" icon="items/base/consumables/clothing/suits/suit_135_heartshoodie_icon.png" w="48" h="48"/>
+    <s id="IconTop_heartshoodieBase" cId="Icon_heartshoodie" s="items/base/consumables/clothing/suits/suit_135_heartshoodie_icon.png"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

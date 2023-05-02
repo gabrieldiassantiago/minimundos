@@ -1,0 +1,206 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_167_flamebike_angled.png" cols="2" rows="1"/>
+    <texture id="front_back" source="items/base/consumables/feet/con_feet_167_flamebike_frontback.png" cols="2" rows="1"/>
+    <texture id="feet" source="items/base/consumables/feet/con_feet_167_flamebike_legs.png" cols="2" rows="1"/>
+    <texture id="kickstand" source="items/base/consumables/feet/con_feet_33_scooter_kickstand.png" cols="4" rows="1"/>
+    <texture id="beam_light" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="handle" source="items/base/consumables/feet/con_feet_167_flamebike_decal.png" cols="2" rows="1"/>
+    <texture id="flame_idle" source="items/base/consumables/feet/con_feet_167_flamebike_idle.png" cols="5" rows="3"/>
+    <texture id="flame_walk" source="items/base/consumables/feet/con_feet_167_flamebike_walk.png" cols="5" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="kickstand" texture="kickstand">
+          <view angle="0" col="3" alpha="0"/>
+          <view angle="45" x="4" y="17"/>
+          <view angle="90" col="1" x="-1" y="24"/>
+          <view angle="135" x="-5" y="17" hm="true"/>
+          <view angle="180" col="3" alpha="0" hm="true"/>
+          <view angle="225" col="2" alpha="0" hm="true"/>
+          <view angle="270" col="1" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+        <layer id="base" texture="base" y="45">
+          <view angle="0" col="2" alpha="0"/>
+          <view angle="45" x="4" y="16"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" x="-5" y="16" hm="true"/>
+          <view angle="180" col="2" alpha="0" hm="true"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="front_back" texture="front_back" y="45">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" x="-1" y="24"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="feet" texture="feet">
+          <view angle="0" alpha="0" hm="true"/>
+          <view angle="45" x="-7" y="17"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" x="9" y="17" hm="true"/>
+          <view angle="180" alpha="0"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="270" col="1" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="decal" texture="handle">
+          <view angle="0" alpha="0" hm="true"/>
+          <view angle="45" x="-6" y="2" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" x="10" y="1" alpha="0" hm="true"/>
+          <view angle="180" alpha="0"/>
+          <view angle="225" col="1" x="-6" y="-90" alpha="0"/>
+          <view angle="270" col="1" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="flame_idle_01" texture="flame_idle" y="45">
+          <view angle="0" col="2" alpha="0"/>
+          <view angle="45" x="14" y="7"/>
+          <view angle="90" col="3" x="2" y="23"/>
+          <view angle="135" x="-14" y="7" hm="true"/>
+          <view angle="180" col="2" alpha="0" hm="true"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="flame_idle_02" texture="flame_idle" y="45">
+          <view angle="0" col="2" row="1" alpha="0"/>
+          <view angle="45" row="1" x="14" y="7"/>
+          <view angle="90" col="3" row="1" x="2" y="23"/>
+          <view angle="135" row="1" x="-14" y="7" hm="true"/>
+          <view angle="180" col="2" row="1" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="1" alpha="0"/>
+          <view angle="270" col="4" row="1" alpha="0"/>
+          <view angle="315" col="3" row="1" alpha="0" hm="true"/>
+        </layer>
+        <layer id="flame_idle_03" texture="flame_idle" y="45">
+          <view angle="0" col="2" row="2" alpha="0"/>
+          <view angle="45" row="2" x="14" y="7"/>
+          <view angle="90" col="3" row="2" x="2" y="23"/>
+          <view angle="135" row="2" x="-14" y="7" hm="true"/>
+          <view angle="180" col="2" row="2" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="2" alpha="0"/>
+          <view angle="270" col="4" row="2" alpha="0"/>
+          <view angle="315" col="3" row="2" alpha="0" hm="true"/>
+        </layer>
+        <layer id="flame_walk_01" texture="flame_walk" y="45">
+          <view angle="0" col="2" alpha="0"/>
+          <view angle="45" x="-2" y="1"/>
+          <view angle="90" col="3" x="4" y="36"/>
+          <view angle="135" x="1" y="1" hm="true"/>
+          <view angle="180" col="2" alpha="0" hm="true"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="flame_walk_02" texture="flame_walk" y="45">
+          <view angle="0" col="2" row="1" alpha="0"/>
+          <view angle="45" row="1" x="-2" y="1"/>
+          <view angle="90" col="3" row="1" x="4" y="36"/>
+          <view angle="135" row="1" x="1" y="1" hm="true"/>
+          <view angle="180" col="2" row="1" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="1" alpha="0"/>
+          <view angle="270" col="4" row="1" alpha="0"/>
+          <view angle="315" col="3" row="1" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Sit"/>
+        <frame id="Idle_01">
+          <layerref id="kickstand"/>
+          <layerref id="base"/>
+          <layerref id="front_back"/>
+          <layerref id="feet"/>
+          <layerref id="decal"/>
+          <layerref id="flame_idle_01"/>
+        </frame>
+        <frame id="Idle_02">
+          <layerref id="kickstand"/>
+          <layerref id="base"/>
+          <layerref id="front_back"/>
+          <layerref id="feet"/>
+          <layerref id="decal"/>
+          <layerref id="flame_idle_02"/>
+        </frame>
+        <frame id="Idle_03">
+          <layerref id="kickstand"/>
+          <layerref id="base"/>
+          <layerref id="front_back"/>
+          <layerref id="feet"/>
+          <layerref id="decal"/>
+          <layerref id="flame_idle_03"/>
+        </frame>
+        <frame id="Walk_01">
+          <layerref id="base"/>
+          <layerref id="front_back"/>
+          <layerref id="feet"/>
+          <layerref id="decal"/>
+          <layerref id="flame_walk_01"/>
+        </frame>
+        <frame id="Walk_02">
+          <layerref id="base"/>
+          <layerref id="front_back"/>
+          <layerref id="feet"/>
+          <layerref id="decal"/>
+          <layerref id="flame_walk_02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle_01"/>
+          <frameref id="Idle_02"/>
+          <frameref id="Idle_03"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="Walk_01"/>
+          <frameref id="Walk_02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" s="3.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" col="2" hm="true"/>
+          <view angle="45" x="1" y="-4"/>
+          <view angle="90" y="-4"/>
+          <view angle="135" x="-1" y="-4" hm="true"/>
+          <view angle="180" col="2"/>
+          <view angle="225" col="3"/>
+          <view angle="270" col="4"/>
+          <view angle="315" col="3" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf9cac1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

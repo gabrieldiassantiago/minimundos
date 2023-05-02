@@ -1,0 +1,36 @@
+<item.SpriteItem desc="De uma borboleta encantada." dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" icon="items/base/consumables/back/icon_con_bak_item_03_bwings_admin.png" id="1134" name="Asas Celestiais" tags="consumable,actionbar,wear,back,girl,action_wearable_toggle" price="35800" minLevel="100" minLevelType="1" minCPLevel="1" premium="Y">
+  <volume>
+    <box max="0.25,0.1,0.25" min="-0.25,0,-0.25"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+30,nature+30,shadow+30"/>
+    <entry key="action_attributes_secondary" value="speed+100,health+100"/>
+  </data>
+  <textures>
+    <texture cols="2" id="bf_03" rows="1" source="items/base/consumables/back/con_bak_item_02_bwings_admin.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.25,0.1,0.25" min="-0.25,0,-0.25"/>
+      <layers>
+        <layer id="bg_03" texture="bf_03">
+          <view angle="45" x="1" y="19"/>
+          <view angle="135" hm="true" x="-1" y="19"/>
+          <view angle="225" col="1" hm="true" x="8" y="28"/>
+          <view angle="315" col="1" x="-7" y="28"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

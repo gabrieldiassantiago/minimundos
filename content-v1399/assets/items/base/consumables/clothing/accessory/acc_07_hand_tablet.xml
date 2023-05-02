@@ -1,0 +1,147 @@
+<item.SpriteItem id="0" name="Tablet" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Light" source="items/base/consumables/clothing/accessory/acc_07_hand_glow.png" cols="5" rows="1"/>
+    <texture id="Tablet" source="items/base/consumables/clothing/accessory/acc_07_hand_tablet.png" cols="5" rows="1"/>
+    <texture id="screens" source="items/base/consumables/clothing/accessory/acc_07_hand_screens.png" cols="5" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Tablet" texture="Tablet">
+          <view angle="0" x="-1" y="8" hm="true"/>
+          <view angle="45" col="3" x="3" y="7"/>
+          <view angle="90" col="4" x="11" y="13"/>
+          <view angle="135" col="3" x="8" y="13" hm="true"/>
+          <view angle="180" x="2" y="11"/>
+          <view angle="225" col="1" x="-7" y="13"/>
+          <view angle="270" col="2" x="-13" y="8" hm="true"/>
+          <view angle="315" col="1" x="-7" y="6" hm="true"/>
+        </layer>
+        <layer id="screen1" texture="screens">
+          <view angle="0" row="2" y="1" hm="true"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" row="2" x="1" y="5"/>
+          <view angle="225" row="1" x="-7" y="10"/>
+          <view angle="270" x="-12" y="7"/>
+          <view angle="315" row="1" x="-7" y="3" hm="true"/>
+        </layer>
+        <layer id="screen2" texture="screens">
+          <view angle="0" col="1" row="2" y="1" hm="true"/>
+          <view angle="45" col="1" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" col="1" alpha="0" hm="true"/>
+          <view angle="180" col="1" row="2" x="1" y="5"/>
+          <view angle="225" col="1" row="1" x="-7" y="10"/>
+          <view angle="270" col="1" x="-12" y="7"/>
+          <view angle="315" col="1" row="1" x="-7" y="3" hm="true"/>
+        </layer>
+        <layer id="screen3" texture="screens">
+          <view angle="0" col="2" row="2" y="1" hm="true"/>
+          <view angle="45" col="2" alpha="0"/>
+          <view angle="90" col="2" alpha="0"/>
+          <view angle="135" col="2" alpha="0" hm="true"/>
+          <view angle="180" col="2" row="2" x="1" y="5"/>
+          <view angle="225" col="2" row="1" x="-7" y="10"/>
+          <view angle="270" col="2" x="-12" y="7"/>
+          <view angle="315" col="2" row="1" x="-7" y="3" hm="true"/>
+        </layer>
+        <layer id="screen4" texture="screens">
+          <view angle="0" col="3" row="2" y="1" hm="true"/>
+          <view angle="45" col="3" alpha="0"/>
+          <view angle="90" col="3" alpha="0"/>
+          <view angle="135" col="3" alpha="0" hm="true"/>
+          <view angle="180" col="3" row="2" x="1" y="5"/>
+          <view angle="225" col="3" row="1" x="-7" y="10"/>
+          <view angle="270" col="3" x="-12" y="7"/>
+          <view angle="315" col="3" row="1" x="-7" y="3" hm="true"/>
+        </layer>
+        <layer id="screen off" texture="screens">
+          <view angle="0" col="4" row="2" y="1" hm="true"/>
+          <view angle="45" col="4" alpha="0"/>
+          <view angle="90" col="4" alpha="0"/>
+          <view angle="135" col="4" alpha="0" hm="true"/>
+          <view angle="180" col="4" row="2" x="1" y="5"/>
+          <view angle="225" col="4" row="1" x="-7" y="10"/>
+          <view angle="270" col="4" x="-12" y="7"/>
+          <view angle="315" col="4" row="1" x="-7" y="3" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Tablet"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Tablet"/>
+          <layerref id="screen1"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Tablet"/>
+          <layerref id="screen2"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Tablet"/>
+          <layerref id="screen3"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Tablet"/>
+          <layerref id="screen4"/>
+        </frame>
+        <frame id="off">
+          <layerref id="Tablet"/>
+          <layerref id="screen off"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="Frame01" duration="3"/>
+          <frameref id="Frame02" duration="3"/>
+          <frameref id="Frame03" duration="3"/>
+          <frameref id="Frame04" duration="3"/>
+          <frameref id="Frame05" duration="3"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="off" duration="3"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="Light">
+          <view angle="0" x="-1" y="3" hm="true"/>
+          <view angle="45" col="3" y="4"/>
+          <view angle="90" col="4" x="3" y="5"/>
+          <view angle="135" col="3" x="3" y="6" hm="true"/>
+          <view angle="180" x="2" y="4"/>
+          <view angle="225" col="1" x="-1" y="5"/>
+          <view angle="270" col="2" x="-3" y="4"/>
+          <view angle="315" col="1" x="-2" y="4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Off"/>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

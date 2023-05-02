@@ -1,0 +1,90 @@
+<item.SpriteItem id="1920" name="NPC Indicator" desc="Used to differentiate NPCs from avatars" tags="admin,consumable,actionbar,wear,action_wearable_toggle" icon="items/base/consumables/head/icon_con_head_item_44_npc_indicator.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="888">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="indicator" source="items/base/consumables/head/con_head_44_npc_indicator.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="eat" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="shad" texture="indicator">
+          <view col="2" y="8"/>
+        </layer>
+        <layer id="arrow" texture="indicator">
+          <view y="-8"/>
+        </layer>
+        <layer id="flare 01" texture="indicator">
+          <view col="1" x="-8" y="-14"/>
+        </layer>
+        <layer id="flare 02" texture="indicator">
+          <view col="1" x="-4" y="-14"/>
+        </layer>
+        <layer id="flare 03" texture="indicator">
+          <view col="1" y="-14"/>
+        </layer>
+        <layer id="flare 04" texture="indicator">
+          <view col="1" x="4" y="-14"/>
+        </layer>
+        <layer id="flare 05" texture="indicator">
+          <view col="1" x="8" y="-14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="indicator 01">
+          <layerref id="shad"/>
+          <layerref id="arrow"/>
+        </frame>
+        <frame id="indicator 02">
+          <layerref id="shad"/>
+          <layerref id="arrow"/>
+          <layerref id="flare 01" a="0.5" blend="add"/>
+        </frame>
+        <frame id="indicator 03">
+          <layerref id="shad"/>
+          <layerref id="arrow"/>
+          <layerref id="flare 02" blend="add"/>
+        </frame>
+        <frame id="indicator 04">
+          <layerref id="shad"/>
+          <layerref id="arrow"/>
+          <layerref id="flare 03" blend="add"/>
+        </frame>
+        <frame id="indicator 05">
+          <layerref id="shad"/>
+          <layerref id="arrow"/>
+          <layerref id="flare 04" blend="add"/>
+        </frame>
+        <frame id="indicator 06">
+          <layerref id="shad"/>
+          <layerref id="arrow"/>
+          <layerref id="flare 05" a="0.5" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="8" syncOffsets="0,1">
+          <frameref id="indicator 01" duration="60"/>
+          <frameref id="indicator 02"/>
+          <frameref id="indicator 03"/>
+          <frameref id="indicator 04"/>
+          <frameref id="indicator 05"/>
+          <frameref id="indicator 06"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

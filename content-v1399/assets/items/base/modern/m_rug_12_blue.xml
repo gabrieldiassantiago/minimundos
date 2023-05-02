@@ -1,0 +1,30 @@
+<item.SpriteItem id="3048" name="Tapete Azul Elegance" desc="Um tapete azul para os mais exigentes." tags="floor" icon="items/base/modern/icon_m_rug_12_blue.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="180">
+  <volume>
+    <box min="-0.98,-0.001,-0.98" max="0.98,0,0.98"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/modern/m_rug_12_blue.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="rug_pattern" layer="surface">
+      <box min="-0.98,-0.001,-0.98" max="0.98,0,0.98"/>
+      <layers>
+        <layer id="Base" texture="Base">
+          <view angle="45" y="69"/>
+          <view angle="135" col="1" x="-1" y="69" hm="true"/>
+          <view angle="225" col="2" y="69" hm="true"/>
+          <view angle="315" col="1" x="-1" y="69"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

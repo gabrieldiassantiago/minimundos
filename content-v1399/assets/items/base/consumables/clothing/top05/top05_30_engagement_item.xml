@@ -1,0 +1,43 @@
+<item.SpriteItem id="3893" name="Anel de Diamante Chic's" desc="Um exuberante anel de diamante." tags="consumable,clothing,actionbar,wear,top05,ring,action_wearable_toggle" icon="items/base/consumables/clothing/top05/top05_30_engagement_icon.png" price="920" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.3,0.2"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top05/top05_30_frag_engagement.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="box" source="items/base/consumables/clothing/top05/top05_30_engagement_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,0.3,0.2"/>
+      <layers>
+        <layer id="box" texture="box">
+          <view angle="45" y="12"/>
+          <view angle="135" y="12" hm="true"/>
+          <view angle="225" col="1" y="12" hm="true"/>
+          <view angle="315" col="1" y="12"/>
+        </layer>
+        <layer id="bling_front" texture="ring">
+          <view angle="45" x="1" y="-2" hm="true"/>
+          <view angle="135" x="-1" y="-2"/>
+          <view angle="225" col="1" x="-3" y="-2" hm="true"/>
+          <view angle="315" col="1" x="3" y="-2"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,29 @@
+<f id="Top06_46_academic" parentId="Top06">
+  <g id="Torso" name="Torso" icon="$bm/icon_m_retro.png">
+    <s id="torso" cId="Torso" s="items/base/consumables/clothing/top06/top06_44_academic_torso.png" pri="6"/>
+  </g>
+  <g id="Arm" name="Arm" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_46ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_44_academic_arm_idle.png" pri="6"/>
+    <s id="Top06_46ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_44_academic_arm_walk1.png" pri="6"/>
+    <s id="Top06_46ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_44_academic_arm_walk2.png" pri="6"/>
+    <s id="Top06_46ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_44_academic_arm_walk3.png" pri="6"/>
+    <s id="Top06_46ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_44_academic_arm_sit.png" pri="6"/>
+    <s id="Top06_46ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_44_academic_arm_throw.png" pri="6"/>
+    <s id="Top06_46ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_44_academic_arm_raise.png" pri="6"/>
+  </g>
+  <g id="Leg" name="Leg" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_46BottomIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_44_academic_leg_idle.png" pri="6"/>
+    <s id="Top06_46BottomWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_44_academic_leg_walk1.png" pri="6"/>
+    <s id="Top06_46BottomWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_44_academic_leg_walk2.png" pri="6"/>
+    <s id="Top06_46BottomWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_44_academic_leg_walk3.png" pri="6"/>
+    <s id="Top06_46BottomWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_44_academic_leg_walk4.png" pri="6"/>
+    <s id="Top06_46BottomSit" cId="LegSitUpper" s="items/base/consumables/clothing/top06/top06_44_academic_leg_sit.png" pri="6"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_46" icon="items/base/consumables/clothing/top06/top06_44_icon_academic.png" w="48" h="48"/>
+    <s id="IconTop06_46VIP" cId="IconTop06_46" s="items/base/shared/s_vipbadge.png" pri="1" vis="false"/>
+    <s id="IconTop06_46Base" cId="IconTop06_46" s="items/base/consumables/clothing/top06/top06_44_icon_academic.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+</f>

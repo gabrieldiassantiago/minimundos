@@ -1,0 +1,27 @@
+<item.SpriteItem id="1455" name="Frigideira" desc="Ovos, bacon e panquecas! Muito prática e fácil de lavar." tags="misc" icon="items/base/modern/icon_m_kitchen_11_pan.png" dropTargetType="none" dropTargetList="floor, table, avatar,avatar" dropTargetClamp="none" price="25" tokens="250" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.22,0,-0.22" max="0.55,0.12,0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture01" source="items/base/modern/m_kitchen_11_pan.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.22,0,-0.22" max="0.55,0.12,0.22"/>
+      <layers>
+        <layer id="Layer" texture="Texture01">
+          <view angle="45" x="3" y="24"/>
+          <view angle="135" x="-3" y="24" hm="true"/>
+          <view angle="225" col="1" x="-3" y="19"/>
+          <view angle="315" col="1" x="4" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

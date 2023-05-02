@@ -1,0 +1,149 @@
+<item.SpriteItem name="Traje Blindado Esmeralda Play" desc="Um impressionante traje (6 de 9)" tags="rare,consumable,clothing,actionbar,wear,suits,action_wearable_toggle,nopvp" icon="items/base/consumables/clothing/suits/suit_92_icon_lv3suit.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" id="5815">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_92_frag_lv3suit.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes" value="nature+40"/>
+    <entry key="action_attributes_secondary" value="health+30,speed+15"/>
+  </data>
+  <textures>
+    <texture id="reflect" source="items/base/modern/m_collect_05_ice_angel_reflect.png" cols="3" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="base" source="items/base/consumables/clothing/suits/suit_92_item_lv3suit_base.png" cols="1" rows="1"/>
+    <texture id="glow" source="items/base/consumables/clothing/suits/suit_09_robot_glow.png" cols="1" rows="1"/>
+    <texture id="lv3" source="items/base/consumables/clothing/suits/suit_92_lv3suit.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+      <layers>
+        <layer id="lv3" texture="lv3" y="25">
+          <view angle="45" y="-10"/>
+          <view angle="135" y="-10" hm="true"/>
+          <view angle="225" col="1" x="1" y="-8" hm="true"/>
+          <view angle="315" col="1" x="1" y="-8"/>
+        </layer>
+        <layer id="Base01" texture="base" y="10">
+          <view angle="45" y="25"/>
+          <view angle="135" x="1" y="25" hm="true"/>
+          <view angle="225" y="25"/>
+          <view angle="315" x="1" y="25" hm="true"/>
+        </layer>
+        <layer id="Glow" texture="glow">
+          <view angle="45" y="-5" alpha="0.5"/>
+          <view angle="135" y="-5" alpha="0.5"/>
+          <view angle="225" y="-5" alpha="0.5"/>
+          <view angle="315" y="-5" alpha="0.5"/>
+        </layer>
+        <layer id="reflect_01" texture="reflect" x="-8">
+          <view angle="45" x="17" y="-75"/>
+          <view angle="135" x="-17" y="-75"/>
+          <view angle="225" x="17" y="-75"/>
+          <view angle="315" x="-3" y="-75"/>
+        </layer>
+        <layer id="reflect_02" texture="reflect" x="-8">
+          <view angle="45" col="1" x="17" y="-75"/>
+          <view angle="135" col="1" x="-17" y="-75"/>
+          <view angle="225" col="1" x="17" y="-75"/>
+          <view angle="315" col="1" x="-3" y="-75"/>
+        </layer>
+        <layer id="reflect_03" texture="reflect" x="-8">
+          <view angle="45" x="17" y="-75" hm="true"/>
+          <view angle="135" x="-17" y="-75" hm="true"/>
+          <view angle="225" x="17" y="-75" hm="true"/>
+          <view angle="315" x="-3" y="-75" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Base01"/>
+          <layerref id="lv3"/>
+          <layerref id="reflect_01" color="0xb3f6bc" a="0.5"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Base01"/>
+          <layerref id="lv3"/>
+          <layerref id="reflect_02" color="0xb3f6bc" a="0.7"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Base01"/>
+          <layerref id="lv3"/>
+          <layerref id="reflect_01"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Base01"/>
+          <layerref id="lv3"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Base01"/>
+          <layerref id="lv3"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="Base01"/>
+          <layerref id="lv3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="12">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06" duration="60"/>
+        </animation>
+        <animation id="Off" framerate="2"/>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.5" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle" y="-5">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light" y="25" color="0xb3f6bc"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light" y="25" color="0xb3f6bc" a="0.95"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Light" y="25" color="0xb3f6bc" a="0.9"/>
+        </frame>
+        <frame id="On04">
+          <layerref id="Light" y="25" color="0xb3f6bc" a="0.85"/>
+        </frame>
+        <frame id="On05">
+          <layerref id="Light" y="25" color="0xb3f6bc" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+          <frameref id="On03"/>
+          <frameref id="On02"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="On05"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

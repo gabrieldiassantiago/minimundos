@@ -1,0 +1,27 @@
+<item.SpriteItem desc="Um display de metal." dropTargetClamp="none" dropTargetList="floor" dropTargetType="table" icon="items/base/scifi/icon_sci_table_01_trek.png" id="863" name="Display de Metal" tags="table" price="40" tokens="400" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.49,0.68,1.49" min="-0.49,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="2" id="Texture" rows="1" source="items/base/scifi/sci_table_01_trek.png"/>
+  </textures>
+  <nodes>
+    <node id="Table">
+      <box max="0.49,0.68,1.49" min="-0.49,0,-0.49"/>
+      <layers>
+        <layer id="Table" texture="Texture">
+          <view angle="45" mirror="true" x="31" y="36"/>
+          <view angle="135" x="32" y="68"/>
+          <view angle="225" col="1" x="-34" y="69"/>
+          <view angle="315" col="1" mirror="true" x="-30" y="36"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

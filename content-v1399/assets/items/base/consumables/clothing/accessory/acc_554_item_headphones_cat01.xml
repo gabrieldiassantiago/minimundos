@@ -1,0 +1,75 @@
+<item.SpriteItem id="5778" name="Fones de Ouvido Gato Preto Blade" desc="Mostre seu estilo com os fones de ouvido de gato preto" tags="rare,consumable,actionbar,wear,nopvp,action_wearable_toggle,ear" icon="items/base/consumables/clothing/accessory/acc_554_icon_headphones_cat01.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.15,0.24"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+50,speed+13"/>
+  </data>
+  <textures>
+    <texture id="Headphones" source="items/base/consumables/clothing/accessory/acc_554_item_headphones_cat01.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/consumables/clothing/accessory/acc_554_head_lights_cat01.png" cols="2" rows="2"/>
+    <texture id="stand" source="items/base/consumables/clothing/accessory/acc_30_fedora_stand.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,0.15,0.24"/>
+      <layers>
+        <layer id="head" texture="Headphones">
+          <view angle="45" x="-3" y="-20"/>
+          <view angle="135" x="2" y="-20" hm="true"/>
+          <view angle="225" col="1" x="-2" y="-21"/>
+          <view angle="315" col="1" x="2" y="-21" hm="true"/>
+        </layer>
+        <layer id="Stand" texture="stand">
+          <view angle="45" y="15"/>
+          <view angle="135" col="1" y="15" hm="true"/>
+          <view angle="225" y="15"/>
+          <view angle="315" col="1" y="15"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Stand"/>
+          <layerref id="head"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" col="1" x="-8" y="-47"/>
+          <view angle="135" col="1" x="8" y="-47" hm="true"/>
+          <view angle="225" col="1" row="1" x="-20" y="-30" hm="true"/>
+          <view angle="315" col="1" row="1" x="20" y="-30"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

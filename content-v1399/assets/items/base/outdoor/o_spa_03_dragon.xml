@@ -1,0 +1,180 @@
+<item.ChairItem id="6886" name="Piscina Spa Dragão Tulsa" desc="Banhe-se na banheira dos Reis e Rainhas" tags="rare,chair" icon="items/base/outdoor/icon_o_spa_03_dragon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" chairType="pool">
+  <seats>
+    <seat x="-0.8" y="-0.4">
+      <ap x="-2"/>
+      <ap x="-2" z="-1"/>
+      <ap x="-2" z="1"/>
+      <ap x="-2" z="-2"/>
+      <ap x="-2" z="2"/>
+      <ap x="-1" z="-2"/>
+      <ap x="-1" z="2"/>
+    </seat>
+    <seat y="-0.4" z="0.8" a="90">
+      <ap z="2"/>
+      <ap x="-1" z="2"/>
+      <ap x="1" z="2"/>
+      <ap x="-2" z="2"/>
+      <ap x="2" z="2"/>
+      <ap x="-2" z="1"/>
+      <ap x="2" z="1"/>
+    </seat>
+    <seat x="0.9" y="-0.4" a="180">
+      <ap x="2"/>
+      <ap x="2" z="1"/>
+      <ap x="2" z="-1"/>
+      <ap x="2" z="2"/>
+      <ap x="2" z="-2"/>
+      <ap x="1" z="2"/>
+      <ap x="1" z="-2"/>
+    </seat>
+    <seat y="-0.4" z="-0.9" a="270">
+      <ap z="-2"/>
+      <ap x="1" z="-2"/>
+      <ap x="-1" z="-2"/>
+      <ap x="2" z="-2"/>
+      <ap x="-2" z="-2"/>
+      <ap x="2" z="-1"/>
+      <ap x="-2" z="-1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-1.49,0,-1.49" max="1.49,0.1,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="hygiene-3"/>
+  </data>
+  <textures>
+    <texture id="hot tub" source="items/base/outdoor/o_spa_03_dragon.png" cols="1" rows="2"/>
+    <texture id="details" source="items/base/outdoor/o_spa_01_oasis_details.png" cols="3" rows="1"/>
+    <texture id="water" source="items/base/outdoor/o_spa_03_dragon_water.png" cols="1" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_square.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="-1.49,0,-1.49" max="1.49,0.1,1.49"/>
+      <layers>
+        <layer id="hot tub" texture="hot tub" y="-54">
+          <view angle="45" x="-1" y="183"/>
+          <view angle="135" y="183" hm="true"/>
+          <view angle="225" y="183"/>
+          <view angle="315" y="183" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Water">
+      <box min="-1.49,0,-1.49" max="1.49,0.1,1.49"/>
+      <layers>
+        <layer id="water 01" texture="water" y="52">
+          <view angle="45" x="-4" y="25"/>
+          <view angle="135" x="3" y="29" hm="true"/>
+          <view angle="225" x="-4" y="27"/>
+          <view angle="315" x="4" y="27" hm="true"/>
+        </layer>
+        <layer id="water 02" texture="water" y="52">
+          <view angle="45" row="1" x="-4" y="27"/>
+          <view angle="135" row="1" x="3" y="31" hm="true"/>
+          <view angle="225" row="1" x="-4" y="29"/>
+          <view angle="315" row="1" x="4" y="29" hm="true"/>
+        </layer>
+        <layer id="water 03" texture="water" y="52">
+          <view angle="45" row="2" x="-4" y="26"/>
+          <view angle="135" row="2" x="3" y="30" hm="true"/>
+          <view angle="225" row="2" x="-4" y="28"/>
+          <view angle="315" row="2" x="4" y="28" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="water 01">
+          <layerref id="water 01"/>
+        </frame>
+        <frame id="water 02">
+          <layerref id="water 02"/>
+        </frame>
+        <frame id="water 03">
+          <layerref id="water 03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="water animation" framerate="4">
+          <frameref id="water 01"/>
+          <frameref id="water 02"/>
+          <frameref id="water 03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Behind">
+      <box min="-1.49,0,-1.49" max="1.49,0.1,1.49"/>
+      <layers>
+        <layer id="hot tub back" texture="hot tub" y="-54">
+          <view angle="45" row="1" y="142"/>
+          <view angle="135" row="1" y="142" hm="true"/>
+          <view angle="225" row="1" y="142"/>
+          <view angle="315" row="1" y="142" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="-0.1087" s="3.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view x="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xb23cd4" a="0.95"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="-0.3312" s="2.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view x="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x63e5e6" a="0.2"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

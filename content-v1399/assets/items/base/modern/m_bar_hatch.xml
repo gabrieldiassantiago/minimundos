@@ -1,0 +1,121 @@
+<item.SpriteItem desc="Um tampo moderno que também pode ser mesa ou balcão." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/modern/icon_m_bar_hatch.png" id="566" name="Tampo de Bar Moderno" tags="table" price="25" tokens="250" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.4,2.2013,0.49" min="-0.4,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="close" script="scripts/item/close_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+    <event id="action" script="scripts/item/action_gate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+  </events>
+  <actions>
+    <action event="open" id="Open" state="true"/>
+    <action event="close" id="Close" state="true"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture cols="2" id="Counter" rows="1" source="items/base/modern/m_bar_counter.png"/>
+    <texture cols="4" id="Texture" rows="1" source="items/base/modern/m_bar_hatch.png"/>
+  </textures>
+  <nodes>
+    <node id="leg_left">
+      <box max="0.4,1.2,-0.432" min="-0.4,0,-0.49"/>
+      <layers>
+        <layer id="leg" texture="Texture">
+          <view angle="45" col="3" x="-27" y="37"/>
+          <view angle="135" col="3" hm="true" x="-32" y="7"/>
+          <view angle="225" col="3" x="33" y="7"/>
+          <view angle="315" col="3" hm="true" x="27" y="37"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="leg_right">
+      <box max="0.4,1.2,0.49" min="-0.4,0,0.432"/>
+      <layers>
+        <layer id="leg" texture="Texture">
+          <view angle="45" col="3" x="33" y="7"/>
+          <view angle="135" col="3" hm="true" x="27" y="37"/>
+          <view angle="225" col="3" x="-27" y="37"/>
+          <view angle="315" col="3" hm="true" x="-33" y="7"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="hatch_open">
+      <box max="0.4,2.2013,0.42" min="-0.4,0,0.2603"/>
+      <layers>
+        <layer id="closed" texture="Texture">
+          <view angle="45" x="-1" y="37"/>
+          <view angle="135" hm="true" x="1" y="37"/>
+          <view angle="225" x="-1" y="37"/>
+          <view angle="315" hm="true" x="1" y="37"/>
+        </layer>
+        <layer id="open" texture="Texture">
+          <view angle="45" col="1" x="30" y="-56"/>
+          <view angle="135" col="2" x="30" y="-31"/>
+          <view angle="225" col="2" hm="true" x="-30" y="-31"/>
+          <view angle="315" col="1" hm="true" x="-30" y="-56"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="open"/>
+          <layerref a="0" id="closed"/>
+        </frame>
+        <frame id="closed">
+          <layerref a="0" id="closed"/>
+          <layerref a="0" id="open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Closed" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation framerate="4" id="Open" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="hatch_closed">
+      <box max="0.4,1.2,0.42" min="-0.4,0,-0.42"/>
+      <layers>
+        <layer id="closed" texture="Texture">
+          <view angle="45" x="-1" y="37"/>
+          <view angle="135" hm="true" x="1" y="37"/>
+          <view angle="225" x="-1" y="37"/>
+          <view angle="315" hm="true" x="1" y="37"/>
+        </layer>
+        <layer id="open" texture="Texture">
+          <view angle="45" col="1" x="30" y="-56"/>
+          <view angle="135" col="2" x="30" y="-31"/>
+          <view angle="225" col="2" hm="true" x="-30" y="-31"/>
+          <view angle="315" col="1" hm="true" x="-30" y="-56"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref a="0" id="open"/>
+          <layerref a="0" id="closed"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="closed"/>
+          <layerref a="0" id="open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Closed" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation framerate="4" id="Open" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

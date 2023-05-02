@@ -1,0 +1,31 @@
+<item.SpriteItem id="0" name="Headphones" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="headphones" source="items/base/consumables/clothing/accessory/acc_305_mp3player_red_head.png" cols="6" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="headphones" texture="headphones">
+          <view angle="0" col="5" x="10" y="19"/>
+          <view angle="45" col="1" x="-4" y="16"/>
+          <view angle="90" col="2" y="12"/>
+          <view angle="135" col="1" x="3" y="16" hm="true"/>
+          <view angle="180" x="-2" y="17"/>
+          <view angle="225" col="3" x="-16" y="12"/>
+          <view angle="270" col="4" y="16" hm="true"/>
+          <view angle="315" col="3" x="16" y="12" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

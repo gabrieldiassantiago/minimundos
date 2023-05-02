@@ -1,0 +1,245 @@
+<item.SpriteItem id="0" name="Devil Tail" desc="An item" tags="consumable, wearable, actionbar" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+  </volume>
+  <textures>
+    <texture id="tail" source="items/base/consumables/back/con_bak_281_firelion.png" cols="4" rows="3"/>
+    <texture id="fire01" source="items/base/consumables/back/con_bak_281_firelion_fire01.png" cols="4" rows="3"/>
+    <texture id="fire02" source="items/base/consumables/back/con_bak_281_firelion_fire02.png" cols="4" rows="3"/>
+    <texture id="tailfire01" source="items/base/consumables/back/con_bak_281_firelion_tailfire01.png" cols="4" rows="3"/>
+    <texture id="tailfire02" source="items/base/consumables/back/con_bak_281_firelion_tailfire02.png" cols="4" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+      <layers>
+        <layer id="tail_01" texture="tail" y="60">
+          <view angle="0" col="1" x="-25" y="28" hm="true"/>
+          <view angle="45" x="-20" y="29"/>
+          <view angle="90" col="1" x="-2" y="-20" alpha="0"/>
+          <view angle="135" x="20" y="29" hm="true"/>
+          <view angle="180" col="1" x="25" y="28"/>
+          <view angle="225" col="2" x="22" y="34"/>
+          <view angle="270" col="3" x="8" y="35"/>
+          <view angle="315" col="2" x="-22" y="34" hm="true"/>
+        </layer>
+        <layer id="tail_02" texture="tail" y="60">
+          <view angle="0" col="1" row="1" x="-25" y="28" hm="true"/>
+          <view angle="45" row="1" x="-20" y="29"/>
+          <view angle="90" col="1" row="1" x="-2" y="-20" alpha="0"/>
+          <view angle="135" row="1" x="20" y="29" hm="true"/>
+          <view angle="180" col="1" row="1" x="25" y="28"/>
+          <view angle="225" col="2" row="1" x="22" y="34"/>
+          <view angle="270" col="3" row="1" x="8" y="35"/>
+          <view angle="315" col="2" row="1" x="-22" y="34" hm="true"/>
+        </layer>
+        <layer id="tail_03" texture="tail" y="60">
+          <view angle="0" col="1" row="2" x="-25" y="28" hm="true"/>
+          <view angle="45" row="2" x="-20" y="29"/>
+          <view angle="90" col="1" row="2" x="-2" y="-20" alpha="0"/>
+          <view angle="135" row="2" x="20" y="29" hm="true"/>
+          <view angle="180" col="1" row="2" x="25" y="28"/>
+          <view angle="225" col="2" row="2" x="22" y="34"/>
+          <view angle="270" col="3" row="2" x="8" y="35"/>
+          <view angle="315" col="2" row="2" x="-22" y="34" hm="true"/>
+        </layer>
+        <layer id="fire01_a" texture="fire01" y="60">
+          <view angle="0" col="2" x="-60" y="24" hm="true"/>
+          <view angle="45" x="-24" y="9"/>
+          <view angle="90" col="1" x="14" y="-8"/>
+          <view angle="135" x="24" y="9" hm="true"/>
+          <view angle="180" col="2" x="59" y="24"/>
+          <view angle="225" col="3" x="42" y="42"/>
+          <view angle="270" col="1" x="-6" y="51" hm="true"/>
+          <view angle="315" col="3" x="-42" y="42" hm="true"/>
+        </layer>
+        <layer id="fire01_b" texture="fire02" y="60">
+          <view angle="0" col="2" x="-60" y="24" hm="true"/>
+          <view angle="45" x="-24" y="9"/>
+          <view angle="90" col="1" x="14" y="-8"/>
+          <view angle="135" x="24" y="9" hm="true"/>
+          <view angle="180" col="2" x="59" y="24"/>
+          <view angle="225" col="3" x="42" y="42"/>
+          <view angle="270" col="1" x="-6" y="51" hm="true"/>
+          <view angle="315" col="3" x="-42" y="42" hm="true"/>
+        </layer>
+        <layer id="fire02_a" texture="fire01" y="60">
+          <view angle="0" col="2" row="1" x="-60" y="24" hm="true"/>
+          <view angle="45" row="1" x="-24" y="9"/>
+          <view angle="90" col="1" row="1" x="14" y="-8"/>
+          <view angle="135" row="1" x="24" y="9" hm="true"/>
+          <view angle="180" col="2" row="1" x="59" y="24"/>
+          <view angle="225" col="3" row="1" x="42" y="42"/>
+          <view angle="270" col="1" row="1" x="-6" y="51" hm="true"/>
+          <view angle="315" col="3" row="1" x="-42" y="42" hm="true"/>
+        </layer>
+        <layer id="fire02_b" texture="fire02" y="60">
+          <view angle="0" col="2" row="1" x="-60" y="24" hm="true"/>
+          <view angle="45" row="1" x="-24" y="10"/>
+          <view angle="90" col="1" row="1" x="14" y="-8"/>
+          <view angle="135" row="1" x="24" y="10" hm="true"/>
+          <view angle="180" col="2" row="1" x="59" y="24"/>
+          <view angle="225" col="3" row="1" x="42" y="42"/>
+          <view angle="270" col="1" row="1" x="-6" y="51" hm="true"/>
+          <view angle="315" col="3" row="1" x="-42" y="42" hm="true"/>
+        </layer>
+        <layer id="fire03_a" texture="fire01" y="60">
+          <view angle="0" col="2" row="2" x="-60" y="24" hm="true"/>
+          <view angle="45" row="2" x="-24" y="10"/>
+          <view angle="90" col="1" row="2" x="-1" y="-8"/>
+          <view angle="135" row="2" x="24" y="10" hm="true"/>
+          <view angle="180" col="2" row="2" x="59" y="24"/>
+          <view angle="225" col="3" row="2" x="42" y="42"/>
+          <view angle="270" col="1" row="2" x="-6" y="51" hm="true"/>
+          <view angle="315" col="3" row="2" x="-42" y="42" hm="true"/>
+        </layer>
+        <layer id="fire03_b" texture="fire02" y="60">
+          <view angle="0" col="2" row="2" x="-60" y="24" hm="true"/>
+          <view angle="45" row="2" x="-24" y="10"/>
+          <view angle="90" col="1" row="2" x="-1" y="-8"/>
+          <view angle="135" row="2" x="24" y="10" hm="true"/>
+          <view angle="180" col="2" row="2" x="59" y="24"/>
+          <view angle="225" col="3" row="2" x="42" y="42"/>
+          <view angle="270" col="1" row="2" x="-6" y="51" hm="true"/>
+          <view angle="315" col="3" row="2" x="-42" y="42" hm="true"/>
+        </layer>
+        <layer id="tailfire01_a" texture="tailfire02" y="60">
+          <view angle="0" col="3" x="-23" y="41"/>
+          <view angle="45" x="-20" y="31"/>
+          <view angle="90" col="1" x="14" y="-8" alpha="0"/>
+          <view angle="135" x="21" y="32" hm="true"/>
+          <view angle="180" col="3" x="23" y="42" hm="true"/>
+          <view angle="225" col="1" x="22" y="50"/>
+          <view angle="270" col="2" x="12" y="52"/>
+          <view angle="315" col="1" x="-22" y="50" hm="true"/>
+        </layer>
+        <layer id="tailfire01_b" texture="tailfire01" y="60">
+          <view angle="0" col="3" x="-23" y="41"/>
+          <view angle="45" x="-20" y="31"/>
+          <view angle="90" col="1" x="14" y="-8" alpha="0"/>
+          <view angle="135" x="21" y="32" hm="true"/>
+          <view angle="180" col="3" x="23" y="42" hm="true"/>
+          <view angle="225" col="1" x="22" y="50"/>
+          <view angle="270" col="2" x="12" y="52"/>
+          <view angle="315" col="1" x="-22" y="50" hm="true"/>
+        </layer>
+        <layer id="tailfire02_a" texture="tailfire02" y="60">
+          <view angle="0" col="3" row="1" x="-23" y="41"/>
+          <view angle="45" row="1" x="-20" y="31"/>
+          <view angle="90" col="1" row="1" x="14" y="-8" alpha="0"/>
+          <view angle="135" row="1" x="21" y="32" hm="true"/>
+          <view angle="180" col="3" row="1" x="23" y="42" hm="true"/>
+          <view angle="225" col="1" row="1" x="22" y="50"/>
+          <view angle="270" col="2" row="1" x="12" y="52"/>
+          <view angle="315" col="1" row="1" x="-22" y="50" hm="true"/>
+        </layer>
+        <layer id="tailfire02_b" texture="tailfire01" y="60">
+          <view angle="0" col="3" row="1" x="-23" y="41"/>
+          <view angle="45" row="1" x="-20" y="31"/>
+          <view angle="90" col="1" row="1" x="14" y="-8" alpha="0"/>
+          <view angle="135" row="1" x="21" y="32" hm="true"/>
+          <view angle="180" col="3" row="1" x="23" y="42" hm="true"/>
+          <view angle="225" col="1" row="1" x="22" y="50"/>
+          <view angle="270" col="2" row="1" x="12" y="52"/>
+          <view angle="315" col="1" row="1" x="-22" y="50" hm="true"/>
+        </layer>
+        <layer id="tailfire03_a" texture="tailfire02" y="60">
+          <view angle="0" col="3" row="2" x="-23" y="41"/>
+          <view angle="45" row="2" x="-20" y="31"/>
+          <view angle="90" col="1" row="2" x="14" y="-8" alpha="0"/>
+          <view angle="135" row="2" x="21" y="32" hm="true"/>
+          <view angle="180" col="3" row="2" x="23" y="42" hm="true"/>
+          <view angle="225" col="1" row="2" x="22" y="50"/>
+          <view angle="270" col="2" row="2" x="12" y="52"/>
+          <view angle="315" col="1" row="2" x="-22" y="50" hm="true"/>
+        </layer>
+        <layer id="tailfire03_b" texture="tailfire01" y="60">
+          <view angle="0" col="3" row="2" x="-23" y="41"/>
+          <view angle="45" row="2" x="-20" y="31"/>
+          <view angle="90" col="1" row="2" x="14" y="-8" alpha="0"/>
+          <view angle="135" row="2" x="21" y="32" hm="true"/>
+          <view angle="180" col="3" row="2" x="23" y="42" hm="true"/>
+          <view angle="225" col="1" row="2" x="22" y="50"/>
+          <view angle="270" col="2" row="2" x="12" y="52"/>
+          <view angle="315" col="1" row="2" x="-22" y="50" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01a">
+          <layerref id="tail_01"/>
+          <layerref id="fire01_a"/>
+          <layerref id="tailfire01_a"/>
+        </frame>
+        <frame id="Frame_01b">
+          <layerref id="tail_01"/>
+          <layerref id="fire01_b"/>
+          <layerref id="tailfire01_b"/>
+        </frame>
+        <frame id="Frame_02a">
+          <layerref id="tail_02"/>
+          <layerref id="fire02_a"/>
+          <layerref id="tailfire02_a"/>
+        </frame>
+        <frame id="Frame_02b">
+          <layerref id="tail_02"/>
+          <layerref id="fire02_b"/>
+          <layerref id="tailfire02_b"/>
+        </frame>
+        <frame id="Frame_03a">
+          <layerref id="tail_03"/>
+          <layerref id="fire03_a"/>
+          <layerref id="tailfire03_a"/>
+        </frame>
+        <frame id="Frame_03b">
+          <layerref id="tail_03"/>
+          <layerref id="fire03_b"/>
+          <layerref id="tailfire03_b"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="tail_01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="Frame_01a"/>
+          <frameref id="Frame_01b"/>
+          <frameref id="Frame_02a"/>
+          <frameref id="Frame_02b"/>
+          <frameref id="Frame_03a"/>
+          <frameref id="Frame_03b"/>
+          <frameref id="Frame_02a"/>
+          <frameref id="Frame_02b"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="1.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="-17" y="29" hm="true"/>
+          <view angle="45" x="-14" y="24"/>
+          <view angle="90" y="13"/>
+          <view angle="135" x="19" y="25" hm="true"/>
+          <view angle="180" x="21" y="28"/>
+          <view angle="225" x="16" y="40"/>
+          <view angle="270" y="43"/>
+          <view angle="315" x="-17" y="32" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf6f4c9"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

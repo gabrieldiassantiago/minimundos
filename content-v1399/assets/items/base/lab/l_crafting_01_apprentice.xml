@@ -1,0 +1,89 @@
+<item.WidgetItem id="2043" name="Learner Crafting Tools" desc="The first crafting table" tags="widget" icon="items/base/lab/icon_l_crafting_01_apprentice.png" price="10" tokens="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_itemcrafter.swf" minLevelType="7">
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,0.9,0.4"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select_crafting_table.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="widget_min_load_wait" value="30000"/>
+    <entry key="widget_max_load_wait" value="31000"/>
+    <entry key="hasEditSecurity" value="true"/>
+    <entry key="craft_tag" value="craftable1"/>
+  </data>
+  <navigate usableRange="-1.00"/>
+  <textures>
+    <texture id="tools" source="items/base/lab/l_crafting_01_apprentice.png" cols="2" rows="1"/>
+    <texture id="table" source="items/base/lab/l_crafting_01_apprentice_table.png" cols="1" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="crafting tools">
+      <box min="-0.4,0,-0.4" max="0.4,0.9,0.4"/>
+      <layers>
+        <layer id="table" texture="table">
+          <view angle="45" y="36"/>
+          <view angle="135" y="36" hm="true"/>
+          <view angle="225" y="36"/>
+          <view angle="315" y="36" hm="true"/>
+        </layer>
+        <layer id="tools" texture="tools">
+          <view angle="45" x="2" y="-39"/>
+          <view angle="135" x="-2" y="-39" hm="true"/>
+          <view angle="225" col="1" y="-40" hm="true"/>
+          <view angle="315" col="1" y="-40"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="table">
+          <layerref id="table"/>
+          <layerref id="tools"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" loop="false">
+          <frameref id="table"/>
+        </animation>
+        <animation id="Off" framerate="1" loop="false">
+          <frameref id="table"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view y="-12" alpha="0.8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf7f8e6" a="0.4"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0xf7f8e6" a="0.2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" loop="false">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="1" loop="false">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,72 @@
+<item.SpriteItem id="5398" name="Admin Witch NPC" desc="An admin witch robot" tags="admin,misc" icon="items/base/shared/icon_witchnpc.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.4" max="0.49,0.8,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_62_cloud_shadow.png" cols="1" rows="1"/>
+    <texture id="cloud" source="items/base/shared/witch.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.4" max="0.49,0.8,0.4"/>
+      <layers>
+        <layer id="cloud_01" texture="cloud" y="8">
+          <view angle="45" y="12"/>
+          <view angle="135" y="12" hm="true"/>
+          <view angle="225" y="12" hm="true"/>
+          <view angle="315" y="12"/>
+        </layer>
+        <layer id="cloud_02" texture="cloud" y="8">
+          <view angle="45" y="13"/>
+          <view angle="135" y="13" hm="true"/>
+          <view angle="225" y="13" hm="true"/>
+          <view angle="315" y="13"/>
+        </layer>
+        <layer id="cloud_03" texture="cloud" y="8">
+          <view angle="45" y="14"/>
+          <view angle="135" y="14" hm="true"/>
+          <view angle="225" y="14" hm="true"/>
+          <view angle="315" y="14"/>
+        </layer>
+        <layer id="shadow" texture="shadow" y="8">
+          <view angle="45" y="45"/>
+          <view angle="135" y="45" hm="true"/>
+          <view angle="225" y="45"/>
+          <view angle="315" y="45" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="shadow"/>
+          <layerref id="cloud_01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="shadow"/>
+          <layerref id="cloud_02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="shadow"/>
+          <layerref id="cloud_03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="shadow"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

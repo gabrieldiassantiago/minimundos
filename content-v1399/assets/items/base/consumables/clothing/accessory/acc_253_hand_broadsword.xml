@@ -1,0 +1,34 @@
+<item.SpriteItem id="0" name="BroadSword" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Sword" source="items/base/consumables/clothing/accessory/acc_253_hand_broadsword.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Broadsword" texture="Sword">
+          <view angle="0" x="10" y="60"/>
+          <view angle="45" col="1" x="9" y="53"/>
+          <view angle="90" col="2" x="1" y="65"/>
+          <view angle="135" col="1" x="-13" y="52" hm="true"/>
+          <view angle="180" x="-8" y="60" hm="true"/>
+          <view angle="225" col="4" x="-2" y="54" hm="true"/>
+          <view angle="270" col="3" x="-3" y="56"/>
+          <view angle="315" col="4" x="2" y="55"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations>
+        <animation id="On" framerate="2"/>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

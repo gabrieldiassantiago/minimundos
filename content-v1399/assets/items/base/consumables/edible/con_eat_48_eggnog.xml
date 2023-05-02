@@ -1,0 +1,42 @@
+<item.SpriteItem id="2916" name="Capuccino Gelado" desc="Um pouco de café com toque de canela batido para o verão." tags="stackable,group_good,consumable,drink,actionbar,group_edible,edible,xmas,rare,action_drinkable" icon="items/base/consumables/edible/icon_con_eat_48_eggnog.png" price="6" tokens="60" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.08,0,-0.08" max="0.08,0.35,0.08"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_drinkable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_drinkable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_drinkable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_drinkable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="food-100"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture id="mug" source="items/base/consumables/edible/con_eat_48_eggnog.png" cols="1" rows="1"/>
+    <texture id="handle" source="items/base/consumables/edible/con_eat_48_eggnog_handle.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.08,0,-0.08" max="0.08,0.35,0.08"/>
+      <layers>
+        <layer id="mug" texture="mug">
+          <view angle="45" y="17"/>
+          <view angle="135" y="17"/>
+          <view angle="225" y="17"/>
+          <view angle="315" y="17"/>
+        </layer>
+        <layer id="handle" texture="handle">
+          <view angle="45" x="10"/>
+          <view angle="135" x="-9" hm="true"/>
+          <view angle="225" col="2" x="-10" y="-6" hm="true"/>
+          <view angle="315" col="2" x="11" y="-6"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

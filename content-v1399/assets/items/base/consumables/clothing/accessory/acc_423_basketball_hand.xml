@@ -1,0 +1,166 @@
+<item.SpriteItem id="0" name="mic" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="basketball" source="items/base/consumables/clothing/accessory/acc_423_basketball_hand.png" cols="4" rows="2"/>
+    <texture id="effect" source="items/base/consumables/clothing/accessory/acc_423_effect_hand.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="ball_01" texture="basketball">
+          <view angle="0" x="-5" y="-6"/>
+          <view angle="45" x="-2" y="-9"/>
+          <view angle="90" y="-10"/>
+          <view angle="135" y="-10"/>
+          <view angle="180" x="5" y="-8"/>
+          <view angle="225" x="4" y="-6"/>
+          <view angle="270" y="-10"/>
+          <view angle="315" y="-5"/>
+        </layer>
+        <layer id="ball_02" texture="basketball">
+          <view angle="0" col="1" x="-5" y="-6"/>
+          <view angle="45" col="1" x="-2" y="-9"/>
+          <view angle="90" col="1" y="-10"/>
+          <view angle="135" col="1" y="-10"/>
+          <view angle="180" col="1" x="5" y="-8"/>
+          <view angle="225" col="1" x="4" y="-6"/>
+          <view angle="270" col="1" y="-10"/>
+          <view angle="315" col="1" y="-5"/>
+        </layer>
+        <layer id="ball_03" texture="basketball">
+          <view angle="0" col="2" x="-5" y="-6"/>
+          <view angle="45" col="2" x="-2" y="-9"/>
+          <view angle="90" col="2" y="-10"/>
+          <view angle="135" col="2" y="-10"/>
+          <view angle="180" col="2" x="5" y="-8"/>
+          <view angle="225" col="2" x="4" y="-6"/>
+          <view angle="270" col="2" y="-10"/>
+          <view angle="315" col="2" y="-5"/>
+        </layer>
+        <layer id="ball_04" texture="basketball">
+          <view angle="0" col="3" x="-5" y="-6"/>
+          <view angle="45" col="3" x="-2" y="-9"/>
+          <view angle="90" col="3" y="-10"/>
+          <view angle="135" col="3" y="-10"/>
+          <view angle="180" col="3" x="5" y="-8"/>
+          <view angle="225" col="3" x="4" y="-6"/>
+          <view angle="270" col="3" y="-10"/>
+          <view angle="315" col="3" y="-5"/>
+        </layer>
+        <layer id="ball_05" texture="basketball">
+          <view angle="0" row="1" x="-5" y="-6"/>
+          <view angle="45" row="1" x="-2" y="-9"/>
+          <view angle="90" row="1" y="-10"/>
+          <view angle="135" row="1" y="-10"/>
+          <view angle="180" row="1" x="5" y="-8"/>
+          <view angle="225" row="1" x="4" y="-6"/>
+          <view angle="270" row="1" y="-10"/>
+          <view angle="315" row="1" y="-5"/>
+        </layer>
+        <layer id="ball_06" texture="basketball">
+          <view angle="0" col="1" row="1" x="-5" y="-6"/>
+          <view angle="45" col="1" row="1" x="-2" y="-9"/>
+          <view angle="90" col="1" row="1" y="-10"/>
+          <view angle="135" col="1" row="1" y="-10"/>
+          <view angle="180" col="1" row="1" x="5" y="-8"/>
+          <view angle="225" col="1" row="1" x="4" y="-6"/>
+          <view angle="270" col="1" row="1" y="-10"/>
+          <view angle="315" col="1" row="1" y="-5"/>
+        </layer>
+        <layer id="ball_07" texture="basketball">
+          <view angle="0" col="2" row="1" x="-5" y="-6"/>
+          <view angle="45" col="2" row="1" x="-2" y="-9"/>
+          <view angle="90" col="2" row="1" y="-10"/>
+          <view angle="135" col="2" row="1" y="-10"/>
+          <view angle="180" col="2" row="1" x="5" y="-8"/>
+          <view angle="225" col="2" row="1" x="4" y="-6"/>
+          <view angle="270" col="2" row="1" y="-10"/>
+          <view angle="315" col="2" row="1" y="-5"/>
+        </layer>
+        <layer id="ball_08" texture="basketball">
+          <view angle="0" col="3" row="1" x="-5" y="-6"/>
+          <view angle="45" col="3" row="1" x="-2" y="-9"/>
+          <view angle="90" col="3" row="1" y="-10"/>
+          <view angle="135" col="3" row="1" y="-10"/>
+          <view angle="180" col="3" row="1" x="5" y="-8"/>
+          <view angle="225" col="3" row="1" x="4" y="-6"/>
+          <view angle="270" col="3" row="1" y="-10"/>
+          <view angle="315" col="3" row="1" y="-5"/>
+        </layer>
+        <layer id="effect_01" texture="effect">
+          <view angle="0" x="-6" y="-16"/>
+          <view angle="45" x="-3" y="-20"/>
+          <view angle="90" y="-20"/>
+          <view angle="135" y="-20"/>
+          <view angle="180" x="5" y="-18"/>
+          <view angle="225" x="4" y="-15"/>
+          <view angle="270" y="-20"/>
+          <view angle="315" y="-15"/>
+        </layer>
+        <layer id="effect_02" texture="effect">
+          <view angle="0" col="1" x="-6" y="-16"/>
+          <view angle="45" col="1" x="-3" y="-20"/>
+          <view angle="90" col="1" y="-20"/>
+          <view angle="135" col="1" y="-20"/>
+          <view angle="180" col="1" x="5" y="-18"/>
+          <view angle="225" col="1" x="4" y="-15"/>
+          <view angle="270" col="1" y="-20"/>
+          <view angle="315" col="1" y="-15"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="ball_01">
+          <layerref id="ball_01"/>
+          <layerref id="effect_02" a="0.5"/>
+        </frame>
+        <frame id="ball_02">
+          <layerref id="ball_02"/>
+          <layerref id="effect_02" a="0.5"/>
+        </frame>
+        <frame id="ball_03">
+          <layerref id="ball_03"/>
+          <layerref id="effect_01" a="0.5"/>
+        </frame>
+        <frame id="ball_04">
+          <layerref id="ball_04"/>
+          <layerref id="effect_01" a="0.5"/>
+        </frame>
+        <frame id="ball_05">
+          <layerref id="ball_05"/>
+          <layerref id="effect_02" a="0.5"/>
+        </frame>
+        <frame id="ball_06">
+          <layerref id="ball_06"/>
+          <layerref id="effect_02" a="0.5"/>
+        </frame>
+        <frame id="ball_07">
+          <layerref id="ball_07"/>
+          <layerref id="effect_01" a="0.5"/>
+        </frame>
+        <frame id="ball_08">
+          <layerref id="ball_08"/>
+          <layerref id="effect_01" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="15">
+          <frameref id="ball_01"/>
+          <frameref id="ball_02"/>
+          <frameref id="ball_03"/>
+          <frameref id="ball_04"/>
+          <frameref id="ball_05"/>
+          <frameref id="ball_06"/>
+          <frameref id="ball_07"/>
+          <frameref id="ball_05"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,60 @@
+<item.SpriteItem id="0" name="Gigabot" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0.05,-0.3" max="0.3,0.66,0.3"/>
+  </volume>
+  <textures>
+    <texture id="head" source="items/base/consumables/head/con_head_72_robot_lvl3.png" cols="5" rows="1"/>
+    <texture id="eye light" source="items/base/shared/s_fx_flare.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" y="0.05">
+      <box min="-0.3,0,-0.3" max="0.3,0.61,0.3"/>
+      <layers>
+        <layer id="head" texture="head" y="16">
+          <view angle="0" x="2" y="5" hm="true"/>
+          <view angle="45" col="1" x="3" y="8"/>
+          <view angle="90" col="2" y="8"/>
+          <view angle="135" col="1" x="-3" y="8" hm="true"/>
+          <view angle="180" x="-2" y="5"/>
+          <view angle="225" col="3" y="4"/>
+          <view angle="270" col="4" y="7"/>
+          <view angle="315" col="3" y="4" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="left eye" texture="eye light" align="middle">
+          <view angle="0" alpha="0"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" x="3" y="-3"/>
+          <view angle="135" x="-2" y="-2"/>
+          <view angle="180" x="-6" y="-5"/>
+          <view angle="225" alpha="0"/>
+          <view angle="270" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="right eye" texture="eye light" align="middle">
+          <view angle="0" x="10" y="-4"/>
+          <view angle="45" x="5" y="-2"/>
+          <view angle="90" x="-2" y="-4"/>
+          <view angle="135" alpha="0"/>
+          <view angle="180" alpha="0"/>
+          <view angle="225" alpha="0"/>
+          <view angle="270" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="eyes">
+          <layerref id="left eye" color="0xffff95"/>
+          <layerref id="right eye" color="0xffff95"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

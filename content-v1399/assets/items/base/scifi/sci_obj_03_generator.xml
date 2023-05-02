@@ -1,0 +1,487 @@
+<item.SpriteItem id="1792" name="Gerador de Plasma" desc="Uma máquina capaz de absorver a energia de células de plasma." tags="misc" icon="items/base/scifi/icon_sci_obj_03_generator.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="165" tokens="1650">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.5,0.49"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Off" label="Desligar" state="true" event="animate(00)"/>
+    <action id="Green On" state="true" event="animate(01)"/>
+    <action id="Yellow On" state="true" event="animate(02)"/>
+    <action id="White On" state="true" event="animate(03)"/>
+    <action id="Green and Yellow On" state="true" event="animate(04)"/>
+    <action id="Green and White On" state="true" event="animate(05)"/>
+    <action id="Yellow and White On" state="true" event="animate(06)"/>
+    <action id="All On" state="true" event="animate(07)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="00" value="Off"/>
+    <entry key="01" value="Green On"/>
+    <entry key="02" value="Yellow On"/>
+    <entry key="03" value="White On"/>
+    <entry key="04" value="Green and Yellow On"/>
+    <entry key="05" value="Green and White On"/>
+    <entry key="06" value="Yellow and White On"/>
+    <entry key="07" value="All On"/>
+    <entry key="count" value="8"/>
+  </data>
+  <textures>
+    <texture id="generator" source="items/base/scifi/sci_obj_03_generator.png" cols="2" rows="1"/>
+    <texture id="cells" source="items/base/scifi/sci_obj_03_cells.png" cols="3" rows="1"/>
+    <texture id="diffuse" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="details" source="items/base/scifi/sci_obj_03_generator_details.png" cols="3" rows="2"/>
+    <texture id="intense" source="items/base/shared/s_fx_flare_generator.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Generator">
+      <box min="-0.49,0,-0.49" max="0.49,2.5,0.49"/>
+      <layers>
+        <layer id="base" texture="generator">
+          <view angle="45" x="1" y="28"/>
+          <view angle="135" x="-1" y="28" hm="true"/>
+          <view angle="225" x="1" y="28"/>
+          <view angle="315" x="-1" y="28" hm="true"/>
+        </layer>
+        <layer id="top" texture="generator">
+          <view angle="45" col="1" x="1" y="-80"/>
+          <view angle="135" col="1" x="-1" y="-80" hm="true"/>
+          <view angle="225" col="1" x="1" y="-80"/>
+          <view angle="315" col="1" x="-1" y="-80" hm="true"/>
+        </layer>
+        <layer id="cell green" texture="cells">
+          <view angle="45" x="-25" y="-59"/>
+          <view angle="135" x="25" y="-59" hm="true"/>
+          <view angle="225" x="-25" y="-59"/>
+          <view angle="315" x="25" y="-59" hm="true"/>
+        </layer>
+        <layer id="cell yellow" texture="cells">
+          <view angle="45" col="1" x="-16" y="-54"/>
+          <view angle="135" col="1" x="16" y="-54" hm="true"/>
+          <view angle="225" col="1" x="-16" y="-54"/>
+          <view angle="315" col="1" x="16" y="-54" hm="true"/>
+        </layer>
+        <layer id="cell white" texture="cells">
+          <view angle="45" col="2" x="-7" y="-51"/>
+          <view angle="135" col="2" x="7" y="-51" hm="true"/>
+          <view angle="225" col="2" x="-7" y="-51"/>
+          <view angle="315" col="2" x="7" y="-51" hm="true"/>
+        </layer>
+        <layer id="case" texture="details">
+          <view angle="45" y="-32"/>
+          <view angle="135" y="-32" hm="true"/>
+          <view angle="225" y="-32"/>
+          <view angle="315" y="-32" hm="true"/>
+        </layer>
+        <layer id="screen alt" texture="details">
+          <view angle="45" col="1" x="-28" y="-27"/>
+          <view angle="135" col="1" x="28" y="-27" hm="true"/>
+          <view angle="225" col="1" x="-28" y="-27"/>
+          <view angle="315" col="1" x="28" y="-27" hm="true"/>
+        </layer>
+        <layer id="33% power" texture="details">
+          <view angle="45" col="2" x="1" y="-116"/>
+          <view angle="135" col="2" x="-1" y="-116" hm="true"/>
+          <view angle="225" col="2" x="1" y="-116"/>
+          <view angle="315" col="2" x="-1" y="-116" hm="true"/>
+        </layer>
+        <layer id="66% power" texture="details">
+          <view angle="45" row="1" x="2" y="-123"/>
+          <view angle="135" row="1" x="-2" y="-123" hm="true"/>
+          <view angle="225" row="1" x="2" y="-123"/>
+          <view angle="315" row="1" x="-2" y="-123" hm="true"/>
+        </layer>
+        <layer id="full power!" texture="details">
+          <view angle="45" col="1" row="1" x="-1" y="-144"/>
+          <view angle="135" col="1" row="1" x="1" y="-144" hm="true"/>
+          <view angle="225" col="1" row="1" x="-1" y="-144"/>
+          <view angle="315" col="1" row="1" x="1" y="-144" hm="true"/>
+        </layer>
+        <layer id="floor light" texture="details">
+          <view angle="45" col="2" row="1" x="-27" y="18"/>
+          <view angle="135" col="2" row="1" x="27" y="18" hm="true"/>
+          <view angle="225" col="2" row="1" x="-27" y="18"/>
+          <view angle="315" col="2" row="1" x="27" y="18" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off 01">
+          <layerref id="base"/>
+          <layerref id="top"/>
+        </frame>
+        <frame id="off 02">
+          <layerref id="base"/>
+          <layerref id="top"/>
+          <layerref id="screen alt"/>
+        </frame>
+        <frame id="green on 01">
+          <layerref id="base"/>
+          <layerref id="cell green"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+        </frame>
+        <frame id="green on 02">
+          <layerref id="base"/>
+          <layerref id="cell green"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+          <layerref id="screen alt"/>
+        </frame>
+        <frame id="yellow on 01">
+          <layerref id="base"/>
+          <layerref id="cell yellow"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+        </frame>
+        <frame id="yellow on 02">
+          <layerref id="base"/>
+          <layerref id="cell yellow"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+          <layerref id="screen alt"/>
+        </frame>
+        <frame id="white on 01">
+          <layerref id="base"/>
+          <layerref id="cell white"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+        </frame>
+        <frame id="white on 02">
+          <layerref id="base"/>
+          <layerref id="cell white"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+          <layerref id="screen alt"/>
+        </frame>
+        <frame id="green &amp; yellow on 01">
+          <layerref id="base"/>
+          <layerref id="cell green"/>
+          <layerref id="cell yellow"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+          <layerref id="66% power"/>
+        </frame>
+        <frame id="green &amp; yellow on 02">
+          <layerref id="base"/>
+          <layerref id="cell green"/>
+          <layerref id="cell yellow"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+          <layerref id="66% power"/>
+          <layerref id="screen alt"/>
+        </frame>
+        <frame id="green &amp; white on 01">
+          <layerref id="base"/>
+          <layerref id="cell green"/>
+          <layerref id="cell white"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+          <layerref id="66% power"/>
+        </frame>
+        <frame id="green &amp; white on 02">
+          <layerref id="base"/>
+          <layerref id="cell green"/>
+          <layerref id="cell white"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+          <layerref id="66% power"/>
+          <layerref id="screen alt"/>
+        </frame>
+        <frame id="yellow and white on 01">
+          <layerref id="base"/>
+          <layerref id="cell yellow"/>
+          <layerref id="cell white"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+          <layerref id="66% power"/>
+        </frame>
+        <frame id="yellow and white on 02">
+          <layerref id="base"/>
+          <layerref id="cell yellow"/>
+          <layerref id="cell white"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+          <layerref id="66% power"/>
+          <layerref id="screen alt"/>
+        </frame>
+        <frame id="all on 01">
+          <layerref id="base"/>
+          <layerref id="cell green"/>
+          <layerref id="cell yellow"/>
+          <layerref id="cell white"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+          <layerref id="66% power"/>
+          <layerref id="full power!"/>
+          <layerref id="floor light"/>
+        </frame>
+        <frame id="all on 02">
+          <layerref id="base"/>
+          <layerref id="cell green"/>
+          <layerref id="cell yellow"/>
+          <layerref id="cell white"/>
+          <layerref id="case"/>
+          <layerref id="top"/>
+          <layerref id="33% power"/>
+          <layerref id="66% power"/>
+          <layerref id="full power!"/>
+          <layerref id="floor light"/>
+          <layerref id="screen alt"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="2">
+          <frameref id="off 01"/>
+          <frameref id="off 02"/>
+        </animation>
+        <animation id="01" framerate="2">
+          <frameref id="green on 01"/>
+          <frameref id="green on 02"/>
+        </animation>
+        <animation id="02" framerate="2">
+          <frameref id="yellow on 01"/>
+          <frameref id="yellow on 02"/>
+        </animation>
+        <animation id="03" framerate="2">
+          <frameref id="white on 01"/>
+          <frameref id="white on 02"/>
+        </animation>
+        <animation id="04" framerate="2">
+          <frameref id="green &amp; yellow on 01"/>
+          <frameref id="green &amp; yellow on 02"/>
+        </animation>
+        <animation id="05" framerate="2">
+          <frameref id="green &amp; white on 01"/>
+          <frameref id="green &amp; white on 02"/>
+        </animation>
+        <animation id="06" framerate="2">
+          <frameref id="yellow and white on 01"/>
+          <frameref id="yellow and white on 02"/>
+        </animation>
+        <animation id="07" framerate="2">
+          <frameref id="all on 01"/>
+          <frameref id="all on 02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="light" texture="diffuse" align="middle">
+          <view angle="45" x="-8" y="-16"/>
+          <view angle="135" x="8" y="-16"/>
+          <view angle="225" x="-8" y="-16"/>
+          <view angle="315" x="8" y="-16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="light" color="0xc9d4ec" a="0.1"/>
+        </frame>
+        <frame id="green on">
+          <layerref id="light" color="0x6dff9a" a="0.3"/>
+        </frame>
+        <frame id="yellow on">
+          <layerref id="light" color="0xffffa6" a="0.3"/>
+        </frame>
+        <frame id="white on">
+          <layerref id="light" a="0.3"/>
+        </frame>
+        <frame id="green &amp; yellow on">
+          <layerref id="light" color="0xd8ffb8" a="0.6"/>
+        </frame>
+        <frame id="green &amp; white on">
+          <layerref id="light" color="0xb5ffcc" a="0.6"/>
+        </frame>
+        <frame id="yellow and white on">
+          <layerref id="light" color="0xffffd2" a="0.6"/>
+        </frame>
+        <frame id="all on">
+          <layerref id="light" color="0xf3feef"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="01" framerate="4">
+          <frameref id="green on"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="yellow on"/>
+        </animation>
+        <animation id="03" framerate="4">
+          <frameref id="white on"/>
+        </animation>
+        <animation id="04" framerate="4">
+          <frameref id="green &amp; yellow on"/>
+        </animation>
+        <animation id="05" framerate="4">
+          <frameref id="green &amp; white on"/>
+        </animation>
+        <animation id="06" framerate="4">
+          <frameref id="yellow and white on"/>
+        </animation>
+        <animation id="07" framerate="4">
+          <frameref id="all on"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="screen" texture="intense" align="middle">
+          <view angle="45" x="-12" y="-20"/>
+          <view angle="135" x="14" y="-20" hm="true"/>
+          <view angle="225" x="-12" y="-20"/>
+          <view angle="315" x="14" y="-20" hm="true"/>
+        </layer>
+        <layer id="33%" texture="intense" align="middle">
+          <view angle="45" col="1" x="2" y="-66"/>
+          <view angle="135" col="1" x="1" y="-66" hm="true"/>
+          <view angle="225" col="1" x="2" y="-66"/>
+          <view angle="315" col="1" y="-66" hm="true"/>
+        </layer>
+        <layer id="66%" texture="intense" align="middle">
+          <view angle="45" col="1" x="2" y="-71"/>
+          <view angle="135" col="1" x="1" y="-71" hm="true"/>
+          <view angle="225" col="1" x="2" y="-71"/>
+          <view angle="315" col="1" y="-71" hm="true"/>
+        </layer>
+        <layer id="100%" texture="intense" align="middle">
+          <view angle="45" col="1" x="2" y="-76"/>
+          <view angle="135" col="1" x="1" y="-76" hm="true"/>
+          <view angle="225" col="1" x="2" y="-76"/>
+          <view angle="315" col="1" y="-76" hm="true"/>
+        </layer>
+        <layer id="full power" texture="intense" align="middle">
+          <view angle="45" col="2" x="-7" y="-86"/>
+          <view angle="135" col="2" x="11" y="-86" hm="true"/>
+          <view angle="225" col="2" x="-7" y="-86"/>
+          <view angle="315" col="2" x="11" y="-86" hm="true"/>
+        </layer>
+        <layer id="floor light" texture="intense" align="middle">
+          <view angle="45" col="3" x="-12"/>
+          <view angle="135" col="3" x="12" hm="true"/>
+          <view angle="225" col="3" x="-12"/>
+          <view angle="315" col="3" x="12" hm="true"/>
+        </layer>
+        <layer id="green cell" texture="intense" align="middle">
+          <view angle="45" col="4" x="-10" y="-40"/>
+          <view angle="135" col="4" x="13" y="-40" hm="true"/>
+          <view angle="225" col="4" x="-10" y="-40"/>
+          <view angle="315" col="4" x="13" y="-40" hm="true"/>
+        </layer>
+        <layer id="yellow cell" texture="intense" align="middle">
+          <view angle="45" col="4" x="-6" y="-38"/>
+          <view angle="135" col="4" x="10" y="-38" hm="true"/>
+          <view angle="225" col="4" x="-7" y="-38"/>
+          <view angle="315" col="4" x="10" y="-38" hm="true"/>
+        </layer>
+        <layer id="white cell" texture="intense" align="middle">
+          <view angle="45" col="4" x="-2" y="-38"/>
+          <view angle="135" col="4" x="5" y="-36" hm="true"/>
+          <view angle="225" col="4" x="-2" y="-38"/>
+          <view angle="315" col="4" x="5" y="-36" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="screen" color="0x6996ef" a="0.3"/>
+        </frame>
+        <frame id="green on">
+          <layerref id="screen" color="0x6996ef" a="0.35"/>
+          <layerref id="33%" color="0xe3e4f9" a="0.5"/>
+          <layerref id="green cell" color="0x9cfcba" a="0.7"/>
+        </frame>
+        <frame id="yellow on">
+          <layerref id="screen" color="0x6996ef" a="0.35"/>
+          <layerref id="33%" color="0xe3e4f9" a="0.5"/>
+          <layerref id="yellow cell" color="0xf4f395" a="0.7"/>
+        </frame>
+        <frame id="white on">
+          <layerref id="screen" color="0x6996ef" a="0.35"/>
+          <layerref id="33%" color="0xe3e4f9" a="0.5"/>
+          <layerref id="white cell" a="0.7"/>
+        </frame>
+        <frame id="green &amp; yellow on">
+          <layerref id="screen" color="0x6996ef" a="0.35"/>
+          <layerref id="33%" color="0xe3e4f9" a="0.5"/>
+          <layerref id="66%" color="0xe3e4f9" a="0.5"/>
+          <layerref id="green cell" color="0x9cfcba" a="0.6"/>
+          <layerref id="yellow cell" color="0xf4f395" a="0.6"/>
+        </frame>
+        <frame id="green &amp; white on">
+          <layerref id="screen" color="0x6996ef" a="0.35"/>
+          <layerref id="33%" color="0xe3e4f9" a="0.5"/>
+          <layerref id="66%" color="0xe3e4f9" a="0.5"/>
+          <layerref id="green cell" color="0x9cfcba" a="0.6"/>
+          <layerref id="white cell" a="0.6"/>
+        </frame>
+        <frame id="yellow &amp; white on">
+          <layerref id="screen" color="0x6996ef" a="0.35"/>
+          <layerref id="33%" color="0xe3e4f9" a="0.5"/>
+          <layerref id="66%" color="0xe3e4f9" a="0.5"/>
+          <layerref id="yellow cell" color="0xf4f395" a="0.6"/>
+          <layerref id="white cell" a="0.6"/>
+        </frame>
+        <frame id="all on">
+          <layerref id="screen" color="0x6996ef" a="0.35"/>
+          <layerref id="33%" color="0xe3e4f9" a="0.5"/>
+          <layerref id="66%" color="0xe3e4f9" a="0.5"/>
+          <layerref id="100%" color="0xe3e4f9" a="0.5"/>
+          <layerref id="full power" color="0xe3e4f9" a="0.5"/>
+          <layerref id="floor light" color="0xe3e4f9" a="0.5"/>
+          <layerref id="green cell" color="0x9cfcba" a="0.5"/>
+          <layerref id="yellow cell" color="0xf4f395" a="0.5"/>
+          <layerref id="white cell" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="01" framerate="4">
+          <frameref id="green on"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="yellow on"/>
+        </animation>
+        <animation id="03" framerate="4">
+          <frameref id="white on"/>
+        </animation>
+        <animation id="04" framerate="4">
+          <frameref id="green &amp; yellow on"/>
+        </animation>
+        <animation id="05" framerate="4">
+          <frameref id="green &amp; white on"/>
+        </animation>
+        <animation id="06" framerate="4">
+          <frameref id="yellow &amp; white on"/>
+        </animation>
+        <animation id="07" framerate="4">
+          <frameref id="all on"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

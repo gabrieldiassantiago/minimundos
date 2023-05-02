@@ -1,0 +1,411 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0.2,0" max="0,0.2,0"/>
+  </volume>
+  <textures>
+    <texture id="cover" source="items/base/consumables/feet/con_feet_108_ufo_cover.png" cols="5" rows="1"/>
+    <texture id="glass" source="items/base/consumables/feet/con_feet_108_ufo_glass.png" cols="2" rows="1"/>
+    <texture id="glow" source="items/base/consumables/feet/con_feet_108_ufo_glow.png" cols="1" rows="1"/>
+    <texture id="angled" source="items/base/consumables/feet/con_feet_108_ufo_angled.png" cols="2" rows="1"/>
+    <texture id="frontback" source="items/base/consumables/feet/con_feet_108_ufo_frontback.png" cols="2" rows="1"/>
+    <texture id="side" source="items/base/consumables/feet/con_feet_108_ufo_side.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.2">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="cover" texture="cover">
+          <view angle="0" col="2" x="20" y="6"/>
+          <view angle="45" x="17" y="5"/>
+          <view angle="90" col="1" y="10"/>
+          <view angle="135" x="-18" y="5" hm="true"/>
+          <view angle="180" col="2" x="-21" y="6" hm="true"/>
+          <view angle="225" col="3" x="8" y="5" hm="true"/>
+          <view angle="270" col="4" x="2" y="5"/>
+          <view angle="315" col="3" x="-9" y="5"/>
+        </layer>
+        <layer id="glass" texture="glass">
+          <view angle="0" x="5" y="-23" hm="true"/>
+          <view angle="45" x="-5" y="-24" hm="true"/>
+          <view angle="90" x="4" y="-19"/>
+          <view angle="135" x="5" y="-24"/>
+          <view angle="180" x="-5" y="-24"/>
+          <view angle="225" y="-24"/>
+          <view angle="270" x="4" y="-24"/>
+          <view angle="315" y="-24" hm="true"/>
+        </layer>
+        <layer id="angled" texture="angled">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="-1" y="6"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" x="1" y="6" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="1" x="-5" y="6"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="1" x="5" y="6" hm="true"/>
+        </layer>
+        <layer id="frontback" texture="frontback">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" y="11"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="1" y="6"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="side" texture="side">
+          <view angle="0" x="9" y="7"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" x="-9" y="7" hm="true"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="glow_01" texture="glow">
+          <view angle="0" x="-56" y="-73" hm="true"/>
+          <view angle="45" x="-68" y="-71"/>
+          <view angle="90" x="-67" y="-69"/>
+          <view angle="135" x="-42" y="-84" alpha="0.7" hm="true"/>
+          <view angle="180" x="-53" y="-84" alpha="0.7"/>
+          <view angle="225" x="-49" y="-86" alpha="0.7"/>
+          <view angle="270" x="-67" y="-74"/>
+          <view angle="315" x="-60" y="-74" hm="true"/>
+        </layer>
+        <layer id="glow_02" texture="glow">
+          <view angle="0" x="-67" y="-42" hm="true"/>
+          <view angle="45" x="-79" y="-44"/>
+          <view angle="90" x="-78" y="-39"/>
+          <view angle="135" x="-75" y="-58" hm="true"/>
+          <view angle="180" x="-86" y="-58"/>
+          <view angle="225" x="-83" y="-59"/>
+          <view angle="270" x="-79" y="-43"/>
+          <view angle="315" x="-71" y="-43" hm="true"/>
+        </layer>
+        <layer id="glow_03" texture="glow">
+          <view angle="0" x="-33" y="-15" hm="true"/>
+          <view angle="45" x="-45" y="-17"/>
+          <view angle="90" x="-46" y="-11"/>
+          <view angle="135" x="-64" y="-28" hm="true"/>
+          <view angle="180" x="-76" y="-28"/>
+          <view angle="225" x="-71" y="-27"/>
+          <view angle="270" x="-45" y="-17"/>
+          <view angle="315" x="-38" y="-17" hm="true"/>
+        </layer>
+        <layer id="glow_04" texture="glow">
+          <view angle="0" x="25" y="-10" hm="true"/>
+          <view angle="45" x="13" y="-11"/>
+          <view angle="90" x="13" y="-7"/>
+          <view angle="135" x="-14" y="-12" hm="true"/>
+          <view angle="180" x="-26" y="-11"/>
+          <view angle="225" x="-21" y="-12"/>
+          <view angle="270" x="13" y="-12"/>
+          <view angle="315" x="19" y="-12" hm="true"/>
+        </layer>
+        <layer id="glow_05" texture="glow">
+          <view angle="0" x="75" y="-28" hm="true"/>
+          <view angle="45" x="63" y="-28"/>
+          <view angle="90" x="63" y="-25"/>
+          <view angle="135" x="44" y="-19" hm="true"/>
+          <view angle="180" x="32" y="-18"/>
+          <view angle="225" x="37" y="-19"/>
+          <view angle="270" x="63" y="-30"/>
+          <view angle="315" x="70" y="-29" hm="true"/>
+        </layer>
+        <layer id="glow_06" texture="glow">
+          <view angle="0" x="85" y="-59" hm="true"/>
+          <view angle="45" x="74" y="-59"/>
+          <view angle="90" x="75" y="-55"/>
+          <view angle="135" x="78" y="-45" hm="true"/>
+          <view angle="180" x="66" y="-43"/>
+          <view angle="225" x="70" y="-44"/>
+          <view angle="270" x="75" y="-60"/>
+          <view angle="315" x="81" y="-60" hm="true"/>
+        </layer>
+        <layer id="glow_07" texture="glow">
+          <view angle="0" x="52" y="-83" alpha="0.7" hm="true"/>
+          <view angle="45" x="42" y="-83" alpha="0.7"/>
+          <view angle="90" x="42" y="-77" alpha="0.7"/>
+          <view angle="135" x="68" y="-72" hm="true"/>
+          <view angle="180" x="54" y="-72"/>
+          <view angle="225" x="59" y="-72"/>
+          <view angle="270" x="41" y="-83" alpha="0.7"/>
+          <view angle="315" x="48" y="-85" alpha="0.7" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Walk00">
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_01"/>
+        </frame>
+        <frame id="Walk01">
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_02"/>
+        </frame>
+        <frame id="Walk02">
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_03"/>
+        </frame>
+        <frame id="Walk03">
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_04"/>
+        </frame>
+        <frame id="Walk04">
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_05"/>
+        </frame>
+        <frame id="Walk05">
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_06"/>
+        </frame>
+        <frame id="Walk06">
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_07"/>
+        </frame>
+        <frame id="Sit"/>
+        <frame id="Idle01">
+          <layerref id="angled" a="0"/>
+          <layerref id="frontback" a="0"/>
+          <layerref id="side" a="0"/>
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_01" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="angled" y="1" a="0"/>
+          <layerref id="frontback" y="1" a="0"/>
+          <layerref id="side" y="1" a="0"/>
+          <layerref id="cover" y="1"/>
+          <layerref id="glass" y="1"/>
+          <layerref id="glow_02" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="angled" y="2" a="0"/>
+          <layerref id="frontback" y="2" a="0"/>
+          <layerref id="side" y="2" a="0"/>
+          <layerref id="cover" y="2"/>
+          <layerref id="glass" y="2"/>
+          <layerref id="glow_03" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle04">
+          <layerref id="angled" a="0"/>
+          <layerref id="frontback" a="0"/>
+          <layerref id="side" a="0"/>
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_04" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle05">
+          <layerref id="angled" y="1" a="0"/>
+          <layerref id="frontback" y="1" a="0"/>
+          <layerref id="side" y="1" a="0"/>
+          <layerref id="cover" y="1"/>
+          <layerref id="glass" y="1"/>
+          <layerref id="glow_05" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle06">
+          <layerref id="angled" y="2" a="0"/>
+          <layerref id="frontback" y="2" a="0"/>
+          <layerref id="side" y="2" a="0"/>
+          <layerref id="cover" y="2"/>
+          <layerref id="glass" y="2"/>
+          <layerref id="glow_06" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle07">
+          <layerref id="angled" a="0"/>
+          <layerref id="frontback" a="0"/>
+          <layerref id="side" a="0"/>
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_07" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle08">
+          <layerref id="angled" y="1" a="0"/>
+          <layerref id="frontback" y="1" a="0"/>
+          <layerref id="side" y="1" a="0"/>
+          <layerref id="cover" y="1"/>
+          <layerref id="glass" y="1"/>
+          <layerref id="glow_01" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle09">
+          <layerref id="angled" y="2" a="0"/>
+          <layerref id="frontback" y="2" a="0"/>
+          <layerref id="side" y="2" a="0"/>
+          <layerref id="cover" y="2"/>
+          <layerref id="glass" y="2"/>
+          <layerref id="glow_02" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle10">
+          <layerref id="angled" y="1" a="0"/>
+          <layerref id="frontback" y="1" a="0"/>
+          <layerref id="side" y="1" a="0"/>
+          <layerref id="cover" y="1"/>
+          <layerref id="glass" y="1"/>
+          <layerref id="glow_03" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle17">
+          <layerref id="angled" a="0"/>
+          <layerref id="frontback" a="0"/>
+          <layerref id="side" a="0"/>
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_03" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle18">
+          <layerref id="angled" y="1" a="0"/>
+          <layerref id="frontback" y="1" a="0"/>
+          <layerref id="side" y="1" a="0"/>
+          <layerref id="cover" y="1"/>
+          <layerref id="glass" y="1"/>
+          <layerref id="glow_04" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle19">
+          <layerref id="angled" y="2" a="0"/>
+          <layerref id="frontback" y="2" a="0"/>
+          <layerref id="side" y="2" a="0"/>
+          <layerref id="cover" y="2"/>
+          <layerref id="glass" y="2"/>
+          <layerref id="glow_05" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle20">
+          <layerref id="angled" y="1" a="0"/>
+          <layerref id="frontback" y="1" a="0"/>
+          <layerref id="side" y="1" a="0"/>
+          <layerref id="cover" y="1"/>
+          <layerref id="glass" y="1"/>
+          <layerref id="glow_06" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle21">
+          <layerref id="angled" y="2" a="0"/>
+          <layerref id="frontback" y="2" a="0"/>
+          <layerref id="side" y="2" a="0"/>
+          <layerref id="cover" y="2"/>
+          <layerref id="glass" y="2"/>
+          <layerref id="glow_07" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle23">
+          <layerref id="angled" a="0"/>
+          <layerref id="frontback" a="0"/>
+          <layerref id="side" a="0"/>
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_02" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle25">
+          <layerref id="angled" y="2" a="0"/>
+          <layerref id="frontback" y="2" a="0"/>
+          <layerref id="side" y="2" a="0"/>
+          <layerref id="cover" y="2"/>
+          <layerref id="glass" y="2"/>
+          <layerref id="glow_04" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle27">
+          <layerref id="angled" a="0"/>
+          <layerref id="frontback" a="0"/>
+          <layerref id="side" a="0"/>
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+          <layerref id="glow_06" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle28">
+          <layerref id="angled" y="1" a="0"/>
+          <layerref id="frontback" y="1" a="0"/>
+          <layerref id="side" y="1" a="0"/>
+          <layerref id="cover" y="1"/>
+          <layerref id="glass" y="1"/>
+          <layerref id="glow_07" color="0xf2e7fb"/>
+        </frame>
+        <frame id="Idle29">
+          <layerref id="angled" y="2" a="0"/>
+          <layerref id="frontback" y="2" a="0"/>
+          <layerref id="side" y="2" a="0"/>
+          <layerref id="cover" y="2"/>
+          <layerref id="glass" y="2"/>
+          <layerref id="glow_01" color="0xf2e7fb"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="3">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle05"/>
+          <frameref id="Idle06"/>
+          <frameref id="Idle07"/>
+          <frameref id="Idle08"/>
+          <frameref id="Idle09"/>
+          <frameref id="Idle10"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle05"/>
+          <frameref id="Idle06"/>
+          <frameref id="Idle07"/>
+          <frameref id="Idle08"/>
+          <frameref id="Idle09"/>
+          <frameref id="Idle17"/>
+          <frameref id="Idle18"/>
+          <frameref id="Idle19"/>
+          <frameref id="Idle20"/>
+          <frameref id="Idle21"/>
+          <frameref id="Idle08"/>
+          <frameref id="Idle23"/>
+          <frameref id="Idle10"/>
+          <frameref id="Idle25"/>
+          <frameref id="Idle05"/>
+          <frameref id="Idle27"/>
+          <frameref id="Idle28"/>
+          <frameref id="Idle29"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle05"/>
+          <frameref id="Idle06"/>
+          <frameref id="Idle28"/>
+          <frameref id="Idle29"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle17"/>
+          <frameref id="Idle18"/>
+          <frameref id="Idle19"/>
+          <frameref id="Idle20"/>
+          <frameref id="Idle21"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Walk00"/>
+          <frameref id="Walk01"/>
+          <frameref id="Walk02"/>
+          <frameref id="Walk03"/>
+          <frameref id="Walk04"/>
+          <frameref id="Walk05"/>
+          <frameref id="Walk06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="-0.2812" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers/>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers/>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

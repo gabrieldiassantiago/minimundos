@@ -1,0 +1,78 @@
+<item.SpriteItem id="2166" name="Luz do Cogumelo" desc="Luz de jardim camuflada de cogumelo." tags="admin,ftu,light,floor" icon="items/base/welcome/icon_e_ftu_mushroom_spotlight.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.15,-0.001,-0.15" max="0.15,0.01,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/modern/m_ceiling_modernfan_shadow.png" cols="1" rows="4"/>
+    <texture id="grid" source="items/base/modern/m_ceiling_grid.png" cols="1" rows="1"/>
+    <texture id="pole" source="items/base/welcome/e_ftu_spotlight.png" cols="1" rows="1"/>
+    <texture id="blades" source="items/base/welcome/e_ftu_mushroom.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Spotlight" y="0.01" s="4">
+      <box min="-0.06,-0.001,-0.06" max="0.06,0,0.06"/>
+      <layers>
+        <layer id="light" texture="pole" y="30">
+          <view angle="45" x="-8"/>
+          <view angle="135" x="8" hm="true"/>
+          <view angle="225" x="-8"/>
+          <view angle="315" x="8" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="light" color="0xf8f7d5" a="0.25" blend="add"/>
+        </frame>
+        <frame id="off">
+          <layerref id="light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4" loop="false">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Mushroom">
+      <box min="-0.15,-0.001,-0.15" max="0.15,0,0.15"/>
+      <layers>
+        <layer id="mushroom" texture="blades" y="-50">
+          <view angle="45" y="60"/>
+          <view angle="135" y="60"/>
+          <view angle="225" y="60"/>
+          <view angle="315" y="60"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="mushroom"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4" loop="false">
+          <frameref id="Frame_01"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="Frame_01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

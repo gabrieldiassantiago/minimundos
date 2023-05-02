@@ -1,0 +1,712 @@
+<item.WidgetItem id="345" name="Janela Imperial" desc="Uma janela imperial." tags="window,wall,widget" icon="items/base/antique/icon_a_window_01_arch.png" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" widget="widgets/widget_window.swf" price="75" tokens="750" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="0,-1.15,-0.54" max="0.001,1.15,0.54"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/widget/configure.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="activate" script="scripts/widget/configure.as"/>
+  </events>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+  </data>
+  <textures>
+    <texture id="Window Frame" source="items/base/antique/a_window_01_arch.png" cols="1" rows="1"/>
+    <texture id="Grass" source="items/base/shared/s_outside_grass.png" cols="1" rows="1"/>
+    <texture id="City" source="items/base/shared/s_outside_city.png" cols="2" rows="1"/>
+    <texture id="Trees" source="items/base/shared/s_outside_trees.png" cols="1" rows="1"/>
+    <texture id="Lighting" source="items/base/shared/s_outside_lighting.png" cols="1" rows="1"/>
+    <texture id="Wild Flowers" source="items/base/shared/s_outside_wildflowers.png" cols="1" rows="1"/>
+    <texture id="Rain" source="items/base/shared/s_outside_rain.png" cols="4" rows="1"/>
+    <texture id="snow" source="items/base/shared/s_outside_snow.png" cols="1" rows="1"/>
+    <texture id="space" source="items/base/shared/s_outside_space.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_windows.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Arch window">
+      <box min="0,-1.15,-0.54" max="0.001,1.15,0.54"/>
+      <layers>
+        <layer id="Ground" texture="Grass" align="middle">
+          <view angle="45" x="-4" y="-2"/>
+          <view angle="135" x="4" y="-2" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Rain Drops A" texture="Rain" align="middle">
+          <view angle="45" x="-4" y="-2"/>
+          <view angle="135" x="4" y="-2" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Rain Drops B" texture="Rain" align="middle">
+          <view angle="45" col="1" x="-4" y="-2"/>
+          <view angle="135" col="1" x="4" y="-2" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Rain A" texture="Rain" align="middle">
+          <view angle="45" col="2" x="-4" y="-2"/>
+          <view angle="135" col="2" x="4" y="-2" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Rain B" texture="Rain" align="middle">
+          <view angle="45" col="3" x="-4" y="-2"/>
+          <view angle="135" col="3" x="4" y="-2" hm="true"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Window Frame" texture="Window Frame" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="Lightning" texture="Lighting" align="middle">
+          <view angle="45" x="-4"/>
+          <view angle="135" x="4" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="City" texture="City" align="middle">
+          <view angle="45" x="-4" y="-2"/>
+          <view angle="135" x="4" y="-2" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="City Night" texture="City" align="middle">
+          <view angle="45" col="1" x="-4" y="-2"/>
+          <view angle="135" col="1" x="4" y="-2" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Wild Flowers" texture="Wild Flowers" align="middle">
+          <view angle="45" x="-4" y="-2"/>
+          <view angle="135" x="4" y="-2" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Trees" texture="Trees" align="middle">
+          <view angle="45" x="-4" y="-2"/>
+          <view angle="135" x="4" y="-2" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Snow" texture="snow" align="middle">
+          <view angle="45" x="-4" y="-2"/>
+          <view angle="135" x="4" y="-2" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Space" texture="space" align="middle">
+          <view angle="45" x="-4" y="-2"/>
+          <view angle="135" x="4" y="-2" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="city_day_fine">
+          <layerref id="City"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="city_day_rain01">
+          <layerref id="City" color="0xcccccc"/>
+          <layerref id="Rain A"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="city_day_rain02">
+          <layerref id="City" color="0xcccccc"/>
+          <layerref id="Rain B"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="city_night_fine">
+          <layerref id="City Night"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="city_night_rain01">
+          <layerref id="City Night" color="0xcccccc"/>
+          <layerref id="Rain A"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="city_night_rain02">
+          <layerref id="City Night" color="0xcccccc"/>
+          <layerref id="Rain B"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="grass_day_fine">
+          <layerref id="Ground"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="grass_day_rain01">
+          <layerref id="Ground" color="0xcccccc"/>
+          <layerref id="Rain A"/>
+          <layerref id="Rain Drops A"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="grass_day_rain02">
+          <layerref id="Ground" color="0xcccccc"/>
+          <layerref id="Rain B"/>
+          <layerref id="Rain Drops B"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="grass_night_fine">
+          <layerref id="Ground" color="0x5378e4"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="grass_night_rain01">
+          <layerref id="Ground" color="0x5378e4"/>
+          <layerref id="Rain A" color="0xcccccc"/>
+          <layerref id="Rain Drops A" color="0xcccccc"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="grass_night_rain02">
+          <layerref id="Ground" color="0x5378e4"/>
+          <layerref id="Rain B" color="0xcccccc"/>
+          <layerref id="Rain Drops B" color="0xcccccc"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="wildlowers_day_fine">
+          <layerref id="Wild Flowers"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="wildflower_day_rain01">
+          <layerref id="Wild Flowers" color="0xcccccc"/>
+          <layerref id="Rain A"/>
+          <layerref id="Rain Drops A"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="wildflower_day_rain02">
+          <layerref id="Wild Flowers" color="0xcccccc"/>
+          <layerref id="Rain B"/>
+          <layerref id="Rain Drops B"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="wildflowers_night_fine">
+          <layerref id="Wild Flowers" color="0x9999b8"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="wildflowers_night_rain01">
+          <layerref id="Wild Flowers" color="0x9999b8"/>
+          <layerref id="Rain A" color="0xcccccc"/>
+          <layerref id="Rain Drops A" color="0xcccccc"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="wildflowers_night_rain02">
+          <layerref id="Wild Flowers" color="0x9999b8"/>
+          <layerref id="Rain B" color="0xcccccc"/>
+          <layerref id="Rain Drops B" color="0xcccccc"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="trees_day_fine">
+          <layerref id="Trees"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="trees_day_rain01">
+          <layerref id="Trees" color="0xcccccc"/>
+          <layerref id="Rain A"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="trees_day_rain02">
+          <layerref id="Trees" color="0xcccccc"/>
+          <layerref id="Rain B"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="trees_night_fine">
+          <layerref id="Trees" color="0x7996ec"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="trees_night_rain01">
+          <layerref id="Trees" color="0x7996ec"/>
+          <layerref id="Rain A" color="0xcccccc"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="trees_night_rain02">
+          <layerref id="Trees" color="0x7996ec"/>
+          <layerref id="Rain B" color="0xcccccc"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="lightning">
+          <layerref id="Ground" color="0xcccccc"/>
+          <layerref id="Rain A"/>
+          <layerref id="Rain Drops A"/>
+          <layerref id="Lightning"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="snow_day">
+          <layerref id="Snow"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="snow_night">
+          <layerref id="Snow" color="0x305570"/>
+          <layerref id="Window Frame"/>
+        </frame>
+        <frame id="space">
+          <layerref id="Space"/>
+          <layerref id="Window Frame"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="city_day_fine" framerate="4">
+          <frameref id="city_day_fine"/>
+        </animation>
+        <animation id="city_day_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="lightning"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+          <frameref id="city_day_rain01" duration="2"/>
+          <frameref id="city_day_rain02" duration="2"/>
+        </animation>
+        <animation id="city_night_fine" framerate="4">
+          <frameref id="city_night_fine"/>
+        </animation>
+        <animation id="city_night_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="lightning"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+          <frameref id="city_night_rain01" duration="2"/>
+          <frameref id="city_night_rain02" duration="2"/>
+        </animation>
+        <animation id="grass_day_fine" framerate="4">
+          <frameref id="grass_day_fine"/>
+        </animation>
+        <animation id="grass_day_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="lightning"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+          <frameref id="grass_day_rain01" duration="2"/>
+          <frameref id="grass_day_rain02" duration="2"/>
+        </animation>
+        <animation id="grass_night_fine" framerate="4">
+          <frameref id="grass_night_fine"/>
+        </animation>
+        <animation id="grass_night_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="lightning"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+          <frameref id="grass_night_rain01" duration="2"/>
+          <frameref id="grass_night_rain02" duration="2"/>
+        </animation>
+        <animation id="wildflowers_day_fine" framerate="4">
+          <frameref id="wildlowers_day_fine"/>
+        </animation>
+        <animation id="wildflowers_day_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="lightning"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+          <frameref id="wildflower_day_rain01" duration="2"/>
+          <frameref id="wildflower_day_rain02" duration="2"/>
+        </animation>
+        <animation id="wildflowers_night_fine" framerate="4">
+          <frameref id="wildflowers_night_fine"/>
+        </animation>
+        <animation id="wildflowers_night_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="lightning"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+          <frameref id="wildflowers_night_rain01" duration="2"/>
+          <frameref id="wildflowers_night_rain02" duration="2"/>
+        </animation>
+        <animation id="trees_day_fine" framerate="4">
+          <frameref id="trees_day_fine"/>
+        </animation>
+        <animation id="trees_day_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="lightning"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+          <frameref id="trees_day_rain01" duration="2"/>
+          <frameref id="trees_day_rain02" duration="2"/>
+        </animation>
+        <animation id="trees_night_fine" framerate="4">
+          <frameref id="trees_night_fine"/>
+        </animation>
+        <animation id="trees_night_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="lightning"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+          <frameref id="trees_night_rain01" duration="2"/>
+          <frameref id="trees_night_rain02" duration="2"/>
+        </animation>
+        <animation id="snow_day" framerate="4">
+          <frameref id="snow_day"/>
+        </animation>
+        <animation id="snow_night" framerate="4">
+          <frameref id="snow_night"/>
+        </animation>
+        <animation id="space" framerate="4">
+          <frameref id="space"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.125" s="7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" x="-1" y="-1">
+          <view angle="45"/>
+          <view angle="135" x="3" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+        <frame id="Twilight">
+          <layerref id="Light" color="0xffddcc" a="0.8"/>
+        </frame>
+        <frame id="TwilightRain">
+          <layerref id="Light" color="0xeeeeff" a="0.5"/>
+        </frame>
+        <frame id="Starlight">
+          <layerref id="Light" color="0xc8dbf8" a="0.3"/>
+        </frame>
+        <frame id="City">
+          <layerref id="Light" color="0xffddaa" a="0.5"/>
+        </frame>
+        <frame id="CityRain">
+          <layerref id="Light" color="0xffddaa" a="0.3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="default" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="city_day_fine" framerate="4">
+          <frameref id="Twilight"/>
+        </animation>
+        <animation id="city_day_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="TwilightRain" duration="16"/>
+          <frameref id="On"/>
+          <frameref id="TwilightRain" duration="56"/>
+        </animation>
+        <animation id="city_night_fine" framerate="4">
+          <frameref id="City"/>
+        </animation>
+        <animation id="city_night_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="CityRain" duration="16"/>
+          <frameref id="On"/>
+          <frameref id="CityRain" duration="56"/>
+        </animation>
+        <animation id="grass_day_fine" framerate="4">
+          <frameref id="Twilight"/>
+        </animation>
+        <animation id="grass_day_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="TwilightRain" duration="16"/>
+          <frameref id="On"/>
+          <frameref id="TwilightRain" duration="56"/>
+        </animation>
+        <animation id="grass_night_fine" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="grass_night_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="Off" duration="16"/>
+          <frameref id="On"/>
+          <frameref id="Off" duration="56"/>
+        </animation>
+        <animation id="wildflowers_day_fine" framerate="4">
+          <frameref id="Twilight"/>
+        </animation>
+        <animation id="wildflowers_day_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="TwilightRain" duration="16"/>
+          <frameref id="On"/>
+          <frameref id="TwilightRain" duration="56"/>
+        </animation>
+        <animation id="wildflowers_night_fine" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="wildflowers_night_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="Off" duration="16"/>
+          <frameref id="On"/>
+          <frameref id="Off" duration="56"/>
+        </animation>
+        <animation id="trees_day_fine" framerate="4">
+          <frameref id="Twilight"/>
+        </animation>
+        <animation id="trees_day_raining" framerate="16" syncOffsets="4,5">
+          <frameref id="TwilightRain" duration="16"/>
+          <frameref id="On"/>
+          <frameref id="TwilightRain" duration="56"/>
+        </animation>
+        <animation id="trees_night_fine" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="trees_night_raining" framerate="16" syncOffsets="4">
+          <frameref id="Off" duration="16"/>
+          <frameref id="On"/>
+          <frameref id="Off" duration="56"/>
+        </animation>
+        <animation id="snow_day" framerate="4">
+          <frameref id="TwilightRain"/>
+        </animation>
+        <animation id="snow_night" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="space" framerate="4">
+          <frameref id="Starlight"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

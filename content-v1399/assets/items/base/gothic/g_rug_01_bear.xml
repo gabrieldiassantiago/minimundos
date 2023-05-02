@@ -1,0 +1,30 @@
+<item.SpriteItem desc="Design exclusivo para colecionadores exóticos." dropTargetList="floor" gridActive="false" icon="items/base/gothic/icon_g_rug_01_bear.png" id="363" name="Tapete de Pele de Urso" tags="floor" price="40" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="1,0,1" min="-1,-0.001,-1"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture cols="2" id="Texture" rows="1" source="items/base/gothic/g_rug_01_bear.png"/>
+  </textures>
+  <nodes>
+    <node id="Rug" layer="surface" x="0" y="0" z="0">
+      <box max="1,0,1" min="-1,-0.001,-1"/>
+      <layers>
+        <layer align="middle" id="Rug" texture="Texture">
+          <view angle="45" col="0" row="0" x="-5" y="-5"/>
+          <view angle="135" col="0" mirror="true" row="0" x="5" y="-5"/>
+          <view angle="225" col="1" row="0" x="5"/>
+          <view angle="315" col="1" mirror="true" row="0" x="-5"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

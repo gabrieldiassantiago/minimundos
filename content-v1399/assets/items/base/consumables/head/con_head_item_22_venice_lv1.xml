@@ -1,0 +1,40 @@
+<item.SpriteItem desc="Uma máscara dos carnavais de Veneza." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/head/icon_con_head_item_22_venice_lv1.png" id="1274" name="Máscara Moretta" tags="consumable,actionbar,wear,head,real,costume,action_wearable_toggle" price="3120" minLevel="30" minLevelType="4" premium="Y" minCPLevel="1">
+  <volume>
+    <box max="0.3,0.75,0.3" min="-0.3,0,-0.3"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <textures>
+    <texture cols="5" id="mask" rows="1" source="items/base/consumables/head/con_head_22_venice_01.png"/>
+    <texture cols="1" id="shadow" rows="1" source="items/base/consumables/head/con_head_generic_dropshadow.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.3,0.75,0.3" min="-0.3,0,-0.3"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view y="22"/>
+        </layer>
+        <layer id="venetian" texture="mask">
+          <view angle="45" col="1" y="20"/>
+          <view angle="135" col="1" hm="true" y="20"/>
+          <view angle="225" col="3" y="20"/>
+          <view angle="315" col="3" hm="true" y="20"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="shadow+10"/>
+    <entry key="action_attributes_secondary" value="speed+20,health+30"/>
+  </data>
+</item.SpriteItem>

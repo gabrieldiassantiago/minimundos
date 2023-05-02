@@ -1,0 +1,95 @@
+<item.SpriteItem id="4850" name="Cauda de Fogo Zoom" desc="Uma impressionante explosão de fogo" tags="rare,consumable,actionbar,wear,feet,action_wearable_toggle" icon="items/base/consumables/feet/icon_con_feet_item_99_flamelegs.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="1000" premium="Y">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.83,0.15"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+25"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/feet/con_feet_item_99_flamelegs.png" cols="1" rows="1"/>
+    <texture id="Texture01" source="items/base/consumables/feet/con_feet_item_99_flamelegs_flame.png" cols="1" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_halo_ninja.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.83,0.15"/>
+      <layers>
+        <layer id="base01" texture="Texture">
+          <view y="15"/>
+        </layer>
+        <layer id="base02" texture="Texture01">
+          <view y="-40"/>
+        </layer>
+        <layer id="base03" texture="Texture01">
+          <view row="1" y="-41"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="base01"/>
+          <layerref id="base03"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="base01"/>
+          <layerref id="base02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="base01"/>
+          <layerref id="base03" a="0.5"/>
+          <layerref id="base02" a="0.8"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="base01"/>
+          <layerref id="base02" a="0.5"/>
+          <layerref id="base03" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="Frame01"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="-0.245" y="-0.0312" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-5">
+          <view x="2" y="-4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xe5c550"/>
+          <layerref id="Light" color="0xe5c550"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

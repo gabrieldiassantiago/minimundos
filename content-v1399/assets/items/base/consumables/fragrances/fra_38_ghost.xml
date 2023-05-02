@@ -1,0 +1,36 @@
+<item.SpriteItem id="5380" name="Fragrância Fantasmagórico Play" desc="Um suspiro ainda permanece" tags="consumable,actionbar,fragrance,action_wearable_toggle,wear,usable" icon="items/base/consumables/fragrances/fra_38_ghost.png" price="3125" minLevel="90" minLevelType="8" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" premium="Y">
+  <volume>
+    <box min="-0.1,0,-0.15" max="0.1,0.42,0.15"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_perfume.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="frost+30"/>
+    <entry key="action_attributes_secondary" value="health+35"/>
+  </data>
+  <textures>
+    <texture id="texture" source="items/base/consumables/fragrances/fra_38_ghost.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.15" max="0.1,0.42,0.15"/>
+      <layers>
+        <layer id="texture" texture="texture" y="6">
+          <view angle="45" y="4"/>
+          <view angle="135" y="4" hm="true"/>
+          <view angle="225" y="4"/>
+          <view angle="315" y="4" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

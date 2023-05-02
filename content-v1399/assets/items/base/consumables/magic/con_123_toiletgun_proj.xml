@@ -1,0 +1,134 @@
+<item.SpriteItem id="0" name="Fireball Projectile" desc="A fireball projectile effect." dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,-0.1,-0.1" max="0.1,0.1,0.1"/>
+  </volume>
+  <textures>
+    <texture id="texture01" source="items/base/consumables/magic/con_123_toiletgun_proj_a.png" cols="2" rows="3"/>
+    <texture id="texture02" source="items/base/consumables/magic/con_123_toiletgun_proj_b.png" cols="3" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="sound01" source="items/base/consumables/bobz/bobz_07_angel_sound_poof.mp3"/>
+    <sound id="sound02" source="items/base/consumables/bobz/bobz_09_firefly_sound.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Projectile">
+      <box min="-0.1,-0.1,-0.1" max="0.1,0.1,0.1"/>
+      <layers>
+        <layer id="roll_front" texture="texture02" y="20">
+          <view angle="0" col="1" row="1" hm="true"/>
+          <view angle="45" row="1" x="3" y="-3"/>
+          <view angle="90" col="2" row="1" y="3"/>
+          <view angle="135" row="1" x="1" y="-3" hm="true"/>
+          <view angle="180" col="1" row="1"/>
+          <view angle="225" row="1" x="-3" alpha="0"/>
+          <view angle="270" col="2" row="1" alpha="0"/>
+          <view angle="315" row="1" x="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="roll_behind" texture="texture02" y="20">
+          <view angle="0" col="1" row="1" alpha="0" hm="true"/>
+          <view angle="45" row="1" alpha="0"/>
+          <view angle="90" col="2" row="1" y="3" alpha="0"/>
+          <view angle="135" row="1" alpha="0"/>
+          <view angle="180" col="1" row="1" alpha="0"/>
+          <view angle="225" row="1" x="-3" y="1"/>
+          <view angle="270" col="2" row="1"/>
+          <view angle="315" row="1" x="3" y="1" hm="true"/>
+        </layer>
+        <layer id="paper_a_01" texture="texture01">
+          <view angle="0" col="1" x="-41" y="15"/>
+          <view angle="45" x="-32"/>
+          <view angle="90" alpha="0"/>
+          <view angle="135" x="32" hm="true"/>
+          <view angle="180" col="1" x="40" y="15" hm="true"/>
+          <view angle="225" x="33" y="30" hm="true" vm="true"/>
+          <view angle="270" alpha="0"/>
+          <view angle="315" x="-34" y="30" vm="true"/>
+        </layer>
+        <layer id="paper_b_01" texture="texture02">
+          <view angle="0" alpha="0"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" y="-2" vm="true"/>
+          <view angle="135" alpha="0"/>
+          <view angle="180" alpha="0"/>
+          <view angle="225" alpha="0"/>
+          <view angle="270" y="39"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="paper_a_02" texture="texture01">
+          <view angle="0" col="1" row="1" x="-41" y="15"/>
+          <view angle="45" row="1" x="-32"/>
+          <view angle="90" alpha="0"/>
+          <view angle="135" row="1" x="32" hm="true"/>
+          <view angle="180" col="1" row="1" x="40" y="15" hm="true"/>
+          <view angle="225" row="1" x="33" y="30" hm="true" vm="true"/>
+          <view angle="270" alpha="0"/>
+          <view angle="315" row="1" x="-34" y="30" vm="true"/>
+        </layer>
+        <layer id="paper_b_02" texture="texture02">
+          <view angle="0" alpha="0"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" y="-2" vm="true"/>
+          <view angle="135" alpha="0"/>
+          <view angle="180" alpha="0"/>
+          <view angle="225" alpha="0"/>
+          <view angle="270" col="1" y="39"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="paper_a_03" texture="texture01">
+          <view angle="0" col="1" row="2" x="-41" y="15"/>
+          <view angle="45" row="2" x="-32"/>
+          <view angle="90" alpha="0"/>
+          <view angle="135" row="2" x="32" hm="true"/>
+          <view angle="180" col="1" row="2" x="40" y="15" hm="true"/>
+          <view angle="225" row="2" x="33" y="30" hm="true" vm="true"/>
+          <view angle="270" alpha="0"/>
+          <view angle="315" row="2" x="-34" y="30" vm="true"/>
+        </layer>
+        <layer id="paper_b_03" texture="texture02">
+          <view angle="0" alpha="0"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="2" y="-2" vm="true"/>
+          <view angle="135" alpha="0"/>
+          <view angle="180" alpha="0"/>
+          <view angle="225" alpha="0"/>
+          <view angle="270" col="2" y="39"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Proj Toiletgun" type="group">
+          <frame id="01">
+            <layerref id="roll_behind"/>
+            <layerref id="paper_a_01"/>
+            <layerref id="paper_b_01"/>
+            <layerref id="roll_front"/>
+          </frame>
+          <frame id="02">
+            <layerref id="roll_behind"/>
+            <layerref id="paper_a_02"/>
+            <layerref id="paper_b_02"/>
+            <layerref id="roll_front"/>
+          </frame>
+          <frame id="03">
+            <layerref id="roll_behind"/>
+            <layerref id="paper_a_03"/>
+            <layerref id="paper_b_03"/>
+            <layerref id="roll_front"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4"/>
+        <animation id="Projectile">
+          <frameref id="01">
+            <sample id="sound01" vol="0.5"/>
+          </frameref>
+          <frameref id="02">
+            <sample id="sound02"/>
+          </frameref>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

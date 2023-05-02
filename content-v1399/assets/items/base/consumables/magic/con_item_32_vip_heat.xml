@@ -1,0 +1,39 @@
+<item.SpriteItem desc="Uma utensílio para disparar raios de calor." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/magic/icon_con_item_32_vip_heat.png" id="1278" name="Raio de Calor" tags="consumable,actionbar,group_fire,scifi,gun,bad,reusable,usable,nopvp,action_consumable_target" price="6960" minLevel="1" minLevelType="2" premium="Y" minCPLevel="1">
+  <volume>
+    <box max="0.24,0.24,0.24" min="-0.24,0,-0.24"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="5"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_shoot.png"/>
+    <entry key="action_attributes" value="fire-20"/>
+    <entry key="action_attributes_secondary" value="speed-60,health-60"/>
+  </data>
+  <textures>
+    <texture cols="4" id="Texture" rows="1" source="items/base/consumables/magic/con_item_32_vip_heat.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.24,0.24,0.24" min="-0.24,0,-0.24"/>
+      <layers>
+        <layer id="Layer01" texture="Texture" y="10">
+          <view angle="45" y="11"/>
+          <view angle="135" col="1" x="1" y="15"/>
+          <view angle="225" col="2" x="-4" y="14"/>
+          <view angle="315" col="3" x="-6" y="13"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

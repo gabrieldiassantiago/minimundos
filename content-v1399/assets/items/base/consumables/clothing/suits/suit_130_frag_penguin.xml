@@ -1,0 +1,122 @@
+<f id="Penguin" parentId="Suits">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Torso_M_base" cId="Torso" s="items/base/consumables/clothing/suits/suit_130_penguin_torso_m.png" pri="6"/>
+      <c sId="Torso_M_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+      <s id="Torso_M_decal" cId="Torso" s="items/base/consumables/clothing/suits/suit_130_penguin_torso_m_decal.png" pri="6.1"/>
+      <c sId="Torso_M_decal" c="10592673" a="1.00" b="90.8" ct="0.96" lId="Suit_130_Color2" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="Torso_F_base" cId="Torso" s="items/base/consumables/clothing/suits/suit_130_penguin_torso_f.png" pri="6"/>
+      <c sId="Torso_F_base" c="9522615" a="0.87" b="33.7" ct="0.80" lId="Suit_130_Color1" lw="N"/>
+      <s id="Torso_F_decal" cId="Torso" s="items/base/consumables/clothing/suits/suit_130_penguin_torso_f_decal.png" pri="6.1"/>
+      <c sId="Torso_F_decal" c="10592673" a="1.00" b="90.8" ct="0.96" lId="Suit_130_Color2" lw="N"/>
+    </g>
+  </b>
+  <g id="Penguin" name="Arms">
+    <s id="ArmIdle_base" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_130_penguin_arm_idle.png" pri="6"/>
+    <s id="ArmWalk1_base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_130_penguin_arm_walk1.png" pri="6"/>
+    <s id="ArmWalk2_base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_130_penguin_arm_walk2.png" pri="6"/>
+    <s id="ArmWalk3_base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_130_penguin_arm_walk3.png" pri="6"/>
+    <s id="ArmSit_base" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_130_penguin_arm_sit.png" pri="6"/>
+    <c sId="ArmIdle_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <c sId="ArmWalk1_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <c sId="ArmWalk2_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <c sId="ArmWalk3_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <c sId="ArmSit_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <s id="ArmThrow_base" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_130_penguin_arm_throw.png" pri="6"/>
+    <s id="ArmRaise_base" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_130_penguin_arm_raise.png" pri="6"/>
+    <c sId="ArmThrow_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <c sId="ArmRaise_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <s id="HandWave1_base" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_130_penguin_hand_wave1.png" pri="6"/>
+    <s id="HandWave2_base" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_130_penguin_hand_wave2.png" pri="6"/>
+    <c sId="HandWave1_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <c sId="HandWave2_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+  </g>
+  <g id="Penguin" name="Leg_Base" icon="$bu/icon_legs_trouser.png">
+    <s id="FeetIdle_base" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_idle.png" pri="6.1"/>
+    <s id="FeetWalk1_base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_walk1.png" pri="6.1"/>
+    <s id="FeetWalk2_base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_walk2.png" pri="6.1"/>
+    <s id="FeetWalk3_base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_walk3.png" pri="6.1"/>
+    <s id="FeetWalk4_base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_walk4.png" pri="6.1"/>
+    <s id="FeetSit_base" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_sit.png" pri="6.1"/>
+    <c sId="FeetIdle_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <c sId="FeetWalk1_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <c sId="FeetWalk2_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <c sId="FeetWalk3_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <c sId="FeetWalk4_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <c sId="FeetSit_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+  </g>
+  <g id="Penguin" name="Leg_Decal1" icon="$bu/icon_legs_trouser.png">
+    <s id="FeetIdle_decal1" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_idle_decal.png" pri="6.2"/>
+    <s id="FeetWalk1_decal1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_walk1_decal.png" pri="6.2"/>
+    <s id="FeetWalk2_decal1" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_walk2_decal.png" pri="6.2"/>
+    <s id="FeetWalk3_decal1" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_walk3_decal.png" pri="6.2"/>
+    <s id="FeetWalk4_decal1" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_walk4_decal.png" pri="6.2"/>
+    <s id="FeetSit_decal1" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_sit_decal.png" pri="6.2"/>
+    <c sId="FeetIdle_decal1" c="10592673" a="1.00" b="90.8" ct="0.96" lId="Suit_130_Color2" lw="N"/>
+    <c sId="FeetWalk1_decal1" c="10592673" a="1.00" b="90.8" ct="0.96" lId="Suit_130_Color2" lw="N"/>
+    <c sId="FeetWalk2_decal1" c="10592673" a="1.00" b="90.8" ct="0.96" lId="Suit_130_Color2" lw="N"/>
+    <c sId="FeetWalk3_decal1" c="10592673" a="1.00" b="90.8" ct="0.96" lId="Suit_130_Color2" lw="N"/>
+    <c sId="FeetWalk4_decal1" c="10592673" a="1.00" b="90.8" ct="0.96" lId="Suit_130_Color2" lw="N"/>
+    <c sId="FeetSit_decal1" c="10592673" a="1.00" b="90.8" ct="0.96" lId="Suit_130_Color2" lw="N"/>
+  </g>
+  <g id="Penguin" name="Leg_Decal2" icon="$bu/icon_legs_trouser.png">
+    <s id="FeetIdle_decal2" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_idle_decal2.png" pri="6"/>
+    <s id="FeetWalk1_decal2" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_walk1_decal2.png" pri="6"/>
+    <s id="FeetWalk2_decal2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_walk2_decal2.png" pri="6"/>
+    <s id="FeetWalk3_decal2" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_walk3_decal2.png" pri="6"/>
+    <s id="FeetWalk4_decal2" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_walk4_decal2.png" pri="6"/>
+    <s id="FeetSit_decal2" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_130_penguin_leg_sit_decal2.png" pri="6"/>
+    <c sId="FeetIdle_decal2" c="16221202" a="0.77" b="48.0" ct="1.00" lId="Suit_130_Color3" lw="N"/>
+    <c sId="FeetWalk1_decal2" c="16221202" a="0.77" b="48.0" ct="1.00" lId="Suit_130_Color3" lw="N"/>
+    <c sId="FeetWalk2_decal2" c="16221202" a="0.77" b="48.0" ct="1.00" lId="Suit_130_Color3" lw="N"/>
+    <c sId="FeetWalk3_decal2" c="16221202" a="0.77" b="48.0" ct="1.00" lId="Suit_130_Color3" lw="N"/>
+    <c sId="FeetWalk4_decal2" c="16221202" a="0.77" b="48.0" ct="1.00" lId="Suit_130_Color3" lw="N"/>
+    <c sId="FeetSit_decal2" c="16221202" a="0.77" b="48.0" ct="1.00" lId="Suit_130_Color3" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconSuit_130_penguin" icon="items/base/consumables/clothing/suits/suit_130_penguin_icon_a.png" w="48" h="48"/>
+    <s id="IconSuit_130_penguin_base" cId="IconSuit_130_penguin" s="items/base/consumables/clothing/suits/suit_130_penguin_icon_1.png" pri="1.1"/>
+    <s id="IconSuit_130_penguin_decal1" cId="IconSuit_130_penguin" s="items/base/consumables/clothing/suits/suit_130_penguin_icon_2.png" pri="1.2"/>
+    <s id="IconSuit_130_penguin_decal2" cId="IconSuit_130_penguin" s="items/base/consumables/clothing/suits/suit_130_penguin_icon_3.png" pri="1"/>
+    <c sId="IconSuit_130_penguin_base" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1" lw="N"/>
+    <c sId="IconSuit_130_penguin_decal1" c="10592673" a="1.00" b="90.8" ct="0.96" lId="Suit_130_Color2" lw="N"/>
+    <c sId="IconSuit_130_penguin_decal2" c="16221202" a="0.77" b="48.0" ct="1.00" lId="Suit_130_Color3" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Suit_130_Color1" name="Color 1" desc="Choose a color" sel="Blue" seld="Blue">
+      <c id="Peach" icon="$bu/icon_pink.png" c="16738434" a="1.00" b="67.4" ct="0.65" lId="Suit_130_Color1"/>
+      <c id="Pink" icon="$bu/icon_pink_neon.png" c="16524448" a="1.00" b="62.0" ct="0.59" lId="Suit_130_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="1.00" b="76.7" ct="1.18" lId="Suit_130_Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16762883" a="1.00" b="59.3" ct="0.63" lId="Suit_130_Color1"/>
+      <c id="Teal" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="49.5" ct="0.64" lId="Suit_130_Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="1.00" b="65.8" ct="1.03" lId="Suit_130_Color1"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="2858731" a="1.00" b="9.4" ct="0.77" lId="Suit_130_Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9517242" a="1.00" b="49.5" ct="0.80" lId="Suit_130_Color1"/>
+    </b>
+    <b id="Suit_130_Color2" name="Color 2" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="1.00" b="90.8" ct="0.96" lId="Suit_130_Color2"/>
+    </b>
+    <b id="Suit_130_Color3" name="Color 3" desc="Choose a color" sel="Orange" seld="Orange">
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="0.77" b="48.0" ct="1.00" lId="Suit_130_Color3"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=320; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Suit_130_Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Suit_130_Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02" sel="TorsoLying"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top06"/>
+  <ds id="BodySkin"/>
+</f>

@@ -1,0 +1,31 @@
+<f id="Top01_27ZebraTop" parentId="Top01">
+  <c sId="Top01_27TorsoBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_27Color1" lw="N"/>
+  <c sId="Top01_27TorsoDecal" c="5395026" a="1.00" b="21.3" ct="0.47" lId="Top01_27Color2" lw="N"/>
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Top01_27TorsoBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_29_zebratop_base_m.png" pri="1"/>
+      <s id="Top01_27TorsoDecal" cId="Torso" s="items/base/consumables/clothing/top01/top01_29_zebratop_decal_m.png" pri="1.2"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_27TorsoBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_29_zebratop_base_f.png" pri="1"/>
+      <s id="Top01_27TorsoDecal" cId="Torso" s="items/base/consumables/clothing/top01/top01_29_zebratop_decal_f.png" pri="1.2"/>
+    </g>
+  </b>
+  <g id="Icon">
+    <t id="IconTop27_01" icon="items/base/consumables/clothing/top01/top01_29_icon_zebratop.png" w="48" h="48"/>
+    <s id="Icon01_27Base" cId="IconTop27_01" s="items/base/consumables/clothing/top01/top01_29_icon_zebratop.png"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_27Color1" name="Color1" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_27Color1"/>
+    </b>
+    <b id="Top01_27Color2" name="Color2" desc="Choose a color" sel="Black" seld="Black">
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="1.00" b="21.3" ct="0.47" lId="Top01_27Color2"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top01_27Color1"/>
+      <wizchoice id="Color2" name="Color2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top01_27Color2"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

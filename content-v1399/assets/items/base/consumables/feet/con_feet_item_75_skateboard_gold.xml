@@ -1,0 +1,33 @@
+<item.SpriteItem id="4049" name="Skate de Ouro Zoom" desc="Um skate de Ouro Super Raro (Cartão MiniMundos)." tags="consumable,actionbar,wear,feet,rare,action_wearable_toggle" icon="items/base/consumables/feet/icon_con_feet_75_skateboard_gold.png" price="900" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.06,0,-0.48" max="0.16,0.35,0.48"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="board" source="items/base/consumables/feet/con_feet_item_75_skateboard_gold.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.06,0,-0.48" max="0.16,0.35,0.48"/>
+      <layers>
+        <layer id="board" texture="board">
+          <view angle="45" y="24"/>
+          <view angle="135" x="-2" y="24" hm="true"/>
+          <view angle="225" col="1" y="24" hm="true"/>
+          <view angle="315" col="1" y="24"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

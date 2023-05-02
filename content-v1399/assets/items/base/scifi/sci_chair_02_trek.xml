@@ -1,0 +1,61 @@
+<item.ChairItem desc="Uma cadeira de escritório giratória com pernas de inox." dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/scifi/icon_sci_chair_02_trek.png" id="860" name="Cadeira de Escritório Branca" tags="chair" price="50" minLevel="1" minCPLevel="1">
+  <seats>
+    <seat x="0.05" y="0.4">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box max="0.4,1.25,0.4" min="-0.4,0,-0.4"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture cols="3" id="Texture" rows="1" source="items/base/scifi/sci_chair_02_trek.png"/>
+  </textures>
+  <nodes>
+    <node id="Back">
+      <box max="0.4,1.25,0.4" min="-0.4,0,-0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-2" y="23"/>
+          <view angle="135" mirror="true" x="2" y="23"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" mirror="true" y="22"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Seat">
+      <box max="0.4,1.25,0.4" min="-0.4,0,-0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view alpha="0" angle="45" y="15"/>
+          <view alpha="0" angle="135" mirror="true" y="15"/>
+          <view angle="225" col="2" y="22"/>
+          <view angle="315" col="2" mirror="true" y="22"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

@@ -1,0 +1,27 @@
+<item.SpriteItem id="1423" name="Ursinho Teddy" desc="Tão fofinho." tags="misc" icon="items/base/modern/icon_m_toy_01_smallbear.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="18" tokens="180" minLevel="1" minLevelType="4" minCPLevel="1">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.63,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bear" source="items/base/modern/m_toy_01_smallbear.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,0.63,0.25"/>
+      <layers>
+        <layer id="bear" texture="bear">
+          <view angle="45" y="16"/>
+          <view angle="135" y="16" hm="true"/>
+          <view angle="225" col="1" y="24" hm="true"/>
+          <view angle="315" col="1" y="24"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

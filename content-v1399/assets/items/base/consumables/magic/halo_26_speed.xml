@@ -1,0 +1,226 @@
+<item.SpriteItem id="0" name="Speed Halo" desc="A speed halo" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="FX floorglow" source="items/base/consumables/magic/halo_generic_floorglow.png" cols="1" rows="1"/>
+    <texture id="FX speedtwinkles" source="items/base/consumables/magic/halo_26_speed_twinkles.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="floorglow" texture="FX floorglow" y="25">
+          <view/>
+        </layer>
+        <layer id="twinkle1" texture="FX speedtwinkles">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135" hm="true"/>
+          <view angle="180"/>
+          <view angle="225" hm="true"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="twinkle2" texture="FX speedtwinkles">
+          <view angle="0" col="1"/>
+          <view angle="45" col="1"/>
+          <view angle="90" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="180" col="1"/>
+          <view angle="225" col="1" hm="true"/>
+          <view angle="270" col="1"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="twinkle3" texture="FX speedtwinkles">
+          <view angle="0" col="2"/>
+          <view angle="45" col="2"/>
+          <view angle="90" col="2"/>
+          <view angle="135" col="2" hm="true"/>
+          <view angle="180" col="2"/>
+          <view angle="225" col="2" hm="true"/>
+          <view angle="270" col="2"/>
+          <view angle="315" col="2"/>
+        </layer>
+        <layer id="twinkle4" texture="FX speedtwinkles">
+          <view angle="0" col="3"/>
+          <view angle="45" col="3"/>
+          <view angle="90" col="3"/>
+          <view angle="135" col="3" hm="true"/>
+          <view angle="180" col="3"/>
+          <view angle="225" col="3" hm="true"/>
+          <view angle="270" col="3"/>
+          <view angle="315" col="3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="floorglow" color="0xfff9ec" a="0.6"/>
+          <layerref id="twinkle2" x="-12" blend="add"/>
+          <layerref id="twinkle1" x="3" blend="add"/>
+          <layerref id="twinkle4" x="12" blend="add"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="floorglow" color="0xfff9ec" a="0.6"/>
+          <layerref id="twinkle4" x="-12" blend="add"/>
+          <layerref id="twinkle2" x="3" blend="add"/>
+          <layerref id="twinkle1" x="12" blend="add"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="floorglow" color="0xfff9ec" a="0.6"/>
+          <layerref id="twinkle1" x="-12" blend="add"/>
+          <layerref id="twinkle4" x="3" blend="add"/>
+          <layerref id="twinkle2" x="12" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="twinkle1" texture="FX speedtwinkles" y="6">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135" hm="true"/>
+          <view angle="180" hm="true"/>
+          <view angle="225" hm="true"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="twinkle2" texture="FX speedtwinkles">
+          <view angle="0" col="1"/>
+          <view angle="45" col="1"/>
+          <view angle="90" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="180" col="1" hm="true"/>
+          <view angle="225" col="1" hm="true"/>
+          <view angle="270" col="1"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="twinkle3" texture="FX speedtwinkles" y="12">
+          <view angle="0" col="2"/>
+          <view angle="45" col="2"/>
+          <view angle="90" col="2"/>
+          <view angle="135" col="2" hm="true"/>
+          <view angle="180" col="2" hm="true"/>
+          <view angle="225" col="2" hm="true"/>
+          <view angle="270" col="2"/>
+          <view angle="315" col="2"/>
+        </layer>
+        <layer id="twinkle4" texture="FX speedtwinkles" y="6">
+          <view angle="0" col="3"/>
+          <view angle="45" col="3"/>
+          <view angle="90" col="3"/>
+          <view angle="135" col="3" hm="true"/>
+          <view angle="180" col="3" hm="true"/>
+          <view angle="225" col="3" hm="true"/>
+          <view angle="270" col="3"/>
+          <view angle="315" col="3"/>
+        </layer>
+        <layer id="floorglow" texture="FX floorglow" y="25">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="twinkle4" x="-15"/>
+          <layerref id="twinkle3"/>
+          <layerref id="twinkle1" x="15"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="twinkle1" x="-15"/>
+          <layerref id="twinkle4"/>
+          <layerref id="twinkle2" x="15"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="twinkle2" x="-15"/>
+          <layerref id="twinkle1"/>
+          <layerref id="twinkle3" x="15"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="twinkle3" x="-15"/>
+          <layerref id="twinkle2"/>
+          <layerref id="twinkle4" x="15"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="floorglow" texture="FX floorglow" y="25">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="floorglow" color="0xffcc66" a="0.7" blend="add"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="floorglow" color="0xffcc66" a="0.75" blend="add"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="floorglow" color="0xffcc66" a="0.8" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="0.8" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="floorglow" texture="FX floorglow" y="25">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="floorglow" a="0.36" blend="add"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="floorglow" a="0.38" blend="add"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="floorglow" a="0.4" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

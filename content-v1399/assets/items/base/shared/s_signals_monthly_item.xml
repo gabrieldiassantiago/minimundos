@@ -1,0 +1,89 @@
+<item.SpriteItem id="5072" name="Colecionável Mensal" desc="Aqui está o novo Colecionável Mensal! Disponível apenas este mês!" tags="admin,misc" icon="items/base/shared/s_signals_monthly_item_icon.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="floor" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.01,0.1"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="Texture01" source="items/base/shared/s_fx_flare_circle_floor_small.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+    <texture id="Texture02" source="items/base/shared/s_signals_monthly_item_flare.png" cols="1" rows="1"/>
+    <texture id="Texture03" source="items/base/shared/s_signals_puzzleworth_item_flarebacking.png" cols="3" rows="1"/>
+    <texture id="Texture" source="items/base/shared/s_signals_monthly_item_solid.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" depthBias="-2">
+      <box min="-0.1,0,-0.1" max="0.1,0.01,0.1"/>
+      <layers>
+        <layer id="Layer" texture="Texture01">
+          <view y="23"/>
+        </layer>
+        <layer id="Layer01" texture="Texture" y="-140">
+          <view angle="45" y="-110"/>
+          <view angle="135" y="-110"/>
+          <view angle="225" y="-110"/>
+          <view angle="315" y="-110"/>
+        </layer>
+        <layer id="Layer02" texture="Texture02" y="-140">
+          <view x="-13" y="-6"/>
+        </layer>
+        <layer id="Layer03" texture="Texture03" y="-120">
+          <view x="-4" y="-84"/>
+        </layer>
+        <layer id="Layer04" texture="Texture03" y="-120">
+          <view col="1" x="-4" y="-84"/>
+        </layer>
+        <layer id="Layer05" texture="Texture03" y="-120">
+          <view col="2" x="-4" y="-84"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Layer02"/>
+          <layerref id="Layer" a="0.35" blend="add"/>
+          <layerref id="Layer03"/>
+          <layerref id="Layer01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Layer02" y="1"/>
+          <layerref id="Layer" a="0.35" blend="add"/>
+          <layerref id="Layer04"/>
+          <layerref id="Layer01" y="1"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Layer02" y="2"/>
+          <layerref id="Layer" a="0.35" blend="add"/>
+          <layerref id="Layer05"/>
+          <layerref id="Layer01" y="2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.1" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-28">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light" y="-15"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

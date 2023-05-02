@@ -1,0 +1,70 @@
+<item.WidgetItem desc="Uma saída da tumba" dropTargetClamp="floor" dropTargetList="wall,avatar" dropTargetType="none" gridActive="false" icon="items/base/antique/icon_a_door_03_tomb.png" id="820" name="Saída de Tumba" tags="door,widget" widget="widgets/widget_portal.swf" price="130" tokens="1300" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.1,1.38,1" min="0,-1.36,-1"/>
+  </volume>
+  <events>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+  </events>
+  <actions>
+    <action event="navigate" id="Navigate" trigger="false"/>
+    <action event="animate(Open)" id="Open" state="true"/>
+    <action event="animate(Closed)" id="Close" state="true"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="portalType" value="door"/>
+    <entry key="maxLinkedSpaces" value="1"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <navigate sitRange="1.00" standRange="1.00" targetRange="1.00"/>
+  <textures>
+    <texture cols="1" id="door" rows="1" source="items/base/antique/a_door_03_tomb.png"/>
+    <texture cols="1" id="gate" rows="1" source="items/base/antique/a_door_03_tomb_02.png"/>
+  </textures>
+  <nodes>
+    <node id="door">
+      <box max="0.1,1.38,1" min="0,-1.36,-1"/>
+      <layers>
+        <layer align="middle" id="door" texture="door">
+          <view angle="45" x="9" y="19"/>
+          <view angle="135" hm="true" x="-9" y="19"/>
+          <view alpha="0.55" angle="225" x="-14" y="8"/>
+          <view alpha="0.55" angle="315" hm="true" x="14" y="8"/>
+        </layer>
+        <layer align="middle" id="gate" texture="gate">
+          <view angle="45" x="10" y="23"/>
+          <view angle="135" hm="true" x="-11" y="23"/>
+          <view alpha="0.55" angle="225" x="-12" y="12"/>
+          <view alpha="0.55" angle="315" hm="true" x="11" y="12"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="door"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="door"/>
+          <layerref id="gate"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="1" id="Open" loop="false">
+          <frameref id="open"/>
+        </animation>
+        <animation framerate="1" id="Closed" loop="false">
+          <frameref id="closed"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

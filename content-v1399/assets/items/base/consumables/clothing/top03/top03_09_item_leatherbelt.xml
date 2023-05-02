@@ -1,0 +1,37 @@
+<item.SpriteItem name="Cinto de Couro Rock" desc=" Um cinto irreverente." tags="consumable,clothing,actionbar,wear,top03,action_wearable_toggle" icon="items/base/consumables/clothing/top03/top03_09_icon_leatherbelt_a.png" price="400" tokens="4000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="3497" premium="Y">
+  <volume>
+    <box min="-0.16,0,-0.2" max="0.2,0.2,0.2"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top03/top03_09_frag_leatherbelt.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="belt" source="items/base/consumables/clothing/top03/top03_09_item_leatherbelt.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.16,0,-0.2" max="0.2,0.2,0.2"/>
+      <layers>
+        <layer id="Layer" texture="belt">
+          <view angle="45" x="2" y="21"/>
+          <view angle="135" y="22" hm="true"/>
+          <view angle="225" col="1" y="19"/>
+          <view angle="315" col="1" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

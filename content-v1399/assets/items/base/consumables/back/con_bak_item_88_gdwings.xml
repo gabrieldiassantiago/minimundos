@@ -1,0 +1,36 @@
+<item.SpriteItem id="2697" name="Asas do Dragão Poderoso" desc="Form arrancadas por um bravo cavaleiro quando salvava a princesa amada." tags="consumable,actionbar,wear,back,action_wearable_toggle" icon="items/base/consumables/back/icon_con_bak_item_88_gdwings.png" minLevel="120" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" minLevelType="1" price="37500">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.4,0.49"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="fire+60,shadow+30"/>
+    <entry key="action_attributes_secondary" value="speed+100,health+120"/>
+  </data>
+  <textures>
+    <texture id="Grand Dragon Wings" source="items/base/consumables/back/con_bak_item_88_gdwings.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0.4,0.49"/>
+      <layers>
+        <layer id="Grand Dragon Wings" texture="Grand Dragon Wings">
+          <view angle="45" x="8" y="21"/>
+          <view angle="135" x="-8" y="21" hm="true"/>
+          <view angle="225" col="1" x="-6" y="25"/>
+          <view angle="315" col="1" x="6" y="25" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

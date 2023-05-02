@@ -1,0 +1,60 @@
+<item.SpriteItem id="5968" name="Decalque Cone Caixa de Som" desc="Um cone caixa de som decalque de parede animado" tags="wall" icon="items/base/modern/icon_m_walldecal_36_speaker02.png" price="10" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="lights" source="items/base/modern/m_walldecal_36_speaker02.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="wall" depthBias="-2">
+      <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+      <layers>
+        <layer id="Speaker 01" texture="lights" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="Speaker 02" texture="lights" align="middle">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Speaker01">
+          <layerref id="Speaker 01"/>
+        </frame>
+        <frame id="Speaker02">
+          <layerref id="Speaker 02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="20">
+          <frameref id="Speaker01" duration="15"/>
+          <frameref id="Speaker02"/>
+          <frameref id="Speaker01"/>
+          <frameref id="Speaker02"/>
+          <frameref id="Speaker01"/>
+          <frameref id="Speaker02"/>
+          <frameref id="Speaker01" duration="16"/>
+          <frameref id="Speaker02"/>
+          <frameref id="Speaker01"/>
+          <frameref id="Speaker02"/>
+          <frameref id="Speaker01"/>
+          <frameref id="Speaker02"/>
+          <frameref id="Speaker01"/>
+          <frameref id="Speaker02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

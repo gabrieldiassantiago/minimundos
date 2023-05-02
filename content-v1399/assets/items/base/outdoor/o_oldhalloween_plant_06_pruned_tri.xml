@@ -1,0 +1,33 @@
+<item.SpriteItem id="7248" name="Árvore Podada do Mal" desc="O que você está olhando?" tags="rare,plant" icon="items/base/outdoor/icon_o_oldhalloween_plant_06_pruned_tri.png" price="25" tokens="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.32,0,-0.32" max="0.32,2.5,0.32"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="tree" source="items/base/outdoor/o_oldhalloween_plant_06_pruned_tri.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Tree">
+      <box min="-0.32,0,-0.32" max="0.32,2.5,0.32"/>
+      <layers>
+        <layer id="tree" texture="tree">
+          <view angle="45" y="18"/>
+          <view angle="135" y="18" hm="true"/>
+          <view angle="225" y="18"/>
+          <view angle="315" y="18" hm="true"/>
+        </layer>
+        <layer id="tree01" texture="tree">
+          <view angle="45" col="1" y="18"/>
+          <view angle="135" col="1" y="18" alpha="0" hm="true"/>
+          <view angle="225" col="1" y="18" alpha="0"/>
+          <view angle="315" col="1" y="18" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,177 @@
+<item.SpriteItem id="1566" name="Interruptor de Circuíto" tags="switch,wall" icon="items/base/scifi/icon_sci_switch_02_circuit.png" minLevel="1" minLevelType="2" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" minCPLevel="1" price="35" desc="Interrompe quando necessário.">
+  <volume>
+    <box min="0,-0.4,-0.2" max="0.1,0.4,0.2"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <textures>
+    <texture id="switch" source="items/base/scifi/sci_switch_02_circuit.png" cols="2" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+    <texture id="charge" source="items/base/shared/s_fx_flare_elec_charge.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Switch">
+      <box min="0,-0.4,-0.2" max="0.1,0.4,0.2"/>
+      <layers>
+        <layer id="panel" texture="switch">
+          <view angle="45" x="5" y="40"/>
+          <view angle="135" x="-5" y="40" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="on" texture="switch">
+          <view angle="45" col="1" x="17" y="21"/>
+          <view angle="135" col="1" x="-17" y="21" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="off" texture="switch">
+          <view angle="45" row="1" x="5" y="57"/>
+          <view angle="135" row="1" x="-5" y="57" hm="true"/>
+          <view angle="225" row="1" alpha="0"/>
+          <view angle="315" row="1" alpha="0"/>
+        </layer>
+        <layer id="middle" texture="switch">
+          <view angle="45" col="1" row="1" x="17" y="52"/>
+          <view angle="135" col="1" row="1" x="-17" y="52" hm="true"/>
+          <view angle="225" col="1" row="1" alpha="0"/>
+          <view angle="315" col="1" row="1" alpha="0"/>
+        </layer>
+        <layer id="chargeA_01" texture="charge">
+          <view angle="45" x="4" y="21"/>
+          <view angle="135" x="-4" y="21" hm="true"/>
+          <view angle="225" col="1" row="1" alpha="0"/>
+          <view angle="315" col="1" row="1" alpha="0"/>
+        </layer>
+        <layer id="chargeA_02" texture="charge">
+          <view angle="45" x="4" y="21"/>
+          <view angle="135" x="-4" y="21" hm="true"/>
+          <view angle="225" col="1" row="1" alpha="0"/>
+          <view angle="315" col="1" row="1" alpha="0"/>
+        </layer>
+        <layer id="chargeB_01" texture="charge">
+          <view angle="45" x="4" y="21" hm="true" vm="true"/>
+          <view angle="135" x="-4" y="21" vm="true"/>
+          <view angle="225" alpha="0" hm="true" vm="true"/>
+          <view angle="315" col="1" row="1" alpha="0"/>
+        </layer>
+        <layer id="chargeB_02" texture="charge">
+          <view angle="45" x="4" y="21" hm="true" vm="true"/>
+          <view angle="135" x="-4" y="21" vm="true"/>
+          <view angle="225" col="1" row="1" alpha="0"/>
+          <view angle="315" col="1" row="1" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="on">
+          <layerref id="panel"/>
+          <layerref id="on"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="panel"/>
+          <layerref id="middle"/>
+        </frame>
+        <frame id="off">
+          <layerref id="panel"/>
+          <layerref id="off"/>
+        </frame>
+        <frame id="on_charge_01">
+          <layerref id="panel"/>
+          <layerref id="on"/>
+          <layerref id="chargeA_01" color="0x6199ed" blend="add"/>
+          <layerref id="chargeA_02" color="0x496ced" blend="add"/>
+        </frame>
+        <frame id="on_charge_02">
+          <layerref id="panel"/>
+          <layerref id="on"/>
+          <layerref id="chargeB_01" color="0x6199ed" blend="add"/>
+          <layerref id="chargeB_02" color="0x496ced" blend="add"/>
+        </frame>
+        <frame id="on_charge_03">
+          <layerref id="panel"/>
+          <layerref id="on"/>
+          <layerref id="chargeB_01" x="-2" color="0x6199ed" blend="add"/>
+          <layerref id="chargeB_02" color="0x496ced" blend="add"/>
+        </frame>
+        <frame id="on_charge_04">
+          <layerref id="panel"/>
+          <layerref id="on"/>
+          <layerref id="chargeA_01" y="-3" color="0x6199ed" blend="add"/>
+          <layerref id="chargeA_02" y="1" color="0x496ced" blend="add"/>
+        </frame>
+        <frame id="on_charge_05">
+          <layerref id="panel"/>
+          <layerref id="on"/>
+          <layerref id="chargeA_01" y="-5" color="0x6199ed" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6" loop="false">
+          <frameref id="Frame02" duration="2"/>
+          <frameref id="on_charge_01"/>
+          <frameref id="on_charge_02"/>
+          <frameref id="on_charge_01"/>
+          <frameref id="on_charge_03"/>
+          <frameref id="on_charge_04"/>
+          <frameref id="on_charge_05"/>
+          <frameref id="on"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="Frame02"/>
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="-0.1" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="light" texture="Light" align="middle">
+          <view angle="45" x="1"/>
+          <view angle="135" x="-1"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="light" color="0x56ace9" a="0.5"/>
+        </frame>
+        <frame id="02">
+          <layerref id="light" color="0x8deced" a="0.3"/>
+        </frame>
+        <frame id="03">
+          <layerref id="light" color="0x74bbed"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6" loop="false">
+          <frameref id="01" duration="2"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

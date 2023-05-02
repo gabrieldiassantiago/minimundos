@@ -1,0 +1,30 @@
+<item.SpriteItem desc="Um tapete nobre, pisar sobre ele o fará sentir-se uma pessoa da realeza." dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" gridActive="false" icon="items/base/antique/icon_a_rug_01_persian.png" id="344" name="Tapete Persa" tags="floor" price="40" tokens="400" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.74,0,1.01" min="-0.74,-0.001,-1.01"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/antique/a_rug_01_persian.png"/>
+  </textures>
+  <nodes>
+    <node id="Rug" layer="surface">
+      <box max="0.74,0,1.01" min="-0.74,-0.001,-1.01"/>
+      <layers>
+        <layer align="middle" id="Rug" texture="Texture">
+          <view angle="45" x="-2" y="-1"/>
+          <view angle="135" mirror="true" x="2" y="-1"/>
+          <view angle="225" x="-2" y="-1"/>
+          <view angle="315" mirror="true" x="2" y="-1"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

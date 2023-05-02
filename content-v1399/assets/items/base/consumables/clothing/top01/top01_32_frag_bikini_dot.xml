@@ -1,0 +1,45 @@
+<f id="Top01_29BikiniDot" parentId="Top01">
+  <g name="bikini" icon="$bm/icon_m_vest.png">
+    <s id="Top01_29Torso" cId="Torso" s="items/base/consumables/clothing/top01/top01_32_bikini_dot_base.png" pri="1.1"/>
+    <s id="Top01_29Skin" cId="Torso" s="items/base/consumables/clothing/top01/top01_13_bikini_skin.png" pri="1"/>
+    <c sId="Top01_29Torso" c="12105912" a="1.00" b="76.6" ct="1.16" lId="Top01_29_Color1" lw="N"/>
+    <c sId="Top01_29Skin" c="13405800" a="0.44" b="12.0" ct="0.26" lId="SkinColor" lw="N"/>
+    <s id="Top01_29Decal" cId="Torso" s="items/base/consumables/clothing/top01/top01_32_bikini_dot_decal.png" pri="1.1"/>
+    <c sId="Top01_29Decal" c="16212391" a="1.00" b="40.2" ct="0.84" lId="Top01_29_Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_29" icon="items/base/consumables/clothing/top01/top01_32_item_icon.png" w="48" h="48"/>
+    <s id="Icon01_29Base" cId="IconTop01_29" s="items/base/consumables/clothing/top01/top01_32_icon_base.png"/>
+    <c sId="Icon01_29Base" c="12105912" a="1.00" b="76.6" ct="1.16" lId="Top01_29_Color1" lw="N"/>
+    <s id="Icon01_29Decal" cId="IconTop01_29" s="items/base/consumables/clothing/top01/top01_32_icon_decal.png"/>
+    <c sId="Icon01_29Decal" c="16212391" a="1.00" b="40.2" ct="0.84" lId="Top01_29_Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top01_29_Color2"/>
+    </wizbox>
+    <b id="Top01_29_Color2" name="Color " desc="Choose a color" sel="Pink" seld="Pink">
+      <g id="Pink" name="Pink" icon="$bu/icon_pink.png">
+        <c id="PinkDark" name="PinkDark" icon="$bu/icon_lightpink.png" c="16212391" a="1.00" b="40.2" ct="0.84" lId="Top01_29_Color2"/>
+        <c id="White" name="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="76.6" ct="1.16" lId="Top01_29_Color1"/>
+      </g>
+      <g id="Blue" name="Blue" icon="$bu/icon_blue.png">
+        <c id="Blue" name="Blue" icon="$bu/icon_blue.png" c="35793" a="1.00" b="59.7" ct="0.47" lId="Top01_29_Color2"/>
+        <c id="White" name="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="76.6" ct="1.16" lId="Top01_29_Color1"/>
+      </g>
+      <g id="Red" name="Red" icon="$bu/icon_red.png">
+        <c id="Red" name="Red" icon="$bu/icon_red.png" c="15406361" a="1.00" b="48.3" ct="0.67" lId="Top01_29_Color2"/>
+        <c id="White" name="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="76.6" ct="1.16" lId="Top01_29_Color1"/>
+      </g>
+      <g id="Yellow" name="Yellow" icon="$bu/icon_yellow.png">
+        <c id="Yellow" name="Yellow" icon="$bu/icon_yellow.png" c="15384851" a="1.00" b="35.4" ct="1.25" lId="Top01_29_Color2"/>
+        <c id="White" name="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="76.6" ct="1.16" lId="Top01_29_Color1"/>
+      </g>
+      <g id="Black" name="Black" icon="$bu/icon_black.png">
+        <c id="Black" name="Black" icon="$bu/icon_black.png" c="4013373" a="0.93" b="39.9" ct="0.84" lId="Top01_29_Color2"/>
+        <c id="White" name="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="76.6" ct="1.16" lId="Top01_29_Color1"/>
+      </g>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

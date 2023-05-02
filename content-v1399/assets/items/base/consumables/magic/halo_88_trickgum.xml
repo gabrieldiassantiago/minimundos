@@ -1,0 +1,158 @@
+<item.SpriteItem id="0" name="Trick Bubblegum Halo" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+  </volume>
+  <textures>
+    <texture id="gum" source="items/base/consumables/magic/halo_88_trickgum.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="splat" source="items/base/consumables/magic/sndfx_splat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="bubble 01" texture="gum">
+          <view angle="0" x="28" y="-76" hm="true"/>
+          <view angle="45" x="20" y="-70"/>
+          <view angle="90" y="-70"/>
+          <view angle="135" x="-20" y="-70" hm="true"/>
+          <view angle="180" x="-28" y="-76"/>
+          <view angle="225" x="-20" y="-84" alpha="0"/>
+          <view angle="270" y="-86" alpha="0"/>
+          <view angle="315" x="20" y="-84" alpha="0" hm="true"/>
+        </layer>
+        <layer id="bubble 02" texture="gum">
+          <view angle="0" col="1" x="38" y="-76" hm="true"/>
+          <view angle="45" col="1" x="30" y="-68"/>
+          <view angle="90" col="1" y="-69"/>
+          <view angle="135" col="1" x="-30" y="-68" hm="true"/>
+          <view angle="180" col="1" x="-38" y="-76"/>
+          <view angle="225" col="1" x="-28" y="-90" alpha="0"/>
+          <view angle="270" col="1" y="-90" alpha="0"/>
+          <view angle="315" col="1" x="28" y="-90" alpha="0" hm="true"/>
+        </layer>
+        <layer id="bubble 03" texture="gum">
+          <view angle="0" col="2" x="50" y="-76" hm="true"/>
+          <view angle="45" col="2" x="42" y="-66"/>
+          <view angle="90" col="2" y="-68"/>
+          <view angle="135" col="2" x="-42" y="-66" hm="true"/>
+          <view angle="180" col="2" x="-50" y="-76"/>
+          <view angle="225" col="2" x="-36" y="-100" alpha="0"/>
+          <view angle="270" col="2" y="-94" alpha="0"/>
+          <view angle="315" col="2" x="36" y="-100" alpha="0" hm="true"/>
+        </layer>
+        <layer id="splat" texture="gum">
+          <view angle="0" col="3" x="14" y="-86" hm="true"/>
+          <view angle="45" col="3" x="10" y="-80"/>
+          <view angle="90" col="3" y="-84"/>
+          <view angle="135" col="3" x="-10" y="-80" hm="true"/>
+          <view angle="180" col="3" x="-14" y="-86"/>
+          <view angle="225" col="3" x="-6" y="-90" alpha="0"/>
+          <view angle="270" col="3" y="-90" alpha="0"/>
+          <view angle="315" col="3" x="6" y="-90" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="gum 01">
+          <layerref id="bubble 01"/>
+        </frame>
+        <frame id="gum 02">
+          <layerref id="bubble 02"/>
+        </frame>
+        <frame id="gum 03">
+          <layerref id="bubble 03"/>
+        </frame>
+        <frame id="gum 04">
+          <layerref id="splat"/>
+        </frame>
+        <frame id="empty">
+          <layerref id="bubble 01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4" loop="false">
+          <frameref id="gum 01" duration="6"/>
+          <frameref id="gum 02" duration="8"/>
+          <frameref id="gum 03" duration="12"/>
+          <frameref id="gum 04">
+            <sample id="splat"/>
+          </frameref>
+          <frameref id="gum 04" duration="39"/>
+          <frameref id="empty" duration="50"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Behind">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="bubble 01" texture="gum">
+          <view angle="0" x="28" y="-76" alpha="0" hm="true"/>
+          <view angle="45" x="20" y="-70" alpha="0"/>
+          <view angle="90" y="-70" alpha="0"/>
+          <view angle="135" x="-20" y="-70" alpha="0" hm="true"/>
+          <view angle="180" x="-28" y="-76" alpha="0"/>
+          <view angle="225" x="-20" y="-84"/>
+          <view angle="270" y="-86"/>
+          <view angle="315" x="20" y="-84" hm="true"/>
+        </layer>
+        <layer id="bubble 02" texture="gum">
+          <view angle="0" col="1" x="38" y="-76" alpha="0" hm="true"/>
+          <view angle="45" col="1" x="30" y="-68" alpha="0"/>
+          <view angle="90" col="1" y="-69" alpha="0"/>
+          <view angle="135" col="1" x="-30" y="-68" alpha="0" hm="true"/>
+          <view angle="180" col="1" x="-38" y="-76" alpha="0"/>
+          <view angle="225" col="1" x="-28" y="-90"/>
+          <view angle="270" col="1" y="-90"/>
+          <view angle="315" col="1" x="28" y="-90" hm="true"/>
+        </layer>
+        <layer id="bubble 03" texture="gum">
+          <view angle="0" col="2" x="50" y="-76" alpha="0" hm="true"/>
+          <view angle="45" col="2" x="42" y="-66" alpha="0"/>
+          <view angle="90" col="2" y="-68" alpha="0"/>
+          <view angle="135" col="2" x="-42" y="-66" alpha="0" hm="true"/>
+          <view angle="180" col="2" x="-50" y="-76" alpha="0"/>
+          <view angle="225" col="2" x="-36" y="-100"/>
+          <view angle="270" col="2" y="-94"/>
+          <view angle="315" col="2" x="36" y="-100" hm="true"/>
+        </layer>
+        <layer id="splat" texture="gum">
+          <view angle="0" col="3" x="14" y="-86" alpha="0" hm="true"/>
+          <view angle="45" col="3" x="10" y="-80" alpha="0"/>
+          <view angle="90" col="3" y="-84" alpha="0"/>
+          <view angle="135" col="3" x="-10" y="-80" alpha="0" hm="true"/>
+          <view angle="180" col="3" x="-14" y="-86" alpha="0"/>
+          <view angle="225" col="3" x="-6" y="-90"/>
+          <view angle="270" col="3" y="-90"/>
+          <view angle="315" col="3" x="6" y="-90" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="gum 01">
+          <layerref id="bubble 01"/>
+        </frame>
+        <frame id="gum 02">
+          <layerref id="bubble 02"/>
+        </frame>
+        <frame id="gum 03">
+          <layerref id="bubble 03"/>
+        </frame>
+        <frame id="gum 04">
+          <layerref id="splat"/>
+        </frame>
+        <frame id="empty">
+          <layerref id="bubble 01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4" loop="false">
+          <frameref id="gum 01" duration="6"/>
+          <frameref id="gum 02" duration="8"/>
+          <frameref id="gum 03" duration="12"/>
+          <frameref id="gum 04" duration="30"/>
+          <frameref id="empty" duration="50"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

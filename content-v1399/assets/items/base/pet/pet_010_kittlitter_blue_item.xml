@@ -1,0 +1,30 @@
+<item.SpriteItem id="4794" name="Caixa de Areia Azul Kitty Play" desc="Uma caixa de areia para seu pequeno pet" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" tags="misc,seasonal" icon="items/base/pet/pet_010_kittlitter_blue_icon.png" price="10">
+  <volume>
+    <box min="-0.49,0,-0.4" max="0.49,0.49,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/pet/pet_010_kittlitter_blue_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.4" max="0.49,0.49,0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle" y="-15">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

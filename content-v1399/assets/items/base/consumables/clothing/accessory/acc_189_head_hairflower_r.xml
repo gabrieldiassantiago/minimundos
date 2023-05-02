@@ -1,0 +1,31 @@
+<item.SpriteItem id="0" name="Hair Flower" desc="A red hair flower" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="horns" source="items/base/consumables/clothing/accessory/acc_189_head_hairflower_r.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="horns" texture="horns">
+          <view angle="0" x="5" hm="true"/>
+          <view angle="45" col="4" x="-15" hm="true"/>
+          <view angle="90" col="1" x="-26"/>
+          <view angle="135" col="2" y="4" alpha="0"/>
+          <view angle="180" col="3" y="4" alpha="0"/>
+          <view angle="225" col="2" x="-2" alpha="0" hm="true"/>
+          <view angle="270" col="2" x="23" y="-10"/>
+          <view angle="315" col="3" x="20" y="-5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="horns"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

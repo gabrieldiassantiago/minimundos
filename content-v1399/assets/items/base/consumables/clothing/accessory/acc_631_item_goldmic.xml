@@ -1,0 +1,35 @@
+<item.SpriteItem id="6118" name="Microfone Superstar Deluxe Play" desc="Seja uma superstar!" tags="rare,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_631_icon_goldmic.png" price="100" minLevel="1" minLevelType="4" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.37,0,-0.12" max="0.37,0.15,0.12"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+10"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_631_item_goldmic.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.37,0,-0.12" max="0.37,0.15,0.12"/>
+      <layers>
+        <layer id="Mic" texture="Texture">
+          <view angle="45" col="1" y="17"/>
+          <view angle="135" col="1" y="17" hm="true"/>
+          <view angle="225" y="17" hm="true"/>
+          <view angle="315" y="17"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

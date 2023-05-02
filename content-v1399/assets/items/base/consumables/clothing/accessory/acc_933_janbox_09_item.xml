@@ -1,0 +1,104 @@
+<item.SpriteItem id="7472" name="Chocolate Quentíssimo" desc="Um delicioso, quente e luxuoso chocolate quente [9 of 25]" tags="rare,consumable,hand,usable,wear,action_holdable_toggle,nopvp" icon="items/base/consumables/clothing/accessory/acc_933_janbox_09_icon.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.08,0,-0.08" max="0.08,0.31,0.08"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+10,speed+10"/>
+  </data>
+  <textures>
+    <texture id="steam" source="items/base/consumables/edible/con_eat_03_coffeecup_steam.png" cols="3" rows="1"/>
+    <texture id="cup" source="items/base/consumables/clothing/accessory/acc_933_janbox_09_item.png" cols="1" rows="1"/>
+    <texture id="handle" source="items/base/consumables/clothing/accessory/acc_933_janbox_09_handle.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="drink" source="items/base/consumables/edible/sndfx_drink.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="cup">
+      <box min="-0.08,0,-0.08" max="0.08,0.31,0.08"/>
+      <layers>
+        <layer id="handle" texture="handle">
+          <view angle="45" col="1" x="8" y="-9"/>
+          <view angle="135" col="1" x="-8" y="-9" hm="true"/>
+          <view angle="225" col="3" x="-9" y="-13" hm="true"/>
+          <view angle="315" col="3" x="9" y="-13"/>
+        </layer>
+        <layer id="cup" texture="cup">
+          <view angle="45" y="6"/>
+          <view angle="135" y="6" hm="true"/>
+          <view angle="225" y="6"/>
+          <view angle="315" y="6" hm="true"/>
+        </layer>
+        <layer id="steam01" texture="steam" y="-30">
+          <view angle="45" y="-5"/>
+          <view angle="135" y="-5"/>
+          <view angle="225" y="-5"/>
+          <view angle="315" y="-5"/>
+        </layer>
+        <layer id="steam02" texture="steam" y="-30">
+          <view angle="45" col="1" y="-5"/>
+          <view angle="135" col="1" y="-5"/>
+          <view angle="225" col="1" y="-5"/>
+          <view angle="315" col="1" y="-5"/>
+        </layer>
+        <layer id="steam03" texture="steam" y="-30">
+          <view angle="45" col="2" y="-5"/>
+          <view angle="135" col="2" y="-5"/>
+          <view angle="225" col="2" y="-5"/>
+          <view angle="315" col="2" y="-5"/>
+        </layer>
+        <layer id="steam04" texture="steam" y="-30">
+          <view angle="45" col="1" y="-5" hm="true"/>
+          <view angle="135" col="1" y="-5" hm="true"/>
+          <view angle="225" col="1" y="-5" hm="true"/>
+          <view angle="315" col="1" y="-5" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="cup"/>
+          <layerref id="steam01"/>
+          <layerref id="handle"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="cup"/>
+          <layerref id="steam02"/>
+          <layerref id="handle"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="cup"/>
+          <layerref id="steam03"/>
+          <layerref id="handle"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="cup"/>
+          <layerref id="steam04"/>
+          <layerref id="handle"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame01">
+            <sample id="drink"/>
+          </frameref>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

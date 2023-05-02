@@ -1,0 +1,87 @@
+<item.WidgetItem desc="Exiba aqui as imagens das suas últimas férias inter-galáticas." dropTargetClamp="none" dropTargetList="wall,avatar" dropTargetType="none" gridActive="false" icon="items/base/scifi/icon_sci_mural_01_metal.png" id="1207" name="Flickr Espacial" tags="wall,widget,user_content,allow_excess" widget="widgets/widget_flickr.swf" price="275" minLevel="1" minLevelType="1" minCPLevel="1">
+  <volume>
+    <box max="0.001,1.59,2.12" min="0,-1.59,-2.12"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action event="widget_action(FIRST)" id="First" trigger="false"/>
+    <action event="widget_action(LAST)" id="Last" trigger="false"/>
+    <action event="widget_action(NEXT)" id="Next" trigger="false"/>
+    <action event="widget_action(PREVIOUS)" id="Previous" trigger="false"/>
+    <action event="widget_action(SHOWIMAGE)" id="Show Specific Image" trigger="false">
+      <params>
+        <param id="Image Title" label="Enter image title" type="string"/>
+      </params>
+    </action>
+    <action id="Image Change">
+      <eval>
+        <func id="Image Title" input="title" maxChars="60" operator="equal" partialMatch="true" type="relational"/>
+      </eval>
+    </action>
+    <action id="Enlarge Image">
+      <eval>
+        <func id="Image Title" input="title" maxChars="60" operator="equal" partialMatch="true" type="relational"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="frame" value="wooden"/>
+    <entry key="aspect" value="mural"/>
+    <entry key="renderWidth" value="640"/>
+    <entry key="renderHeight" value="480"/>
+    <entry key="scale" value="0.7"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate accessibleRange="2.00" position="infront" sitRange="4.00" standRange="3.00" targetRange="1.00"/>
+  <textures>
+    <texture cols="1" id="Frame" rows="1" source="items/base/scifi/sci_mural_01_metal.png"/>
+    <texture cols="1" id="Back" rows="1" source="items/base/scifi/sci_mural_01_metal_background.png"/>
+    <texture cols="2" id="Highlight" rows="1" source="items/base/scifi/sci_mural_01_metal_highlight.png"/>
+  </textures>
+  <nodes>
+    <node id="Mural">
+      <box max="0.001,1.59,2.12" min="0,-1.59,-2.12"/>
+      <layers>
+        <layer align="middle" id="Back" texture="Back">
+          <view angle="45" x="-6" y="-1"/>
+          <view angle="135" hm="true" x="6" y="-1"/>
+          <view alpha="0" angle="225"/>
+          <view alpha="0" angle="315"/>
+        </layer>
+        <layer h="2.7" id="WidgetLayer" texture="Texture" type="panel" w="3.72">
+          <view angle="45" x="-3" y="-4"/>
+          <view angle="135" col="1" x="4" y="-4"/>
+          <view alpha="0" angle="225" col="2"/>
+          <view alpha="0" angle="315" col="3"/>
+        </layer>
+        <layer align="middle" id="frame" texture="Frame">
+          <view angle="45" x="-6" y="-1"/>
+          <view angle="135" hm="true" x="6" y="-1"/>
+          <view alpha="0" angle="225"/>
+          <view alpha="0" angle="315"/>
+        </layer>
+        <layer align="middle" id="frame01" texture="Highlight">
+          <view angle="45" x="-6" y="-39"/>
+          <view angle="135" col="1" x="6" y="-39"/>
+          <view alpha="0" angle="225"/>
+          <view alpha="0" angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame"/>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

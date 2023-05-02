@@ -1,0 +1,221 @@
+<item.SpriteItem name="Floco de Neve" desc="Um floco de neve caído do céu [2 of 25]" tags="rare,misc" icon="items/base/consumables/clothing/accessory/acc_926_janbox_02_icon.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="7454">
+  <volume>
+    <box min="-1,0,-1.5" max="1,2.2,1.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_926_janbox_02_item.png" cols="2" rows="1"/>
+    <texture id="sparkle" source="items/base/consumables/clothing/accessory/acc_482_goldhula_sparkle.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="deer">
+      <box min="-1,0,-1.5" max="1,2.2,1.5"/>
+      <layers>
+        <layer id="snowflake" texture="Texture">
+          <view angle="45" x="14" y="71"/>
+          <view angle="135" x="-13" y="69" hm="true"/>
+          <view angle="225" col="1" y="81"/>
+          <view angle="315" col="1" x="-3" y="86" hm="true"/>
+        </layer>
+        <layer id="sparkle_01" texture="sparkle">
+          <view angle="45" x="-52" y="-185"/>
+          <view angle="135" x="-64" y="-196"/>
+          <view angle="225" x="64" y="-151"/>
+          <view angle="315" x="-66" y="-145"/>
+        </layer>
+        <layer id="sparkle_02" texture="sparkle">
+          <view angle="45" col="1" x="-51" y="-184"/>
+          <view angle="135" col="1" x="-64" y="-197"/>
+          <view angle="225" col="1" x="64" y="-152"/>
+          <view angle="315" col="1" x="-66" y="-148"/>
+        </layer>
+        <layer id="sparkle_03" texture="sparkle">
+          <view angle="45" col="2" x="-52" y="-186"/>
+          <view angle="135" col="2" x="-64" y="-197"/>
+          <view angle="225" col="2" x="62" y="-154"/>
+          <view angle="315" col="2" x="-66" y="-149"/>
+        </layer>
+        <layer id="sparkle_04" texture="sparkle">
+          <view angle="45" col="1" x="-53" y="-185" hm="true"/>
+          <view angle="135" col="1" x="-65" y="-197" hm="true"/>
+          <view angle="225" col="1" x="62" y="-151" hm="true"/>
+          <view angle="315" col="1" x="-67" y="-147" hm="true"/>
+        </layer>
+        <layer id="sparkle_05" texture="sparkle">
+          <view angle="45" x="-53" y="-185" hm="true"/>
+          <view angle="135" x="-65" y="-196" hm="true"/>
+          <view angle="225" x="65" y="-151" hm="true"/>
+          <view angle="315" x="-66" y="-147" hm="true"/>
+        </layer>
+        <layer id="sparkle_06" texture="sparkle">
+          <view angle="45" x="95" y="-101"/>
+          <view angle="135" x="60" y="-72"/>
+          <view angle="225" x="-60" y="-63"/>
+          <view angle="315" x="62" y="-35"/>
+        </layer>
+        <layer id="sparkle_07" texture="sparkle">
+          <view angle="45" col="1" x="94" y="-101"/>
+          <view angle="135" col="1" x="59" y="-73"/>
+          <view angle="225" col="1" x="-60" y="-63"/>
+          <view angle="315" col="1" x="62" y="-35"/>
+        </layer>
+        <layer id="sparkle_08" texture="sparkle">
+          <view angle="45" col="2" x="95" y="-102"/>
+          <view angle="135" col="2" x="61" y="-74"/>
+          <view angle="225" col="2" x="-59" y="-66"/>
+          <view angle="315" col="2" x="62" y="-36"/>
+        </layer>
+        <layer id="sparkle_09" texture="sparkle">
+          <view angle="45" col="1" x="93" y="-100" hm="true"/>
+          <view angle="135" col="1" x="60" y="-73" hm="true"/>
+          <view angle="225" col="1" x="-61" y="-64" hm="true"/>
+          <view angle="315" col="1" x="62" y="-35" hm="true"/>
+        </layer>
+        <layer id="sparkle_10" texture="sparkle">
+          <view angle="45" x="95" y="-101" hm="true"/>
+          <view angle="135" x="62" y="-72" hm="true"/>
+          <view angle="225" x="-60" y="-63" hm="true"/>
+          <view angle="315" x="63" y="-34" hm="true"/>
+        </layer>
+        <layer id="sparkle_11" texture="sparkle">
+          <view angle="45" x="-21" y="-67"/>
+          <view angle="135" x="-68" y="-58"/>
+          <view angle="225" x="18" y="-36"/>
+          <view angle="315" x="-28" y="-30"/>
+        </layer>
+        <layer id="sparkle_12" texture="sparkle">
+          <view angle="45" col="1" x="-18" y="-70"/>
+          <view angle="135" col="1" x="-67" y="-59"/>
+          <view angle="225" col="1" x="16" y="-37"/>
+          <view angle="315" col="1" x="-30" y="-31"/>
+        </layer>
+        <layer id="sparkle_13" texture="sparkle">
+          <view angle="45" col="2" x="-20" y="-68"/>
+          <view angle="135" col="2" x="-68" y="-60"/>
+          <view angle="225" col="2" x="16" y="-39"/>
+          <view angle="315" col="2" x="-30" y="-31"/>
+        </layer>
+        <layer id="sparkle_14" texture="sparkle">
+          <view angle="45" col="1" x="-19" y="-68" hm="true"/>
+          <view angle="135" col="1" x="-68" y="-59" hm="true"/>
+          <view angle="225" col="1" x="16" y="-39" hm="true"/>
+          <view angle="315" col="1" x="-30" y="-30" hm="true"/>
+        </layer>
+        <layer id="sparkle_15" texture="sparkle">
+          <view angle="45" x="-19" y="-68" hm="true"/>
+          <view angle="135" x="-68" y="-60" hm="true"/>
+          <view angle="225" x="18" y="-36" hm="true"/>
+          <view angle="315" x="-32" y="-30" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle_01">
+          <layerref id="snowflake"/>
+        </frame>
+        <frame id="Idle_02">
+          <layerref id="snowflake"/>
+        </frame>
+        <frame id="Idle_03">
+          <layerref id="snowflake"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_04"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_05"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_06" a="0.8"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_07"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_08"/>
+        </frame>
+        <frame id="Frame09">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_09"/>
+        </frame>
+        <frame id="Frame10">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_10"/>
+        </frame>
+        <frame id="Frame11">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_11"/>
+        </frame>
+        <frame id="Frame12">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_12"/>
+        </frame>
+        <frame id="Frame13">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_13"/>
+        </frame>
+        <frame id="Frame14">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_14"/>
+        </frame>
+        <frame id="Frame15">
+          <layerref id="snowflake"/>
+          <layerref id="sparkle_15"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="10">
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+          <frameref id="Idle_03" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+          <frameref id="Idle_03" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame09"/>
+          <frameref id="Frame10"/>
+          <frameref id="Frame11"/>
+          <frameref id="Frame12"/>
+          <frameref id="Frame13"/>
+          <frameref id="Frame14"/>
+          <frameref id="Frame15"/>
+          <frameref id="Idle_03" duration="2"/>
+          <frameref id="Idle_02" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

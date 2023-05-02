@@ -1,0 +1,35 @@
+<item.SpriteItem id="6939" name="Bolsa de Ombro Pérola Chic's" desc="Uma bolsa branca super refinada" tags="consumable,actionbar,clothing,wear,hand,nopvp,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_851_whitebag_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2231,0,-0.23" max="0.2231,0.32,0.1"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+10"/>
+  </data>
+  <textures>
+    <texture id="handbag" source="items/base/consumables/clothing/accessory/acc_851_whitebag_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="handbag">
+      <box min="-0.2231,0,-0.23" max="0.2231,0.32,0.1"/>
+      <layers>
+        <layer id="handbag" texture="handbag">
+          <view angle="45" y="22"/>
+          <view angle="135" y="22" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

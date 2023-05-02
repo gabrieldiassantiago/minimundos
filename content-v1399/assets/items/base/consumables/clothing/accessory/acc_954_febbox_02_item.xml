@@ -1,0 +1,38 @@
+<item.SpriteItem id="7545" name="Safira Congelada" desc="Uma pedra preciosa congelada [2 of 25]" tags="rare,misc" icon="items/base/consumables/clothing/accessory/acc_954_febbox_02_icon.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.776,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Table" source="items/base/consumables/clothing/accessory/acc_954_febbox_02_item.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="cake">
+      <box min="-0.49,0,-0.49" max="0.49,0.776,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Table">
+          <view angle="45" y="40"/>
+          <view angle="135" y="40" hm="true"/>
+          <view angle="225" y="40"/>
+          <view angle="315" y="40" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

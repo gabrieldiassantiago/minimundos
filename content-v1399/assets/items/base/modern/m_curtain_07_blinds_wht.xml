@@ -1,0 +1,78 @@
+<item.SpriteItem id="2861" name="Persiana Black" desc="Uma persiana." tags="switch" icon="items/base/modern/icon_m_curtain_07_blinds_wht.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="135">
+  <volume>
+    <box min="0,-0.68,-0.5" max="0,1.39,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Open" state="true" event="animate(00)"/>
+    <action id="Closed" state="true" event="animate(01)"/>
+    <action id="Up" state="true" event="animate(02)"/>
+  </actions>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="3"/>
+    <entry key="00" value="Open"/>
+    <entry key="01" value="Closed"/>
+    <entry key="02" value="Up"/>
+  </data>
+  <textures>
+    <texture id="Open" source="items/base/modern/m_curtain_07_open.png" cols="1" rows="1"/>
+    <texture id="Closed" source="items/base/modern/m_curtain_07_closed.png" cols="1" rows="1"/>
+    <texture id="Up" source="items/base/modern/m_curtain_07_up.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="0,-0.68,-0.5" max="0,1.39,0.5"/>
+      <layers>
+        <layer id="Open" texture="Open" y="29">
+          <view angle="45" x="-3" y="44"/>
+          <view angle="135" x="1" y="43" hm="true"/>
+          <view angle="225" y="-8" alpha="0"/>
+          <view angle="315" y="-7" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Closed" texture="Closed" y="29">
+          <view angle="45" x="-3" y="44"/>
+          <view angle="135" x="1" y="43" hm="true"/>
+          <view angle="225" y="-125" alpha="0"/>
+          <view angle="315" y="-124" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Up" texture="Up" y="29">
+          <view angle="45" x="-4" y="3"/>
+          <view angle="135" x="2" y="2" hm="true"/>
+          <view angle="225" y="-125" alpha="0"/>
+          <view angle="315" y="-124" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Open">
+          <layerref id="Open"/>
+        </frame>
+        <frame id="Closed">
+          <layerref id="Closed"/>
+        </frame>
+        <frame id="Up">
+          <layerref id="Up"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="Open"/>
+        </animation>
+        <animation id="01" framerate="4">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="Up"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

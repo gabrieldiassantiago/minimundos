@@ -1,0 +1,69 @@
+<item.SpriteItem id="2843" name="Cortina" desc="Elegante." tags="misc,wall" icon="items/base/modern/icon_m_curtain_04_plain.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="120" tokens="1200">
+  <volume>
+    <box min="0,-0.5,-1.07" max="0,1.85,1.07"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Closed" state="true" event="animate(Closed)"/>
+  </actions>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Open" source="items/base/modern/m_curtain_04_open.png" cols="1" rows="1"/>
+    <texture id="Closed" source="items/base/modern/m_curtain_04_closed.png" cols="1" rows="1"/>
+    <texture id="Rod" source="items/base/modern/m_curtain_04_rod.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="nodes">
+      <box min="0,-0.5,-1.07" max="0,1.85,1.07"/>
+      <layers>
+        <layer id="Closed" texture="Closed" y="100">
+          <view angle="45" y="-28"/>
+          <view angle="135" y="-27" hm="true"/>
+          <view angle="225" y="-26" alpha="0"/>
+          <view angle="315" y="-26" alpha="0"/>
+        </layer>
+        <layer id="Open" texture="Open" y="100">
+          <view angle="45" x="-1" y="-27"/>
+          <view angle="135" y="-26" hm="true"/>
+          <view angle="225" y="-26" alpha="0"/>
+          <view angle="315" y="-26" alpha="0"/>
+        </layer>
+        <layer id="Rod" texture="Rod">
+          <view angle="45" x="-4" y="-85"/>
+          <view angle="135" x="4" y="-83" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Open">
+          <layerref id="Rod"/>
+          <layerref id="Open"/>
+        </frame>
+        <frame id="Closed">
+          <layerref id="Rod"/>
+          <layerref id="Closed"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="1" loop="false">
+          <frameref id="Open"/>
+        </animation>
+        <animation id="Closed" framerate="1" loop="false">
+          <frameref id="Closed"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

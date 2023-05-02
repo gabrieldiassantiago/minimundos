@@ -1,0 +1,36 @@
+<f id="Top01_64_Rainbow" parentId="Top01">
+  <b id="Gender" sel="Male">
+    <g id="Male" icon="$bm/icon_m_tshirt.png">
+      <s id="Top01_64TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_64_rainbow_torso_m.png" pri="1"/>
+    </g>
+    <g id="Female" icon="$bm/icon_m_tshirt.png">
+      <s id="Top01_64TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_64_rainbow_torso_f.png" pri="1"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Top01_64ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_short_arm_idle.png" pri="1"/>
+    <s id="Top01_64ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_short_arm_walk1.png" pri="1"/>
+    <s id="Top01_64ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_short_arm_walk2.png" pri="1"/>
+    <s id="Top01_64ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_short_arm_walk3.png" pri="1"/>
+    <s id="Top01_64ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_short_arm_sit.png" pri="1"/>
+    <s id="Top01_64ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_short_arm_throw.png" pri="1"/>
+    <s id="Top01_64ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_short_arm_raise.png" pri="1"/>
+    <c sId="Top01_64ArmIdleBase" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top01_64Color" lw="N"/>
+    <c sId="Top01_64ArmWalk1Base" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top01_64Color" lw="N"/>
+    <c sId="Top01_64ArmWalk2Base" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top01_64Color" lw="N"/>
+    <c sId="Top01_64ArmWalk3Base" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top01_64Color" lw="N"/>
+    <c sId="Top01_64ArmSitBase" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top01_64Color" lw="N"/>
+    <c sId="Top01_64ArmThrowBase" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top01_64Color" lw="N"/>
+    <c sId="Top01_64ArmRaiseBase" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top01_64Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_64" icon="items/base/consumables/clothing/top01/top01_64_icon_rainbow_a.png" w="48" h="48"/>
+    <s id="IconTop01_64IconBase" cId="IconTop01_64" s="items/base/consumables/clothing/top01/top01_64_icon_rainbow_a.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_64Color" name="Color 1" desc="Choose a color" sel="Red" seld="Red">
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top01_64Color"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

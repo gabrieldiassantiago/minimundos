@@ -1,0 +1,55 @@
+<item.SpriteItem desc="Sombrio e poderoso." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/head/icon_con_head_item_16_ninja_lv1.png" id="1114" name="Cabeça de Ninja Fantasma" tags="consumable,actionbar,wear,head,action_wearable_toggle" price="2700" minLevel="30" minLevelType="3" minCPLevel="1">
+  <volume>
+    <box max="0.3,0.5,0.25" min="-0.25,0,-0.25"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+10,health+30"/>
+  </data>
+  <textures>
+    <texture cols="5" id="Texture" rows="1" source="items/base/consumables/head/con_head_16_ninja_01.png"/>
+    <texture cols="3" id="eye" rows="1" source="items/base/consumables/head/con_head_16_ninja_01a.png"/>
+    <texture cols="1" id="shadow" rows="1" source="items/base/consumables/head/con_head_generic_dropshadow.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.3,0.5,0.25" min="-0.25,0,-0.25"/>
+      <layers>
+        <layer id="helmet" texture="Texture" y="22">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="3"/>
+          <view angle="315" col="3" hm="true"/>
+        </layer>
+        <layer id="eye" texture="eye" y="22">
+          <view angle="45" col="1" x="11" y="-20"/>
+          <view angle="135" col="1" hm="true" x="-11" y="-20"/>
+          <view angle="225" col="3"/>
+          <view angle="315" col="3" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="30"/>
+          <view angle="135" y="30"/>
+          <view angle="225" y="30"/>
+          <view angle="315" y="30"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="shadow"/>
+          <layerref id="helmet"/>
+          <layerref id="eye"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

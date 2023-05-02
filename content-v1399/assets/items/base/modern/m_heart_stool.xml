@@ -1,0 +1,49 @@
+<item.ChairItem desc="Uma banqueta de bar apaixonada." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/modern/icon_m_heart_stool.png" id="2375" name="Banqueta de Coração" tags="seasonal,chair,valentines" minLevel="1" minCPLevel="1" price="40">
+  <seats>
+    <seat y="0.73">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.26,0,-0.26" max="0.26,0.81,0.26"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="stool" source="items/base/modern/m_heart_stool.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Seat">
+      <box min="-0.26,0,-0.26" max="0.26,0.81,0.26"/>
+      <layers>
+        <layer id="Layer" texture="stool">
+          <view angle="45" y="17"/>
+          <view angle="135" y="17" hm="true"/>
+          <view angle="225" col="1" y="17"/>
+          <view angle="315" col="1" y="17" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

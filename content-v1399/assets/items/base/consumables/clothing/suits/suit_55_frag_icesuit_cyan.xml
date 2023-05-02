@@ -1,0 +1,153 @@
+<f id="IceSuit_Cyan" parentId="Suits">
+  <g name="Top" icon="$bm/icon_m_vest.png">
+    <s id="IceTorso_Cyan" cId="Torso" s="items/base/consumables/clothing/top02/top02_25_torso_halloween.png" pri="4.1"/>
+    <c sId="IceTorso_Cyan" c="8253686" a="1.00" b="132.5" ct="0.61"/>
+    <s id="IceTorsoDecal_Cyan" cId="Torso" s="items/base/consumables/clothing/top02/top02_37_torso_fringe.png" pri="4"/>
+    <c sId="IceTorsoDecal_Cyan" c="8253686" a="1.00" b="123.5" ct="0.61"/>
+  </g>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="IceSleeve_idle" cId="ArmIdle" s="items/base/consumables/clothing/top02/top02_37_fringe_arm_idle.png" pri="2"/>
+    <s id="IceSleeve_walk1" cId="ArmWalk1" s="items/base/consumables/clothing/top02/top02_37_fringe_arm_walk1.png" pri="2"/>
+    <s id="IceSleeve_walk2" cId="ArmWalk2" s="items/base/consumables/clothing/top02/top02_37_fringe_arm_walk2.png" pri="2"/>
+    <s id="IceSleeve_walk3" cId="ArmWalk3" s="items/base/consumables/clothing/top02/top02_37_fringe_arm_walk3.png" pri="2"/>
+    <s id="IceSleeve_sit" cId="ArmSit" s="items/base/consumables/clothing/top02/top02_37_fringe_arm_sit.png" tx="-32" ty="-7" pri="2"/>
+    <s id="IceSleeve_throw" cId="ArmThrow" s="items/base/consumables/clothing/top02/top02_37_fringe_arm_throw.png" pri="2"/>
+    <s id="IceSleeve_raise" cId="ArmRaise" s="items/base/consumables/clothing/top02/top02_37_fringe_arm_raise.png" pri="2"/>
+    <c sId="IceSleeve_idle" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+    <c sId="IceSleeve_walk1" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+    <c sId="IceSleeve_walk2" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+    <c sId="IceSleeve_walk3" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+    <c sId="IceSleeve_sit" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+    <c sId="IceSleeve_throw" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+    <c sId="IceSleeve_raise" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+  </g>
+  <g id="Dress" icon="$bu/icon_skinny_trouser.png">
+    <s id="IceSkirt_Idle" cId="LegIdle" s="items/base/consumables/clothing/top02/top02_25_idle.png" pri="4.1"/>
+    <s id="IceSkirt_walk1" cId="LegWalk1" s="items/base/consumables/clothing/top02/top02_25_walk1.png" pri="4.1"/>
+    <s id="IceSkirt_walk2" cId="LegWalk2" s="items/base/consumables/clothing/top02/top02_25_walk2.png" pri="4.1"/>
+    <s id="IceSkirt_walk3" cId="LegWalk3" s="items/base/consumables/clothing/top02/top02_25_walk3.png" pri="4.1"/>
+    <s id="IceSkirt_walk4" cId="LegWalk4" s="items/base/consumables/clothing/top02/top02_25_walk4.png" pri="4.1"/>
+    <s id="IceSkirt_sit" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_25_sit_lower.png" pri="4.1"/>
+    <c sId="IceSkirt_Idle" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+    <c sId="IceSkirt_walk1" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+    <c sId="IceSkirt_walk2" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+    <c sId="IceSkirt_walk3" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+    <c sId="IceSkirt_walk4" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+    <c sId="IceSkirt_sit" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress" lw="N"/>
+  </g>
+  <g id="Ice" name="Ice" icon="$bu/icon_scarf.png">
+    <s id="IceCape_Torso" cId="Torso" s="items/base/consumables/clothing/top07/top07_25_torso_icecape.png" pri="7.1"/>
+    <c sId="IceCape_Torso" c="7864319" a="0.75" b="36.6" lw="N"/>
+  </g>
+  <g id="IceArms" name="IceArms" icon="$bm/icon_m_retro.png">
+    <s id="IceCape_ArmIdle" cId="ArmIdle" s="items/base/consumables/clothing/top07/top07_25_arm_idle.png" pri="7"/>
+    <s id="IceCape_ArmWalk1" cId="ArmWalk1" s="items/base/consumables/clothing/top07/top07_25_arm_walk1.png" pri="7"/>
+    <s id="IceCape_ArmWalk2" cId="ArmWalk2" s="items/base/consumables/clothing/top07/top07_25_arm_walk2.png" pri="7"/>
+    <s id="IceCape_ArmWalk3" cId="ArmWalk3" s="items/base/consumables/clothing/top07/top07_25_arm_walk3.png" pri="7"/>
+    <s id="IceCape_ArmSit" cId="ArmSit" s="items/base/consumables/clothing/top07/top07_25_arm_sit.png" pri="7"/>
+    <s id="IceCape_ArmThrow" cId="ArmThrow" s="items/base/consumables/clothing/top07/top07_25_arm_throw.png" pri="7"/>
+    <s id="IceCape_ArmRaise" cId="ArmRaise" s="items/base/consumables/clothing/top07/top07_25_arm_raise.png" pri="7"/>
+    <c sId="IceCape_ArmIdle" c="8843510" a="1.00" b="32.1" ct="0.54"/>
+    <c sId="IceCape_ArmWalk1" c="8843510" a="1.00" b="32.1" ct="0.54"/>
+    <c sId="IceCape_ArmWalk2" c="8843510" a="1.00" b="32.1" ct="0.54"/>
+    <c sId="IceCape_ArmWalk3" c="8843510" a="1.00" b="32.1" ct="0.54"/>
+    <c sId="IceCape_ArmSit" c="8843510" a="1.00" b="32.1" ct="0.54"/>
+    <c sId="IceCape_ArmThrow" c="8843510" a="1.00" b="32.1" ct="0.54"/>
+    <c sId="IceCape_ArmRaise" c="8843510" a="1.00" b="32.1" ct="0.54"/>
+  </g>
+  <g id="Waistcoat">
+    <s id="IceWaistcoat_Torso" cId="Torso" s="items/base/consumables/clothing/top06/top06_06_torso.png" pri="4.2"/>
+    <c sId="IceWaistcoat_Torso" c="8843510" a="1.00" b="86.4" ct="0.54" lId="waistcoat" lw="N"/>
+  </g>
+  <g id="SkinnyChexBase" name="Legs" icon="$bu/icon_legs_trouser.png">
+    <s id="IceLeg_Idle" cId="LegIdle" s="$bu/skinny_leg_idle.png" pri="1"/>
+    <s id="IceLeg_walk1" cId="LegWalk1" s="$bu/skinny_leg_walk1.png" pri="1"/>
+    <s id="IceLeg_walk2" cId="LegWalk2" s="$bu/skinny_leg_walk2.png" pri="1"/>
+    <s id="IceLeg_walk3" cId="LegWalk3" s="$bu/skinny_leg_walk3.png" pri="1"/>
+    <s id="IceLeg_walk4" cId="LegWalk4" s="$bu/skinny_leg_walk4.png" pri="1"/>
+    <s id="IceLeg_situpper" cId="LegSitUpper" s="$bu/skinny_sit_upper.png" pri="1"/>
+    <s id="IceLeg_sitlower" cId="LegSitLower" s="$bu/skinny_sit_lower.png" pri="1"/>
+    <c sId="IceLeg_Idle" c="11530486" a="0.80" b="45.1" ct="1.07" lId="leggings" lw="N"/>
+    <c sId="IceLeg_walk1" c="11530486" a="0.80" b="45.1" ct="1.07" lId="leggings" lw="N"/>
+    <c sId="IceLeg_walk2" c="11530486" a="0.80" b="45.1" ct="1.07" lId="leggings" lw="N"/>
+    <c sId="IceLeg_walk3" c="11530486" a="0.80" b="45.1" ct="1.07" lId="leggings" lw="N"/>
+    <c sId="IceLeg_walk4" c="11530486" a="0.80" b="45.1" ct="1.07" lId="leggings" lw="N"/>
+    <c sId="IceLeg_situpper" c="11530486" a="0.80" b="45.1" ct="1.07" lId="leggings" lw="N"/>
+    <c sId="IceLeg_sitlower" c="11530486" a="0.80" b="45.1" ct="1.07" lId="leggings" lw="N"/>
+  </g>
+  <g id="FurBoots" name="FurBoots" icon="$bm/icon_shoe_standard.png">
+    <s id="IceBoots_Idle_Base" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_41_fur_1_idle.png" pri="3.1"/>
+    <s id="IceBoots_Walk1_Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_41_fur_1_walk1.png" pri="3.1"/>
+    <s id="IceBoots_Walk2_Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_41_fur_1_walk2.png" pri="3.1"/>
+    <s id="IceBoots_Walk3_Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_41_fur_1_walk3.png" pri="3.1"/>
+    <s id="IceBoots_Walk4_Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_41_fur_1_walk4.png" pri="3.1"/>
+    <s id="IceBoots_Sit_Base" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_41_fur_1_sit.png" pri="3.1"/>
+    <c sId="IceBoots_Idle_Base" c="11530486" a="1.00" b="96.0" ct="0.54" lId="boots_01" lw="N"/>
+    <c sId="IceBoots_Walk1_Base" c="11530486" a="1.00" b="96.0" ct="0.54" lId="boots_01" lw="N"/>
+    <c sId="IceBoots_Walk2_Base" c="11530486" a="1.00" b="96.0" ct="0.54" lId="boots_01" lw="N"/>
+    <c sId="IceBoots_Walk3_Base" c="11530486" a="1.00" b="96.0" ct="0.54" lId="boots_01" lw="N"/>
+    <c sId="IceBoots_Walk4_Base" c="11530486" a="1.00" b="96.0" ct="0.54" lId="boots_01" lw="N"/>
+    <c sId="IceBoots_Sit_Base" c="11530486" a="1.00" b="96.0" ct="0.54" lId="boots_01" lw="N"/>
+    <s id="IceBoots_Idle_Decal" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_41_fur_2_idle.png" pri="3.1"/>
+    <s id="IceBoots_Walk1_Decal" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_41_fur_2_walk1.png" pri="3.1"/>
+    <s id="IceBoots_Walk2_Decal" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_41_fur_2_walk2.png" pri="3.1"/>
+    <s id="IceBoots_Walk3_Decal" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_41_fur_2_walk3.png" pri="3.1"/>
+    <s id="IceBoots_Walk4_Decal" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_41_fur_2_walk4.png" pri="3.1"/>
+    <s id="IceBoots_Sit_Decal" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_41_fur_2_sit.png" pri="3.1"/>
+    <c sId="IceBoots_Idle_Decal" c="11530486" a="0.88" b="28.9" ct="2.00" lId="boots_02" lw="N"/>
+    <c sId="IceBoots_Walk1_Decal" c="11530486" a="0.88" b="28.9" ct="2.00" lId="boots_02" lw="N"/>
+    <c sId="IceBoots_Walk2_Decal" c="11530486" a="0.88" b="28.9" ct="2.00" lId="boots_02" lw="N"/>
+    <c sId="IceBoots_Walk3_Decal" c="11530486" a="0.88" b="28.9" ct="2.00" lId="boots_02" lw="N"/>
+    <c sId="IceBoots_Walk4_Decal" c="11530486" a="0.88" b="28.9" ct="2.00" lId="boots_02" lw="N"/>
+    <c sId="IceBoots_Sit_Decal" c="11530486" a="0.88" b="28.9" ct="2.00" lId="boots_02" lw="N"/>
+    <s id="IceBoots_Idle_Fur" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_41_fur_3_idle.png" pri="3.2"/>
+    <s id="IceBoots_Walk1_Fur" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_41_fur_3_walk1.png" pri="3.2"/>
+    <s id="IceBoots_Walk2_Fur" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_41_fur_3_walk2.png" pri="3.2"/>
+    <s id="IceBoots_Walk3_Fur" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_41_fur_3_walk3.png" pri="3.2"/>
+    <s id="IceBoots_Walk4_Fur" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_41_fur_3_walk4.png" pri="3.2"/>
+    <s id="IceBoots_Sit_Fur" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_41_fur_3_sit.png" pri="3.2"/>
+    <c sId="IceBoots_Idle_Fur" c="11530486" a="1.00" b="35.3" ct="2.00" lId="boots_03" lw="N"/>
+    <c sId="IceBoots_Walk1_Fur" c="11530486" a="1.00" b="35.3" ct="2.00" lId="boots_03" lw="N"/>
+    <c sId="IceBoots_Walk2_Fur" c="11530486" a="1.00" b="35.3" ct="2.00" lId="boots_03" lw="N"/>
+    <c sId="IceBoots_Walk3_Fur" c="11530486" a="1.00" b="35.3" ct="2.00" lId="boots_03" lw="N"/>
+    <c sId="IceBoots_Walk4_Fur" c="11530486" a="1.00" b="35.3" ct="2.00" lId="boots_03" lw="N"/>
+    <c sId="IceBoots_Sit_Fur" c="11530486" a="1.00" b="35.3" ct="2.00" lId="boots_03" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top02_37Color1" name="dress" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="8253686" a="1.00" b="115.2" ct="0.61" lId="dress"/>
+    </b>
+    <b id="Top06_06Color1" name="waistcoat" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="8843510" a="1.00" b="86.4" ct="0.54" lId="waistcoat"/>
+    </b>
+    <b id="Suits_Color2" name="leggings" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="11530486" a="0.80" b="45.1" ct="1.07" lId="leggings"/>
+    </b>
+    <b id="Bot02_41_Color1" name="Color 1" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="11530486" a="1.00" b="96.0" ct="0.54" lId="boots_01"/>
+    </b>
+    <b id="Bot02_41_Color2" name="Color 2" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="11530486" a="0.88" b="28.9" ct="2.00" lId="boots_02"/>
+    </b>
+    <b id="Bot02_41_Color3" name="Color 3" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="11530486" a="1.00" b="35.3" ct="2.00" lId="boots_03"/>
+    </b>
+  </g>
+  <g id="Icon">
+    <t id="IconSuit_Ice_Cyan" icon="items/base/consumables/clothing/suits/suit_55_icon_ice_cyan.png" w="48" h="48"/>
+    <s id="IconSuit_Ice_Cyan" cId="IconSuit_Ice_Cyan" s="items/base/consumables/clothing/suits/suit_55_icon_ice_cyan.png"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+  <ds id="Bot01"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="JSFeet"/>
+</f>

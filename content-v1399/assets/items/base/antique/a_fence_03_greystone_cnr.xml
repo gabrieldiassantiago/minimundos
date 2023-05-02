@@ -1,0 +1,41 @@
+<item.SpriteItem desc="Um pilar de pedras" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/antique/icon_a_fence_03_greystone_cnr.png" id="1065" name="Pilar de Pedras" tags="fence,slave_catalog_colorize,unsearchable" price="20" tokens="200" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.5,2.95,0.5" min="-0.5,0,-0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/antique/a_fence_cnr_generic.png"/>
+  </textures>
+  <data>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/stonepillars.xml"/>
+  </data>
+  <nodes>
+    <node id="Node">
+      <box max="0.5,2.95,0.5" min="-0.5,0,-0.5"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="38">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Texture" y="38">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref color="0xeff0e2" id="Layer"/>
+          <layerref a="0.7" blend="multiply" color="0xcccccc" id="Layer01"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,31 @@
+<item.SpriteItem id="4011" name="Plataforma Circular Alta Nordic" desc="Uma plataforma circular grande para lojas." tags="admin,table" icon="items/base/modern/icon_m_master_06_double_circular_platform.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1.49,0,-1.49" max="1.49,0.55,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_master_05_low_circular_platform.png" cols="1" rows="1"/>
+    <texture id="shadow" source="items/base/modern/m_master_05_low_circular_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Table">
+      <box min="-1.49,0,-1.49" max="1.49,0.55,1.49"/>
+      <layers>
+        <layer id="shadow" texture="shadow" y="72">
+          <view y="3"/>
+        </layer>
+        <layer id="table" texture="Texture" y="72">
+          <view y="3"/>
+        </layer>
+        <layer id="table01" texture="Texture" y="72">
+          <view x="-1" y="-18"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

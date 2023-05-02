@@ -1,0 +1,367 @@
+<item.WidgetItem id="1761" name="Hub Kiosk" desc="An information kiosk" tags="admin,hub" icon="items/base/hub/icon_hub_kiosk_video.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_flv_tv.swf">
+  <volume>
+    <box min="-0.49,0,-1.49" max="0.49,2.6,1.49"/>
+  </volume>
+  <events>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Play" trigger="false" event="widget_action(PLAY)"/>
+    <action id="PlaySpecial" trigger="false" event="widget_action(PLAY_SPECIAL_VIDEO)">
+      <params>
+        <param type="string" id="Video URL" label="Video URL" maxChars="100"/>
+      </params>
+    </action>
+    <action id="PlaySpecial2" trigger="false" event="widget_action(PLAY_SPECIAL_VIDEO2)">
+      <params>
+        <param type="string" id="Video URL" label="Video URL" maxChars="100"/>
+      </params>
+    </action>
+    <action id="PlaySpecial3" trigger="false" event="widget_action(PLAY_SPECIAL_VIDEO3)">
+      <params>
+        <param type="string" id="Video URL" label="Video URL" maxChars="100"/>
+      </params>
+    </action>
+    <action id="Stop" trigger="false" event="widget_action(STOP)"/>
+    <action id="Pause" trigger="false" event="widget_action(PAUSE)"/>
+    <action id="Show" trigger="false" event="show"/>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Off" label="Desligar" state="true" event="animate(00)"/>
+    <action id="Blue" state="true" event="animate(01)"/>
+    <action id="Green" state="true" event="animate(02)"/>
+    <action id="Red" state="true" event="animate(03)"/>
+    <action id="Yellow" state="true" event="animate(04)"/>
+    <action id="Pink" state="true" event="animate(05)"/>
+  </actions>
+  <navigate position="infront" sitRange="8.00" standRange="5.00" targetRange="2.00" usableRange="-1.00" accessibleRange="2.00"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="count" value="6"/>
+    <entry key="00" value="Off"/>
+    <entry key="01" value="Blue"/>
+    <entry key="02" value="Green"/>
+    <entry key="03" value="Red"/>
+    <entry key="04" value="Yellow"/>
+    <entry key="05" value="Pink"/>
+  </data>
+  <textures>
+    <texture id="screen" source="items/base/hub/hub_kiosk_video.png" cols="2" rows="1"/>
+    <texture id="i" source="items/base/hub/hub_kiosk_medium_i.png" cols="2" rows="1"/>
+    <texture id="ppl" source="items/base/hub/hub_kiosk_medium_ppl.png" cols="2" rows="1"/>
+    <texture id="screen_vip" source="items/base/hub/hub_kiosk_video_vip_screen_1.png" cols="4" rows="1"/>
+    <texture id="screen_vip_logo" source="items/base/hub/hub_kiosk_video_vip_screen_1_logo.png" cols="2" rows="1"/>
+    <texture id="screen_vip_2" source="items/base/hub/hub_kiosk_video_vip_screen_2.png" cols="1" rows="1"/>
+    <texture id="sheen" source="items/base/hub/hub_kiosk_video_sheen.png" cols="1" rows="1"/>
+    <texture id="screen_gold_2" source="items/base/hub/hub_kiosk_video_gold_screen_2.png" cols="1" rows="1"/>
+    <texture id="screen_gold_2_logo" source="items/base/hub/hub_kiosk_video_gold_screen_2_logo.png" cols="1" rows="1"/>
+    <texture id="screen_gold_1" source="items/base/hub/hub_kiosk_video_gold_screen_1.png" cols="1" rows="1"/>
+    <texture id="screen_gold_1_logo" source="items/base/hub/hub_kiosk_video_gold_screen_1_logo.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node_sheen">
+      <box min="-0.49,0,-1.49" max="0.49,2.6,1.49"/>
+      <layers>
+        <layer id="screen" texture="screen" y="66">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+        <layer id="sheen" texture="sheen">
+          <view angle="45" x="13" y="-116"/>
+          <view angle="135" x="-12" y="-116" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="sheen" blend="screen"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="01" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="03" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="04" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="05" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Node" depthBias="1">
+      <box min="-0.49,0,-1.49" max="0.49,2.6,1.49"/>
+      <layers>
+        <layer id="screen_vip01" texture="screen_vip_logo">
+          <view angle="45" x="12" y="-74"/>
+          <view angle="135" col="1" x="-12" y="-74"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen_vip_mask01" texture="screen_vip">
+          <view angle="45" col="1" x="13" y="-3"/>
+          <view angle="135" col="1" x="-12" y="-3" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen_vip_mask02" texture="screen_vip">
+          <view angle="45" col="2" x="13" y="-3"/>
+          <view angle="135" col="2" x="-12" y="-3" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen_vip_mask03" texture="screen_vip">
+          <view angle="45" col="3" x="13" y="-3"/>
+          <view angle="135" col="3" x="-12" y="-3" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen_vip_2" texture="screen_vip_2">
+          <view angle="45" x="13" y="-3"/>
+          <view angle="135" x="-12" y="-3" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen_gold_2" texture="screen_gold_2">
+          <view angle="45" x="13" y="-3"/>
+          <view angle="135" x="-12" y="-3" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen_gold_2_logo" texture="screen_gold_2_logo">
+          <view angle="45" x="12" y="-74" alpha="0"/>
+          <view angle="135" x="22" y="-122"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen_gold_1" texture="screen_gold_1">
+          <view angle="45" x="13" y="-3"/>
+          <view angle="135" x="-12" y="-3" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen_gold_1_logo" texture="screen_gold_1_logo">
+          <view angle="45" x="18" y="-81"/>
+          <view angle="135" col="1" x="-10" y="-78"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="screen_vip01" a="0"/>
+        </frame>
+        <frame id="vip_01">
+          <layerref id="screen_vip01"/>
+          <layerref id="screen_vip_mask01" a="0.4"/>
+          <layerref id="screen_vip_mask02" a="0.2"/>
+        </frame>
+        <frame id="vip_02">
+          <layerref id="screen_vip01"/>
+          <layerref id="screen_vip_mask02" a="0.4"/>
+          <layerref id="screen_vip_mask03" a="0.2"/>
+        </frame>
+        <frame id="vip_03">
+          <layerref id="screen_vip01"/>
+          <layerref id="screen_vip_mask03" a="0.4"/>
+          <layerref id="screen_vip_mask01" a="0.2"/>
+        </frame>
+        <frame id="vip_04">
+          <layerref id="screen_vip01" a="0.95"/>
+          <layerref id="screen_vip_mask03" a="0.2"/>
+        </frame>
+        <frame id="vip_05">
+          <layerref id="screen_vip01" a="0.9"/>
+        </frame>
+        <frame id="vip_06">
+          <layerref id="screen_vip01" a="0.95"/>
+        </frame>
+        <frame id="vip_2_01">
+          <layerref id="screen_vip01" a="0.95"/>
+          <layerref id="screen_vip_2" a="0.25"/>
+        </frame>
+        <frame id="vip_2_02">
+          <layerref id="screen_vip01" a="0.95"/>
+          <layerref id="screen_vip_2" a="0.5"/>
+        </frame>
+        <frame id="vip_2_03">
+          <layerref id="screen_vip01" a="0.95"/>
+          <layerref id="screen_vip_2" a="0.75"/>
+        </frame>
+        <frame id="vip_2_04">
+          <layerref id="screen_vip01" a="0.95"/>
+          <layerref id="screen_vip_2"/>
+        </frame>
+        <frame id="gold_1_01">
+          <layerref id="screen_gold_2"/>
+          <layerref id="screen_gold_2_logo"/>
+          <layerref id="screen_gold_1" a="0.25"/>
+        </frame>
+        <frame id="gold_1_02">
+          <layerref id="screen_gold_2"/>
+          <layerref id="screen_gold_2_logo"/>
+          <layerref id="screen_gold_1" a="0.5"/>
+        </frame>
+        <frame id="gold_1_03">
+          <layerref id="screen_gold_2"/>
+          <layerref id="screen_gold_2_logo"/>
+          <layerref id="screen_gold_1" a="0.75"/>
+        </frame>
+        <frame id="gold_1_04">
+          <layerref id="screen_gold_1"/>
+          <layerref id="screen_gold_1_logo" a="0.6"/>
+        </frame>
+        <frame id="gold_1_05">
+          <layerref id="screen_gold_1"/>
+          <layerref id="screen_gold_1_logo" a="0.7"/>
+        </frame>
+        <frame id="gold_1_06">
+          <layerref id="screen_gold_1"/>
+          <layerref id="screen_gold_1_logo" a="0.8"/>
+        </frame>
+        <frame id="gold_1_07">
+          <layerref id="screen_gold_1"/>
+          <layerref id="screen_gold_1_logo" a="0.9"/>
+        </frame>
+        <frame id="gold_1_08">
+          <layerref id="screen_gold_1"/>
+          <layerref id="screen_gold_1_logo"/>
+        </frame>
+        <frame id="gold_2_01">
+          <layerref id="screen_gold_1"/>
+          <layerref id="screen_gold_1_logo"/>
+          <layerref id="screen_gold_2" a="0.25"/>
+          <layerref id="screen_gold_2_logo" a="0.25"/>
+        </frame>
+        <frame id="gold_2_02">
+          <layerref id="screen_gold_1"/>
+          <layerref id="screen_gold_2" a="0.5"/>
+          <layerref id="screen_gold_2_logo" a="0.5"/>
+        </frame>
+        <frame id="gold_2_03">
+          <layerref id="screen_gold_1"/>
+          <layerref id="screen_gold_2" a="0.75"/>
+          <layerref id="screen_gold_2_logo" a="0.75"/>
+        </frame>
+        <frame id="gold_2_04">
+          <layerref id="screen_gold_2"/>
+          <layerref id="screen_gold_2_logo"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="01" framerate="4">
+          <frameref id="vip_01"/>
+          <frameref id="vip_02"/>
+          <frameref id="vip_03"/>
+          <frameref id="vip_04"/>
+          <frameref id="vip_05"/>
+          <frameref id="vip_06"/>
+          <frameref id="vip_01"/>
+          <frameref id="vip_02"/>
+          <frameref id="vip_03"/>
+          <frameref id="vip_04"/>
+          <frameref id="vip_05"/>
+          <frameref id="vip_06" duration="30"/>
+          <frameref id="vip_2_01"/>
+          <frameref id="vip_2_02"/>
+          <frameref id="vip_2_03"/>
+          <frameref id="vip_2_04" duration="30"/>
+          <frameref id="vip_2_03"/>
+          <frameref id="vip_2_02"/>
+          <frameref id="vip_2_01"/>
+          <frameref id="vip_06" duration="30"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="gold_1_01"/>
+        </animation>
+        <animation id="03" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="04" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="05" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Node_base" depthBias="2">
+      <box min="-0.49,0,-1.49" max="0.49,2.6,1.49"/>
+      <layers>
+        <layer id="screen" texture="screen" y="66">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+        <layer id="i" texture="i" y="-190">
+          <view angle="45" col="1" x="11" y="-8"/>
+          <view angle="135" x="-8" y="-8"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="screen_vip" texture="screen_vip">
+          <view angle="45" x="13" y="-3"/>
+          <view angle="135" x="-12" y="-3" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="screen"/>
+          <layerref id="i"/>
+        </frame>
+        <frame id="01">
+          <layerref id="screen"/>
+          <layerref id="i"/>
+          <layerref id="screen_vip"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="01" framerate="4">
+          <frameref id="01"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="03" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="04" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="05" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

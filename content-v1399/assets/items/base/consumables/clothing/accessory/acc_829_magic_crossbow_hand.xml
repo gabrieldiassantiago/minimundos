@@ -1,0 +1,331 @@
+<item.SpriteItem id="0" name="Magic Crossbow" desc="A crossbow" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bow" source="items/base/consumables/clothing/accessory/acc_829_magic_crossbow_hand.png" cols="5" rows="1"/>
+    <texture id="fx" source="items/base/consumables/clothing/accessory/acc_829_magic_crossbow_fx.png" cols="3" rows="1"/>
+    <texture id="HandFx" source="items/base/consumables/clothing/accessory/acc_829_magic_crossbow_handfx.png" cols="2" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="bow" texture="bow">
+          <view angle="0" x="-15" y="101" hm="true"/>
+          <view angle="45" col="1" x="9" y="93" hm="true"/>
+          <view angle="90" col="2" x="1" y="90"/>
+          <view angle="135" col="1" x="-9" y="93"/>
+          <view angle="180" x="15" y="101"/>
+          <view angle="225" col="3" x="1" y="99"/>
+          <view angle="270" col="4" x="-2" y="90"/>
+          <view angle="315" col="3" x="-1" y="99" hm="true"/>
+        </layer>
+        <layer id="fx01" texture="fx">
+          <view angle="0" x="-1" y="88"/>
+          <view angle="45" x="13" y="99"/>
+          <view angle="90" x="-3" y="96"/>
+          <view angle="135" x="-13" y="99" hm="true"/>
+          <view angle="180" x="1" y="88" hm="true"/>
+          <view angle="225" x="-10" y="86" hm="true"/>
+          <view angle="270" x="-2" y="65" hm="true"/>
+          <view angle="315" x="10" y="86"/>
+        </layer>
+        <layer id="fx02" texture="fx">
+          <view angle="0" col="1" x="-1" y="88"/>
+          <view angle="45" col="1" x="14" y="97"/>
+          <view angle="90" col="1" x="1" y="94"/>
+          <view angle="135" col="1" x="-14" y="97" hm="true"/>
+          <view angle="180" col="1" x="1" y="88" hm="true"/>
+          <view angle="225" col="1" x="-10" y="84" hm="true"/>
+          <view angle="270" col="1" x="-2" y="65" hm="true"/>
+          <view angle="315" col="1" x="10" y="84"/>
+        </layer>
+        <layer id="fx03" texture="fx">
+          <view angle="0" col="2" x="-9" y="80"/>
+          <view angle="45" col="2" y="89"/>
+          <view angle="90" col="2" x="-8" y="86"/>
+          <view angle="135" col="2" y="89" hm="true"/>
+          <view angle="180" col="2" x="9" y="80" hm="true"/>
+          <view angle="225" col="2" x="-3" y="75" hm="true"/>
+          <view angle="270" col="2" x="9" y="55" hm="true"/>
+          <view angle="315" col="2" x="3" y="75"/>
+        </layer>
+        <layer id="sparks01" texture="HandFx">
+          <view angle="0" x="-15" y="85" hm="true"/>
+          <view angle="45" x="2" y="92" hm="true"/>
+          <view angle="90" x="1" y="90"/>
+          <view angle="135" x="-2" y="92"/>
+          <view angle="180" x="15" y="85"/>
+          <view angle="225" x="1" y="99"/>
+          <view angle="270" x="2" y="66"/>
+          <view angle="315" x="-1" y="99" hm="true"/>
+        </layer>
+        <layer id="sparks02" texture="HandFx">
+          <view angle="0" col="1" x="-15" y="85" hm="true"/>
+          <view angle="45" col="1" x="2" y="92" hm="true"/>
+          <view angle="90" col="1" x="1" y="90"/>
+          <view angle="135" col="1" x="-2" y="92"/>
+          <view angle="180" col="1" x="15" y="85"/>
+          <view angle="225" col="1" x="1" y="99"/>
+          <view angle="270" col="1" x="2" y="66"/>
+          <view angle="315" col="1" x="-1" y="99" hm="true"/>
+        </layer>
+        <layer id="sparks03" texture="HandFx">
+          <view angle="0" row="1" x="-15" y="85" hm="true"/>
+          <view angle="45" row="1" x="2" y="92" hm="true"/>
+          <view angle="90" row="1" x="1" y="90"/>
+          <view angle="135" row="1" x="-2" y="92"/>
+          <view angle="180" row="1" x="15" y="85"/>
+          <view angle="225" row="1" x="1" y="99"/>
+          <view angle="270" row="1" x="2" y="66"/>
+          <view angle="315" row="1" x="-1" y="99" hm="true"/>
+        </layer>
+        <layer id="sparks04" texture="HandFx">
+          <view angle="0" col="1" row="1" x="-15" y="85" hm="true"/>
+          <view angle="45" col="1" row="1" x="2" y="92" hm="true"/>
+          <view angle="90" col="1" row="1" x="1" y="90"/>
+          <view angle="135" col="1" row="1" x="-2" y="92"/>
+          <view angle="180" col="1" row="1" x="15" y="85"/>
+          <view angle="225" col="1" row="1" x="1" y="99"/>
+          <view angle="270" col="1" row="1" x="2" y="66"/>
+          <view angle="315" col="1" row="1" x="-1" y="99" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="bow"/>
+          <layerref id="sparks01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="bow"/>
+          <layerref id="sparks02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="bow"/>
+          <layerref id="sparks03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="bow"/>
+          <layerref id="sparks04"/>
+        </frame>
+        <frame id="05">
+          <layerref id="bow"/>
+          <layerref id="sparks01"/>
+        </frame>
+        <frame id="06">
+          <layerref id="fx01"/>
+          <layerref id="bow"/>
+          <layerref id="sparks02"/>
+        </frame>
+        <frame id="07">
+          <layerref id="fx02"/>
+          <layerref id="bow"/>
+          <layerref id="sparks03"/>
+        </frame>
+        <frame id="08">
+          <layerref id="fx03"/>
+          <layerref id="bow"/>
+          <layerref id="sparks04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+        </animation>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="-2" hm="true"/>
+          <view angle="45" x="2" y="3"/>
+          <view angle="90"/>
+          <view angle="135" x="-2" y="3" hm="true"/>
+          <view angle="180" x="2"/>
+          <view angle="225"/>
+          <view angle="270" y="-4"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf4cca9" a="0.7"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xf4cca9" a="0.8"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xf4cca9" a="0.9"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xf4cca9"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Light" color="0xf4cca9" a="0.9"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Light" color="0xf4cca9" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+        </animation>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="fx01" texture="fx">
+          <view angle="0" x="-1" y="88"/>
+          <view angle="45" x="13" y="99"/>
+          <view angle="90" x="-3" y="96"/>
+          <view angle="135" x="-13" y="99" hm="true"/>
+          <view angle="180" x="1" y="88" hm="true"/>
+          <view angle="225" x="-10" y="86" hm="true"/>
+          <view angle="270" x="-2" y="65" hm="true"/>
+          <view angle="315" x="10" y="86"/>
+        </layer>
+        <layer id="fx02" texture="fx">
+          <view angle="0" col="1" x="-1" y="88"/>
+          <view angle="45" col="1" x="14" y="97"/>
+          <view angle="90" col="1" x="1" y="94"/>
+          <view angle="135" col="1" x="-14" y="97" hm="true"/>
+          <view angle="180" col="1" x="1" y="88" hm="true"/>
+          <view angle="225" col="1" x="-10" y="84" hm="true"/>
+          <view angle="270" col="1" x="-2" y="65" hm="true"/>
+          <view angle="315" col="1" x="10" y="84"/>
+        </layer>
+        <layer id="fx03" texture="fx">
+          <view angle="0" col="2" x="-9" y="80"/>
+          <view angle="45" col="2" y="89"/>
+          <view angle="90" col="2" x="-8" y="86"/>
+          <view angle="135" col="2" y="89" hm="true"/>
+          <view angle="180" col="2" x="9" y="80" hm="true"/>
+          <view angle="225" col="2" x="-3" y="75" hm="true"/>
+          <view angle="270" col="2" x="9" y="55" hm="true"/>
+          <view angle="315" col="2" x="3" y="75"/>
+        </layer>
+        <layer id="sparks01" texture="HandFx">
+          <view angle="0" x="-15" y="85" hm="true"/>
+          <view angle="45" x="2" y="92" hm="true"/>
+          <view angle="90" x="1" y="90"/>
+          <view angle="135" x="-2" y="92"/>
+          <view angle="180" x="15" y="85"/>
+          <view angle="225" x="1" y="99"/>
+          <view angle="270" x="2" y="66"/>
+          <view angle="315" x="-1" y="99" hm="true"/>
+        </layer>
+        <layer id="sparks02" texture="HandFx">
+          <view angle="0" col="1" x="-15" y="85" hm="true"/>
+          <view angle="45" col="1" x="2" y="92" hm="true"/>
+          <view angle="90" col="1" x="1" y="90"/>
+          <view angle="135" col="1" x="-2" y="92"/>
+          <view angle="180" col="1" x="15" y="85"/>
+          <view angle="225" col="1" x="1" y="99"/>
+          <view angle="270" col="1" x="2" y="66"/>
+          <view angle="315" col="1" x="-1" y="99" hm="true"/>
+        </layer>
+        <layer id="sparks03" texture="HandFx">
+          <view angle="0" row="1" x="-15" y="85" hm="true"/>
+          <view angle="45" row="1" x="2" y="92" hm="true"/>
+          <view angle="90" row="1" x="1" y="90"/>
+          <view angle="135" row="1" x="-2" y="92"/>
+          <view angle="180" row="1" x="15" y="85"/>
+          <view angle="225" row="1" x="1" y="99"/>
+          <view angle="270" row="1" x="2" y="66"/>
+          <view angle="315" row="1" x="-1" y="99" hm="true"/>
+        </layer>
+        <layer id="sparks04" texture="HandFx">
+          <view angle="0" col="1" row="1" x="-15" y="85" hm="true"/>
+          <view angle="45" col="1" row="1" x="2" y="92" hm="true"/>
+          <view angle="90" col="1" row="1" x="1" y="90"/>
+          <view angle="135" col="1" row="1" x="-2" y="92"/>
+          <view angle="180" col="1" row="1" x="15" y="85"/>
+          <view angle="225" col="1" row="1" x="1" y="99"/>
+          <view angle="270" col="1" row="1" x="2" y="66"/>
+          <view angle="315" col="1" row="1" x="-1" y="99" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="bow"/>
+          <layerref id="sparks01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="bow"/>
+          <layerref id="sparks02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="bow"/>
+          <layerref id="sparks03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="bow"/>
+          <layerref id="sparks04"/>
+        </frame>
+        <frame id="05">
+          <layerref id="bow"/>
+          <layerref id="sparks01"/>
+        </frame>
+        <frame id="06">
+          <layerref id="fx01"/>
+          <layerref id="bow"/>
+          <layerref id="sparks02"/>
+        </frame>
+        <frame id="07">
+          <layerref id="fx02"/>
+          <layerref id="bow"/>
+          <layerref id="sparks03"/>
+        </frame>
+        <frame id="08">
+          <layerref id="fx03"/>
+          <layerref id="bow"/>
+          <layerref id="sparks04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+        </animation>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

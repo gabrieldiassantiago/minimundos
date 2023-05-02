@@ -1,0 +1,58 @@
+<item.SpriteItem id="3212" name="Cordão de Abertura" desc="Um cordão vermelho com pilares cromados." tags="admin,misc" icon="items/base/outdoor/icon_o_snowmission_ropebarrier.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.07,0,-0.49" max="0.07,1.1,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="RopeBarrier" source="items/base/outdoor/o_snowmission_ropebarrier.png" cols="1" rows="1"/>
+    <texture id="RopeAnimBC" source="items/base/outdoor/o_snowmission_rope_animation.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.07,0,-0.49" max="0.07,1.1,0.49"/>
+      <layers>
+        <layer id="RopeBarrier" texture="RopeBarrier" y="23">
+          <view angle="45" hm="true"/>
+          <view angle="135"/>
+          <view angle="225" hm="true"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="RopeAnimB" texture="RopeAnimBC" x="1" y="-59">
+          <view angle="45" hm="true"/>
+          <view angle="135" x="-3"/>
+          <view angle="225" hm="true"/>
+          <view angle="315" x="-3"/>
+        </layer>
+        <layer id="RopeAnimC" texture="RopeAnimBC" x="1" y="-59">
+          <view angle="45" col="1" hm="true"/>
+          <view angle="135" col="1" x="-3"/>
+          <view angle="225" col="1" hm="true"/>
+          <view angle="315" col="1" x="-3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="RopeBarrier">
+          <layerref id="RopeBarrier"/>
+        </frame>
+        <frame id="RopeB">
+          <layerref id="RopeBarrier"/>
+          <layerref id="RopeAnimB"/>
+        </frame>
+        <frame id="RopeC">
+          <layerref id="RopeBarrier"/>
+          <layerref id="RopeAnimC"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="RopeBarrier"/>
+          <frameref id="RopeC"/>
+          <frameref id="RopeB"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

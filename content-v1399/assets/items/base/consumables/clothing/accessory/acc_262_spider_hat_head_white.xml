@@ -1,0 +1,69 @@
+<item.SpriteItem id="0" name="Spider Hat" desc="An item" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Spider" source="items/base/consumables/clothing/accessory/acc_262_spider_hat_head_white.png" cols="5" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="Spider01" texture="Spider">
+          <view angle="0"/>
+          <view angle="45" col="1" x="1"/>
+          <view angle="90" col="2"/>
+          <view angle="135" col="1" x="-2" hm="true"/>
+          <view angle="180" hm="true"/>
+          <view angle="225" col="4" x="-2" y="3" hm="true"/>
+          <view angle="270" col="3" y="3"/>
+          <view angle="315" col="4" x="2" y="3"/>
+        </layer>
+        <layer id="Spider02" texture="Spider">
+          <view angle="0" row="1" x="1" y="4"/>
+          <view angle="45" col="1" row="1" x="2" y="2"/>
+          <view angle="90" col="2" row="1"/>
+          <view angle="135" col="1" row="1" x="-2" y="2" hm="true"/>
+          <view angle="180" row="1" x="-1" y="4" hm="true"/>
+          <view angle="225" col="4" row="1" x="-5" y="4" hm="true"/>
+          <view angle="270" col="3" row="1" x="-4" y="3"/>
+          <view angle="315" col="4" row="1" x="5" y="4"/>
+        </layer>
+        <layer id="Spider03" texture="Spider">
+          <view angle="0" row="2" x="6" y="1"/>
+          <view angle="45" col="1" row="2" x="2" y="2"/>
+          <view angle="90" col="2" row="2" x="3"/>
+          <view angle="135" col="1" row="2" x="-2" y="2" hm="true"/>
+          <view angle="180" row="2" x="-6" y="1" hm="true"/>
+          <view angle="225" col="4" row="2" x="-4" y="4" hm="true"/>
+          <view angle="270" col="3" row="2" y="2"/>
+          <view angle="315" col="4" row="2" x="4" y="4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Spider01">
+          <layerref id="Spider01"/>
+        </frame>
+        <frame id="Spider02">
+          <layerref id="Spider02"/>
+        </frame>
+        <frame id="Spider03">
+          <layerref id="Spider03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="Spider01" duration="10"/>
+          <frameref id="Spider02"/>
+          <frameref id="Spider03"/>
+          <frameref id="Spider02"/>
+          <frameref id="Spider01" duration="4"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

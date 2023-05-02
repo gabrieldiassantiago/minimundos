@@ -1,0 +1,58 @@
+<item.SpriteItem desc="Quem nunca quis ter seu próprio fogo de artifício?" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/magic/icon_con_item_35_smallfireworks.png" id="1357" name="Fogo de Artifício Particular" tags="consumable,actionbar,real,usable,stackable,action_consumable,market" price="5" tokens="50" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.05,0.6,0.05" min="-0.05,0,-0.05"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture cols="1" id="Rocket" rows="1" source="items/base/consumables/magic/con_item_35_smallfireworks.png"/>
+  </textures>
+  <nodes>
+    <node id="Rocket">
+      <box max="0.05,0.6,0.05" min="-0.05,0,-0.05"/>
+      <layers>
+        <layer id="Rocket" texture="Rocket" y="5">
+          <view angle="45" x="1" y="8"/>
+          <view angle="135" hm="true" y="8"/>
+          <view angle="225" x="1" y="8"/>
+          <view angle="315" hm="true" y="8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Rocket"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref a="0.66" id="Rocket"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref a="0.33" id="Rocket"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref a="0" id="Rocket"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="In">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation framerate="4" id="Loop">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation framerate="8" id="Out" loop="false">
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

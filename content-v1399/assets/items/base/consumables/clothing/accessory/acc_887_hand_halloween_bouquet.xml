@@ -1,0 +1,42 @@
+<item.SpriteItem id="0" name="Halloween Bouquet" desc="A Lovely Rose Bunch" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.2187,-0.0167,-0.25" max="0.2813,0.3833,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_887_hand_halloween_bouquet_flowers.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" x="0.0313" y="-0.0167">
+      <box min="-0.25,0,-0.25" max="0.25,0.4,0.25"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="0" col="3" x="-3" y="18"/>
+          <view angle="45" col="2" x="7" y="24" hm="true"/>
+          <view angle="90" col="2" x="12" y="27" hm="true"/>
+          <view angle="135" col="2" y="9"/>
+          <view angle="180" col="3" x="3" y="22" hm="true"/>
+          <view angle="225" col="3" x="-1" y="18"/>
+          <view angle="270" col="3" x="-3" y="7"/>
+          <view angle="315" col="3" x="-4" y="13"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

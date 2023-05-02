@@ -1,0 +1,62 @@
+<item.WidgetItem id="7243" name="Combulador Mágico de Halloween" desc="Crie o seu Halloween com esta máquina" tags="rare,widget,misc" icon="items/base/scifi/icon_sci_cauldron.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_itemcrafter.swf">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1.3,0.49"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select_crafting_table.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+  </events>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="widget_min_load_wait" value="30000"/>
+    <entry key="widget_max_load_wait" value="31000"/>
+    <entry key="hasEditSecurity" value="true"/>
+    <entry key="craft_tag" value="craftable_craftoween"/>
+  </data>
+  <textures>
+    <texture id="cauldron" source="items/base/scifi/sci_cauldron.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_groundlight.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="craftoween">
+      <box min="-0.49,0,-0.49" max="0.49,1.3,0.49"/>
+      <layers>
+        <layer id="cauldron" texture="cauldron">
+          <view angle="45" y="35"/>
+          <view angle="135" y="35" hm="true"/>
+          <view angle="225" y="35"/>
+          <view angle="315" y="35" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="1.5938" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf4dab0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

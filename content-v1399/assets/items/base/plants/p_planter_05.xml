@@ -1,0 +1,90 @@
+<item.WidgetItem name="Bloco de Terra" desc="Um bloco de terra para plantar." tags="admin,planter,plant" icon="items/base/plants/icon_p_planter_05.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" widget="widgets/widget_planter.swf" id="2963">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.49,0.49"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select_plant.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+  </events>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="init"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="PotTexture" source="items/base/plants/p_planter_05.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0.49,0.49"/>
+      <layers>
+        <layer id="Pot" texture="PotTexture">
+          <view angle="45" y="32"/>
+          <view angle="135" y="32" hm="true"/>
+          <view angle="225" y="32"/>
+          <view angle="315" y="32" hm="true"/>
+        </layer>
+        <layer id="Plant">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Pot">
+          <layerref id="Pot"/>
+          <layerref id="Plant"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Diffuse">
+          <view angle="45" y="6"/>
+          <view angle="135" y="6" hm="true"/>
+          <view angle="225" y="6"/>
+          <view angle="315" y="6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Diffuse"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="8" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Intense">
+          <view angle="45" y="6"/>
+          <view angle="135" y="6" hm="true"/>
+          <view angle="225" y="6"/>
+          <view angle="315" y="6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Intense"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

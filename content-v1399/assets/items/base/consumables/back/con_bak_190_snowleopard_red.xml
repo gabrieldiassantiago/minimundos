@@ -1,0 +1,41 @@
+<item.SpriteItem id="0" name="Tiger tail" desc="A tail from a tiger suit" tags="consumable, wearable, actionbar" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+  </volume>
+  <textures>
+    <texture id="tail" source="items/base/consumables/back/con_bak_190_snowleopard_red.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+      <layers>
+        <layer id="tail" texture="tail" y="60">
+          <view angle="0" col="1" x="-17" y="25" hm="true"/>
+          <view angle="45" x="-15" y="25"/>
+          <view angle="90" col="3" x="-1" y="30" alpha="0"/>
+          <view angle="135" x="14" y="25" hm="true"/>
+          <view angle="180" col="1" x="17" y="25"/>
+          <view angle="225" col="2" x="12" y="26"/>
+          <view angle="270" col="3" x="1" y="26"/>
+          <view angle="315" col="2" x="-12" y="26" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="tail"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="tail" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

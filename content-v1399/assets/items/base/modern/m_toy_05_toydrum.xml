@@ -1,0 +1,57 @@
+<item.SpriteItem id="2883" name="Tamborzinho de Brinquedo" desc="O primeiro batuque a gente nunca esquece." tags="misc" icon="items/base/modern/icon_m_toy_05_toydrum.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="30" tokens="300">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.43,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="drum" source="items/base/modern/m_toy_05_toydrum.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,0.43,0.2"/>
+      <layers>
+        <layer id="toy" texture="drum" y="15">
+          <view angle="45" y="-3"/>
+          <view angle="135" y="-3" hm="true"/>
+          <view angle="225" col="1" y="-3"/>
+          <view angle="315" col="1" y="-3" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle01">
+          <layerref id="toy"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4"/>
+        <animation id="On" framerate="1"/>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="glow">
+          <view angle="45" x="2" y="15"/>
+          <view angle="135" x="-1" y="15"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light01" color="0xf7cff7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4"/>
+        <animation id="On" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

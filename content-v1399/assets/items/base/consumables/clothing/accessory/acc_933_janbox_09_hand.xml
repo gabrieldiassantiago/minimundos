@@ -1,0 +1,127 @@
+<item.SpriteItem id="0" name="hotchoc" desc="An item" price="3" tokens="30" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.03,0,-0.15" max="0.33,0.35,0.15"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_drinkable.as"/>
+    <event id="select" script="scripts/item/select_drinkable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_drinkable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_drinkable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture id="steam" source="items/base/consumables/edible/con_eat_03_coffeecup_steam.png" cols="3" rows="1"/>
+    <texture id="cup" source="items/base/consumables/clothing/accessory/acc_933_janbox_09_item.png" cols="1" rows="1"/>
+    <texture id="handle" source="items/base/consumables/clothing/accessory/acc_933_janbox_09_handle.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="drink" source="items/base/consumables/edible/sndfx_drink.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="cup" x="0.18">
+      <box min="-0.15,0,-0.15" max="0.15,0.35,0.15"/>
+      <layers>
+        <layer id="handle" texture="handle">
+          <view angle="45" col="3" x="-8" y="2" hm="true"/>
+          <view angle="135" col="3" x="9" y="2"/>
+          <view angle="225" col="1" x="9" y="11"/>
+          <view angle="315" col="1" x="-9" y="9" hm="true"/>
+          <view angle="90" col="1" x="-1" y="6" alpha="0"/>
+          <view angle="180" col="2" x="15" y="7"/>
+          <view angle="270" y="10"/>
+          <view angle="0" col="2" x="-14" y="7" hm="true"/>
+        </layer>
+        <layer id="cup" texture="cup" x="20">
+          <view angle="45" x="-18" y="21"/>
+          <view angle="135" x="-21" y="21"/>
+          <view angle="225" x="-19" y="24"/>
+          <view angle="315" x="-21" y="24"/>
+          <view angle="90" x="-19" y="21" hm="true"/>
+          <view angle="180" x="-17" y="24" hm="true"/>
+          <view angle="270" x="-22" y="24" hm="true"/>
+          <view angle="0" x="-22" y="24" hm="true"/>
+        </layer>
+        <layer id="steam01" texture="steam">
+          <view angle="45" y="-18"/>
+          <view angle="135" x="-3" y="-17"/>
+          <view angle="225" y="-12"/>
+          <view angle="315" x="-2" y="-13"/>
+          <view angle="90" y="-15"/>
+          <view angle="180" x="2" y="-12"/>
+          <view angle="270" x="-2" y="-12"/>
+          <view angle="0" x="-3" y="-13"/>
+        </layer>
+        <layer id="steam02" texture="steam">
+          <view angle="45" col="1" y="-18"/>
+          <view angle="135" col="1" x="-3" y="-17"/>
+          <view angle="225" col="1" y="-12"/>
+          <view angle="315" col="1" x="-2" y="-13"/>
+          <view angle="90" col="1" y="-15"/>
+          <view angle="180" col="1" x="2" y="-12"/>
+          <view angle="270" col="1" x="-2" y="-12"/>
+          <view angle="0" col="1" x="-3" y="-13"/>
+        </layer>
+        <layer id="steam03" texture="steam">
+          <view angle="45" col="2" y="-18"/>
+          <view angle="135" col="2" x="-3" y="-17"/>
+          <view angle="225" col="2" y="-12"/>
+          <view angle="315" col="2" x="-2" y="-13"/>
+          <view angle="90" col="2" y="-15"/>
+          <view angle="180" col="2" x="2" y="-12"/>
+          <view angle="270" col="2" x="-2" y="-12"/>
+          <view angle="0" col="2" x="-3" y="-13"/>
+        </layer>
+        <layer id="steam04" texture="steam">
+          <view angle="45" col="1" y="-18"/>
+          <view angle="135" col="1" x="-3" y="-17"/>
+          <view angle="225" col="1" y="-12"/>
+          <view angle="315" col="1" x="-2" y="-13"/>
+          <view angle="90" col="1" y="-15"/>
+          <view angle="180" col="1" x="2" y="-12"/>
+          <view angle="270" col="1" x="-2" y="-12"/>
+          <view angle="0" col="1" x="-3" y="-13"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="cup"/>
+          <layerref id="steam01"/>
+          <layerref id="handle"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="cup"/>
+          <layerref id="steam02"/>
+          <layerref id="handle"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="cup"/>
+          <layerref id="steam03"/>
+          <layerref id="handle"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="cup"/>
+          <layerref id="steam04"/>
+          <layerref id="handle"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame01">
+            <sample id="drink"/>
+          </frameref>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

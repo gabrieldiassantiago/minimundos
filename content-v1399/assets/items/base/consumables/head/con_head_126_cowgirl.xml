@@ -1,0 +1,51 @@
+<item.SpriteItem id="0" name="Cowgirl" desc="Collectible (April 2012)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="skin" source="items/base/consumables/head/con_head_126_cowgirl_face.png" cols="5" rows="1"/>
+    <texture id="hat" source="items/base/consumables/head/con_head_126_cowgirl_hat.png" cols="4" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="Bare" texture="skin">
+          <view angle="0" col="4" x="18" y="-2"/>
+          <view angle="45" x="4" y="2"/>
+          <view angle="90" col="1" y="1"/>
+          <view angle="135" col="2" x="-8" y="1"/>
+          <view angle="180" col="3" x="-22" y="-5"/>
+          <view angle="225" col="3" x="-10" y="11" alpha="0"/>
+          <view angle="270" col="4" y="16" alpha="0"/>
+          <view angle="315" col="3" x="9" y="11" alpha="0" hm="true"/>
+        </layer>
+        <layer id="hat" texture="hat">
+          <view angle="0" col="3" row="1" x="-2" y="54"/>
+          <view angle="45" x="-4" y="56"/>
+          <view angle="90" col="1" y="49"/>
+          <view angle="135" col="2" x="3" y="53"/>
+          <view angle="180" col="3" x="1" y="54"/>
+          <view angle="225" row="1" x="2" y="54"/>
+          <view angle="270" col="1" row="1" y="53"/>
+          <view angle="315" col="2" row="1" x="-3" y="54"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="head">
+          <layerref id="Bare"/>
+          <layerref id="hat"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="head"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

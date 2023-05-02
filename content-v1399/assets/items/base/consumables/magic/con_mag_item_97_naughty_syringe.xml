@@ -1,0 +1,35 @@
+<item.SpriteItem id="2924" name="Naughty or Nice Vaccine Syringe" desc="A syringe used to remove Naughty or Nice" tags="admin,actionbar,wear,hand,real,usable" icon="items/base/consumables/magic/icon_con_mag_item_97_naughty_syringe.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.33,0,-0.25" max="0.33,0.59,0.33"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="5"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/magic/con_mag_item_97_naughty.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="bio syringe">
+      <box min="-0.33,0,-0.25" max="0.33,0.59,0.33"/>
+      <layers>
+        <layer id="bio syringe" texture="Texture" y="-24">
+          <view angle="45" x="3" y="45"/>
+          <view angle="135" col="1" x="4" y="51"/>
+          <view angle="225" col="3" x="-4" y="51"/>
+          <view angle="315" col="2" x="-2" y="45"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

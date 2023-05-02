@@ -1,0 +1,96 @@
+<item.SpriteItem id="1762" name="Troféu Estrela MiniTalentos" desc="Um troféu para os MiniTalentos do MiniMundos" tags="rare,misc" icon="items/base/modern/icon_m_trophy_01_star.png" price="50" tokens="500" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.16,0,-0.16" max="0.16,0.9,0.16"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="trophy" source="items/base/modern/m_trophy_01_star.png" cols="2" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_glowstick.png" cols="2" rows="1"/>
+    <texture id="light_01" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="trophy">
+      <box min="-0.16,0,-0.16" max="0.16,0.9,0.16"/>
+      <layers>
+        <layer id="trophy" texture="trophy">
+          <view angle="45" y="18" hm="true"/>
+          <view angle="135" y="18"/>
+          <view angle="225" col="1" y="18"/>
+          <view angle="315" col="1" y="18" hm="true"/>
+        </layer>
+        <layer id="Flare diffuse" texture="light_01">
+          <view y="-6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_00">
+          <layerref id="trophy"/>
+          <layerref id="Flare diffuse" color="0x7f98f2" a="0.7" blend="overlay"/>
+        </frame>
+        <frame id="Frame_01">
+          <layerref id="trophy"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="Frame_00"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="Frame_01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="-0.01" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle" y="-1">
+          <view col="1" x="2" y="-9"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0x7f98f2"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0x7f98f2" a="0.95"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0x7f98f2" a="0.85"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Light" color="0x7f98f2" a="0.8"/>
+        </frame>
+        <frame id="off">
+          <layerref id="Light" color="0x7f98f2" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4" syncOffsets="0,1">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04" duration="3"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+        <animation id="Off" framerate="4" syncOffsets="0,1">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

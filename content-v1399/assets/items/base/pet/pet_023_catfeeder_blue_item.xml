@@ -1,0 +1,89 @@
+<item.SpriteItem name="Dispensa de Ração para Gato Azul Play" tags="seasonal,misc" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none" id="4806" icon="items/base/pet/pet_023_catfeeder_blue_icon.png" desc="Uma dispensa para ração de gato" price="10">
+  <volume>
+    <box min="-0.4,0,-0.3" max="0.4,1,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Empty" state="true" event="animate(00)"/>
+    <action id="Little Food" state="true" event="animate(01)"/>
+    <action id="Some Food" state="true" event="animate(02)"/>
+    <action id="Lots of Food" state="true" event="animate(03)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="4"/>
+    <entry key="00" value="Empty"/>
+    <entry key="01" value="LittleFood"/>
+    <entry key="02" value="SomeFood"/>
+    <entry key="03" value="LotsFood"/>
+  </data>
+  <textures>
+    <texture id="Bowl" source="items/base/pet/pet_023_catfeeder_blue_item.png" cols="4" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Bowl">
+      <box min="-0.4,0,-0.3" max="0.4,1,0.3"/>
+      <layers>
+        <layer id="EmptyF" texture="Bowl">
+          <view angle="45" x="1" y="19"/>
+          <view angle="135" y="19" hm="true"/>
+          <view angle="225" row="1" x="1" y="19"/>
+          <view angle="315" row="1" y="19" hm="true"/>
+        </layer>
+        <layer id="LittleFoodF" texture="Bowl">
+          <view angle="45" col="1" y="19"/>
+          <view angle="135" col="1" x="1" y="19" hm="true"/>
+          <view angle="225" col="1" row="1" y="19"/>
+          <view angle="315" col="1" row="1" x="1" y="19" hm="true"/>
+        </layer>
+        <layer id="SomeFoodF" texture="Bowl">
+          <view angle="45" col="2" x="-4" y="19"/>
+          <view angle="135" col="2" x="5" y="19" hm="true"/>
+          <view angle="225" col="2" row="1" x="-4" y="19"/>
+          <view angle="315" col="2" row="1" x="5" y="19" hm="true"/>
+        </layer>
+        <layer id="LotsFoodF" texture="Bowl">
+          <view angle="45" col="3" x="-7" y="19"/>
+          <view angle="135" col="3" x="8" y="19" hm="true"/>
+          <view angle="225" col="3" row="1" x="-7" y="19"/>
+          <view angle="315" col="3" row="1" x="8" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="EmptyF">
+          <layerref id="EmptyF"/>
+        </frame>
+        <frame id="LittleFoodF">
+          <layerref id="LittleFoodF"/>
+        </frame>
+        <frame id="SomeFoodF">
+          <layerref id="SomeFoodF"/>
+        </frame>
+        <frame id="LotsFoodF">
+          <layerref id="LotsFoodF"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00">
+          <frameref id="EmptyF"/>
+        </animation>
+        <animation id="01">
+          <frameref id="LittleFoodF"/>
+        </animation>
+        <animation id="02">
+          <frameref id="SomeFoodF"/>
+        </animation>
+        <animation id="03">
+          <frameref id="LotsFoodF"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

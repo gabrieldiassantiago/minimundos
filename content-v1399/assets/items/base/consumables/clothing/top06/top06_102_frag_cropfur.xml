@@ -1,0 +1,64 @@
+<f id="Top06_102CropFur" parentId="Top06">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top06_102MaleTorsoBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_102_cropfur_torso_m.png" pri="6"/>
+      <c sId="Top06_102MaleTorsoBase" c="9522615" a="1.00" b="59.1" ct="1.42" lId="Top06_102Color" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="Top06_102FemaleTorsoBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_102_cropfur_torso_f.png" pri="6"/>
+      <c sId="Top06_102FemaleTorsoBase" c="9522615" a="1.00" b="59.1" ct="1.42" lId="Top06_102Color" lw="N"/>
+    </g>
+  </b>
+  <g id="Arms" icon="$bm/icon_m_tshirt.png">
+    <s id="Top06_102ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_102_idle.png" pri="6"/>
+    <s id="Top06_102ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_102_walk1.png" pri="6"/>
+    <s id="Top06_102ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_102_walk2.png" pri="6"/>
+    <s id="Top06_102ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_102_walk3.png" pri="6"/>
+    <s id="Top06_102ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_102_sit.png" pri="6"/>
+    <s id="Top06_102ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_102_throw.png" pri="6"/>
+    <s id="Top06_102ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_102_raise.png" pri="6"/>
+    <c sId="Top06_102ArmIdleBase" c="9522615" a="1.00" b="59.1" ct="1.42" lId="Top06_102Color" lw="N"/>
+    <c sId="Top06_102ArmWalk1Base" c="9522615" a="1.00" b="59.1" ct="1.42" lId="Top06_102Color" lw="N"/>
+    <c sId="Top06_102ArmWalk2Base" c="9522615" a="1.00" b="59.1" ct="1.42" lId="Top06_102Color" lw="N"/>
+    <c sId="Top06_102ArmWalk3Base" c="9522615" a="1.00" b="59.1" ct="1.42" lId="Top06_102Color" lw="N"/>
+    <c sId="Top06_102ArmSitBase" c="9522615" a="1.00" b="59.1" ct="1.42" lId="Top06_102Color" lw="N"/>
+    <c sId="Top06_102ArmThrowBase" c="9522615" a="1.00" b="59.1" ct="1.42" lId="Top06_102Color" lw="N"/>
+    <c sId="Top06_102ArmRaiseBase" c="9522615" a="1.00" b="59.1" ct="1.42" lId="Top06_102Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_102" icon="items/base/consumables/clothing/top06/top06_102_cropfur_icon_a.png" w="48" h="48"/>
+    <s id="IconTop06_102VIP" cId="IconTop06_102" s="items/base/shared/s_vipbadge.png" pri="1" vis="false"/>
+    <s id="IconTop06_102Base" cId="IconTop06_102" s="items/base/consumables/clothing/top06/top06_102_cropfur_icon_1.png"/>
+    <c sId="IconTop06_102Base" c="9522615" a="1.00" b="59.1" ct="1.42" lId="Top06_102Color" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top06_102Color" name="Color" desc="Choose a color" sel="Purple" seld="Purple">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="1.00" b="86.4" ct="1.27" lId="Top06_102Color"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="0.79" b="68.5" ct="1.23" lId="Top06_102Color"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="14523375" a="0.98" b="59.3" ct="0.77" lId="Top06_102Color"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16231623" a="1.00" b="62.5" ct="0.74" lId="Top06_102Color"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="15428761" a="0.86" b="45.9" ct="0.82" lId="Top06_102Color"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.94" b="74.9" ct="1.31" lId="Top06_102Color"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="63.2" ct="0.77" lId="Top06_102Color"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16769280" a="1.00" b="65.7" ct="0.71" lId="Top06_102Color"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="0.83" b="65.4" ct="0.84" lId="Top06_102Color"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="71.8" ct="1.57" lId="Top06_102Color"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="51.2" ct="0.67" lId="Top06_102Color"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="7774672" a="1.00" b="65.8" ct="0.92" lId="Top06_102Color"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="1.00" b="70.6" ct="1.28" lId="Top06_102Color"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="2858731" a="1.00" b="28.9" ct="0.91" lId="Top06_102Color"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851722" a="1.00" b="59.3" ct="1.26" lId="Top06_102Color"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9522615" a="1.00" b="59.1" ct="1.42" lId="Top06_102Color"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="1.00" b="52.8" ct="0.80" lId="Top06_102Color"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.99" b="59.3" ct="1.09" lId="Top06_102Color"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5525030" a="1.00" b="76.5" ct="1.63" lId="Top06_102Color"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="1.00" b="80.2" ct="2.00" lId="Top06_102Color"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="1.00" b="70.2" ct="1.53" lId="Top06_102Color"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="0.84" b="49.6" ct="1.60" lId="Top06_102Color"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=325; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top06_102Color"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

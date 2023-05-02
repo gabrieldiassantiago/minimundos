@@ -1,0 +1,30 @@
+<item.SpriteItem id="6538" name="Cofre QG do Herói Deluxe" desc="Um cofre para guardas suas armas" tags="rare,misc,floor" icon="items/base/modern/icon_m_smallvault.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1.5,0,-0.5" max="0.5,2.5,1.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="red carpet" source="items/base/modern/m_smallvault.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Swoscar Plaque">
+      <box min="-1.5,0,-0.5" max="0.5,2.5,1.5"/>
+      <layers>
+        <layer id="red carpet" texture="red carpet">
+          <view angle="45" x="1" y="36"/>
+          <view angle="135" x="-1" y="36" hm="true"/>
+          <view angle="225" col="1" x="-1" y="36"/>
+          <view angle="315" col="1" x="1" y="36" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

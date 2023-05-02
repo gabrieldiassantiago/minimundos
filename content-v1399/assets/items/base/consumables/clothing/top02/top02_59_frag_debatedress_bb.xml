@@ -1,0 +1,53 @@
+<f id="Top02_59debatedress_BB" parentId="Top02">
+  <g id="Torso">
+    <s id="Top02_59_base" cId="Torso" s="items/base/consumables/clothing/top02/top02_58_torso_debatedress.png" pri="4.1"/>
+    <s id="Top02_59_decal" cId="Torso" s="items/base/consumables/clothing/top02/top02_58_torso_debatedress_decal.png" pri="4.1"/>
+    <c sId="Top02_59_base" c="1983740" a="1.00" b="33.2" ct="0.43" lId="Top02_59Color1" lw="N"/>
+    <c sId="Top02_59_decal" c="5395026" a="0.81" b="-14.4" ct="0.47" lId="Top02_59Color2" lw="N"/>
+    <s id="Top02_59Skin" cId="Torso" s="items/base/consumables/clothing/top01/top01_13_bikini_skin.png" pri="1"/>
+    <c sId="Top02_59Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+  </g>
+  <g id="Legs_base" icon="items/base/consumables/clothing/top02/top02_24_icon_piratedress.png">
+    <s id="Top02_leg59_Idle" cId="LegIdle" s="items/base/consumables/clothing/top02/top02_58_idle.png" pri="4.1"/>
+    <c sId="Top02_leg59_Idle" c="1983740" a="1.00" b="33.2" ct="0.43" lId="Top02_59Color1" lw="N"/>
+    <s id="Top02_leg59_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/top02/top02_58_walk1.png" pri="4.1"/>
+    <c sId="Top02_leg59_Walk1" c="1983740" a="1.00" b="33.2" ct="0.43" lId="Top02_59Color1" lw="N"/>
+    <s id="Top02_leg59_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/top02/top02_58_walk2.png" pri="4.1"/>
+    <c sId="Top02_leg59_Walk2" c="1983740" a="1.00" b="33.2" ct="0.43" lId="Top02_59Color1" lw="N"/>
+    <s id="Top02_leg59_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/top02/top02_58_walk3.png" pri="4.1"/>
+    <c sId="Top02_leg59_Walk3" c="1983740" a="1.00" b="33.2" ct="0.43" lId="Top02_59Color1" lw="N"/>
+    <s id="Top02_leg59_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/top02/top02_58_walk4.png" pri="4.1"/>
+    <c sId="Top02_leg59_Walk4" c="1983740" a="1.00" b="33.2" ct="0.43" lId="Top02_59Color1" lw="N"/>
+    <s id="Top02_leg59_Sit" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_58_sit.png" pri="4.1"/>
+    <c sId="Top02_leg59_Sit" c="1983740" a="1.00" b="33.2" ct="0.43" lId="Top02_59Color1" lw="N"/>
+  </g>
+  <g id="Legs_decal" icon="items/base/consumables/clothing/top02/top02_24_icon_piratedress.png">
+    <s id="Top02_leg59_Idle_decal" cId="LegIdle" s="items/base/consumables/clothing/top02/top02_58_idle_decal.png" pri="4.1"/>
+    <c sId="Top02_leg59_Idle_decal" c="5395026" a="0.81" b="-14.4" ct="0.47" lId="Top02_59Color2" lw="N"/>
+    <s id="Top02_leg59_Walk1_decal" cId="LegWalk1" s="items/base/consumables/clothing/top02/top02_58_walk1_decal.png" pri="4.1"/>
+    <c sId="Top02_leg59_Walk1_decal" c="5395026" a="0.81" b="-14.4" ct="0.47" lId="Top02_59Color2" lw="N"/>
+    <s id="Top02_leg59_Walk2_decal" cId="LegWalk2" s="items/base/consumables/clothing/top02/top02_58_walk2_decal.png" pri="4.1"/>
+    <c sId="Top02_leg59_Walk2_decal" c="5395026" a="0.81" b="-14.4" ct="0.47" lId="Top02_59Color2" lw="N"/>
+    <s id="Top02_leg59_Walk3_decal" cId="LegWalk3" s="items/base/consumables/clothing/top02/top02_58_walk3_decal.png" pri="4.1"/>
+    <c sId="Top02_leg59_Walk3_decal" c="5395026" a="0.81" b="-14.4" ct="0.47" lId="Top02_59Color2" lw="N"/>
+    <s id="Top02_leg59_Walk4_decal" cId="LegWalk4" s="items/base/consumables/clothing/top02/top02_58_walk4_decal.png" pri="4.1"/>
+    <c sId="Top02_leg59_Walk4_decal" c="5395026" a="0.81" b="-14.4" ct="0.47" lId="Top02_59Color2" lw="N"/>
+    <s id="Top02_leg59_Sit_decal" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_58_sit_decal.png" pri="4.1"/>
+    <c sId="Top02_leg59_Sit_decal" c="5395026" a="0.81" b="-14.4" ct="0.47" lId="Top02_59Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop02_59" icon="items/base/consumables/clothing/top02/top02_59_icon_debate_bb_a.png" w="48" h="48"/>
+    <s id="IconTop02_59base" cId="IconTop02_59" s="items/base/consumables/clothing/top02/top02_59_icon_debate_bb_a.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top02_59Color1" name="Color 1" desc="Choose a color" sel="NavyBlue" seld="NavyBlue">
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="1983740" a="1.00" b="33.2" ct="0.43" lId="Top02_59Color1"/>
+    </b>
+    <b id="Top02_59Color2" name="Color 2" desc="Choose a color" sel="Black" seld="Black">
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="0.81" b="-14.4" ct="0.47" lId="Top02_59Color2"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+</f>

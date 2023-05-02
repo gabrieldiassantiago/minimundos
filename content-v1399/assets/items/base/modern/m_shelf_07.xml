@@ -1,0 +1,27 @@
+<item.SpriteItem name="Estante Madeira Master" desc="Um moderna estante de parede" tags="wall,table" icon="items/base/modern/m_shelf_07_icon.png" price="30" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="table" dropTargetList="wall,avatar" dropTargetClamp="none" id="6106">
+  <volume>
+    <box min="0,-0.24,-0.52" max="0.55,0.2,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <textures>
+    <texture id="Shelf" source="items/base/modern/m_shelf_07_base.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Shelf">
+      <box min="0,-0.24,-0.52" max="0.55,0.2,0.48"/>
+      <layers>
+        <layer id="Layer" texture="Shelf" align="middle">
+          <view angle="45" x="13" y="1"/>
+          <view angle="135" x="-16" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

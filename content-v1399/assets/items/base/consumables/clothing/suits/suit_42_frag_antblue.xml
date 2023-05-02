@@ -1,0 +1,94 @@
+<f id="AntSuitBlue" parentId="Suits">
+  <g id="AntSuit">
+    <c id="AntColorMaster" sId="ZombieSkeletonTorso" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor"/>
+    <s id="AntTorso" cId="Torso" s="items/base/consumables/clothing/suits/suit_42_ant_torso.png" pri="1"/>
+    <c sId="AntTorso" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+    <g id="AntLegs" name="AntLegs" icon="items/base/consumables/clothing/suits/icon_legs_trouser.png">
+      <s id="AntLegIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_42_ant_leg_idle.png"/>
+      <s id="AntLegWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_42_ant_leg_walk1.png"/>
+      <s id="AntLegWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_42_ant_leg_walk2.png"/>
+      <s id="AntLegWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_42_ant_leg_walk3.png"/>
+      <s id="AntLegWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_42_ant_leg_walk4.png"/>
+      <s id="AntLegSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_42_ant_leg_sit_upper.png"/>
+      <s id="AntLegSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_42_ant_leg_sit_lower.png"/>
+      <c sId="AntLegIdleBase" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntLegWalk1Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntLegWalk2Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntLegWalk3Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntLegWalk4Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntLegSitUpperBase" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntLegSitLowerBase" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+    </g>
+    <g id="AntArms" icon="$bm/icon_m_retro.png">
+      <s id="AntArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_42_ant_arm_idle.png" pri="1"/>
+      <s id="AntArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_42_ant_arm_walk1.png" pri="1"/>
+      <s id="AntArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_42_ant_arm_walk2.png" pri="1"/>
+      <s id="AntArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_42_ant_arm_walk3.png" pri="1"/>
+      <s id="AntArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_42_ant_arm_sit.png" pri="1"/>
+      <c sId="AntArmIdleBase" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntArmWalk1Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntArmWalk2Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntArmWalk3Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntArmSitBase" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <s id="AntArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_42_ant_arm_throw.png" pri="1"/>
+      <s id="AntArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_42_ant_arm_raise.png" pri="1"/>
+      <c sId="AntArmThrowBase" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntArmRaiseBase" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <s id="AntHandIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_42_ant_hands_idle.png" pri="3"/>
+      <s id="AntHandWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_42_ant_hands_walk1.png" pri="3"/>
+      <s id="AntHandWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_42_ant_hands_walk2.png" pri="3"/>
+      <s id="AntHandWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_42_ant_hands_walk3.png" pri="3"/>
+      <s id="AntHandSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_42_ant_hands_sit.png" pri="3"/>
+      <c sId="AntHandIdleBase" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntHandWalk1Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntHandWalk2Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntHandWalk3Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntHandSitBase" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <s id="AntHandWave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_42_ant_hands_wave1.png" pri="1"/>
+      <s id="AntHandWave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_42_ant_hands_wave2.png" pri="1"/>
+      <s id="AntHandHold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_42_ant_hands_hold.png"/>
+      <s id="AntHandOpen" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_42_ant_hands_open.png" pri="1"/>
+      <s id="AntHandPoint" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_42_ant_hands_point.png" pri="1"/>
+      <s id="AntHandStop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_42_ant_hands_stop.png" pri="1"/>
+      <s id="AntHandThrow" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_42_ant_hands_throw.png" pri="1"/>
+      <s id="AntHandThumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_42_ant_hands_thumbs.png" pri="1"/>
+      <c sId="AntHandWave1" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntHandWave2" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntHandHold" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntHandOpen" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntHandPoint" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntHandStop" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntHandThrow" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntHandThumbs" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+    </g>
+    <g id="AntFeet" icon="$bm/icon_shoe_standard.png">
+      <s id="AntFootIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_42_ant_foot_idle.png" pri="3"/>
+      <s id="AntFootWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_42_ant_foot_walk1.png" pri="3"/>
+      <s id="AntFootWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_42_ant_foot_walk2.png" pri="3"/>
+      <s id="AntFootWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_42_ant_foot_walk3.png" pri="3"/>
+      <s id="AntFootWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_42_ant_foot_walk4.png" pri="3"/>
+      <s id="AntFootSit" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_42_ant_foot_sit.png" pri="3"/>
+      <c sId="AntFootIdleBase" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntFootWalk1Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntFootWalk2Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntFootWalk3Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntFootWalk4Base" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+      <c sId="AntFootSit" c="4477841" a="0.58" b="45.9" ct="1.75" lId="AntColor" lw="N"/>
+    </g>
+  </g>
+  <ds id="BodySkin" sel="TorsoLying"/>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+</f>

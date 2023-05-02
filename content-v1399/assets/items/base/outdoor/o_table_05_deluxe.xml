@@ -1,0 +1,106 @@
+<item.SpriteItem id="3127" name="Mesa de Jardim Eco" desc="Uma mesa grande para jardim. 100% Ecológica." tags="table" icon="items/base/outdoor/icon_o_table_05_deluxe.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="125">
+  <volume>
+    <box min="-1.4,0,-0.49" max="0.4,0.73,2.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Closed" state="true" event="animate(00)"/>
+    <action id="Open" state="true" event="animate(01)"/>
+    <action id="Transparent" state="true" event="animate(02)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="3"/>
+    <entry key="00" value="Closed"/>
+    <entry key="01" value="Open"/>
+    <entry key="02" value="Transparent"/>
+  </data>
+  <textures>
+    <texture id="table" source="items/base/outdoor/o_table_05_base.png" cols="1" rows="1"/>
+    <texture id="Open" source="items/base/outdoor/o_table_05_open.png" cols="2" rows="1"/>
+    <texture id="Closed" source="items/base/outdoor/o_table_05_closed.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Umbrella" z="0.5" depthBias="-0.1">
+      <box min="-0.55,0,0.45" max="-0.45,0.73,0.55"/>
+      <layers>
+        <layer id="Base" texture="Open">
+          <view angle="45" col="1" x="-1" y="-87"/>
+          <view angle="135" col="1" x="64" y="-53" hm="true"/>
+          <view angle="225" col="1" y="-21"/>
+          <view angle="315" col="1" x="-65" y="-56" hm="true"/>
+        </layer>
+        <layer id="Open" texture="Open">
+          <view angle="45" x="1" y="-107"/>
+          <view angle="135" x="65" y="-72"/>
+          <view angle="225" x="2" y="-41"/>
+          <view angle="315" x="-64" y="-74"/>
+        </layer>
+        <layer id="Closed" texture="Closed">
+          <view angle="45" y="-87"/>
+          <view angle="135" x="63" y="-54" hm="true"/>
+          <view angle="225" x="1" y="-20"/>
+          <view angle="315" x="-66" y="-55" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="Closed"/>
+        </frame>
+        <frame id="01">
+          <layerref id="Base"/>
+          <layerref id="Open"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Base"/>
+          <layerref id="Open" a="0.4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01">
+          <frameref id="01"/>
+        </animation>
+        <animation id="02">
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Table" z="0.5">
+      <box min="-1.4,0,-0.99" max="0.4,0.73,1.99"/>
+      <layers>
+        <layer id="Base" texture="table">
+          <view angle="45" y="48"/>
+          <view angle="135" x="64" y="82" hm="true"/>
+          <view angle="225" x="1" y="114"/>
+          <view angle="315" x="-65" y="80" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Base"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="01">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="02">
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

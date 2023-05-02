@@ -1,0 +1,42 @@
+<item.SpriteItem id="2319" name="O Grande Botão Vermelho" desc="Ai ai ai, o que será que acontece?" tags="consumable,actionbar,usable,stackable,action_consumable,market" icon="items/base/consumables/magic/icon_con_item_87_bigredbutton.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="3" tokens="30">
+  <volume>
+    <box min="-0.15,0,-0.1" max="0.15,0.09,0.1"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="10"/>
+  </data>
+  <textures>
+    <texture id="shad" source="items/base/consumables/magic/con_item_65_confuser_shad.png" cols="1" rows="1"/>
+    <texture id="weapon" source="items/base/consumables/magic/con_item_87_bigredbutton.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.1" max="0.15,0.09,0.1"/>
+      <layers>
+        <layer id="shad" texture="shad" y="10">
+          <view angle="45" x="-2" y="10" hm="true"/>
+          <view angle="135" x="2" y="10"/>
+          <view angle="225" x="-2" y="10" hm="true"/>
+          <view angle="315" x="2" y="10"/>
+        </layer>
+        <layer id="weapon" texture="weapon" y="10">
+          <view angle="45" col="3" x="-7" y="1" hm="true"/>
+          <view angle="135" col="3" x="7" y="1"/>
+          <view angle="225" x="7" y="5"/>
+          <view angle="315" x="-7" y="5" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

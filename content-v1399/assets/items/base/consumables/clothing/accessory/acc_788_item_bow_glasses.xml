@@ -1,0 +1,35 @@
+<item.SpriteItem name="Óculos com Laços Fofos" desc="Um estiloso par de óculos" tags="rare,consumable,wear,actionbar,clothing,action_wearable_toggle,eye,nopvp" icon="items/base/consumables/clothing/accessory/acc_788_icon_bow_glasses.png" price="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="6714">
+  <volume>
+    <box min="-0.32,0,-0.32" max="0.32,0.2,0.32"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+10,health+10"/>
+  </data>
+  <textures>
+    <texture id="80s glasses" source="items/base/consumables/clothing/accessory/acc_788_item_bow_glasses.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.32,0,-0.32" max="0.32,0.2,0.32"/>
+      <layers>
+        <layer id="80s glasses" texture="80s glasses">
+          <view angle="45" y="26"/>
+          <view angle="135" y="26" hm="true"/>
+          <view angle="225" col="1" y="25"/>
+          <view angle="315" col="1" y="25" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

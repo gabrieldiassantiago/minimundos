@@ -1,0 +1,30 @@
+<item.SpriteItem id="6381" name="Guirlanda Verde e Vermelha" desc="Recompensa de Natal (1 de 3)" tags="rare,wall" icon="items/base/modern/icon_m_wreath_01_redgreen.png" price="1" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="wreath" source="items/base/modern/m_wreath_01_redgreen.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="wall" depthBias="-2">
+      <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+      <layers>
+        <layer id="light 01" texture="wreath" align="middle">
+          <view angle="45" x="15" y="40"/>
+          <view angle="135" x="16" y="42" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

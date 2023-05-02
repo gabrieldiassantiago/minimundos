@@ -1,0 +1,101 @@
+<item.SpriteItem id="0" name="Play Bow Headband" desc="A polka dot bow headband" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="band" source="items/base/consumables/clothing/accessory/acc_587_head_ledband_yellow.png" cols="5" rows="1"/>
+    <texture id="LEDs" source="items/base/consumables/clothing/accessory/acc_587_head_ledband_light.png" cols="5" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="LED Headband" texture="band">
+          <view angle="0" x="3" y="5"/>
+          <view angle="45" col="1" x="2" y="8"/>
+          <view angle="90" col="2" y="6"/>
+          <view angle="135" col="1" x="-2" y="8" hm="true"/>
+          <view angle="180" x="-3" y="5" hm="true"/>
+          <view angle="225" col="4" hm="true"/>
+          <view angle="270" col="3" y="1"/>
+          <view angle="315" col="4"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="1.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Diffuse" texture="Light">
+          <view angle="0" y="22"/>
+          <view angle="45" y="22"/>
+          <view angle="90" y="22"/>
+          <view angle="135" y="22" hm="true"/>
+          <view angle="180" y="22"/>
+          <view angle="225" y="22"/>
+          <view angle="270" y="22"/>
+          <view angle="315" y="22" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Diffuse" color="0xe9e575" a="0.75"/>
+        </frame>
+        <frame id="Off"/>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="LEDs 01" texture="LEDs">
+          <view angle="0" x="5" y="7"/>
+          <view angle="45" col="1" x="2" y="10"/>
+          <view angle="90" col="2" x="2" y="8"/>
+          <view angle="135" col="1" x="-2" y="10" hm="true"/>
+          <view angle="180" col="3" x="-4" y="6" hm="true"/>
+          <view angle="225" col="4" y="1" hm="true"/>
+          <view angle="270" col="3" y="4"/>
+          <view angle="315" col="4" x="2" y="1"/>
+        </layer>
+        <layer id="LEDs 02" texture="LEDs">
+          <view angle="0" row="1" x="5" y="7"/>
+          <view angle="45" col="1" row="1" x="2" y="10"/>
+          <view angle="90" col="2" row="1" x="2" y="8"/>
+          <view angle="135" col="1" row="1" x="-2" y="10" hm="true"/>
+          <view angle="180" col="3" row="1" x="-4" y="6" hm="true"/>
+          <view angle="225" col="4" row="1" y="1" hm="true"/>
+          <view angle="270" col="3" row="1" y="4"/>
+          <view angle="315" col="4" row="1" x="2" y="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="LEDs 01"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="LEDs 02"/>
+        </frame>
+        <frame id="Off"/>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

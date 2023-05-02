@@ -1,0 +1,228 @@
+<item.WidgetItem id="1611" name="Vintage Youtube" desc="Assista videos com estilo cyber punk." tags="appliance,widget" icon="items/base/antique/icon_a_stereo_02_mediaplayer.png" price="175" tokens="1750" minLevel="1" minLevelType="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none" widget="widgets/widget_youtube.swf" minCPLevel="1">
+  <volume>
+    <box min="-0.3,0,-0.42" max="0.3,0.85,0.42"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Video Change">
+      <eval>
+        <func type="relational" id="Video Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="itemUseWidget" value="Assista"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_watch.png"/>
+  </data>
+  <navigate position="infront" sitRange="8.00" standRange="5.00" targetRange="2.00" usableRange="-1.00"/>
+  <textures>
+    <texture id="black" source="items/base/antique/a_stereo_02_mediaplayer_blackscreen.png" cols="1" rows="1"/>
+    <texture id="music notes" source="items/base/shared/s_music_notes.png" cols="2" rows="1"/>
+    <texture id="tv" source="items/base/antique/a_stereo_02_mediaplayer.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_tv_wide.png" cols="2" rows="1"/>
+    <texture id="RedLight" source="items/base/shared/s_fx_flare_screen_tv_wide.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="televison">
+      <box min="-0.3,0,-0.42" max="0.3,0.85,0.42"/>
+      <layers>
+        <layer id="behind screen" texture="black">
+          <view angle="45" x="8" y="-13"/>
+          <view angle="135" x="-9" y="-13" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="WidgetLayer" type="panel" texture="tv" w="0.62" h="0.38" y="-15">
+          <view angle="45" x="8" y="-24"/>
+          <view angle="135" col="1" x="-8" y="-24"/>
+        </layer>
+        <layer id="base" texture="tv">
+          <view angle="45" y="33"/>
+          <view angle="135" y="33" hm="true"/>
+          <view angle="225" col="1" x="1" y="33"/>
+          <view angle="315" col="1" x="-1" y="33" hm="true"/>
+        </layer>
+        <layer id="note01 100%" texture="music notes">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="note01 66%" texture="music notes">
+          <view angle="45" alpha="0.66"/>
+          <view angle="135" alpha="0.66"/>
+          <view angle="225" alpha="0.66"/>
+          <view angle="315" alpha="0.66"/>
+        </layer>
+        <layer id="note01 33%" texture="music notes">
+          <view angle="45" alpha="0.33"/>
+          <view angle="135" alpha="0.33"/>
+          <view angle="225" alpha="0.33"/>
+          <view angle="315" alpha="0.33"/>
+        </layer>
+        <layer id="note02 100%" texture="music notes">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="note02 66%" texture="music notes">
+          <view angle="45" col="1" alpha="0.66"/>
+          <view angle="135" col="1" alpha="0.66"/>
+          <view angle="225" col="1" alpha="0.66"/>
+          <view angle="315" col="1" alpha="0.66"/>
+        </layer>
+        <layer id="note02 33%" texture="music notes">
+          <view angle="45" col="1" alpha="0.33"/>
+          <view angle="135" col="1" alpha="0.33"/>
+          <view angle="225" col="1" alpha="0.33"/>
+          <view angle="315" col="1" alpha="0.33"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame 01">
+          <layerref id="behind screen"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="base"/>
+          <layerref id="note01 66%" x="-11" y="-42"/>
+        </frame>
+        <frame id="Frame 02">
+          <layerref id="behind screen"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="base"/>
+          <layerref id="note01 100%" x="-17" y="-67"/>
+        </frame>
+        <frame id="Frame 03">
+          <layerref id="behind screen"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="base"/>
+          <layerref id="note01 100%" x="-3" y="-92"/>
+          <layerref id="note02 66%" x="-7" y="-46"/>
+        </frame>
+        <frame id="Frame 04">
+          <layerref id="behind screen"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="base"/>
+          <layerref id="note01 100%" x="-5" y="-113"/>
+          <layerref id="note02 100%" x="-19" y="-63"/>
+        </frame>
+        <frame id="Frame 05">
+          <layerref id="behind screen"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="base"/>
+          <layerref id="note01 66%" x="-8" y="-129"/>
+          <layerref id="note02 100%" x="-12" y="-92"/>
+        </frame>
+        <frame id="Frame 06">
+          <layerref id="behind screen"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="base"/>
+          <layerref id="note01 33%" x="-10" y="-137"/>
+          <layerref id="note02 100%" x="-4" y="-114"/>
+        </frame>
+        <frame id="Frame 07">
+          <layerref id="behind screen"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="base"/>
+          <layerref id="note02 66%" x="2" y="-126"/>
+          <layerref id="note01 100%" x="4" y="-137" a="0"/>
+        </frame>
+        <frame id="Frame 08">
+          <layerref id="behind screen"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="base"/>
+          <layerref id="note02 33%" x="4" y="-137"/>
+        </frame>
+        <frame id="Frame 09">
+          <layerref id="behind screen"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="base"/>
+          <layerref id="note01 100%" x="4" y="-137" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Stopped" framerate="2">
+          <frameref id="Frame 09"/>
+        </animation>
+        <animation id="Playing" framerate="2">
+          <frameref id="Frame 01"/>
+          <frameref id="Frame 02"/>
+          <frameref id="Frame 03"/>
+          <frameref id="Frame 04"/>
+          <frameref id="Frame 05"/>
+          <frameref id="Frame 06"/>
+          <frameref id="Frame 07"/>
+          <frameref id="Frame 08"/>
+          <frameref id="Frame 09"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.85" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="5" y="16"/>
+          <view angle="135" x="-2" y="17" hm="true"/>
+          <view angle="225" col="1" x="-4" y="12"/>
+          <view angle="315" col="1" x="5" y="12" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x9ed0f2"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0x9ed0f2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Playing" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Stopped" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" x="0.22" y="0.5" z="0.5" s="0.7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="RedLight" align="middle">
+          <view angle="45" x="-39" y="66"/>
+          <view angle="135" x="-40" y="20" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xe03939" a="0.4"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0xe03939" a="0.4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Playing" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Stopped" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

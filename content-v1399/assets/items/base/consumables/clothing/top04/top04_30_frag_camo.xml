@@ -1,0 +1,86 @@
+<f id="Top04_30Camo" parentId="Top04">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Top04_30TorsoBase" cId="Torso" s="items/base/consumables/clothing/top04/top04_22_torso_tartan_m_base.png" pri="4"/>
+      <s id="Top04_30Torsodecal1" cId="Torso" s="items/base/consumables/clothing/top04/top04_30_camo_m.png" pri="4.1"/>
+    </g>
+    <g id="Female">
+      <s id="Top04_30TorsoBase" cId="Torso" s="items/base/consumables/clothing/top04/top04_22_torso_tartan_f_base.png" pri="4"/>
+      <s id="Top04_30Torsodecal1" cId="Torso" s="items/base/consumables/clothing/top04/top04_30_camo_f.png" pri="4.1"/>
+    </g>
+  </b>
+  <g id="Base" icon="$bm/icon_m_tshirt.png">
+    <c sId="Top04_30TorsoBase" c="4017702" a="0.80" b="46.3" ct="1.73" lId="Top04_30_Color1" lw="N"/>
+    <c sId="Top04_30Torsodecal1" c="5525030" a="1.00" b="65.3" ct="1.54" lId="Top04_30_Color2" lw="N"/>
+    <s id="Top04_30ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_short_arm_idle.png" pri="4"/>
+    <s id="Top04_30ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_short_arm_walk1.png" pri="4"/>
+    <s id="Top04_30ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_short_arm_walk2.png" pri="4"/>
+    <s id="Top04_30ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_short_arm_walk3.png" pri="4"/>
+    <s id="Top04_30ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_short_arm_sit.png" pri="4"/>
+    <c sId="Top04_30ArmIdleBase" c="4017702" a="0.80" b="46.3" ct="1.73" lId="Top04_30_Color1" lw="N"/>
+    <c sId="Top04_30ArmWalk1Base" c="4017702" a="0.80" b="46.3" ct="1.73" lId="Top04_30_Color1" lw="N"/>
+    <c sId="Top04_30ArmWalk2Base" c="4017702" a="0.80" b="46.3" ct="1.73" lId="Top04_30_Color1" lw="N"/>
+    <c sId="Top04_30ArmWalk3Base" c="4017702" a="0.80" b="46.3" ct="1.73" lId="Top04_30_Color1" lw="N"/>
+    <c sId="Top04_30ArmSitBase" c="4017702" a="0.80" b="46.3" ct="1.73" lId="Top04_30_Color1" lw="N"/>
+    <s id="Top04_30ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_short_arm_throw.png" pri="4"/>
+    <s id="Top04_30ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_short_arm_raise.png" pri="4"/>
+    <c sId="Top04_30ArmThrowBase" c="4017702" a="0.80" b="46.3" ct="1.73" lId="Top04_30_Color1" lw="N"/>
+    <c sId="Top04_30ArmRaiseBase" c="4017702" a="0.80" b="46.3" ct="1.73" lId="Top04_30_Color1" lw="N"/>
+  </g>
+  <g id="Decal01" icon="$bm/icon_m_tshirt.png">
+    <s id="Top04_30ArmIdleDecal01" cId="ArmIdle" s="items/base/consumables/clothing/top04/top04_30_idle.png" pri="4"/>
+    <s id="Top04_30ArmWalk1Decal01" cId="ArmWalk1" s="items/base/consumables/clothing/top04/top04_30_walk1.png" pri="4"/>
+    <s id="Top04_30ArmWalk2Decal01" cId="ArmWalk2" s="items/base/consumables/clothing/top04/top04_30_walk2.png" pri="4"/>
+    <s id="Top04_30ArmWalk3Decal01" cId="ArmWalk3" s="items/base/consumables/clothing/top04/top04_30_walk3.png" pri="4"/>
+    <s id="Top04_30ArmSitDecal01" cId="ArmSit" s="items/base/consumables/clothing/top04/top04_30_sit.png" pri="4"/>
+    <c sId="Top04_30ArmIdleDecal01" c="5525030" a="1.00" b="65.3" ct="1.54" lId="Top04_30_Color2" lw="N"/>
+    <c sId="Top04_30ArmWalk1Decal01" c="5525030" a="1.00" b="65.3" ct="1.54" lId="Top04_30_Color2" lw="N"/>
+    <c sId="Top04_30ArmWalk2Decal01" c="5525030" a="1.00" b="65.3" ct="1.54" lId="Top04_30_Color2" lw="N"/>
+    <c sId="Top04_30ArmWalk3Decal01" c="5525030" a="1.00" b="65.3" ct="1.54" lId="Top04_30_Color2" lw="N"/>
+    <c sId="Top04_30ArmSitDecal01" c="5525030" a="1.00" b="65.3" ct="1.54" lId="Top04_30_Color2" lw="N"/>
+    <s id="Top04_30ArmThrowDecal01" cId="ArmThrow" s="items/base/consumables/clothing/top04/top04_30_throw.png" pri="4"/>
+    <s id="Top04_30ArmRaiseDecal01" cId="ArmRaise" s="items/base/consumables/clothing/top04/top04_30_raise.png" pri="4"/>
+    <c sId="Top04_30ArmThrowDecal01" c="5525030" a="1.00" b="65.3" ct="1.54" lId="Top04_30_Color2" lw="N"/>
+    <c sId="Top04_30ArmRaiseDecal01" c="5525030" a="1.00" b="65.3" ct="1.54" lId="Top04_30_Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop04_30" icon="items/base/consumables/clothing/top04/top04_30_camo_icon_a.png" w="48" h="48"/>
+    <s id="IconTop04_30Base" cId="IconTop04_30" s="items/base/consumables/clothing/top04/top04_22_icon_tartan_1.png" pri="1"/>
+    <c sId="IconTop04_30Base" c="4017702" a="0.80" b="46.3" ct="1.73" lId="Top04_30_Color1" lw="N"/>
+    <s id="IconTop04_30Decal" cId="IconTop04_30" s="items/base/consumables/clothing/top04/top04_30_camo_icon_1.png" pri="2"/>
+    <c sId="IconTop04_30Decal" c="5525030" a="1.00" b="65.3" ct="1.54" lId="Top04_30_Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top04_30_Color1" name="Color " desc="Choose a color" sel="Green" seld="Green">
+      <g id="Green" name="Green" icon="$bu/icon_greendark.png">
+        <c id="Green" name="Green" icon="$bu/icon_olive.png" sId="IconTop01_39Base" c="4017702" a="0.80" b="46.3" ct="1.73" lId="Top04_30_Color1"/>
+        <c id="Olive" name="Olive" icon="$bu/icon_olive.png" sId="IconTop01_39Decal" c="5525030" a="1.00" b="65.3" ct="1.54" lId="Top04_30_Color2"/>
+      </g>
+      <g id="Pink" name="Pink" icon="$bu/icon_pink.png">
+        <c id="PinkDark" name="PinkDark" icon="$bu/icon_lightpink.png" c="16218790" a="0.80" b="59.2" ct="0.64" lId="Top04_30_Color1"/>
+        <c id="Pink" name="Pink" icon="$bu/icon_lightpink.png" c="16218790" a="0.76" b="45.9" ct="1.11" lId="Top04_30_Color2"/>
+      </g>
+      <g id="White" name="White" icon="$bu/icon_white.png">
+        <c id="LightGrey" name="LightGrey" icon="$bu/icon_white.png" c="12105912" a="0.54" b="36.1" ct="-0.17" lId="Top04_30_Color1"/>
+        <c id="White" name="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="41.5" ct="1.01" lId="Top04_30_Color2"/>
+      </g>
+      <g id="Brown" name="Brown" icon="$bu/icon_tan.png">
+        <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="4338962" a="1.00" b="79.9" ct="1.54" lId="Top04_30_Color1"/>
+        <c id="Kaki" name="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.6" ct="0.76" lId="Top04_30_Color2"/>
+      </g>
+      <g id="LightBrown" name="LightBrown" icon="$bu/icon_kaki.png">
+        <c id="Brown" name="Brown" icon="$bu/icon_tan.png" c="4338962" a="0.96" b="82.8" ct="1.65" lId="Top04_30_Color1"/>
+        <c id="Kaki" name="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.67" b="51.0" ct="0.60" lId="Top04_30_Color2"/>
+      </g>
+      <g id="Black" name="Black" icon="$bu/icon_black.png">
+        <c id="DarkBlack" name="DarkBlack" icon="$bu/icon_black.png" c="4013373" a="1.00" b="85.0" ct="2.00" lId="Top04_30_Color1"/>
+        <c id="Black" name="Black" icon="$bu/icon_black.png" c="4013373" a="1.00" b="70.6" ct="2.00" lId="Top04_30_Color2"/>
+      </g>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top04_30_Color1"/>
+      <wizchoice id="Color2" name="Color2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top04_30_Color2"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

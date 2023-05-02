@@ -1,0 +1,81 @@
+<item.WidgetItem id="2042" name="Basic Crafting Kit" desc="The second crafting table" tags="widget" icon="items/base/lab/icon_l_crafting_02_novice.png" price="10" tokens="100" minLevel="30" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_itemcrafter.swf" minLevelType="7">
+  <volume>
+    <box min="-0.45,0,-0.3" max="0.45,1.45,1.3"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select_crafting_table.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="widget_min_load_wait" value="30000"/>
+    <entry key="widget_max_load_wait" value="31000"/>
+    <entry key="hasEditSecurity" value="true"/>
+    <entry key="craft_tag" value="craftable2"/>
+  </data>
+  <navigate usableRange="-1.00"/>
+  <textures>
+    <texture id="kit" source="items/base/lab/l_crafting_02_novice.png" cols="2" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="crafting kit" z="0.5">
+      <box min="-0.45,0,-0.8" max="0.45,1.45,0.8"/>
+      <layers>
+        <layer id="kit" texture="kit">
+          <view angle="45" x="7" y="50"/>
+          <view angle="135" x="-7" y="50" hm="true"/>
+          <view angle="225" col="1" x="-3" y="45" hm="true"/>
+          <view angle="315" col="1" x="3" y="45"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="table">
+          <layerref id="kit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" loop="false">
+          <frameref id="table"/>
+        </animation>
+        <animation id="Off" framerate="1" loop="false">
+          <frameref id="table"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" z="0.5" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view y="-12" alpha="0.8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf7f8e6" a="0.5"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0xf7f8e6" a="0.25"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" loop="false">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="1" loop="false">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

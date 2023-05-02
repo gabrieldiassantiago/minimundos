@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="A palm tree" dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/modern/icon_m_plant_10_palm.png" id="576" name="Palm Tree" tags="plant" price="40" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.4,3.4,0.4" min="-0.4,0,-0.4"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="shadow" rows="1" source="items/base/modern/m_plant_10_palm_shadow.png"/>
+    <texture cols="1" id="canopy" rows="1" source="items/base/modern/m_plant_10_palm_canopy.png"/>
+    <texture cols="2" id="trunk" rows="1" source="items/base/modern/m_plant_10_palm_trunk.png"/>
+  </textures>
+  <nodes>
+    <node id="palm">
+      <box max="0.4,3.4,0.4" min="-0.4,0,-0.4"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="34"/>
+          <view angle="135" mirror="true" y="34"/>
+          <view angle="225" mirror="true" y="34"/>
+          <view angle="315" y="34"/>
+        </layer>
+        <layer id="trunk" texture="trunk">
+          <view angle="45" x="-4" y="28"/>
+          <view angle="135" col="1" mirror="true" x="-3" y="24"/>
+          <view angle="225" col="1" x="6" y="20"/>
+          <view angle="315" mirror="true" x="6" y="28"/>
+        </layer>
+        <layer id="canopy" texture="canopy">
+          <view angle="45" x="-39" y="-250"/>
+          <view angle="135" mirror="true" x="25" y="-250"/>
+          <view angle="225" x="-21" y="-250"/>
+          <view angle="315" mirror="true" x="48" y="-250"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

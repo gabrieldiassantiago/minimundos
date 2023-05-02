@@ -1,0 +1,105 @@
+<item.SpriteItem id="0" name="Hadoken Projectile" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="shockball" source="items/base/consumables/magic/proj_generic_shockball.png" cols="1" rows="3"/>
+    <texture id="flare" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_proj_diff.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+    <texture id="orb" source="items/base/consumables/magic/con_item_02_fireball.png" cols="1" rows="1"/>
+    <texture id="fire vortex" source="items/base/consumables/magic/con_item_70_fireball_super.png" cols="3" rows="1"/>
+    <texture id="hadoken" source="items/base/consumables/magic/proj_82_hadoken.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="whoosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="EffectInfront" s="1.3">
+      <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+      <layers>
+        <layer id="fire_01" texture="hadoken">
+          <view angle="0" col="1" x="-3" y="29"/>
+          <view angle="45" x="-5" y="26"/>
+          <view angle="90" col="2" x="-1" y="26"/>
+          <view angle="135" x="5" y="27" hm="true"/>
+          <view angle="180" col="1" x="6" y="30" hm="true"/>
+          <view angle="225" x="6" y="42" hm="true" vm="true"/>
+          <view angle="270" col="2" y="43" vm="true"/>
+          <view angle="315" x="-4" y="43" vm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="fire_01" blend="add"/>
+        </frame>
+        <frame id="02">
+          <layerref id="fire_01" a="0" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="02"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="01">
+            <sample id="whoosh"/>
+          </frameref>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="-0.1" s="7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xc3f5f5"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xc3f5f5" a="0.95"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xc3f5f5" a="0.9"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.1" s="4" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xabf1f1" a="0.15"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,120 @@
+<item.SpriteItem name="Espelho Celebridade Deluxe" desc="Um reflexo no espelho incrívelmente lindo [7 de 7]" tags="rare,misc,nopvp" icon="items/base/modern/m_bathroom_39_mirrorceleb_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="6922">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.7,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="smirror" source="items/base/modern/m_bathroom_39_mirrorceleb_base.png" cols="2" rows="1"/>
+    <texture id="bulbs" source="items/base/modern/m_bathroom_39_mirrorceleb_light.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,0.7,0.2"/>
+      <layers>
+        <layer id="smirror" texture="smirror" y="15">
+          <view angle="45" y="3"/>
+          <view angle="135" y="3" hm="true"/>
+          <view angle="225" col="1" y="4"/>
+          <view angle="315" col="1" y="4" hm="true"/>
+        </layer>
+        <layer id="BulbsF" texture="bulbs" y="15">
+          <view angle="45" x="3" y="-31"/>
+          <view angle="135" x="-3" y="-31" hm="true"/>
+          <view angle="225" col="1" y="-10" alpha="0"/>
+          <view angle="315" col="1" y="4" alpha="0" hm="true"/>
+        </layer>
+        <layer id="BulbsB" texture="bulbs" y="15">
+          <view angle="45" x="3" y="-31" alpha="0"/>
+          <view angle="135" x="-3" y="-31" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-5" y="-34"/>
+          <view angle="315" col="1" x="5" y="-34" hm="true"/>
+        </layer>
+        <layer id="BulbsF01" texture="bulbs" y="15">
+          <view angle="45" x="3" y="-31"/>
+          <view angle="135" x="-3" y="-31" hm="true"/>
+          <view angle="225" col="1" y="-10" alpha="0"/>
+          <view angle="315" col="1" y="4" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="BulbsB"/>
+          <layerref id="smirror"/>
+          <layerref id="BulbsF"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="smirror"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On" framerate="1">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="Light">
+          <view x="2" y="46"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light01" color="0xf3f1b7"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light01" color="0xf3f1b7" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="BulbsF" texture="bulbs" y="15">
+          <view angle="45" x="4" y="-28"/>
+          <view angle="135" x="-4" y="-28" hm="true"/>
+          <view angle="225" col="1" x="-4" y="-29" alpha="0.5"/>
+          <view angle="315" col="1" x="4" y="-29" alpha="0.5" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="BulbsF"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="BulbsF" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

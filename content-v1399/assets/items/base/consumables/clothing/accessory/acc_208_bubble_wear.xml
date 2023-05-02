@@ -1,0 +1,55 @@
+<item.SpriteItem id="0" name="Halo" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+  </volume>
+  <textures>
+    <texture id="halo" source="items/base/consumables/clothing/accessory/acc_208_bubble_wear.png" cols="2" rows="1"/>
+    <texture id="bubs" source="items/base/consumables/head/con_head_12_bubbles.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="Halo_01" texture="halo" y="20">
+          <view y="-5"/>
+        </layer>
+        <layer id="Halo_02" texture="halo" y="20">
+          <view col="1" y="-5"/>
+        </layer>
+        <layer id="bubs01" texture="bubs" y="20">
+          <view x="65" y="-50"/>
+        </layer>
+        <layer id="bubs02" texture="bubs" y="20">
+          <view col="2" x="65" y="-55"/>
+        </layer>
+        <layer id="bubs03" texture="bubs" y="20">
+          <view col="1" x="65" y="-55"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="loop01">
+          <layerref id="Halo_01"/>
+          <layerref id="bubs01"/>
+        </frame>
+        <frame id="loop02">
+          <layerref id="Halo_02"/>
+          <layerref id="bubs02"/>
+        </frame>
+        <frame id="loop03">
+          <layerref id="Halo_02" a="0.7"/>
+          <layerref id="Halo_01" a="0.7"/>
+          <layerref id="bubs03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="loop01"/>
+          <frameref id="loop03"/>
+          <frameref id="loop02"/>
+          <frameref id="loop03"/>
+          <frameref id="loop02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

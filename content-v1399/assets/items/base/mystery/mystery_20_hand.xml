@@ -1,0 +1,109 @@
+<item.SpriteItem id="0" name="Camera" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Laptop" source="items/base/mystery/mystery_20_hand.png" cols="4" rows="2"/>
+    <texture id="light" source="items/base/consumables/sparx/sparx_02_outfit_flashes.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="camera" texture="Laptop">
+          <view angle="0" col="2" x="-1" y="26"/>
+          <view angle="45" col="1" x="16" y="24"/>
+          <view angle="90" x="12" y="28"/>
+          <view angle="135" col="3" row="1" x="4" y="33"/>
+          <view angle="180" col="2" row="1" y="33"/>
+          <view angle="225" col="1" row="1" x="-14" y="33"/>
+          <view angle="270" row="1" x="-14" y="23"/>
+          <view angle="315" col="3" x="-10" y="26"/>
+        </layer>
+        <layer id="light_01" texture="light">
+          <view angle="0" x="12" y="3"/>
+          <view angle="45" x="11" y="2"/>
+          <view angle="90" y="3"/>
+          <view angle="135" x="-17" y="7"/>
+          <view angle="180" x="-13" y="4"/>
+          <view angle="225" x="-10" y="2"/>
+          <view angle="270" x="-2" y="-8"/>
+          <view angle="315" x="14"/>
+        </layer>
+        <layer id="light_02" texture="light">
+          <view angle="0" col="1" x="12" y="3"/>
+          <view angle="45" col="1" x="11" y="2"/>
+          <view angle="90" col="1" y="3"/>
+          <view angle="135" col="1" x="-17" y="7"/>
+          <view angle="180" col="1" x="-13" y="4"/>
+          <view angle="225" col="1" x="-10" y="2"/>
+          <view angle="270" col="1" x="-2" y="-8"/>
+          <view angle="315" col="1" x="14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="camera"/>
+        </frame>
+        <frame id="02">
+          <layerref id="camera"/>
+          <layerref id="light_01"/>
+        </frame>
+        <frame id="03">
+          <layerref id="camera"/>
+          <layerref id="light_02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="01" duration="6"/>
+          <frameref id="03"/>
+          <frameref id="01"/>
+          <frameref id="01" duration="14"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="15" y="-27" hm="true"/>
+          <view angle="45" x="12" y="-24"/>
+          <view angle="90" x="5" y="-25"/>
+          <view angle="135" x="-3" y="-19" hm="true"/>
+          <view angle="180" x="-8" y="-24"/>
+          <view angle="225" x="-7" y="-28"/>
+          <view angle="270" y="-29"/>
+          <view angle="315" x="16" y="-29" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf7fae6" a="0.8"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Off"/>
+          <frameref id="Off"/>
+          <frameref id="On"/>
+          <frameref id="Off" duration="6"/>
+          <frameref id="On"/>
+          <frameref id="Off"/>
+          <frameref id="Off" duration="14"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

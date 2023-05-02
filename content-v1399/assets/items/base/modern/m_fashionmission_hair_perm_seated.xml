@@ -1,0 +1,75 @@
+<item.ChairItem id="3322" name="Cadeira Permanente Luxe" desc="Uma cadeira de salão profissional para permanentes." tags="chair" icon="items/base/modern/icon_m_fashionmission_hair_perm_seated.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="260">
+  <seats>
+    <seat x="0.25" y="0.525">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.48,0,-0.3" max="0.45,1.55,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="addons" source="items/base/modern/m_fashionmission_hair_perm_seated_b.png" cols="2" rows="1"/>
+    <texture id="main" source="items/base/modern/m_fashionmission_hair_perm_seated_a.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-0.48,0,-0.3" max="0.45,1.55,0.3"/>
+      <layers>
+        <layer id="Main" texture="main" align="middle">
+          <view angle="45" x="7" y="-70" alpha="0"/>
+          <view angle="135" x="-7" y="-70" hm="true"/>
+          <view angle="225" col="1" x="-4" y="-67" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="4" y="-67"/>
+        </layer>
+        <layer id="Addons" texture="addons" align="middle">
+          <view angle="45" x="11" y="-117"/>
+          <view angle="135" x="-11" y="-117" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-15" y="-39" hm="true"/>
+          <view angle="315" col="1" x="-15" y="-39" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="LeftArm">
+      <box min="-0.48,0,-0.3" max="0.45,1.55,0.3"/>
+      <layers>
+        <layer id="Main" texture="main" align="middle">
+          <view angle="45" x="7" y="-70"/>
+          <view angle="135" x="-7" y="-70" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-4" y="-67" hm="true"/>
+          <view angle="315" col="1" x="4" y="-67" alpha="0"/>
+        </layer>
+        <layer id="Addons" texture="addons" align="middle">
+          <view angle="45" x="11" y="-117" alpha="0"/>
+          <view angle="135" x="-11" y="-117" hm="true"/>
+          <view angle="225" col="1" x="-15" y="-39" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="15" y="-39"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

@@ -1,0 +1,187 @@
+<item.SpriteItem id="7261" name="Geladeira Partes do Corpo Deluxe" desc="Sempre deixe as partes do corpo geladas corretamente" tags="rare,table" icon="items/base/modern/icon_m_oldhalloween_kitchen_02_vip_fridge.png" price="90" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.44,0,-0.5" max="1.39,2.45,0.5"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/modern/m_kitchen_02_vipsmall_box.png" cols="1" rows="1"/>
+    <texture id="door" source="items/base/modern/m_kitchen_02_vipsmall_door.png" cols="2" rows="1"/>
+    <texture id="acc" source="items/base/modern/m_kitchen_02_vipsmall_handles.png" cols="2" rows="1"/>
+    <texture id="backend" source="items/base/modern/m_kitchen_01_stdsmall_backend.png" cols="2" rows="1"/>
+    <texture id="food" source="items/base/modern/m_oldhalloween_kitchen_02_vipsmall_food.png" cols="1" rows="1"/>
+    <texture id="opendoor" source="items/base/modern/m_kitchen_02_vipsmall_opendoors.png" cols="4" rows="1"/>
+    <texture id="ice" source="items/base/modern/m_kitchen_02_vipsmall_ice.png" cols="1" rows="1"/>
+    <texture id="shadow" source="items/base/modern/m_kitchen_02_vipsmall_shadow.png" cols="1" rows="1"/>
+    <texture id="gap" source="items/base/modern/m_kitchen_02_vipsmall_gap.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_fridge.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" x="-0.01">
+      <box min="-0.43,0,-0.5" max="1.4,2.45,0.5"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" x="1" y="36" hm="true"/>
+          <view angle="135" y="36"/>
+          <view angle="225" x="2" y="37" hm="true"/>
+          <view angle="315" x="-2" y="37"/>
+        </layer>
+        <layer id="door" texture="door">
+          <view angle="45" x="28" y="29" hm="true"/>
+          <view angle="135" x="-28" y="29"/>
+          <view angle="225" col="1" x="-29" y="2"/>
+          <view angle="315" col="1" x="27" y="3" hm="true"/>
+        </layer>
+        <layer id="sidehandle" texture="acc">
+          <view angle="45" x="9" y="21" hm="true"/>
+          <view angle="135" x="-54" y="3"/>
+          <view angle="225" col="1" x="-46" y="-84" alpha="0"/>
+          <view angle="315" col="1" x="55" y="-2"/>
+        </layer>
+        <layer id="backend" texture="backend" y="-60">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" x="29" y="-5"/>
+          <view angle="315" x="-30" y="-5" hm="true"/>
+        </layer>
+        <layer id="backend02" texture="backend" y="-60">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" col="1" x="30" y="97"/>
+          <view angle="315" col="1" x="-30" y="98" hm="true"/>
+        </layer>
+        <layer id="food" texture="food">
+          <view angle="45" x="28" y="29" hm="true"/>
+          <view angle="135" x="-28" y="26"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="opendoors" texture="opendoor">
+          <view angle="45" col="3" x="77" y="47"/>
+          <view angle="135" x="-35" y="68"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+        <layer id="opendoorsback" texture="opendoor">
+          <view angle="45" col="3" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" col="1" x="-75" y="14"/>
+          <view angle="315" col="2" x="34" y="-7"/>
+        </layer>
+        <layer id="basetop" texture="base" y="-95">
+          <view angle="45" x="1" y="36" hm="true"/>
+          <view angle="135" y="36"/>
+          <view angle="225" x="2" y="37" hm="true"/>
+          <view angle="315" x="-2" y="37"/>
+        </layer>
+        <layer id="doortop" texture="door" y="-95">
+          <view angle="45" x="28" y="29" hm="true"/>
+          <view angle="135" x="-28" y="29"/>
+          <view angle="225" col="1" x="-29" y="2"/>
+          <view angle="315" col="1" x="27" y="3" hm="true"/>
+        </layer>
+        <layer id="sidehandletop" texture="acc" y="-95">
+          <view angle="45" x="9" y="21" hm="true"/>
+          <view angle="135" x="-54" y="3"/>
+          <view angle="225" col="1" x="-46" y="-84" alpha="0"/>
+          <view angle="315" col="1" x="55" y="-2"/>
+        </layer>
+        <layer id="iceclosed" texture="ice">
+          <view angle="45" x="31" y="-110" hm="true"/>
+          <view angle="135" x="-29" y="-110"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="37"/>
+          <view angle="135" y="37" hm="true"/>
+          <view angle="225" y="37" hm="true"/>
+          <view angle="315" y="37"/>
+        </layer>
+        <layer id="gap" texture="gap">
+          <view angle="45" x="-30" y="-66" hm="true"/>
+          <view angle="135" x="31" y="-66"/>
+          <view angle="225" x="-27" y="-66" hm="true"/>
+          <view angle="315" x="27" y="-66"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="shadow"/>
+          <layerref id="base"/>
+          <layerref id="door"/>
+          <layerref id="sidehandle"/>
+          <layerref id="basetop"/>
+          <layerref id="doortop"/>
+          <layerref id="backend"/>
+          <layerref id="sidehandletop"/>
+          <layerref id="iceclosed"/>
+          <layerref id="backend02"/>
+          <layerref id="gap"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="shadow"/>
+          <layerref id="opendoorsback"/>
+          <layerref id="base"/>
+          <layerref id="food"/>
+          <layerref id="opendoors"/>
+          <layerref id="basetop"/>
+          <layerref id="doortop"/>
+          <layerref id="backend"/>
+          <layerref id="sidehandletop"/>
+          <layerref id="iceclosed"/>
+          <layerref id="backend02"/>
+          <layerref id="gap"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" loop="false">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open">
+          <frameref id="Open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.4" y="0.65" s="4.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="5" y="1"/>
+          <view angle="135" col="1" x="1" y="-8"/>
+          <view angle="225" col="2" x="-7" y="-11"/>
+          <view angle="315" col="3" x="9" y="-7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xfffeed"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

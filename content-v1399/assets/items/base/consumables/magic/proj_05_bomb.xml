@@ -1,0 +1,140 @@
+<item.SpriteItem id="0" name="Bomb Projectile" desc="A bomb projectile effect." dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.12,-0.12,-0.12" max="0.12,0.12,0.12"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="proj_bomb" source="items/base/consumables/magic/proj_05_bomb.png" cols="1" rows="1"/>
+    <texture id="proj_bomb_fuse" source="items/base/consumables/magic/proj_05_bomb_fuse.png" cols="3" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_proj_diff.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Bomb">
+      <box min="-0.12,-0.12,-0.12" max="0.12,0.12,0.12"/>
+      <layers>
+        <layer id="Proj Bomb" type="group">
+          <layer id="Bomb" texture="proj_bomb" y="30">
+            <view angle="0" y="-15" hm="true"/>
+            <view angle="45" y="-15"/>
+            <view angle="90" y="-15"/>
+            <view angle="135" y="-15" hm="true"/>
+            <view angle="180" y="-15"/>
+            <view angle="225" y="-15"/>
+            <view angle="270" y="-15"/>
+            <view angle="315" y="-15" hm="true"/>
+          </layer>
+          <layer id="Fuse 01" texture="proj_bomb_fuse" y="30">
+            <view angle="0" y="-34"/>
+            <view angle="45" y="-34"/>
+            <view angle="90" y="-34"/>
+            <view angle="135" y="-34" hm="true"/>
+            <view angle="180" y="-34"/>
+            <view angle="225" y="-34"/>
+            <view angle="270" y="-34"/>
+            <view angle="315" y="-34" hm="true"/>
+          </layer>
+          <layer id="Fuse 02" texture="proj_bomb_fuse" y="30">
+            <view angle="0" col="2" x="19" y="-19" hm="true"/>
+            <view angle="45" col="1" row="1" x="12" y="-16" hm="true"/>
+            <view angle="90" col="2" row="1" y="-14"/>
+            <view angle="135" col="1" row="1" x="-13" y="-17"/>
+            <view angle="180" col="2" x="-19" y="-18"/>
+            <view angle="225" col="1" x="-15" y="-26" hm="true"/>
+            <view angle="270" x="-1" y="-4" alpha="0"/>
+            <view angle="315" col="1" x="15" y="-26"/>
+          </layer>
+          <layer id="Fuse 03" texture="proj_bomb_fuse" y="30">
+            <view angle="0" row="1" y="-2"/>
+            <view angle="45" row="1" x="-1" y="-4"/>
+            <view angle="90" row="1" y="-2"/>
+            <view angle="135" row="1" y="-5"/>
+            <view angle="180" row="1" x="-1" y="-2"/>
+            <view angle="225" row="1" x="-1" y="-3"/>
+            <view angle="270" row="1" x="-1" y="-2"/>
+            <view angle="315" row="1" x="-1" y="-3"/>
+          </layer>
+          <layer id="Fuse 04" texture="proj_bomb_fuse" y="30">
+            <view angle="0" col="2" x="-19" y="-19"/>
+            <view angle="45" col="1" x="-15" y="-24" hm="true"/>
+            <view angle="90" alpha="0"/>
+            <view angle="135" col="1" x="15" y="-23"/>
+            <view angle="180" col="2" x="19" y="-19" hm="true"/>
+            <view angle="225" col="1" row="1" x="14" y="-17" hm="true"/>
+            <view angle="270" col="2" row="1" y="-12"/>
+            <view angle="315" col="1" row="1" x="-13" y="-15"/>
+          </layer>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Proj  Bomb" type="group">
+          <frame id="Bomb 01">
+            <layerref id="Bomb"/>
+            <layerref id="Fuse 01"/>
+          </frame>
+          <frame id="Bomb 02">
+            <layerref id="Bomb"/>
+            <layerref id="Fuse 02"/>
+          </frame>
+          <frame id="Bomb 03">
+            <layerref id="Bomb"/>
+            <layerref id="Fuse 03"/>
+          </frame>
+          <frame id="Bomb 04">
+            <layerref id="Bomb"/>
+            <layerref id="Fuse 04"/>
+          </frame>
+          <frame id="Idle">
+            <layerref id="Bomb"/>
+            <layerref id="Fuse 01"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="Bomb 01">
+            <sample id="woosh"/>
+          </frameref>
+          <frameref id="Bomb 02"/>
+          <frameref id="Bomb 03"/>
+          <frameref id="Bomb 04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="-0.125" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf7cebb"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xf7cebb" a="0.95"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

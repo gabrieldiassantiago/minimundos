@@ -1,0 +1,60 @@
+<item.SpriteItem id="0" name="Miss" desc="Miss effect" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="miss" source="items/base/consumables/magic/miss_01_generic.png" cols="2" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="miss" source="items/base/consumables/magic/sndfx_explosion.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="flash" texture="miss">
+          <view y="36"/>
+        </layer>
+        <layer id="smoke 01" texture="miss">
+          <view col="1" y="36"/>
+        </layer>
+        <layer id="smoke 02" texture="miss">
+          <view row="1" y="36"/>
+        </layer>
+        <layer id="smoke 03" texture="miss">
+          <view col="1" row="1" y="36"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="miss 01">
+          <layerref id="flash" blend="add"/>
+        </frame>
+        <frame id="miss 02">
+          <layerref id="flash" a="0.3" blend="add"/>
+          <layerref id="smoke 01"/>
+        </frame>
+        <frame id="miss 03">
+          <layerref id="flash" a="0.1" blend="add"/>
+          <layerref id="smoke 02" a="0.8"/>
+        </frame>
+        <frame id="miss 04">
+          <layerref id="smoke 03" a="0.4"/>
+        </frame>
+        <frame id="empty">
+          <layerref id="flash" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="miss" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="miss 01"/>
+          <frameref id="miss 02">
+            <sample id="miss"/>
+          </frameref>
+          <frameref id="miss 03"/>
+          <frameref id="miss 04"/>
+          <frameref id="empty"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

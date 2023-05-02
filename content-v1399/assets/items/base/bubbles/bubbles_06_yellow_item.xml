@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem name="Balão do Chat Amarelo" desc="O balãozinho do chat com cor de fundo amarelo" icon="items/base/bubbles/bubbles_06_yellow_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="avatar" dropTargetClamp="none" id="5609" premium="Y" tags="speechbubble_default,speechbubble">
+  <volume>
+    <box min="NaN,NaN,NaN" max="NaN,NaN,NaN"/>
+  </volume>
+  <data>
+    <entry key="color" value="0xfbec74"/>
+    <entry key="btnIcon" value="speechBubble24Yellow"/>
+    <entry key="largeIcon" value="items/base/bubbles/bubbles_06_yellow_largeicon.png"/>
+  </data>
+</item.SpriteItem>

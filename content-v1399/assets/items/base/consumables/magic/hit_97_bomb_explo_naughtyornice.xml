@@ -1,0 +1,171 @@
+<item.SpriteItem id="0" name="Bomb hit" desc="Bomb hit effect." dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="hit_05_bomb_explo" source="items/base/consumables/magic/hit_97_bomb_explo_naughtyornice.png" cols="1" rows="1"/>
+    <texture id="hit_05_bomb_smoke" source="items/base/consumables/magic/hit_05_bomb_smoke.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="explosion" source="items/base/consumables/magic/sndfx_explosion.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="Hit Explo" texture="hit_05_bomb_explo" y="20">
+          <view/>
+        </layer>
+        <layer id="Hit Puff 01" texture="hit_05_bomb_smoke">
+          <view/>
+        </layer>
+        <layer id="Hit Puff 02" texture="hit_05_bomb_smoke">
+          <view/>
+        </layer>
+        <layer id="Hit Puff 03" texture="hit_05_bomb_smoke">
+          <view/>
+        </layer>
+        <layer id="Hit Puff 04" texture="hit_05_bomb_smoke">
+          <view/>
+        </layer>
+        <layer id="Hit Puff 05" texture="hit_05_bomb_smoke">
+          <view/>
+        </layer>
+        <layer id="Hit Puff 06" texture="hit_05_bomb_smoke">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Hit 01">
+          <layerref id="Hit Explo" color="0x952626" blend="add"/>
+        </frame>
+        <frame id="Hit 02">
+          <layerref id="Hit Explo" a="0.7" blend="add"/>
+          <layerref id="Hit Puff 01" x="20" y="20" a="0.6"/>
+          <layerref id="Hit Puff 02" x="-20" y="10" a="0.4"/>
+          <layerref id="Hit Puff 03" x="15" y="-80" a="0.5"/>
+          <layerref id="Hit Puff 04" x="-20" y="-90" a="0.6"/>
+          <layerref id="Hit Puff 05" x="50" y="-40" a="0.6"/>
+          <layerref id="Hit Puff 06" x="-50" y="-30" a="0.5"/>
+        </frame>
+        <frame id="Hit 03">
+          <layerref id="Hit Explo" a="0.3" blend="add"/>
+          <layerref id="Hit Puff 01" x="25" y="30"/>
+          <layerref id="Hit Puff 02" x="-25" y="20" a="0.8"/>
+          <layerref id="Hit Puff 03" x="20" y="-90" a="0.9"/>
+          <layerref id="Hit Puff 04" x="-25" y="-100"/>
+          <layerref id="Hit Puff 05" x="60" y="-45"/>
+          <layerref id="Hit Puff 06" x="-60" y="-25" a="0.9"/>
+        </frame>
+        <frame id="Hit 04">
+          <layerref id="Hit Explo" a="0.4" blend="add"/>
+          <layerref id="Hit Puff 01" x="30" y="40" a="0.6"/>
+          <layerref id="Hit Puff 02" x="-30" y="30" a="0.4"/>
+          <layerref id="Hit Puff 03" x="25" y="-100" a="0.5"/>
+          <layerref id="Hit Puff 04" x="-30" y="-110" a="0.6"/>
+          <layerref id="Hit Puff 05" x="70" y="-50" a="0.6"/>
+          <layerref id="Hit Puff 06" x="-70" y="-20" a="0.5"/>
+        </frame>
+        <frame id="Hit 05">
+          <layerref id="Hit Explo" a="0.1" blend="add"/>
+          <layerref id="Hit Puff 01" x="35" y="50" a="0.2"/>
+          <layerref id="Hit Puff 02" x="-35" y="40" a="0"/>
+          <layerref id="Hit Puff 03" x="30" y="-110" a="0.1"/>
+          <layerref id="Hit Puff 04" x="-35" y="-120" a="0.2"/>
+          <layerref id="Hit Puff 05" x="80" y="-55" a="0.2"/>
+          <layerref id="Hit Puff 06" x="-80" y="-15" a="0.1"/>
+        </frame>
+        <frame id="Hit 06">
+          <layerref id="Hit Explo" a="0" blend="add"/>
+          <layerref id="Hit Puff 01" x="35" y="50" a="0"/>
+          <layerref id="Hit Puff 02" x="-35" y="40" a="0"/>
+          <layerref id="Hit Puff 03" x="30" y="-110" a="0"/>
+          <layerref id="Hit Puff 04" x="-35" y="-120" a="0"/>
+          <layerref id="Hit Puff 05" x="80" y="-55" a="0"/>
+          <layerref id="Hit Puff 06" x="-80" y="-15" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="4" loop="false">
+          <frameref id="Hit 01">
+            <sample id="explosion" vol="0.25"/>
+          </frameref>
+          <frameref id="Hit 02"/>
+          <frameref id="Hit 03"/>
+          <frameref id="Hit 04"/>
+          <frameref id="Hit 06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.7" s="4.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x9c2828"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x9c2828" a="0.6"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0x9c2828" a="0.2"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0x9c2828" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="8" loop="false">
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.7" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x9c2828"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x9c2828" a="0.6"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0x9c2828" a="0.3"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0x9c2828" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="4" loop="false">
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03" duration="2"/>
+          <frameref id="04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

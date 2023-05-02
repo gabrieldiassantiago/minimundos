@@ -1,0 +1,357 @@
+<item.SpriteItem id="3128" name="Foco de Luzes Coloridas Sonix" desc="Um foco com luzes multicoloridas para festas." tags="misc" icon="items/base/modern/icon_m_ceiling_dance_02.png" minLevel="1" minCPLevel="1" gridActive="false" gridSnap="true" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="325">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,3.25,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Off" label="Desligar" state="true" event="animate(00)"/>
+    <action id="Orange" state="true" event="animate(01)"/>
+    <action id="Green" state="true" event="animate(02)"/>
+    <action id="Pink" state="true" event="animate(03)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="4"/>
+    <entry key="00" value="Off"/>
+    <entry key="01" value="Orange"/>
+    <entry key="02" value="Green"/>
+    <entry key="03" value="Pink"/>
+  </data>
+  <textures>
+    <texture id="grid" source="items/base/modern/m_discoball_ceiling.png" cols="1" rows="1"/>
+    <texture id="ball off" source="items/base/modern/m_ceiling_dance_02_body.png" cols="2" rows="1"/>
+    <texture id="o_Light" source="items/base/modern/m_ceiling_dance_02_light.png" cols="2" rows="1"/>
+    <texture id="o_beam" source="items/base/modern/m_ceiling_dance_02_beam.png" cols="4" rows="1"/>
+    <texture id="o_cast" source="items/base/modern/m_ceiling_dance_02_cast.png" cols="2" rows="1"/>
+    <texture id="o_beam halo" source="items/base/modern/m_ceiling_dance_02_beam_halo.png" cols="1" rows="1"/>
+    <texture id="g_Light" source="items/base/modern/m_ceiling_dance_03_light.png" cols="2" rows="1"/>
+    <texture id="g_beam" source="items/base/modern/m_ceiling_dance_03_beam.png" cols="4" rows="1"/>
+    <texture id="g_cast" source="items/base/modern/m_ceiling_dance_03_cast.png" cols="2" rows="1"/>
+    <texture id="g_beam halo" source="items/base/modern/m_ceiling_dance_03_beam_halo.png" cols="1" rows="1"/>
+    <texture id="p_Light" source="items/base/modern/m_ceiling_dance_04_light.png" cols="2" rows="1"/>
+    <texture id="p_beam" source="items/base/modern/m_ceiling_dance_04_beam.png" cols="4" rows="1"/>
+    <texture id="p_cast" source="items/base/modern/m_ceiling_dance_04_cast.png" cols="1" rows="1"/>
+    <texture id="p_beam halo" source="items/base/modern/m_ceiling_dance_04_beam_halo.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="ball" y="0.25" depthBias="-2">
+      <box min="-0.49,2.8,-0.49" max="0.49,3,0.49"/>
+      <layers>
+        <layer id="ball" texture="ball off" y="-150">
+          <view angle="45" y="-38"/>
+          <view angle="135" col="1" y="-38"/>
+          <view angle="225" col="1" x="-1" y="-38" hm="true"/>
+          <view angle="315" x="-1" y="-38" hm="true"/>
+        </layer>
+        <layer id="o_beam halo" texture="o_beam halo">
+          <view angle="45" x="-7" y="-164"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" x="6" y="-164" hm="true"/>
+        </layer>
+        <layer id="g_beam halo" texture="g_beam halo">
+          <view angle="45" x="-7" y="-164"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" x="6" y="-164" hm="true"/>
+        </layer>
+        <layer id="p_beam halo" texture="p_beam halo">
+          <view angle="45" x="-7" y="-164"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" x="6" y="-164" hm="true"/>
+        </layer>
+        <layer id="Grid" texture="grid" y="-198">
+          <view angle="45" y="-16" alpha="0.55"/>
+          <view angle="135" y="-16" alpha="0.55" hm="true"/>
+          <view angle="225" y="-16" alpha="0.55"/>
+          <view angle="315" y="-16" alpha="0.55" hm="true"/>
+        </layer>
+        <layer id="o_beam_on_01" texture="o_beam">
+          <view angle="45" x="-53" y="81"/>
+          <view angle="135" col="2" x="-53" y="49"/>
+          <view angle="225" col="2" x="53" y="49" hm="true"/>
+          <view angle="315" x="51" y="81" hm="true"/>
+        </layer>
+        <layer id="o_beam_on_02" texture="o_beam">
+          <view angle="45" col="1" x="-53" y="81"/>
+          <view angle="135" col="3" x="-54" y="49"/>
+          <view angle="225" col="3" x="54" y="49" hm="true"/>
+          <view angle="315" col="1" x="51" y="81" hm="true"/>
+        </layer>
+        <layer id="g_beam_on_01" texture="g_beam">
+          <view angle="45" x="-53" y="81"/>
+          <view angle="135" col="2" x="-53" y="49"/>
+          <view angle="225" col="2" x="53" y="49" hm="true"/>
+          <view angle="315" x="51" y="81" hm="true"/>
+        </layer>
+        <layer id="g_beam_on_02" texture="g_beam">
+          <view angle="45" col="1" x="-53" y="81"/>
+          <view angle="135" col="3" x="-54" y="49"/>
+          <view angle="225" col="3" x="54" y="49" hm="true"/>
+          <view angle="315" col="1" x="51" y="81" hm="true"/>
+        </layer>
+        <layer id="p_beam_on_01" texture="p_beam">
+          <view angle="45" x="-53" y="81"/>
+          <view angle="135" col="2" x="-53" y="49"/>
+          <view angle="225" col="2" x="53" y="49" hm="true"/>
+          <view angle="315" x="51" y="81" hm="true"/>
+        </layer>
+        <layer id="p_beam_on_02" texture="p_beam">
+          <view angle="45" col="1" x="-53" y="81"/>
+          <view angle="135" col="3" x="-54" y="49"/>
+          <view angle="225" col="3" x="54" y="49" hm="true"/>
+          <view angle="315" col="1" x="51" y="81" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="light_off">
+          <layerref id="ball"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="orange_01">
+          <layerref id="o_beam_on_01"/>
+          <layerref id="ball"/>
+          <layerref id="Grid"/>
+          <layerref id="o_beam halo"/>
+        </frame>
+        <frame id="orange_02">
+          <layerref id="o_beam_on_02"/>
+          <layerref id="ball"/>
+          <layerref id="Grid"/>
+          <layerref id="o_beam halo"/>
+        </frame>
+        <frame id="green_01">
+          <layerref id="g_beam_on_01"/>
+          <layerref id="ball"/>
+          <layerref id="Grid"/>
+          <layerref id="g_beam halo"/>
+        </frame>
+        <frame id="green_02">
+          <layerref id="g_beam_on_02"/>
+          <layerref id="ball"/>
+          <layerref id="Grid"/>
+          <layerref id="g_beam halo"/>
+        </frame>
+        <frame id="pink_01">
+          <layerref id="p_beam_on_01"/>
+          <layerref id="ball"/>
+          <layerref id="Grid"/>
+          <layerref id="p_beam halo"/>
+        </frame>
+        <frame id="pink_02">
+          <layerref id="p_beam_on_02"/>
+          <layerref id="ball"/>
+          <layerref id="Grid"/>
+          <layerref id="p_beam halo"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="01" framerate="4">
+          <frameref id="orange_01"/>
+          <frameref id="orange_02"/>
+        </animation>
+        <animation id="02" framerate="2">
+          <frameref id="green_01"/>
+          <frameref id="green_02"/>
+        </animation>
+        <animation id="03" framerate="2">
+          <frameref id="pink_01"/>
+          <frameref id="pink_02"/>
+        </animation>
+        <animation id="00" framerate="2">
+          <frameref id="light_off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Pattern" depthBias="-2">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="orange" texture="o_cast">
+          <view angle="45" col="1" x="-65" y="58"/>
+          <view angle="135" col="1" x="-65" y="-6"/>
+          <view angle="225" col="1" x="64" y="-6"/>
+          <view angle="315" col="1" x="64" y="58"/>
+        </layer>
+        <layer id="orange01" texture="o_cast">
+          <view angle="45" col="1" x="-65" y="58" hm="true"/>
+          <view angle="135" col="1" x="-65" y="-6" hm="true"/>
+          <view angle="225" col="1" x="64" y="-6" hm="true"/>
+          <view angle="315" col="1" x="64" y="58" hm="true"/>
+        </layer>
+        <layer id="orange02" texture="o_cast">
+          <view angle="45" x="-65" y="58"/>
+          <view angle="135" x="-65" y="-6"/>
+          <view angle="225" x="64" y="-6"/>
+          <view angle="315" x="64" y="58"/>
+        </layer>
+        <layer id="g_cast_on_01" texture="g_cast">
+          <view angle="45" x="-64" y="57"/>
+          <view angle="135" x="-64" y="-7"/>
+          <view angle="225" x="64" y="-7"/>
+          <view angle="315" x="64" y="57"/>
+        </layer>
+        <layer id="g_cast_on_02" texture="g_cast">
+          <view angle="45" col="1" x="-64" y="57" hm="true"/>
+          <view angle="135" col="1" x="-64" y="-7" hm="true"/>
+          <view angle="225" col="1" x="64" y="-7" hm="true"/>
+          <view angle="315" col="1" x="64" y="57" hm="true"/>
+        </layer>
+        <layer id="g_cast_on_03" texture="g_cast">
+          <view angle="45" col="1" x="-64" y="57"/>
+          <view angle="135" col="1" x="-64" y="-7"/>
+          <view angle="225" col="1" x="64" y="-7"/>
+          <view angle="315" col="1" x="64" y="57"/>
+        </layer>
+        <layer id="g_cast_on_04" texture="g_cast">
+          <view angle="45" x="-64" y="57" hm="true"/>
+          <view angle="135" x="-64" y="-7" hm="true"/>
+          <view angle="225" x="64" y="-7" hm="true"/>
+          <view angle="315" x="64" y="57" hm="true"/>
+        </layer>
+        <layer id="p_cast_on_01" texture="p_cast">
+          <view angle="45" x="-64" y="56"/>
+          <view angle="135" x="-64" y="-9"/>
+          <view angle="225" x="64" y="-9"/>
+          <view angle="315" x="64" y="56"/>
+        </layer>
+        <layer id="p_cast_on_02" texture="p_cast">
+          <view angle="45" x="-64" y="56" hm="true"/>
+          <view angle="135" x="-64" y="-9" hm="true"/>
+          <view angle="225" x="64" y="-9" hm="true"/>
+          <view angle="315" x="64" y="56" hm="true"/>
+        </layer>
+        <layer id="p_cast_on_03" texture="p_cast">
+          <view angle="45" x="-64" y="56" hm="true" vm="true"/>
+          <view angle="135" x="-64" y="-9" hm="true" vm="true"/>
+          <view angle="225" x="64" y="-9" hm="true" vm="true"/>
+          <view angle="315" x="64" y="56" hm="true" vm="true"/>
+        </layer>
+        <layer id="p_cast_on_04" texture="p_cast">
+          <view angle="45" x="-64" y="56" vm="true"/>
+          <view angle="135" x="-64" y="-9" vm="true"/>
+          <view angle="225" x="64" y="-9" vm="true"/>
+          <view angle="315" x="64" y="56" vm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="orange" a="0"/>
+        </frame>
+        <frame id="orange_01">
+          <layerref id="orange"/>
+        </frame>
+        <frame id="orange_02">
+          <layerref id="orange01"/>
+        </frame>
+        <frame id="orange_03">
+          <layerref id="orange02"/>
+        </frame>
+        <frame id="green_01">
+          <layerref id="g_cast_on_01"/>
+        </frame>
+        <frame id="green_02">
+          <layerref id="g_cast_on_02"/>
+        </frame>
+        <frame id="green_03">
+          <layerref id="g_cast_on_03"/>
+        </frame>
+        <frame id="green_04">
+          <layerref id="g_cast_on_04"/>
+        </frame>
+        <frame id="pink_01">
+          <layerref id="p_cast_on_01"/>
+        </frame>
+        <frame id="pink_02">
+          <layerref id="p_cast_on_02"/>
+        </frame>
+        <frame id="pink_03">
+          <layerref id="p_cast_on_03"/>
+        </frame>
+        <frame id="pink_04">
+          <layerref id="p_cast_on_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="01" framerate="4">
+          <frameref id="orange_01"/>
+          <frameref id="orange_02"/>
+          <frameref id="orange_03"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="green_01"/>
+          <frameref id="green_02"/>
+          <frameref id="green_03"/>
+          <frameref id="green_04"/>
+        </animation>
+        <animation id="03" framerate="2">
+          <frameref id="pink_01"/>
+          <frameref id="pink_02"/>
+          <frameref id="pink_03"/>
+          <frameref id="pink_04"/>
+        </animation>
+        <animation id="00">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="o_Light" texture="o_Light" align="middle">
+          <view angle="45" x="-10" y="-26"/>
+          <view angle="135" col="1" x="-10" y="-41"/>
+          <view angle="225" col="1" x="11" y="-41" hm="true"/>
+          <view angle="315" x="11" y="-26" hm="true"/>
+        </layer>
+        <layer id="g_Light" texture="g_Light" align="middle">
+          <view angle="45" x="-10" y="-26"/>
+          <view angle="135" col="1" x="-10" y="-41"/>
+          <view angle="225" col="1" x="11" y="-41" hm="true"/>
+          <view angle="315" x="11" y="-26" hm="true"/>
+        </layer>
+        <layer id="p_Light" texture="p_Light" align="middle">
+          <view angle="45" x="-10" y="-26"/>
+          <view angle="135" col="1" x="-10" y="-41"/>
+          <view angle="225" col="1" x="11" y="-41" hm="true"/>
+          <view angle="315" x="11" y="-26" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="o_Light" a="0"/>
+        </frame>
+        <frame id="o">
+          <layerref id="o_Light"/>
+        </frame>
+        <frame id="g">
+          <layerref id="g_Light"/>
+        </frame>
+        <frame id="p">
+          <layerref id="p_Light"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="01" framerate="4">
+          <frameref id="o"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="g"/>
+        </animation>
+        <animation id="03" framerate="4">
+          <frameref id="p"/>
+        </animation>
+        <animation id="00" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,75 @@
+<item.SpriteItem id="7473" name="Bandeira Gelada" desc="Uma bandeira gigante para ser vista de longe [8 of 25]" tags="rare,misc" icon="items/base/consumables/clothing/accessory/acc_932_janbox_08_icon.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.13,0,-0.13" max="0.13,0.6,0.13"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="pole" source="items/base/consumables/clothing/accessory/acc_932_janbox_08_item.png" cols="1" rows="1"/>
+    <texture id="flag" source="items/base/consumables/clothing/accessory/acc_932_janbox_08_flag.png" cols="3" rows="1"/>
+    <texture id="snow" source="items/base/consumables/clothing/accessory/acc_932_janbox_08_snow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Base">
+      <box min="-0.13,0,-0.13" max="0.13,0.6,0.13"/>
+      <layers>
+        <layer id="pole" texture="pole" align="middle">
+          <view angle="45" y="-165"/>
+          <view angle="135" y="-165" hm="true"/>
+          <view angle="225" y="-165"/>
+          <view angle="315" y="-165" hm="true"/>
+        </layer>
+        <layer id="flag_01" texture="flag" align="middle">
+          <view angle="45" x="1" y="-220"/>
+          <view angle="135" x="-1" y="-220" hm="true"/>
+          <view angle="225" x="1" y="-220"/>
+          <view angle="315" x="-1" y="-220" hm="true"/>
+        </layer>
+        <layer id="flag_02" texture="flag" align="middle">
+          <view angle="45" col="1" x="1" y="-220"/>
+          <view angle="135" col="1" x="-1" y="-220" hm="true"/>
+          <view angle="225" col="1" x="1" y="-220"/>
+          <view angle="315" col="1" x="-1" y="-220" hm="true"/>
+        </layer>
+        <layer id="flag_03" texture="flag" align="middle">
+          <view angle="45" col="2" x="1" y="-220"/>
+          <view angle="135" col="2" x="-1" y="-220" hm="true"/>
+          <view angle="225" col="2" x="1" y="-220"/>
+          <view angle="315" col="2" x="-1" y="-220" hm="true"/>
+        </layer>
+        <layer id="snow" texture="snow" align="middle">
+          <view angle="45" x="-3" y="-167"/>
+          <view angle="135" x="2" y="-167" hm="true"/>
+          <view angle="225" x="-3" y="-167"/>
+          <view angle="315" x="2" y="-167" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="pole"/>
+          <layerref id="flag_01"/>
+          <layerref id="snow"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="pole"/>
+          <layerref id="flag_02"/>
+          <layerref id="snow"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="pole"/>
+          <layerref id="flag_03"/>
+          <layerref id="snow"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="Frame01" duration="4"/>
+          <frameref id="Frame02" duration="4"/>
+          <frameref id="Frame03" duration="4"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

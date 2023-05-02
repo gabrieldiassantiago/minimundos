@@ -1,0 +1,442 @@
+<item.SpriteItem id="6231" name="Aranha na Teia" desc="Surpresa!" tags="rare,misc,halloween" icon="items/base/gothic/icon_g_halloween_16_spider.png" price="35" minLevel="1" minCPLevel="1" gridActive="false" gridSnap="true" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" tokens="350">
+  <volume>
+    <box min="-0.4,0.1,-0.4" max="0.4,3.25,0.4"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/modern/m_discoball_shadow.png" cols="1" rows="1"/>
+    <texture id="grid" source="items/base/modern/m_discoball_ceiling.png" cols="1" rows="1"/>
+    <texture id="spider01" source="items/base/gothic/g_halloween_16_spider01.png" cols="5" rows="4"/>
+    <texture id="spider02" source="items/base/gothic/g_halloween_16_spider02.png" cols="13" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Light" y="0.25" depthBias="-2">
+      <box min="-0.35,2,-0.35" max="0.35,3,0.35"/>
+      <layers>
+        <layer id="Grid" texture="grid" x="1" y="-182">
+          <view angle="45" y="-16" alpha="0.55"/>
+          <view angle="135" y="-16" alpha="0.55" hm="true"/>
+          <view angle="225" y="-16" alpha="0.55"/>
+          <view angle="315" y="-16" alpha="0.55" hm="true"/>
+        </layer>
+        <layer id="spider01" texture="spider01" x="1" y="-182">
+          <view angle="45" x="14" y="-11"/>
+          <view angle="135" x="-16" y="-11" hm="true"/>
+          <view angle="225" x="14" y="-11"/>
+          <view angle="315" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider02" texture="spider01" x="1" y="-182">
+          <view angle="45" col="1" x="14" y="-11"/>
+          <view angle="135" col="1" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="1" x="14" y="-11"/>
+          <view angle="315" col="1" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider03" texture="spider01" x="1" y="-182">
+          <view angle="45" col="2" x="14" y="-11"/>
+          <view angle="135" col="2" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="2" x="14" y="-11"/>
+          <view angle="315" col="2" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider04" texture="spider01" x="1" y="-182">
+          <view angle="45" col="3" x="14" y="-11"/>
+          <view angle="135" col="3" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="3" x="14" y="-11"/>
+          <view angle="315" col="3" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider05" texture="spider01" x="1" y="-182">
+          <view angle="45" col="4" x="14" y="-11"/>
+          <view angle="135" col="4" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="4" x="14" y="-11"/>
+          <view angle="315" col="4" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider06" texture="spider01" x="1" y="-182">
+          <view angle="45" row="1" x="14" y="-11"/>
+          <view angle="135" row="1" x="-16" y="-11" hm="true"/>
+          <view angle="225" row="1" x="14" y="-11"/>
+          <view angle="315" row="1" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider07" texture="spider01" x="1" y="-182">
+          <view angle="45" col="1" row="1" x="14" y="-11"/>
+          <view angle="135" col="1" row="1" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="1" row="1" x="14" y="-11"/>
+          <view angle="315" col="1" row="1" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider08" texture="spider01" x="1" y="-182">
+          <view angle="45" col="2" row="1" x="14" y="-11"/>
+          <view angle="135" col="2" row="1" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="2" row="1" x="14" y="-11"/>
+          <view angle="315" col="2" row="1" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider09" texture="spider01" x="1" y="-182">
+          <view angle="45" col="3" row="1" x="14" y="-11"/>
+          <view angle="135" col="3" row="1" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="3" row="1" x="14" y="-11"/>
+          <view angle="315" col="3" row="1" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider10" texture="spider01" x="1" y="-182">
+          <view angle="45" col="4" row="1" x="14" y="-11"/>
+          <view angle="135" col="4" row="1" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="4" row="1" x="14" y="-11"/>
+          <view angle="315" col="4" row="1" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider11" texture="spider01" x="1" y="-182">
+          <view angle="45" row="2" x="14" y="-11"/>
+          <view angle="135" row="2" x="-16" y="-11" hm="true"/>
+          <view angle="225" row="2" x="14" y="-11"/>
+          <view angle="315" row="2" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider12" texture="spider01" x="1" y="-182">
+          <view angle="45" col="1" row="2" x="14" y="-11"/>
+          <view angle="135" col="1" row="2" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="1" row="2" x="14" y="-11"/>
+          <view angle="315" col="1" row="2" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider13" texture="spider01" x="1" y="-182">
+          <view angle="45" col="2" row="2" x="14" y="-11"/>
+          <view angle="135" col="2" row="2" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="2" row="2" x="14" y="-11"/>
+          <view angle="315" col="2" row="2" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider14" texture="spider01" x="1" y="-182">
+          <view angle="45" col="3" row="2" x="14" y="-11"/>
+          <view angle="135" col="3" row="2" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="3" row="2" x="14" y="-11"/>
+          <view angle="315" col="3" row="2" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider15" texture="spider01" x="1" y="-182">
+          <view angle="45" col="4" row="2" x="14" y="-11"/>
+          <view angle="135" col="4" row="2" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="4" row="2" x="14" y="-11"/>
+          <view angle="315" col="4" row="2" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider16" texture="spider01" x="1" y="-182">
+          <view angle="45" row="3" x="14" y="-11"/>
+          <view angle="135" row="3" x="-16" y="-11" hm="true"/>
+          <view angle="225" row="3" x="14" y="-11"/>
+          <view angle="315" row="3" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider17" texture="spider01" x="1" y="-182">
+          <view angle="45" col="1" row="3" x="14" y="-11"/>
+          <view angle="135" col="1" row="3" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="1" row="3" x="14" y="-11"/>
+          <view angle="315" col="1" row="3" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider18" texture="spider01" x="1" y="-182">
+          <view angle="45" col="2" row="3" x="14" y="-11"/>
+          <view angle="135" col="2" row="3" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="2" row="3" x="14" y="-11"/>
+          <view angle="315" col="2" row="3" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider19" texture="spider01" x="1" y="-182">
+          <view angle="45" col="3" row="3" x="14" y="-11"/>
+          <view angle="135" col="3" row="3" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="3" row="3" x="14" y="-11"/>
+          <view angle="315" col="3" row="3" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider20" texture="spider01" x="1" y="-182">
+          <view angle="45" col="4" row="3" x="14" y="-11"/>
+          <view angle="135" col="4" row="3" x="-16" y="-11" hm="true"/>
+          <view angle="225" col="4" row="3" x="14" y="-11"/>
+          <view angle="315" col="4" row="3" x="-15" y="-11" hm="true"/>
+        </layer>
+        <layer id="spider21" texture="spider02" x="1" y="-182">
+          <view angle="45" x="3" y="84"/>
+          <view angle="135" x="-5" y="84" hm="true"/>
+          <view angle="225" x="3" y="84"/>
+          <view angle="315" x="-4" y="84" hm="true"/>
+        </layer>
+        <layer id="spider22" texture="spider02" x="1" y="-182">
+          <view angle="45" col="1" x="3" y="84"/>
+          <view angle="135" col="1" x="-5" y="84" hm="true"/>
+          <view angle="225" col="1" x="3" y="84"/>
+          <view angle="315" col="1" x="-4" y="84" hm="true"/>
+        </layer>
+        <layer id="spider23" texture="spider02" x="1" y="-182">
+          <view angle="45" col="2" x="3" y="84"/>
+          <view angle="135" col="2" x="-5" y="84" hm="true"/>
+          <view angle="225" col="2" x="3" y="84"/>
+          <view angle="315" col="2" x="-4" y="84" hm="true"/>
+        </layer>
+        <layer id="spider24" texture="spider02" x="1" y="-182">
+          <view angle="45" col="3" x="3" y="84"/>
+          <view angle="135" col="3" x="-5" y="84" hm="true"/>
+          <view angle="225" col="3" x="3" y="84"/>
+          <view angle="315" col="3" x="-4" y="84" hm="true"/>
+        </layer>
+        <layer id="spider25" texture="spider02" x="1" y="-182">
+          <view angle="45" col="4" x="3" y="84"/>
+          <view angle="135" col="4" x="-5" y="84" hm="true"/>
+          <view angle="225" col="4" x="3" y="84"/>
+          <view angle="315" col="4" x="-4" y="84" hm="true"/>
+        </layer>
+        <layer id="spider26" texture="spider02" x="1" y="-182">
+          <view angle="45" col="5" x="3" y="84"/>
+          <view angle="135" col="5" x="-5" y="84" hm="true"/>
+          <view angle="225" col="5" x="3" y="84"/>
+          <view angle="315" col="5" x="-4" y="84" hm="true"/>
+        </layer>
+        <layer id="spider27" texture="spider02" x="1" y="-182">
+          <view angle="45" col="6" x="3" y="84"/>
+          <view angle="135" col="6" x="-5" y="84" hm="true"/>
+          <view angle="225" col="6" x="3" y="84"/>
+          <view angle="315" col="6" x="-4" y="84" hm="true"/>
+        </layer>
+        <layer id="spider28" texture="spider02" x="1" y="-182">
+          <view angle="45" col="7" x="3" y="84"/>
+          <view angle="135" col="7" x="-5" y="84" hm="true"/>
+          <view angle="225" col="7" x="3" y="84"/>
+          <view angle="315" col="7" x="-4" y="84" hm="true"/>
+        </layer>
+        <layer id="spider29" texture="spider02" x="1" y="-182">
+          <view angle="45" col="8" x="3" y="84"/>
+          <view angle="135" col="8" x="-5" y="84" hm="true"/>
+          <view angle="225" col="8" x="3" y="84"/>
+          <view angle="315" col="8" x="-4" y="84" hm="true"/>
+        </layer>
+        <layer id="spider30" texture="spider02" x="1" y="-182">
+          <view angle="45" col="9" x="3" y="84"/>
+          <view angle="135" col="9" x="-5" y="84" hm="true"/>
+          <view angle="225" col="9" x="3" y="84"/>
+          <view angle="315" col="9" x="-4" y="84" hm="true"/>
+        </layer>
+        <layer id="spider31" texture="spider02" x="1" y="-182">
+          <view angle="45" col="10" x="3" y="84"/>
+          <view angle="135" col="10" x="-5" y="84" hm="true"/>
+          <view angle="225" col="10" x="3" y="84"/>
+          <view angle="315" col="10" x="-4" y="84" hm="true"/>
+        </layer>
+        <layer id="spider32" texture="spider02" x="1" y="-182">
+          <view angle="45" col="11" x="3" y="84"/>
+          <view angle="135" col="11" x="-5" y="84" hm="true"/>
+          <view angle="225" col="11" x="3" y="84"/>
+          <view angle="315" col="11" x="-4" y="84" hm="true"/>
+        </layer>
+        <layer id="spider33" texture="spider02" x="1" y="-182">
+          <view angle="45" col="12" x="3" y="84"/>
+          <view angle="135" col="12" x="-5" y="84" hm="true"/>
+          <view angle="225" col="12" x="3" y="84"/>
+          <view angle="315" col="12" x="-4" y="84" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="spider01"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="spider02"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="spider03"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="spider04"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="spider05"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="spider06"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="spider07"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="spider08"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame09">
+          <layerref id="spider09"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame10">
+          <layerref id="spider10"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame11">
+          <layerref id="spider11"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame12">
+          <layerref id="spider12"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame13">
+          <layerref id="spider13"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame14">
+          <layerref id="spider14"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame15">
+          <layerref id="spider15"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame16">
+          <layerref id="spider16"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame17">
+          <layerref id="spider17"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame18">
+          <layerref id="spider18"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame19">
+          <layerref id="spider19"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame20">
+          <layerref id="spider20"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame21">
+          <layerref id="spider21"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame22">
+          <layerref id="spider22"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame23">
+          <layerref id="spider23"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame24">
+          <layerref id="spider24"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame25">
+          <layerref id="spider25"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame26">
+          <layerref id="spider26"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame27">
+          <layerref id="spider27"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame28">
+          <layerref id="spider28"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame29">
+          <layerref id="spider29"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame30">
+          <layerref id="spider30"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame31">
+          <layerref id="spider31"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame32">
+          <layerref id="spider32"/>
+          <layerref id="Grid"/>
+        </frame>
+        <frame id="Frame33">
+          <layerref id="spider33"/>
+          <layerref id="Grid"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="16">
+          <frameref id="Frame01" duration="140"/>
+        </animation>
+        <animation id="On" framerate="16" loop="false">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame09"/>
+          <frameref id="Frame10"/>
+          <frameref id="Frame11"/>
+          <frameref id="Frame12"/>
+          <frameref id="Frame13"/>
+          <frameref id="Frame14"/>
+          <frameref id="Frame15"/>
+          <frameref id="Frame16"/>
+          <frameref id="Frame17"/>
+          <frameref id="Frame18"/>
+          <frameref id="Frame19"/>
+          <frameref id="Frame20"/>
+          <frameref id="Frame21"/>
+          <frameref id="Frame22"/>
+          <frameref id="Frame23"/>
+          <frameref id="Frame24"/>
+          <frameref id="Frame25"/>
+          <frameref id="Frame26"/>
+          <frameref id="Frame27"/>
+          <frameref id="Frame28"/>
+          <frameref id="Frame29"/>
+          <frameref id="Frame30"/>
+          <frameref id="Frame31"/>
+          <frameref id="Frame32"/>
+          <frameref id="Frame33"/>
+          <frameref id="Frame30" duration="4"/>
+          <frameref id="Frame31"/>
+          <frameref id="Frame32"/>
+          <frameref id="Frame33"/>
+          <frameref id="Frame30" duration="30"/>
+          <frameref id="Frame29"/>
+          <frameref id="Frame28"/>
+          <frameref id="Frame27"/>
+          <frameref id="Frame26"/>
+          <frameref id="Frame25"/>
+          <frameref id="Frame24"/>
+          <frameref id="Frame23"/>
+          <frameref id="Frame22"/>
+          <frameref id="Frame21"/>
+          <frameref id="Frame20"/>
+          <frameref id="Frame19"/>
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Shadow" depthBias="-2">
+      <box min="-0.4,0.1,-0.4" max="0.4,0.12,0.4"/>
+      <layers>
+        <layer id="Shadow" texture="shadow">
+          <view y="38"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="Shadow" a="0.6"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

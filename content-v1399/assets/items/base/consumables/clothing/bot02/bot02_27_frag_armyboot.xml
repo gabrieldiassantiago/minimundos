@@ -1,0 +1,49 @@
+<f id="Bot02_27Armyboot" parentId="Bot02">
+  <g id="ArmybootBase" icon="$bf/icon_shoe_bootpoint.png">
+    <s id="Bot02_27IdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_27_idle.png" pri="3.1"/>
+    <s id="Bot02_27Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_27_walk1.png" pri="3.1"/>
+    <s id="Bot02_27Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_27_walk2.png" pri="3.1"/>
+    <s id="Bot02_27Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_27_walk3.png" pri="3.1"/>
+    <s id="Bot02_27Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_27_walk4.png" pri="3.1"/>
+    <s id="Bot02_27Sit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_27_sit.png" pri="3.1"/>
+    <c name="shoe" sId="Bot02_27IdleBase" c="4670771" a="0.06" b="-205.4" ct="-0.40" lId="Bot02_27_Color1" lw="N"/>
+    <c name="shoe" sId="Bot02_27Walk1Base" c="4670771" a="0.06" b="-205.4" ct="-0.40" lId="Bot02_27_Color1" lw="N"/>
+    <c name="shoe" sId="Bot02_27Walk2Base" c="4670771" a="0.06" b="-205.4" ct="-0.40" lId="Bot02_27_Color1" lw="N"/>
+    <c name="shoe" sId="Bot02_27Walk3Base" c="4670771" a="0.06" b="-205.4" ct="-0.40" lId="Bot02_27_Color1" lw="N"/>
+    <c name="shoe" sId="Bot02_27Walk4Base" c="4670771" a="0.06" b="-205.4" ct="-0.40" lId="Bot02_27_Color1" lw="N"/>
+    <c name="shoe" sId="Bot02_27Sit" c="4670771" a="0.06" b="-205.4" ct="-0.40" lId="Bot02_27_Color1" lw="N"/>
+    <s id="Bot02_27IdleLaces" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_27_idle_laces.png" pri="3.1"/>
+    <s id="Bot02_27Walk1Laces" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_27_walk1_laces.png" pri="3.1"/>
+    <s id="Bot02_27Walk2Laces" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_27_walk2_laces.png" pri="3.1"/>
+    <s id="Bot02_27Walk3Laces" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_27_walk3_laces.png" pri="3.1"/>
+    <s id="Bot02_27Walk4Laces" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_27_walk4_laces.png" pri="3.1"/>
+    <s id="Bot02_27SitLaces" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_27_sit_laces.png" pri="3.1"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot02_27" w="48" h="48"/>
+    <s id="IconBot02_27Base1" cId="IconBot02_27" s="items/base/consumables/clothing/bot02/bot02_27_icon_1.png"/>
+    <s id="IconBot02_27Base2" cId="IconBot02_27" s="items/base/consumables/clothing/bot02/bot02_27_icon_2.png"/>
+    <c sId="IconBot02_27Base1" c="4670771" a="0.06" b="-205.4" ct="-0.40" lId="Bot02_27_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot02_27_Color1" name="Color" desc="Choose a color" sel="Black" seld="Black">
+      <c id="White" icon="$bu/icon_metal_platinum.png" c="16767603" b="-24.1" ct="0.47" lId="Bot02_27_Color1"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5841692" a="0.74" b="6.3" ct="0.93" lId="Bot02_27_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="8749435" a="0.76" b="-27.3" ct="0.17" lId="Bot02_27_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="14056646" a="0.66" ct="0.67" lId="Bot02_27_Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16546974" a="0.71" b="-19.2" ct="0.69" lId="Bot02_27_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="15405056" a="0.60" b="-24.1" ct="0.58" lId="Bot02_27_Color1"/>
+      <c id="Blue" icon="$bu/icon_fadedblue.png" c="1404351" a="0.53" b="-6.4" ct="1.34" lId="Bot02_27_Color1"/>
+      <c id="DarkBlue" icon="$bu/icon_medblue.png" c="2707402" a="0.85" b="-1.6" ct="0.27" lId="Bot02_27_Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="10684321" a="0.45" b="-37.0" ct="1.10" lId="Bot02_27_Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="3458571" a="0.75" b="-9.6" ct="0.17" lId="Bot02_27_Color1"/>
+      <c id="DarkGreen" icon="$bu/icon_greendark.png" c="2080000" a="0.48" b="-96.2" ct="-0.25" lId="Bot02_27_Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="2212752" a="0.61" b="-30.6" ct="1.02" lId="Bot02_27_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="4670771" a="0.06" b="-205.4" ct="-0.40" lId="Bot02_27_Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot02_27_Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSFeet"/>
+</f>

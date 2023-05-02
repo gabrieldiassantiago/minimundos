@@ -1,0 +1,56 @@
+<item.SpriteItem id="0" name="Maracas" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="FX_sparkes" source="items/base/consumables/clothing/accessory/acc_195_hand_maracas.png" cols="4" rows="4"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Sparkles">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="layer1" texture="FX_sparkes" y="-28">
+          <view angle="0" col="3" row="1" x="8" y="37"/>
+          <view angle="45" x="6" y="35"/>
+          <view angle="90" col="1" y="45"/>
+          <view angle="135" col="2" x="-12" y="37"/>
+          <view angle="180" col="3" x="-10" y="35"/>
+          <view angle="225" row="1" x="-6" y="35"/>
+          <view angle="270" col="1" row="1" y="34"/>
+          <view angle="315" col="2" row="1" x="5" y="39"/>
+        </layer>
+        <layer id="layer2" texture="FX_sparkes" y="-28">
+          <view angle="0" col="3" row="3" x="8" y="37"/>
+          <view angle="45" row="2" x="6" y="37"/>
+          <view angle="90" col="1" row="2" y="45"/>
+          <view angle="135" col="2" row="2" x="-12" y="38"/>
+          <view angle="180" col="3" row="2" x="-11" y="36"/>
+          <view angle="225" row="3" x="-6" y="35"/>
+          <view angle="270" col="1" row="3" y="34"/>
+          <view angle="315" col="2" row="3" x="7" y="38"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="layer1"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="layer2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="7">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,35 @@
+<f id="Bot03_18Sarong" parentId="Bot03">
+  <g id="Sarong" icon="items/base/consumables/clothing/bot03/bot03_20_icon_sarong.png">
+    <s id="SarongIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_20_idle.png" pri="4.1"/>
+    <s id="SarongWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_20_walk1.png" pri="4.1"/>
+    <s id="SarongWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_20_walk2.png" pri="4.1"/>
+    <s id="SarongWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_20_walk3.png" pri="4.1"/>
+    <s id="SarongWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_20_walk4.png" pri="4.1"/>
+    <s id="SarongSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_20_sit.png" pri="4.1"/>
+    <c sId="SarongIdleBase" c="896559" a="0.76" b="38.5" ct="0.93" lId="Bot03_18Color1" lw="N"/>
+    <c sId="SarongWalk1Base" c="896559" a="0.76" b="38.5" ct="0.93" lId="Bot03_18Color1" lw="N"/>
+    <c sId="SarongWalk2Base" c="896559" a="0.76" b="38.5" ct="0.93" lId="Bot03_18Color1" lw="N"/>
+    <c sId="SarongWalk3Base" c="896559" a="0.76" b="38.5" ct="0.93" lId="Bot03_18Color1" lw="N"/>
+    <c sId="SarongWalk4Base" c="896559" a="0.76" b="38.5" ct="0.93" lId="Bot03_18Color1" lw="N"/>
+    <c sId="SarongSitUpperBase" c="896559" a="0.76" b="38.5" ct="0.93" lId="Bot03_18Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot03_18" icon="items/base/consumables/clothing/bot03/bot03_20_icon_sarong.png" w="48" h="48"/>
+    <s id="IconBot03_18Base" cId="IconBot03_18" s="items/base/consumables/clothing/bot03/bot03_20_icon_sarong_1.png"/>
+    <c sId="IconBot03_18Base" c="896559" a="0.76" b="38.5" ct="0.93" lId="Bot03_18Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot03_18Color1" name="Color 1" desc="Choose a color" sel="Green" seld="Green">
+      <c id="Pink" icon="$bu/icon_pink.png" c="16218280" a="0.94" b="44.3" ct="1.04" lId="Bot03_18Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="11796480" a="0.82" b="49.5" ct="0.75" lId="Bot03_18Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16767488" a="0.82" b="4.7" ct="0.54" lId="Bot03_18Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="896559" a="0.76" b="38.5" ct="0.93" lId="Bot03_18Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="0.89" lId="Bot03_18Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9525740" a="0.88" b="45.9" ct="1.48" lId="Bot03_18Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot03_18Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSBottom"/>
+</f>

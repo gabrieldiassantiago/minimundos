@@ -1,0 +1,143 @@
+<item.SpriteItem id="7255" name="Microondas de Caveira" desc="Viscoso, mas gostoso." tags="rare,table" icon="items/base/modern/icon_m_oldhalloween_kitchen_08_vipmwave.png" price="44" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.39,0,-0.49" max="0.37,0.58,0.49"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/modern/m_kitchen_08_vipmwave_base.png" cols="2" rows="1"/>
+    <texture id="door" source="items/base/modern/m_kitchen_08_vipmwave_door.png" cols="6" rows="1"/>
+    <texture id="panel" source="items/base/modern/m_kitchen_08_vipmwave_panel.png" cols="1" rows="1"/>
+    <texture id="overlays" source="items/base/modern/m_kitchen_08_vipmwave_overlay.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/modern/m_oldhalloween_kitchen_08_vipmwave_skull.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.39,0,-0.49" max="0.37,0.58,0.49"/>
+      <layers>
+        <layer id="below_opendoors" texture="door">
+          <view angle="45" alpha="0"/>
+          <view angle="135" col="1" x="1" alpha="0"/>
+          <view angle="225" col="2" x="-29" y="-6"/>
+          <view angle="315" col="3" x="56" y="6"/>
+        </layer>
+        <layer id="base" texture="base">
+          <view angle="45" x="-3" y="39"/>
+          <view angle="135" x="2" y="38" hm="true"/>
+          <view angle="225" col="1" x="1" y="39"/>
+          <view angle="315" col="1" x="-2" y="39" hm="true"/>
+        </layer>
+        <layer id="overlays" texture="overlays">
+          <view angle="45" x="-5" y="35" alpha="0"/>
+          <view angle="135" col="1" x="-24" y="22"/>
+          <view angle="225" y="36" alpha="0"/>
+          <view angle="315" x="-25" y="26"/>
+        </layer>
+        <layer id="panel" texture="panel">
+          <view angle="45" x="43" y="4"/>
+          <view angle="135" x="6" y="24" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="closeddoor" texture="door">
+          <view angle="45" col="4" x="16" y="31"/>
+          <view angle="135" col="5" x="-26" y="25"/>
+          <view angle="225" col="1" x="-23" y="7" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="23" y="6" alpha="0"/>
+        </layer>
+        <layer id="ontop_panel01" texture="panel">
+          <view angle="45" x="43" alpha="0"/>
+          <view angle="135" x="4" y="27" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="opendoors" texture="door">
+          <view angle="45" x="25" y="54"/>
+          <view angle="135" col="1" x="-60" y="36"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" x="-1" alpha="0"/>
+        </layer>
+        <layer id="skull" texture="Texture">
+          <view angle="45" x="11" y="9"/>
+          <view angle="135" x="-21" y="-1" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="below_opendoors"/>
+          <layerref id="base"/>
+          <layerref id="panel"/>
+          <layerref id="overlays"/>
+          <layerref id="skull"/>
+          <layerref id="ontop_panel01"/>
+          <layerref id="opendoors"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="base"/>
+          <layerref id="panel"/>
+          <layerref id="overlays"/>
+          <layerref id="skull"/>
+          <layerref id="closeddoor"/>
+          <layerref id="ontop_panel01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.1" y="0.2" s="3.8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="3" y="1"/>
+          <view angle="135" x="-3" y="2"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="Light01" texture="Light" align="middle">
+          <view angle="45" x="3" y="1"/>
+          <view angle="135" x="-3" y="1"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf5f3c3"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light01" color="0xf6f4c9" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

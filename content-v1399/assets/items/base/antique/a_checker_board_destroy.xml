@@ -1,0 +1,55 @@
+<item.WidgetItem id="2998" name="Tabuleiro de Damas" desc="Dispute emocionantes partidas neste tabuleiro incrível." tags="unsearchable,destroy,widget" icon="items/base/antique/icon_a_checker_board_destroy.png" tokens="1750" minLevel="1" minLevelType="3" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" viewDirection="vertical" widget="widgets/widget_checkers.swf">
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,0.04,0.4"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <actions>
+    <action id="Win">
+      <eval>
+        <func type="relational" id="Opponent Name" input="opponent" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+    <action id="Complete">
+      <eval>
+        <func type="relational" id="Opponent Name" input="opponent" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <navigate sitRange="2.00" standRange="2.00" targetRange="1.00" usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="200"/>
+    <entry key="widget_max_load_wait" value="400"/>
+    <entry key="control_xml_path" value="widgets/assets/checkers/control-ui.mxml"/>
+    <entry key="config_xml_path" value="widgets/assets/checkers/config-ui.mxml"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="itemUseWidget" value="Play"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_play_board.png"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/antique/a_checker_board.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="checker_board">
+      <box min="-0.4,0,-0.4" max="0.4,0.04,0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" y="24"/>
+          <view angle="135" col="1" y="24"/>
+          <view angle="225" col="1" y="24" hm="true"/>
+          <view angle="315" y="24" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

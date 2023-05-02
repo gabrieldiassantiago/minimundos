@@ -1,0 +1,243 @@
+<item.WidgetItem id="1985" name="Casa Club Flutuante" desc="Uma mini casinha flutuante." tags="rare,door,widget" icon="items/base/outdoor/icon_o_door_04_clubhouse.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_portal.swf">
+  <volume>
+    <box min="-1.25,0,-1.2" max="2.25,3,1.25"/>
+  </volume>
+  <events>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <actions>
+    <action id="Navigate" trigger="false" event="navigate"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <navigate position="infront" sitRange="1.00" standRange="1.00" targetRange="1.00" usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="portalType" value="door"/>
+    <entry key="maxLinkedSpaces" value="1"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <textures>
+    <texture id="clubhouse" source="items/base/outdoor/o_door_04_clubhouse.png" cols="3" rows="1"/>
+    <texture id="rope" source="items/base/outdoor/o_door_04_clubhouse_rope.png" cols="1" rows="1"/>
+    <texture id="balloon" source="items/base/outdoor/o_door_04_clubhouse_balloon.png" cols="1" rows="1"/>
+    <texture id="shad" source="items/base/outdoor/o_door_04_clubhouse_shad.png" cols="1" rows="1"/>
+    <texture id="handle" source="items/base/outdoor/o_door_04_clubhouse_handle.png" cols="1" rows="1"/>
+    <texture id="sign" source="items/base/outdoor/o_door_04_clubhouse_sign.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Door" x="0.5">
+      <box min="-1.75,0,-1.2" max="1.75,3,1.25"/>
+      <layers>
+        <layer id="shad" texture="shad" align="middle">
+          <view angle="45" y="-4"/>
+          <view angle="135" y="-4" hm="true"/>
+          <view angle="225" y="-4"/>
+          <view angle="315" y="-4" hm="true"/>
+        </layer>
+        <layer id="walls 01" texture="clubhouse" align="middle" y="-100">
+          <view angle="45" y="-32"/>
+          <view angle="135" y="-32" hm="true"/>
+          <view angle="225" col="1" y="-18"/>
+          <view angle="315" col="1" y="-18" hm="true"/>
+        </layer>
+        <layer id="walls 02" texture="clubhouse" align="middle" y="-102">
+          <view angle="45" y="-32"/>
+          <view angle="135" y="-32" hm="true"/>
+          <view angle="225" col="1" y="-18"/>
+          <view angle="315" col="1" y="-18" hm="true"/>
+        </layer>
+        <layer id="walls 03" texture="clubhouse" align="middle" y="-104">
+          <view angle="45" y="-32"/>
+          <view angle="135" y="-32" hm="true"/>
+          <view angle="225" col="1" y="-18"/>
+          <view angle="315" col="1" y="-18" hm="true"/>
+        </layer>
+        <layer id="walls 04" texture="clubhouse" align="middle" y="-106">
+          <view angle="45" y="-32"/>
+          <view angle="135" y="-32" hm="true"/>
+          <view angle="225" col="1" y="-18"/>
+          <view angle="315" col="1" y="-18" hm="true"/>
+        </layer>
+        <layer id="roof 01" texture="clubhouse" y="-100">
+          <view angle="45" col="2" x="-23" y="-42"/>
+          <view angle="135" col="2" x="23" y="-42" hm="true"/>
+          <view angle="225" col="2" x="26" y="-16"/>
+          <view angle="315" col="2" x="-26" y="-16" hm="true"/>
+        </layer>
+        <layer id="roof 02" texture="clubhouse" y="-102">
+          <view angle="45" col="2" x="-23" y="-42"/>
+          <view angle="135" col="2" x="23" y="-42" hm="true"/>
+          <view angle="225" col="2" x="26" y="-16"/>
+          <view angle="315" col="2" x="-26" y="-16" hm="true"/>
+        </layer>
+        <layer id="roof 03" texture="clubhouse" y="-104">
+          <view angle="45" col="2" x="-23" y="-42"/>
+          <view angle="135" col="2" x="23" y="-42" hm="true"/>
+          <view angle="225" col="2" x="26" y="-16"/>
+          <view angle="315" col="2" x="-26" y="-16" hm="true"/>
+        </layer>
+        <layer id="roof 04" texture="clubhouse" y="-106">
+          <view angle="45" col="2" x="-23" y="-42"/>
+          <view angle="135" col="2" x="23" y="-42" hm="true"/>
+          <view angle="225" col="2" x="26" y="-16"/>
+          <view angle="315" col="2" x="-26" y="-16" hm="true"/>
+        </layer>
+        <layer id="balloon 01" texture="balloon" align="middle" y="-100">
+          <view angle="45" x="-30" y="-602"/>
+          <view angle="135" x="30" y="-602" hm="true"/>
+          <view angle="225" x="25" y="-572"/>
+          <view angle="315" x="-25" y="-572" hm="true"/>
+        </layer>
+        <layer id="balloon 02" texture="balloon" align="middle" y="-102">
+          <view angle="45" x="-30" y="-602"/>
+          <view angle="135" x="30" y="-602" hm="true"/>
+          <view angle="225" x="25" y="-572"/>
+          <view angle="315" x="-25" y="-572" hm="true"/>
+        </layer>
+        <layer id="balloon 03" texture="balloon" align="middle" y="-104">
+          <view angle="45" x="-30" y="-602"/>
+          <view angle="135" x="30" y="-602" hm="true"/>
+          <view angle="225" x="25" y="-572"/>
+          <view angle="315" x="-25" y="-572" hm="true"/>
+        </layer>
+        <layer id="balloon 04" texture="balloon" align="middle" y="-106">
+          <view angle="45" x="-30" y="-602"/>
+          <view angle="135" x="30" y="-602" hm="true"/>
+          <view angle="225" x="25" y="-572"/>
+          <view angle="315" x="-25" y="-572" hm="true"/>
+        </layer>
+        <layer id="rope 01" texture="rope" align="middle" y="-100">
+          <view angle="45" x="-46" y="-206"/>
+          <view angle="135" x="46" y="-206" hm="true"/>
+          <view angle="225" x="11" y="-176"/>
+          <view angle="315" x="-11" y="-176" hm="true"/>
+        </layer>
+        <layer id="rope 02" texture="rope" align="middle" y="-102">
+          <view angle="45" x="-46" y="-206"/>
+          <view angle="135" x="46" y="-206" hm="true"/>
+          <view angle="225" x="11" y="-176"/>
+          <view angle="315" x="-11" y="-176" hm="true"/>
+        </layer>
+        <layer id="rope 03" texture="rope" align="middle" y="-104">
+          <view angle="45" x="-46" y="-206"/>
+          <view angle="135" x="46" y="-206" hm="true"/>
+          <view angle="225" x="11" y="-176"/>
+          <view angle="315" x="-11" y="-176" hm="true"/>
+        </layer>
+        <layer id="rope 04" texture="rope" align="middle" y="-106">
+          <view angle="45" x="-46" y="-206"/>
+          <view angle="135" x="46" y="-206" hm="true"/>
+          <view angle="225" x="11" y="-176"/>
+          <view angle="315" x="-11" y="-176" hm="true"/>
+        </layer>
+        <layer id="sign 01" texture="sign" align="middle" y="-100">
+          <view angle="45" x="56" y="-100"/>
+          <view angle="135" col="1" x="-57" y="-101"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="sign 02" texture="sign" align="middle" y="-102">
+          <view angle="45" x="56" y="-100"/>
+          <view angle="135" col="1" x="-57" y="-101"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="sign 03" texture="sign" align="middle" y="-104">
+          <view angle="45" x="56" y="-100"/>
+          <view angle="135" col="1" x="-57" y="-101"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="sign 04" texture="sign" align="middle" y="-106">
+          <view angle="45" x="56" y="-100"/>
+          <view angle="135" col="1" x="-57" y="-101"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="handle 01" texture="handle" align="middle" y="-100">
+          <view angle="45" x="81" y="-44"/>
+          <view angle="135" x="-37" y="-28" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0" hm="true"/>
+        </layer>
+        <layer id="handle 02" texture="handle" align="middle" y="-102">
+          <view angle="45" x="81" y="-44"/>
+          <view angle="135" x="-37" y="-28" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0" hm="true"/>
+        </layer>
+        <layer id="handle 03" texture="handle" align="middle" y="-104">
+          <view angle="45" x="81" y="-44"/>
+          <view angle="135" x="-37" y="-28" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0" hm="true"/>
+        </layer>
+        <layer id="handle 04" texture="handle" align="middle" y="-106">
+          <view angle="45" x="81" y="-44"/>
+          <view angle="135" x="-37" y="-28" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="clubhouse 01">
+          <layerref id="shad"/>
+          <layerref id="walls 01"/>
+          <layerref id="roof 01"/>
+          <layerref id="balloon 01"/>
+          <layerref id="rope 01"/>
+          <layerref id="sign 01"/>
+          <layerref id="handle 01"/>
+        </frame>
+        <frame id="clubhouse 02">
+          <layerref id="shad" a="0.9"/>
+          <layerref id="walls 02"/>
+          <layerref id="roof 02"/>
+          <layerref id="balloon 02"/>
+          <layerref id="rope 02"/>
+          <layerref id="sign 02"/>
+          <layerref id="handle 02"/>
+        </frame>
+        <frame id="clubhouse 03">
+          <layerref id="shad" a="0.8"/>
+          <layerref id="walls 03"/>
+          <layerref id="roof 03"/>
+          <layerref id="balloon 03"/>
+          <layerref id="rope 03"/>
+          <layerref id="sign 03"/>
+          <layerref id="handle 03"/>
+        </frame>
+        <frame id="clubhouse 04">
+          <layerref id="shad" a="0.7"/>
+          <layerref id="walls 04"/>
+          <layerref id="roof 04"/>
+          <layerref id="balloon 04"/>
+          <layerref id="rope 04"/>
+          <layerref id="sign 04"/>
+          <layerref id="handle 04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="clubhouse" framerate="2">
+          <frameref id="clubhouse 01" duration="2"/>
+          <frameref id="clubhouse 02" duration="2"/>
+          <frameref id="clubhouse 03" duration="2"/>
+          <frameref id="clubhouse 04" duration="3"/>
+          <frameref id="clubhouse 03" duration="2"/>
+          <frameref id="clubhouse 02" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

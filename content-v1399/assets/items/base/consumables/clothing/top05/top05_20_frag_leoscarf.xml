@@ -1,0 +1,39 @@
+<f id="Top05_20Leoscarf" parentId="Top05">
+  <g id="NeckLeoScarf" name="Scarf" icon="$bu/icon_scarf.png">
+    <s id="NeckLeoScarfBase" cId="Torso" s="items/base/consumables/clothing/top05/top05_20_leoscarf_base.png" pri="6.2"/>
+    <c sId="NeckLeoScarfBase" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top05_20_Color1" lw="N"/>
+    <s id="NeckLeoScarfDecal" cId="Torso" s="items/base/consumables/clothing/top05/top05_20_leoscarf_decal.png" pri="6.2"/>
+    <c sId="NeckLeoScarfDecal" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top05_20_Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop05_20" icon="items/base/consumables/clothing/top05/top05_20_icon_leoscarf_a.png" w="48" h="48"/>
+    <s id="IconTop05_20VIP" cId="IconTop05_20" s="items/base/shared/s_vipbadge.png"/>
+    <s id="IconTop05_20Base" cId="IconTop05_20" s="items/base/consumables/clothing/top05/top05_20_icon_leoscarf_1.png"/>
+    <c sId="IconTop05_20Base" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top05_20_Color1" lw="N"/>
+    <s id="IconTop05_20Decal" cId="IconTop05_20" s="items/base/consumables/clothing/top05/top05_20_icon_leoscarf_2.png"/>
+    <c sId="IconTop05_20Decal" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top05_20_Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <wizbox id="UI" uiInitScript="width=300; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top05_20_Color1"/>
+    </wizbox>
+    <b id="Top05_20_Color1" name="Color " desc="Choose a color" sel="Orange" seld="Orange">
+      <g id="Orange" name="Orange" icon="$bu/icon_orange.png">
+        <c id="Orange" name="Orange" icon="$bu/icon_apricot.png" c="16031497" a="0.43" b="7.5" ct="0.95" lId="Top05_20_Color1"/>
+        <c id="DarkOrange" name="DarkOrange" icon="$bu/icon_orange.png" c="11887893" a="0.86" b="28.4" ct="0.81" lId="Top05_20_Color2"/>
+      </g>
+      <g id="Brown" name="Brown" icon="$bu/icon_tan.png">
+        <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="6243346" a="0.93" b="70.1" ct="1.10" lId="Top05_20_Color1"/>
+        <c id="Brown" name="Brown" icon="$bu/icon_tan.png" c="6901286" a="0.68" b="44.3" ct="1.54" lId="Top05_20_Color2"/>
+      </g>
+      <g id="White" name="White" icon="$bu/icon_white.png">
+        <c id="White" name="White" icon="$bu/icon_white.png" c="16777215" a="0.64" b="14.8" ct="0.62" lId="Top05_20_Color1"/>
+        <c id="Brown" name="Brown" icon="$bu/icon_tan.png" c="6901286" a="0.68" b="56.1" ct="1.54" lId="Top05_20_Color2"/>
+      </g>
+      <g id="Pink" name="Pink" icon="$bu/icon_pink.png">
+        <c id="PinkDark" name="PinkDark" icon="$bu/icon_lightpink.png" c="16218790" a="0.59" b="35.0" ct="0.76" lId="Top05_20_Color1"/>
+        <c id="Brown" name="Brown" icon="$bu/icon_tan.png" c="6901286" a="0.68" b="55.6" ct="1.54" lId="Top05_20_Color2"/>
+      </g>
+    </b>
+  </g>
+</f>

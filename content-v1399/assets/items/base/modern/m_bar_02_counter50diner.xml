@@ -1,0 +1,27 @@
+<item.SpriteItem desc="Um balcão de bar retro" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/modern/icon_m_bar_02_counter50diner.png" id="1050" name="Balcão de Bar Nordic" tags="table" price="25" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.4,1.15,0.49" min="-0.4,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Counter" rows="1" source="items/base/modern/m_bar_02_counter50diner.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.4,1.15,0.49" min="-0.4,0,-0.49"/>
+      <layers>
+        <layer id="Layer" texture="Counter">
+          <view angle="45" x="1" y="36"/>
+          <view angle="135" hm="true" y="36"/>
+          <view angle="225" x="1" y="36"/>
+          <view angle="315" hm="true" x="-1" y="36"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,58 @@
+<f id="Bot02_64NeonRunners" parentId="Bot02">
+  <g id="NeonRunners" icon="items/base/consumables/clothing/bot02/bot02_59_icon_a.png">
+    <s id="Bot02_64_Idle_Base" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_64_idle_base.png" pri="2"/>
+    <s id="Bot02_64_Walk1_Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_64_walk1_base.png" pri="2"/>
+    <s id="Bot02_64_Walk2_Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_64_walk2_base.png" pri="2"/>
+    <s id="Bot02_64_Walk3_Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_64_walk3_base.png" pri="2"/>
+    <s id="Bot02_64_Walk4_Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_64_walk4_base.png" pri="2"/>
+    <s id="Bot02_64_Sit_Base" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_64_sit_base.png" pri="2"/>
+    <c sId="Bot02_64_Idle_Base" c="9109759" a="1.00" b="59.1" ct="2.00" lId="Bot02_64Color1" lw="N"/>
+    <c sId="Bot02_64_Walk1_Base" c="9109759" a="1.00" b="59.1" ct="2.00" lId="Bot02_64Color1" lw="N"/>
+    <c sId="Bot02_64_Walk2_Base" c="9109759" a="1.00" b="59.1" ct="2.00" lId="Bot02_64Color1" lw="N"/>
+    <c sId="Bot02_64_Walk3_Base" c="9109759" a="1.00" b="59.1" ct="2.00" lId="Bot02_64Color1" lw="N"/>
+    <c sId="Bot02_64_Walk4_Base" c="9109759" a="1.00" b="59.1" ct="2.00" lId="Bot02_64Color1" lw="N"/>
+    <c sId="Bot02_64_Sit_Base" c="9109759" a="1.00" b="59.1" ct="2.00" lId="Bot02_64Color1" lw="N"/>
+    <s id="Bot02_64_Idle_Decal" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_64_idle_decal.png" pri="2"/>
+    <s id="Bot02_64_Walk1_Decal" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_64_walk1_decal.png" pri="2"/>
+    <s id="Bot02_64_Walk2_Decal" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_64_walk2_decal.png" pri="2"/>
+    <s id="Bot02_64_Walk3_Decal" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_64_walk3_decal.png" pri="2"/>
+    <s id="Bot02_64_Walk4_Decal" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_64_walk4_decal.png" pri="2"/>
+    <s id="Bot02_64_Sit_Decal" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_64_sit_decal.png" pri="2"/>
+    <c sId="Bot02_64_Idle_Decal" c="5364497" a="1.00" b="44.3" ct="2.00" lId="Bot02_64Color2" lw="N"/>
+    <c sId="Bot02_64_Walk1_Decal" c="5364497" a="1.00" b="44.3" ct="2.00" lId="Bot02_64Color2" lw="N"/>
+    <c sId="Bot02_64_Walk2_Decal" c="5364497" a="1.00" b="44.3" ct="2.00" lId="Bot02_64Color2" lw="N"/>
+    <c sId="Bot02_64_Walk3_Decal" c="5364497" a="1.00" b="44.3" ct="2.00" lId="Bot02_64Color2" lw="N"/>
+    <c sId="Bot02_64_Walk4_Decal" c="5364497" a="1.00" b="44.3" ct="2.00" lId="Bot02_64Color2" lw="N"/>
+    <c sId="Bot02_64_Sit_Decal" c="5364497" a="1.00" b="44.3" ct="2.00" lId="Bot02_64Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="Iconbot02_64" icon="items/base/consumables/clothing/bot02/bot02_64_icon_a.png" w="48" h="48"/>
+    <s id="IconBot02_64_Base" cId="Iconbot02_64" s="items/base/consumables/clothing/bot02/bot02_64_icon_1.png"/>
+    <s id="IconBot02_64_Decal" cId="Iconbot02_64" s="items/base/consumables/clothing/bot02/bot02_64_icon_2.png"/>
+    <c sId="IconBot02_64_Base" c="9109759" a="1.00" b="59.1" ct="2.00" lId="Bot02_64Color1" lw="N"/>
+    <c sId="IconBot02_64_Decal" c="5364497" a="1.00" b="44.3" ct="2.00" lId="Bot02_64Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot02_64Color1" name="Color 1" desc="Choose a color" sel="NoenViolet" seld="NeonViolet">
+      <c id="NeonPink" icon="$bu/icon_pink_neon.png" c="16204985" a="1.00" b="26.8" ct="0.59" lId="Bot02_64Color1"/>
+      <c id="NeonOrange" icon="$bu/icon_orange_neon.png" c="16221202" a="1.00" b="29.7" ct="0.91" lId="Bot02_64Color1"/>
+      <c id="NeonYellow" icon="$bu/icon_yellow_neon.png" c="14024448" a="1.00" b="12.7" ct="0.88" lId="Bot02_64Color1"/>
+      <c id="NeonGreen" icon="$bu/icon_green_neon.png" c="5364497" a="1.00" b="35.0" ct="0.53" lId="Bot02_64Color1"/>
+      <c id="NeonBlue" icon="$bu/icon_blue_neon.png" c="59391" a="1.00" b="33.3" ct="0.40" lId="Bot02_64Color1"/>
+      <c id="NoenViolet" icon="$bu/icon_violet_neon.png" c="9109759" a="1.00" b="59.1" ct="2.00" lId="Bot02_64Color1"/>
+    </b>
+    <b id="Bot02_64Color2" name="Color 2" desc="Choose a color" sel="NeonGreen" seld="NeonGreen">
+      <c id="NeonPink" icon="$bu/icon_pink_neon.png" c="16203926" a="1.00" b="39.8" ct="0.75" lId="Bot02_64Color2"/>
+      <c id="NeonOrange" icon="$bu/icon_orange_neon.png" c="16221202" a="1.00" b="32.9" ct="0.91" lId="Bot02_64Color2"/>
+      <c id="NeonYellow" icon="$bu/icon_yellow_neon.png" c="14024448" a="1.00" b="36.9" ct="0.88" lId="Bot02_64Color2"/>
+      <c id="NeonGreen" icon="$bu/icon_green_neon.png" c="5364497" a="1.00" b="44.3" ct="2.00" lId="Bot02_64Color2"/>
+      <c id="NeonBlue" icon="$bu/icon_blue_neon.png" c="59391" a="1.00" b="17.6" ct="2.00" lId="Bot02_64Color2"/>
+      <c id="NoenViolet" icon="$bu/icon_violet_neon.png" c="9109759" a="1.00" b="59.1" ct="2.00" lId="Bot02_64Color2"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color 1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot02_64Color1"/>
+      <wizchoice id="Color 2" name="Color 2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot02_64Color2"/>
+    </wizbox>
+  </g>
+  <ds id="JSFeet"/>
+</f>

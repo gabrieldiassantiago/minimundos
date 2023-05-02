@@ -1,0 +1,323 @@
+<item.SpriteItem id="1615" name="Dragão" desc="Um incrível e perigoso dragão. Não o acorde!" tags="rare,trap,misc,magic,turret,kudos,craftable_kudos,market" icon="items/base/gothic/icon_g_turret_05_dragon.png" price="150" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="1.47,2.5,1.49"/>
+  </volume>
+  <events>
+    <event id="fire" script="scripts/item/action_turret.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Fire" label="Disparar" event="fire"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="action_attributes" value="fire-10"/>
+    <entry key="action_attributes_secondary" value="speed-10,health-30"/>
+  </data>
+  <textures>
+    <texture id="Body" source="items/base/gothic/g_turret_05_dragon.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/gothic/g_turret_05_dragonfire_lite.png" cols="1" rows="1"/>
+    <texture id="HeadFront" source="items/base/gothic/g_turret_05_dragon_front.png" cols="3" rows="2"/>
+    <texture id="fire" source="items/base/gothic/g_turret_05_dragonfire2.png" cols="3" rows="1"/>
+    <texture id="LightEye" source="items/base/gothic/g_turret_05_dragonfire_eye.png" cols="2" rows="2"/>
+    <texture id="Lightintense" source="items/base/gothic/g_turret_05_dragonfire_liteint.png" cols="1" rows="1"/>
+    <texture id="Tail" source="items/base/gothic/g_turret_05_dragontail.png" cols="3" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Fire Node" s="2">
+      <box min="0.733,0,-0.24" max="0.74,1.2,0.74"/>
+      <layers>
+        <layer id="Fire1" texture="fire">
+          <view angle="45" x="102" y="21"/>
+          <view angle="135" x="-68" y="37" hm="true"/>
+          <view angle="225" x="-101" y="-18" hm="true"/>
+          <view angle="315" x="70" y="-36"/>
+        </layer>
+        <layer id="Fire2" texture="fire">
+          <view angle="45" col="1" x="102" y="21"/>
+          <view angle="135" col="1" x="-68" y="37" hm="true"/>
+          <view angle="225" col="1" x="-101" y="-18" hm="true"/>
+          <view angle="315" col="1" x="70" y="-36"/>
+        </layer>
+        <layer id="Fire3" texture="fire">
+          <view angle="45" col="2" x="102" y="21"/>
+          <view angle="135" col="2" x="-68" y="37" hm="true"/>
+          <view angle="225" col="2" x="-101" y="-18" hm="true"/>
+          <view angle="315" col="2" x="70" y="-36"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Open1">
+          <layerref id="Fire1" a="0"/>
+        </frame>
+        <frame id="Open2">
+          <layerref id="Fire1" a="0"/>
+        </frame>
+        <frame id="FrameIn1">
+          <layerref id="Fire2" a="0.3"/>
+        </frame>
+        <frame id="FrameIn2">
+          <layerref id="Fire3" a="0.6"/>
+        </frame>
+        <frame id="FrameOn1">
+          <layerref id="Fire1" a="0.8"/>
+        </frame>
+        <frame id="FrameOn2">
+          <layerref id="Fire2" a="0.85"/>
+        </frame>
+        <frame id="FrameOn3">
+          <layerref id="Fire3" a="0.87"/>
+        </frame>
+        <frame id="Nill">
+          <layerref id="Fire1" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Nill" duration="11"/>
+        </animation>
+        <animation id="In" framerate="6" loop="false" syncFrames="false">
+          <frameref id="Open1"/>
+          <frameref id="Open2" duration="3"/>
+          <frameref id="FrameIn1"/>
+          <frameref id="FrameIn2"/>
+          <frameref id="FrameOn1"/>
+          <frameref id="FrameOn2"/>
+          <frameref id="FrameOn3"/>
+          <frameref id="FrameOn1"/>
+          <frameref id="FrameOn2"/>
+          <frameref id="FrameOn3"/>
+          <frameref id="FrameIn2"/>
+          <frameref id="FrameIn1"/>
+          <frameref id="Open1" duration="2"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncFrames="false">
+          <frameref id="FrameIn2"/>
+          <frameref id="FrameIn1"/>
+          <frameref id="Nill"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="1.47,2.5,1.49"/>
+      <layers>
+        <layer id="Body" texture="Body" x="40" y="90">
+          <view angle="45" x="23" y="-32"/>
+          <view angle="135" x="-38" hm="true"/>
+          <view angle="225" col="1" x="-105" y="-62"/>
+          <view angle="315" col="1" x="-41" y="-96" hm="true"/>
+        </layer>
+        <layer id="HeadFront1" texture="HeadFront">
+          <view angle="45" x="113" y="-79"/>
+          <view angle="135" x="-48" y="-47" hm="true"/>
+          <view angle="225" row="1" x="-112" y="-108"/>
+          <view angle="315" row="1" x="46" y="-142" hm="true"/>
+        </layer>
+        <layer id="HeadFront2" texture="HeadFront">
+          <view angle="45" col="1" x="113" y="-79"/>
+          <view angle="135" col="1" x="-48" y="-47" hm="true"/>
+          <view angle="225" col="1" row="1" x="-113" y="-108"/>
+          <view angle="315" col="1" row="1" x="47" y="-142" hm="true"/>
+        </layer>
+        <layer id="HeadFront3" texture="HeadFront">
+          <view angle="45" col="2" x="113" y="-79"/>
+          <view angle="135" col="2" x="-48" y="-47" hm="true"/>
+          <view angle="225" col="2" row="1" x="-114" y="-108"/>
+          <view angle="315" col="2" row="1" x="48" y="-142" hm="true"/>
+        </layer>
+        <layer id="Tail_01" texture="Tail">
+          <view angle="45" x="-4" y="-41"/>
+          <view angle="135" x="69" y="-9" hm="true"/>
+          <view angle="225" row="1" x="-3" y="23"/>
+          <view angle="315" row="1" x="-63" y="-11" hm="true"/>
+        </layer>
+        <layer id="Tail_02" texture="Tail">
+          <view angle="45" col="1" x="-4" y="-41"/>
+          <view angle="135" col="1" x="69" y="-9" hm="true"/>
+          <view angle="225" col="1" row="1" x="-3" y="23"/>
+          <view angle="315" col="1" row="1" x="-63" y="-11" hm="true"/>
+        </layer>
+        <layer id="Tail_03" texture="Tail">
+          <view angle="45" col="2" x="-4" y="-41"/>
+          <view angle="135" col="2" x="69" y="-9" hm="true"/>
+          <view angle="225" col="2" row="1" x="-3" y="23"/>
+          <view angle="315" col="2" row="1" x="-63" y="-11" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="DClosedM">
+          <layerref id="Body"/>
+          <layerref id="HeadFront1" y="2"/>
+          <layerref id="Tail_02"/>
+        </frame>
+        <frame id="DClosedR">
+          <layerref id="Body"/>
+          <layerref id="HeadFront1" y="2"/>
+          <layerref id="Tail_01"/>
+        </frame>
+        <frame id="DClosedL">
+          <layerref id="Body"/>
+          <layerref id="HeadFront1" y="2"/>
+          <layerref id="Tail_03"/>
+        </frame>
+        <frame id="DClosed1bm">
+          <layerref id="Body"/>
+          <layerref id="HeadFront1" y="1"/>
+          <layerref id="Tail_02"/>
+        </frame>
+        <frame id="DClosed1br">
+          <layerref id="Body"/>
+          <layerref id="HeadFront1" y="1"/>
+          <layerref id="Tail_01"/>
+        </frame>
+        <frame id="DOpen1m">
+          <layerref id="Body"/>
+          <layerref id="HeadFront2"/>
+          <layerref id="Tail_02"/>
+        </frame>
+        <frame id="DOpen1r">
+          <layerref id="Body"/>
+          <layerref id="HeadFront2"/>
+          <layerref id="Tail_01"/>
+        </frame>
+        <frame id="DOpen1bm">
+          <layerref id="Body"/>
+          <layerref id="HeadFront2" y="-2"/>
+          <layerref id="Tail_02"/>
+        </frame>
+        <frame id="DOpen1bL">
+          <layerref id="Body"/>
+          <layerref id="HeadFront2" y="-2"/>
+          <layerref id="Tail_03"/>
+        </frame>
+        <frame id="DOpen2m">
+          <layerref id="Body"/>
+          <layerref id="HeadFront3" y="-3"/>
+          <layerref id="Tail_02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="DClosedR"/>
+          <frameref id="DClosedM"/>
+          <frameref id="DClosedL"/>
+          <frameref id="DClosed1bm"/>
+          <frameref id="DOpen1r"/>
+          <frameref id="DOpen1bm"/>
+          <frameref id="DOpen1bL"/>
+          <frameref id="DOpen1m"/>
+          <frameref id="DClosed1br"/>
+          <frameref id="DClosedM"/>
+          <frameref id="DClosedL"/>
+          <frameref id="DClosedM"/>
+        </animation>
+        <animation id="In" framerate="6" loop="false">
+          <frameref id="DClosedM"/>
+          <frameref id="DClosed1bm"/>
+          <frameref id="DOpen1m"/>
+          <frameref id="DOpen1bm"/>
+          <frameref id="DOpen2m" duration="8"/>
+          <frameref id="DOpen2m" duration="2"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="DOpen1bm"/>
+          <frameref id="DOpen1m"/>
+          <frameref id="DClosedM"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Firelight1" texture="Light">
+          <view angle="45" x="52" y="13"/>
+          <view angle="135" x="-35" y="22" hm="true"/>
+          <view angle="225" x="-49" y="-6" hm="true"/>
+          <view angle="315" x="36" y="-15"/>
+        </layer>
+        <layer id="Firelight2" texture="Light">
+          <view angle="45" col="1" x="52" y="13"/>
+          <view angle="135" col="1" x="-35" y="22" hm="true"/>
+          <view angle="225" col="1" x="-49" y="-6" hm="true"/>
+          <view angle="315" col="1" x="36" y="-15"/>
+        </layer>
+        <layer id="LightsEye1" texture="LightEye">
+          <view angle="45" col="1" x="31" y="-18"/>
+          <view angle="135" col="1" x="-14" y="-10" hm="true"/>
+          <view angle="225" row="1" x="-37" y="-33"/>
+          <view angle="315" row="1" x="16" y="-42"/>
+        </layer>
+        <layer id="LightsEye2" texture="LightEye">
+          <view angle="45" col="1" x="30" y="-20"/>
+          <view angle="135" col="1" x="-13" y="-12" hm="true"/>
+          <view angle="225" row="1" x="-36" y="-35"/>
+          <view angle="315" row="1" x="16" y="-43"/>
+        </layer>
+        <layer id="LightsEye3" texture="LightEye">
+          <view angle="45" x="30" y="-23"/>
+          <view angle="135" x="-13" y="-14" hm="true"/>
+          <view angle="225" col="1" row="1" x="-36" y="-37"/>
+          <view angle="315" col="1" row="1" x="21" y="-45" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On1">
+          <layerref id="Firelight1" color="0xe78f42"/>
+          <layerref id="LightsEye3"/>
+        </frame>
+        <frame id="On2">
+          <layerref id="Firelight1" color="0xe5a843"/>
+          <layerref id="LightsEye3"/>
+        </frame>
+        <frame id="In1">
+          <layerref id="Firelight1" color="0xee7258" a="0.3"/>
+          <layerref id="LightsEye3"/>
+        </frame>
+        <frame id="In2">
+          <layerref id="Firelight1" color="0xee7258" a="0.6"/>
+          <layerref id="LightsEye3"/>
+        </frame>
+        <frame id="none">
+          <layerref id="LightsEye1"/>
+        </frame>
+        <frame id="Sit1">
+          <layerref id="LightsEye1" a="0.6"/>
+        </frame>
+        <frame id="Sit101">
+          <layerref id="LightsEye1" a="0.6"/>
+        </frame>
+        <frame id="Sit2">
+          <layerref id="LightsEye2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Sit1" duration="3"/>
+          <frameref id="Sit101" duration="3"/>
+          <frameref id="Sit2" duration="4"/>
+          <frameref id="Sit1" duration="2"/>
+        </animation>
+        <animation id="In" framerate="6" loop="false" syncFrames="false">
+          <frameref id="none" duration="3"/>
+          <frameref id="Sit2"/>
+          <frameref id="In1"/>
+          <frameref id="In2"/>
+          <frameref id="On1"/>
+          <frameref id="On2"/>
+          <frameref id="On1"/>
+          <frameref id="On2"/>
+          <frameref id="On1"/>
+          <frameref id="On2"/>
+          <frameref id="On1"/>
+          <frameref id="On2"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncFrames="false">
+          <frameref id="In2"/>
+          <frameref id="In1"/>
+          <frameref id="none"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

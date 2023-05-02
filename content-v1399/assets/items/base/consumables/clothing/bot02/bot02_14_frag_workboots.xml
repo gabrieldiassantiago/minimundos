@@ -1,0 +1,50 @@
+<f id="Bot02_14Workboot" parentId="Bot02">
+  <g id="Boot" icon="$bu/icon_shoe_skate.png">
+    <s id="Bot02_14IdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_14_idle.png" pri="2.1"/>
+    <s id="Bot02_14Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_14_walk1.png" pri="2.1"/>
+    <s id="Bot02_14Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_14_walk2.png" pri="2.1"/>
+    <s id="Bot02_14Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_14_walk3.png" pri="2.1"/>
+    <s id="Bot02_14Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_14_walk4.png" pri="2.1"/>
+    <s id="Bot02_14Sit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_14_sit.png" pri="2.1"/>
+    <c sId="Bot02_14IdleBase" c="11440467" a="0.99" b="44.7" ct="1.27" lId="Bot02_Color1" lw="N"/>
+    <c sId="Bot02_14Walk1Base" c="11440467" a="0.99" b="44.7" ct="1.27" lId="Bot02_Color1" lw="N"/>
+    <c sId="Bot02_14Walk2Base" c="11440467" a="0.99" b="44.7" ct="1.27" lId="Bot02_Color1" lw="N"/>
+    <c sId="Bot02_14Walk3Base" c="11440467" a="0.99" b="44.7" ct="1.27" lId="Bot02_Color1" lw="N"/>
+    <c sId="Bot02_14Walk4Base" c="11440467" a="0.99" b="44.7" ct="1.27" lId="Bot02_Color1" lw="N"/>
+    <c sId="Bot02_14Sit" c="11440467" a="0.99" b="44.7" ct="1.27" lId="Bot02_Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot02_14" icon="items/base/consumables/clothing/bot02/bot02_14_icon_a.png" w="48" h="48"/>
+    <s id="IconBot02_14Base" cId="IconBot02_14" s="items/base/consumables/clothing/bot02/bot02_14_icon_1.png"/>
+    <c sId="IconBot02_14Base" c="11440467" a="0.99" b="44.7" ct="1.27" lId="Bot02_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot02_14Color1" name="Color" desc="Choose a color" sel="Wheat" seld="Wheat">
+      <g id="Grey" icon="$bu/icon_grey.png">
+        <c icon="$bu/icon_grey.png" c="5065804" a="0.90" b="70.6" ct="2.00" lId="Bot02_Color1"/>
+      </g>
+      <g id="White" icon="$bu/icon_white.png">
+        <c c="13223875" a="1.00" b="35.4" ct="0.67" lId="Bot02_Color1"/>
+      </g>
+      <g id="Wheat" icon="$bu/icon_kaki.png">
+        <c c="11440467" a="0.99" b="44.7" ct="1.27" lId="Bot02_Color1"/>
+      </g>
+      <g id="Tan" icon="$bu/icon_tan.png">
+        <c c="10780751" a="0.96" b="39.9" ct="1.37" lId="Bot02_Color1"/>
+      </g>
+      <g id="Olive" icon="$bu/icon_olive.png">
+        <c c="7563058" a="1.00" b="52.8" ct="1.95" lId="Bot02_Color1"/>
+      </g>
+      <g id="Brown" icon="$bu/icon_brown.png">
+        <c c="7360282" a="0.76" b="-3.2" ct="0.55" lId="Bot02_Color1"/>
+      </g>
+      <g id="Black" icon="$bu/icon_black.png">
+        <c c="4013373" a="0.99" b="63.3" ct="2.00" lId="Bot02_Color1"/>
+      </g>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot02_14Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSFeet"/>
+</f>

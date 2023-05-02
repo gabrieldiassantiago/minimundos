@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="A grassy path end" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" entity="false" gridActive="false" name="Grassy Path End" tags="floor">
+  <volume>
+    <box max="0.55,0,0.45" min="-0.45,-0.001,-0.55"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture cols="2" id="Texture" rows="1" source="items/base/outdoor/o_rug_03_grass_path_end.png"/>
+  </textures>
+  <nodes>
+    <node id="grass" layer="surface">
+      <box max="0.55,0,0.45" min="-0.45,-0.001,-0.55"/>
+      <layers>
+        <layer id="Layer01" texture="Texture">
+          <view angle="45" x="-1" y="43"/>
+          <view angle="135" hm="true" x="-4" y="42"/>
+          <view angle="225" col="1" x="-1" y="44"/>
+          <view angle="315" col="1" hm="true" x="4" y="42"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

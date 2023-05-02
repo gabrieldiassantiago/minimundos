@@ -1,0 +1,132 @@
+<item.SpriteItem id="2032" name="Poção dos Sonhos" desc="Um lindo vidro cheio de um poderoso feitiço." tags="rare,misc" icon="items/base/antique/icon_a_collect_09_genie_pinkbot.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="150" minLevelType="4">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,1.6,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="goblet" source="items/base/antique/a_collect_09_genie_pinkbot.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,1.6,0.2"/>
+      <layers>
+        <layer id="bottle" texture="goblet" y="15">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="goblet glow" texture="goblet" y="15">
+          <view angle="45" y="-6"/>
+          <view angle="135" y="-6" hm="true"/>
+          <view angle="225" y="-6"/>
+          <view angle="315" y="-6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="frame 01">
+          <layerref id="bottle"/>
+          <layerref id="goblet glow" color="0xffe79b" a="0.06" blend="add"/>
+        </frame>
+        <frame id="frame 02">
+          <layerref id="bottle"/>
+          <layerref id="goblet glow" color="0xffe79b" a="0.07" blend="add"/>
+        </frame>
+        <frame id="frame 03">
+          <layerref id="bottle"/>
+          <layerref id="goblet glow" color="0xffe79b" a="0.1" blend="add"/>
+        </frame>
+        <frame id="frame 04">
+          <layerref id="bottle"/>
+          <layerref id="goblet glow" color="0xffe79b" a="0.08" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="frame 01"/>
+          <frameref id="frame 02"/>
+          <frameref id="frame 03"/>
+          <frameref id="frame 04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="3.7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view x="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xeb87ec" a="0.6"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xeb87ec" a="0.65" blend="add"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xeb87ec" a="0.67"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xeb87ec" a="0.69"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Light" color="0xeb87ec" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="0.35" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view x="17" y="-52"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x7b32b3" a="0.8"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x7b32b3" a="0.85"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0x7b32b3" a="0.87"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0x7b32b3" a="0.89"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Light" color="0x7b32b3" a="0.9"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,71 @@
+<item.SpriteItem id="0" name="Burger hit" desc="A burger hit effect." dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="hit_03_snowball" source="items/base/consumables/throwables/thr_03_burger_hit.png" cols="4" rows="1"/>
+    <texture id="Texture" source="items/base/consumables/throwables/thr_00_sauce_hit.png" cols="2" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="splat" source="items/base/consumables/magic/sndfx_splat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="Hit 01" texture="hit_03_snowball">
+          <view y="-66"/>
+        </layer>
+        <layer id="Hit 02" texture="hit_03_snowball">
+          <view col="1" y="-65"/>
+        </layer>
+        <layer id="Hit 03" texture="hit_03_snowball">
+          <view col="2" y="-62"/>
+        </layer>
+        <layer id="Hit 04" texture="hit_03_snowball">
+          <view col="3" y="-66"/>
+        </layer>
+        <layer id="Splat01" texture="Texture">
+          <view y="-85"/>
+        </layer>
+        <layer id="Splat02" texture="Texture">
+          <view col="1" y="-85"/>
+        </layer>
+        <layer id="Splat03" texture="Texture">
+          <view row="1" y="-85"/>
+        </layer>
+        <layer id="Splat04" texture="Texture">
+          <view col="1" row="1" y="-85"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Hit 01">
+          <layerref id="Splat01" color="0xe03939"/>
+          <layerref id="Hit 01"/>
+        </frame>
+        <frame id="Hit 02">
+          <layerref id="Splat02" color="0xe03939"/>
+          <layerref id="Hit 02"/>
+        </frame>
+        <frame id="Hit 03">
+          <layerref id="Splat03" color="0xe03939"/>
+          <layerref id="Hit 03"/>
+        </frame>
+        <frame id="Hit 04">
+          <layerref id="Splat04" color="0xe03939" a="0.8"/>
+          <layerref id="Hit 04" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="6" loop="false">
+          <frameref id="Hit 01">
+            <sample id="splat"/>
+          </frameref>
+          <frameref id="Hit 02"/>
+          <frameref id="Hit 03"/>
+          <frameref id="Hit 04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,42 @@
+<item.SpriteItem id="6270" name="Cadeira de Rodas Zoom" desc="Uma cadeira de rodas confortável e de qualidade" tags="consumable,actionbar,wear,feet,action_driveable_toggle" icon="items/base/consumables/feet/con_feet_168_wheelchair_icon.png" price="900" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" tokens="9000">
+  <volume>
+    <box min="-0.44,0,-0.48" max="0.48,1,0.48"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="select" script="scripts/item/select_drive.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Wheelchair" source="items/base/consumables/feet/con_feet_168_wheelchair_item.png" cols="2" rows="1"/>
+    <texture id="Wheel" source="items/base/consumables/feet/con_feet_168_wheelchair_wheels.png" cols="5" rows="4"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.44,0,-0.48" max="0.48,1,0.48"/>
+      <layers>
+        <layer id="Wheel" texture="Wheel">
+          <view angle="45" col="1" x="-5" y="22"/>
+          <view angle="135" col="1" x="5" y="22" hm="true"/>
+          <view angle="225" col="3" x="13" y="29"/>
+          <view angle="315" col="3" x="-13" y="29" hm="true"/>
+        </layer>
+        <layer id="WHeelchair" texture="Wheelchair">
+          <view angle="45" x="10" y="25"/>
+          <view angle="135" x="-10" y="25" hm="true"/>
+          <view angle="225" col="1" x="-1" y="33"/>
+          <view angle="315" col="1" x="1" y="33" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame"/>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

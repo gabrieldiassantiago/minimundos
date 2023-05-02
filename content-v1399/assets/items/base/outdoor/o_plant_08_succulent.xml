@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="Long leafed cactus" dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/outdoor/icon_o_plant_08_succulent.png" id="886" name="Succulent" tags="plant" price="25" tokens="250" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.5,0.75,0.5" min="-0.5,0,-0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Succulent" rows="1" source="items/base/outdoor/o_plant_08_succulent.png"/>
+  </textures>
+  <nodes>
+    <node id="Plant">
+      <box max="0.5,0.75,0.5" min="-0.5,0,-0.5"/>
+      <layers>
+        <layer id="Layer" texture="Succulent">
+          <view angle="45" y="42"/>
+          <view angle="135" mirror="true" y="42"/>
+          <view angle="225" y="42"/>
+          <view angle="315" mirror="true" y="42"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

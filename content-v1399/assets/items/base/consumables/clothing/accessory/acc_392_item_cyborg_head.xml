@@ -1,0 +1,114 @@
+<item.SpriteItem id="0" name="newspaper" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/clothing/accessory/acc_392_item_cyborg_head.png" cols="4" rows="2"/>
+    <texture id="Light" source="items/base/consumables/feet/con_feet_108_ufo_glow.png" cols="1" rows="1"/>
+    <texture id="red" source="items/base/consumables/clothing/accessory/acc_392_item_cyborg_head2.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="0" col="2" row="1" x="6" y="25"/>
+          <view angle="45" col="3" row="1" x="2" y="27"/>
+          <view angle="90" x="-1" y="25"/>
+          <view angle="135" col="1" y="28"/>
+          <view angle="180" col="2" x="-4" y="28"/>
+          <view angle="225" col="3" x="-2" y="25"/>
+          <view angle="270" row="1" x="1" y="23"/>
+          <view angle="315" col="1" row="1" x="4" y="23"/>
+        </layer>
+        <layer id="head01" texture="red">
+          <view angle="0" col="2" x="6" y="25" alpha="0"/>
+          <view angle="45" col="2" x="2" y="27" alpha="0"/>
+          <view angle="90" x="-1" y="25"/>
+          <view angle="135" col="1" y="28"/>
+          <view angle="180" col="2" x="-4" y="28"/>
+          <view angle="225" col="2" x="-2" y="25" alpha="0"/>
+          <view angle="270" x="1" y="23" alpha="0"/>
+          <view angle="315" col="1" x="4" y="23" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="head"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="head"/>
+          <layerref id="head01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="Frame" duration="60"/>
+          <frameref id="Frame01" duration="50"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="25" y="-15"/>
+          <view angle="90" x="10" y="-10"/>
+          <view angle="135" x="-8" y="-13" hm="true"/>
+          <view angle="180" x="-28" y="-14"/>
+          <view angle="225" x="-23" y="-17"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x336dc4" a="0.5"/>
+        </frame>
+        <frame id="On01">
+          <layerref id="Light" color="0x952626" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="On" duration="60"/>
+          <frameref id="On01" duration="50"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="12" y="-7"/>
+          <view angle="90" x="3" y="-4"/>
+          <view angle="135" x="-3" y="-7" hm="true"/>
+          <view angle="180" x="-10" y="-5"/>
+          <view angle="225" x="-10" y="-6"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x6199ed" a="0.5"/>
+        </frame>
+        <frame id="On01">
+          <layerref id="Light" color="0xc93333" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="On" duration="60"/>
+          <frameref id="On01" duration="50"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

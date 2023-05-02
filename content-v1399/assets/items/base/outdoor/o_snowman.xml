@@ -1,0 +1,47 @@
+<item.SpriteItem id="2291" name="Boneco de Neve" desc="Um boneco de neve." tags="misc,xmas,rare" icon="items/base/outdoor/icon_o_snowman.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="220">
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,1.98,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="hat" source="items/base/outdoor/o_snowman_hat.png" cols="1" rows="1"/>
+    <texture id="mouth" source="items/base/outdoor/o_snowman_head.png" cols="1" rows="1"/>
+    <texture id="base" source="items/base/outdoor/o_snowman_base.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="base">
+      <box min="-0.4,0,-0.4" max="0.4,1.98,0.4"/>
+      <layers>
+        <layer id="base" texture="base" y="-8">
+          <view angle="45" col="1" y="33"/>
+          <view angle="135" col="1" y="34" hm="true"/>
+          <view angle="225" y="30"/>
+          <view angle="315" y="30" hm="true"/>
+        </layer>
+        <layer id="head" texture="mouth" y="4">
+          <view angle="45" x="4" y="-82"/>
+          <view angle="135" x="-4" y="-82" hm="true"/>
+          <view angle="225" col="1" x="-53" y="-60" alpha="0"/>
+          <view angle="315" col="1" x="54" y="-60" alpha="0" hm="true"/>
+        </layer>
+        <layer id="hat" texture="hat" y="6">
+          <view angle="45" x="-1" y="-118"/>
+          <view angle="135" x="1" y="-118" hm="true"/>
+          <view angle="225" x="2" y="-118"/>
+          <view angle="315" x="-2" y="-118"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle_01">
+          <layerref id="base"/>
+          <layerref id="head"/>
+          <layerref id="hat"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

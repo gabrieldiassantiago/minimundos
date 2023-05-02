@@ -1,0 +1,71 @@
+<item.SpriteItem id="0" name="Halo" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/head/con_head_91_fahalo_yellow_wear.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_halo_angelhalo.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view y="-35"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="Layer" color="0xeae67b" blend="add"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="Layer" color="0xeae67b" a="0.96" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame_01">
+            <sample id="flap"/>
+          </frameref>
+          <frameref id="Frame_02"/>
+        </animation>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xeae67b" a="0.9"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

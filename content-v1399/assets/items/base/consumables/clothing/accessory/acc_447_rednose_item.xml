@@ -1,0 +1,84 @@
+<item.SpriteItem id="5509" name="Nariz de Rena Play" desc="Um nariz vermelho brilhante" tags="rare,consumable,wear,actionbar,action_wearable_toggle,eye" icon="items/base/consumables/clothing/accessory/acc_447_rednose_icon.png" price="220" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" premium="Y">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,0.34,0.35"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="hat" source="items/base/consumables/clothing/accessory/acc_447_rednose_item.png" cols="2" rows="1"/>
+    <texture id="stand" source="items/base/consumables/clothing/accessory/acc_30_fedora_stand.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_bulb.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,0.34,0.35"/>
+      <layers>
+        <layer id="stand" texture="stand">
+          <view angle="45" y="16" alpha="0"/>
+          <view angle="135" y="16" alpha="0" hm="true"/>
+          <view angle="225" col="1" y="16" alpha="0"/>
+          <view angle="315" col="1" y="16" alpha="0" hm="true"/>
+        </layer>
+        <layer id="hat" texture="hat">
+          <view angle="45" y="15"/>
+          <view angle="135" y="15" hm="true"/>
+          <view angle="225" col="1" y="15"/>
+          <view angle="315" col="1" y="15" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="hat" texture="hat">
+          <view angle="45" x="2" y="16"/>
+          <view angle="135" x="-1" y="17" hm="true"/>
+          <view angle="225" col="1" y="16"/>
+          <view angle="315" col="1" x="-2" y="17" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="hat" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="2"/>
+          <view angle="135" x="-3"/>
+          <view angle="225" x="-6" y="-6"/>
+          <view angle="315" x="5" y="-5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf06d85"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

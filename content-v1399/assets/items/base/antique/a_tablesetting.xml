@@ -1,0 +1,37 @@
+<item.SpriteItem desc="Um para cada cadeira. Não esqueça de escolher os lugares adequadamente." dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" icon="items/base/antique/icon_a_tablesetting.png" id="2576" name="Pratos e Talheres para Jantar Formal" tags="misc,decoration" price="12" tokens="120" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,0.05,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="plate" source="items/base/antique/a_tablesetting_plates.png" cols="2" rows="2"/>
+    <texture id="cloth" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.49" max="0.4,0.05,0.49"/>
+      <layers>
+        <layer id="cloth" texture="cloth">
+          <view angle="45" y="37" hm="true"/>
+          <view angle="135" y="37"/>
+          <view angle="225" y="37" hm="true"/>
+          <view angle="315" y="37"/>
+        </layer>
+        <layer id="plate" texture="plate">
+          <view angle="45" col="1" x="1" y="29"/>
+          <view angle="135" y="32"/>
+          <view angle="225" col="1" row="1" x="-2" y="29"/>
+          <view angle="315" row="1" x="-4" y="28"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

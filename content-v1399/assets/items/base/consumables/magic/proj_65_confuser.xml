@@ -1,0 +1,44 @@
+<item.SpriteItem id="0" name="Confusion Wave Projectile" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.08,-0.15,-0.2" max="0.08,0.3,0.2"/>
+  </volume>
+  <textures>
+    <texture id="confusion wave" source="items/base/consumables/magic/proj_65_confuser.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="effect" source="items/base/consumables/magic/sndfx_laser.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="confusion wave">
+      <box min="-0.08,-0.15,-0.2" max="0.08,0.3,0.2"/>
+      <layers>
+        <layer id="confusion waves" texture="confusion wave">
+          <view angle="0" col="2" y="18"/>
+          <view angle="45" y="18"/>
+          <view angle="90" col="1" y="16"/>
+          <view angle="135" y="18" hm="true"/>
+          <view angle="180" col="2" y="18" hm="true"/>
+          <view angle="225" y="18" hm="true" vm="true"/>
+          <view angle="270" col="1" y="18" vm="true"/>
+          <view angle="315" y="18" vm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="confusion waves" blend="hardlight"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="Frame">
+            <sample id="effect"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

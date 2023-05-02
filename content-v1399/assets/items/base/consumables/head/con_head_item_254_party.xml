@@ -1,0 +1,455 @@
+<item.SpriteItem id="6722" name="Chapéu de Festa Deluxe" desc="O centro da festa [1 de 5]" tags="rare,head,consumable,costume,wear,actionbar,action_wearable_toggle" icon="items/base/consumables/head/icon_con_head_item_254_party.png" price="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.6,0.3"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+25,health+25"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/consumables/head/con_head_generic_dropshadow.png" cols="1" rows="1"/>
+    <texture id="head" source="items/base/consumables/head/con_head_254_party.png" cols="5" rows="1"/>
+    <texture id="decal" source="items/base/consumables/head/con_head_254_party_decal.png" cols="5" rows="7"/>
+    <texture id="Light" source="items/base/consumables/head/con_head_254_party_glow.png" cols="5" rows="7"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.6,0.3"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view y="21"/>
+        </layer>
+        <layer id="HeadLayer" texture="head" y="22">
+          <view angle="0" col="2" x="2" y="-5"/>
+          <view angle="45" x="1" y="-3"/>
+          <view angle="90" col="1" x="1" y="-2" hm="true"/>
+          <view angle="135" x="-2" y="-3" hm="true"/>
+          <view angle="180" col="2" x="-2" y="-5" hm="true"/>
+          <view angle="225" col="3" x="-1" y="-9" hm="true"/>
+          <view angle="270" col="4" y="-8" hm="true"/>
+          <view angle="315" col="3" x="1" y="-9"/>
+        </layer>
+        <layer id="decal_01" texture="decal" y="22">
+          <view angle="0" col="2" x="2" y="-5"/>
+          <view angle="45" x="1" y="-3"/>
+          <view angle="90" col="1" x="1" y="-2" hm="true"/>
+          <view angle="135" x="-2" y="-3" hm="true"/>
+          <view angle="180" col="2" x="-2" y="-5" hm="true"/>
+          <view angle="225" col="3" x="-1" y="-9" hm="true"/>
+          <view angle="270" col="4" y="-8" hm="true"/>
+          <view angle="315" col="3" x="1" y="-9"/>
+        </layer>
+        <layer id="decal_02" texture="decal" y="22">
+          <view angle="0" col="2" row="1" x="2" y="-5"/>
+          <view angle="45" row="1" x="1" y="-3"/>
+          <view angle="90" col="1" row="1" x="1" y="-2" hm="true"/>
+          <view angle="135" row="1" x="-2" y="-3" hm="true"/>
+          <view angle="180" col="2" row="1" x="-2" y="-5" hm="true"/>
+          <view angle="225" col="3" row="1" x="-1" y="-9" hm="true"/>
+          <view angle="270" col="4" row="1" y="-8" hm="true"/>
+          <view angle="315" col="3" row="1" x="1" y="-9"/>
+        </layer>
+        <layer id="decal_03" texture="decal" y="22">
+          <view angle="0" col="2" row="2" x="2" y="-5"/>
+          <view angle="45" row="2" x="1" y="-3"/>
+          <view angle="90" col="1" row="2" x="1" y="-2" hm="true"/>
+          <view angle="135" row="2" x="-2" y="-3" hm="true"/>
+          <view angle="180" col="2" row="2" x="-2" y="-5" hm="true"/>
+          <view angle="225" col="3" row="2" x="-1" y="-9" hm="true"/>
+          <view angle="270" col="4" row="2" y="-8" hm="true"/>
+          <view angle="315" col="3" row="2" x="1" y="-9"/>
+        </layer>
+        <layer id="decal_04" texture="decal" y="22">
+          <view angle="0" col="2" row="3" x="2" y="-5"/>
+          <view angle="45" row="3" x="1" y="-3"/>
+          <view angle="90" col="1" row="3" x="1" y="-2" hm="true"/>
+          <view angle="135" row="3" x="-2" y="-3" hm="true"/>
+          <view angle="180" col="2" row="3" x="-2" y="-5" hm="true"/>
+          <view angle="225" col="3" row="3" x="-1" y="-9" hm="true"/>
+          <view angle="270" col="4" row="3" y="-8" hm="true"/>
+          <view angle="315" col="3" row="3" x="1" y="-9"/>
+        </layer>
+        <layer id="decal_05" texture="decal" y="22">
+          <view angle="0" col="2" row="4" x="2" y="-5"/>
+          <view angle="45" row="4" x="1" y="-3"/>
+          <view angle="90" col="1" row="4" x="1" y="-2" hm="true"/>
+          <view angle="135" row="4" x="-2" y="-3" hm="true"/>
+          <view angle="180" col="2" row="4" x="-2" y="-5" hm="true"/>
+          <view angle="225" col="3" row="4" x="-1" y="-9" hm="true"/>
+          <view angle="270" col="4" row="4" y="-8" hm="true"/>
+          <view angle="315" col="3" row="4" x="1" y="-9"/>
+        </layer>
+        <layer id="decal_06" texture="decal" y="22">
+          <view angle="0" col="2" row="5" x="2" y="-5"/>
+          <view angle="45" row="5" x="1" y="-3"/>
+          <view angle="90" col="1" row="5" x="1" y="-2" hm="true"/>
+          <view angle="135" row="5" x="-2" y="-3" hm="true"/>
+          <view angle="180" col="2" row="5" x="-2" y="-5" hm="true"/>
+          <view angle="225" col="3" row="5" x="-1" y="-9" hm="true"/>
+          <view angle="270" col="4" row="5" y="-8" hm="true"/>
+          <view angle="315" col="3" row="5" x="1" y="-9"/>
+        </layer>
+        <layer id="decal_07" texture="decal" y="22">
+          <view angle="0" col="2" row="6" x="2" y="-5"/>
+          <view angle="45" row="6" x="1" y="-3"/>
+          <view angle="90" col="1" row="6" x="1" y="-2" hm="true"/>
+          <view angle="135" row="6" x="-2" y="-3" hm="true"/>
+          <view angle="180" col="2" row="6" x="-2" y="-5" hm="true"/>
+          <view angle="225" col="3" row="6" x="-1" y="-9" hm="true"/>
+          <view angle="270" col="4" row="6" y="-8" hm="true"/>
+          <view angle="315" col="3" row="6" x="1" y="-9"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_04"/>
+        </frame>
+        <frame id="05">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_05"/>
+        </frame>
+        <frame id="06">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_06"/>
+        </frame>
+        <frame id="heart_single_01">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_07"/>
+        </frame>
+        <frame id="heart_single_02">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+        </frame>
+        <frame id="heat_01">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_07"/>
+          <layerref id="decal_01"/>
+        </frame>
+        <frame id="heat_02">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_07"/>
+          <layerref id="decal_02"/>
+        </frame>
+        <frame id="heat_03">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_07"/>
+          <layerref id="decal_03"/>
+        </frame>
+        <frame id="heat_04">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_07"/>
+          <layerref id="decal_04"/>
+        </frame>
+        <frame id="heat_05">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_07"/>
+          <layerref id="decal_05"/>
+        </frame>
+        <frame id="heat_06">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_07"/>
+          <layerref id="decal_06"/>
+        </frame>
+        <frame id="heat_01a">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_01"/>
+        </frame>
+        <frame id="heat_03a">
+          <layerref id="shadow"/>
+          <layerref id="HeadLayer"/>
+          <layerref id="decal_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="heat_01a"/>
+          <frameref id="heat_02"/>
+          <frameref id="heat_03a"/>
+          <frameref id="heat_04"/>
+          <frameref id="heat_05"/>
+          <frameref id="heat_06"/>
+          <frameref id="heat_01"/>
+          <frameref id="heat_02"/>
+          <frameref id="heat_03"/>
+          <frameref id="heat_04"/>
+          <frameref id="heat_05"/>
+          <frameref id="heat_06"/>
+          <frameref id="heat_01"/>
+          <frameref id="heat_02"/>
+          <frameref id="heat_03"/>
+          <frameref id="heat_04"/>
+          <frameref id="heat_05"/>
+          <frameref id="heat_06"/>
+          <frameref id="heat_01"/>
+          <frameref id="heat_02"/>
+          <frameref id="heat_03"/>
+          <frameref id="heat_04"/>
+          <frameref id="heat_05"/>
+          <frameref id="heat_06"/>
+          <frameref id="heat_01"/>
+          <frameref id="heat_02"/>
+          <frameref id="heat_03"/>
+          <frameref id="heat_04"/>
+          <frameref id="heat_05"/>
+          <frameref id="heat_06"/>
+          <frameref id="heart_single_01"/>
+          <frameref id="heart_single_02"/>
+          <frameref id="heart_single_01"/>
+          <frameref id="heart_single_02"/>
+          <frameref id="heart_single_01"/>
+          <frameref id="heart_single_02"/>
+          <frameref id="heart_single_01"/>
+          <frameref id="heart_single_02"/>
+          <frameref id="heart_single_01"/>
+          <frameref id="heart_single_02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="decal_01" texture="Light" y="22">
+          <view angle="0" col="2" x="1" y="-10"/>
+          <view angle="45" x="1" y="-10"/>
+          <view angle="90" col="1" x="2" y="-8" hm="true"/>
+          <view angle="135" x="-1" y="-10" hm="true"/>
+          <view angle="180" col="2" y="-10" hm="true"/>
+          <view angle="225" col="3" x="1" y="-11" hm="true"/>
+          <view angle="270" col="4" x="1" y="-11" hm="true"/>
+          <view angle="315" col="3" x="-1" y="-11"/>
+        </layer>
+        <layer id="decal_02" texture="Light" y="22">
+          <view angle="0" col="2" row="1" x="1" y="-10"/>
+          <view angle="45" row="1" x="1" y="-10"/>
+          <view angle="90" col="1" row="1" x="2" y="-8" hm="true"/>
+          <view angle="135" row="1" x="-1" y="-10" hm="true"/>
+          <view angle="180" col="2" row="1" y="-10" hm="true"/>
+          <view angle="225" col="3" row="1" x="1" y="-11" hm="true"/>
+          <view angle="270" col="4" row="1" x="1" y="-11" hm="true"/>
+          <view angle="315" col="3" row="1" x="-1" y="-11"/>
+        </layer>
+        <layer id="decal_03" texture="Light" y="22">
+          <view angle="0" col="2" row="2" x="1" y="-10"/>
+          <view angle="45" row="2" x="1" y="-10"/>
+          <view angle="90" col="1" row="2" x="2" y="-8" hm="true"/>
+          <view angle="135" row="2" x="-1" y="-10" hm="true"/>
+          <view angle="180" col="2" row="2" y="-10" hm="true"/>
+          <view angle="225" col="3" row="2" x="1" y="-11" hm="true"/>
+          <view angle="270" col="4" row="2" x="1" y="-11" hm="true"/>
+          <view angle="315" col="3" row="2" x="-1" y="-11"/>
+        </layer>
+        <layer id="decal_04" texture="Light" y="22">
+          <view angle="0" col="2" row="3" x="1" y="-10"/>
+          <view angle="45" row="3" x="1" y="-10"/>
+          <view angle="90" col="1" row="3" x="2" y="-8" hm="true"/>
+          <view angle="135" row="3" x="-1" y="-10" hm="true"/>
+          <view angle="180" col="2" row="3" y="-10" hm="true"/>
+          <view angle="225" col="3" row="3" x="1" y="-11" hm="true"/>
+          <view angle="270" col="4" row="3" x="1" y="-11" hm="true"/>
+          <view angle="315" col="3" row="3" x="-1" y="-11"/>
+        </layer>
+        <layer id="decal_05" texture="Light" y="22">
+          <view angle="0" col="2" row="4" x="1" y="-10"/>
+          <view angle="45" row="4" x="1" y="-10"/>
+          <view angle="90" col="1" row="4" x="2" y="-8" hm="true"/>
+          <view angle="135" row="4" x="-1" y="-10" hm="true"/>
+          <view angle="180" col="2" row="4" y="-10" hm="true"/>
+          <view angle="225" col="3" row="4" x="1" y="-11" hm="true"/>
+          <view angle="270" col="4" row="4" x="1" y="-11" hm="true"/>
+          <view angle="315" col="3" row="4" x="-1" y="-11"/>
+        </layer>
+        <layer id="decal_06" texture="Light" y="22">
+          <view angle="0" col="2" row="5" x="1" y="-10"/>
+          <view angle="45" row="5" x="1" y="-10"/>
+          <view angle="90" col="1" row="5" x="2" y="-8" hm="true"/>
+          <view angle="135" row="5" x="-1" y="-10" hm="true"/>
+          <view angle="180" col="2" row="5" y="-10" hm="true"/>
+          <view angle="225" col="3" row="5" x="1" y="-11" hm="true"/>
+          <view angle="270" col="4" row="5" x="1" y="-11" hm="true"/>
+          <view angle="315" col="3" row="5" x="-1" y="-11"/>
+        </layer>
+        <layer id="decal_07" texture="Light" y="22">
+          <view angle="0" col="2" row="6" x="1" y="-10"/>
+          <view angle="45" row="6" x="1" y="-10"/>
+          <view angle="90" col="1" row="6" x="2" y="-8" hm="true"/>
+          <view angle="135" row="6" x="-1" y="-10" hm="true"/>
+          <view angle="180" col="2" row="6" y="-10" hm="true"/>
+          <view angle="225" col="3" row="6" x="1" y="-11" hm="true"/>
+          <view angle="270" col="4" row="6" x="1" y="-11" hm="true"/>
+          <view angle="315" col="3" row="6" x="-1" y="-11"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="decal_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="decal_02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="decal_03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="decal_04"/>
+        </frame>
+        <frame id="05">
+          <layerref id="decal_05"/>
+        </frame>
+        <frame id="06">
+          <layerref id="decal_06"/>
+        </frame>
+        <frame id="heart_single_01">
+          <layerref id="decal_07"/>
+        </frame>
+        <frame id="heart_single_02">
+          <layerref id="decal_07" a="0"/>
+        </frame>
+        <frame id="heat_01">
+          <layerref id="decal_01"/>
+          <layerref id="decal_07"/>
+        </frame>
+        <frame id="heat_02">
+          <layerref id="decal_02"/>
+          <layerref id="decal_07"/>
+        </frame>
+        <frame id="heat_03">
+          <layerref id="decal_03"/>
+          <layerref id="decal_07"/>
+        </frame>
+        <frame id="heat_04">
+          <layerref id="decal_04"/>
+          <layerref id="decal_07"/>
+        </frame>
+        <frame id="heat_05">
+          <layerref id="decal_05"/>
+          <layerref id="decal_07"/>
+        </frame>
+        <frame id="heat_06">
+          <layerref id="decal_06"/>
+          <layerref id="decal_07"/>
+        </frame>
+        <frame id="heat_1a">
+          <layerref id="decal_01"/>
+        </frame>
+        <frame id="heat_3a">
+          <layerref id="decal_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="heat_1a"/>
+          <frameref id="heat_02"/>
+          <frameref id="heat_3a"/>
+          <frameref id="heat_04"/>
+          <frameref id="heat_05"/>
+          <frameref id="heat_06"/>
+          <frameref id="heat_01"/>
+          <frameref id="heat_02"/>
+          <frameref id="heat_03"/>
+          <frameref id="heat_04"/>
+          <frameref id="heat_05"/>
+          <frameref id="heat_06"/>
+          <frameref id="heat_01"/>
+          <frameref id="heat_02"/>
+          <frameref id="heat_03"/>
+          <frameref id="heat_04"/>
+          <frameref id="heat_05"/>
+          <frameref id="heat_06"/>
+          <frameref id="heat_01"/>
+          <frameref id="heat_02"/>
+          <frameref id="heat_03"/>
+          <frameref id="heat_04"/>
+          <frameref id="heat_05"/>
+          <frameref id="heat_06"/>
+          <frameref id="heat_01"/>
+          <frameref id="heat_02"/>
+          <frameref id="heat_03"/>
+          <frameref id="heat_04"/>
+          <frameref id="heat_05"/>
+          <frameref id="heat_06"/>
+          <frameref id="heart_single_01"/>
+          <frameref id="heart_single_02"/>
+          <frameref id="heart_single_01"/>
+          <frameref id="heart_single_02"/>
+          <frameref id="heart_single_01"/>
+          <frameref id="heart_single_02"/>
+          <frameref id="heart_single_01"/>
+          <frameref id="heart_single_02"/>
+          <frameref id="heart_single_01"/>
+          <frameref id="heart_single_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

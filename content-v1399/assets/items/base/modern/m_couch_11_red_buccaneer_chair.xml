@@ -1,0 +1,111 @@
+<item.ChairItem id="4384" name="Poltrona Rústica Nordic" desc="Uma poltrona rústica" tags="chair,seasonal" icon="items/base/modern/icon_m_couch_11_red_buccaneer_chair.png" price="65" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <seats>
+    <seat x="0.18" y="0.38">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.5,0,-0.49" max="0.3,0.63,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="arm" source="items/base/modern/m_couch_11_colourize_arm.png" cols="2" rows="2"/>
+    <texture id="seats" source="items/base/modern/m_couch_11_colourize.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-0.49,0,-0.49" max="0.3,0.63,0.49"/>
+      <layers>
+        <layer id="s01" texture="seats" align="middle">
+          <view angle="45" x="-1" y="-27" alpha="0"/>
+          <view angle="135" x="-3" y="-30" hm="true"/>
+          <view angle="225" col="1" y="-33" hm="true"/>
+          <view angle="315" col="2" x="1" y="-33"/>
+        </layer>
+        <layer id="seat_o" texture="seats" align="middle">
+          <view angle="45" x="-1" y="-27" alpha="0"/>
+          <view angle="135" x="-3" y="-30" hm="true"/>
+          <view angle="225" col="1" y="-33" hm="true"/>
+          <view angle="315" col="2" x="1" y="-33"/>
+        </layer>
+        <layer id="arm" texture="arm">
+          <view angle="45" x="-20" y="32"/>
+          <view angle="135" col="1" x="-47" y="3" hm="true"/>
+          <view angle="225" col="1" row="1" x="31" y="1"/>
+          <view angle="315" row="1" x="34" y="29" hm="true"/>
+        </layer>
+        <layer id="arm_o" texture="arm">
+          <view angle="45" x="-20" y="32"/>
+          <view angle="135" col="1" x="-47" y="3" hm="true"/>
+          <view angle="225" col="1" row="1" x="31" y="1"/>
+          <view angle="315" row="1" x="34" y="29" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="s01" color="0xded4cc"/>
+          <layerref id="seat_o" color="0x4b0040" a="0.95" blend="overlay"/>
+          <layerref id="arm" color="0xded4cc"/>
+          <layerref id="arm_o" color="0x4b0040" a="0.95" blend="overlay"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="LeftArm">
+      <box min="-0.5,0,-0.49" max="0.3,0.63,0.49"/>
+      <layers>
+        <layer id="s01" texture="seats" align="middle">
+          <view angle="45" x="2" y="-29"/>
+          <view angle="135" x="1" y="-29" alpha="0" hm="true"/>
+          <view angle="225" col="2" y="-33" hm="true"/>
+          <view angle="315" col="1" x="1" y="-34"/>
+        </layer>
+        <layer id="s01_o" texture="seats" align="middle">
+          <view angle="45" x="2" y="-29"/>
+          <view angle="135" x="1" y="-29" alpha="0" hm="true"/>
+          <view angle="225" col="2" y="-33" hm="true"/>
+          <view angle="315" col="1" x="1" y="-34"/>
+        </layer>
+        <layer id="arm" texture="arm">
+          <view angle="45" col="1" x="46" y="4"/>
+          <view angle="135" x="19" y="31" hm="true"/>
+          <view angle="225" row="1" x="-33" y="29"/>
+          <view angle="315" col="1" row="1" x="-30" hm="true"/>
+        </layer>
+        <layer id="arm_o" texture="arm">
+          <view angle="45" col="1" x="46" y="4"/>
+          <view angle="135" x="19" y="31" hm="true"/>
+          <view angle="225" row="1" x="-33" y="29"/>
+          <view angle="315" col="1" row="1" x="-30" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="s01" color="0xded4cc"/>
+          <layerref id="s01_o" color="0x4b0040" a="0.95" blend="overlay"/>
+          <layerref id="arm" color="0xded4cc"/>
+          <layerref id="arm_o" color="0x4b0040" a="0.95" blend="overlay"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

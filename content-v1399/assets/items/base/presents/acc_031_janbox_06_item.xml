@@ -1,0 +1,27 @@
+<item.SpriteItem name="Presente Aberto Surpresa Floco de Neve" desc="Uma caixa de presentes para decoração [6 de 25]" tags="rare,misc" icon="items/base/presents/acc_031_janbox_06_icon.png" price="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="7572">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.55,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/presents/acc_031_janbox_06_item.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node01">
+      <box min="-0.25,0,-0.25" max="0.25,0.55,0.25"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="16">
+          <view angle="45"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="3"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

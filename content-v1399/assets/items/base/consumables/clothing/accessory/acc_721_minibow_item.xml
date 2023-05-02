@@ -1,0 +1,34 @@
+<item.SpriteItem id="6433" name="Mini Laço de Cabelo Coast" desc="Um lindo e pequeno laço para o cabelo" tags="consumable,actionbar,wear,action_wearable_toggle,hat" icon="items/base/consumables/clothing/accessory/acc_721_minibow_icon.png" price="365" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.16" max="0.1,0.04,0.16"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="ears" source="items/base/consumables/clothing/accessory/acc_721_minibow_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.16" max="0.1,0.04,0.16"/>
+      <layers>
+        <layer id="ears" texture="ears">
+          <view angle="45" y="10"/>
+          <view angle="135" y="10" hm="true"/>
+          <view angle="225" col="1" y="10" hm="true"/>
+          <view angle="315" col="1" y="10"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,38 @@
+<f id="Top01_168_UKflag" parentId="Top01">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top01_168_TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_168_ukflag_torso_m.png" pri="1"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_168_TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_168_ukflag_torso_f.png" pri="1"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt">
+    <s id="Top01_168ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top01/top01_154_idle.png" pri="1"/>
+    <s id="Top01_168ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top01/top01_154_walk1.png" pri="1"/>
+    <s id="Top01_168ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top01/top01_154_walk2.png" pri="1"/>
+    <s id="Top01_168ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top01/top01_154_walk3.png" pri="1"/>
+    <s id="Top01_168ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top01/top01_154_sit.png" pri="1"/>
+    <c sId="Top01_168ArmIdleBase" c="19616" a="0.86" b="-3.4" ct="0.20" lId="Top01_168_Color" lw="N"/>
+    <c sId="Top01_168ArmWalk1Base" c="19616" a="0.86" b="-3.4" ct="0.20" lId="Top01_168_Color" lw="N"/>
+    <c sId="Top01_168ArmWalk2Base" c="19616" a="0.86" b="-3.4" ct="0.20" lId="Top01_168_Color" lw="N"/>
+    <c sId="Top01_168ArmWalk3Base" c="19616" a="0.86" b="-3.4" ct="0.20" lId="Top01_168_Color" lw="N"/>
+    <c sId="Top01_168ArmSitBase" c="19616" a="0.86" b="-3.4" ct="0.20" lId="Top01_168_Color" lw="N"/>
+    <s id="Top01_168ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top01/top01_154_throw.png" pri="1"/>
+    <s id="Top01_168ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top01/top01_154_raise.png" pri="1"/>
+    <c sId="Top01_168ArmThrowBase" c="19616" a="0.86" b="-3.4" ct="0.20" lId="Top01_168_Color" lw="N"/>
+    <c sId="Top01_168ArmRaiseBase" c="19616" a="0.86" b="-3.4" ct="0.20" lId="Top01_168_Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_168" icon="items/base/consumables/clothing/top01/top01_168_ukflag_icon_a.png" w="48" h="48"/>
+    <s id="IconTop01_168IconBase" cId="IconTop01_168" s="items/base/consumables/clothing/top01/top01_166_usaflag_icon_1.png" pri="1"/>
+    <c sId="IconTop01_168IconBase" c="19616" a="0.86" b="-3.4" ct="0.20" lId="Top01_168_Color" lw="N"/>
+    <s id="IconTop01_168IconDecal" cId="IconTop01_168" s="items/base/consumables/clothing/top01/top01_168_ukflag_icon_2.png" pri="1.1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_168_Color" name="Color" desc="Choose a color" sel="NavyBlue" seld="White">
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="19616" a="0.86" b="-3.4" ct="0.20" lId="Top01_168_Color"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

@@ -1,0 +1,66 @@
+<item.SpriteItem id="0" name="Pink Fairy Wings" desc="A pair of pink wings" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/consumables/back/con_bak_182_fwings_pink.png" cols="1" rows="6"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="skin" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="frame1" texture="base">
+          <view angle="0" row="4" x="3" y="60" hm="true"/>
+          <view angle="45" x="3" y="70"/>
+          <view angle="90" row="2" y="75"/>
+          <view angle="135" x="-3" y="70" hm="true"/>
+          <view angle="180" row="4" x="-3" y="60"/>
+          <view angle="225" x="-2" y="68"/>
+          <view angle="270" row="2" y="65"/>
+          <view angle="315" x="2" y="68" hm="true"/>
+        </layer>
+        <layer id="frame2" texture="base">
+          <view angle="0" row="5" x="3" y="60" hm="true"/>
+          <view angle="45" row="1" x="3" y="70"/>
+          <view angle="90" row="3" y="75"/>
+          <view angle="135" row="1" x="-3" y="70" hm="true"/>
+          <view angle="180" row="5" x="-3" y="60"/>
+          <view angle="225" row="1" x="-3" y="70"/>
+          <view angle="270" row="3" y="65"/>
+          <view angle="315" row="1" x="3" y="70" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="frame1"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="frame2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="10">
+          <frameref id="Frame_01">
+            <sample id="flap" loops="-1"/>
+          </frameref>
+          <frameref id="Frame_02"/>
+        </animation>
+        <animation id="Sit" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

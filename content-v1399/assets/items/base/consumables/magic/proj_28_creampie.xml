@@ -1,0 +1,44 @@
+<item.SpriteItem desc="Cream pie" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" entity="false" name="Cream pie projectile" tags="light">
+  <volume>
+    <box max="0.08,0.3,0.2" min="-0.08,-0.15,-0.2"/>
+  </volume>
+  <textures>
+    <texture cols="2" id="pie" rows="3" source="items/base/consumables/magic/proj_28_creampie.png"/>
+  </textures>
+  <sounds>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Pie">
+      <box max="0.08,0.3,0.2" min="-0.08,-0.15,-0.2"/>
+      <layers>
+        <layer id="pie" texture="pie">
+          <view angle="0" y="20"/>
+          <view angle="45" col="1" y="20"/>
+          <view angle="90" hm="true" row="1" y="20"/>
+          <view angle="135" col="1" hm="true" y="20"/>
+          <view angle="180" hm="true" y="20"/>
+          <view angle="225" col="1" row="1" y="20"/>
+          <view angle="270" row="2" y="20"/>
+          <view angle="315" col="1" hm="true" row="1" y="20"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="pie"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Idle">
+          <frameref id="Frame"/>
+        </animation>
+        <animation framerate="4" id="Projectile">
+          <frameref id="Frame">
+            <sample id="woosh"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

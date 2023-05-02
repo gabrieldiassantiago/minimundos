@@ -1,0 +1,75 @@
+<item.SpriteItem id="4677" name="Machado de Batalha Fantasia Play" desc="Uma machado de batalha para cortar e fatiar" tags="consumable,hand,usable,wear,stackable,actionbar,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_252_icon_battleaxe.png" price="960" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.37,0,-0.25" max="0.37,0.1,0.25"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_hold" script="scripts/item/action_wearable.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="select" script="scripts/item/select_holdable_container.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="fire+30"/>
+    <entry key="action_attributes_secondary" value="health+10"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/accessory/acc_252_item_weaponbase.png" cols="1" rows="1"/>
+    <texture id="Battleaxe" source="items/base/consumables/clothing/accessory/acc_252_item_battleaxe.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.37,0,-0.25" max="0.37,0.1,0.25"/>
+      <layers>
+        <layer id="Base" texture="Base">
+          <view angle="45" y="23"/>
+          <view angle="135" y="23" hm="true"/>
+          <view angle="225" y="23"/>
+          <view angle="315" y="23" hm="true"/>
+        </layer>
+        <layer id="Weapon" texture="Battleaxe">
+          <view angle="45" x="-1" y="-18"/>
+          <view angle="135" x="1" y="-18" hm="true"/>
+          <view angle="225" x="1" y="-18"/>
+          <view angle="315" x="-1" y="-18" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations>
+        <animation id="Open" framerate="2"/>
+        <animation id="Closed"/>
+      </animations>
+    </node>
+    <node id="Diffuse" s="1.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="1" y="-1"/>
+          <view angle="135" x="-1" y="-1"/>
+          <view angle="225" x="-1" y="-1"/>
+          <view angle="315" x="1" y="-1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

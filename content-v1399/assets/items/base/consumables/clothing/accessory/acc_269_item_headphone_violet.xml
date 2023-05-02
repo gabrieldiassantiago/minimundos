@@ -1,0 +1,42 @@
+<item.SpriteItem id="4742" name="Fones de Ouvido Violeta Sonix" desc="Mostre seu estilo com os fones de ouvido do momento" tags="consumable,clothing,actionbar,wear,action_wearable_toggle,ear,slave_catalog_colorize,unsearchable" icon="items/base/consumables/clothing/accessory/acc_269_icon_headphone_violet.png" price="420" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.15,0.24"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/headphones.xml"/>
+  </data>
+  <textures>
+    <texture id="ears" source="items/base/consumables/clothing/accessory/acc_269_item_headphone_violet.png" cols="1" rows="1"/>
+    <texture id="head" source="items/base/consumables/clothing/accessory/acc_30_fedora_stand.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,0.15,0.24"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" x="1" y="20"/>
+          <view angle="315" col="1" x="-3" y="20" hm="true"/>
+        </layer>
+        <layer id="ears" texture="ears">
+          <view angle="45" y="-17"/>
+          <view angle="135" y="-17" hm="true"/>
+          <view angle="225" x="1" y="-17"/>
+          <view angle="315" x="-3" y="-17" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

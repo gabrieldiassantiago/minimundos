@@ -1,0 +1,69 @@
+<item.ChairItem id="6849" name="Esteira de Piquenique Verão Deluxe" desc="Uma divertida esteira de praia" tags="rare,chair,misc" icon="items/base/modern/icon_m_blanket_01_deluxepicnic.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" chairType="lilo">
+  <seats>
+    <seat x="-1.1">
+      <ap x="-2" z="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap z="-1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1"/>
+      <ap x="1" z="1"/>
+      <ap x="1" z="2"/>
+      <ap z="2"/>
+      <ap x="-1" z="2"/>
+      <ap x="-2" z="2"/>
+      <ap x="-2" z="1"/>
+      <ap x="-2"/>
+    </seat>
+    <seat x="-1.1" z="1">
+      <ap x="-2" z="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap z="-1"/>
+      <ap z="-1"/>
+      <ap x="1"/>
+      <ap x="1" z="1"/>
+      <ap x="1" z="2"/>
+      <ap z="2"/>
+      <ap x="-1" z="2"/>
+      <ap x="-2" z="2"/>
+      <ap x="-2" z="1"/>
+      <ap x="-2"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-1.49,-0.001,-0.49" max="0.49,0,1.49"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="activate" script="scripts/item/activate_chair.as"/>
+    <event id="deactivate" script="scripts/item/deactivate_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/modern/m_blanket_01_deluxepicnic.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind" layer="surface">
+      <box min="-1.49,-0.001,-0.49" max="0.49,0,1.49"/>
+      <layers>
+        <layer id="base" texture="base" align="middle">
+          <view angle="45" y="-32"/>
+          <view angle="135" x="64" hm="true"/>
+          <view angle="225" col="1" y="31"/>
+          <view angle="315" col="1" x="-66" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

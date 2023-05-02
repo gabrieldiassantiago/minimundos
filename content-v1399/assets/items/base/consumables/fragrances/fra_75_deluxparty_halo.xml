@@ -1,0 +1,203 @@
+<item.SpriteItem id="0" name="Halo" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+  </volume>
+  <textures>
+    <texture id="halo" source="items/base/consumables/fragrances/fra_75_deluxparty_halo.png" cols="5" rows="2"/>
+    <texture id="Light" source="items/base/consumables/magic/halo_glow_lighting.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="Halo_01" texture="halo" y="30">
+          <view y="15"/>
+        </layer>
+        <layer id="Halo_02" texture="halo" y="30">
+          <view col="1" y="15"/>
+        </layer>
+        <layer id="Halo_03" texture="halo" y="30">
+          <view col="2" y="15"/>
+        </layer>
+        <layer id="Halo_04" texture="halo" y="30">
+          <view col="3" y="15"/>
+        </layer>
+        <layer id="Halo_05" texture="halo" y="30">
+          <view col="4" y="15"/>
+        </layer>
+        <layer id="Halo_06" texture="halo" y="30">
+          <view row="1" y="15"/>
+        </layer>
+        <layer id="Halo_07" texture="halo" y="30">
+          <view col="1" row="1" y="15"/>
+        </layer>
+        <layer id="Halo_08" texture="halo" y="30">
+          <view col="2" row="1" y="15"/>
+        </layer>
+        <layer id="Halo_09" texture="halo" y="30">
+          <view col="3" row="1" y="15"/>
+        </layer>
+        <layer id="Halo_10" texture="halo" y="30">
+          <view col="4" row="1" y="15"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In 01">
+          <layerref id="Halo_01" a="0.1" blend="screen"/>
+        </frame>
+        <frame id="In 02">
+          <layerref id="Halo_02" a="0.2" blend="screen"/>
+        </frame>
+        <frame id="In 03">
+          <layerref id="Halo_03" a="0.3" blend="screen"/>
+        </frame>
+        <frame id="In 04">
+          <layerref id="Halo_04" a="0.4" blend="screen"/>
+        </frame>
+        <frame id="In 05">
+          <layerref id="Halo_05" a="0.5" blend="screen"/>
+        </frame>
+        <frame id="In 06">
+          <layerref id="Halo_06" a="0.6" blend="screen"/>
+        </frame>
+        <frame id="In 07">
+          <layerref id="Halo_07" a="0.7" blend="screen"/>
+        </frame>
+        <frame id="In 08">
+          <layerref id="Halo_08" a="0.8" blend="screen"/>
+        </frame>
+        <frame id="In 09">
+          <layerref id="Halo_09" a="0.9" blend="screen"/>
+        </frame>
+        <frame id="In 10">
+          <layerref id="Halo_10" blend="screen"/>
+        </frame>
+        <frame id="Loop 01">
+          <layerref id="Halo_01" blend="overlay"/>
+        </frame>
+        <frame id="Loop 02">
+          <layerref id="Halo_02" blend="overlay"/>
+        </frame>
+        <frame id="Loop 03">
+          <layerref id="Halo_03" blend="overlay"/>
+        </frame>
+        <frame id="Loop 04">
+          <layerref id="Halo_04" blend="overlay"/>
+        </frame>
+        <frame id="Loop 05">
+          <layerref id="Halo_05" blend="overlay"/>
+        </frame>
+        <frame id="Loop 06">
+          <layerref id="Halo_06" blend="overlay"/>
+        </frame>
+        <frame id="Loop 07">
+          <layerref id="Halo_07" blend="overlay"/>
+        </frame>
+        <frame id="Loop 08">
+          <layerref id="Halo_08" blend="overlay"/>
+        </frame>
+        <frame id="Loop 09">
+          <layerref id="Halo_09" blend="overlay"/>
+        </frame>
+        <frame id="Loop 10">
+          <layerref id="Halo_10" blend="overlay"/>
+        </frame>
+        <frame id="Out 01">
+          <layerref id="Halo_01" blend="screen"/>
+        </frame>
+        <frame id="Out 02">
+          <layerref id="Halo_02" a="0.9" blend="screen"/>
+        </frame>
+        <frame id="Out 03">
+          <layerref id="Halo_01" a="0.8" blend="screen"/>
+        </frame>
+        <frame id="Out 04">
+          <layerref id="Halo_01" a="0.7" blend="screen"/>
+        </frame>
+        <frame id="Out 05">
+          <layerref id="Halo_01" a="0.6" blend="screen"/>
+        </frame>
+        <frame id="Out 06">
+          <layerref id="Halo_01" a="0.5" blend="screen"/>
+        </frame>
+        <frame id="Out 07">
+          <layerref id="Halo_01" a="0.4" blend="screen"/>
+        </frame>
+        <frame id="Out 08">
+          <layerref id="Halo_01" a="0.3" blend="screen"/>
+        </frame>
+        <frame id="Out 09">
+          <layerref id="Halo_01" a="0.2" blend="screen"/>
+        </frame>
+        <frame id="Out 10">
+          <layerref id="Halo_01" a="0.1" blend="screen"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="8" loop="false">
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+          <frameref id="In 04"/>
+          <frameref id="In 05"/>
+          <frameref id="In 06"/>
+          <frameref id="In 07"/>
+          <frameref id="In 08"/>
+          <frameref id="In 09"/>
+          <frameref id="In 10"/>
+        </animation>
+        <animation id="Loop" framerate="8">
+          <frameref id="Loop 01"/>
+          <frameref id="Loop 02"/>
+          <frameref id="Loop 03"/>
+          <frameref id="Loop 04"/>
+          <frameref id="Loop 05"/>
+          <frameref id="Loop 06"/>
+          <frameref id="Loop 07"/>
+          <frameref id="Loop 08"/>
+          <frameref id="Loop 09"/>
+          <frameref id="Loop 10"/>
+        </animation>
+        <animation id="Out" framerate="8" loop="false">
+          <frameref id="Out 01"/>
+          <frameref id="Out 02"/>
+          <frameref id="Out 03"/>
+          <frameref id="Out 04"/>
+          <frameref id="Out 05"/>
+          <frameref id="Out 06"/>
+          <frameref id="Out 07"/>
+          <frameref id="Out 08"/>
+          <frameref id="Out 09"/>
+          <frameref id="Out 10"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xecc9f7"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

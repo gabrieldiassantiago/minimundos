@@ -1,0 +1,73 @@
+<item.WidgetItem desc="Um mural para exibir suas mensagens do Flickr." dropTargetClamp="none" dropTargetList="wall,avatar" dropTargetType="none" gridActive="false" icon="items/base/modern/icon_m_mural_frame.png" id="416" name="Mural" tags="wall,widget,user_content,allow_excess" widget="widgets/widget_flickr.swf" price="275" tokens="2750" minLevel="1" minLevelType="1" minCPLevel="1">
+  <volume>
+    <box max="0.001,1.57,2.11" min="0,-1.56,-2.11"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+  </events>
+  <actions>
+    <action event="widget_action(FIRST)" id="First" trigger="false"/>
+    <action event="widget_action(LAST)" id="Last" trigger="false"/>
+    <action event="widget_action(NEXT)" id="Next" trigger="false"/>
+    <action event="widget_action(PREVIOUS)" id="Previous" trigger="false"/>
+    <action event="widget_action(SHOWIMAGE)" id="Show Specific Image" trigger="false">
+      <params>
+        <param id="Image Title" label="Enter image title" type="string"/>
+      </params>
+    </action>
+    <action id="Image Change" state="false">
+      <eval>
+        <func id="Image Title" input="title" maxChars="60" partialMatch="true" type="relational"/>
+      </eval>
+    </action>
+    <action id="Enlarge Image" state="false">
+      <eval>
+        <func id="Image Title" input="title" maxChars="60" partialMatch="true" type="relational"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="frame" value="wooden"/>
+    <entry key="aspect" value="mural"/>
+    <entry key="renderWidth" value="640"/>
+    <entry key="renderHeight" value="480"/>
+    <entry key="scale" value="0.7"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate accessibleRange="2" position="infront" sitRange="4.00" standRange="3.00" targetRange="1.00"/>
+  <textures>
+    <texture cols="1" id="Frame" rows="1" source="items/base/modern/m_mural_frame.png"/>
+    <texture cols="1" id="Back" rows="1" source="items/base/modern/m_mural_back.png"/>
+  </textures>
+  <nodes>
+    <node id="Mural">
+      <box max="0.001,1.57,2.11" min="0,-1.56,-2.11"/>
+      <layers>
+        <layer align="middle" id="Back" texture="Back">
+          <view angle="45" x="-1"/>
+          <view angle="135" hm="true"/>
+          <view alpha="0" angle="225"/>
+          <view alpha="0" angle="315"/>
+        </layer>
+        <layer h="3.1" id="WidgetLayer" texture="Texture" type="panel" w="4.16"/>
+        <layer align="middle" id="frame" texture="Frame">
+          <view angle="45" x="-1"/>
+          <view angle="135" hm="true"/>
+          <view alpha="0" angle="225"/>
+          <view alpha="0" angle="315"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

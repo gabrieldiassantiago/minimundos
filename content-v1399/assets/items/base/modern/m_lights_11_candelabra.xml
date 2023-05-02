@@ -1,0 +1,130 @@
+<item.SpriteItem id="2571" name="Luminária de Prata de Parede" desc="Rara e elegante, com detalhes em ouro." tags="rare,light,wall" icon="items/base/modern/icon_m_lights_11_candelabra.png" minLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" minCPLevel="1" price="750">
+  <volume>
+    <box min="0,-0.3815,-0.366" max="0.52,0.6,0.366"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="flares" source="items/base/modern/m_lights_10_chandelier_on.png" cols="1" rows="1"/>
+    <texture id="off" source="items/base/modern/m_lights_11_candelabra.png" cols="2" rows="1"/>
+    <texture id="on" source="items/base/modern/m_lights_11_candelabra.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Torch">
+      <box min="0,-0.3815,-0.366" max="0.52,0.6,0.366"/>
+      <layers>
+        <layer id="On" texture="on">
+          <view angle="45" col="1" x="16" y="48"/>
+          <view angle="135" col="1" x="-16" y="48" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Flare01" texture="flares">
+          <view angle="45" x="29" y="54"/>
+          <view angle="135" x="-22" y="21"/>
+          <view angle="225" y="-91" alpha="0"/>
+          <view angle="315" y="-91" alpha="0"/>
+        </layer>
+        <layer id="Flare02" texture="flares">
+          <view angle="45" x="-4" y="41"/>
+          <view angle="135" x="13" y="59"/>
+          <view angle="225" col="1" y="-91" alpha="0"/>
+          <view angle="315" col="1" y="-91" alpha="0"/>
+        </layer>
+        <layer id="Flare03" texture="flares">
+          <view angle="45" x="40" y="28"/>
+          <view angle="135" x="-38" y="29"/>
+          <view angle="225" row="1" y="-91" alpha="0"/>
+          <view angle="315" row="1" y="-91" alpha="0"/>
+        </layer>
+        <layer id="Flare04" texture="flares">
+          <view angle="45" x="-12" y="59"/>
+          <view angle="135" x="-28" y="54"/>
+          <view angle="225" col="1" row="1" y="-91" alpha="0"/>
+          <view angle="315" col="1" row="1" y="-91" alpha="0"/>
+        </layer>
+        <layer id="off" texture="off">
+          <view angle="45" x="17" y="48"/>
+          <view angle="135" x="-17" y="48" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="On"/>
+          <layerref id="Flare01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="On"/>
+          <layerref id="Flare02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="On"/>
+          <layerref id="Flare03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="On"/>
+          <layerref id="Flare04"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="off"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Frame05"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.55" y="0.8" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-4" y="5"/>
+          <view angle="135" x="3" y="2"/>
+          <view angle="225" x="2" y="5"/>
+          <view angle="315" x="-5" y="5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xf0ed9f"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

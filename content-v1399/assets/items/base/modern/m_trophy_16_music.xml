@@ -1,0 +1,52 @@
+<item.SpriteItem id="6624" name="Prêmio da Música de Ouro" desc="Um prêmio de excelência no MiniMundos" tags="rare,wear,usable,action_holdable_toggle,actionbar,hand,misc" icon="items/base/modern/icon_m_trophy_16_music.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.9,0.2"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="trophy" source="items/base/modern/m_trophy_16_music.png" cols="4" rows="2"/>
+    <texture id="light_01" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="trophy">
+      <box min="-0.2,0,-0.2" max="0.2,0.9,0.2"/>
+      <layers>
+        <layer id="trophy" texture="trophy">
+          <view angle="45" y="7"/>
+          <view angle="135" col="2" y="7"/>
+          <view angle="225" row="1" y="7"/>
+          <view angle="315" col="2" row="1" y="7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="trophy"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="-0.01" s="2.1" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light_01" align="middle" y="-1">
+          <view x="1" y="-14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xf8f7d5"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

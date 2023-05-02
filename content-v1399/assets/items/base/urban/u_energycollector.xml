@@ -1,0 +1,136 @@
+<item.WidgetItem id="5712" name="Human Power Collector" desc="Nom Nom Delicious Energy" tags="admin,misc" icon="items/base/urban/icon_u_energycollector.png" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_itemcrafter.swf">
+  <volume>
+    <box min="-1.49,0,-1.49" max="1.49,2.5,1.49"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <navigate usableRange="-1.00"/>
+  <textures>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Lightning" source="items/base/lab/l_combobulator_lightning.png" cols="2" rows="1"/>
+    <texture id="machine" source="items/base/urban/u_energycollector.png" cols="1" rows="1"/>
+    <texture id="Glow" source="items/base/urban/u_energycollector_colors.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Base" depthBias="1">
+      <box min="-1.49,0,-1.49" max="1.49,2.5,1.49"/>
+      <layers>
+        <layer id="Lightning01" texture="Lightning" align="middle" y="-196">
+          <view angle="45" x="34"/>
+          <view angle="135" x="-35" hm="true"/>
+          <view angle="225" x="36"/>
+          <view angle="315" x="-35" hm="true"/>
+        </layer>
+        <layer id="Lightning02" texture="Lightning" align="middle" y="-196">
+          <view angle="45" col="1" x="5"/>
+          <view angle="135" col="1" x="-6" hm="true"/>
+          <view angle="225" col="1" x="6"/>
+          <view angle="315" col="1" x="-5" hm="true"/>
+        </layer>
+        <layer id="base" texture="machine">
+          <view angle="45" y="75"/>
+          <view angle="135" y="75" hm="true"/>
+          <view angle="225" y="75"/>
+          <view angle="315" y="75" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Glow">
+          <view angle="45" y="75"/>
+          <view angle="135" y="75" hm="true"/>
+          <view angle="225" y="75"/>
+          <view angle="315" y="75" hm="true"/>
+        </layer>
+        <layer id="Lightning03" texture="Lightning" align="middle" y="-196">
+          <view angle="45" col="1" x="34" hm="true"/>
+          <view angle="135" col="1" x="-35"/>
+          <view angle="225" col="1" x="36" hm="true"/>
+          <view angle="315" col="1" x="-35"/>
+        </layer>
+        <layer id="Lightning04" texture="Lightning" align="middle" y="-196">
+          <view angle="45" x="5" hm="true"/>
+          <view angle="135" x="-6"/>
+          <view angle="225" x="6" hm="true"/>
+          <view angle="315" x="-5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="base"/>
+          <layerref id="Lightning01" y="-50"/>
+          <layerref id="Layer01" blend="overlay"/>
+        </frame>
+        <frame id="02">
+          <layerref id="base"/>
+          <layerref id="Lightning03" y="-50"/>
+          <layerref id="Layer01" blend="overlay"/>
+        </frame>
+        <frame id="03">
+          <layerref id="base"/>
+          <layerref id="Lightning02" y="-50"/>
+          <layerref id="Layer01" blend="overlay"/>
+        </frame>
+        <frame id="04">
+          <layerref id="base"/>
+          <layerref id="Lightning04" y="-50"/>
+          <layerref id="Layer01" blend="overlay"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="6">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse02" y="1" s="10" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="diffuse" texture="Intense" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="diffuse" color="0x75e8e9" a="0.65"/>
+        </frame>
+        <frame id="off01">
+          <layerref id="diffuse" color="0x75e8e9" a="0.45"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="off"/>
+          <frameref id="off01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Intense" texture="Glow" align="middle">
+          <view angle="45" x="-4" y="-20"/>
+          <view angle="135" y="-20" hm="true"/>
+          <view angle="225" y="-20"/>
+          <view angle="315" y="-20" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="Intense" blend="overlay"/>
+        </frame>
+        <frame id="Idle01">
+          <layerref id="Intense" a="0.9" blend="overlay"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle"/>
+          <frameref id="Idle"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

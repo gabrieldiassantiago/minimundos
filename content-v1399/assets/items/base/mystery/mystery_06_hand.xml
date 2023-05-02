@@ -1,0 +1,38 @@
+<item.SpriteItem id="0" name="Fragrance" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,-0.25,-0.1" max="0.1,0.25,0.1"/>
+  </volume>
+  <textures>
+    <texture id="texture" source="items/base/mystery/mystery_06_item.png" cols="1" rows="1"/>
+    <texture id="spray" source="items/base/consumables/fragrances/fra_00_generic_hand_spray.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,-0.25,-0.1" max="0.1,0.25,0.1"/>
+      <layers>
+        <layer id="texture" texture="texture" y="16">
+          <view angle="0" hm="true"/>
+          <view angle="45"/>
+          <view angle="90" hm="true"/>
+          <view angle="135"/>
+          <view angle="180" hm="true"/>
+          <view angle="225"/>
+          <view angle="270" hm="true"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="spray" texture="spray" y="-20">
+          <view angle="0" col="2" x="-10" y="1"/>
+          <view angle="45" x="-10" y="-3"/>
+          <view angle="90" col="1" y="-5" hm="true"/>
+          <view angle="135" x="10" y="-4" hm="true"/>
+          <view angle="180" col="2" x="9" y="1" hm="true"/>
+          <view angle="225" x="10" y="11" hm="true" vm="true"/>
+          <view angle="270" col="1" y="12" vm="true"/>
+          <view angle="315" x="-9" y="11" vm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

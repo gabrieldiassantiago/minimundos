@@ -1,0 +1,50 @@
+<f id="Bot03_64DropCrotch" parentId="Bot03">
+  <g id="Floral" name="Base" icon="$bm/iconm_legs_shorts.png">
+    <s id="Drop_64_Idle" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_64_idle.png" pri="3"/>
+    <s id="Drop_64_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_64_walk1.png" pri="3"/>
+    <s id="Drop_64_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_64_walk2.png" pri="3"/>
+    <s id="Drop_64_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_64_walk3.png" pri="3"/>
+    <s id="Drop_64_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_64_walk4.png" pri="3"/>
+    <s id="Drop_64_Sit" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_64_sit.png" pri="3"/>
+    <c sId="Drop_64_Idle" c="9449655" a="1.00" b="33.7" ct="0.76" lId="Bot03_64Color" lw="N"/>
+    <c sId="Drop_64_Walk1" c="9449655" a="1.00" b="33.7" ct="0.76" lId="Bot03_64Color" lw="N"/>
+    <c sId="Drop_64_Walk2" c="9449655" a="1.00" b="33.7" ct="0.76" lId="Bot03_64Color" lw="N"/>
+    <c sId="Drop_64_Walk3" c="9449655" a="1.00" b="33.7" ct="0.76" lId="Bot03_64Color" lw="N"/>
+    <c sId="Drop_64_Walk4" c="9449655" a="1.00" b="33.7" ct="0.76" lId="Bot03_64Color" lw="N"/>
+    <c sId="Drop_64_Sit" c="9449655" a="1.00" b="33.7" ct="0.76" lId="Bot03_64Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop03_64" icon="items/base/consumables/clothing/bot03/bot03_64_icon_dropcrotch_a.png" w="48" h="48"/>
+    <s id="IconTop03_64Base" cId="IconTop03_64" s="items/base/consumables/clothing/bot03/bot03_64_icon_dropcrotch_1.png"/>
+    <c sId="IconTop03_64Base" c="9449655" a="1.00" b="33.7" ct="0.76" lId="Bot03_64Color" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot03_64Color" name="Color" desc="Choose a color" sel="Purple" seld="Purple">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.88" b="70.9" ct="0.76" lId="Bot03_64Color"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="0.99" b="61.6" ct="0.84" lId="Bot03_64Color"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="1.00" b="30.9" ct="0.39" lId="Bot03_64Color"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16231623" a="1.00" b="38.5" ct="0.43" lId="Bot03_64Color"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="1.00" b="45.9" ct="0.36" lId="Bot03_64Color"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="49.5" ct="0.68" lId="Bot03_64Color"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="51.1" ct="0.45" lId="Bot03_64Color"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.94" b="49.0" ct="0.29" lId="Bot03_64Color"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="35.3" ct="0.44" lId="Bot03_64Color"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="61.7" ct="1.53" lId="Bot03_64Color"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.65" b="37.4" ct="0.71" lId="Bot03_64Color"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="38.3" ct="1.06" lId="Bot03_64Color"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="7774670" a="1.00" b="47.9" ct="0.91" lId="Bot03_64Color"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="1.00" b="38.3" ct="0.97" lId="Bot03_64Color"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="2858731" a="1.00" b="-4.8" ct="0.59" lId="Bot03_64Color"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9449655" a="1.00" b="33.7" ct="0.76" lId="Bot03_64Color"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="28.1" ct="0.63" lId="Bot03_64Color"/>
+      <c id="Olive" icon="$bu/icon_olive.png" c="5195281" a="0.99" b="68.6" ct="2.00" lId="Bot03_64Color"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.99" b="69.0" ct="1.70" lId="Bot03_64Color"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.95" b="56.1" ct="1.24" lId="Bot03_64Color"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="1.00" b="49.1" ct="1.28" lId="Bot03_64Color"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot03_64Color"/>
+    </wizbox>
+  </g>
+  <ds id="JSBottom"/>
+</f>

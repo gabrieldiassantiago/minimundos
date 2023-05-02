@@ -1,0 +1,133 @@
+<item.ChairItem id="2709" name="Mastro do Navio Pirata" desc="Um mastro com bandeira pirata, pode sentar no topo." tags="chair" icon="items/base/gothic/icon_g_crowsnest.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="310">
+  <seats>
+    <seat y="3.55">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.4615,0,-0.4" max="0.3846,0.72,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="pole" source="items/base/gothic/g_crowsnest_pole.png" cols="1" rows="1"/>
+    <texture id="nest" source="items/base/gothic/g_crowsnest_nest.png" cols="1" rows="1"/>
+    <texture id="cage" source="items/base/gothic/g_crowsnest_nest_top.png" cols="2" rows="1"/>
+    <texture id="flag" source="items/base/gothic/g_crowsnest_flag.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-0.4615,0,-0.4" max="0.3846,0.72,0.4"/>
+      <layers>
+        <layer id="pole" texture="pole" align="middle">
+          <view angle="45" y="-139" alpha="0"/>
+          <view angle="135" y="-139" hm="true"/>
+          <view angle="225" y="-139"/>
+          <view angle="315" y="-139" alpha="0" hm="true"/>
+        </layer>
+        <layer id="cage" texture="cage" align="middle">
+          <view angle="45" x="1" y="-300"/>
+          <view angle="135" x="2" y="-300" alpha="0" hm="true"/>
+          <view angle="225" x="3" y="-21" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-4" y="-303"/>
+        </layer>
+        <layer id="top" texture="nest" align="middle">
+          <view angle="45" x="1" y="-355" alpha="0"/>
+          <view angle="135" x="-1" y="-355" hm="true"/>
+          <view angle="225" x="1" y="-355"/>
+          <view angle="315" x="-1" y="-355" alpha="0" hm="true"/>
+        </layer>
+        <layer id="flag01" texture="flag">
+          <view angle="45" x="44" y="-356"/>
+          <view angle="135" x="-43" y="-356" hm="true"/>
+          <view angle="225" x="-44" y="-389"/>
+          <view angle="315" x="44" y="-390" hm="true"/>
+        </layer>
+        <layer id="flag02" texture="flag">
+          <view angle="45" col="1" x="45" y="-356"/>
+          <view angle="135" col="1" x="-44" y="-356" hm="true"/>
+          <view angle="225" col="1" x="-43" y="-389"/>
+          <view angle="315" col="1" x="43" y="-390" hm="true"/>
+        </layer>
+        <layer id="flag03" texture="flag">
+          <view angle="45" col="2" x="46" y="-356"/>
+          <view angle="135" col="2" x="-45" y="-356" hm="true"/>
+          <view angle="225" col="2" x="-42" y="-389"/>
+          <view angle="315" col="2" x="42" y="-390" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="pole"/>
+          <layerref id="top"/>
+          <layerref id="cage"/>
+          <layerref id="flag01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="pole"/>
+          <layerref id="top"/>
+          <layerref id="cage"/>
+          <layerref id="flag02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="pole"/>
+          <layerref id="top"/>
+          <layerref id="cage"/>
+          <layerref id="flag03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="01"/>
+          <frameref id="03"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="LeftArm">
+      <box min="-0.4615,0,-0.4" max="0.3846,0.72,0.4"/>
+      <layers>
+        <layer id="pole" texture="pole" align="middle">
+          <view angle="45" y="-139"/>
+          <view angle="135" y="-139" alpha="0" hm="true"/>
+          <view angle="225" y="-139" alpha="0"/>
+          <view angle="315" y="-139" hm="true"/>
+        </layer>
+        <layer id="top" texture="nest" align="middle">
+          <view angle="45" x="1" y="-355"/>
+          <view angle="135" x="-1" y="-355" alpha="0" hm="true"/>
+          <view angle="225" x="1" y="-355" alpha="0"/>
+          <view angle="315" x="-1" y="-355" hm="true"/>
+        </layer>
+        <layer id="cage" texture="cage" align="middle">
+          <view angle="45" x="1" y="-297" alpha="0"/>
+          <view angle="135" x="-1" y="-300" hm="true"/>
+          <view angle="225" col="1" x="3" y="-303" hm="true"/>
+          <view angle="315" x="1" y="-297" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

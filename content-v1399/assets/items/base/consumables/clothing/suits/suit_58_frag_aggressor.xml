@@ -1,0 +1,253 @@
+<f id="AggressorSuit" parentId="Suits">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="AggressorTorsoBaseM" cId="Torso" s="items/base/consumables/clothing/suits/suit_58_warrior_torso_m.png" pri="1"/>
+      <c sId="AggressorTorsoBaseM" c="5395026" a="0.81" b="1.7" ct="0.47" lId="Aggressor_Color1" lw="N"/>
+      <s id="AggressorTorsoDecalM" cId="Torso" s="items/base/consumables/clothing/suits/suit_58_warrior_torso_wrap_m.png" pri="1.2"/>
+      <c sId="AggressorTorsoDecalM" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+      <s id="AggressorTorsoDecal2M" cId="Torso" s="items/base/consumables/clothing/suits/suit_58_warrior_torso_belt_m.png" pri="1.2"/>
+      <c sId="AggressorTorsoDecal2M" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+      <s id="AggressorTorsoBuckleM" cId="Torso" s="items/base/consumables/clothing/suits/suit_58_warrior_torso_buckle_m.png" pri="1.3"/>
+    </g>
+    <g id="Female">
+      <s id="AggressorTorsoBaseF" cId="Torso" s="items/base/consumables/clothing/suits/suit_58_warrior_torso_f.png" pri="1"/>
+      <c sId="AggressorTorsoBaseF" c="5395026" a="0.81" b="1.7" ct="0.47" lId="Aggressor_Color1" lw="N"/>
+      <s id="AggressorTorsoDecalF" cId="Torso" s="items/base/consumables/clothing/suits/suit_58_warrior_torso_wrap_f.png" pri="1.2"/>
+      <c sId="AggressorTorsoDecalF" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+      <s id="AggressorTorsoDecal2F" cId="Torso" s="items/base/consumables/clothing/suits/suit_58_warrior_torso_belt_f.png" pri="1.2"/>
+      <c sId="AggressorTorsoDecal2F" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+      <s id="AggressorTorsoBuckleF" cId="Torso" s="items/base/consumables/clothing/suits/suit_58_warrior_torso_buckle_f.png" pri="1.3"/>
+    </g>
+  </b>
+  <g id="BellHop" name="Arms">
+    <s id="ArmIdleBase_Aggressor" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_idle_wraps.png" pri="2.1"/>
+    <s id="ArmWalk1Base_Aggressor" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_walk1_wraps.png" pri="2"/>
+    <s id="ArmWalk2Base_Aggressor" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_walk2_wraps.png" pri="2.1"/>
+    <s id="ArmWalk3Base_Aggressor" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_walk3_wraps.png" pri="2.1"/>
+    <s id="ArmSitBase_Aggressor" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_sit_wraps.png" pri="2.1"/>
+    <s id="ArmThrowBase_Aggressor" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_throw_wraps.png" pri="2.1"/>
+    <s id="ArmRaiseBase_Aggressor" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_raise_wraps.png" pri="2.1"/>
+    <c sId="ArmIdleBase_Aggressor" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="ArmWalk1Base_Aggressor" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="ArmWalk2Base_Aggressor" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="ArmWalk3Base_Aggressor" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="ArmSitBase_Aggressor" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="ArmThrowBase_Aggressor" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="ArmRaiseBase_Aggressor" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <s id="Aggressor_ArmIdle_Steel" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_idle_steel.png" pri="2.1"/>
+    <s id="Aggressor_ArmWalk1_Steel" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_walk1_steel.png" pri="2.1"/>
+    <s id="Aggressor_ArmWalk2_Steel" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_walk2_steel.png" pri="2.1"/>
+    <s id="Aggressor_ArmWalk3_Steel" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_walk3_steel.png" pri="2.1"/>
+    <s id="Aggressor_ArmSit_Steel" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_sit_steel.png" pri="2.1"/>
+    <s id="Aggressor_ArmThrow_Steel" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_throw_steel.png" pri="2.1"/>
+    <s id="Aggressor_ArmRaise_Steel" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_raise_steel.png" pri="2.1"/>
+    <s id="ArmIdleDecal_Aggressor" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_idle_decal.png" pri="2"/>
+    <s id="ArmWalk1Decal_Aggressor" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_walk1_decal.png" pri="2"/>
+    <s id="ArmWalk2Decal_Aggressor" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_walk2_decal.png" pri="2.1"/>
+    <s id="ArmWalk3Decal_Aggressor" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_walk3_decal.png" pri="2.1"/>
+    <s id="ArmSitDecal_Aggressor" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_sit_decal.png" pri="2.1"/>
+    <s id="ArmThrowDecal_Aggressor" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_throw_decal.png" pri="2.1"/>
+    <s id="ArmRaiseDecal_Aggressor" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_58_aggressor_arm_raise_decal.png" pri="2.1"/>
+    <c sId="ArmIdleDecal_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="ArmWalk1Decal_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="ArmWalk2Decal_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="ArmWalk3Decal_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="ArmSitDecal_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="ArmThrowDecal_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="ArmRaiseDecal_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+  </g>
+  <g id="Hands" icon="$bm/icon_m_longsleeve.png">
+    <s id="Hand_IdleBase_Aggressor" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_idle.png" pri="1"/>
+    <s id="Hand_Walk1Base_Aggressor" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_walk1.png" pri="1"/>
+    <s id="Hand_Walk2Base_Aggressor" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_walk2.png" pri="1"/>
+    <s id="Hand_Walk3Base_Aggressor" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_walk3.png" pri="1"/>
+    <s id="Hand_SitBase_Aggressor" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_sit.png" pri="1"/>
+    <c sId="Hand_IdleBase_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Hand_Walk1Base_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Hand_Walk2Base_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Hand_Walk3Base_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Hand_SitBase_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <s id="Hand_Wave1_Aggressor" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_wave1.png" pri="1"/>
+    <s id="Hand_Wave2_Aggressor" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_wave2.png" pri="1"/>
+    <c sId="Hand_Wave1_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Hand_Wave2_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <s id="Hand_ThrowHold_Aggressor" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_hold.png" pri="1"/>
+    <s id="Hand_ThrowOpen_Aggressor" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_open.png" pri="1"/>
+    <s id="Hand_ThrowPoint_Aggressor" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_point.png" pri="1"/>
+    <s id="Hand_ThrowStop_Aggressor" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_stop.png" pri="1"/>
+    <s id="Hand_ThrowThrow_Aggressor" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_throw.png" pri="1"/>
+    <s id="Hand_ThrowThumb_Aggressor" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_58_aggressor_hand_thumbs.png" pri="1"/>
+    <c sId="Hand_ThrowHold_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Hand_ThrowOpen_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Hand_ThrowPoint_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Hand_ThrowStop_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Hand_ThrowThrow_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Hand_ThrowThumb_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+  </g>
+  <g id="BellHopBase" name="Legs" icon="$bu/icon_legs_trouser.png">
+    <s id="Aggressor_Leg_IdleBase" cId="LegIdle" s="$bu/skinny_leg_idle.png" pri="2"/>
+    <s id="Aggressor_Leg_Walk1Base" cId="LegWalk1" s="$bu/skinny_leg_walk1.png" pri="2"/>
+    <s id="Aggressor_Leg_Walk2Base" cId="LegWalk2" s="$bu/skinny_leg_walk2.png" pri="2"/>
+    <s id="Aggressor_Leg_Walk3Base" cId="LegWalk3" s="$bu/skinny_leg_walk3.png" pri="2"/>
+    <s id="Aggressor_Leg_Walk4Base" cId="LegWalk4" s="$bu/skinny_leg_walk4.png" pri="2"/>
+    <s id="Aggressor_Leg_SitUpperbase" cId="LegSitUpper" s="$bu/skinny_sit_upper.png" pri="2"/>
+    <s id="Aggressor_Leg_SitLowerBase" cId="LegSitLower" s="$bu/skinny_sit_lower.png" pri="2"/>
+    <c sId="Aggressor_Leg_IdleBase" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Aggressor_Leg_Walk1Base" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Aggressor_Leg_Walk2Base" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Aggressor_Leg_Walk3Base" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Aggressor_Leg_Walk4Base" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Aggressor_Leg_SitUpperbase" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Aggressor_Leg_SitLowerBase" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <s id="Aggressor_Leg_IdleDecal" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_idle_skirt.png" pri="2.2"/>
+    <s id="Aggressor_Leg_Walk1Decal" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_walk1_skirt.png" pri="2.2"/>
+    <s id="Aggressor_Leg_Walk2Decal" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_walk2_skirt.png" pri="2.2"/>
+    <s id="Aggressor_Leg_Walk3Decal" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_walk3_skirt.png" pri="2.2"/>
+    <s id="Aggressor_Leg_Walk4Decal" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_walk4_skirt.png" pri="2.2"/>
+    <s id="Aggressor_Leg_SitUpperDecal" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_sit_upper_skirt.png" pri="2.2"/>
+    <s id="Aggressor_Leg_SitLowerDecal" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_sit_lower_skirt.png" pri="2.2"/>
+    <c sId="Aggressor_Leg_IdleDecal" c="5395026" a="0.81" b="1.7" ct="0.47" lId="Aggressor_Color1" lw="N"/>
+    <c sId="Aggressor_Leg_Walk1Decal" c="5395026" a="0.81" b="1.7" ct="0.47" lId="Aggressor_Color1" lw="N"/>
+    <c sId="Aggressor_Leg_Walk2Decal" c="5395026" a="0.81" b="1.7" ct="0.47" lId="Aggressor_Color1" lw="N"/>
+    <c sId="Aggressor_Leg_Walk3Decal" c="5395026" a="0.81" b="1.7" ct="0.47" lId="Aggressor_Color1" lw="N"/>
+    <c sId="Aggressor_Leg_Walk4Decal" c="5395026" a="0.81" b="1.7" ct="0.47" lId="Aggressor_Color1" lw="N"/>
+    <c sId="Aggressor_Leg_SitUpperDecal" c="5395026" a="0.81" b="1.7" ct="0.47" lId="Aggressor_Color1" lw="N"/>
+    <c sId="Aggressor_Leg_SitLowerDecal" c="5395026" a="0.81" b="1.7" ct="0.47" lId="Aggressor_Color1" lw="N"/>
+    <s id="Aggressor_Leg_IdleWraps" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_idle_wraps.png" pri="2.2"/>
+    <s id="Aggressor_Leg_Walk1Wraps" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_walk1_wraps.png" pri="2.2"/>
+    <s id="Aggressor_Leg_Walk2Wraps" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_walk2_wraps.png" pri="2.2"/>
+    <s id="Aggressor_Leg_Walk3Wraps" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_walk3_wraps.png" pri="2.2"/>
+    <s id="Aggressor_Leg_Walk4Wraps" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_walk4_wraps.png" pri="2.2"/>
+    <s id="Aggressor_Leg_SitLowerWraps" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_sit_lower_wraps.png" pri="2.2"/>
+    <s id="Aggressor_Leg_SitUpperWraps" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_58_aggressor_leg_sit_upper_wraps.png" pri="2.2"/>
+    <c sId="Aggressor_Leg_IdleWraps" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="Aggressor_Leg_Walk1Wraps" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="Aggressor_Leg_Walk2Wraps" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="Aggressor_Leg_Walk3Wraps" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="Aggressor_Leg_Walk4Wraps" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="Aggressor_Leg_SitLowerWraps" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="Aggressor_Leg_SitUpperWraps" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+  </g>
+  <g id="Feet" icon="$bm/icon_shoe_standard.png">
+    <s id="Foot_IdleBase_Aggressor" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_58_aggressor_feet_idle_decal.png" pri="2.1"/>
+    <s id="Foot_Walk1Base_Aggressor" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_58_aggressor_feet_walk1_decal.png" pri="2.1"/>
+    <s id="Foot_Walk2Base_Aggressor" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_58_aggressor_feet_walk2_decal.png" pri="2.1"/>
+    <s id="Foot_Walk3Base_Aggressor" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_58_aggressor_feet_walk3_decal.png" pri="2.1"/>
+    <s id="Foot_Walk4Base_Aggressor" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_58_aggressor_feet_walk4_decal.png" pri="2.1"/>
+    <s id="Foot_SitBase_Aggressor" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_58_aggressor_feet_sit_decal.png" pri="2.1"/>
+    <c sId="Foot_IdleBase_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Foot_Walk1Base_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Foot_Walk2Base_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Foot_Walk3Base_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Foot_Walk4Base_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Foot_SitBase_Aggressor" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <s id="Aggressor_FeetIdle_Steel" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_58_aggressor_feet_idle_steel.png" pri="2"/>
+    <s id="Aggressor_FeetWalk1_Steel" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_58_aggressor_feet_walk1_steel.png" pri="2"/>
+    <s id="Aggressor_FeetWalk2_Steel" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_58_aggressor_feet_walk2_steel.png" pri="2"/>
+    <s id="Aggressor_FeetWalk3_Steel" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_58_aggressor_feet_walk3_steel.png" pri="2"/>
+    <s id="Aggressor_FeetWalk4_Steel" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_58_aggressor_feet_walk4_steel.png" pri="2"/>
+    <s id="Aggressor_FeetSit_Steel" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_58_aggressor_feet_sit_steel.png" pri="2"/>
+  </g>
+  <g id="Icon">
+    <t id="Icon_Aggressor" icon="items/base/consumables/clothing/suits/suit_58_icon_aggressor_a.png" w="48" h="48" exurl="items/base/consumables/clothing/suits/suit_48_icon_racing.png"/>
+    <s id="Aggressor_VIP" cId="Icon_Aggressor" s="items/base/shared/s_vipbadge.png" pri="1" vis="false"/>
+    <s id="Aggressor_Icon_Decal2" cId="Icon_Aggressor" s="items/base/consumables/clothing/suits/suit_58_icon_aggressor_3.png" pri="1.1"/>
+    <s id="Aggressor_Icon_Decal" cId="Icon_Aggressor" s="items/base/consumables/clothing/suits/suit_58_icon_aggressor_2.png" pri="1.1"/>
+    <s id="Aggressor_Icon_Base" cId="Icon_Aggressor" s="items/base/consumables/clothing/suits/suit_58_icon_aggressor_1.png" pri="1"/>
+    <c sId="Aggressor_Icon_Decal2" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3" lw="N"/>
+    <c sId="Aggressor_Icon_Decal" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2" lw="N"/>
+    <c sId="Aggressor_Icon_Base" c="5395026" a="0.81" b="1.7" ct="0.47" lId="Aggressor_Color1" lw="N"/>
+    <s id="Aggressor_Icon_steel" cId="Icon_Aggressor" s="items/base/consumables/clothing/suits/suit_58_icon_aggressor_4.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Aggressor_Color1" name="Color 1" desc="Choose a color" sel="Black" seld="Black">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.93" b="65.3" ct="2.00" lId="Aggressor_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="0.71" b="17.2" ct="0.77" lId="Aggressor_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.91" b="33.4" ct="1.14" lId="Aggressor_Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="13921433" a="0.95" b="56.7" ct="1.14" lId="Aggressor_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.80" b="42.7" ct="1.05" lId="Aggressor_Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="0.91" b="40.1" ct="1.15" lId="Aggressor_Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16769280" a="0.94" b="26.5" ct="1.09" lId="Aggressor_Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="18.8" ct="0.95" lId="Aggressor_Color1"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="47.4" ct="1.04" lId="Aggressor_Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="36.2" ct="0.71" lId="Aggressor_Color1"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color1"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="7774670" a="1.00" b="51.1" ct="1.09" lId="Aggressor_Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Aggressor_Color1"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="2858731" a="1.00" b="7.8" ct="1.10" lId="Aggressor_Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9522615" a="0.82" b="18.7" ct="1.17" lId="Aggressor_Color1"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="21.7" ct="0.76" lId="Aggressor_Color1"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color1"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5525030" a="1.00" b="65.3" ct="1.54" lId="Aggressor_Color1"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.99" b="67.0" ct="1.61" lId="Aggressor_Color1"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.99" b="49.1" ct="1.05" lId="Aggressor_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="0.81" b="1.7" ct="0.47" lId="Aggressor_Color1"/>
+    </b>
+    <b id="Aggressor_Color2" name="Color 2" desc="Choose a color" sel="Tan" seld="Tan">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.80" b="34.0" ct="2.00" lId="Aggressor_Color2"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="0.71" b="26.9" ct="0.77" lId="Aggressor_Color2"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.91" b="33.4" ct="1.14" lId="Aggressor_Color2"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="13921433" a="0.95" b="56.7" ct="1.14" lId="Aggressor_Color2"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.85" b="36.6" ct="1.25" lId="Aggressor_Color2"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="0.91" b="40.1" ct="1.15" lId="Aggressor_Color2"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16769280" a="0.94" b="26.5" ct="1.09" lId="Aggressor_Color2"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="18.8" ct="0.95" lId="Aggressor_Color2"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="47.4" ct="1.04" lId="Aggressor_Color2"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="36.2" ct="0.71" lId="Aggressor_Color2"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color2"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="7774670" a="1.00" b="51.1" ct="1.09" lId="Aggressor_Color2"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Aggressor_Color2"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="2858731" a="1.00" b="7.8" ct="1.10" lId="Aggressor_Color2"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9522615" a="0.82" b="40.1" ct="1.17" lId="Aggressor_Color2"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="21.7" ct="0.76" lId="Aggressor_Color2"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color2"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5525030" a="1.00" b="65.3" ct="1.54" lId="Aggressor_Color2"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.99" b="67.0" ct="1.61" lId="Aggressor_Color2"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.99" b="49.1" ct="1.05" lId="Aggressor_Color2"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="0.53" b="-24.1" ct="0.41" lId="Aggressor_Color2"/>
+    </b>
+    <b id="Aggressor_Color3" name="Color 3" desc="Choose a color" sel="BlueGreen" seld="BlueGreen">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.74" b="37.4" ct="2.00" lId="Aggressor_Color3"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="0.71" b="14.0" ct="0.77" lId="Aggressor_Color3"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.91" b="33.4" ct="1.14" lId="Aggressor_Color3"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="13921433" a="1.00" b="52.8" ct="1.21" lId="Aggressor_Color3"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.85" b="36.6" ct="1.25" lId="Aggressor_Color3"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="0.91" b="40.1" ct="1.15" lId="Aggressor_Color3"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16769280" a="0.94" b="10.3" ct="1.09" lId="Aggressor_Color3"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="18.8" ct="0.95" lId="Aggressor_Color3"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="47.4" ct="1.04" lId="Aggressor_Color3"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="17.6" ct="0.71" lId="Aggressor_Color3"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="44.7" ct="1.45" lId="Aggressor_Color3"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="7774670" a="1.00" b="51.1" ct="1.09" lId="Aggressor_Color3"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Aggressor_Color3"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="2858731" a="1.00" b="7.8" ct="1.10" lId="Aggressor_Color3"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9522615" a="0.82" b="40.1" ct="1.17" lId="Aggressor_Color3"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="21.7" ct="0.76" lId="Aggressor_Color3"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.99" b="23.3" ct="1.09" lId="Aggressor_Color3"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5525030" a="1.00" b="62.1" ct="1.88" lId="Aggressor_Color3"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.99" b="67.0" ct="1.61" lId="Aggressor_Color3"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.99" b="49.1" ct="1.05" lId="Aggressor_Color3"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="0.92" b="7.9" ct="0.47" lId="Aggressor_Color3"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=420; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Aggressor_Color1"/>
+      <wizchoice id="Color2" name="Color 2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Aggressor_Color2"/>
+      <wizchoice id="Color3" name="Color 3" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Aggressor_Color3"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+</f>

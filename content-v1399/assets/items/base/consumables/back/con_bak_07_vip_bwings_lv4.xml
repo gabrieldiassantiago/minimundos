@@ -1,0 +1,119 @@
+<item.SpriteItem id="0" name="bfly4" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/consumables/back/con_bak_07_vip_bwings_lv4.png" cols="1" rows="6"/>
+    <texture id="tail" source="items/base/consumables/back/con_bak_07_vip_bwings_lv4_tail.png" cols="3" rows="4"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="skin" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="frame1" texture="base">
+          <view angle="0" row="4" x="-1" y="50" hm="true"/>
+          <view angle="45" row="2" x="4" y="57"/>
+          <view angle="90" x="3" y="64"/>
+          <view angle="135" row="2" x="-5" y="57" hm="true"/>
+          <view angle="180" row="4" y="50"/>
+          <view angle="225" row="2" y="52"/>
+          <view angle="270" x="3" y="52"/>
+          <view angle="315" row="2" y="52" hm="true"/>
+        </layer>
+        <layer id="frame2" texture="base">
+          <view angle="0" row="5" x="-1" y="50" hm="true"/>
+          <view angle="45" row="3" x="4" y="57"/>
+          <view angle="90" row="1" x="3" y="64"/>
+          <view angle="135" row="3" x="-5" y="57" hm="true"/>
+          <view angle="180" row="5" y="50"/>
+          <view angle="225" row="3" y="52"/>
+          <view angle="270" row="1" x="3" y="52"/>
+          <view angle="315" row="3" y="52" hm="true"/>
+        </layer>
+        <layer id="tail1" texture="tail">
+          <view angle="0" row="3" x="-6" y="68"/>
+          <view angle="45" row="1" x="-2" y="71"/>
+          <view angle="90" row="2" y="77"/>
+          <view angle="135" row="1" x="1" y="71" hm="true"/>
+          <view angle="180" row="3" x="6" y="68" hm="true"/>
+          <view angle="225" y="65"/>
+          <view angle="270" row="2" y="65"/>
+          <view angle="315" x="1" y="65" hm="true"/>
+        </layer>
+        <layer id="tail2" texture="tail">
+          <view angle="0" col="1" row="3" x="-6" y="68"/>
+          <view angle="45" col="1" row="1" x="-2" y="71"/>
+          <view angle="90" col="1" row="2" y="77"/>
+          <view angle="135" col="1" row="1" x="1" y="71" hm="true"/>
+          <view angle="180" col="1" row="3" x="6" y="68" hm="true"/>
+          <view angle="225" col="1" y="65"/>
+          <view angle="270" col="1" row="2" y="65"/>
+          <view angle="315" col="1" x="1" y="65" hm="true"/>
+        </layer>
+        <layer id="tail3" texture="tail">
+          <view angle="0" col="2" row="3" x="-6" y="68"/>
+          <view angle="45" col="2" row="1" x="-2" y="71"/>
+          <view angle="90" col="2" row="2" y="77"/>
+          <view angle="135" col="2" row="1" x="1" y="71" hm="true"/>
+          <view angle="180" col="2" row="3" x="6" y="68" hm="true"/>
+          <view angle="225" col="2" y="65"/>
+          <view angle="270" col="2" row="2" y="65"/>
+          <view angle="315" col="2" x="1" y="65" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="frame1"/>
+          <layerref id="tail1"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="frame2"/>
+          <layerref id="tail1"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="frame1"/>
+          <layerref id="tail2"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="frame2"/>
+          <layerref id="tail2"/>
+        </frame>
+        <frame id="Frame_05">
+          <layerref id="frame1"/>
+          <layerref id="tail3"/>
+        </frame>
+        <frame id="Frame_06">
+          <layerref id="frame2"/>
+          <layerref id="tail3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="Frame_01">
+            <sample id="flap" loops="-1"/>
+          </frameref>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+          <frameref id="Frame_05"/>
+          <frameref id="Frame_06"/>
+        </animation>
+        <animation id="Sit" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

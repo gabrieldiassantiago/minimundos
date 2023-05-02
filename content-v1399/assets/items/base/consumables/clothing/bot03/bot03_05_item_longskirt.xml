@@ -1,0 +1,76 @@
+<item.SpriteItem id="1807" name="Saia Longa Básica" desc="Para meninas finas e discretas." tags="consumable,clothing,clothing_basic,actionbar,wear,bot03,action_wearable_toggle" icon="items/base/consumables/clothing/bot03/bot03_05_icon_longskirt_a.png" price="75" tokens="750" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.24,0,-0.31" max="0.44,0.04,0.31"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable_cycle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/bot03/bot03_05_frag_longskirt.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="count" value="3"/>
+    <entry key="00" value="apricot"/>
+    <entry key="01" value="brown"/>
+    <entry key="02" value="red"/>
+  </data>
+  <textures>
+    <texture id="apricot" source="items/base/consumables/clothing/bot03/bot03_05_item_longskirt.png" cols="2" rows="1"/>
+    <texture id="brown" source="items/base/consumables/clothing/bot03/bot03_05_item_longskirt_brown.png" cols="2" rows="1"/>
+    <texture id="red" source="items/base/consumables/clothing/bot03/bot03_05_item_longskirt_red.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.31" max="0.44,0.04,0.31"/>
+      <layers>
+        <layer id="apricot" texture="apricot" y="19">
+          <view angle="45" x="12" y="13"/>
+          <view angle="135" x="-12" y="13" hm="true"/>
+          <view angle="225" col="1" x="-11" y="6" hm="true"/>
+          <view angle="315" col="1" x="11" y="6"/>
+        </layer>
+        <layer id="brown" texture="brown" y="19">
+          <view angle="45" x="12" y="13"/>
+          <view angle="135" x="-12" y="13" hm="true"/>
+          <view angle="225" col="1" x="-11" y="6" hm="true"/>
+          <view angle="315" col="1" x="11" y="6"/>
+        </layer>
+        <layer id="red" texture="red" y="19">
+          <view angle="45" x="12" y="13"/>
+          <view angle="135" x="-12" y="13" hm="true"/>
+          <view angle="225" col="1" x="-11" y="6" hm="true"/>
+          <view angle="315" col="1" x="11" y="6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="apricot"/>
+        </frame>
+        <frame id="01">
+          <layerref id="brown"/>
+        </frame>
+        <frame id="02">
+          <layerref id="red"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="2">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01" framerate="2">
+          <frameref id="01"/>
+        </animation>
+        <animation id="02" framerate="2">
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

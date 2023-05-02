@@ -1,0 +1,208 @@
+<item.SpriteItem id="1934" name="Baú Amaldiçoado" desc="Se você quiser abrir o problema é seu. A gente avisou." tags="misc" icon="items/base/gothic/icon_g_chest_01_demon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table, avatar,avatar" dropTargetClamp="none" price="120">
+  <volume>
+    <box min="-0.39,0,-0.49" max="1.39,1.1,0.49"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="chest" source="items/base/gothic/g_chest_01_demon.png" cols="1" rows="1"/>
+    <texture id="hatch" source="items/base/gothic/g_chest_01_cover.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_pool.png" cols="1" rows="1"/>
+    <texture id="seal" source="items/base/gothic/g_chest_01_seal.png" cols="1" rows="1"/>
+    <texture id="shine" source="items/base/gothic/g_chest_01_rayshine.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Chest" x="0.5">
+      <box min="-0.89,0,-0.49" max="0.89,1.1,0.49"/>
+      <layers>
+        <layer id="chest" texture="chest">
+          <view angle="45" y="44"/>
+          <view angle="135" y="44" hm="true"/>
+          <view angle="225" y="44"/>
+          <view angle="315" y="44" hm="true"/>
+        </layer>
+        <layer id="seal" texture="seal">
+          <view angle="45" x="-33" y="-14"/>
+          <view angle="135" x="34" y="-14" hm="true"/>
+          <view angle="225" x="-33" y="-14"/>
+          <view angle="315" x="34" y="-14" hm="true"/>
+        </layer>
+        <layer id="cover_close" texture="hatch">
+          <view angle="45" x="-1" y="-15"/>
+          <view angle="135" x="1" y="-15" hm="true"/>
+          <view angle="225" x="-1" y="-15"/>
+          <view angle="315" x="1" y="-15" hm="true"/>
+        </layer>
+        <layer id="cover_open01" texture="hatch">
+          <view angle="45" y="-16"/>
+          <view angle="135" y="-16" hm="true"/>
+          <view angle="225" y="-16"/>
+          <view angle="315" y="-16" hm="true"/>
+        </layer>
+        <layer id="cover_open02" texture="hatch">
+          <view angle="45" x="2" y="-20"/>
+          <view angle="135" x="2" y="-20" hm="true"/>
+          <view angle="225" x="2" y="-20"/>
+          <view angle="315" x="1" y="-20" hm="true"/>
+        </layer>
+        <layer id="cover_open03" texture="hatch">
+          <view angle="45" x="5" y="-25"/>
+          <view angle="135" x="5" y="-25" hm="true"/>
+          <view angle="225" x="5" y="-25"/>
+          <view angle="315" x="5" y="-25" hm="true"/>
+        </layer>
+        <layer id="cover_open04" texture="hatch">
+          <view angle="45" x="12" y="-28"/>
+          <view angle="135" x="-3" y="-28" hm="true"/>
+          <view angle="225" x="12" y="-28"/>
+          <view angle="315" x="-3" y="-28" hm="true"/>
+        </layer>
+        <layer id="cover_open05" texture="hatch">
+          <view angle="45" x="19" y="-32"/>
+          <view angle="135" x="-8" y="-32" hm="true"/>
+          <view angle="225" x="19" y="-32"/>
+          <view angle="315" x="-8" y="-32" hm="true"/>
+        </layer>
+        <layer id="shine" texture="shine">
+          <view angle="45" x="5" y="20"/>
+          <view angle="135" x="-4" y="20" hm="true"/>
+          <view angle="225" x="5" y="20"/>
+          <view angle="315" x="-4" y="20" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="closed">
+          <layerref id="chest"/>
+          <layerref id="cover_close"/>
+          <layerref id="seal"/>
+        </frame>
+        <frame id="open_01">
+          <layerref id="chest"/>
+          <layerref id="cover_open01"/>
+          <layerref id="shine" color="0xffbd51" a="0.3" blend="add"/>
+        </frame>
+        <frame id="open_02">
+          <layerref id="chest"/>
+          <layerref id="cover_open02"/>
+          <layerref id="shine" color="0xffbd51" a="0.5" blend="add"/>
+        </frame>
+        <frame id="open_03">
+          <layerref id="chest"/>
+          <layerref id="cover_open03"/>
+          <layerref id="shine" color="0xffbd51" a="0.6" blend="add"/>
+        </frame>
+        <frame id="open_04">
+          <layerref id="chest"/>
+          <layerref id="cover_open04"/>
+          <layerref id="shine" color="0xffbd51" a="0.8" blend="add"/>
+        </frame>
+        <frame id="open_05">
+          <layerref id="chest"/>
+          <layerref id="cover_open05"/>
+          <layerref id="shine" color="0xffbd51" a="0.8" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="closed"/>
+          <frameref id="open_01"/>
+          <frameref id="open_02"/>
+          <frameref id="open_03"/>
+          <frameref id="open_04"/>
+          <frameref id="open_05"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.5" s="3.3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="2" y="-12" hm="true"/>
+          <view angle="135" x="3" y="-12"/>
+          <view angle="225" x="2" y="-12" hm="true"/>
+          <view angle="315" x="3" y="-12"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xffc6ad"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="On"/>
+          <frameref id="On"/>
+          <frameref id="On"/>
+          <frameref id="On"/>
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" x="0.5" y="0.15" s="1.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-3" y="-12" hm="true"/>
+          <view angle="135" x="4" y="-9"/>
+          <view angle="225" x="-3" y="-12" hm="true"/>
+          <view angle="315" x="3" y="-9"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Light" a="0"/>
+        </frame>
+        <frame id="Open_01">
+          <layerref id="Light" color="0xffdf69" a="0.15"/>
+        </frame>
+        <frame id="Open_02">
+          <layerref id="Light" color="0xffdf69" a="0.2"/>
+        </frame>
+        <frame id="Open_03">
+          <layerref id="Light" color="0xffdf69" a="0.42"/>
+        </frame>
+        <frame id="Open_04">
+          <layerref id="Light" color="0xffdf69" a="0.55"/>
+        </frame>
+        <frame id="Open_05">
+          <layerref id="Light" color="0xffdf69" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="Closed"/>
+          <frameref id="Open_01"/>
+          <frameref id="Open_02"/>
+          <frameref id="Open_03"/>
+          <frameref id="Open_04"/>
+          <frameref id="Open_05"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

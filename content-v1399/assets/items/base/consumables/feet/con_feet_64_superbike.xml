@@ -1,0 +1,50 @@
+<item.SpriteItem id="3828" name="Supermoto R3D Zoom" desc="Uma moto super rápida e poderosa." tags="rare,consumable,actionbar,wear,feet,action_driveable_toggle" icon="items/base/consumables/feet/icon_con_feet_64_superbike.png" price="4000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.44,0,-0.18" max="1.44,1.15,0.18"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="select" script="scripts/item/select_drive.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+75"/>
+  </data>
+  <textures>
+    <texture id="Bike" source="items/base/consumables/feet/con_feet_64_superbike_angled.png" cols="2" rows="1"/>
+    <texture id="Decal" source="items/base/consumables/feet/con_feet_64_superbike_decal.png" cols="2" rows="1"/>
+    <texture id="kickstand" source="items/base/consumables/feet/con_feet_33_scooter_kickstand.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.44,0,-0.18" max="1.44,1.15,0.18"/>
+      <layers>
+        <layer id="kickstand" texture="kickstand">
+          <view angle="45" x="20" y="26"/>
+          <view angle="135" x="-19" y="26" hm="true"/>
+          <view angle="225" col="3" x="-45" y="6" hm="true"/>
+          <view angle="315" col="3" x="46" y="6"/>
+        </layer>
+        <layer id="Bike" texture="Bike">
+          <view angle="45" x="29" y="62"/>
+          <view angle="135" x="-29" y="62" hm="true"/>
+          <view angle="225" col="1" x="-31" y="29" hm="true"/>
+          <view angle="315" col="1" x="31" y="29"/>
+        </layer>
+        <layer id="Decal" texture="Decal">
+          <view angle="45" x="59" y="-60"/>
+          <view angle="135" x="-60" y="-61" hm="true"/>
+          <view angle="225" col="1" x="-31" y="-105" hm="true"/>
+          <view angle="315" col="1" x="31" y="-105"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame"/>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

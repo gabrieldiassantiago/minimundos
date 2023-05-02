@@ -1,0 +1,47 @@
+<f id="Top07_26_MidriffArmour" parentId="Top07">
+  <b id="Gender" sel="SportJacketTorso">
+    <g id="SportJacketTorso" name="Male" icon="$bm/icon_m_retro.png">
+      <s id="top07_26TorsoBaseM" cId="Torso" s="items/base/consumables/clothing/top07/top07_26_armour_torso_m.png" pri="7"/>
+      <c sId="top07_26TorsoBaseM" c="7636631" a="0.54" b="17.2" ct="1.20" lId="top07_26Color1" lw="N"/>
+    </g>
+    <g id="SportJacketTorso" name="Female" icon="$bm/icon_m_retro.png">
+      <s id="top07_26TorsoBaseF" cId="Torso" s="items/base/consumables/clothing/top07/top07_26_armour_torso_f.png" pri="7"/>
+      <c sId="top07_26TorsoBaseF" c="7636631" a="0.54" b="17.2" ct="1.20" lId="top07_26Color1" lw="N"/>
+    </g>
+  </b>
+  <g id="Sleeves" name="Sleeves" icon="$bm/icon_m_retro.png">
+    <s id="top07_26ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top07/top07_26_armour_arm_idle.png" pri="6"/>
+    <s id="top07_26ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top07/top07_26_armour_arm_walk1.png" pri="6"/>
+    <s id="top07_26ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top07/top07_26_armour_arm_walk2.png" pri="6"/>
+    <s id="top07_26ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top07/top07_26_armour_arm_walk3.png" pri="6"/>
+    <s id="top07_26ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top07/top07_26_armour_arm_sit.png" pri="6"/>
+    <s id="top07_26ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top07/top07_26_armour_arm_throw.png" pri="6"/>
+    <s id="top07_26ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top07/top07_26_armour_arm_raise.png" pri="6"/>
+    <c sId="top07_26ArmIdleBase" c="7636631" a="0.54" b="17.2" ct="1.20" lId="top07_26Color1" lw="N"/>
+    <c sId="top07_26ArmWalk1Base" c="7636631" a="0.54" b="17.2" ct="1.20" lId="top07_26Color1" lw="N"/>
+    <c sId="top07_26ArmWalk2Base" c="7636631" a="0.54" b="17.2" ct="1.20" lId="top07_26Color1" lw="N"/>
+    <c sId="top07_26ArmWalk3Base" c="7636631" a="0.54" b="17.2" ct="1.20" lId="top07_26Color1" lw="N"/>
+    <c sId="top07_26ArmSitBase" c="7636631" a="0.54" b="17.2" ct="1.20" lId="top07_26Color1" lw="N"/>
+    <c sId="top07_26ArmThrowBase" c="7636631" a="0.54" b="17.2" ct="1.20" lId="top07_26Color1" lw="N"/>
+    <c sId="top07_26ArmRaiseBase" c="7636631" a="0.54" b="17.2" ct="1.20" lId="top07_26Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="Icontop07_26" icon="items/base/consumables/clothing/top07/top07_26_icon_armour_a.png" w="48" h="48"/>
+    <s id="Icontop07_26Base" cId="Icontop07_26" s="items/base/consumables/clothing/top07/top07_26_icon_armour_1.png"/>
+    <c sId="Icontop07_26Base" c="7636631" a="0.54" b="17.2" ct="1.20" lId="top07_26Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="top07_26Color1" name="Color" desc="Choose a color" sel="Silver" seld="Silver">
+      <c id="Gold" icon="$bu/icon_metal_gold.png" c="16767232" a="0.48" b="-24.1" ct="0.71" lId="top07_26Color1"/>
+      <c id="Silver" icon="$bu/icon_metal_silver.png" c="7636631" a="0.54" b="17.2" ct="1.20" lId="top07_26Color1"/>
+      <c id="Copper" icon="$bu/icon_metal_copper.png" c="10377246" a="0.59" b="7.3" ct="1.30" lId="top07_26Color1"/>
+      <c id="Platinum" icon="$bu/icon_metal_platinum.png" c="16383963" a="0.56" b="-21.0" ct="0.73" lId="top07_26Color1"/>
+      <c id="Bronze" icon="$bu/icon_metal_bronze.png" c="10122506" a="0.71" b="6.2" ct="1.39" lId="top07_26Color1"/>
+      <c id="Steel" icon="$bu/icon_metal_steel.png" c="5395026" a="0.86" b="48.4" ct="2.00" lId="top07_26Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="top07_26Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

@@ -1,0 +1,45 @@
+<item.SpriteItem id="2612" name="Bonsai Carvalho" desc="MiniÁvore delicadamente podada especialmente para o Minimundos." tags="rare,misc" icon="items/base/antique/icon_a_collect_21_bonsai_autumn.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="150" minLevelType="4">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,1.2,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="box" source="items/base/antique/a_collect_21_bonsai_autumn.png" cols="1" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,1.2,0.3"/>
+      <layers>
+        <layer id="box" texture="box" y="15">
+          <view angle="45" x="1" y="3"/>
+          <view angle="135" x="-2" y="3" hm="true"/>
+          <view angle="225" x="1" y="3"/>
+          <view angle="315" x="-2" y="3" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="0.64" s="3.1" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="1" y="2"/>
+          <view angle="135" y="2" hm="true"/>
+          <view angle="225" x="1" y="2"/>
+          <view angle="315" y="2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf7c0b5" a="0.5"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

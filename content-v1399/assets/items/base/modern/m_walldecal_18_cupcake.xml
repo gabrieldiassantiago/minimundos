@@ -1,0 +1,30 @@
+<item.SpriteItem id="5837" name="Decalque Cupcake" desc="Um delicioso cupcake em decalque de parede" tags="wall" icon="items/base/modern/icon_m_walldecal_18_cupcake.png" price="15" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="lights" source="items/base/modern/m_walldecal_18_cupcake.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="wall" depthBias="-2">
+      <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+      <layers>
+        <layer id="light 01" texture="lights" align="middle">
+          <view angle="45" y="-17"/>
+          <view angle="135" y="-17" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

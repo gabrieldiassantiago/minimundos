@@ -1,0 +1,61 @@
+<item.SpriteItem id="4205" name="Big Balão Peru Pirueta Play" desc="Um balão enorme de peru!" tags="rare,misc,thanksgiving,independenceday" icon="items/base/consumables/clothing/accessory/acc_164_icon_bigturkey.png" price="240" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,2.84,0.48"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="jar" source="items/base/consumables/clothing/accessory/acc_164_big_turkey.png" cols="2" rows="1"/>
+    <texture id="Shadow" source="items/base/modern/m_welcomeback_03_shadow_item.png" cols="1" rows="1"/>
+    <texture id="string" source="items/base/consumables/clothing/accessory/acc_163_big_string.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.48,0,-0.48" max="0.48,2.84,0.48"/>
+      <layers>
+        <layer id="jar01" texture="jar" y="15">
+          <view angle="45" x="-15" y="-122"/>
+          <view angle="135" x="-16" y="-134" hm="true"/>
+          <view angle="225" col="1" x="34" y="-150"/>
+          <view angle="315" col="1" x="6" y="-129" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="Shadow" y="15">
+          <view/>
+        </layer>
+        <layer id="string" texture="string">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle00">
+          <layerref id="string" y="-15"/>
+          <layerref id="jar01" y="-15"/>
+          <layerref id="shadow"/>
+        </frame>
+        <frame id="idle01">
+          <layerref id="string" y="-14"/>
+          <layerref id="jar01" y="-14"/>
+          <layerref id="shadow"/>
+        </frame>
+        <frame id="idle02">
+          <layerref id="string" y="-12"/>
+          <layerref id="jar01" y="-12"/>
+          <layerref id="shadow"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="idle00"/>
+          <frameref id="idle01"/>
+          <frameref id="idle02"/>
+          <frameref id="idle01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

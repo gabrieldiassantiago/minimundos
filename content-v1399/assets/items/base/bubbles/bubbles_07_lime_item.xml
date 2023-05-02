@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem name="Balão do Chat Verde-Limão" desc="O balãozinho do chat com cor de fundo verde-limão" icon="items/base/bubbles/bubbles_07_lime_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="avatar" dropTargetClamp="none" id="5610" premium="Y" tags="speechbubble_default,speechbubble">
+  <volume>
+    <box min="NaN,NaN,NaN" max="NaN,NaN,NaN"/>
+  </volume>
+  <data>
+    <entry key="color" value="0x83fb74"/>
+    <entry key="btnIcon" value="speechBubble24Lime"/>
+    <entry key="largeIcon" value="items/base/bubbles/bubbles_07_lime_largeicon.png"/>
+  </data>
+</item.SpriteItem>

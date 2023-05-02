@@ -1,0 +1,47 @@
+<item.SpriteItem name="Tocha do Terror" desc="Uma tocha para aterrorizar os caminhos." tags="consumable,light,actionbar,wear,hand,real,usable,halloween,rare,action_holdable_toggle" icon="items/base/consumables/magic/icon_con_item_109_firetorch.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="3551" price="110" tokens="1100" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.35,0,-0.1" max="0.35,0.2,0.1"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="torch" source="items/base/consumables/magic/con_item_39_firetorch.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.1" max="0.35,0.2,0.1"/>
+      <layers>
+        <layer id="mistletoe" texture="torch">
+          <view angle="45" col="1" x="1" y="20"/>
+          <view angle="135" col="1" y="20" hm="true"/>
+          <view angle="225" x="2" y="25"/>
+          <view angle="315" x="1" y="25" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="mistletoe"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

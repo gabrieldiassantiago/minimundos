@@ -1,0 +1,30 @@
+<item.SpriteItem id="4801" name="Tapete de Gato Amarelo Play" desc="Um lindo tapete de gatinho" tags="seasonal,floor" icon="items/base/pet/pet_020_kittenrug_yellow_icon.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="10">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/pet/pet_020_kittenrug_yellow_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="rug_pattern" layer="surface">
+      <box min="-0.49,0,-0.49" max="0.49,0,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

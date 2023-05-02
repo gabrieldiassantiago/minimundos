@@ -1,0 +1,75 @@
+<item.SpriteItem id="0" name="Sombrero" desc="A sombrero" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="hat" source="items/base/consumables/head/con_head_48_sombrero.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="flies" source="items/base/consumables/magic/sndfx_flies.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="hat" texture="hat">
+          <view angle="0" x="2" hm="true"/>
+          <view angle="45" col="1" x="-2"/>
+          <view angle="90" col="2"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="180" x="-2"/>
+          <view angle="225" col="3" y="2"/>
+          <view angle="270" col="4" y="2"/>
+          <view angle="315" col="3" y="2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In 01">
+          <layerref id="hat" color="0xe1ffff"/>
+        </frame>
+        <frame id="In 02">
+          <layerref id="hat" color="0xe1ffff"/>
+        </frame>
+        <frame id="In 03">
+          <layerref id="hat" color="0xe1ffff"/>
+        </frame>
+        <frame id="Loop 01">
+          <layerref id="hat" color="0xe1ffff"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="Loop 01"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="In 03"/>
+          <frameref id="In 02"/>
+          <frameref id="In 01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Glow" texture="glow">
+          <view y="34"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Glow" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4">
+          <frameref id="Frame01" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

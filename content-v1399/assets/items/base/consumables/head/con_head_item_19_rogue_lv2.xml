@@ -1,0 +1,53 @@
+<item.SpriteItem desc="Um capacete RogueTrooper." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/head/icon_con_head_item_19_rogue_lv2.png" id="1266" name="Capacete Capitão Roguetrooper" tags="consumable,actionbar,wear,head,scifi,action_wearable_toggle" price="6720" minLevel="40" minLevelType="2" premium="Y" minCPLevel="1">
+  <volume>
+    <box max="0.3,0.61,0.3" min="-0.3,0,-0.3"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <textures>
+    <texture cols="5" id="Texture" rows="1" source="items/base/consumables/head/con_head_19_rogue_stage01.png"/>
+    <texture cols="5" id="level4" rows="1" source="items/base/consumables/head/con_head_19_rogue_stage02.png"/>
+    <texture cols="1" id="shadow" rows="1" source="items/base/consumables/head/con_head_generic_dropshadow.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.3,0.61,0.3" min="-0.3,0,-0.3"/>
+      <layers>
+        <layer id="helmet" texture="Texture" y="22">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="3"/>
+          <view angle="315" col="3" hm="true"/>
+        </layer>
+        <layer id="level4" texture="level4" y="22">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="3"/>
+          <view angle="315" col="3" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view y="26"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="shadow"/>
+          <layerref id="helmet"/>
+          <layerref id="level4"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="fire+20,frost+10"/>
+    <entry key="action_attributes_secondary" value="speed+20,health+50"/>
+  </data>
+</item.SpriteItem>

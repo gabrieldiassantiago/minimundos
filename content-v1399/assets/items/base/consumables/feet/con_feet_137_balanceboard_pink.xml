@@ -1,0 +1,97 @@
+<item.SpriteItem id="0" name="Item" desc="An item" icon="items/base/consumables/feet/icon_con_feet_137_balanceboard_pink.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.08,0,0" max="-0.08,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_137_balanceboard_pink.png" cols="5" rows="2"/>
+    <texture id="Texture" source="items/base/shared/s_fx_flare_mini.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" x="-0.08">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="flame01" texture="Light" align="top" y="-60">
+          <view angle="0" col="2" x="-1" y="20" hm="true"/>
+          <view angle="45" col="3" x="5" y="23" hm="true"/>
+          <view angle="90" col="4" x="-1" y="23"/>
+          <view angle="135" col="3" x="-6" y="24"/>
+          <view angle="180" col="2" y="20"/>
+          <view angle="225" y="14"/>
+          <view angle="270" col="1" y="20"/>
+          <view angle="315" y="13" hm="true"/>
+        </layer>
+        <layer id="flame02" texture="Light" align="top" y="-60">
+          <view angle="0" col="2" x="-1" y="20" alpha="0.9" hm="true"/>
+          <view angle="45" col="3" x="5" y="23" alpha="0.9" hm="true"/>
+          <view angle="90" col="4" x="-1" y="23" alpha="0.9"/>
+          <view angle="135" col="3" x="-6" y="24" alpha="0.9"/>
+          <view angle="180" col="2" y="20" alpha="0.9"/>
+          <view angle="225" y="14" alpha="0.9"/>
+          <view angle="270" col="1" y="20" alpha="0.9"/>
+          <view angle="315" y="13" alpha="0.9" hm="true"/>
+        </layer>
+        <layer id="Idle" texture="base">
+          <view angle="0" col="2" x="6" y="23" hm="true"/>
+          <view angle="45" col="3" x="5" y="23" hm="true"/>
+          <view angle="90" col="4" x="-1" y="23"/>
+          <view angle="135" col="3" x="-6" y="24"/>
+          <view angle="180" col="2" x="-6" y="23"/>
+          <view angle="225" x="-5" y="19"/>
+          <view angle="270" col="1" y="20"/>
+          <view angle="315" x="5" y="19" hm="true"/>
+        </layer>
+        <layer id="Sit" texture="base">
+          <view angle="0" col="2" x="6" y="23" hm="true"/>
+          <view angle="45" col="3" x="5" y="23" hm="true"/>
+          <view angle="90" col="4" x="-1" y="23"/>
+          <view angle="135" col="3" x="-6" y="24"/>
+          <view angle="180" col="2" x="-6" y="23"/>
+          <view angle="225" x="-5" y="19"/>
+          <view angle="270" col="1" y="20"/>
+          <view angle="315" x="5" y="19" hm="true"/>
+        </layer>
+        <layer id="Walk" texture="base">
+          <view angle="0" col="2" row="1" x="6" y="23" hm="true"/>
+          <view angle="45" col="3" row="1" x="5" y="23" hm="true"/>
+          <view angle="90" col="4" row="1" x="-1" y="23"/>
+          <view angle="135" col="3" row="1" x="-6" y="24"/>
+          <view angle="180" col="2" row="1" x="-6" y="23"/>
+          <view angle="225" row="1" x="-5" y="19"/>
+          <view angle="270" col="1" row="1" y="20"/>
+          <view angle="315" row="1" x="5" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Walk"/>
+          <layerref id="flame01" color="0xe7e269"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Walk"/>
+          <layerref id="flame02" color="0xe7e269"/>
+        </frame>
+        <frame id="Sit"/>
+        <frame id="Idle">
+          <layerref id="Idle"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="Frame01">
+            <sample id="engine" vol="0.2" loops="-1"/>
+          </frameref>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

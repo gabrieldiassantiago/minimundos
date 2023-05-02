@@ -1,0 +1,103 @@
+<item.SpriteItem name="Tapete Chroma Efeitos Especiais" desc="Um tapete ajustável para efeitos especiais" tags="floor" icon="items/base/modern/m_chromokey_rugicon.png" price="25" minLevel="1" minCPLevel="1" gridActive="false" gridSnap="true" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" id="5596" tokens="250">
+  <volume>
+    <box min="-1.49,-0.001,-0.49" max="0.49,0,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="White" state="true" event="animate(00)"/>
+    <action id="Black" state="true" event="animate(01)"/>
+    <action id="Red" state="true" event="animate(02)"/>
+    <action id="Green" state="true" event="animate(03)"/>
+    <action id="Blue" state="true" event="animate(04)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="5"/>
+    <entry key="00" value="White"/>
+    <entry key="01" value="Black"/>
+    <entry key="02" value="Red"/>
+    <entry key="03" value="Green"/>
+    <entry key="04" value="Blue"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/modern/m_chromokey_rug.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="rug_pattern" layer="surface">
+      <box min="-1.49,-0.001,-0.49" max="0.49,0,1.49"/>
+      <layers>
+        <layer id="White" texture="Base" align="middle">
+          <view angle="45" y="-32"/>
+          <view angle="135" x="64"/>
+          <view angle="225" y="32"/>
+          <view angle="315" x="-64"/>
+        </layer>
+        <layer id="Black" texture="Base" align="middle">
+          <view angle="45" col="1" y="-32"/>
+          <view angle="135" col="1" x="64"/>
+          <view angle="225" col="1" y="32"/>
+          <view angle="315" col="1" x="-64"/>
+        </layer>
+        <layer id="Red" texture="Base" align="middle">
+          <view angle="45" col="2" y="-32"/>
+          <view angle="135" col="2" x="64"/>
+          <view angle="225" col="2" y="32"/>
+          <view angle="315" col="2" x="-64"/>
+        </layer>
+        <layer id="Green" texture="Base" align="middle">
+          <view angle="45" col="3" y="-32"/>
+          <view angle="135" col="3" x="64"/>
+          <view angle="225" col="3" y="32"/>
+          <view angle="315" col="3" x="-64"/>
+        </layer>
+        <layer id="Blue" texture="Base" align="middle">
+          <view angle="45" col="4" y="-32"/>
+          <view angle="135" col="4" x="64"/>
+          <view angle="225" col="4" y="32"/>
+          <view angle="315" col="4" x="-64"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="White">
+          <layerref id="White"/>
+        </frame>
+        <frame id="Black">
+          <layerref id="Black"/>
+        </frame>
+        <frame id="Red">
+          <layerref id="Red"/>
+        </frame>
+        <frame id="Green">
+          <layerref id="Green"/>
+        </frame>
+        <frame id="Blue">
+          <layerref id="Blue"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00">
+          <frameref id="White"/>
+        </animation>
+        <animation id="01">
+          <frameref id="Black"/>
+        </animation>
+        <animation id="02">
+          <frameref id="Red"/>
+        </animation>
+        <animation id="03">
+          <frameref id="Green"/>
+        </animation>
+        <animation id="04">
+          <frameref id="Blue"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

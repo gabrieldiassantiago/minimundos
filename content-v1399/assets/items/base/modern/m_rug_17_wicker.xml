@@ -1,0 +1,30 @@
+<item.SpriteItem name="Tapete de Vime Tulsa" desc="Um tapete feito de vime" tags="floor" icon="items/base/modern/icon_m_rug_17_wicker.png" price="45" minLevel="1" minLevelType="2" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" id="6613">
+  <volume>
+    <box min="-3.48,-0.001,-0.5" max="0.48,0,2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_rug_17_wicker.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="rug_hair" layer="surface">
+      <box min="-3.48,-0.001,-0.5" max="0.48,0,2"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-46" y="45"/>
+          <view angle="135" x="142" y="93" hm="true"/>
+          <view angle="225" x="48" y="188"/>
+          <view angle="315" x="-145" y="140" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

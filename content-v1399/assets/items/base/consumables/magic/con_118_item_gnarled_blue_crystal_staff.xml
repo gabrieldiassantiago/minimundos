@@ -1,0 +1,85 @@
+<item.SpriteItem id="4192" name="Bastão do Mago Iluminado" desc="Uma luz brilhante de um poderoso mago." tags="consumable,actionbar,wear,hand,real,usable,action_holdable_toggle" icon="items/base/consumables/magic/con_118_icon_gnarled_blue_crystal_staff.png" minLevel="50" minLevelType="7" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="9750">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,2.25,0.2"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="staff" source="items/base/consumables/magic/con_118_item_gnarled_blue_crystal_staff.png" cols="2" rows="1"/>
+    <texture id="stand" source="items/base/consumables/magic/con_118_item_gnarled_blue_crystal_staff_stand.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,2.25,0.2"/>
+      <layers>
+        <layer id="Staff" texture="staff">
+          <view angle="45" y="6" hm="true"/>
+          <view angle="135" x="-1" y="6"/>
+          <view angle="225" col="1" x="-2" y="8" hm="true"/>
+          <view angle="315" col="1" x="1" y="8"/>
+        </layer>
+        <layer id="Staff01" texture="staff" y="1">
+          <view angle="45" y="6" hm="true"/>
+          <view angle="135" x="-1" y="6"/>
+          <view angle="225" col="1" x="-2" y="8" hm="true"/>
+          <view angle="315" col="1" x="1" y="8"/>
+        </layer>
+        <layer id="Staff02" texture="staff" y="2">
+          <view angle="45" y="6" hm="true"/>
+          <view angle="135" x="-1" y="6"/>
+          <view angle="225" col="1" x="-2" y="8" hm="true"/>
+          <view angle="315" col="1" x="1" y="8"/>
+        </layer>
+        <layer id="Stand" texture="stand">
+          <view angle="45" y="19" hm="true"/>
+          <view angle="135" y="19"/>
+          <view angle="225" y="19" hm="true"/>
+          <view angle="315" y="19"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Staff"/>
+          <layerref id="Stand"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Staff01"/>
+          <layerref id="Stand"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Staff02"/>
+          <layerref id="Stand"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+          <frameref id="Frame"/>
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

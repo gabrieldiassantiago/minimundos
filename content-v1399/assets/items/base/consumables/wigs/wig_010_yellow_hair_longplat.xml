@@ -1,0 +1,53 @@
+<item.SpriteItem id="0" name="bavarianhat" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/wigs/wig_010_yellow_hair_longplat.png" cols="8" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head_01" texture="head">
+          <view angle="0" col="7" y="52"/>
+          <view angle="45" x="-1" y="56"/>
+          <view angle="90" col="1" x="-1" y="45"/>
+          <view angle="135" col="2" x="-1" y="56" hm="true"/>
+          <view angle="180" col="3" y="52"/>
+          <view angle="225" col="4" x="-2" y="52"/>
+          <view angle="270" col="5" y="52"/>
+          <view angle="315" col="6" y="52" hm="true"/>
+        </layer>
+        <layer id="head_02" texture="head">
+          <view angle="0" col="7" row="1" y="52"/>
+          <view angle="45" row="1" x="-1" y="56"/>
+          <view angle="90" col="1" row="1" x="-1" y="45"/>
+          <view angle="135" col="2" row="1" x="-1" y="56" hm="true"/>
+          <view angle="180" col="3" row="1" y="52"/>
+          <view angle="225" col="4" row="1" x="-2" y="52"/>
+          <view angle="270" col="5" row="1" y="52"/>
+          <view angle="315" col="6" row="1" y="52" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="head_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="head_02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="01" duration="2"/>
+          <frameref id="02" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

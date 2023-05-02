@@ -1,0 +1,113 @@
+<item.SpriteItem desc="Em vidro fosco e madeira." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/modern/icon_m_barrier_01_glass_gate.png" id="373" name="Porta da Divisória Linhas" tags="misc" price="25" tokens="250" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.5,1.68,0.5" min="-0.1,0,-0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="close" script="scripts/item/close_gate.as"/>
+    <event id="action" script="scripts/item/action_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+  </events>
+  <actions>
+    <action event="open" id="Open" state="true"/>
+    <action event="close" id="Close" state="true"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture cols="6" id="barrier gate" rows="1" source="items/base/modern/m_barrier_01_glass_gate.png"/>
+  </textures>
+  <nodes>
+    <node id="closed">
+      <box max="0.1,1.68,0.5" min="-0.1,0,-0.5"/>
+      <layers>
+        <layer id="closed left" texture="barrier gate">
+          <view angle="45" x="-26" y="30"/>
+          <view angle="135" hm="true" x="26" y="30"/>
+          <view angle="225" x="-26" y="30"/>
+          <view angle="315" hm="true" x="26" y="30"/>
+        </layer>
+        <layer id="closed right" texture="barrier gate">
+          <view angle="45" col="1" x="29" y="30"/>
+          <view angle="135" col="1" hm="true" x="-29" y="30"/>
+          <view angle="225" col="1" x="29" y="30"/>
+          <view angle="315" col="1" hm="true" x="-29" y="30"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="closed">
+          <layerref id="closed left"/>
+          <layerref id="closed right"/>
+        </frame>
+        <frame id="closed_hidden">
+          <layerref a="0" id="closed left"/>
+          <layerref a="0" id="closed right"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Closed" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation framerate="4" id="Open" loop="false">
+          <frameref id="closed_hidden"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open right">
+      <box max="0.5,1.68,0.5" min="-0.1,0,0.3"/>
+      <layers>
+        <layer id="open" texture="barrier gate">
+          <view angle="45" col="5" x="40" y="35"/>
+          <view angle="135" col="4" hm="true" x="15" y="35"/>
+          <view angle="225" col="2" x="-36" y="25"/>
+          <view angle="315" col="3" hm="true" x="-19" y="25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="open"/>
+        </frame>
+        <frame id="open_hidden">
+          <layerref a="0" id="open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Closed" loop="false">
+          <frameref id="open_hidden"/>
+        </animation>
+        <animation framerate="4" id="Open" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open left">
+      <box max="0.5,1.68,-0.3" min="-0.1,0,-0.5"/>
+      <layers>
+        <layer id="open" texture="barrier gate">
+          <view angle="45" col="4" x="-15" y="35"/>
+          <view angle="135" col="5" hm="true" x="-40" y="35"/>
+          <view angle="225" col="3" x="19" y="25"/>
+          <view angle="315" col="2" hm="true" x="36" y="25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="open"/>
+        </frame>
+        <frame id="open_hidden">
+          <layerref a="0" id="open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Closed" loop="false">
+          <frameref id="open_hidden"/>
+        </animation>
+        <animation framerate="4" id="Open" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

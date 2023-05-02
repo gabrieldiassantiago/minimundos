@@ -1,0 +1,103 @@
+<item.SpriteItem id="1991" name="Caixa de Surpresas" desc="Mágica feita de ouro puro." tags="rare,misc" icon="items/base/antique/icon_a_collect_06_box_luxury.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.26,0,-0.3" max="0.26,0.54,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_magicbox.png" cols="1" rows="1"/>
+    <texture id="effect" source="items/base/antique/a_collect_05_effect.png" cols="1" rows="1"/>
+    <texture id="box" source="items/base/antique/a_collect_06_box_luxury.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.26,0,-0.3" max="0.26,0.54,0.3"/>
+      <layers>
+        <layer id="box" texture="box" y="15">
+          <view angle="45" x="2" y="13"/>
+          <view angle="135" x="-2" y="13" hm="true"/>
+          <view angle="225" x="2" y="13"/>
+          <view angle="315" x="-2" y="13" hm="true"/>
+        </layer>
+        <layer id="fire 01" texture="effect" y="15">
+          <view angle="45" y="-27"/>
+          <view angle="135" y="-27" hm="true"/>
+          <view angle="225" y="-27"/>
+          <view angle="315" y="-27" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="frame 01">
+          <layerref id="box"/>
+          <layerref id="fire 01" a="0.45" blend="hardlight"/>
+        </frame>
+        <frame id="frame 02">
+          <layerref id="box"/>
+          <layerref id="fire 01" a="0.52" blend="hardlight"/>
+        </frame>
+        <frame id="frame 03">
+          <layerref id="box"/>
+          <layerref id="fire 01" a="0.6" blend="hardlight"/>
+        </frame>
+        <frame id="frame 04">
+          <layerref id="box"/>
+          <layerref id="fire 01" a="0.65" blend="hardlight"/>
+        </frame>
+        <frame id="frame 05">
+          <layerref id="box"/>
+          <layerref id="fire 01" a="0.73" blend="hardlight"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="frame 01"/>
+          <frameref id="frame 02"/>
+          <frameref id="frame 03"/>
+          <frameref id="frame 04"/>
+          <frameref id="frame 05"/>
+          <frameref id="frame 04"/>
+          <frameref id="frame 03"/>
+          <frameref id="frame 02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="2" y="6"/>
+          <view angle="135" x="1" y="6" hm="true"/>
+          <view angle="225" x="2" y="6"/>
+          <view angle="315" x="1" y="6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf39b8a" a="0.5"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xf39b8a" a="0.55" blend="add"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xf39b8a" a="0.57"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xf39b8a" a="0.59"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Light" color="0xf39b8a" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

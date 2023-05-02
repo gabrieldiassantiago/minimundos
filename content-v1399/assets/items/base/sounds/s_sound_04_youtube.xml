@@ -1,0 +1,68 @@
+<item.WidgetItem id="5597" name="Alto-Falantes Youtube de Chão" desc="Um alto-falante invisível para tocar youtube" tags="floor,sounds,widget" icon="items/base/sounds/icon_s_sound_04_youtube.png" price="120" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_youtube.swf">
+  <volume>
+    <box min="-0.48,-0.001,-0.48" max="0.48,0,0.48"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+  </events>
+  <actions>
+    <action id="Start" trigger="false" event="widget_action(START)"/>
+    <action id="Stop" trigger="false" event="widget_action(STOP)"/>
+    <action id="Next" trigger="false" event="widget_action(NEXT)"/>
+    <action id="Play Specific Video" trigger="false" event="widget_action(PLAYVIDEO)">
+      <params>
+        <param type="string" id="Video Title" label="Publisher - Video Title"/>
+      </params>
+    </action>
+    <action id="Video Change">
+      <eval>
+        <func type="relational" id="Video Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <navigate position="infront" sitRange="8.00" standRange="5.00" targetRange="2.00" usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="itemUseWidget" value="Watch"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_watch.png"/>
+  </data>
+  <textures>
+    <texture id="spawn" source="items/base/sounds/s_sound_04_youtube.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Spawn" s="0.7" layer="surface">
+      <box min="-0.48,-0.001,-0.48" max="0.48,0,0.48"/>
+      <layers>
+        <layer id="spawn" texture="spawn">
+          <view x="-1" y="27"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="spawn"/>
+        </frame>
+        <frame id="FrameOff">
+          <layerref id="spawn" color="0x9ed0f2" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Playing" framerate="2">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="FrameOff"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

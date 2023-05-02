@@ -1,0 +1,197 @@
+<item.SpriteItem id="6362" name="Aura de Coração Play" desc="uma silhueta de coração" tags="consumable,actionbar,auras,wear,usable,nopvp,action_wearable_toggle" icon="items/base/consumables/auras/aur_04_heart_icon.png" price="1270" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.42,0.1"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_perfume.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+5"/>
+  </data>
+  <textures>
+    <texture id="Candle" source="items/base/consumables/auras/aur_01_kitty_item_candle.png" cols="2" rows="1"/>
+    <texture id="Flames" source="items/base/consumables/auras/aur_04_heart_item_flames.png" cols="2" rows="1"/>
+    <texture id="Aura" source="items/base/consumables/auras/aur_04_heart_item_aura.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_halo_spread.png" cols="1" rows="1"/>
+    <texture id="Smoke" source="items/base/consumables/auras/aur_01_kitty_item_smoke.png" cols="2" rows="1"/>
+    <texture id="Intense" source="items/base/consumables/auras/aur_01_kitty_item_glow.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.42,0.1"/>
+      <layers>
+        <layer id="Candle01" texture="Candle" y="6">
+          <view y="21"/>
+        </layer>
+        <layer id="Candle02" texture="Candle" y="6">
+          <view col="1" x="1" y="21"/>
+        </layer>
+        <layer id="Flames01" texture="Flames">
+          <view y="14"/>
+        </layer>
+        <layer id="Flames02" texture="Flames">
+          <view x="-1" y="14" hm="true"/>
+        </layer>
+        <layer id="Flames03" texture="Flames">
+          <view col="1" y="14"/>
+        </layer>
+        <layer id="Flames04" texture="Flames">
+          <view col="1" x="-2" y="14" hm="true"/>
+        </layer>
+        <layer id="Aura01" texture="Aura">
+          <view x="-1" y="-37"/>
+        </layer>
+        <layer id="Smoke01" texture="Smoke">
+          <view/>
+        </layer>
+        <layer id="Smoke02" texture="Smoke">
+          <view col="1"/>
+        </layer>
+        <layer id="Smoke03" texture="Smoke">
+          <view hm="true"/>
+        </layer>
+        <layer id="Smoke04" texture="Smoke">
+          <view col="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="C01">
+          <layerref id="Candle01"/>
+          <layerref id="Flames01"/>
+          <layerref id="Smoke01" color="0xea81eb" a="0.4"/>
+          <layerref id="Smoke04" color="0xc2a6f4" a="0.65"/>
+          <layerref id="Aura01"/>
+        </frame>
+        <frame id="C02">
+          <layerref id="Candle02"/>
+          <layerref id="Flames03"/>
+          <layerref id="Smoke03" color="0xea81eb" a="0.5"/>
+          <layerref id="Smoke02" color="0xc2a6f4" a="0.6"/>
+          <layerref id="Aura01"/>
+        </frame>
+        <frame id="C03">
+          <layerref id="Candle01"/>
+          <layerref id="Flames02"/>
+          <layerref id="Smoke02" color="0xea81eb" a="0.55"/>
+          <layerref id="Smoke03" color="0xc2a6f4" a="0.7"/>
+          <layerref id="Aura01"/>
+        </frame>
+        <frame id="C04">
+          <layerref id="Candle02"/>
+          <layerref id="Flames04"/>
+          <layerref id="Smoke04" color="0xea81eb" a="0.5"/>
+          <layerref id="Smoke01" color="0xc2a6f4" a="0.55"/>
+          <layerref id="Aura01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="C01"/>
+          <frameref id="C02"/>
+          <frameref id="C03"/>
+          <frameref id="C04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="Light">
+          <view y="13" alpha="0.7"/>
+        </layer>
+        <layer id="Light02" texture="Light">
+          <view y="13" alpha="0.8"/>
+        </layer>
+        <layer id="Light03" texture="Light">
+          <view y="13" alpha="0.9"/>
+        </layer>
+        <layer id="Light04" texture="Light">
+          <view y="13"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light01" color="0xec8ded"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light02" color="0xec8ded"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Light03" color="0xec8ded"/>
+        </frame>
+        <frame id="On04">
+          <layerref id="Light04" color="0xec8ded"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+          <frameref id="On03"/>
+          <frameref id="On02"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="Intense" align="middle">
+          <view y="-4"/>
+        </layer>
+        <layer id="Light02" texture="Intense" align="middle">
+          <view col="1" y="-4"/>
+        </layer>
+        <layer id="Light03" texture="Intense" align="middle">
+          <view y="-4" hm="true"/>
+        </layer>
+        <layer id="Light04" texture="Intense" align="middle">
+          <view col="1" y="-4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light01" color="0xe251e3"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light02" color="0xe251e3" a="0.9"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Light03" color="0xe251e3" a="0.8"/>
+        </frame>
+        <frame id="On04">
+          <layerref id="Light04" color="0xe251e3" a="0.7"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+          <frameref id="On03"/>
+          <frameref id="On02"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,27 @@
+<item.SpriteItem id="3329" name="Capacete para Permanente Luxe " desc="Um aparelho para permanentes ultra duradouros." tags="misc" icon="items/base/modern/icon_m_fashionmission_hair_perm_stand_b.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="190">
+  <volume>
+    <box min="-0.3,0,-0.35" max="0.3,1.75,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_fashionmission_hair_perm_stand_b.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.35" max="0.3,1.75,0.35"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="10" y="28"/>
+          <view angle="135" x="-10" y="28" hm="true"/>
+          <view angle="225" col="1" x="-8" y="28" hm="true"/>
+          <view angle="315" col="1" x="8" y="28"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

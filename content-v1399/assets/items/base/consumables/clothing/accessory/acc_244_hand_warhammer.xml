@@ -1,0 +1,34 @@
+<item.SpriteItem id="0" name="War Hammer" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Hammer" source="items/base/consumables/clothing/accessory/acc_244_hand_warhammer.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Hammer" texture="Hammer">
+          <view angle="0" x="-35" y="65"/>
+          <view angle="45" col="1" x="-28" y="58"/>
+          <view angle="90" col="2" x="-5" y="50"/>
+          <view angle="135" col="1" x="18" y="55" hm="true"/>
+          <view angle="180" x="34" y="60" hm="true"/>
+          <view angle="225" col="4" x="27" y="69" hm="true"/>
+          <view angle="270" col="3" x="4" y="76" hm="true"/>
+          <view angle="315" col="4" x="-22" y="74"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations>
+        <animation id="On" framerate="2"/>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

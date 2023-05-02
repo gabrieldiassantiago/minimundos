@@ -1,0 +1,38 @@
+<item.SpriteItem name="Caixa de Fósforos" desc="Iluminação imediata" tags="consumable,light,actionbar,real,hand,usable,stackable,action_consumable,market" icon="items/base/consumables/magic/icon_con_item_42_matches.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="1499" price="3" tokens="30" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.14,0,-0.1" max="0.14,0.08,0.1"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="chair"/>
+    <entry key="targetRange" value="2"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemConsume" value="Hold"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_hold.png"/>
+  </data>
+  <textures>
+    <texture id="matches" source="items/base/consumables/magic/con_item_42_matches.png" cols="6" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="storch">
+      <box min="-0.14,0,-0.1" max="0.14,0.08,0.1"/>
+      <layers>
+        <layer id="storch" texture="matches">
+          <view angle="45" col="4" x="-1" y="13"/>
+          <view angle="135" col="4" x="1" y="13" hm="true"/>
+          <view angle="225" col="5" y="11"/>
+          <view angle="315" col="5" y="12" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,187 @@
+<item.SpriteItem id="6022" name="Traje Dahlia Negra" desc="Mortalmente poderosa e esmagadora de almas" tags="rare,consumable,clothing,back,head,actionbar,wear,nopvp,suits,action_wearable_toggle" icon="items/base/consumables/clothing/suits/suit_112_dahlia_icon.png" price="59500" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_112_frag_blackdahlia.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes" value="fire+100"/>
+    <entry key="action_attributes_secondary" value="health+100,speed+100"/>
+  </data>
+  <textures>
+    <texture id="robot" source="items/base/consumables/clothing/suits/suit_112_dahlia_item.png" cols="2" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/feet/icon_con_feet_37_shadow.png" cols="2" rows="1"/>
+    <texture id="wings" source="items/base/consumables/clothing/suits/suit_112_dahlia_back.png" cols="5" rows="4"/>
+    <texture id="Texture01" source="items/base/consumables/clothing/suits/suit_112_dahlia_glow.png" cols="1" rows="1"/>
+    <texture id="Cloud" source="items/base/consumables/clothing/suits/suit_112_dahlia_surface.png" cols="4" rows="1"/>
+    <texture id="fire" source="items/base/consumables/clothing/suits/suit_112_dahlia_fragrance.png" cols="4" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_portal.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+      <layers>
+        <layer id="Robot" texture="robot" y="15">
+          <view angle="45" y="-50"/>
+          <view angle="135" y="-50" hm="true"/>
+          <view angle="225" col="1" x="1" y="-50"/>
+          <view angle="315" col="1" x="1" y="-50" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="30"/>
+          <view angle="135" y="30"/>
+          <view angle="225" y="30"/>
+          <view angle="315" y="30"/>
+        </layer>
+        <layer id="back_01" texture="wings">
+          <view angle="45" x="-90" y="50"/>
+          <view angle="135" x="90" y="50" hm="true"/>
+          <view angle="225" col="3" x="22" y="-15" alpha="0" hm="true"/>
+          <view angle="315" col="3" x="-22" y="-15" alpha="0"/>
+        </layer>
+        <layer id="back_02" texture="wings">
+          <view angle="45" row="1" x="-90" y="50"/>
+          <view angle="135" row="1" x="90" y="50" hm="true"/>
+          <view angle="225" col="3" row="1" x="22" y="-15" alpha="0" hm="true"/>
+          <view angle="315" col="3" row="1" x="-22" y="-15" alpha="0"/>
+        </layer>
+        <layer id="back_03" texture="wings">
+          <view angle="45" row="2" x="-90" y="50"/>
+          <view angle="135" row="2" x="90" y="50" hm="true"/>
+          <view angle="225" col="3" row="2" x="22" y="-15" alpha="0" hm="true"/>
+          <view angle="315" col="3" row="2" x="-22" y="-15" alpha="0"/>
+        </layer>
+        <layer id="back_04" texture="wings">
+          <view angle="45" row="3" x="-90" y="50"/>
+          <view angle="135" row="3" x="90" y="50" hm="true"/>
+          <view angle="225" col="3" row="3" x="22" y="-15" alpha="0" hm="true"/>
+          <view angle="315" col="3" row="3" x="-22" y="-15" alpha="0"/>
+        </layer>
+        <layer id="front_01" texture="wings">
+          <view angle="45" x="-90" y="50" alpha="0"/>
+          <view angle="135" x="90" y="50" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="110" y="115" hm="true"/>
+          <view angle="315" col="3" x="-110" y="115"/>
+        </layer>
+        <layer id="front_02" texture="wings">
+          <view angle="45" row="1" x="-90" y="50" alpha="0"/>
+          <view angle="135" row="1" x="90" y="50" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="1" x="110" y="115" hm="true"/>
+          <view angle="315" col="3" row="1" x="-110" y="115"/>
+        </layer>
+        <layer id="front_03" texture="wings">
+          <view angle="45" row="2" x="-90" y="50" alpha="0"/>
+          <view angle="135" row="2" x="90" y="50" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="2" x="110" y="115" hm="true"/>
+          <view angle="315" col="3" row="2" x="-110" y="115"/>
+        </layer>
+        <layer id="front_04" texture="wings">
+          <view angle="45" row="3" x="-90" y="50" alpha="0"/>
+          <view angle="135" row="3" x="90" y="50" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="3" x="110" y="115" hm="true"/>
+          <view angle="315" col="3" row="3" x="-110" y="115"/>
+        </layer>
+        <layer id="swirl01" texture="Cloud">
+          <view x="3" y="45"/>
+        </layer>
+        <layer id="swirl02" texture="Cloud">
+          <view col="1" x="3" y="45"/>
+        </layer>
+        <layer id="swirl03" texture="Cloud">
+          <view col="2" y="45"/>
+        </layer>
+        <layer id="swirl04" texture="Cloud">
+          <view col="3" x="7" y="45"/>
+        </layer>
+        <layer id="glow" texture="Texture01">
+          <view x="-2" y="36"/>
+        </layer>
+        <layer id="flame01" texture="fire">
+          <view/>
+        </layer>
+        <layer id="flame02" texture="fire">
+          <view col="1"/>
+        </layer>
+        <layer id="flame03" texture="fire">
+          <view col="2"/>
+        </layer>
+        <layer id="flame04" texture="fire">
+          <view col="3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="swirl01"/>
+          <layerref id="shadow"/>
+          <layerref id="back_01"/>
+          <layerref id="Robot"/>
+          <layerref id="front_01"/>
+          <layerref id="glow"/>
+          <layerref id="flame01" y="-15"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="swirl02"/>
+          <layerref id="shadow"/>
+          <layerref id="back_02" y="1"/>
+          <layerref id="Robot" y="1"/>
+          <layerref id="front_02" y="1"/>
+          <layerref id="glow"/>
+          <layerref id="flame02" y="-15"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="swirl03"/>
+          <layerref id="shadow"/>
+          <layerref id="back_03" y="2"/>
+          <layerref id="Robot" y="2"/>
+          <layerref id="front_03" y="2"/>
+          <layerref id="glow"/>
+          <layerref id="flame03" y="-15"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="swirl04"/>
+          <layerref id="shadow"/>
+          <layerref id="back_04" y="1"/>
+          <layerref id="Robot" y="1"/>
+          <layerref id="front_04" y="1"/>
+          <layerref id="glow"/>
+          <layerref id="flame04" y="-15"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xed8cd9"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

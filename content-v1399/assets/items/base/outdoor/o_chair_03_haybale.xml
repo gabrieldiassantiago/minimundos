@@ -1,0 +1,49 @@
+<item.ChairItem desc="Um bloco de feno." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/outdoor/icon_o_chair_03_haybale.png" id="2616" name="Bloco de feno" tags="chair" minLevel="1" minCPLevel="1" price="16" tokens="160">
+  <seats>
+    <seat x="0.12" y="1">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.36,0,-0.48" max="0.48,1,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="rock seat" source="items/base/outdoor/o_chair_03_haybale.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Seat">
+      <box min="-0.36,0,-0.48" max="0.48,1,0.48"/>
+      <layers>
+        <layer id="rock seat" texture="rock seat">
+          <view angle="45" y="32"/>
+          <view angle="135" y="32" hm="true"/>
+          <view angle="225" y="32"/>
+          <view angle="315" y="32" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

@@ -1,0 +1,53 @@
+<item.SpriteItem name="Caixa de Som Poderosa" desc="Poderosa não só no nome." tags="admin,speaker" icon="items/base/modern/icon_m_speakers_pa_metal.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="2207">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,1.52,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture01" source="items/base/modern/m_speakers_pa_stand.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/modern/m_speakers_pa.png" cols="2" rows="1"/>
+    <texture id="Texture02" source="items/base/modern/m_speakers_cord.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,1.52,0.3"/>
+      <layers>
+        <layer id="cord" texture="Texture02" y="17">
+          <view angle="45" x="-17" y="-21"/>
+          <view angle="135" x="17" y="-21" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="stand" texture="Texture01" y="17">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="front speaker" texture="Texture" y="-21">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" x="2"/>
+          <view angle="315" x="-2" hm="true"/>
+        </layer>
+        <layer id="rear speaker" texture="Texture" y="-22">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" col="1" x="2"/>
+          <view angle="315" col="1" x="-2" hm="true"/>
+        </layer>
+        <layer id="cord01" texture="Texture02" y="17">
+          <view angle="45" x="-17" y="-21" alpha="0"/>
+          <view angle="135" x="17" y="-21" alpha="0" hm="true"/>
+          <view angle="225" x="21" y="-7" hm="true"/>
+          <view angle="315" x="-18" y="-6"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,122 @@
+<f id="Wraith" parentId="Suits">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <g id="WraithTop" name="Wraith Top" icon="$bf/icon_f_retro.png" xp="N">
+        <s id="OldBballTorsoBase" cId="Torso" s="$bm/tshirt_torso.png" pri="1"/>
+        <s id="WraithJacketTorsoBase" cId="Torso" s="items/base/consumables/clothing/top04/top04_01_shirttorso.png" pri="2"/>
+        <s id="TshirtArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_long_arm_idle.png" pri="2"/>
+        <s id="TshirtArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_long_arm_walk1.png" pri="2"/>
+        <s id="TshirtArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_long_arm_walk2.png" pri="2"/>
+        <s id="TshirtArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_long_arm_walk3.png" pri="2"/>
+        <s id="TshirtArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_long_arm_sit.png" pri="2"/>
+        <c sId="OldBballTorsoBase" c="4737108" a="0.97" b="-29.0" lId="PandaTopColor"/>
+        <c sId="TshirtArmIdleBase" c="5379349" a="1.00" b="63.8" ct="1.41" lId="WraithJacketColour"/>
+        <c sId="TshirtArmWalk1Base" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+        <c sId="TshirtArmWalk2Base" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+        <c sId="TshirtArmWalk3Base" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+        <c sId="TshirtArmSitBase" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+        <s id="LongArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_long_arm_throw.png" pri="2"/>
+        <s id="LongArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_long_arm_raise.png" pri="2"/>
+        <c sId="LongArmThrowBase" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+        <c sId="LongArmRaiseBase" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+        <c sId="WraithJacketTorsoBase" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+      </g>
+      <g id="WraithShoe" name="Wraith Shoe" icon="$bu/icon_shoe_foot.png">
+        <s id="WraithIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_01_idle.png" pri="2"/>
+        <s id="WraithWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_01_walk1.png" pri="2"/>
+        <s id="WraithWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_01_walk2.png" pri="2"/>
+        <s id="WraithWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_01_walk3.png" pri="2"/>
+        <s id="WraithWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_01_walk4.png" pri="2"/>
+        <s id="WraithSit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_01_sit.png" pri="2"/>
+        <c sId="WraithIdleBase" c="5379349" a="1.00" b="63.3" ct="2.00" lId="WraithSkinColor"/>
+        <c sId="WraithWalk1Base" c="5379349" a="1.00" b="63.3" ct="2.00" lId="WraithSkinColor" lw="N"/>
+        <c sId="WraithWalk2Base" c="5379349" a="1.00" b="63.3" ct="2.00" lId="WraithSkinColor" lw="N"/>
+        <c sId="WraithWalk3Base" c="5379349" a="1.00" b="63.3" ct="2.00" lId="WraithSkinColor" lw="N"/>
+        <c sId="WraithWalk4Base" c="5379349" a="1.00" b="63.3" ct="2.00" lId="WraithSkinColor" lw="N"/>
+        <c sId="WraithSit" c="5379349" a="1.00" b="63.3" ct="2.00" lId="WraithSkinColor" lw="N"/>
+      </g>
+      <g id="WraithPants" name="Pants" icon="$bu/icon_legs_trouser.png">
+        <s id="WraithPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_01_idle.png" pri="3"/>
+        <s id="WraithPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_01_walk1.png" pri="3"/>
+        <s id="WraithPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_01_walk2.png" pri="3"/>
+        <s id="WraithPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_01_walk3.png" pri="3"/>
+        <s id="WraithPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_01_walk4.png" pri="3"/>
+        <s id="WraithSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_01_sit_upper.png" pri="3"/>
+        <s id="WraithSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/bot03/bot03_01_lower.png" pri="3"/>
+        <c sId="WraithPantIdleBase" c="16777215" b="-104.2" lId="PandaPantsColor"/>
+        <c sId="WraithPantWalk1Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="WraithPantWalk2Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="WraithPantWalk3Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="WraithPantWalk4Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="WraithSitUpperBase" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="WraithSitLowerBase" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+      </g>
+    </g>
+    <g id="Female">
+      <g id="WraithHighHeel" name="High heels" icon="$bf/icon_shoe_highheel.png">
+        <s id="WraithChuckIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_04_heel_idle.png" pri="2"/>
+        <s id="WraithChuckWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_04_heel_walk1.png" pri="2"/>
+        <s id="WraithChuckWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_04_heel_walk2.png" pri="2"/>
+        <s id="WraithChuckWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_04_heel_walk3.png" pri="2"/>
+        <s id="WraithChuckWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_04_heel_walk4.png" pri="2"/>
+        <s id="WraithChuckSit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_04_heel_sit.png" pri="2"/>
+        <c name="shoe" sId="WraithChuckIdleBase" c="5379349" a="1.00" b="62.9" ct="2.00" lId="WraithHeelColor"/>
+        <c name="shoe" sId="WraithChuckWalk1Base" c="5379349" a="1.00" b="62.9" ct="2.00" lId="WraithHeelColor" lw="N"/>
+        <c name="shoe" sId="WraithChuckWalk2Base" c="5379349" a="1.00" b="62.9" ct="2.00" lId="WraithHeelColor" lw="N"/>
+        <c name="shoe" sId="WraithChuckWalk3Base" c="5379349" a="1.00" b="62.9" ct="2.00" lId="WraithHeelColor" lw="N"/>
+        <c name="shoe" sId="WraithChuckWalk4Base" c="5379349" a="1.00" b="62.9" ct="2.00" lId="WraithHeelColor" lw="N"/>
+        <c name="shoe" sId="WraithChuckSit" c="5379349" a="1.00" b="62.9" ct="2.00" lId="WraithHeelColor" lw="N"/>
+      </g>
+      <g id="WraithTop" name="Wraith Top" icon="$bf/icon_f_retro.png" xp="N">
+        <s id="OldBballTorsoBase" cId="Torso" s="$bf/tshirt_torso.png" pri="1"/>
+        <s id="WraithJacketTorsoBase" cId="Torso" s="items/base/consumables/clothing/top04/top04_05_femshirt.png" pri="2"/>
+        <s id="TshirtArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_long_arm_idle.png" pri="2"/>
+        <s id="TshirtArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_long_arm_walk1.png" pri="2"/>
+        <s id="TshirtArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_long_arm_walk2.png" pri="2"/>
+        <s id="TshirtArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_long_arm_walk3.png" pri="2"/>
+        <s id="TshirtArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_long_arm_sit.png" pri="2"/>
+        <c sId="OldBballTorsoBase" c="4737108" a="0.97" b="-29.0" lId="PandaTopColor"/>
+        <c sId="TshirtArmIdleBase" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour"/>
+        <c sId="TshirtArmWalk1Base" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+        <c sId="TshirtArmWalk2Base" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+        <c sId="TshirtArmWalk3Base" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+        <c sId="TshirtArmSitBase" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+        <s id="LongArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_long_arm_throw.png" pri="2"/>
+        <s id="LongArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_long_arm_raise.png" pri="2"/>
+        <c sId="LongArmThrowBase" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+        <c sId="LongArmRaiseBase" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+        <c sId="WraithJacketTorsoBase" c="5379349" a="1.00" b="65.3" ct="1.27" lId="WraithJacketColour" lw="N"/>
+      </g>
+      <g id="WraithPants" name="Pants" icon="$bu/icon_legs_trouser.png">
+        <s id="WraithPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_05_idle.png" pri="3"/>
+        <s id="WraithPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_05_walk1.png" pri="3"/>
+        <s id="WraithPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_05_walk2.png" pri="3"/>
+        <s id="WraithPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_05_walk3.png" pri="3"/>
+        <s id="WraithPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_05_walk4.png" pri="3"/>
+        <s id="WraithSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_05_sit.png" pri="3"/>
+        <s id="WraithSitLowerBase" cId="LegSitLower" s="$bf/longskirt_sit.png" pri="3"/>
+        <c sId="WraithPantIdleBase" c="16777215" b="-104.2" lId="PandaPantsColor"/>
+        <c sId="WraithPantWalk1Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="WraithPantWalk2Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="WraithPantWalk3Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="WraithPantWalk4Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="WraithSitUpperBase" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="WraithSitLowerBase" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+      </g>
+    </g>
+  </b>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+</f>

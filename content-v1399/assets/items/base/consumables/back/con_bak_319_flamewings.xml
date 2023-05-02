@@ -1,0 +1,245 @@
+<item.SpriteItem id="0" name="Fantasy Wings" desc="A pair of fantasy wings" icon="items/base/consumables/back/con_bak_319_flamewings_icon.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="WingsMain" source="items/base/consumables/back/con_bak_319_flamewings.png" cols="3" rows="5"/>
+    <texture id="WingsSit" source="items/base/consumables/back/con_bak_319_flamewings_sit.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="Wingframe1a" texture="WingsMain">
+          <view angle="0" x="-21" y="70"/>
+          <view angle="45" row="1" x="-18" y="75"/>
+          <view angle="90" row="2" x="-49" y="70"/>
+          <view angle="135" row="1" x="18" y="75" hm="true"/>
+          <view angle="180" x="21" y="70" hm="true"/>
+          <view angle="225" row="4" x="24" y="83" hm="true"/>
+          <view angle="270" row="3" x="35" y="97"/>
+          <view angle="315" row="4" x="-24" y="83"/>
+        </layer>
+        <layer id="Wingframe1b" texture="WingsMain">
+          <view angle="0" x="-21" y="70" alpha="0"/>
+          <view angle="45" row="1" x="-18" y="75" alpha="0"/>
+          <view angle="90" row="2" x="49" y="70" hm="true"/>
+          <view angle="135" row="1" x="18" y="75" alpha="0" hm="true"/>
+          <view angle="180" x="21" y="70" alpha="0" hm="true"/>
+          <view angle="225" row="4" x="24" y="83" alpha="0" hm="true"/>
+          <view angle="270" row="3" x="-35" y="97" hm="true"/>
+          <view angle="315" row="4" x="-24" y="83" alpha="0"/>
+        </layer>
+        <layer id="Wingframe2a" texture="WingsMain">
+          <view angle="0" col="1" x="-10" y="98"/>
+          <view angle="45" col="1" row="1" x="-9" y="105"/>
+          <view angle="90" col="1" row="2" x="-75" y="104"/>
+          <view angle="135" col="1" row="1" x="9" y="105" hm="true"/>
+          <view angle="180" col="1" x="10" y="98" hm="true"/>
+          <view angle="225" col="1" row="4" x="11" y="110" hm="true"/>
+          <view angle="270" col="1" row="3" x="71" y="111"/>
+          <view angle="315" col="1" row="4" x="-11" y="110"/>
+        </layer>
+        <layer id="Wingframe2b" texture="WingsMain">
+          <view angle="0" col="1" x="-10" y="98" alpha="0"/>
+          <view angle="45" col="1" row="1" x="-9" y="105" alpha="0"/>
+          <view angle="90" col="1" row="2" x="75" y="104" hm="true"/>
+          <view angle="135" col="1" row="1" x="9" y="105" alpha="0" hm="true"/>
+          <view angle="180" col="1" x="10" y="98" alpha="0" hm="true"/>
+          <view angle="225" col="1" row="4" x="11" y="110" alpha="0" hm="true"/>
+          <view angle="270" col="1" row="3" x="-71" y="111" hm="true"/>
+          <view angle="315" col="1" row="4" x="-11" y="110" alpha="0"/>
+        </layer>
+        <layer id="Wingframe3a" texture="WingsMain">
+          <view angle="0" col="2" x="13" y="154"/>
+          <view angle="45" col="2" row="1" x="29" y="156"/>
+          <view angle="90" col="2" row="2" x="-44" y="150"/>
+          <view angle="135" col="2" row="1" x="-29" y="156" hm="true"/>
+          <view angle="180" col="2" x="-13" y="154" hm="true"/>
+          <view angle="225" col="2" row="4" x="-25" y="145" hm="true"/>
+          <view angle="270" col="2" row="3" x="41" y="130"/>
+          <view angle="315" col="2" row="4" x="25" y="145"/>
+        </layer>
+        <layer id="Wingframe3b" texture="WingsMain">
+          <view angle="0" col="2" x="13" y="154" alpha="0"/>
+          <view angle="45" col="2" row="1" x="29" y="156" alpha="0"/>
+          <view angle="90" col="2" row="2" x="44" y="150" hm="true"/>
+          <view angle="135" col="2" row="1" x="-29" y="156" alpha="0" hm="true"/>
+          <view angle="180" col="2" x="10" y="98" alpha="0" hm="true"/>
+          <view angle="225" col="2" row="4" x="-25" y="145" alpha="0" hm="true"/>
+          <view angle="270" col="2" row="3" x="-41" y="130" hm="true"/>
+          <view angle="315" col="2" row="4" x="25" y="145" alpha="0"/>
+        </layer>
+        <layer id="Sit" texture="WingsSit">
+          <view angle="45" x="5" y="89"/>
+          <view angle="135" x="-5" y="89" hm="true"/>
+          <view angle="225" x="-3" y="90"/>
+          <view angle="315" x="3" y="90" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Wingframe1b" y="10"/>
+          <layerref id="Wingframe1a" y="10"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Wingframe2b" y="10"/>
+          <layerref id="Wingframe2a" y="10"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Wingframe3b" y="10"/>
+          <layerref id="Wingframe3a" y="10"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Wingframe2b" y="10"/>
+          <layerref id="Wingframe2a" y="10"/>
+        </frame>
+        <frame id="Sit">
+          <layerref id="Sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Sit"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light">
+          <view y="37" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf0a27e" a="0.5"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse01" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Wingframe1a" texture="WingsMain">
+          <view angle="0" x="-21" y="70"/>
+          <view angle="45" row="1" x="-18" y="75"/>
+          <view angle="90" row="2" x="-49" y="70"/>
+          <view angle="135" row="1" x="18" y="75" hm="true"/>
+          <view angle="180" x="21" y="70" hm="true"/>
+          <view angle="225" row="4" x="24" y="83" hm="true"/>
+          <view angle="270" row="3" x="35" y="97"/>
+          <view angle="315" row="4" x="-24" y="83"/>
+        </layer>
+        <layer id="Wingframe1b" texture="WingsMain">
+          <view angle="0" x="-21" y="70" alpha="0"/>
+          <view angle="45" row="1" x="-18" y="75" alpha="0"/>
+          <view angle="90" row="2" x="49" y="70" hm="true"/>
+          <view angle="135" row="1" x="18" y="75" alpha="0" hm="true"/>
+          <view angle="180" x="21" y="70" alpha="0" hm="true"/>
+          <view angle="225" row="4" x="24" y="83" alpha="0" hm="true"/>
+          <view angle="270" row="3" x="-35" y="97" hm="true"/>
+          <view angle="315" row="4" x="-24" y="83" alpha="0"/>
+        </layer>
+        <layer id="Wingframe2a" texture="WingsMain">
+          <view angle="0" col="1" x="-10" y="98"/>
+          <view angle="45" col="1" row="1" x="-9" y="105"/>
+          <view angle="90" col="1" row="2" x="-75" y="104"/>
+          <view angle="135" col="1" row="1" x="9" y="105" hm="true"/>
+          <view angle="180" col="1" x="10" y="98" hm="true"/>
+          <view angle="225" col="1" row="4" x="11" y="110" hm="true"/>
+          <view angle="270" col="1" row="3" x="71" y="111"/>
+          <view angle="315" col="1" row="4" x="-11" y="110"/>
+        </layer>
+        <layer id="Wingframe2b" texture="WingsMain">
+          <view angle="0" col="1" x="-10" y="98" alpha="0"/>
+          <view angle="45" col="1" row="1" x="-9" y="105" alpha="0"/>
+          <view angle="90" col="1" row="2" x="75" y="104" hm="true"/>
+          <view angle="135" col="1" row="1" x="9" y="105" alpha="0" hm="true"/>
+          <view angle="180" col="1" x="10" y="98" alpha="0" hm="true"/>
+          <view angle="225" col="1" row="4" x="11" y="110" alpha="0" hm="true"/>
+          <view angle="270" col="1" row="3" x="-71" y="111" hm="true"/>
+          <view angle="315" col="1" row="4" x="-11" y="110" alpha="0"/>
+        </layer>
+        <layer id="Wingframe3a" texture="WingsMain">
+          <view angle="0" col="2" x="13" y="154"/>
+          <view angle="45" col="2" row="1" x="29" y="156"/>
+          <view angle="90" col="2" row="2" x="-44" y="150"/>
+          <view angle="135" col="2" row="1" x="-29" y="156" hm="true"/>
+          <view angle="180" col="2" x="-13" y="154" hm="true"/>
+          <view angle="225" col="2" row="4" x="-25" y="145" hm="true"/>
+          <view angle="270" col="2" row="3" x="41" y="130"/>
+          <view angle="315" col="2" row="4" x="25" y="145"/>
+        </layer>
+        <layer id="Wingframe3b" texture="WingsMain">
+          <view angle="0" col="2" x="13" y="154" alpha="0"/>
+          <view angle="45" col="2" row="1" x="29" y="156" alpha="0"/>
+          <view angle="90" col="2" row="2" x="44" y="150" hm="true"/>
+          <view angle="135" col="2" row="1" x="-29" y="156" alpha="0" hm="true"/>
+          <view angle="180" col="2" x="10" y="98" alpha="0" hm="true"/>
+          <view angle="225" col="2" row="4" x="-25" y="145" alpha="0" hm="true"/>
+          <view angle="270" col="2" row="3" x="-41" y="130" hm="true"/>
+          <view angle="315" col="2" row="4" x="25" y="145" alpha="0"/>
+        </layer>
+        <layer id="Sit" texture="WingsSit">
+          <view angle="45" x="5" y="89"/>
+          <view angle="135" x="-5" y="89" hm="true"/>
+          <view angle="225" x="-3" y="90"/>
+          <view angle="315" x="3" y="90" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Wingframe1b" y="10" a="0.5"/>
+          <layerref id="Wingframe1a" y="10" a="0.5"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Wingframe2b" y="10" a="0.5"/>
+          <layerref id="Wingframe2a" y="10" a="0.5"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Wingframe3b" y="10" a="0.5"/>
+          <layerref id="Wingframe3a" y="10" a="0.5"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Wingframe2b" y="10" a="0.5"/>
+          <layerref id="Wingframe2a" y="10" a="0.5"/>
+        </frame>
+        <frame id="Sit">
+          <layerref id="Sit" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Sit">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

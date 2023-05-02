@@ -1,0 +1,81 @@
+<item.SpriteItem id="0" name="Star" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Laptop" source="items/base/consumables/clothing/accessory/acc_219_hand_powergem.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Star01" texture="Laptop">
+          <view y="5"/>
+        </layer>
+        <layer id="Star02" texture="Laptop">
+          <view col="1" y="5"/>
+        </layer>
+        <layer id="Star03" texture="Laptop">
+          <view col="2" y="5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Star01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Star02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Star03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="Light">
+          <view angle="0" y="33" hm="true"/>
+          <view angle="45" y="29"/>
+          <view angle="90" y="29"/>
+          <view angle="135" x="2" y="29" hm="true"/>
+          <view angle="180" y="29"/>
+          <view angle="225" y="29"/>
+          <view angle="270" y="32"/>
+          <view angle="315" y="32" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Layer" color="0xc23131"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Layer" color="0xc23131" a="0.85"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Layer" color="0xc23131" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

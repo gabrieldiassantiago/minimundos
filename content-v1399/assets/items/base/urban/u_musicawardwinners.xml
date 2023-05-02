@@ -1,0 +1,104 @@
+<item.SpriteItem id="6639" name="Prêmio da Música de Ouro" desc="Congratulations!" tags="wall" icon="items/base/urban/icon_u_musicawardwinners.png" price="15" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.2,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_tv_steampunk.png" cols="1" rows="1"/>
+    <texture id="gold_one" source="items/base/urban/gold_one.png" cols="1" rows="1"/>
+    <texture id="gold_two" source="items/base/urban/gold_two.png" cols="1" rows="1"/>
+    <texture id="gold_three" source="items/base/urban/gold_three.png" cols="1" rows="1"/>
+    <texture id="gold_four" source="items/base/urban/gold_four.png" cols="1" rows="1"/>
+    <texture id="gold_five" source="items/base/urban/gold_five.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="wall">
+      <box min="-0.2,0,-0.2" max="0.2,0.2,0.2"/>
+      <layers>
+        <layer id="gold_one" texture="gold_one" align="middle">
+          <view angle="45" y="-260" alpha="0"/>
+          <view angle="135" y="-260"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="gold_two" texture="gold_two" align="middle">
+          <view angle="45" y="-260" alpha="0"/>
+          <view angle="135" y="-260"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="gold_three" texture="gold_three" align="middle">
+          <view angle="45" y="-260" alpha="0"/>
+          <view angle="135" y="-260"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="gold_four" texture="gold_four" align="middle">
+          <view angle="45" y="-260" alpha="0"/>
+          <view angle="135" y="-260"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="gold_five" texture="gold_five" align="middle">
+          <view angle="45" y="-260" alpha="0"/>
+          <view angle="135" y="-260"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="gold_one"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="gold_two"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="gold_three"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="gold_four"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="gold_five"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="1">
+          <frameref id="Frame01" duration="5"/>
+          <frameref id="Frame02" duration="5"/>
+          <frameref id="Frame03" duration="5"/>
+          <frameref id="Frame04" duration="5"/>
+          <frameref id="Frame05" duration="5"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="25" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-10"/>
+          <view angle="135" y="-10" hm="true"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xd6c3f8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,40 @@
+<item.SpriteItem id="2854" name="Caça Borboleta" desc="Rede de caçar borboletas" tags="admin,consumable,actionbar,wear,hand,usable,action_holdable_toggle" icon="items/base/consumables/magic/icon_con_item_93_butterflynet.png" price="88" tokens="888" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.2" max="0.3,1.7,0.2"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="net" source="items/base/consumables/magic/con_item_93_butterflynet.png" cols="5" rows="1"/>
+    <texture id="grass" source="items/base/consumables/magic/con_item_93_butterflynet_grass.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.2" max="0.3,1.7,0.2"/>
+      <layers>
+        <layer id="net" texture="net">
+          <view angle="45" x="-5" y="17"/>
+          <view angle="135" x="5" y="17" hm="true"/>
+          <view angle="225" col="3" x="-4" y="15"/>
+          <view angle="315" col="3" x="4" y="15" hm="true"/>
+        </layer>
+        <layer id="grass" texture="grass">
+          <view angle="45" x="-13" y="8"/>
+          <view angle="135" x="14" y="9" hm="true"/>
+          <view angle="225" x="-1" y="15"/>
+          <view angle="315" x="1" y="16" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

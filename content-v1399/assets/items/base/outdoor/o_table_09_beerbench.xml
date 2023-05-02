@@ -1,0 +1,27 @@
+<item.SpriteItem id="4765" name="Mesa de Bar Eco" desc="Uma mesa de bar" tags="table" icon="items/base/outdoor/icon_o_table_09_beerbench.png" price="50" tokens="1000" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,0.67,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="picnic bench" source="items/base/outdoor/o_table_09_beerbench.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Table" z="0.5">
+      <box min="-0.4,0,-0.99" max="0.4,0.67,0.99"/>
+      <layers>
+        <layer id="Layer" texture="picnic bench">
+          <view angle="45" x="-2" y="54"/>
+          <view angle="135" y="54" hm="true"/>
+          <view angle="225" x="-1" y="54"/>
+          <view angle="315" y="54" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,64 @@
+<item.SpriteItem id="3044" name="DJ Equipment 04" desc="DJ Equipment 04" tags="unsearchable,misc" icon="items/base/modern/icon_m_danceset_dj_04.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,0,-0.2" max="0.25,0.1,0.2"/>
+  </volume>
+  <events>
+    <event id="action" script="items/base/instruments/turntable/show_danceset_dj_04.as"/>
+    <event id="animate" script="items/base/instruments/animate_instrument.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="items/base/instruments/turntable/select_danceset_dj_04.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/modern/m_danceset_dj_04_halo.png" cols="1" rows="1"/>
+    <texture id="DJ" source="items/base/modern/m_danceset_dj_04.png" cols="2" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="scratch_01" source="items/base/instruments/turntable/snfx_scratch_01.mp3"/>
+    <sound id="scratch_02" source="items/base/instruments/turntable/snfx_scratch_02.mp3"/>
+    <sound id="scratch_03" source="items/base/instruments/turntable/snfx_scratch_03.mp3"/>
+    <sound id="scratch_04" source="items/base/instruments/turntable/snfx_scratch_04.mp3"/>
+    <sound id="loop_01" source="items/base/instruments/piano/snfx_piano_groove.mp3"/>
+    <sound id="loop_02" source="items/base/instruments/piano/snfx_piano_romantic.mp3"/>
+    <sound id="loop_03" source="items/base/instruments/piano/snfx_piano_samba.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Candle">
+      <box min="-0.25,0,-0.2" max="0.25,0.1,0.2"/>
+      <layers>
+        <layer id="DJ" texture="DJ">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="20"/>
+          <view angle="315" col="1" y="20" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xb9ddfd" a="0.8"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

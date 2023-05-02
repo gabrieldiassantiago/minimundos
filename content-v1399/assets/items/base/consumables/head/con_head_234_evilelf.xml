@@ -1,0 +1,64 @@
+<item.SpriteItem id="0" name="Persian Cat" desc="Collectible (April 2013)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="cat" source="items/base/consumables/head/con_head_234_evilelf_head.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_234_evilelf_blink.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="cat" texture="cat">
+          <view angle="0" col="2" x="1" y="18" hm="true"/>
+          <view angle="45" x="-6" y="16"/>
+          <view angle="90" col="1" y="13"/>
+          <view angle="135" x="5" y="16" hm="true"/>
+          <view angle="180" col="2" x="-1" y="18"/>
+          <view angle="225" col="3" x="8" y="20"/>
+          <view angle="270" col="4" y="22"/>
+          <view angle="315" col="3" x="-8" y="20" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="16" y="-14" hm="true"/>
+          <view angle="45" x="11" y="-10"/>
+          <view angle="90" col="1" y="-10"/>
+          <view angle="135" x="-12" y="-10" hm="true"/>
+          <view angle="180" col="2" x="-16" y="-14"/>
+          <view angle="225" col="3" x="1" y="20" alpha="0" hm="true"/>
+          <view angle="270" col="4" y="22" alpha="0"/>
+          <view angle="315" col="3" x="-2" y="20" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="cat"/>
+        </frame>
+        <frame id="blink">
+          <layerref id="cat"/>
+          <layerref id="blink"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="idle" duration="42"/>
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="32"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="64"/>
+          <frameref id="blink"/>
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

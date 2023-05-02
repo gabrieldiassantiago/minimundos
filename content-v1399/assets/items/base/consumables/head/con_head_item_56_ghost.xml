@@ -1,0 +1,51 @@
+<item.SpriteItem id="2226" name="Assombroso, o Fantasma" desc="Colecionável Mensal (Outubro de 2013)" tags="rare,consumable,actionbar,wear,head,costume,collectible,action_wearable_toggle" icon="items/base/consumables/head/icon_con_head_item_56_ghost.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="2000" minLevelType="2">
+  <volume>
+    <box min="-0.35,0,-0.2" max="0.35,0.6,0.2"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="shadow+10"/>
+    <entry key="action_attributes_secondary" value="speed+35,health+5"/>
+  </data>
+  <textures>
+    <texture id="alien" source="items/base/consumables/head/con_head_39_alien.png" cols="5" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/head/con_head_generic_dropshadow.png" cols="1" rows="1"/>
+    <texture id="head" source="items/base/consumables/head/con_head_56_ghost.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.2" max="0.35,0.6,0.2"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view y="19"/>
+        </layer>
+        <layer id="head" texture="head">
+          <view angle="45" col="1" x="1" y="17"/>
+          <view angle="135" col="1" x="-1" y="17" hm="true"/>
+          <view angle="225" col="3" x="1" y="16"/>
+          <view angle="315" col="3" x="-1" y="16" hm="true"/>
+        </layer>
+        <layer id="overlay" texture="head">
+          <view angle="45" col="1" x="1" y="17"/>
+          <view angle="135" col="1" x="-1" y="17" hm="true"/>
+          <view angle="225" col="3" x="1" y="16"/>
+          <view angle="315" col="3" x="-1" y="16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="head">
+          <layerref id="shadow"/>
+          <layerref id="head"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

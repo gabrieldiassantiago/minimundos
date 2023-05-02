@@ -1,0 +1,57 @@
+<item.SpriteItem id="2156" name="Borboleta Azul" desc="Uma borboleta realmente rara." tags="admin,misc" icon="items/base/lab/icon_l_butterflies_01_blue.png" minLevel="1" minCPLevel="1" dropTargetType="floor" dropTargetList="floor,avatar,table" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,1,0.1"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="butterflies" source="items/base/lab/l_butterflies_01.png" cols="2" rows="2"/>
+    <texture id="shad" source="items/base/lab/l_butterflies_01_shad.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,1,0.1"/>
+      <layers>
+        <layer id="floor" texture="floor">
+          <view y="32"/>
+        </layer>
+        <layer id="butterfly a 01" texture="butterflies">
+          <view angle="45" y="-64"/>
+          <view angle="135" y="-83" hm="true"/>
+          <view angle="225" y="-74"/>
+          <view angle="315" y="-93" hm="true"/>
+        </layer>
+        <layer id="butterfly a 02" texture="butterflies">
+          <view angle="45" col="1" y="-64"/>
+          <view angle="135" col="1" y="-83" hm="true"/>
+          <view angle="225" col="1" y="-74"/>
+          <view angle="315" col="1" y="-93" hm="true"/>
+        </layer>
+        <layer id="shad" texture="shad">
+          <view angle="45" y="12"/>
+          <view angle="135" y="12" hm="true"/>
+          <view angle="225" y="12"/>
+          <view angle="315" y="12" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="butterfly 01">
+          <layerref id="butterfly a 01"/>
+          <layerref id="shad"/>
+        </frame>
+        <frame id="butterfly 02">
+          <layerref id="butterfly a 02"/>
+          <layerref id="shad" a="0.9"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="butterfly" framerate="8">
+          <frameref id="butterfly 01"/>
+          <frameref id="butterfly 02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

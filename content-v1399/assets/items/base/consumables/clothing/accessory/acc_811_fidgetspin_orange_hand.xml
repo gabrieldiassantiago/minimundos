@@ -1,0 +1,81 @@
+<item.SpriteItem id="0" name="Beans" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Laptop" source="items/base/consumables/clothing/accessory/acc_811_fidgetspin_orange_hand.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Fidget_01" texture="Laptop">
+          <view angle="0" x="-1" y="2"/>
+          <view angle="45" x="3" y="5"/>
+          <view angle="90" x="2" y="6"/>
+          <view angle="135" x="1" y="5" hm="true"/>
+          <view angle="180" y="5" hm="true"/>
+          <view angle="225" x="-3" y="6"/>
+          <view angle="270" x="-5" y="-2"/>
+          <view angle="315" x="-2" y="3" hm="true"/>
+        </layer>
+        <layer id="Fidget_02" texture="Laptop">
+          <view angle="0" col="1" x="-1" y="2"/>
+          <view angle="45" col="1" x="3" y="5"/>
+          <view angle="90" col="1" x="2" y="6"/>
+          <view angle="135" col="1" x="1" y="5" hm="true"/>
+          <view angle="180" col="1" y="5" hm="true"/>
+          <view angle="225" col="1" x="-3" y="6"/>
+          <view angle="270" col="1" x="-5" y="-2"/>
+          <view angle="315" col="1" x="-2" y="3" hm="true"/>
+        </layer>
+        <layer id="Fidget_03" texture="Laptop">
+          <view angle="0" col="2" x="-1" y="2"/>
+          <view angle="45" col="2" x="3" y="5"/>
+          <view angle="90" col="2" x="2" y="6"/>
+          <view angle="135" col="2" x="1" y="5" hm="true"/>
+          <view angle="180" col="2" y="5" hm="true"/>
+          <view angle="225" col="2" x="-3" y="6"/>
+          <view angle="270" col="2" x="-5" y="-2"/>
+          <view angle="315" col="2" x="-2" y="3" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Fidget_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Fidget_02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Fidget_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="01" duration="4"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

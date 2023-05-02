@@ -1,0 +1,109 @@
+<item.SpriteItem id="3062" name="Snow Fox Pedestal" desc="A marble pedestal for the Snow Fox swuffy." tags="rare,table" icon="items/base/modern/icon_m_toy_swuffy_04_snowfox_stand.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="88" tokens="888">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,1.08,0.3"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_toy_swuffy_04_snowfox_stand.png" cols="1" rows="1"/>
+    <texture id="Texture01" source="items/base/modern/m_toy_swuffy_04_snowfox_rays.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/modern/m_toy_swuffy_04_snowfox_glow.png" cols="1" rows="1"/>
+    <texture id="light front" source="items/base/modern/m_toy_swuffy_04_snowfox_rays_front.png" cols="1" rows="1"/>
+    <texture id="Texture02" source="items/base/shared/s_fx_flare_halo_mod.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,1.08,0.3"/>
+      <layers>
+        <layer id="Layer01" texture="Texture01" y="-85">
+          <view angle="45" x="4" y="19"/>
+          <view angle="135" x="-4" y="19" hm="true"/>
+          <view angle="225" x="4" y="19"/>
+          <view angle="315" x="-4" y="19" hm="true"/>
+        </layer>
+        <layer id="Layer02" texture="Texture01" y="-85">
+          <view angle="45" col="1" x="4" y="19"/>
+          <view angle="135" col="1" x="-4" y="19" hm="true"/>
+          <view angle="225" col="1" x="4" y="19"/>
+          <view angle="315" col="1" x="-4" y="19" hm="true"/>
+        </layer>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" y="21"/>
+          <view angle="135" y="21" hm="true"/>
+          <view angle="225" y="21"/>
+          <view angle="315" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer01"/>
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Layer02"/>
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Node02" depthBias="-1">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="light front">
+          <view angle="45" x="4" y="-67" alpha="0.45"/>
+          <view angle="135" x="-4" y="-67" alpha="0.45" hm="true"/>
+          <view angle="225" x="4" y="-67" alpha="0.45"/>
+          <view angle="315" x="-4" y="-67" alpha="0.45" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6">
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="1" y="-27"/>
+          <view angle="135" x="-1" y="-27" hm="true"/>
+          <view angle="225" x="1" y="-27"/>
+          <view angle="315" x="-1" y="-27" hm="true"/>
+        </layer>
+        <layer id="Light01" texture="Texture02" align="middle">
+          <view angle="45" y="-18"/>
+          <view angle="135" y="-18" hm="true"/>
+          <view angle="225" y="-18"/>
+          <view angle="315" y="-18"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+          <layerref id="Light01" color="0x45e0e1" a="0.4"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

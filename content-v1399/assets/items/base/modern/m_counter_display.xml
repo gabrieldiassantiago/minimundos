@@ -1,0 +1,80 @@
+<item.SpriteItem id="3297" name="Display de Vidro" desc="Um moderno display de vidro." tags="table" icon="items/base/modern/icon_m_counter_display.png" price="80" tokens="800" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.45,1.06,0.49"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="Counter" source="items/base/modern/m_counter_display.png" cols="2" rows="1"/>
+    <texture id="glass" source="items/base/modern/m_counter_display_glass.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" depthBias="0.2">
+      <box min="-0.49,0,-0.49" max="0.45,1.06,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Counter">
+          <view angle="45" x="6" y="31"/>
+          <view angle="135" x="-8" y="31" hm="true"/>
+          <view angle="225" col="1" x="-7" y="34"/>
+          <view angle="315" col="1" x="7" y="34" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Node45" x="0.45" y="1.01" z="-0.45">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="glass">
+          <view angle="45" x="6" y="-1"/>
+          <view angle="135" x="-5" y="36" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-3" y="38" alpha="0"/>
+          <view angle="315" col="1" x="3" y="38" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Node135" x="0.45" y="1.01" z="0.45">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="glass">
+          <view angle="45" x="5" y="4" alpha="0"/>
+          <view angle="135" x="-8" y="-1" hm="true"/>
+          <view angle="225" col="1" x="-3" y="38" alpha="0"/>
+          <view angle="315" col="1" x="3" y="38" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Node225" x="-0.45" y="1.01" z="0.45">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="glass">
+          <view angle="45" x="5" y="4" alpha="0"/>
+          <view angle="135" x="-5" y="29" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-9"/>
+          <view angle="315" col="1" x="3" y="38" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Node315" x="-0.45" y="1.01" z="-0.45">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="glass">
+          <view angle="45" x="5" y="4" alpha="0"/>
+          <view angle="135" x="-5" y="36" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-3" y="38" alpha="0"/>
+          <view angle="315" col="1" x="9" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

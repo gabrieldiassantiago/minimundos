@@ -1,0 +1,109 @@
+<f id="Top01_63_Soccer" parentId="Top01">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top01_63TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_63_soccer_torso_base_m.png" pri="1"/>
+      <c sId="Top01_63TorsoMaleBase" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top01_63Color1" lw="N"/>
+      <s id="Top01_63TorsoMaleStripe" cId="Torso" s="items/base/consumables/clothing/top01/top01_63_soccer_torso_decal01_m.png" pri="2"/>
+      <c sId="Top01_63TorsoMaleStripe" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_63Color2" lw="N"/>
+      <s id="Top01_63TorsoMaleDecal" cId="Torso" s="items/base/consumables/clothing/top01/top01_63_soccer_torso_decal02_m.png" pri="1"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_63TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_63_soccer_torso_base_f.png" pri="1"/>
+      <c sId="Top01_63TorsoFemaleBase" c="8335297" a="1.00" b="36.5" ct="1.17" lId="Top01_63Color1" lw="N"/>
+      <s id="Top01_63TorsoFemaleStripe" cId="Torso" s="items/base/consumables/clothing/top01/top01_63_soccer_torso_decal01_f.png" pri="2"/>
+      <c sId="Top01_63TorsoFemaleStripe" c="878364" a="1.00" b="47.4" ct="1.04" lId="Top01_63Color2" lw="N"/>
+      <s id="Top01_63TorsoFemaleDecal" cId="Torso" s="items/base/consumables/clothing/top01/top01_63_soccer_torso_decal02_f.png" pri="2"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Top01_63ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_short_arm_idle.png" pri="1"/>
+    <s id="Top01_63ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_short_arm_walk1.png" pri="1"/>
+    <s id="Top01_63ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_short_arm_walk2.png" pri="1"/>
+    <s id="Top01_63ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_short_arm_walk3.png" pri="1"/>
+    <s id="Top01_63ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_short_arm_sit.png" pri="1"/>
+    <s id="Top01_63ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_short_arm_throw.png" pri="1"/>
+    <s id="Top01_63ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_short_arm_raise.png" pri="1"/>
+    <c sId="Top01_63ArmIdleBase" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top01_63Color1" lw="N"/>
+    <c sId="Top01_63ArmWalk1Base" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top01_63Color1" lw="N"/>
+    <c sId="Top01_63ArmWalk2Base" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top01_63Color1" lw="N"/>
+    <c sId="Top01_63ArmWalk3Base" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top01_63Color1" lw="N"/>
+    <c sId="Top01_63ArmSitBase" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top01_63Color1" lw="N"/>
+    <c sId="Top01_63ArmThrowBase" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top01_63Color1" lw="N"/>
+    <c sId="Top01_63ArmRaiseBase" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top01_63Color1" lw="N"/>
+    <s id="Top01_63ArmIdleStripe" cId="ArmIdle" s="items/base/consumables/clothing/top01/top01_14_stripe_idle.png" pri="1.1"/>
+    <s id="Top01_63ArmWalk1Stripe" cId="ArmWalk1" s="items/base/consumables/clothing/top01/top01_14_stripe_walk1.png" pri="1.1"/>
+    <s id="Top01_63ArmWalk2Stripe" cId="ArmWalk2" s="items/base/consumables/clothing/top01/top01_14_stripe_walk2.png" pri="1.1"/>
+    <s id="Top01_63ArmWalk3Stripe" cId="ArmWalk3" s="items/base/consumables/clothing/top01/top01_14_stripe_walk3.png" pri="1.1"/>
+    <s id="Top01_63ArmThrowStripe" cId="ArmThrow" s="items/base/consumables/clothing/top01/top01_14_stripe_throw.png" pri="1.1"/>
+    <s id="Top01_63ArmSitStripe" cId="ArmSit" s="items/base/consumables/clothing/top01/top01_14_stripe_sit.png" pri="1.1"/>
+    <s id="Top01_63ArmRaiseStripe" cId="ArmRaise" s="items/base/consumables/clothing/top01/top01_14_stripe_raise.png" pri="1.1"/>
+    <c sId="Top01_63ArmIdleStripe" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_63Color2" lw="N"/>
+    <c sId="Top01_63ArmWalk1Stripe" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_63Color2" lw="N"/>
+    <c sId="Top01_63ArmWalk2Stripe" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_63Color2" lw="N"/>
+    <c sId="Top01_63ArmWalk3Stripe" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_63Color2" lw="N"/>
+    <c sId="Top01_63ArmThrowStripe" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_63Color2" lw="N"/>
+    <c sId="Top01_63ArmSitStripe" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_63Color2" lw="N"/>
+    <c sId="Top01_63ArmRaiseStripe" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_63Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_63" icon="items/base/consumables/clothing/top01/top01_63_icon_soccer_a.png" w="48" h="48"/>
+    <s id="IconTop01_63IconBase" cId="IconTop01_63" s="items/base/consumables/clothing/top01/top01_63_icon_soccer_1.png" pri="1"/>
+    <c sId="IconTop01_63IconBase" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top01_63Color1" lw="N"/>
+    <s id="IconTop01_63IconDecal01" cId="IconTop01_63" s="items/base/consumables/clothing/top01/top01_63_icon_soccer_2.png" pri="2"/>
+    <c sId="IconTop01_63IconDecal01" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_63Color2" lw="N"/>
+    <s id="IconTop01_63IconDecal02" cId="IconTop01_63" s="items/base/consumables/clothing/top01/top01_63_icon_soccer_3.png" pri="2"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_63Color1" name="Color 1" desc="Choose a color" sel="Yellow" seld="Yellow">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_63Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="56.4" ct="1.90" lId="Top01_63Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="46.3" ct="1.14" lId="Top01_63Color1"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16238289" a="1.00" b="28.8" ct="1.95" lId="Top01_63Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="1.00" b="48.8" ct="1.46" lId="Top01_63Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top01_63Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="53.9" ct="1.95" lId="Top01_63Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top01_63Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_63Color1"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="47.4" ct="1.04" lId="Top01_63Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="46.3" ct="1.14" lId="Top01_63Color1"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="38.3" ct="1.61" lId="Top01_63Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Top01_63Color1"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="2858731" a="0.67" b="-14.5" ct="1.61" lId="Top01_63Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="8335297" a="1.00" b="36.5" ct="1.17" lId="Top01_63Color1"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.6" ct="0.76" lId="Top01_63Color1"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.99" b="37.8" ct="1.09" lId="Top01_63Color1"/>
+      <c id="Olive" icon="$bu/icon_olive.png" c="5195281" a="0.99" b="71.8" ct="1.61" lId="Top01_63Color1"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.99" b="67.0" ct="1.61" lId="Top01_63Color1"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.87" b="49.1" ct="1.05" lId="Top01_63Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="1.00" b="21.3" ct="0.47" lId="Top01_63Color1"/>
+    </b>
+    <b id="Top01_63Color2" name="Color 2" desc="Choose a color" sel="Green" seld="Green">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_63Color2"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="56.4" ct="1.90" lId="Top01_63Color2"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="46.3" ct="1.14" lId="Top01_63Color2"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16238289" a="1.00" b="28.8" ct="1.95" lId="Top01_63Color2"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="1.00" b="48.8" ct="1.46" lId="Top01_63Color2"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top01_63Color2"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="53.9" ct="1.95" lId="Top01_63Color2"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.94" b="80.2" ct="0.36" lId="Top01_63Color2"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_63Color2"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="47.4" ct="1.04" lId="Top01_63Color2"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="46.3" ct="1.14" lId="Top01_63Color2"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="38.3" ct="1.61" lId="Top01_63Color2"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Top01_63Color2"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="2858731" a="0.67" b="-14.5" ct="1.61" lId="Top01_63Color2"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9515132" a="1.00" b="58.9" ct="1.17" lId="Top01_63Color2"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.6" ct="0.76" lId="Top01_63Color2"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.99" b="37.8" ct="1.09" lId="Top01_63Color2"/>
+      <c id="Olive" icon="$bu/icon_olive.png" c="5195281" a="0.99" b="71.8" ct="1.61" lId="Top01_63Color2"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.99" b="67.0" ct="1.61" lId="Top01_63Color2"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.87" b="49.1" ct="1.05" lId="Top01_63Color2"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="1.00" b="21.3" ct="0.47" lId="Top01_63Color2"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=325; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top01_63Color1"/>
+      <wizchoice id="Color2" name="Color2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top01_63Color2"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

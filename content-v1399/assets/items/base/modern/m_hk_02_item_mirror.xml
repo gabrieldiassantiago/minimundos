@@ -1,0 +1,112 @@
+<item.SpriteItem id="3711" name="Espelho Hello Kitty Sonhos" desc="Um raro espelho de parede com detalhe de tope o formato da Hello Kitty." tags="rare,misc,wall,hellokitty" icon="items/base/modern/m_hk_02_icon_mirror.png" price="220" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,-0.5,-0.6" max="0,0.6,0.6"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="mirror" source="items/base/modern/m_hk_02_item_mirror.png" cols="2" rows="1"/>
+    <texture id="reflection" source="items/base/modern/m_hk_02_item_spark.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="nodes">
+      <box min="0,-0.5,-0.6" max="0,0.6,0.6"/>
+      <layers>
+        <layer id="mirror_01" texture="mirror" y="72">
+          <view angle="45" y="-26"/>
+          <view angle="135" col="1" y="-26"/>
+          <view angle="225" y="-26" alpha="0"/>
+          <view angle="315" y="-26" alpha="0"/>
+        </layer>
+        <layer id="sheen1" texture="reflection" y="-28">
+          <view angle="45" x="-21" y="8"/>
+          <view angle="135" x="31" y="34"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="sheen2" texture="reflection" y="-28">
+          <view angle="45" col="1" x="32" y="39"/>
+          <view angle="135" col="1" x="-36" y="22"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="sheen3" texture="reflection" y="-28">
+          <view angle="45" col="2" x="14" y="-13"/>
+          <view angle="135" col="2" x="-34" y="-21"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="frame01">
+          <layerref id="mirror_01"/>
+        </frame>
+        <frame id="sheen101">
+          <layerref id="mirror_01"/>
+          <layerref id="sheen1"/>
+        </frame>
+        <frame id="sheen102">
+          <layerref id="mirror_01"/>
+          <layerref id="sheen1" a="0.75"/>
+        </frame>
+        <frame id="sheen103">
+          <layerref id="mirror_01"/>
+          <layerref id="sheen1" a="0.5"/>
+        </frame>
+        <frame id="sheen201">
+          <layerref id="mirror_01"/>
+          <layerref id="sheen2"/>
+        </frame>
+        <frame id="sheen202">
+          <layerref id="mirror_01"/>
+          <layerref id="sheen2" a="0.75"/>
+        </frame>
+        <frame id="sheen203">
+          <layerref id="mirror_01"/>
+          <layerref id="sheen2" a="0.5"/>
+        </frame>
+        <frame id="sheen301">
+          <layerref id="mirror_01"/>
+          <layerref id="sheen3"/>
+        </frame>
+        <frame id="sheen302">
+          <layerref id="mirror_01"/>
+          <layerref id="sheen3" a="0.75"/>
+        </frame>
+        <frame id="sheen303">
+          <layerref id="mirror_01"/>
+          <layerref id="sheen3" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="frame01" duration="3"/>
+          <frameref id="sheen103"/>
+          <frameref id="sheen102"/>
+          <frameref id="sheen101"/>
+          <frameref id="sheen102"/>
+          <frameref id="sheen103"/>
+          <frameref id="frame01" duration="8"/>
+          <frameref id="sheen203"/>
+          <frameref id="sheen202"/>
+          <frameref id="sheen201"/>
+          <frameref id="sheen202"/>
+          <frameref id="sheen203"/>
+          <frameref id="frame01" duration="8"/>
+          <frameref id="sheen303"/>
+          <frameref id="sheen302"/>
+          <frameref id="sheen301"/>
+          <frameref id="sheen302"/>
+          <frameref id="sheen303"/>
+          <frameref id="frame01" duration="3"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

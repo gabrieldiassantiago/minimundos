@@ -1,0 +1,105 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,2.14,0" max="0,2.14,0"/>
+  </volume>
+  <textures>
+    <texture id="Emote" source="items/base/minis/mini_16_goldvip_wear.png" cols="3" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Infront" y="2.14">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="heart01" texture="Emote">
+          <view angle="0" x="1" y="-10" alpha="0.6"/>
+          <view angle="45" x="1" y="-10" alpha="0.9"/>
+          <view angle="90" x="1" y="-10"/>
+          <view angle="135" x="1" y="-10" alpha="0.9"/>
+          <view angle="180" x="1" y="-10" alpha="0.6"/>
+          <view angle="225" x="1" y="-10" alpha="0.4"/>
+          <view angle="270" x="1" y="-10" alpha="0.2"/>
+          <view angle="315" x="1" y="-10" alpha="0.4"/>
+        </layer>
+        <layer id="heart02" texture="Emote">
+          <view angle="0" col="1" x="1" y="-10" alpha="0.6"/>
+          <view angle="45" col="1" x="1" y="-10" alpha="0.9"/>
+          <view angle="90" col="1" x="1" y="-10"/>
+          <view angle="135" col="1" x="1" y="-10" alpha="0.9"/>
+          <view angle="180" col="1" x="1" y="-10" alpha="0.6"/>
+          <view angle="225" col="1" x="1" y="-10" alpha="0.4"/>
+          <view angle="270" col="1" x="1" y="-10" alpha="0.2"/>
+          <view angle="315" col="1" x="1" y="-10" alpha="0.4"/>
+        </layer>
+        <layer id="heart03" texture="Emote">
+          <view angle="0" col="2" x="1" y="-10" alpha="0.6"/>
+          <view angle="45" col="2" x="1" y="-10" alpha="0.9"/>
+          <view angle="90" col="2" x="1" y="-10"/>
+          <view angle="135" col="2" x="1" y="-10" alpha="0.9"/>
+          <view angle="180" col="2" x="1" y="-10" alpha="0.6"/>
+          <view angle="225" col="2" x="1" y="-10" alpha="0.4"/>
+          <view angle="270" col="2" x="1" y="-10" alpha="0.2"/>
+          <view angle="315" col="2" x="1" y="-10" alpha="0.4"/>
+        </layer>
+        <layer id="heart04" texture="Emote">
+          <view angle="0" row="1" x="1" y="-10" alpha="0.6"/>
+          <view angle="45" row="1" x="1" y="-10" alpha="0.9"/>
+          <view angle="90" row="1" x="1" y="-10"/>
+          <view angle="135" row="1" x="1" y="-10" alpha="0.9"/>
+          <view angle="180" row="1" x="1" y="-10" alpha="0.6"/>
+          <view angle="225" row="1" x="1" y="-10" alpha="0.4"/>
+          <view angle="270" row="1" x="1" y="-10" alpha="0.2"/>
+          <view angle="315" row="1" x="1" y="-10" alpha="0.4"/>
+        </layer>
+        <layer id="heart05" texture="Emote">
+          <view angle="0" col="1" row="1" x="1" y="-10" alpha="0.6"/>
+          <view angle="45" col="1" row="1" x="1" y="-10" alpha="0.9"/>
+          <view angle="90" col="1" row="1" x="1" y="-10"/>
+          <view angle="135" col="1" row="1" x="1" y="-10" alpha="0.9"/>
+          <view angle="180" col="1" row="1" x="1" y="-10" alpha="0.6"/>
+          <view angle="225" col="1" row="1" x="1" y="-10" alpha="0.4"/>
+          <view angle="270" col="1" row="1" x="1" y="-10" alpha="0.2"/>
+          <view angle="315" col="1" row="1" x="1" y="-10" alpha="0.4"/>
+        </layer>
+        <layer id="heart06" texture="Emote">
+          <view angle="0" col="2" row="1" x="1" y="-10" alpha="0.6"/>
+          <view angle="45" col="2" row="1" x="1" y="-10" alpha="0.9"/>
+          <view angle="90" col="2" row="1" x="1" y="-10"/>
+          <view angle="135" col="2" row="1" x="1" y="-10" alpha="0.9"/>
+          <view angle="180" col="2" row="1" x="1" y="-10" alpha="0.6"/>
+          <view angle="225" col="2" row="1" x="1" y="-10" alpha="0.4"/>
+          <view angle="270" col="2" row="1" x="1" y="-10" alpha="0.2"/>
+          <view angle="315" col="2" row="1" x="1" y="-10" alpha="0.4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="heart01" a="0.85"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="heart02" a="0.85"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="heart03" a="0.85"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="heart04" a="0.85"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="heart05" a="0.85"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="heart06" a="0.85"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="8">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

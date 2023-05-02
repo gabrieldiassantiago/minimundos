@@ -1,0 +1,245 @@
+<item.SpriteItem id="1962" name="Bandeirinha de Esqui" desc="Marca da chegada da pista de ski" tags="misc,xmas,rare" icon="items/base/outdoor/icon_o_skiing_gate.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="35">
+  <volume>
+    <box min="-0.1,0,-0.24" max="0.1,1.4,0.24"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Star" state="true" event="animate(00)"/>
+    <action id="1" state="true" event="animate(01)"/>
+    <action id="2" state="true" event="animate(02)"/>
+    <action id="3" state="true" event="animate(03)"/>
+    <action id="4" state="true" event="animate(04)"/>
+    <action id="5" state="true" event="animate(05)"/>
+    <action id="6" state="true" event="animate(06)"/>
+    <action id="7" state="true" event="animate(07)"/>
+    <action id="8" state="true" event="animate(08)"/>
+    <action id="9" state="true" event="animate(09)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="10"/>
+    <entry key="00" value="star"/>
+    <entry key="01" value="one"/>
+    <entry key="02" value="two"/>
+    <entry key="03" value="three"/>
+    <entry key="04" value="four"/>
+    <entry key="05" value="five"/>
+    <entry key="06" value="six"/>
+    <entry key="07" value="seven"/>
+    <entry key="08" value="eight"/>
+    <entry key="09" value="nine"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/outdoor/o_skiing_gate_poles.png" cols="1" rows="1"/>
+    <texture id="numbers" source="items/base/outdoor/o_skiing_gate_numbers.png" cols="9" rows="2"/>
+    <texture id="blue" source="items/base/outdoor/o_skiing_gate_blue.png" cols="1" rows="1"/>
+    <texture id="flag" source="items/base/outdoor/o_skiing_gate_flags.png" cols="1" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.24" max="0.1,1.4,0.24"/>
+      <layers>
+        <layer id="base" texture="base" y="29">
+          <view angle="45" y="-14"/>
+          <view angle="135" y="-14" hm="true"/>
+          <view angle="225" y="-14"/>
+          <view angle="315" y="-14" hm="true"/>
+        </layer>
+        <layer id="star" texture="numbers" y="29">
+          <view angle="45" y="-59"/>
+          <view angle="135" x="-1" y="-59" hm="true"/>
+          <view angle="225" y="-59"/>
+          <view angle="315" x="-1" y="-59" hm="true"/>
+        </layer>
+        <layer id="l01" texture="numbers" y="29">
+          <view angle="45" col="1" y="-59"/>
+          <view angle="135" col="2" x="-2" y="-59"/>
+          <view angle="225" col="1" y="-59"/>
+          <view angle="315" col="2" x="-2" y="-59"/>
+        </layer>
+        <layer id="l02" texture="numbers" y="29">
+          <view angle="45" col="3" y="-59"/>
+          <view angle="135" col="3" row="1" x="-2" y="-59"/>
+          <view angle="225" col="3" y="-59"/>
+          <view angle="315" col="3" row="1" x="-2" y="-59"/>
+        </layer>
+        <layer id="l03" texture="numbers" y="29">
+          <view angle="45" col="4" row="1" x="1" y="-59"/>
+          <view angle="135" col="4" x="-2" y="-59"/>
+          <view angle="225" col="4" row="1" x="1" y="-59"/>
+          <view angle="315" col="4" x="-2" y="-59"/>
+        </layer>
+        <layer id="l04" texture="numbers" y="29">
+          <view angle="45" col="5" row="1" y="-59"/>
+          <view angle="135" col="5" x="-2" y="-59"/>
+          <view angle="225" col="5" row="1" y="-59"/>
+          <view angle="315" col="5" x="-2" y="-59"/>
+        </layer>
+        <layer id="l05" texture="numbers" y="29">
+          <view angle="45" col="6" y="-59"/>
+          <view angle="135" col="6" row="1" x="-2" y="-59"/>
+          <view angle="225" col="6" y="-59"/>
+          <view angle="315" col="6" row="1" x="-2" y="-59"/>
+        </layer>
+        <layer id="l06" texture="numbers" y="29">
+          <view angle="45" col="7" y="-59"/>
+          <view angle="135" col="7" row="1" x="-2" y="-59"/>
+          <view angle="225" col="7" y="-59"/>
+          <view angle="315" col="7" row="1" x="-2" y="-59"/>
+        </layer>
+        <layer id="l07" texture="numbers" y="29">
+          <view angle="45" col="8" x="1" y="-59"/>
+          <view angle="135" col="8" row="1" x="-1" y="-59"/>
+          <view angle="225" col="8" x="1" y="-59"/>
+          <view angle="315" col="8" row="1" x="-1" y="-59"/>
+        </layer>
+        <layer id="l08" texture="numbers" y="29">
+          <view angle="45" col="2" row="1" y="-59"/>
+          <view angle="135" col="2" row="1" x="-1" y="-59" hm="true"/>
+          <view angle="225" col="2" row="1" y="-59"/>
+          <view angle="315" col="2" row="1" x="-1" y="-59" hm="true"/>
+        </layer>
+        <layer id="l09" texture="numbers" y="29">
+          <view angle="45" col="1" row="1" y="-59"/>
+          <view angle="135" row="1" x="-2" y="-59"/>
+          <view angle="225" col="1" row="1" y="-59"/>
+          <view angle="315" row="1" x="-2" y="-59"/>
+        </layer>
+        <layer id="blue" texture="blue">
+          <view angle="45" y="-22"/>
+          <view angle="135" y="-22" hm="true"/>
+          <view angle="225" y="-22"/>
+          <view angle="315" y="-22" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="base" color="0xe0e0e0"/>
+          <layerref id="star"/>
+        </frame>
+        <frame id="01">
+          <layerref id="base" color="0xe0e0e0"/>
+          <layerref id="blue"/>
+          <layerref id="l01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="base" color="0xe0e0e0"/>
+          <layerref id="l02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="base" color="0xe0e0e0"/>
+          <layerref id="blue"/>
+          <layerref id="l03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="base" color="0xe0e0e0"/>
+          <layerref id="l04"/>
+        </frame>
+        <frame id="05">
+          <layerref id="base" color="0xe0e0e0"/>
+          <layerref id="blue"/>
+          <layerref id="l05"/>
+        </frame>
+        <frame id="06">
+          <layerref id="base" color="0xe0e0e0"/>
+          <layerref id="l06"/>
+        </frame>
+        <frame id="07">
+          <layerref id="base" color="0xe0e0e0"/>
+          <layerref id="blue"/>
+          <layerref id="l07"/>
+        </frame>
+        <frame id="08">
+          <layerref id="base" color="0xe0e0e0"/>
+          <layerref id="l08"/>
+        </frame>
+        <frame id="09">
+          <layerref id="base" color="0xe0e0e0"/>
+          <layerref id="blue"/>
+          <layerref id="l09"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4" loop="false">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01" framerate="4">
+          <frameref id="01"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="02"/>
+        </animation>
+        <animation id="03" framerate="4">
+          <frameref id="03"/>
+        </animation>
+        <animation id="04" framerate="4">
+          <frameref id="04"/>
+        </animation>
+        <animation id="05" framerate="4">
+          <frameref id="05"/>
+        </animation>
+        <animation id="06" framerate="4">
+          <frameref id="06"/>
+        </animation>
+        <animation id="07" framerate="4">
+          <frameref id="07"/>
+        </animation>
+        <animation id="08" framerate="4">
+          <frameref id="08"/>
+        </animation>
+        <animation id="09" framerate="4">
+          <frameref id="09"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Node01">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="flag">
+          <view angle="45" x="8" y="-89"/>
+          <view angle="135" x="-8" y="-89" hm="true"/>
+          <view angle="225" x="8" y="-88"/>
+          <view angle="315" x="-8" y="-89" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="flag">
+          <view angle="45" row="1" x="8" y="-89"/>
+          <view angle="135" row="1" x="-8" y="-89" hm="true"/>
+          <view angle="225" row="1" x="8" y="-89"/>
+          <view angle="315" row="1" x="-8" y="-89" hm="true"/>
+        </layer>
+        <layer id="Layer02" texture="flag">
+          <view angle="45" row="2" x="8" y="-89"/>
+          <view angle="135" row="2" x="-8" y="-89" hm="true"/>
+          <view angle="225" row="2" x="8" y="-89"/>
+          <view angle="315" row="2" x="-8" y="-89" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer" a="0.8"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Layer01" a="0.8"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Layer02" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,36 @@
+<f id="Top06_29_WD_Jacket" parentId="Top06">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top06_29TorsoBaseM" cId="Torso" s="items/base/brands/walkingdead/wd_04_jacket_torso_M.png" pri="6"/>
+    </g>
+    <g id="Female">
+      <s id="Top06_29TorsoBaseF" cId="Torso" s="items/base/brands/walkingdead/wd_04_jacket_torso_F.png" pri="6"/>
+    </g>
+  </b>
+  <g id="SportJacketTorso" name="LeatherJacket" icon="$bm/icon_m_retro.png">
+    <s id="Top06_29ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/arm_jacket_idle.png" pri="6"/>
+    <s id="Top06_29ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/arm_jacket_walk1.png" pri="6"/>
+    <s id="Top06_29ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/arm_jacket_walk2.png" pri="6"/>
+    <s id="Top06_29ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/arm_jacket_walk3.png" pri="6"/>
+    <s id="Top06_29ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/arm_jacket_sit.png" pri="6"/>
+    <c sId="Top06_29ArmIdleBase" c="9074510" a="0.53" b="17.5" ct="0.79" lId="Top06_29Color1" lw="N"/>
+    <c sId="Top06_29ArmWalk1Base" c="9074510" a="0.53" b="17.5" ct="0.79" lId="Top06_29Color1" lw="N"/>
+    <c sId="Top06_29ArmWalk2Base" c="9074510" a="0.53" b="17.5" ct="0.79" lId="Top06_29Color1" lw="N"/>
+    <c sId="Top06_29ArmWalk3Base" c="9074510" a="0.53" b="17.5" ct="0.79" lId="Top06_29Color1" lw="N"/>
+    <c sId="Top06_29ArmSitBase" c="9074510" a="0.53" b="17.5" ct="0.79" lId="Top06_29Color1" lw="N"/>
+    <s id="Top06_29ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/arm_jacket_throw.png" pri="6"/>
+    <s id="Top06_29ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/arm_jacket_raise.png" pri="6"/>
+    <c sId="Top06_29ArmThrowBase" c="9074510" a="0.53" b="17.5" ct="0.79" lId="Top06_29Color1" lw="N"/>
+    <c sId="Top06_29ArmRaiseBase" c="9074510" a="0.53" b="17.5" ct="0.79" lId="Top06_29Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_29" icon="items/base/brands/walkingdead/wd_04_jacket_icon.png" w="48" h="48"/>
+    <s id="IconTop06_29Base" cId="IconTop06_29" s="items/base/brands/walkingdead/wd_04_jacket_icon.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top06_29Color1" name="Color" desc="Choose a color" sel="brown" seld="Black">
+      <c id="brown" c="9074510" a="0.53" b="17.5" ct="0.79" lId="Top06_29Color1"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

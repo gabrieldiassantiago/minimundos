@@ -1,0 +1,36 @@
+<f id="BananaSuit" parentId="Suits">
+  <g id="Pants" icon="$bu/icon_skinny_trouser.png">
+    <s id="Banana_IdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_136_banana_leg_idle.png" pri="6"/>
+    <s id="Banana_Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_136_banana_leg_walk1.png" pri="6"/>
+    <s id="Banana_Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_136_banana_leg_walk2.png" pri="6"/>
+    <s id="Banana_Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_136_banana_leg_walk3.png" pri="6"/>
+    <s id="Banana_Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_136_banana_leg_walk4.png" pri="6"/>
+    <s id="Banana_SitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_136_banana_leg_sit.png" pri="6"/>
+  </g>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Banana_ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_136_banana_arm_idle.png" pri="6"/>
+    <s id="Banana_ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_136_banana_arm_walk1.png" pri="6"/>
+    <s id="Banana_ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_136_banana_arm_walk2.png" pri="6"/>
+    <s id="Banana_ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_136_banana_arm_walk3.png" pri="6"/>
+    <s id="Banana_ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_136_banana_arm_sit.png" pri="6"/>
+    <s id="Banana_ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_136_banana_arm_throw.png" pri="6"/>
+    <s id="Banana_ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_136_banana_arm_raise.png" pri="6"/>
+  </g>
+  <g id="Icon">
+    <t id="Icon_Banana" icon="items/base/consumables/clothing/suits/suit_136_banana_icon.png" w="48" h="48"/>
+    <s id="IconTop_BananaBase" cId="Icon_Banana" s="items/base/consumables/clothing/suits/suit_136_banana_icon.png"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot01"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="JSFeet"/>
+</f>

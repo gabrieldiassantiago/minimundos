@@ -1,0 +1,59 @@
+<item.SpriteItem id="4545" name="Eu Estou Zangado" desc="Definir status para: Zangado" tags="consumable,actionbar,emote_slot,emote,action_emote_toggle" icon="items/base/minis/mini_04_imangry_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.2" max="0.1,0.72,0.2"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_perfume.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="commands" value="/i'm angry"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/consumables/emotes/emote_s_fx_bottle.png" cols="1" rows="1"/>
+    <texture id="Glass" source="items/base/minis/mini_00_default_item.png" cols="1" rows="1"/>
+    <texture id="Emote" source="items/base/minis/mini_04_imangry_item.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Emote">
+      <box min="-0.1,0,-0.2" max="0.1,0.72,0.2"/>
+      <layers>
+        <layer id="Glass" texture="Glass" align="middle" y="-9">
+          <view angle="45" y="-13"/>
+          <view angle="135" y="-13" hm="true"/>
+          <view angle="225" y="-13"/>
+          <view angle="315" y="-13" hm="true"/>
+        </layer>
+        <layer id="Emote" texture="Emote" align="middle" y="-9">
+          <view angle="45" y="-13"/>
+          <view angle="135" y="-13" hm="true"/>
+          <view angle="225" y="-13"/>
+          <view angle="315" y="-13" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" x="1" y="-6">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" y="-3" color="0xc93333"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

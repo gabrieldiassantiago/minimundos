@@ -1,0 +1,40 @@
+<item.SpriteItem id="0" name="Play Biohazard Mask" desc="A highly protective mask" icon="items/base/consumables/head/icon_con_head_item_196_biohazardsuit.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Play Biohazard Mask" source="items/base/consumables/head/con_head_196_biohazardsuit_black.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="Play Biohazard Mask" texture="Play Biohazard Mask">
+          <view angle="0" col="2" x="-2" y="25" hm="true"/>
+          <view angle="45" x="6" y="24"/>
+          <view angle="90" col="1" x="-3" y="20"/>
+          <view angle="135" x="-6" y="24" hm="true"/>
+          <view angle="180" col="2" x="2" y="25"/>
+          <view angle="225" col="3" x="2" y="27"/>
+          <view angle="270" col="4" x="2" y="28"/>
+          <view angle="315" col="3" y="27" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="blink">
+          <layerref id="Play Biohazard Mask"/>
+        </frame>
+        <frame id="normal">
+          <layerref id="Play Biohazard Mask"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

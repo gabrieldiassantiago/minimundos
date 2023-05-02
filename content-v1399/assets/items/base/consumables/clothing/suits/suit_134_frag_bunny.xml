@@ -1,0 +1,91 @@
+<f id="Bunny" parentId="Suits">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Bunny_Torso_M" cId="Torso" s="items/base/consumables/clothing/suits/suit_134_bunny_torso_m.png" pri="6"/>
+      <c sId="Bunny_Torso_M" c="12622831" a="1.00" b="46.3" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+      <s id="Bunny_Torso_M_decal" cId="Torso" s="items/base/consumables/clothing/suits/suit_134_bunny_torso_m_decal.png" pri="6.1"/>
+      <c sId="Bunny_Torso_M_decal" c="10592673" a="1.00" b="109.1" ct="0.58" lId="Suit_134_bunny_Color2" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="Bunny_Torso_F" cId="Torso" s="items/base/consumables/clothing/suits/suit_134_bunny_torso_f.png" pri="6"/>
+      <c sId="Bunny_Torso_F" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+      <s id="Bunny_Torso_F_decal" cId="Torso" s="items/base/consumables/clothing/suits/suit_134_bunny_torso_f_decal.png" pri="6.1"/>
+      <c sId="Bunny_Torso_F_decal" c="10592673" a="1.00" b="84.3" ct="1.50" lId="Suit_134_bunny_Color2" lw="N"/>
+    </g>
+  </b>
+  <g id="Pants" icon="$bu/icon_skinny_trouser.png">
+    <s id="Bunny_IdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_134_bunny_leg_idle.png" pri="6"/>
+    <s id="Bunny_Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_134_bunny_leg_walk1.png" pri="6"/>
+    <s id="Bunny_Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_134_bunny_leg_walk2.png" pri="6"/>
+    <s id="Bunny_Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_134_bunny_leg_walk3.png" pri="6"/>
+    <s id="Bunny_Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_134_bunny_leg_walk4.png" pri="6"/>
+    <s id="Bunny_SitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_134_bunny_leg_sit_upper.png" pri="6"/>
+    <s id="Bunny_SitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_134_bunny_leg_sit_lower.png" pri="6"/>
+    <c sId="Bunny_IdleBase" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <c sId="Bunny_Walk1Base" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <c sId="Bunny_Walk2Base" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <c sId="Bunny_Walk3Base" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <c sId="Bunny_Walk4Base" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <c sId="Bunny_SitUpperBase" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <c sId="Bunny_SitLowerBase" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+  </g>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Bunny_ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_134_bunny_arm_idle.png" pri="6"/>
+    <s id="Bunny_ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_134_bunny_arm_walk1.png" pri="6"/>
+    <s id="Bunny_ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_134_bunny_arm_walk2.png" pri="6"/>
+    <s id="Bunny_ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_134_bunny_arm_walk3.png" pri="6"/>
+    <s id="Bunny_ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_134_bunny_arm_sit.png" pri="6"/>
+    <s id="Bunny_ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_134_bunny_arm_throw.png" pri="6"/>
+    <s id="Bunny_ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_134_bunny_arm_raise.png" pri="6"/>
+    <c sId="Bunny_ArmIdleBase" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <c sId="Bunny_ArmWalk1Base" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <c sId="Bunny_ArmWalk2Base" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <c sId="Bunny_ArmWalk3Base" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <c sId="Bunny_ArmSitBase" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <c sId="Bunny_ArmThrowBase" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <c sId="Bunny_ArmRaiseBase" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="Icon_Bunny" icon="items/base/consumables/clothing/suits/suit_134_bunny_icon_a.png" w="48" h="48"/>
+    <s id="IconTop_BunnyRare" cId="Icon_Bunny" s="items/base/consumables/clothing/top01/top01_rare.png"/>
+    <s id="IconTop_BunnyBase" cId="Icon_Bunny" s="items/base/consumables/clothing/suits/suit_134_bunny_icon_1.png"/>
+    <c sId="IconTop_BunnyBase" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1" lw="N"/>
+    <s id="IconTop_BunnyDecal" cId="Icon_Bunny" s="items/base/consumables/clothing/suits/suit_134_bunny_icon_2.png" pri="1"/>
+    <c sId="IconTop_BunnyDecal" c="10592673" a="1.00" b="84.3" ct="1.50" lId="Suit_134_bunny_Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Suit_134_bunny_Color1" name="Color 1" desc="Choose a color" sel="Lilac" seld="Lilac">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="1.00" b="84.3" ct="1.50" lId="Suit_134_bunny_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="14708162" a="1.00" b="51.2" ct="1.45" lId="Suit_134_bunny_Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16771184" a="0.86" b="46.3" ct="0.84" lId="Suit_134_bunny_Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561799" a="0.89" b="55.3" ct="1.01" lId="Suit_134_bunny_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="0.59" b="9.5" ct="1.05" lId="Suit_134_bunny_Color1"/>
+    </b>
+    <b id="Suit_134_bunny_Color2" name="Color 2" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="1.00" b="84.3" ct="1.50" lId="Suit_134_bunny_Color2"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="12754943" a="1.00" b="39.9" ct="2.00" lId="Suit_134_bunny_Color2"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="14708162" a="1.00" b="51.2" ct="1.45" lId="Suit_134_bunny_Color2"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16771184" a="0.86" b="46.3" ct="0.84" lId="Suit_134_bunny_Color2"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561799" a="0.89" b="55.3" ct="1.01" lId="Suit_134_bunny_Color2"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="0.59" b="9.5" ct="1.05" lId="Suit_134_bunny_Color2"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color 1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Suit_134_bunny_Color1"/>
+      <wizchoice id="Color 2" name="Color 2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Suit_134_bunny_Color2"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot01"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="JSFeet"/>
+</f>

@@ -1,0 +1,195 @@
+<item.SpriteItem id="2009" name="Vila Mexicana Grande" desc="Para decorar sua fazenda." tags="misc" icon="items/base/antique/icon_a_villageset_02_mexico_large.png" price="390" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.48,0,-1.48" max="0.48,3,2.48"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="State_01" state="true" event="animate(01)"/>
+    <action id="State_02" state="true" event="animate(02)"/>
+    <action id="State_03" state="true" event="animate(03)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="3"/>
+    <entry key="01" value="State_01"/>
+    <entry key="02" value="State_02"/>
+    <entry key="03" value="State_03"/>
+  </data>
+  <textures>
+    <texture id="frame" source="items/base/antique/a_villageset_01_woodbone.png" cols="2" rows="1"/>
+    <texture id="base" source="items/base/antique/a_villageset_01_base.png" cols="1" rows="1"/>
+    <texture id="door_a" source="items/base/antique/a_villageset_01_door01.png" cols="1" rows="1"/>
+    <texture id="door_b" source="items/base/antique/a_villageset_01_door02.png" cols="1" rows="1"/>
+    <texture id="decal_a" source="items/base/antique/a_villageset_01_decal01.png" cols="1" rows="1"/>
+    <texture id="sign_a" source="items/base/antique/a_villageset_01_sign.png" cols="2" rows="1"/>
+    <texture id="window_a" source="items/base/antique/a_villageset_01_window01.png" cols="1" rows="1"/>
+    <texture id="window_b" source="items/base/antique/a_villageset_01_window02.png" cols="1" rows="1"/>
+    <texture id="roof" source="items/base/antique/a_villageset_01_roof.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="House_large">
+      <box min="-0.48,0,-1.48" max="0.48,3,2.48"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" x="27" y="46"/>
+          <view angle="135" x="36" y="78" hm="true"/>
+          <view angle="225" x="-28" y="82"/>
+          <view angle="315" x="-38" y="50" hm="true"/>
+        </layer>
+        <layer id="frame" texture="frame">
+          <view angle="45" x="28" y="66"/>
+          <view angle="135" x="35" y="98" hm="true"/>
+          <view angle="225" col="1" x="-27" y="102"/>
+          <view angle="315" col="1" x="-39" y="70" hm="true"/>
+        </layer>
+        <layer id="door_a" texture="door_a">
+          <view angle="45" x="30"/>
+          <view angle="135" x="33" y="32" hm="true"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+        <layer id="door_b" texture="door_b">
+          <view angle="45" x="31" y="3"/>
+          <view angle="135" x="32" y="35" hm="true"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+        <layer id="decal_a_01" texture="decal_a">
+          <view angle="45" x="33" y="-132"/>
+          <view angle="135" x="31" y="-100" hm="true"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+        <layer id="decal_a_02" texture="decal_a">
+          <view angle="45" x="32" y="-311"/>
+          <view angle="135" x="31" y="-279" hm="true"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+        <layer id="sign_a" texture="sign_a">
+          <view angle="45" x="30" y="-134"/>
+          <view angle="135" col="1" x="37" y="-101"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+        <layer id="roof" texture="roof">
+          <view angle="45" x="27" y="-311"/>
+          <view angle="135" x="35" y="-279" hm="true"/>
+          <view angle="225" x="-27" y="-275"/>
+          <view angle="315" x="-39" y="-306" hm="true"/>
+        </layer>
+        <layer id="base01" texture="base">
+          <view angle="45" x="27" y="-133"/>
+          <view angle="135" x="36" y="-101" hm="true"/>
+          <view angle="225" x="-28" y="-97"/>
+          <view angle="315" x="-38" y="-129" hm="true"/>
+        </layer>
+        <layer id="window_a_01" texture="window_a">
+          <view angle="45" x="-49" y="-166"/>
+          <view angle="135" x="-49" y="-215" hm="true"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+        <layer id="window_a_02" texture="window_a">
+          <view angle="45" x="109" y="-242"/>
+          <view angle="135" x="114" y="-135" hm="true"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+        <layer id="window_a_03" texture="window_a">
+          <view angle="45" x="30" y="-205"/>
+          <view angle="135" x="34" y="-175" hm="true"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+        <layer id="window_b_01" texture="window_b">
+          <view angle="45" x="-51" y="-93"/>
+          <view angle="135" x="-47" y="-143" hm="true"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+        <layer id="window_b_02" texture="window_b">
+          <view angle="45" x="109" y="-171"/>
+          <view angle="135" x="115" y="-63" hm="true"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+        <layer id="window_b_03" texture="window_b">
+          <view angle="45" x="30" y="-334"/>
+          <view angle="135" x="35" y="-305" hm="true"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+        <layer id="window_b_04" texture="window_b">
+          <view angle="45" x="-51" y="-93"/>
+          <view angle="135" x="-47" y="-143" hm="true"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+        <layer id="window_b_05" texture="window_b">
+          <view angle="45" x="109" y="-171"/>
+          <view angle="135" x="115" y="-63" hm="true"/>
+          <view angle="225" x="-28" y="82" alpha="0"/>
+          <view angle="315" x="-38" y="50" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="frame_01">
+          <layerref id="base"/>
+          <layerref id="base01"/>
+          <layerref id="frame"/>
+          <layerref id="door_b"/>
+          <layerref id="window_b_01" y="-110"/>
+          <layerref id="window_b_02" y="-110"/>
+          <layerref id="decal_a_01"/>
+          <layerref id="window_b_03" y="90"/>
+          <layerref id="decal_a_02"/>
+          <layerref id="window_b_04" y="50"/>
+          <layerref id="window_b_05" y="50"/>
+        </frame>
+        <frame id="frame_02">
+          <layerref id="base"/>
+          <layerref id="base01"/>
+          <layerref id="roof"/>
+          <layerref id="frame"/>
+          <layerref id="door_b"/>
+          <layerref id="window_b_01"/>
+          <layerref id="window_b_02"/>
+          <layerref id="window_b_03"/>
+          <layerref id="window_a_01"/>
+          <layerref id="window_a_02"/>
+          <layerref id="sign_a"/>
+        </frame>
+        <frame id="frame_03">
+          <layerref id="base"/>
+          <layerref id="base01"/>
+          <layerref id="frame"/>
+          <layerref id="door_a"/>
+          <layerref id="window_b_01" y="35"/>
+          <layerref id="window_b_02" y="35"/>
+          <layerref id="window_a_01"/>
+          <layerref id="window_a_02"/>
+          <layerref id="window_a_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="01" framerate="4">
+          <frameref id="frame_01"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="frame_02"/>
+        </animation>
+        <animation id="03" framerate="4">
+          <frameref id="frame_03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

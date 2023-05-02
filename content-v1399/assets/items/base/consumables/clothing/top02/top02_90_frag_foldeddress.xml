@@ -1,0 +1,80 @@
+<f id="Top02_90FoldedDress" parentId="Top02">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Top02_90Torso_m" cId="Torso" s="items/base/consumables/clothing/top02/top02_90_torso_m.png" pri="2"/>
+      <c sId="Top02_90Torso_m" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="Top02_90Torso_f" cId="Torso" s="items/base/consumables/clothing/top02/top02_90_torso_f.png" pri="2"/>
+      <c sId="Top02_90Torso_f" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    </g>
+  </b>
+  <g id="Legs" icon="$bf/icon_legs_skirt.png">
+    <s id="Leg_90IdleBase" cId="LegIdle" s="items/base/consumables/clothing/top02/top02_90_leg_idle.png" pri="4"/>
+    <c sId="Leg_90IdleBase" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    <s id="Leg_90Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/top02/top02_90_leg_walk1.png" pri="4"/>
+    <c sId="Leg_90Walk1Base" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    <s id="Leg_90Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/top02/top02_90_leg_walk2.png" pri="4"/>
+    <c sId="Leg_90Walk2Base" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    <s id="Leg_90Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/top02/top02_90_leg_walk3.png" pri="4"/>
+    <c sId="Leg_90Walk3Base" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    <s id="Leg_90Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/top02/top02_90_leg_walk4.png" pri="4"/>
+    <c sId="Leg_90Walk4Base" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    <s id="Leg_90SitBase" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_90_leg_sit.png" pri="4"/>
+    <c sId="Leg_90SitBase" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+  </g>
+  <g id="Sleeve" name="Sleeve" icon="$bm/icon_m_tshirt.png">
+    <s id="Top02_90ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top02/top02_90_arm_idle.png" pri="0.8"/>
+    <s id="Top02_90ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top02/top02_90_arm_walk1.png" pri="0.8"/>
+    <s id="Top02_90ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top02/top02_90_arm_walk2.png" pri="0.8"/>
+    <s id="Top02_90ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top02/top02_90_arm_walk3.png" pri="0.8"/>
+    <s id="Top02_90ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top02/top02_90_arm_sit.png" pri="0.8"/>
+    <s id="Top02_90ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top02/top02_90_arm_throw.png" pri="0.8"/>
+    <s id="Top02_90ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top02/top02_90_arm_raise.png" pri="0.8"/>
+    <c sId="Top02_90ArmIdleBase" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    <c sId="Top02_90ArmWalk1Base" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    <c sId="Top02_90ArmWalk2Base" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    <c sId="Top02_90ArmWalk3Base" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    <c sId="Top02_90ArmSitBase" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    <c sId="Top02_90ArmThrowBase" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+    <c sId="Top02_90ArmRaiseBase" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop02_90" icon="items/base/consumables/clothing/top02/top02_90_foldeddress_icon_a.png" w="48" h="48"/>
+    <s id="IconTop02_90Base" cId="IconTop02_90" s="items/base/consumables/clothing/top02/top02_90_foldeddress_icon_1.png"/>
+    <c sId="IconTop02_90Base" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top02_90Color" name="Color" desc="Choose a color" sel="Tan" seld="Tan">
+      <c id="White" icon="$bu/icon_white.png" c="12434877" a="1.00" b="48.0" ct="0.81" lId="Top02_90Color"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7237230" a="1.00" b="67.3" ct="2.00" lId="Top02_90Color"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="12666822" a="0.50" b="33.2" ct="1.29" lId="Top02_90Color"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16225715" a="0.79" b="41.5" ct="1.17" lId="Top02_90Color"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="13921416" a="0.85" b="41.9" ct="1.25" lId="Top02_90Color"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.89" b="47.9" ct="1.81" lId="Top02_90Color"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.95" b="7.9" ct="0.57" lId="Top02_90Color"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="11888394" a="0.85" b="41.7" ct="1.18" lId="Top02_90Color"/>
+      <c id="Green" icon="$bu/icon_green.png" c="893213" a="0.89" b="39.4" ct="1.12" lId="Top02_90Color"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="0.85" b="45.5" ct="2.00" lId="Top02_90Color"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1827511" a="0.61" b="12.8" ct="0.92" lId="Top02_90Color"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.94" b="51.2" ct="1.80" lId="Top02_90Color"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="7775193" a="1.00" b="43.1" ct="1.32" lId="Top02_90Color"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="44787" a="0.84" b="26.9" ct="1.29" lId="Top02_90Color"/>
+      <c id="DarkBlue" icon="$bu/icon_darkblue.png" c="10886" a="0.80" b="47.9" ct="2.00" lId="Top02_90Color"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="6042247" a="1.00" b="68.1" ct="2.00" lId="Top02_90Color"/>
+      <c id="Cream" icon="$bu/icon_cream.png" c="13734180" a="0.28" b="28.5" ct="0.85" lId="Top02_90Color"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.6" ct="1.24" lId="Top02_90Color"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11242046" a="0.97" b="30.1" ct="1.13" lId="Top02_90Color"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5525030" a="1.00" b="62.1" ct="2.00" lId="Top02_90Color"/>
+      <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="5981448" a="0.98" b="57.6" ct="2.00" lId="Top02_90Color"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.98" b="62.5" ct="2.00" lId="Top02_90Color"/>
+      <c id="Black" icon="$bu/icon_black.png" c="4013373" a="0.92" b="54.4" ct="2.00" lId="Top02_90Color"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=320; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color" name="Dress" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top02_90Color"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+</f>

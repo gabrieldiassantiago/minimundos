@@ -1,0 +1,174 @@
+<item.SpriteItem id="4856" name="Caixão do Morto-Vivo" desc="Que barulho foi esse?" tags="rare,misc" icon="items/base/gothic/icon_g_coffin.png" price="10" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table, avatar,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="box" source="items/base/gothic/g_coffin.png" cols="2" rows="1"/>
+    <texture id="eye" source="items/base/gothic/g_coffin_eye.png" cols="2" rows="1"/>
+    <texture id="arms" source="items/base/gothic/g_coffin_arms.png" cols="3" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/gothic/sndfx_coffinroar.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="nodes">
+      <box min="-0.49,0,-0.49" max="0.49,2,0.49"/>
+      <layers>
+        <layer id="box" texture="box" y="100">
+          <view angle="45" y="-62"/>
+          <view angle="135" y="-62" hm="true"/>
+          <view angle="225" col="1" y="-62" hm="true"/>
+          <view angle="315" col="1" y="-62"/>
+        </layer>
+        <layer id="wobble1" texture="box" y="100">
+          <view angle="45" x="-1" y="-62" alpha="0.6"/>
+          <view angle="135" x="-2" y="-64" alpha="0.6" hm="true"/>
+          <view angle="225" col="1" x="-2" y="-64" alpha="0.6" hm="true"/>
+          <view angle="315" col="1" x="-2" y="-64" alpha="0.6"/>
+        </layer>
+        <layer id="wobble2" texture="box" y="100">
+          <view angle="45" x="1" y="-61" alpha="0.6"/>
+          <view angle="135" x="1" y="-63" alpha="0.6" hm="true"/>
+          <view angle="225" col="1" x="1" y="-62" alpha="0.6" hm="true"/>
+          <view angle="315" col="1" x="1" y="-62" alpha="0.6"/>
+        </layer>
+        <layer id="eye_open" texture="eye" y="100">
+          <view angle="45" x="23" y="-166"/>
+          <view angle="135" x="-24" y="-166" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="eye_close" texture="eye" y="100">
+          <view angle="45" col="1" x="23" y="-166"/>
+          <view angle="135" col="1" x="-24" y="-166" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="1_arm_01" texture="arms" y="100">
+          <view angle="45" row="1" x="56" y="-101"/>
+          <view angle="135" x="-38" y="-77" hm="true"/>
+          <view angle="225" row="1" alpha="0" hm="true"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="1_arm_02" texture="arms" y="100">
+          <view angle="45" col="1" x="28" y="-79"/>
+          <view angle="135" col="1" x="-28" y="-79" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0" hm="true"/>
+        </layer>
+        <layer id="1_arm_03" texture="arms" y="100">
+          <view angle="45" col="2" x="73" y="-161"/>
+          <view angle="135" col="2" x="-62" y="-158" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0" hm="true"/>
+        </layer>
+        <layer id="2_arm_01" texture="arms" y="100">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225" row="1" x="-65" y="-136" hm="true"/>
+          <view angle="315" row="1" x="65" y="-136"/>
+        </layer>
+        <layer id="2_arm_02" texture="arms" y="100">
+          <view angle="45" col="1" row="1" alpha="0"/>
+          <view angle="135" col="1" alpha="0" hm="true"/>
+          <view angle="225" col="1" row="1" x="-68" y="-140" hm="true"/>
+          <view angle="315" col="1" row="1" x="61" y="-140"/>
+        </layer>
+        <layer id="2_arm_03" texture="arms" y="100">
+          <view angle="45" col="2" alpha="0"/>
+          <view angle="135" col="2" alpha="0" hm="true"/>
+          <view angle="225" row="1" x="-70" y="-128" hm="true"/>
+          <view angle="315" row="1" x="70" y="-144"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="eye_nothing">
+          <layerref id="box"/>
+        </frame>
+        <frame id="eye_open">
+          <layerref id="box"/>
+          <layerref id="eye_open"/>
+        </frame>
+        <frame id="eye_close">
+          <layerref id="box"/>
+          <layerref id="eye_close" a="0.6"/>
+        </frame>
+        <frame id="1_arm_01">
+          <layerref id="2_arm_01"/>
+          <layerref id="box"/>
+          <layerref id="1_arm_01"/>
+        </frame>
+        <frame id="1_arm_02">
+          <layerref id="2_arm_02"/>
+          <layerref id="box"/>
+          <layerref id="1_arm_02"/>
+        </frame>
+        <frame id="1_arm_03">
+          <layerref id="2_arm_03"/>
+          <layerref id="box"/>
+          <layerref id="1_arm_03"/>
+        </frame>
+        <frame id="eye_nothingwobble01">
+          <layerref id="box"/>
+          <layerref id="wobble1"/>
+        </frame>
+        <frame id="eye_nothingwobble02">
+          <layerref id="box" x="1" y="-1"/>
+          <layerref id="wobble2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="8">
+          <frameref id="eye_nothing" duration="50"/>
+          <frameref id="eye_close"/>
+          <frameref id="eye_open"/>
+          <frameref id="eye_close" duration="2"/>
+          <frameref id="eye_nothing"/>
+          <frameref id="eye_nothingwobble01"/>
+          <frameref id="eye_nothing"/>
+          <frameref id="eye_nothingwobble02"/>
+          <frameref id="eye_nothing" duration="15"/>
+          <frameref id="eye_open"/>
+          <frameref id="eye_close"/>
+          <frameref id="eye_open"/>
+          <frameref id="eye_close"/>
+          <frameref id="eye_nothingwobble01"/>
+          <frameref id="eye_nothing"/>
+        </animation>
+        <animation id="On" framerate="16" loop="false">
+          <frameref id="eye_nothing" duration="5"/>
+          <frameref id="eye_nothingwobble01"/>
+          <frameref id="eye_nothingwobble02">
+            <sample id="Sound"/>
+          </frameref>
+          <frameref id="1_arm_01"/>
+          <frameref id="1_arm_03" duration="40"/>
+          <frameref id="1_arm_01" duration="10"/>
+          <frameref id="1_arm_02" duration="10"/>
+          <frameref id="eye_nothing"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.44" y="-0.5812" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers/>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

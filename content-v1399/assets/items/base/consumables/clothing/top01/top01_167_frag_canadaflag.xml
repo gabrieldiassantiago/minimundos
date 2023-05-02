@@ -1,0 +1,38 @@
+<f id="Top01_167_Canadaflag" parentId="Top01">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top01_167_TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_167_canadaflag_torso_m.png" pri="1"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_167_TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_167_canadaflag_torso_f.png" pri="1"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt">
+    <s id="Top01_167ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top01/top01_154_idle.png" pri="1"/>
+    <s id="Top01_167ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top01/top01_154_walk1.png" pri="1"/>
+    <s id="Top01_167ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top01/top01_154_walk2.png" pri="1"/>
+    <s id="Top01_167ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top01/top01_154_walk3.png" pri="1"/>
+    <s id="Top01_167ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top01/top01_154_sit.png" pri="1"/>
+    <c sId="Top01_167ArmIdleBase" c="10420224" a="0.87" b="42.7" ct="1.31" lId="Top01_167_Color" lw="N"/>
+    <c sId="Top01_167ArmWalk1Base" c="10420224" a="0.87" b="42.7" ct="1.31" lId="Top01_167_Color" lw="N"/>
+    <c sId="Top01_167ArmWalk2Base" c="10420224" a="0.87" b="42.7" ct="1.31" lId="Top01_167_Color" lw="N"/>
+    <c sId="Top01_167ArmWalk3Base" c="10420224" a="0.87" b="42.7" ct="1.31" lId="Top01_167_Color" lw="N"/>
+    <c sId="Top01_167ArmSitBase" c="10420224" a="0.87" b="42.7" ct="1.31" lId="Top01_167_Color" lw="N"/>
+    <s id="Top01_167ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top01/top01_154_throw.png" pri="1"/>
+    <s id="Top01_167ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top01/top01_154_raise.png" pri="1"/>
+    <c sId="Top01_167ArmThrowBase" c="10420224" a="0.87" b="42.7" ct="1.31" lId="Top01_167_Color" lw="N"/>
+    <c sId="Top01_167ArmRaiseBase" c="10420224" a="0.87" b="42.7" ct="1.31" lId="Top01_167_Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_167" icon="items/base/consumables/clothing/top01/top01_167_candaflag_icon_a.png" w="48" h="48"/>
+    <s id="IconTop01_167IconBase" cId="IconTop01_167" s="items/base/consumables/clothing/top01/top01_166_usaflag_icon_1.png" pri="1"/>
+    <c sId="IconTop01_167IconBase" c="10420224" a="0.87" b="42.7" ct="1.31" lId="Top01_167_Color" lw="N"/>
+    <s id="IconTop01_167IconDecal" cId="IconTop01_167" s="items/base/consumables/clothing/top01/top01_167_candaflag_icon_2.png" pri="1.1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_167_Color" name="Color" desc="Choose a color" sel="Red" seld="Red">
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="42.7" ct="1.31" lId="Top01_167_Color"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

@@ -1,0 +1,34 @@
+<f id="Top01_61_Carnival" parentId="Top01">
+  <b id="Gender" sel="Male">
+    <g id="Male" icon="$bm/icon_m_tshirt.png">
+      <s id="Top01_61TorsoMaleDecal" cId="Torso" s="items/base/consumables/clothing/top01/top01_61_carnival02_torso_decal_m.png" pri="1.1"/>
+      <s id="Top01_61TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_60_carnival01_torso_m.png" pri="1"/>
+      <c sId="Top01_61TorsoMaleBase" c="7895160" a="0.99" b="52.0" ct="1.34" lId="Top01_61Color1" lw="N"/>
+    </g>
+    <g id="Female" icon="$bm/icon_m_tshirt.png">
+      <s id="Top01_61TorsoFemaleDecal" cId="Torso" s="items/base/consumables/clothing/top01/top01_61_carnival02_torso_decal_f.png" pri="1.1"/>
+      <s id="Top01_61TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_60_carnival01_torso_f.png" pri="1"/>
+      <c sId="Top01_61TorsoFemaleBase" c="16221202" a="1.00" b="52.8" ct="0.53" lId="Top01_61Color1" lw="N"/>
+    </g>
+  </b>
+  <g id="Icon">
+    <t id="IconTop01_61" icon="items/base/consumables/clothing/top01/top01_61_icon_a.png" w="48" h="48"/>
+    <s id="IconTop01_61overlay" cId="IconTop01_61" s="items/base/consumables/clothing/top01/top01_rare.png"/>
+    <s id="IconTop01_61Base" cId="IconTop01_61" s="items/base/consumables/clothing/top01/top01_60_icon_1.png"/>
+    <c sId="IconTop01_61Base" c="7895160" a="0.99" b="52.0" ct="1.34" lId="Top01_61Color1" lw="N"/>
+    <s id="IconTop01_61Decal" cId="IconTop01_61" s="items/base/consumables/clothing/top01/top01_61_icon_2.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_61Color1" name="Color " desc="Choose a color" sel="Orange" seld="Orange">
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="0.99" b="52.0" ct="1.34" lId="Top01_61Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="52.8" ct="0.53" lId="Top01_61Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="17.2" ct="0.26" lId="Top01_61Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Top01_61Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="1.00" b="37.3" ct="0.47" lId="Top01_61Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=325; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top01_61Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

@@ -1,0 +1,200 @@
+<item.SpriteItem id="1482" name="Porta de Vidro da MiniBalada" desc="A porta de entrada da MiniBalada." tags="admin,misc" icon="items/base/vip/icon_vip_entrance_01_door.png" price="110" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.4,3.4,1.5"/>
+  </volume>
+  <events>
+    <event id="close" script="scripts/item/close_gate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+  </events>
+  <actions>
+    <action id="Open" state="true" event="open"/>
+    <action id="Close" state="true" event="close"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="doors" source="items/base/vip/vip_entrance_01_doora.png" cols="4" rows="1"/>
+    <texture id="frame 01" source="items/base/vip/vip_entrance_01_doorb.png" cols="1" rows="1"/>
+    <texture id="frame 02" source="items/base/vip/vip_entrance_01_doorc.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="closed" z="0.5">
+      <box min="-0.49,0,-1" max="-0.4,3.4,1"/>
+      <layers>
+        <layer id="closed left" texture="frame 01" y="58">
+          <view angle="45" x="-32" y="-42"/>
+          <view angle="135" x="32" y="-42" hm="true"/>
+          <view angle="225" x="32" y="-10"/>
+          <view angle="315" x="-32" y="-10" hm="true"/>
+        </layer>
+        <layer id="closed right" texture="frame 02" y="58">
+          <view angle="45" x="28" y="-104"/>
+          <view angle="135" x="-29" y="-103" hm="true"/>
+          <view angle="225" x="92" y="-71"/>
+          <view angle="315" x="-93" y="-71" hm="true"/>
+        </layer>
+        <layer id="door z" texture="doors" y="58">
+          <view angle="45" col="1" y="-77"/>
+          <view angle="135" x="58" y="-48" hm="true"/>
+          <view angle="225" x="4" y="-15"/>
+          <view angle="315" col="1" x="-60" y="-44" hm="true"/>
+        </layer>
+        <layer id="door -z" texture="doors" y="58">
+          <view angle="45" x="-59" y="-48"/>
+          <view angle="135" col="1" x="-1" y="-77" hm="true"/>
+          <view angle="225" col="1" x="63" y="-44"/>
+          <view angle="315" x="-1" y="-16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="closed">
+          <layerref id="door z"/>
+          <layerref id="door -z"/>
+          <layerref id="closed left"/>
+          <layerref id="closed right"/>
+        </frame>
+        <frame id="closed_hidden">
+          <layerref id="closed left" a="0"/>
+          <layerref id="closed right" a="0"/>
+          <layerref id="door z" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="closed_hidden"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open right" z="0.5">
+      <box min="-0.5,0,0.75" max="0.4,2.75,1"/>
+      <layers>
+        <layer id="behind" texture="frame 02">
+          <view angle="45" x="28" y="-44"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" x="-93" y="-13" hm="true"/>
+        </layer>
+        <layer id="open door" texture="doors" y="58">
+          <view angle="45" col="2" x="53" y="-73"/>
+          <view angle="135" col="2" x="58" y="-19" hm="true"/>
+          <view angle="225" col="3" x="-53" y="-13" alpha="0"/>
+          <view angle="315" col="3" x="-60" y="-70" hm="true"/>
+        </layer>
+        <layer id="front" texture="frame 01" y="58">
+          <view angle="45" alpha="0"/>
+          <view angle="135" x="32" y="-42" hm="true"/>
+          <view angle="225" x="32" y="-10"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="open door behind" texture="doors" y="58">
+          <view angle="45" col="2" x="53" y="-73" alpha="0"/>
+          <view angle="135" col="2" x="58" y="-19" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="-53" y="-13"/>
+          <view angle="315" col="3" x="-59" y="-70" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="open door behind"/>
+          <layerref id="behind"/>
+          <layerref id="front"/>
+          <layerref id="open door"/>
+        </frame>
+        <frame id="hidden">
+          <layerref id="front" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="hidden"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open left" z="0.5">
+      <box min="-0.5,0,-1" max="0.4,2.75,-0.75"/>
+      <layers>
+        <layer id="behind" texture="frame 02">
+          <view angle="45" alpha="0"/>
+          <view angle="135" x="-29" y="-45" hm="true"/>
+          <view angle="225" x="92" y="-13"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="open door" texture="doors" y="58">
+          <view angle="45" col="2" x="-59" y="-18"/>
+          <view angle="135" col="2" x="-54" y="-74" hm="true"/>
+          <view angle="225" col="3" x="59" y="-72"/>
+          <view angle="315" col="3" x="53" y="-13" alpha="0" hm="true"/>
+        </layer>
+        <layer id="front" texture="frame 01" y="58">
+          <view angle="45" x="-32" y="-42"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" x="-32" y="-10" hm="true"/>
+        </layer>
+        <layer id="open door behind" texture="doors" y="58">
+          <view angle="45" col="2" x="-59" y="-18" alpha="0"/>
+          <view angle="135" col="2" x="-54" y="-74" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="59" y="-72" alpha="0"/>
+          <view angle="315" col="3" x="53" y="-13" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="open door behind"/>
+          <layerref id="behind"/>
+          <layerref id="front"/>
+          <layerref id="open door"/>
+        </frame>
+        <frame id="hidden">
+          <layerref id="front" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="hidden"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" z="0.5" s="8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-16"/>
+          <view angle="135" y="-16"/>
+          <view angle="225" y="-16"/>
+          <view angle="315" y="-16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xced0fb"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

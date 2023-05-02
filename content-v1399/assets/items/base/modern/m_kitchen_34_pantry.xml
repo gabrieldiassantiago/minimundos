@@ -1,0 +1,115 @@
+<item.SpriteItem id="2789" name="Despensa Chef Master" desc="Para cozinhar como um Mestre." tags="table" icon="items/base/modern/icon_m_kitchen_34_pantry.png" price="65" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.45,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="open" source="items/base/modern/m_kitchen_34_open.png" cols="2" rows="1"/>
+    <texture id="Pantry" source="items/base/modern/m_kitchen_34_pantry.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,2.45,0.49"/>
+      <layers>
+        <layer id="Closed" texture="Pantry">
+          <view angle="45" x="-1" y="37"/>
+          <view angle="135" x="1" y="37" hm="true"/>
+          <view angle="225" col="1" x="3" y="40"/>
+          <view angle="315" col="1" x="-3" y="40" hm="true"/>
+        </layer>
+        <layer id="Door Open" texture="open">
+          <view angle="45" x="35" y="24"/>
+          <view angle="135" x="-35" y="23" hm="true"/>
+          <view angle="225" col="1" x="-30" y="-7"/>
+          <view angle="315" col="1" x="30" y="-8" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Closed"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="Closed"/>
+          <layerref id="Door Open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open">
+          <frameref id="Open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="4" y="-16"/>
+          <view angle="135" x="-4" y="-16"/>
+          <view angle="225" x="-7" y="-25"/>
+          <view angle="315" x="7" y="-25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Light" a="0"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="Open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="0.4" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="130" y="-425" alpha="0.8"/>
+          <view angle="135" x="-109" y="-429" alpha="0.8"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Light" a="0"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="Open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,211 @@
+<item.SpriteItem id="5444" name="Traje Adamantium Blade" desc="Um ultra-moderno traje voador" tags="rare,hand,consumable,back,clothing,actionbar,wear,suits,action_wearable_toggle" icon="items/base/consumables/clothing/suits/suit_79_adamantium_icon.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_79_frag_adamantium.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes" value="fire+50"/>
+    <entry key="action_attributes_secondary" value="health+100,speed+100"/>
+  </data>
+  <textures>
+    <texture id="robot" source="items/base/consumables/clothing/suits/suit_79_adamantium_item.png" cols="2" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/feet/icon_con_feet_37_shadow.png" cols="2" rows="1"/>
+    <texture id="cape" source="items/base/consumables/clothing/suits/suit_79_adamantium_cape.png" cols="5" rows="3"/>
+    <texture id="dust" source="items/base/consumables/clothing/suits/suit_79_adamantium_dust.png" cols="1" rows="1"/>
+    <texture id="swirl" source="items/base/consumables/clothing/suits/suit_79_adamantium_swirl.png" cols="4" rows="1"/>
+    <texture id="flames" source="items/base/consumables/clothing/suits/suit_79_adamantium_halo.png" cols="5" rows="1"/>
+    <texture id="lens" source="items/base/consumables/clothing/suits/suit_79_adamantium_lensflare.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+      <layers>
+        <layer id="Robot" texture="robot" y="15">
+          <view angle="45" y="-50"/>
+          <view angle="135" y="-50" hm="true"/>
+          <view angle="225" col="1" x="1" y="-50" hm="true"/>
+          <view angle="315" col="1" x="1" y="-50"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="30"/>
+          <view angle="135" y="30"/>
+          <view angle="225" y="30"/>
+          <view angle="315" y="30"/>
+        </layer>
+        <layer id="225cape_01" texture="cape">
+          <view angle="45" x="-25" y="-30" alpha="0"/>
+          <view angle="135" x="25" y="-30" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="17" y="-29" hm="true"/>
+          <view angle="315" col="3" x="-17" y="-29"/>
+        </layer>
+        <layer id="225cape_02" texture="cape">
+          <view angle="45" x="-25" y="-30" alpha="0"/>
+          <view angle="135" x="25" y="-30" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="1" x="17" y="-29" hm="true"/>
+          <view angle="315" col="3" row="1" x="-17" y="-29"/>
+        </layer>
+        <layer id="225cape_03" texture="cape">
+          <view angle="45" x="-25" y="-30" alpha="0"/>
+          <view angle="135" x="25" y="-30" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="2" x="17" y="-29" hm="true"/>
+          <view angle="315" col="3" row="2" x="-17" y="-29"/>
+        </layer>
+        <layer id="45cape_01" texture="cape">
+          <view angle="45" x="-25" y="-30"/>
+          <view angle="135" x="25" y="-30" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="45cape_02" texture="cape">
+          <view angle="45" row="1" x="-25" y="-30"/>
+          <view angle="135" row="1" x="25" y="-30" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="45cape_03" texture="cape">
+          <view angle="45" row="2" x="-25" y="-30"/>
+          <view angle="135" row="2" x="25" y="-30" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="dust_01" texture="dust">
+          <view y="30"/>
+        </layer>
+        <layer id="dust_02" texture="dust">
+          <view y="30" hm="true"/>
+        </layer>
+        <layer id="swirl_01" texture="swirl">
+          <view y="50"/>
+        </layer>
+        <layer id="swirl_02" texture="swirl">
+          <view col="1" y="50"/>
+        </layer>
+        <layer id="swirl_03" texture="swirl">
+          <view col="2" y="50"/>
+        </layer>
+        <layer id="swirl_04" texture="swirl">
+          <view col="3" y="50"/>
+        </layer>
+        <layer id="flames" texture="flames">
+          <view angle="45" col="1" x="-3" y="5"/>
+          <view angle="135" col="1" x="3" y="5" hm="true"/>
+          <view angle="225" col="3" x="3" y="5" hm="true"/>
+          <view angle="315" col="3" x="-3" y="5"/>
+        </layer>
+        <layer id="lens" texture="lens">
+          <view angle="45" col="1" x="-3" y="5"/>
+          <view angle="135" col="1" x="3" y="5" hm="true"/>
+          <view angle="225" col="3" x="3" y="5" hm="true"/>
+          <view angle="315" col="3" x="-3" y="5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="shadow"/>
+          <layerref id="swirl_02" a="0.1"/>
+          <layerref id="swirl_01" a="0.1"/>
+          <layerref id="dust_01" a="0.5"/>
+          <layerref id="45cape_03"/>
+          <layerref id="Robot"/>
+          <layerref id="225cape_03"/>
+          <layerref id="flames"/>
+          <layerref id="lens" y="1"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="shadow"/>
+          <layerref id="swirl_03" a="0.1"/>
+          <layerref id="swirl_02" a="0.1"/>
+          <layerref id="dust_02" a="0.5"/>
+          <layerref id="45cape_02" y="1"/>
+          <layerref id="Robot" y="1"/>
+          <layerref id="225cape_02" y="1"/>
+          <layerref id="flames" y="2"/>
+          <layerref id="lens" y="2"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="shadow"/>
+          <layerref id="swirl_04" a="0.1"/>
+          <layerref id="swirl_03" a="0.1"/>
+          <layerref id="dust_01" a="0.5"/>
+          <layerref id="45cape_01" y="2"/>
+          <layerref id="Robot" y="2"/>
+          <layerref id="225cape_01" y="2"/>
+          <layerref id="flames" y="1" a="0.9"/>
+          <layerref id="lens" y="3"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="shadow"/>
+          <layerref id="swirl_01" a="0.1"/>
+          <layerref id="swirl_04" a="0.1"/>
+          <layerref id="dust_02" a="0.5"/>
+          <layerref id="45cape_02" y="1"/>
+          <layerref id="Robot" y="1"/>
+          <layerref id="225cape_02" y="1"/>
+          <layerref id="flames" y="2" a="0.9"/>
+          <layerref id="lens" y="2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="7">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="flames" texture="flames">
+          <view angle="45" col="1" x="-3" y="5"/>
+          <view angle="135" col="1" x="3" y="5" hm="true"/>
+          <view angle="225" col="3" x="3" y="5" hm="true"/>
+          <view angle="315" col="3" x="-3" y="5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="flames"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-1" y="-20"/>
+          <view angle="135" x="1" y="-20"/>
+          <view angle="225" x="1" y="-20"/>
+          <view angle="315" x="-1" y="-20"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xb6dbf5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

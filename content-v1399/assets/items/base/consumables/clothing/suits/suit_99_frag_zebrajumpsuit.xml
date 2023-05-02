@@ -1,0 +1,29 @@
+<f id="ZebraJumpSuit" parentId="Suits">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Zebra_Torso_M" cId="Torso" s="items/base/consumables/clothing/suits/suit_99_torso_male.png" pri="1"/>
+    </g>
+    <g id="Female">
+      <s id="Zebra_Torso_F" cId="Torso" s="items/base/consumables/clothing/suits/suit_99_torso_female.png" pri="1"/>
+    </g>
+  </b>
+  <g id="Zebra Jumpsuit">
+    <b id="Zebra_Legs" min="2" max="2" sel="Legs">
+      <g id="Legs" icon="$bu/icon_legs_trouser.png">
+        <s id="Zebra_Leg_Idle" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_99_leg_idle.png" pri="3"/>
+        <s id="Zebra_Leg_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_99_leg_walk1.png" pri="3"/>
+        <s id="Zebra_Leg_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_99_leg_walk2.png" pri="3"/>
+        <s id="Zebra_Leg_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_99_leg_walk3.png" pri="3"/>
+        <s id="Zebra_Leg_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_99_leg_walk4.png" pri="3"/>
+        <s id="Zebra_Leg_Sit" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_99_leg_sit.png" pri="3"/>
+      </g>
+    </b>
+  </g>
+  <g id="Icon">
+    <t id="Icon_Zebra" icon="items/base/consumables/clothing/suits/suit_99_icon_jumpsuit_zebra.png" w="48" h="48"/>
+    <s id="Icon_Zebra_suit" cId="Icon_Zebra" s="items/base/consumables/clothing/suits/suit_99_icon_jumpsuit_zebra.png"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+</f>

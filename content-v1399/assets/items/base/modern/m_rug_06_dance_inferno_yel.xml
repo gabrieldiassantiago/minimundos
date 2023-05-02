@@ -1,0 +1,166 @@
+<item.SpriteItem id="2218" name="Pista de Dança Fogo" desc="Uma pista rara para badalar os minis mais exigentes." tags="rare,floor" icon="items/base/modern/icon_m_rug_06_dance_inferno_yel.png" price="25" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.45,0,-0.45" max="0.45,0.01,0.45"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/modern/m_rug_06_dance_base.png" cols="1" rows="1"/>
+    <texture id="colours" source="items/base/modern/m_rug_06_dance_inferno.png" cols="3" rows="1"/>
+    <texture id="intense" source="items/base/shared/s_fx_flare_dance_inferno.png" cols="3" rows="1"/>
+    <texture id="diffuse" source="items/base/shared/s_fx_flare_square.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="inferno" layer="surface">
+      <box min="-0.45,0,-0.45" max="0.45,0.01,0.45"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view y="32"/>
+        </layer>
+        <layer id="colour 01" texture="colours">
+          <view y="32"/>
+        </layer>
+        <layer id="colour 02" texture="colours">
+          <view col="1" y="32"/>
+        </layer>
+        <layer id="colour 03" texture="colours">
+          <view col="2" y="32"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="base"/>
+        </frame>
+        <frame id="01">
+          <layerref id="base"/>
+          <layerref id="colour 01" color="0xffff3f" blend="add"/>
+          <layerref id="colour 02" color="0xffa229" a="0.1" blend="add"/>
+          <layerref id="colour 03" color="0xff400d" a="0.1" blend="add"/>
+        </frame>
+        <frame id="02">
+          <layerref id="base"/>
+          <layerref id="colour 01" color="0xffff3f" blend="add"/>
+          <layerref id="colour 02" color="0xffa229" blend="add"/>
+        </frame>
+        <frame id="03">
+          <layerref id="base"/>
+          <layerref id="colour 01" color="0xffff3f" a="0.9" blend="add"/>
+          <layerref id="colour 02" color="0xffa229" blend="add"/>
+          <layerref id="colour 03" color="0xff400d" blend="add"/>
+        </frame>
+        <frame id="04">
+          <layerref id="base"/>
+          <layerref id="colour 02" color="0xffa229" a="0.2" blend="add"/>
+          <layerref id="colour 03" color="0xff400d" a="0.2" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2" syncOffsets="2,3">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="1.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="light" texture="diffuse" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="light" a="0"/>
+        </frame>
+        <frame id="01">
+          <layerref id="light" color="0xffff3f" a="0.6"/>
+        </frame>
+        <frame id="02">
+          <layerref id="light" color="0xffa229" a="0.8"/>
+        </frame>
+        <frame id="03">
+          <layerref id="light" color="0xff400d"/>
+        </frame>
+        <frame id="04">
+          <layerref id="light" color="0xff400d" a="0.2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2" syncOffsets="2,3">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="3.9" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="colour 01" texture="intense" align="middle">
+          <view/>
+        </layer>
+        <layer id="colour 02" texture="intense" align="middle">
+          <view col="1"/>
+        </layer>
+        <layer id="colour 03" texture="intense" align="middle">
+          <view col="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="colour 01" a="0"/>
+        </frame>
+        <frame id="01">
+          <layerref id="colour 01" color="0xffff3f" a="0.5"/>
+          <layerref id="colour 02" color="0xffa229" a="0.05"/>
+          <layerref id="colour 03" color="0xff400d" a="0.05"/>
+        </frame>
+        <frame id="02">
+          <layerref id="colour 01" color="0xffff3f" a="0.5"/>
+          <layerref id="colour 02" color="0xffa229" a="0.5"/>
+        </frame>
+        <frame id="03">
+          <layerref id="colour 01" color="0xffff3f" a="0.45"/>
+          <layerref id="colour 02" color="0xffa229" a="0.5"/>
+          <layerref id="colour 03" color="0xff400d" a="0.5"/>
+        </frame>
+        <frame id="04">
+          <layerref id="colour 02" color="0xffa229" a="0.1"/>
+          <layerref id="colour 03" color="0xff400d" a="0.1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2" syncOffsets="2,3">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

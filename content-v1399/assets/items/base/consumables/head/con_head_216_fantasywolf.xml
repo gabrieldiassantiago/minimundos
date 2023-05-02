@@ -1,0 +1,131 @@
+<item.SpriteItem id="0" name="Chinchilla" desc="Collectible" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="redpanda" source="items/base/consumables/head/con_head_216_fantasywolf.png" cols="5" rows="1"/>
+    <texture id="mouth" source="items/base/consumables/head/con_head_216_fantasywolf_mouth.png" cols="4" rows="2"/>
+    <texture id="eye" source="items/base/consumables/head/con_head_216_fantasywolf_eye.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="redpanda">
+          <view angle="0" col="2" x="7" y="29"/>
+          <view angle="45" x="-1" y="24"/>
+          <view angle="90" col="1" x="1" y="27"/>
+          <view angle="135" y="24" hm="true"/>
+          <view angle="180" col="2" x="-7" y="29" hm="true"/>
+          <view angle="225" col="3" y="32" hm="true"/>
+          <view angle="270" col="4" x="1" y="33"/>
+          <view angle="315" col="3" y="32"/>
+        </layer>
+        <layer id="mouth_01" texture="mouth">
+          <view angle="0" col="2" x="23" y="18"/>
+          <view angle="45" x="13" y="19"/>
+          <view angle="90" col="1" y="25"/>
+          <view angle="135" x="-14" y="19" hm="true"/>
+          <view angle="180" col="2" x="-23" y="18" hm="true"/>
+          <view angle="225" col="3" x="-19" y="3" hm="true"/>
+          <view angle="270" col="4" y="18" alpha="0"/>
+          <view angle="315" col="3" x="19" y="3"/>
+        </layer>
+        <layer id="mouth_02" texture="mouth">
+          <view angle="0" col="2" row="1" x="23" y="18"/>
+          <view angle="45" row="1" x="13" y="19"/>
+          <view angle="90" col="1" row="1" y="25"/>
+          <view angle="135" row="1" x="-14" y="19" hm="true"/>
+          <view angle="180" col="2" row="1" x="-23" y="18" hm="true"/>
+          <view angle="225" col="3" row="1" x="-19" y="3" hm="true"/>
+          <view angle="270" col="4" y="18" alpha="0"/>
+          <view angle="315" col="3" row="1" x="19" y="3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="head"/>
+          <layerref id="mouth_01"/>
+        </frame>
+        <frame id="01">
+          <layerref id="head"/>
+          <layerref id="mouth_02"/>
+        </frame>
+        <frame id="02">
+          <layerref id="head" x="1" y="1"/>
+          <layerref id="mouth_02" x="1" y="1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="12">
+          <frameref id="idle" duration="46"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="eye" align="middle">
+          <view angle="0" col="2" x="18" y="-14"/>
+          <view angle="45" x="17" y="-11"/>
+          <view angle="90" col="1" x="2" y="-11"/>
+          <view angle="135" x="-10" y="-11" hm="true"/>
+          <view angle="180" col="2" x="-15" y="-15" hm="true"/>
+          <view angle="225" col="3" x="-17" y="-26" hm="true"/>
+          <view angle="270" col="4" x="5" y="-36"/>
+          <view angle="315" col="3" x="17" y="-26"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

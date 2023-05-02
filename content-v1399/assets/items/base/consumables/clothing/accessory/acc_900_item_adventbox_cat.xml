@@ -1,0 +1,78 @@
+<item.SpriteItem id="7356" name="Placa Polo Norte" desc="Bem vindo ao Polo Norte [11 de 25]" tags="rare,misc" icon="items/base/consumables/clothing/accessory/acc_900_icon_adventbox_cat.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.16,0,-0.46" max="0.16,2.6,1.46"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="pole" source="items/base/consumables/clothing/accessory/acc_900_item_adventbox_cat.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="text" source="items/base/consumables/clothing/accessory/acc_900_item_adventbox_cat_text.png" cols="4" rows="2"/>
+    <texture id="bulbs" source="items/base/consumables/clothing/accessory/acc_900_item_adventbox_cat_bulbs.png" cols="2" rows="1"/>
+    <texture id="bulb glow" source="items/base/consumables/clothing/accessory/acc_900_item_adventbox_cat_light.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Base">
+      <box min="-0.16,0,-0.46" max="0.16,2.6,1.46"/>
+      <layers>
+        <layer id="pole" texture="pole" align="middle">
+          <view angle="45" x="36" y="-72"/>
+          <view angle="135" col="1" x="31" y="-78"/>
+          <view angle="225" col="1" x="-31" y="-78" hm="true"/>
+          <view angle="315" x="-30" y="-71" hm="true"/>
+        </layer>
+        <layer id="NorthPole" texture="text" align="middle">
+          <view angle="45" col="2" x="47" y="-169"/>
+          <view angle="135" col="3" x="36" y="-132"/>
+          <view angle="225" col="2" x="-33" y="-132"/>
+          <view angle="315" col="3" x="-42" y="-170"/>
+        </layer>
+        <layer id="Welcome" texture="text" align="middle">
+          <view angle="45" col="2" row="1" x="49" y="-129"/>
+          <view angle="135" col="3" row="1" x="37" y="-88"/>
+          <view angle="225" col="2" row="1" x="-39" y="-87"/>
+          <view angle="315" col="3" row="1" x="-45" y="-129"/>
+        </layer>
+        <layer id="Bulbs" texture="bulbs">
+          <view angle="45" x="46" y="-125"/>
+          <view angle="135" col="1" x="29" y="-89"/>
+          <view angle="225" col="1" x="-29" y="-89" hm="true"/>
+          <view angle="315" x="-42" y="-124" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="pole"/>
+          <layerref id="NorthPole"/>
+          <layerref id="Welcome"/>
+          <layerref id="Bulbs"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="bulb glow" align="middle">
+          <view angle="45" x="47" y="-165"/>
+          <view angle="135" col="1" x="29" y="-129"/>
+          <view angle="225" col="1" x="-35" y="-133" hm="true"/>
+          <view angle="315" x="-45" y="-167" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light" color="0xebe781"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="On01"/>
+        </animation>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

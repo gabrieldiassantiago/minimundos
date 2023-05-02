@@ -1,0 +1,37 @@
+<item.SpriteItem name="Saia Justa Listrada Coast" desc="Uma saia com listras horizontais" tags="consumable,clothing,actionbar,wear,bot03,action_wearable_toggle" icon="items/base/consumables/clothing/bot03/bot03_63_icon_a.png" price="590" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="5123">
+  <volume>
+    <box min="-0.33,0,-0.3" max="0.32,0.05,0.3"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/bot03/bot03_63_frag_stripedshortskirt.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="cargos" source="items/base/consumables/clothing/bot03/bot03_63_item_stripedshortskirt.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.33,0,-0.3" max="0.32,0.05,0.3"/>
+      <layers>
+        <layer id="Layer" texture="cargos" y="19">
+          <view angle="45" y="4"/>
+          <view angle="135" y="4" hm="true"/>
+          <view angle="225" col="1" y="4"/>
+          <view angle="315" col="1" y="4" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

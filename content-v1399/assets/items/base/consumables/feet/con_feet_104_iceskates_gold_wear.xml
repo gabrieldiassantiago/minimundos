@@ -1,0 +1,156 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.08,0,0" max="-0.08,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_104_iceskates_gold_wear.png" cols="4" rows="2"/>
+    <texture id="Sit" source="items/base/consumables/feet/con_feet_104_iceskates_gold_item.png" cols="2" rows="1"/>
+    <texture id="snowpuff" source="items/base/shared/s_snowpuff.png" cols="2" rows="1"/>
+    <texture id="sparkle" source="items/base/consumables/magic/con_sparkle.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" x="-0.08">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="boots" texture="base">
+          <view angle="0" col="3" row="1" x="4" y="27"/>
+          <view angle="45" y="27"/>
+          <view angle="90" col="1" x="1" y="31"/>
+          <view angle="135" col="2" y="27"/>
+          <view angle="180" col="3" x="-3" y="25"/>
+          <view angle="225" row="1" y="27"/>
+          <view angle="270" col="1" row="1" x="1" y="23"/>
+          <view angle="315" col="2" row="1" y="24"/>
+        </layer>
+        <layer id="sit" texture="Sit">
+          <view angle="45" x="4" y="33"/>
+          <view angle="135" x="-5" y="33" hm="true"/>
+          <view angle="225" col="1" x="-5" y="33"/>
+          <view angle="315" col="1" x="5" y="33" hm="true"/>
+        </layer>
+        <layer id="puffA" texture="snowpuff">
+          <view angle="0" x="-4" y="20" hm="true"/>
+          <view angle="45" x="-6" y="21" hm="true" vm="true"/>
+          <view angle="90" x="-4" y="29" hm="true"/>
+          <view angle="135" x="1" y="17" vm="true"/>
+          <view angle="180" x="4" y="23"/>
+          <view angle="225" x="7" y="22"/>
+          <view angle="270" x="4" y="21"/>
+          <view angle="315" x="-5" y="21" hm="true"/>
+        </layer>
+        <layer id="puffB" texture="snowpuff">
+          <view angle="0" col="1" x="-4" y="20" hm="true"/>
+          <view angle="45" col="1" x="-6" y="21" hm="true" vm="true"/>
+          <view angle="90" col="1" x="-4" y="29" hm="true"/>
+          <view angle="135" col="1" x="3" y="15" vm="true"/>
+          <view angle="180" col="1" x="4" y="23"/>
+          <view angle="225" col="1" x="7" y="22"/>
+          <view angle="270" col="1" x="4" y="21"/>
+          <view angle="315" col="1" x="-5" y="21" hm="true"/>
+        </layer>
+        <layer id="sparkle01" texture="sparkle">
+          <view x="8" y="20"/>
+        </layer>
+        <layer id="sparkle02" texture="sparkle">
+          <view col="1" x="8" y="20"/>
+        </layer>
+        <layer id="sparkle03" texture="sparkle">
+          <view col="2" x="8" y="20"/>
+        </layer>
+        <layer id="sparkle04" texture="sparkle">
+          <view/>
+        </layer>
+        <layer id="sparkle05" texture="sparkle">
+          <view col="1"/>
+        </layer>
+        <layer id="sparkle06" texture="sparkle">
+          <view col="2"/>
+        </layer>
+        <layer id="sparkle07" texture="sparkle">
+          <view x="-7" y="19"/>
+        </layer>
+        <layer id="sparkle08" texture="sparkle">
+          <view col="1" x="-7" y="19"/>
+        </layer>
+        <layer id="sparkle09" texture="sparkle">
+          <view col="2" x="-7" y="19"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="boots"/>
+          <layerref id="sparkle01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="boots"/>
+          <layerref id="sparkle02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="boots"/>
+          <layerref id="sparkle03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="boots"/>
+          <layerref id="sparkle04"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="boots"/>
+          <layerref id="sparkle05"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="sparkle06"/>
+          <layerref id="boots"/>
+        </frame>
+        <frame id="Frameoff">
+          <layerref id="boots"/>
+        </frame>
+        <frame id="Walk01">
+          <layerref id="puffA" a="0.85"/>
+          <layerref id="boots"/>
+        </frame>
+        <frame id="Walk02">
+          <layerref id="puffB" a="0.85"/>
+          <layerref id="boots"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="boots"/>
+          <layerref id="sparkle07"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="boots"/>
+          <layerref id="sparkle08"/>
+        </frame>
+        <frame id="Frame09">
+          <layerref id="boots"/>
+          <layerref id="sparkle09"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="Frameoff" duration="15"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frameoff" duration="8"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frameoff"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame09"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Walk01"/>
+          <frameref id="Walk02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

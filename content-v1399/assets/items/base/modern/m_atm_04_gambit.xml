@@ -1,0 +1,112 @@
+<item.WidgetItem id="1612" name="Gambit Atm" desc="Earn gold at this ATM" tags="admin,widget" icon="items/base/modern/icon_m_atm_04_gambit.png" price="99" minLevel="1" minLevelType="2" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_url_iframe.swf" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.16,0.49"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+  </events>
+  <data>
+    <entry key="frame" value="modern"/>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_button" value="EARN GOLD"/>
+    <entry key="control_button_tooltip" value="Earn gold through by completing Gambit offers"/>
+    <entry key="widget_background_override" value="widget/gambitBG.jpg"/>
+    <entry key="widget_iframe_override" value="widget/atmBG.jpg"/>
+    <entry key="widget_iframe_file" value="widget/atmBG.jpg"/>
+    <entry key="widget_iframe_bg" value="widget/atmBG.jpg"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="iframeWidget" value="true"/>
+  </data>
+  <navigate position="infront" sitRange="2.00" standRange="3.00" targetRange="3.00" usableRange="-1.00" accessibleRange="3"/>
+  <textures>
+    <texture id="text" source="items/base/modern/m_atm_04_gambit_logo.png" cols="3" rows="1"/>
+    <texture id="Base" source="items/base/modern/m_atm_04_gambit.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_atm_peanut.png" cols="1" rows="1"/>
+    <texture id="screen" source="items/base/modern/m_atm_04_gambit_screen.png" cols="2" rows="1"/>
+    <texture id="light_02" source="items/base/shared/s_fx_flare_screen_atm_gambit_logo.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,2.16,0.49"/>
+      <layers>
+        <layer id="Base" texture="Base" y="39">
+          <view angle="45" y="-2"/>
+          <view angle="135" y="-2" hm="true"/>
+          <view angle="225" col="1" y="-2" hm="true"/>
+          <view angle="315" col="1" y="-2"/>
+        </layer>
+        <layer id="Text" texture="text" x="-28" y="-137">
+          <view angle="45" x="27" y="18"/>
+          <view angle="135" col="1" x="30" y="18"/>
+          <view angle="225" col="2" x="26" y="15"/>
+          <view angle="315" col="2" x="29" y="15" hm="true"/>
+        </layer>
+        <layer id="Rubish" texture="rubbish" x="50">
+          <view angle="45" x="-3" y="-15"/>
+          <view angle="135" col="1" x="-60"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="screen" texture="screen" y="39">
+          <view angle="45" x="9" y="-118"/>
+          <view angle="135" col="1" x="-9" y="-118"/>
+          <view angle="225" col="1" y="-2" alpha="0" hm="true"/>
+          <view angle="315" col="1" y="-2" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" x="0.3594" y="1.3313" z="-0.1" s="1.05" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-1"/>
+          <view angle="135" x="20" y="5" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse01" x="0.0469" y="1.925" z="-0.0312" s="2.75" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light_02" align="middle">
+          <view angle="45"/>
+          <view angle="135" x="1" y="1" hm="true"/>
+          <view angle="225" col="1" x="1" y="1" hm="true"/>
+          <view angle="315" col="1" x="-1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

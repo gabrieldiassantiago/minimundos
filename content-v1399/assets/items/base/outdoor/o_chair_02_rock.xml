@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.ChairItem desc="Run out of chairs? Just sit on a rock" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/outdoor/icon_o_chair_02_rock.png" id="835" name="Rock Seat" tags="chair" price="13" tokens="130" minLevel="1" minCPLevel="1">
+  <seats>
+    <seat x="-0.05" y="0.38" z="-0.16">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.3,0,-0.48" max="0.48,0.36,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="more rocks" source="items/base/outdoor/o_rocks_01_mossy_small.png" cols="1" rows="1"/>
+    <texture id="rock seat" source="items/base/outdoor/o_chair_02_rock.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Seat">
+      <box min="-0.3,0,-0.48" max="0.48,0.36,0.48"/>
+      <layers>
+        <layer id="rock seat" texture="rock seat">
+          <view angle="45" y="32"/>
+          <view angle="135" col="1" y="26"/>
+          <view angle="225" col="1" y="26" hm="true"/>
+          <view angle="315" y="32" hm="true"/>
+        </layer>
+        <layer id="little rock" texture="more rocks">
+          <view angle="45" x="38" y="17"/>
+          <view angle="135" x="-9" y="30"/>
+          <view angle="225" col="2" x="-50" y="54" alpha="0" hm="true"/>
+          <view angle="315" col="2" row="1" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

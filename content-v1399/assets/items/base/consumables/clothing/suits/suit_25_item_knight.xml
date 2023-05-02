@@ -1,0 +1,39 @@
+<item.SpriteItem id="3152" name="Armadura Medieval" desc="Uma armadura medieval." tags="consumable,clothing,actionbar,wear,suits,action_wearable_toggle" icon="items/base/consumables/clothing/suits/icon_suit_25_item_knight.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="8000" premium="Y">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,1.6,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_25_frag_knight.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes" value="arcane+20"/>
+    <entry key="action_attributes_secondary" value="speed+40,health+20"/>
+  </data>
+  <textures>
+    <texture id="knight" source="items/base/consumables/clothing/suits/suit_25_item_knight.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,1.6,0.25"/>
+      <layers>
+        <layer id="knight" texture="knight" y="15">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

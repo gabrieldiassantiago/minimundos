@@ -1,0 +1,69 @@
+<item.SpriteItem id="1483" name="Divisória  de Canto da MiniBalada" desc="Para separar os ambientes da MiniBalada." tags="admin,misc" icon="items/base/vip/icon_vip_barrier_01_glass_cnr.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="27" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.15,1.05,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="barrier" source="items/base/vip/vip_barrier_01_glass.png" cols="3" rows="1"/>
+    <texture id="barrier cnr" source="items/base/vip/vip_barrier_01_glass_cnr.png" cols="1" rows="1"/>
+    <texture id="pole" source="items/base/vip/vip_bar_01_metalpole.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="barrier">
+      <box min="-0.5,0,-0.5" max="0.15,1.05,0.15"/>
+      <layers>
+        <layer id="barrier" texture="barrier">
+          <view angle="45" alpha="0"/>
+          <view angle="135" col="2" y="15"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="1" y="37"/>
+        </layer>
+        <layer id="barrier cnr" texture="barrier cnr">
+          <view angle="45" x="-23" y="26"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" x="23" y="26" hm="true"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="pole" texture="pole">
+          <view angle="45" x="-19" y="-66"/>
+          <view angle="135" y="-73"/>
+          <view angle="225" x="19" y="-66"/>
+          <view angle="315" y="-55"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-8" y="-14"/>
+          <view angle="135" y="-17"/>
+          <view angle="225" x="8" y="-14"/>
+          <view angle="315" y="-9"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x8ac8fa" a="0.6"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,66 @@
+<item.SpriteItem id="0" name="Raccoon" desc="Collectible (April 2014)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="redpanda" source="items/base/consumables/head/con_head_257_whitedragon.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_257_whitedragon_blink.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="redpanda" texture="redpanda">
+          <view angle="0" col="2" x="5" y="25"/>
+          <view angle="45" y="26"/>
+          <view angle="90" col="1" y="29"/>
+          <view angle="135" x="-1" y="26" hm="true"/>
+          <view angle="180" col="2" x="-5" y="25" hm="true"/>
+          <view angle="225" col="3" y="25" hm="true"/>
+          <view angle="270" col="4" y="27"/>
+          <view angle="315" col="3" x="-1" y="25"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="12" y="-2" hm="true"/>
+          <view angle="45" x="-1" y="-1"/>
+          <view angle="90" col="1" x="1" y="-2"/>
+          <view angle="135" x="1" y="-1" hm="true"/>
+          <view angle="180" col="2" x="-11" y="-2"/>
+          <view angle="225" col="3" x="-16" y="-10" hm="true"/>
+          <view angle="270" col="2" y="18" alpha="0"/>
+          <view angle="315" col="3" x="16" y="-10"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Blink">
+          <layerref id="redpanda"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="Normal">
+          <layerref id="redpanda"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="Normal" duration="36"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal" duration="12"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal" duration="24"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal" duration="8"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal" duration="18"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

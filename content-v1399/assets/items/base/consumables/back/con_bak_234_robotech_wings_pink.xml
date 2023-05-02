@@ -1,0 +1,100 @@
+<item.SpriteItem id="5043" name="Play Robotech Wings" desc="A pair of cool Robotech Wings" icon="items/base/consumables/back/icon_con_bak_234_robotech_wings_pink.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Robotech Wings" source="items/base/consumables/back/con_bak_234_robotech_wings_pink.png" cols="5" rows="5"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="1" texture="Robotech Wings">
+          <view angle="0" row="4" x="15" y="65" hm="true"/>
+          <view angle="45" row="3" x="20" y="75" hm="true"/>
+          <view angle="90" row="1" y="80"/>
+          <view angle="135" row="3" x="-20" y="75"/>
+          <view angle="180" row="4" x="-15" y="65"/>
+          <view angle="225" row="2" y="80"/>
+          <view angle="270" y="80"/>
+          <view angle="315" row="2" y="80" hm="true"/>
+        </layer>
+        <layer id="2" texture="Robotech Wings">
+          <view angle="0" col="1" row="4" x="15" y="65" hm="true"/>
+          <view angle="45" col="1" row="3" x="20" y="75" hm="true"/>
+          <view angle="90" col="1" row="1" y="80"/>
+          <view angle="135" col="1" row="3" x="-20" y="75"/>
+          <view angle="180" col="1" row="4" x="-15" y="65"/>
+          <view angle="225" col="1" row="2" y="80"/>
+          <view angle="270" col="1" y="80"/>
+          <view angle="315" col="1" row="2" y="80" hm="true"/>
+        </layer>
+        <layer id="3" texture="Robotech Wings">
+          <view angle="0" col="2" row="4" x="15" y="65" hm="true"/>
+          <view angle="45" col="2" row="3" x="20" y="75" hm="true"/>
+          <view angle="90" col="2" row="1" y="80"/>
+          <view angle="135" col="2" row="3" x="-20" y="75"/>
+          <view angle="180" col="2" row="4" x="-15" y="65"/>
+          <view angle="225" col="2" row="2" y="80"/>
+          <view angle="270" col="2" y="80"/>
+          <view angle="315" col="2" row="2" y="80" hm="true"/>
+        </layer>
+        <layer id="4" texture="Robotech Wings">
+          <view angle="0" col="3" row="4" x="15" y="65" hm="true"/>
+          <view angle="45" col="3" row="3" x="20" y="75" hm="true"/>
+          <view angle="90" col="3" row="1" y="80"/>
+          <view angle="135" col="3" row="3" x="-20" y="75"/>
+          <view angle="180" col="3" row="4" x="-15" y="65"/>
+          <view angle="225" col="3" row="2" y="80"/>
+          <view angle="270" col="3" y="80"/>
+          <view angle="315" col="3" row="2" y="80" hm="true"/>
+        </layer>
+        <layer id="sit" texture="Robotech Wings">
+          <view angle="0" col="4" row="4" x="15" y="65" hm="true"/>
+          <view angle="45" col="4" row="3" x="20" y="75" hm="true"/>
+          <view angle="90" col="4" row="1" y="80"/>
+          <view angle="135" col="4" row="3" x="-20" y="75"/>
+          <view angle="180" col="4" row="4" x="-15" y="65"/>
+          <view angle="225" col="4" row="2" y="80"/>
+          <view angle="270" col="4" y="80"/>
+          <view angle="315" col="4" row="2" y="80" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="1">
+          <layerref id="1"/>
+        </frame>
+        <frame id="2">
+          <layerref id="2"/>
+        </frame>
+        <frame id="3">
+          <layerref id="3"/>
+        </frame>
+        <frame id="4">
+          <layerref id="4"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="1"/>
+          <frameref id="2"/>
+          <frameref id="3"/>
+          <frameref id="4"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

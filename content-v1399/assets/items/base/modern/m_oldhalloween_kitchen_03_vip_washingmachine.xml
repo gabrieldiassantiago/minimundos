@@ -1,0 +1,93 @@
+<item.SpriteItem id="7262" name="Máquina de Lavar Vórtice" desc="Uma máquina de lavar inter-dimensional" tags="rare,table" icon="items/base/modern/icon_m_oldhalloween_kitchen_03_vip_washingmachine.png" price="65" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,1.2,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="base" source="items/base/modern/m_kitchen_03_washingmachine.png" cols="2" rows="1"/>
+    <texture id="door" source="items/base/modern/m_kitchen_03_washingmachine_buttons.png" cols="2" rows="1"/>
+    <texture id="Texture" source="items/base/modern/m_oldhalloween_kitchen_03_vip_washingmachine_portal.png" cols="3" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.49" max="0.4,1.2,0.49"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" x="1" y="43"/>
+          <view angle="135" y="43" hm="true"/>
+          <view angle="225" col="1" x="1" y="41"/>
+          <view angle="315" col="1" x="-1" y="42" hm="true"/>
+        </layer>
+        <layer id="buttons" texture="door">
+          <view angle="45" x="23" y="-54"/>
+          <view angle="135" col="1" x="-24" y="-53"/>
+          <view angle="225" col="1" x="-28" y="3" alpha="0"/>
+          <view angle="315" col="1" x="27" y="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="01" texture="Texture">
+          <view angle="45" x="29" y="-7"/>
+          <view angle="135" x="-28" y="-7" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+        <layer id="02" texture="Texture">
+          <view angle="45" col="1" x="29" y="-7"/>
+          <view angle="135" col="1" x="-28" y="-7" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+        <layer id="03" texture="Texture">
+          <view angle="45" col="2" x="29" y="-7"/>
+          <view angle="135" col="2" x="-28" y="-7" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="base"/>
+          <layerref id="buttons"/>
+          <layerref id="01"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="base"/>
+          <layerref id="buttons"/>
+          <layerref id="02"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="base"/>
+          <layerref id="buttons"/>
+          <layerref id="03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.2" s="1.7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="18" y="35"/>
+          <view angle="135" x="-14" y="33" hm="true"/>
+          <view angle="225" col="1" x="-4"/>
+          <view angle="315" col="1" x="10" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="lght">
+          <layerref id="Light" color="0xe97641"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

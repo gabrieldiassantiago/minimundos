@@ -1,0 +1,115 @@
+<item.SpriteItem id="0" name="Facehugger" desc="An item" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Facehugger" source="items/base/consumables/clothing/accessory/acc_263_facehugger_head.png" cols="4" rows="2"/>
+    <texture id="Decal" source="items/base/consumables/clothing/accessory/acc_263_facehugger_decal.png" cols="4" rows="4"/>
+    <texture id="Facehuggerplaceholder" source="items/base/consumables/clothing/accessory/acc_263_facehugger_head02.png" cols="4" rows="2"/>
+    <texture id="Tail" source="items/base/consumables/clothing/accessory/acc_263_facehugger_tail.png" cols="4" rows="4"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="Facehugger" texture="Facehugger">
+          <view angle="0" x="25" y="1"/>
+          <view angle="45" col="1" x="25" y="9"/>
+          <view angle="90" col="2" x="11" y="14"/>
+          <view angle="135" col="3" x="-6" y="19"/>
+          <view angle="180" row="1" x="-19" y="13"/>
+          <view angle="225" col="1" row="1" x="-29" y="4"/>
+          <view angle="270" col="2" row="1" x="-17" y="-7"/>
+          <view angle="315" col="3" row="1" x="21" y="-16"/>
+        </layer>
+        <layer id="Decal01" texture="Decal">
+          <view angle="0" x="23" y="-10"/>
+          <view angle="45" col="1" x="29"/>
+          <view angle="90" col="2" x="17" y="6"/>
+          <view angle="135" col="3" x="-5" y="11"/>
+          <view angle="180" row="1" x="-24" y="6"/>
+          <view angle="225" col="1" row="1" x="-30" y="-2"/>
+          <view angle="270" col="2" row="1" x="-16" y="-12"/>
+          <view angle="315" col="3" row="1" x="2" y="22" alpha="0"/>
+        </layer>
+        <layer id="Decal02" texture="Decal">
+          <view angle="0" row="2" x="23" y="-10"/>
+          <view angle="45" col="1" row="2" x="27"/>
+          <view angle="90" col="2" row="2" x="18" y="5"/>
+          <view angle="135" col="3" row="2" x="-5" y="12"/>
+          <view angle="180" row="3" x="-24" y="7"/>
+          <view angle="225" col="1" row="3" x="-31" y="-1"/>
+          <view angle="270" col="2" row="3" x="-14" y="-11"/>
+          <view angle="315" col="3" row="1" x="2" y="22" alpha="0"/>
+        </layer>
+        <layer id="FacehuggerDELETE" texture="Facehuggerplaceholder">
+          <view angle="0" x="9" y="23"/>
+          <view angle="45" col="1" x="12" y="26"/>
+          <view angle="90" col="2" x="8" y="27"/>
+          <view angle="135" col="3" x="-3" y="31"/>
+          <view angle="180" row="1" x="-11" y="27"/>
+          <view angle="225" col="1" row="1" x="-15" y="23"/>
+          <view angle="270" col="2" row="1" x="-4" y="18"/>
+          <view angle="315" col="3" row="1" x="2" y="22"/>
+        </layer>
+        <layer id="Tail01" texture="Tail">
+          <view angle="0" x="2" y="34"/>
+          <view angle="45" col="1" x="-1" y="36"/>
+          <view angle="90" col="2" x="1" y="36"/>
+          <view angle="135" col="3" x="1" y="36"/>
+          <view angle="180" row="1" y="38"/>
+          <view angle="225" col="1" row="1" x="-6" y="37"/>
+          <view angle="270" col="2" row="1" x="-2" y="30"/>
+          <view angle="315" col="3" row="1" y="40"/>
+        </layer>
+        <layer id="Tail02" texture="Tail">
+          <view angle="0" row="2" x="6" y="24"/>
+          <view angle="45" col="1" row="2" x="9" y="30"/>
+          <view angle="90" col="2" row="2" x="11" y="33"/>
+          <view angle="135" col="3" row="2" x="1" y="36"/>
+          <view angle="180" row="3" x="-7" y="36"/>
+          <view angle="225" col="1" row="3" x="-11" y="29"/>
+          <view angle="270" col="2" row="3" x="-9" y="20"/>
+          <view angle="315" col="3" row="3" y="40"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Tail01"/>
+          <layerref id="Facehugger"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Tail01"/>
+          <layerref id="Facehugger"/>
+          <layerref id="Decal01"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Tail01"/>
+          <layerref id="Facehugger"/>
+          <layerref id="Decal02"/>
+        </frame>
+        <frame id="Frame04_TailFlick">
+          <layerref id="Tail02"/>
+          <layerref id="Facehugger"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="Frame01" duration="3"/>
+          <frameref id="Frame02" duration="3"/>
+          <frameref id="Frame03" duration="3"/>
+          <frameref id="Frame02" duration="3"/>
+          <frameref id="Frame04_TailFlick" duration="2"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02" duration="3"/>
+          <frameref id="Frame03" duration="3"/>
+          <frameref id="Frame02" duration="3"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

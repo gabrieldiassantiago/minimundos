@@ -1,0 +1,121 @@
+<item.SpriteItem id="0" name="Beans" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Laptop" source="items/base/consumables/clothing/accessory/acc_878_hand_vial_green.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="swirl" source="items/base/consumables/magic/effect_generic_wandmagic.png" cols="1" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Star" texture="Laptop">
+          <view angle="0" x="-5" y="34"/>
+          <view angle="45" y="30"/>
+          <view angle="90" x="4" y="36"/>
+          <view angle="135" x="3" y="30" hm="true"/>
+          <view angle="180" x="5" y="34" hm="true"/>
+          <view angle="225" x="-2" y="34"/>
+          <view angle="270" x="1" y="30" hm="true"/>
+          <view angle="315" x="-3" y="34" hm="true"/>
+        </layer>
+        <layer id="swirl_01" texture="swirl">
+          <view angle="0" x="-4" y="73" hm="true"/>
+          <view angle="45" y="73"/>
+          <view angle="90" x="4" y="76"/>
+          <view angle="135" y="73" hm="true"/>
+          <view angle="180" x="4" y="73"/>
+          <view angle="225" y="73"/>
+          <view angle="270" x="4" y="73"/>
+          <view angle="315" x="-3" y="73" hm="true"/>
+        </layer>
+        <layer id="swirl_02" texture="swirl">
+          <view angle="0" row="1" x="-4" y="73" hm="true"/>
+          <view angle="45" row="1" y="73"/>
+          <view angle="90" row="1" x="4" y="76"/>
+          <view angle="135" row="1" y="73" hm="true"/>
+          <view angle="180" row="1" x="4" y="73"/>
+          <view angle="225" row="1" y="73"/>
+          <view angle="270" row="1" x="4" y="73"/>
+          <view angle="315" row="1" x="-3" y="73" hm="true"/>
+        </layer>
+        <layer id="swirl_03" texture="swirl">
+          <view angle="0" row="2" x="-4" y="73" hm="true"/>
+          <view angle="45" row="2" y="73"/>
+          <view angle="90" row="2" x="4" y="76"/>
+          <view angle="135" row="2" y="73" hm="true"/>
+          <view angle="180" row="2" x="4" y="73"/>
+          <view angle="225" row="2" y="73"/>
+          <view angle="270" row="2" x="4" y="73"/>
+          <view angle="315" row="2" x="-3" y="73" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="swirl_01" color="0x73ee83" a="0.5"/>
+          <layerref id="Star"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="swirl_02" color="0x73ee83" a="0.5"/>
+          <layerref id="Star"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="swirl_03" color="0x73ee83" a="0.5"/>
+          <layerref id="Star"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="swirl_01" color="0x73ee83" a="0.5"/>
+          <layerref id="Star"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="3">
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="-1" y="9" hm="true"/>
+          <view angle="45" y="9"/>
+          <view angle="90" x="2" y="10"/>
+          <view angle="135" y="9" hm="true"/>
+          <view angle="180" x="2" y="9"/>
+          <view angle="225" x="-1" y="9"/>
+          <view angle="270" x="1" y="9"/>
+          <view angle="315" x="-1" y="9" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="diff_01">
+          <layerref id="Light" color="0x73ee83"/>
+        </frame>
+        <frame id="diff_02">
+          <layerref id="Light" color="0x73ee83" a="0.9"/>
+        </frame>
+        <frame id="diff_03">
+          <layerref id="Light" color="0x73ee83" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="3">
+          <frameref id="diff_01"/>
+          <frameref id="diff_02"/>
+          <frameref id="diff_03"/>
+          <frameref id="diff_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

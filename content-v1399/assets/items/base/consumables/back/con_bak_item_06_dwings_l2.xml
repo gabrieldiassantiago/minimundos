@@ -1,0 +1,56 @@
+<item.SpriteItem desc="Com magia das profundezas das sombras." dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" icon="items/base/consumables/back/icon_con_bak_item_06_dwings_l2.png" id="1138" name="Asas do Dragão das Sombras" tags="consumable,actionbar,wear,back,action_wearable_toggle" price="6000" minLevel="40" minLevelType="1" minCPLevel="1">
+  <volume>
+    <box max="0.2,0.25,0.48" min="-0.2,0,-0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="shadow+10"/>
+    <entry key="action_attributes_secondary" value="speed+20,health+40"/>
+  </data>
+  <textures>
+    <texture cols="1" id="lv02vert" rows="8" source="items/base/consumables/back/con_bak_06_dwings_vert.png"/>
+    <texture cols="1" id="lv1skin" rows="8" source="items/base/consumables/back/con_bak_06_dwings_skin.png"/>
+    <texture cols="1" id="shadow" rows="1" source="items/base/consumables/back/con_bak_item_06_dwings_shadow.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.2,0.25,0.48" min="-0.2,0,-0.48"/>
+      <layers>
+        <layer id="lv2" texture="lv1skin">
+          <view angle="45" x="-6" y="22"/>
+          <view angle="135" hm="true" x="4" y="23"/>
+          <view angle="225" row="6" x="3" y="25"/>
+          <view angle="315" hm="true" row="6" x="-2" y="25"/>
+        </layer>
+        <layer id="lv02" texture="lv02vert">
+          <view angle="45" x="-6" y="22"/>
+          <view angle="135" hm="true" x="4" y="23"/>
+          <view angle="225" row="6" x="3" y="25"/>
+          <view angle="315" hm="true" row="6" x="-2" y="25"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="25"/>
+          <view angle="135" hm="true" y="25"/>
+          <view angle="225" x="-1" y="23"/>
+          <view angle="315" hm="true" x="1" y="23"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="shadow"/>
+          <layerref color="0x3399ff" id="lv2"/>
+          <layerref color="0x6699" id="lv02"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

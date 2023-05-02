@@ -1,0 +1,128 @@
+<item.SpriteItem id="1388" name="Módulo de Diagnóstico" desc="Controle rigoroso de qualidade." tags="admin,misc" icon="items/base/modern/icon_m_factory_06_computer.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="40" tokens="400" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1.92,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="case" source="items/base/modern/m_factory_05_case.png" cols="1" rows="1"/>
+    <texture id="computer" source="items/base/modern/m_factory_06_computer.png" cols="2" rows="1"/>
+    <texture id="conveyor 01" source="items/base/modern/m_factory_04_conveyor.png" cols="1" rows="1"/>
+    <texture id="conveyor 02" source="items/base/modern/m_factory_04_belt.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_factory_dyn.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,1.92,0.49"/>
+      <layers>
+        <layer id="conveyor 01" texture="conveyor 01">
+          <view angle="315" x="2" y="37"/>
+          <view angle="45" x="-2" y="37" hm="true"/>
+          <view angle="135" x="2" y="37"/>
+          <view angle="225" x="-2" y="37" hm="true"/>
+        </layer>
+        <layer id="conveyor 02" texture="conveyor 02">
+          <view angle="315" x="1" y="-42"/>
+          <view angle="45" x="-2" y="-42" hm="true"/>
+          <view angle="135" x="1" y="-42"/>
+          <view angle="225" x="-2" y="-42" hm="true"/>
+        </layer>
+        <layer id="conveyor 03" texture="conveyor 02">
+          <view angle="315" col="1" x="1" y="-42"/>
+          <view angle="45" col="1" x="-2" y="-42" hm="true"/>
+          <view angle="135" col="1" x="1" y="-42"/>
+          <view angle="225" col="1" x="-2" y="-42" hm="true"/>
+        </layer>
+        <layer id="case" texture="case" y="-35">
+          <view angle="315"/>
+          <view angle="45" hm="true"/>
+          <view angle="135"/>
+          <view angle="225" hm="true"/>
+        </layer>
+        <layer id="computer 01" texture="computer">
+          <view angle="315" x="-41" y="-60"/>
+          <view angle="45" x="41" y="-60" hm="true"/>
+          <view angle="135" x="-41" y="-60"/>
+          <view angle="225" x="41" y="-60" hm="true"/>
+        </layer>
+        <layer id="computer 02" texture="computer">
+          <view angle="315" col="1" x="-41" y="-60"/>
+          <view angle="45" col="1" x="41" y="-60" hm="true"/>
+          <view angle="135" col="1" x="-41" y="-60"/>
+          <view angle="225" col="1" x="41" y="-60" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="computer A 01">
+          <layerref id="conveyor 01"/>
+          <layerref id="case"/>
+          <layerref id="computer 01"/>
+        </frame>
+        <frame id="computer A 02">
+          <layerref id="conveyor 01"/>
+          <layerref id="conveyor 02"/>
+          <layerref id="case"/>
+          <layerref id="computer 01"/>
+        </frame>
+        <frame id="computer A 03">
+          <layerref id="conveyor 01"/>
+          <layerref id="conveyor 03"/>
+          <layerref id="case"/>
+          <layerref id="computer 01"/>
+        </frame>
+        <frame id="computer B 01">
+          <layerref id="conveyor 01"/>
+          <layerref id="case"/>
+          <layerref id="computer 02"/>
+        </frame>
+        <frame id="computer B 02">
+          <layerref id="conveyor 01"/>
+          <layerref id="conveyor 02"/>
+          <layerref id="case"/>
+          <layerref id="computer 02"/>
+        </frame>
+        <frame id="computer B 03">
+          <layerref id="conveyor 01"/>
+          <layerref id="conveyor 03"/>
+          <layerref id="case"/>
+          <layerref id="computer 02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="computer" framerate="4" syncOffsets="0">
+          <frameref id="computer A 01"/>
+          <frameref id="computer A 02"/>
+          <frameref id="computer A 03"/>
+          <frameref id="computer B 01"/>
+          <frameref id="computer B 02"/>
+          <frameref id="computer B 03"/>
+          <frameref id="computer B 01"/>
+          <frameref id="computer B 02"/>
+          <frameref id="computer B 03"/>
+          <frameref id="computer A 01"/>
+          <frameref id="computer A 02"/>
+          <frameref id="computer A 03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.3" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="25"/>
+          <view angle="135" x="-21" hm="true"/>
+          <view angle="225" x="25"/>
+          <view angle="315" x="-21" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

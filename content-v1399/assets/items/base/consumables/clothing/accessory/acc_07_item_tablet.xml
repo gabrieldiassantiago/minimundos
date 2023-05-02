@@ -1,0 +1,129 @@
+<item.SpriteItem id="3287" name="Tablet Blade" desc="Um tablet super completo." tags="rare,hand,usable,wear,stackable,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_07_icon_tablet.png" price="4000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.37,0,-0.25" max="0.37,0.1,0.25"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_hold" script="scripts/item/action_wearable.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="select" script="scripts/item/select_holdable_container.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_07_item_tablet.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="screen" source="items/base/consumables/clothing/accessory/acc_07_item_screen.png" cols="5" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.37,0,-0.25" max="0.37,0.1,0.25"/>
+      <layers>
+        <layer id="tablet" texture="Texture">
+          <view angle="45" y="25"/>
+          <view angle="135" y="25" hm="true"/>
+          <view angle="225" col="1" y="25"/>
+          <view angle="315" col="1" y="25" hm="true"/>
+        </layer>
+        <layer id="screen1" texture="screen">
+          <view angle="45" y="15"/>
+          <view angle="135" y="15" hm="true"/>
+          <view angle="225" row="1" x="1" y="15"/>
+          <view angle="315" row="1" x="-1" y="15" hm="true"/>
+        </layer>
+        <layer id="screen2" texture="screen">
+          <view angle="45" col="1" y="15"/>
+          <view angle="135" col="1" y="15" hm="true"/>
+          <view angle="225" col="1" row="1" x="1" y="15"/>
+          <view angle="315" col="1" row="1" x="-1" y="15" hm="true"/>
+        </layer>
+        <layer id="screen3" texture="screen">
+          <view angle="45" col="2" y="15"/>
+          <view angle="135" col="2" y="15" hm="true"/>
+          <view angle="225" col="2" row="1" x="1" y="15"/>
+          <view angle="315" col="2" row="1" x="-1" y="15" hm="true"/>
+        </layer>
+        <layer id="screen4" texture="screen">
+          <view angle="45" col="3" y="15"/>
+          <view angle="135" col="3" y="15" hm="true"/>
+          <view angle="225" col="3" row="1" x="1" y="15"/>
+          <view angle="315" col="3" row="1" x="-1" y="15" hm="true"/>
+        </layer>
+        <layer id="screen off" texture="screen">
+          <view angle="45" col="4" y="15"/>
+          <view angle="135" col="4" y="15" hm="true"/>
+          <view angle="225" col="4" row="1" x="1" y="15"/>
+          <view angle="315" col="4" row="1" x="-1" y="15" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="tablet"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="tablet"/>
+          <layerref id="screen1"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="tablet"/>
+          <layerref id="screen2"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="tablet"/>
+          <layerref id="screen3"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="tablet"/>
+          <layerref id="screen4"/>
+        </frame>
+        <frame id="Frame off">
+          <layerref id="tablet"/>
+          <layerref id="screen off"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="2">
+          <frameref id="Frame01" duration="3"/>
+          <frameref id="Frame02" duration="3"/>
+          <frameref id="Frame03" duration="3"/>
+          <frameref id="Frame04" duration="3"/>
+          <frameref id="Frame05" duration="3"/>
+        </animation>
+        <animation id="Closed">
+          <frameref id="Frame off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="1.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="1" y="-1"/>
+          <view angle="135" x="-1" y="-1"/>
+          <view angle="225" x="-1" y="-1"/>
+          <view angle="315" x="1" y="-1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

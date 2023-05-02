@@ -1,0 +1,63 @@
+<item.SpriteItem id="6254" name="Emote Gato Preto" desc="Fique longe" tags="rare,consumable,actionbar,emote,emote_overhead,group_emote,action_emote" icon="items/base/consumables/emotes/emote_38_blackcat_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.16,0,-0.16" max="0.16,0.47,0.16"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_emote.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_emote.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_emote.as"/>
+    <event id="select" script="scripts/item/select_emote.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="shortcuts" value="(poop)"/>
+    <entry key="commands" value="/poop"/>
+  </data>
+  <textures>
+    <texture id="Emote" source="items/base/consumables/emotes/emote_38_blackcat_item.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/consumables/emotes/emote_s_fx_bottle.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Emote">
+      <box min="-0.16,0,-0.16" max="0.16,0.47,0.16"/>
+      <layers>
+        <layer id="Emote" texture="Emote" align="middle" y="-2">
+          <view angle="45" y="-18"/>
+          <view angle="135" y="-18" hm="true"/>
+          <view angle="225" y="-18"/>
+          <view angle="315" y="-18"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" x="1" y="-6">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xb0ccf6"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

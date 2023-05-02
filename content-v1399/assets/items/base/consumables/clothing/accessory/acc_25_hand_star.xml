@@ -1,0 +1,57 @@
+<item.SpriteItem id="0" name="Star" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Laptop" source="items/base/consumables/clothing/accessory/acc_25_hand_star.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Star" texture="Laptop">
+          <view angle="0" col="2" x="-6" y="7"/>
+          <view angle="45" col="1" x="-2" y="3" hm="true"/>
+          <view angle="90" y="2"/>
+          <view angle="135" col="1" x="3" y="2"/>
+          <view angle="180" col="2" x="6" y="4" hm="true"/>
+          <view angle="225" col="1" x="2" y="4" hm="true"/>
+          <view angle="270" y="6" hm="true"/>
+          <view angle="315" col="1" x="-4" y="6"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="Light">
+          <view angle="0" y="33" hm="true"/>
+          <view angle="45" y="29"/>
+          <view angle="90" y="29"/>
+          <view angle="135" x="2" y="29" hm="true"/>
+          <view angle="180" y="29"/>
+          <view angle="225" y="29"/>
+          <view angle="270" y="32"/>
+          <view angle="315" y="32" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Layer" color="0xf2f0b1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

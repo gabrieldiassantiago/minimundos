@@ -1,0 +1,40 @@
+<item.SpriteItem id="0" name="Bow" desc="A bow" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bow" source="items/base/consumables/clothing/accessory/acc_167_hand_bow.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="bow" texture="bow">
+          <view angle="0" x="-32" y="97"/>
+          <view angle="45" col="1" x="-21" y="89"/>
+          <view angle="90" col="2" x="-5" y="75"/>
+          <view angle="135" col="1" x="21" y="88" hm="true"/>
+          <view angle="180" x="33" y="96" hm="true"/>
+          <view angle="225" col="3" x="24" y="100"/>
+          <view angle="270" col="4" y="107"/>
+          <view angle="315" col="3" x="-23" y="103" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="bow"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

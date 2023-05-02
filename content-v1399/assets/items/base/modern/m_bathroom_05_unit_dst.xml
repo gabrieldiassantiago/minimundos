@@ -1,0 +1,34 @@
+<item.SpriteItem name="Balcão de banheiro" desc="Um balcão de Banheiro" tags="unsearchable,misc,destroy" icon="items/base/modern/icon_m_bathroom_05_unit_dst.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" id="2752" tokens="270" minLevelType="2">
+  <volume>
+    <box min="-0.32,0,-0.47" max="0.37,1.2,0.47"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Counter" source="items/base/modern/m_bathroom_05_unit.png" cols="1" rows="1"/>
+    <texture id="front" source="items/base/modern/m_bathroom_05_unit_doors.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.32,0,-0.47" max="0.37,1.2,0.47"/>
+      <layers>
+        <layer id="Layer" texture="Counter">
+          <view angle="45" x="1" y="40"/>
+          <view angle="135" x="-2" y="40" hm="true"/>
+          <view angle="225" x="-1" y="40"/>
+          <view angle="315" x="-1" y="40" hm="true"/>
+        </layer>
+        <layer id="Layer02" texture="front">
+          <view angle="45" x="23" y="17"/>
+          <view angle="135" x="-23" y="17" hm="true"/>
+          <view angle="225" x="-1" y="41" alpha="0"/>
+          <view angle="315" x="-1" y="41" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

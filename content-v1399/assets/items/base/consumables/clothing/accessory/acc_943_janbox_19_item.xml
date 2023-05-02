@@ -1,0 +1,37 @@
+<item.SpriteItem id="7462" name="Carrinho de Mão de Neve" desc="Um divertido carrinho de mão cheio de neve [19 of 25]" tags="rare,actionbar,consumable,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_943_janbox_19_icon.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.45,0,-0.45" max="0.45,0.7,0.45"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_943_janbox_19_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="wheelbarrow">
+      <box min="-0.45,0,-0.45" max="0.45,0.7,0.45"/>
+      <layers>
+        <layer id="wheelbarrow" texture="Texture">
+          <view angle="45" x="-20" y="37"/>
+          <view angle="135" x="20" y="37" hm="true"/>
+          <view angle="225" col="1" x="20" y="54" hm="true"/>
+          <view angle="315" col="1" x="-20" y="54"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle_01">
+          <layerref id="wheelbarrow"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

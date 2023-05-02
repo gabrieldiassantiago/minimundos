@@ -1,0 +1,172 @@
+<item.SpriteItem id="5422" name="Escultura de Coração" desc="Uma escultura de coração de gelo" tags="rare,misc" icon="items/base/outdoor/icon_o_icesculpture_04_heart.png" price="50" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,1.1,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="reflect" source="items/base/modern/m_collect_05_ice_angel_reflect.png" cols="3" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="heart" source="items/base/outdoor/o_icesculpture_04_heart.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,1.1,0.3"/>
+      <layers>
+        <layer id="heart" texture="heart" y="15">
+          <view angle="45" y="4"/>
+          <view angle="135" y="4" hm="true"/>
+          <view angle="225" col="1" y="4"/>
+          <view angle="315" col="1" y="4" hm="true"/>
+        </layer>
+        <layer id="reflect_01" texture="reflect" y="5">
+          <view angle="45" x="17" y="-75"/>
+          <view angle="135" x="-17" y="-75"/>
+          <view angle="225" x="17" y="-75"/>
+          <view angle="315" x="-17" y="-75"/>
+        </layer>
+        <layer id="reflect_02" texture="reflect" y="5">
+          <view angle="45" col="1" x="17" y="-75"/>
+          <view angle="135" col="1" x="-17" y="-75"/>
+          <view angle="225" col="1" x="17" y="-75"/>
+          <view angle="315" col="1" x="-17" y="-75"/>
+        </layer>
+        <layer id="reflect_03" texture="reflect" y="5">
+          <view angle="45" col="2" x="17" y="-75"/>
+          <view angle="135" col="2" x="-17" y="-75"/>
+          <view angle="225" col="2" x="17" y="-75"/>
+          <view angle="315" col="2" x="-17" y="-75"/>
+        </layer>
+        <layer id="reflect_04" texture="reflect" y="5">
+          <view angle="45" col="1" x="17" y="-75" hm="true"/>
+          <view angle="135" col="1" x="-17" y="-75" hm="true"/>
+          <view angle="225" col="1" x="17" y="-75" hm="true"/>
+          <view angle="315" col="1" x="-17" y="-75" hm="true"/>
+        </layer>
+        <layer id="reflect_05" texture="reflect" y="5">
+          <view angle="45" x="17" y="-75" hm="true"/>
+          <view angle="135" x="-17" y="-75" hm="true"/>
+          <view angle="225" x="17" y="-75" hm="true"/>
+          <view angle="315" x="-17" y="-75" hm="true"/>
+        </layer>
+        <layer id="reflect_06" texture="reflect" y="5">
+          <view angle="45" x="-18" y="-25"/>
+          <view angle="135" x="18" y="-25"/>
+          <view angle="225" x="-18" y="-25"/>
+          <view angle="315" x="18" y="-25"/>
+        </layer>
+        <layer id="reflect_07" texture="reflect" y="5">
+          <view angle="45" col="1" x="-18" y="-25"/>
+          <view angle="135" col="1" x="18" y="-25"/>
+          <view angle="225" col="1" x="-18" y="-25"/>
+          <view angle="315" col="1" x="18" y="-25"/>
+        </layer>
+        <layer id="reflect_08" texture="reflect" y="5">
+          <view angle="45" col="2" x="-18" y="-25"/>
+          <view angle="135" col="2" x="18" y="-25"/>
+          <view angle="225" col="2" x="-18" y="-25"/>
+          <view angle="315" col="2" x="18" y="-25"/>
+        </layer>
+        <layer id="reflect_09" texture="reflect" y="5">
+          <view angle="45" col="1" x="-18" y="-25" hm="true"/>
+          <view angle="135" col="1" x="18" y="-25" hm="true"/>
+          <view angle="225" col="1" x="-18" y="-25" hm="true"/>
+          <view angle="315" col="1" x="18" y="-25" hm="true"/>
+        </layer>
+        <layer id="reflect_10" texture="reflect" y="5">
+          <view angle="45" x="-18" y="-25" hm="true"/>
+          <view angle="135" x="18" y="-25" hm="true"/>
+          <view angle="225" x="-18" y="-25" hm="true"/>
+          <view angle="315" x="18" y="-25" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle00">
+          <layerref id="heart"/>
+        </frame>
+        <frame id="idle01">
+          <layerref id="heart"/>
+          <layerref id="reflect_01"/>
+        </frame>
+        <frame id="idle02">
+          <layerref id="heart"/>
+          <layerref id="reflect_02"/>
+        </frame>
+        <frame id="idle03">
+          <layerref id="heart"/>
+          <layerref id="reflect_03"/>
+        </frame>
+        <frame id="idle04">
+          <layerref id="heart"/>
+          <layerref id="reflect_04"/>
+        </frame>
+        <frame id="idle05">
+          <layerref id="heart"/>
+          <layerref id="reflect_05"/>
+        </frame>
+        <frame id="idle06">
+          <layerref id="heart"/>
+          <layerref id="reflect_06"/>
+        </frame>
+        <frame id="idle07">
+          <layerref id="heart"/>
+          <layerref id="reflect_07"/>
+        </frame>
+        <frame id="idle08">
+          <layerref id="heart"/>
+          <layerref id="reflect_08"/>
+        </frame>
+        <frame id="idle09">
+          <layerref id="heart"/>
+          <layerref id="reflect_09"/>
+        </frame>
+        <frame id="idle10">
+          <layerref id="heart"/>
+          <layerref id="reflect_10"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="16">
+          <frameref id="idle00" duration="50"/>
+          <frameref id="idle01"/>
+          <frameref id="idle02"/>
+          <frameref id="idle03"/>
+          <frameref id="idle04"/>
+          <frameref id="idle05"/>
+          <frameref id="idle00" duration="20"/>
+          <frameref id="idle06"/>
+          <frameref id="idle07"/>
+          <frameref id="idle08"/>
+          <frameref id="idle09"/>
+          <frameref id="idle10"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.3606" s="3.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xe14be2" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

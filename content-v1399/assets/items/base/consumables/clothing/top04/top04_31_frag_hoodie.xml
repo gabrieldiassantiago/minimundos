@@ -1,0 +1,47 @@
+<f id="Top04_31_KanyeHoodie" parentId="Top04">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top04_31_TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_117_torso_m.png" pri="1"/>
+      <c sId="Top04_31_TorsoMaleBase" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color" lw="N"/>
+      <s id="Top04_31_TorsoMaleDecal" cId="Torso" s="items/base/consumables/clothing/top06/top06_58_hoodie_torso.png" pri="1.2"/>
+      <c sId="Top04_31_TorsoMaleDecal" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color" lw="N"/>
+      <s id="Top04_31_TorsoMaleWritting" cId="Torso" s="items/base/consumables/clothing/top04/top04_31_hoodie_torso_m.png" pri="1.1"/>
+    </g>
+    <g id="Female">
+      <s id="Top04_31_TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_117_torso_f.png" pri="1"/>
+      <c sId="Top04_31_TorsoFemaleBase" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color" lw="N"/>
+      <s id="Top04_31_TorsoFemaleDecal" cId="Torso" s="items/base/consumables/clothing/top06/top06_58_hoodie_torso.png" pri="1.2"/>
+      <c sId="Top04_31_TorsoFemaleDecal" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color" lw="N"/>
+      <s id="Top04_31_TorsoFemaleWritting" cId="Torso" s="items/base/consumables/clothing/top04/top04_31_hoodie_torso_f.png" pri="1.1"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Top04_31_ArmIdle_Base" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_57_idle.png" pri="1"/>
+    <s id="Top04_31_ArmWalk1_Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_57_walk1.png" pri="1"/>
+    <s id="Top04_31_ArmWalk2_Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_57_walk2.png" pri="1"/>
+    <s id="Top04_31_ArmWalk3_Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_57_walk3.png" pri="1"/>
+    <s id="Top04_31_ArmSit_Base" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_57_sit.png" pri="1"/>
+    <s id="Top04_31_ArmThrow_Base" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_57_throw.png" pri="1"/>
+    <s id="Top04_31_ArmRaise_Base" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_57_raise.png" pri="1"/>
+    <c sId="Top04_31_ArmIdle_Base" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color" lw="N"/>
+    <c sId="Top04_31_ArmWalk1_Base" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color" lw="N"/>
+    <c sId="Top04_31_ArmWalk2_Base" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color" lw="N"/>
+    <c sId="Top04_31_ArmWalk3_Base" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color" lw="N"/>
+    <c sId="Top04_31_ArmSit_Base" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color" lw="N"/>
+    <c sId="Top04_31_ArmThrow_Base" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color" lw="N"/>
+    <c sId="Top04_31_ArmRaise_Base" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop04_31" icon="items/base/consumables/clothing/top04/top04_31_hoodie_icon_a.png" w="48" h="48"/>
+    <s id="IconTop04_31IconRare" cId="IconTop04_31" s="items/base/consumables/clothing/top01/top01_rare.png" pri="2"/>
+    <s id="IconTop04_31IconBase" cId="IconTop04_31" s="items/base/consumables/clothing/top04/top04_31_hoodie_icon_1.png" pri="1"/>
+    <c sId="IconTop04_31IconBase" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color" lw="N"/>
+    <s id="IconTop04_31IconDecal" cId="IconTop04_31" s="items/base/consumables/clothing/top04/top04_31_hoodie_icon_2.png" pri="1.1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top04_31_Color" name="Color" desc="Choose a color" sel="Red" seld="Red">
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top04_31_Color"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

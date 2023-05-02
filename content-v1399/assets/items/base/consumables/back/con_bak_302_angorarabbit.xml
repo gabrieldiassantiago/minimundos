@@ -1,0 +1,41 @@
+<item.SpriteItem id="0" name="tail" desc="tail" tags="consumable, wearable, actionbar" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+  </volume>
+  <textures>
+    <texture id="tail" source="items/base/consumables/back/con_bak_302_angorarabbit.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+      <layers>
+        <layer id="tail" texture="tail" y="60">
+          <view angle="0" x="-5" y="-21" hm="true"/>
+          <view angle="45" x="-3" y="-20" hm="true"/>
+          <view angle="90" x="-1" y="-23"/>
+          <view angle="135" x="2" y="-20"/>
+          <view angle="180" x="5" y="-21"/>
+          <view angle="225" x="3" y="-23"/>
+          <view angle="270" y="-27"/>
+          <view angle="315" x="-3" y="-23" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="tail"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="tail" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

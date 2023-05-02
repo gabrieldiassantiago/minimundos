@@ -1,0 +1,72 @@
+<item.SpriteItem desc="Muito conhecimento entre folhas amareladas e esquecidas." dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" icon="items/base/gothic/icon_g_book_01_large.png" id="1121" name="Livro Antigo" tags="misc,pickup" price="35" tokens="350" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.31,0.2,0.24" min="-0.31,0,-0.24"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_pick_up.as"/>
+    <event id="action" script="scripts/item/action_pick_up.as"/>
+  </events>
+  <actions>
+    <action id="Pick Up"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate usableRange="3.00"/>
+  <textures>
+    <texture cols="2" id="book" rows="1" source="items/base/gothic/g_book_01_large.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.31,0.2,0.24" min="-0.31,0,-0.24"/>
+      <layers>
+        <layer id="Book" texture="book" y="27">
+          <view angle="45" col="1" hm="true" x="-2"/>
+          <view angle="135" x="1" y="-1"/>
+          <view angle="225" hm="true" y="-1"/>
+          <view angle="315" col="1" x="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Book"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref a="0.8" id="Book"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref a="0.5" id="Book"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref a="0.2" id="Book"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref a="0" id="Book"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Visible" syncFrames="false">
+          <frameref id="Frame"/>
+        </animation>
+        <animation framerate="4" id="Invisible" syncFrames="false">
+          <frameref id="Frame04"/>
+        </animation>
+        <animation framerate="8" id="Show" loop="false" syncFrames="false">
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame"/>
+        </animation>
+        <animation framerate="8" id="Hide" loop="false" syncFrames="false">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

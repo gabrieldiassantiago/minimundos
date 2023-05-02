@@ -1,0 +1,151 @@
+<item.SpriteItem id="0" name="Hit Fail Effect" desc="A hit effect" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="FX impact" source="items/base/consumables/magic/hit_generic_impact.png" cols="4" rows="1"/>
+    <texture id="Hit Fail" source="items/base/consumables/back/con_bak_289_holographic_effect.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="transform" source="items/base/consumables/magic/sndfx_antispell.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="Impact 01" texture="FX impact">
+          <view y="-24" alpha="0.5"/>
+        </layer>
+        <layer id="Impact 02" texture="FX impact">
+          <view col="1" y="-24" alpha="0.5"/>
+        </layer>
+        <layer id="Impact 03" texture="FX impact">
+          <view col="2" y="-24" alpha="0.5"/>
+        </layer>
+        <layer id="Impact 04" texture="FX impact">
+          <view col="3" y="-24" alpha="0.5"/>
+        </layer>
+        <layer id="Shield 01" texture="Hit Fail">
+          <view y="-12"/>
+        </layer>
+        <layer id="Shield 02" texture="Hit Fail">
+          <view col="1" y="-12"/>
+        </layer>
+        <layer id="Shield 03" texture="Hit Fail">
+          <view col="2" y="-12"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Impact 04" color="0x8deced" a="0.15" blend="add"/>
+          <layerref id="Impact 01" color="0x56c7e6" a="0.2" blend="add"/>
+          <layerref id="Impact 02" color="0x3282ba" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Impact 04" color="0x3282ba" a="0.3" blend="add"/>
+          <layerref id="Impact 02" color="0x66ffff" a="0.2" blend="add"/>
+          <layerref id="Shield 02" blend="add"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Impact 04" color="0x3282ba" a="0.2" blend="add"/>
+          <layerref id="Impact 03" color="0x6fe7e8" a="0.15" blend="add"/>
+          <layerref id="Shield 01" blend="add"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Impact 04" color="0x3282ba" a="0.15" blend="add"/>
+          <layerref id="Impact 02" color="0x66ffff" a="0.1" blend="add"/>
+          <layerref id="Shield 02" blend="add"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Impact 04" color="0x66ff" a="0.1" blend="add"/>
+          <layerref id="Shield 03" blend="add"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="Impact 04" color="0x66ff" a="0.1" blend="add"/>
+          <layerref id="Shield 02" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="Impact 04" color="0x66ff" a="0.125" blend="add"/>
+          <layerref id="Shield 01" a="0.25" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x63e5e6"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x63e5e6" a="0.6"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0x63e5e6" a="0.2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="4" syncOffsets="0,1">
+          <frameref id="02" duration="2"/>
+          <frameref id="01" duration="3"/>
+          <frameref id="02" duration="2"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="1.05" s="1.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x87ebec" a="0.8"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x87ebec" a="0.5"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0x87ebec" a="0.2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="4" syncOffsets="0,1">
+          <frameref id="02" duration="2"/>
+          <frameref id="01" duration="3"/>
+          <frameref id="02" duration="2"/>
+          <frameref id="01"/>
+          <frameref id="02" duration="3"/>
+          <frameref id="03" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

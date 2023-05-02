@@ -1,0 +1,79 @@
+<item.SpriteItem id="3220" name="Ponto de Encontro" desc="Um ponto de encontro de Jetski," tags="admin,misc" icon="items/base/outdoor/icon_o_jetskimission_checkpoint.png" minLevel="1" minCPLevel="1" gridActive="false" gridSnap="true" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.45,-0.001,-0.45" max="0.45,0,0.45"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="animate" script="scripts/item/animate_local.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="singleClickNavigate" value="true"/>
+    <entry key="selectable" value="false"/>
+  </data>
+  <textures>
+    <texture id="Ripples" source="items/base/outdoor/o_jetskimission_ripples.png" cols="3" rows="1"/>
+    <texture id="Checkpoint" source="items/base/outdoor/o_jetskimission_checkpoint.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.45,-0.001,-0.45" max="0.45,0,0.45"/>
+      <layers>
+        <layer id="Ripples01" texture="Ripples">
+          <view y="42"/>
+        </layer>
+        <layer id="Ripples02" texture="Ripples">
+          <view col="1" y="42"/>
+        </layer>
+        <layer id="Ripples03" texture="Ripples">
+          <view col="2" y="42"/>
+        </layer>
+        <layer id="Checkpoint01" texture="Checkpoint">
+          <view y="20"/>
+        </layer>
+        <layer id="Checkpoint02" texture="Checkpoint">
+          <view y="21"/>
+        </layer>
+        <layer id="Checkpoint03" texture="Checkpoint">
+          <view y="22"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Ripples01"/>
+          <layerref id="Checkpoint01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Ripples02"/>
+          <layerref id="Checkpoint02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Ripples03"/>
+          <layerref id="Checkpoint03"/>
+        </frame>
+        <frame id="off">
+          <layerref id="Checkpoint01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01" duration="2"/>
+          <frameref id="02" duration="2"/>
+          <frameref id="03" duration="2"/>
+          <frameref id="02" duration="2"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="off" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

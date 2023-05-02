@@ -1,0 +1,62 @@
+<item.SpriteItem id="0" name="Royal Kudos Cape" desc="A cape" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="cape_base" source="items/base/consumables/back/con_bak_325_royalkudos.png" cols="5" rows="1"/>
+    <texture id="sit_base" source="items/base/consumables/back/con_bak_325_royalkudos_sit.png" cols="2" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="cape" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="Base_01" texture="cape_base">
+          <view angle="0" col="2" x="-27" y="148"/>
+          <view angle="45" x="-9" y="137"/>
+          <view angle="90" col="1" y="138"/>
+          <view angle="135" x="8" y="137" hm="true"/>
+          <view angle="180" col="2" x="27" y="148" hm="true"/>
+          <view angle="225" col="3" x="26" y="150" hm="true"/>
+          <view angle="270" col="4" y="150"/>
+          <view angle="315" col="3" x="-26" y="150"/>
+        </layer>
+        <layer id="sit_base" texture="sit_base">
+          <view angle="45" x="16" y="95"/>
+          <view angle="135" x="-18" y="95" hm="true"/>
+          <view angle="225" col="1" x="-12" y="83" hm="true"/>
+          <view angle="315" col="1" x="12" y="83"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="sit_red">
+          <layerref id="sit_base"/>
+        </frame>
+        <frame id="red_01">
+          <layerref id="Base_01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="red_01"/>
+        </animation>
+        <animation id="Sit" framerate="8">
+          <frameref id="sit_red" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,33 @@
+<f id="Top06_49_snowfox" parentId="Top06">
+  <g id="Torso" name="Torso" icon="$bm/icon_m_retro.png">
+    <s id="torso" cId="Torso" s="items/base/consumables/clothing/top06/top06_49_snowfox_torso.png" pri="6"/>
+  </g>
+  <g id="Arm" name="Arm" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_49ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_49_snowfox_arm_idle.png" pri="6"/>
+    <s id="Top06_49ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_49_snowfox_arm_walk1.png" pri="6"/>
+    <s id="Top06_49ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_49_snowfox_arm_walk2.png" pri="6"/>
+    <s id="Top06_49ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_49_snowfox_arm_walk3.png" pri="6"/>
+    <s id="Top06_49ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_49_snowfox_arm_sit.png" pri="6"/>
+    <s id="Top06_49ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_49_snowfox_arm_throw.png" pri="6"/>
+    <s id="Top06_49ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_49_snowfox_arm_raise.png" pri="6"/>
+  </g>
+  <g id="Leg" name="Leg" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_49BottomIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_49_snowfox_leg_idle.png" pri="6"/>
+    <s id="Top06_49BottomWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_49_snowfox_leg_walk1.png" pri="6"/>
+    <s id="Top06_49BottomWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_49_snowfox_leg_walk2.png" pri="6"/>
+    <s id="Top06_49BottomWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_49_snowfox_leg_walk3.png" pri="6"/>
+    <s id="Top06_49BottomWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_49_snowfox_legwalk4.png" pri="6"/>
+    <s id="Top06_49BottomSit" cId="LegSitUpper" s="items/base/consumables/clothing/top06/top06_49_snowfox_leg_sit.png" pri="6"/>
+    <s id="Top06_49BottomBackIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_49_snowfox_back.png" tx="5" ty="2.5" pri="0.1" dr="0,0,23,54"/>
+    <s id="Top06_49BottomBackWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_49_snowfox_back.png" tx="13" ty="1" pri="0.5" dr="0,0,30,54"/>
+    <s id="Top06_49BottomBackWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_49_snowfox_back.png" tx="7" ty="1" pri="0.5" dr="0,0,25,54"/>
+    <s id="Top06_49BottomBackWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_49_snowfox_back.png" tx="9" ty="1" pri="0.5" dr="9,0,17,54"/>
+    <s id="Top06_49BottomBackWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_49_snowfox_back.png" tx="10" ty="1" pri="0.5" dr="0,0,28,54"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_49" icon="items/base/consumables/clothing/top06/top06_49_snowfox_icon.png" w="48" h="48"/>
+    <s id="IconTop06_49VIP" cId="IconTop06_49" s="items/base/shared/s_vipbadge.png" pri="1" vis="false"/>
+    <s id="IconTop06_49Base" cId="IconTop06_49" s="items/base/consumables/clothing/top06/top06_49_snowfox_icon.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

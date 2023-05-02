@@ -1,0 +1,38 @@
+<item.SpriteItem id="5686" name="Coelho Mecânico do Sr. Charada" desc="Um coelho meânico criado pelo Sr. Charada" tags="rare,action_holdable_toggle,misc,hand,usable,wear" icon="items/base/mystery/mystery_21_icon.png" price="999" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.38,0.2"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+15,speed+15"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/mystery/mystery_21_item.png" cols="4" rows="2"/>
+    <texture id="shadow" source="items/base/consumables/clothing/accessory/acc_111_hand_giftbasket_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,0.38,0.2"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view y="20" alpha="0.5"/>
+        </layer>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" y="13"/>
+          <view angle="135" row="1" y="13"/>
+          <view angle="225" col="3" y="13"/>
+          <view angle="315" col="3" row="1" y="13"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,57 @@
+<f id="Top01_57_mmlogo" parentId="Top01">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top01_56TorsoMaleDecal" cId="Torso" s="items/base/consumables/clothing/top01/top01_57_mmlogo_torso_m.png" pri="2"/>
+      <s id="Top01_56TorsoMaleBase" cId="Torso" s="$bm/tshirt_torso.png" pri="1"/>
+      <c sId="Top01_56TorsoMaleBase" a="0.72" b="49.9" ct="1.44" lId="Top01_Color1" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_56TorsoFemaleDecal" cId="Torso" s="items/base/consumables/clothing/top01/top01_57_mmlogo_torso_f.png" pri="2"/>
+      <s id="Top01_56TorsoFemaleBase" cId="Torso" s="$bf/tshirt_torso.png" pri="1"/>
+      <c sId="Top01_56TorsoFemaleBase" a="0.72" b="49.9" ct="1.44" lId="Top01_Color1" lw="N"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Top01_14ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_short_arm_idle.png" pri="1"/>
+    <s id="Top01_14ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_short_arm_walk1.png" pri="1"/>
+    <s id="Top01_14ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_short_arm_walk2.png" pri="1"/>
+    <s id="Top01_14ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_short_arm_walk3.png" pri="1"/>
+    <s id="Top01_14ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_short_arm_sit.png" pri="1"/>
+    <s id="Top01_14ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_short_arm_throw.png" pri="1"/>
+    <s id="Top01_14ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_short_arm_raise.png" pri="1"/>
+    <c sId="Top01_14ArmIdleBase" a="0.72" b="49.9" ct="1.44" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_14ArmWalk1Base" a="0.72" b="49.9" ct="1.44" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_14ArmWalk2Base" a="0.72" b="49.9" ct="1.44" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_14ArmWalk3Base" a="0.72" b="49.9" ct="1.44" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_14ArmSitBase" a="0.72" b="49.9" ct="1.44" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_14ArmRaiseBase" a="0.72" b="49.9" ct="1.44" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_14ArmThrowBase" a="0.72" b="49.9" ct="1.44" lId="Top01_Color1" lw="N"/>
+    <s id="Top01_14ArmIdleStripe" cId="ArmIdle" s="items/base/consumables/clothing/top01/top01_14_stripe_idle.png" pri="1.1"/>
+    <c sId="Top01_14ArmIdleStripe" c="14393661" a="1.00" b="73.8" ct="0.97" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_14ArmWalk1Stripe" cId="ArmWalk1" s="items/base/consumables/clothing/top01/top01_14_stripe_walk1.png" pri="1.1"/>
+    <c sId="Top01_14ArmWalk1Stripe" c="14393661" a="1.00" b="73.8" ct="0.97" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_14ArmWalk2Stripe" cId="ArmWalk2" s="items/base/consumables/clothing/top01/top01_14_stripe_walk2.png" pri="1.1"/>
+    <c sId="Top01_14ArmWalk2Stripe" c="14393661" a="1.00" b="73.8" ct="0.97" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_14ArmWalk3Stripe" cId="ArmWalk3" s="items/base/consumables/clothing/top01/top01_14_stripe_walk3.png" pri="1.1"/>
+    <c sId="Top01_14ArmWalk3Stripe" c="14393661" a="1.00" b="73.8" ct="0.97" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_14ArmThrowStripe" cId="ArmThrow" s="items/base/consumables/clothing/top01/top01_14_stripe_throw.png" pri="1.1"/>
+    <c sId="Top01_14ArmThrowStripe" c="14393661" a="1.00" b="73.8" ct="0.97" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_14ArmSitStripe" cId="ArmSit" s="items/base/consumables/clothing/top01/top01_14_stripe_sit.png" pri="1.1"/>
+    <c sId="Top01_14ArmSitStripe" c="14393661" a="1.00" b="73.8" ct="0.97" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_14ArmRaiseStripe" cId="ArmRaise" s="items/base/consumables/clothing/top01/top01_14_stripe_raise.png" pri="1.1"/>
+    <c sId="Top01_14ArmRaiseStripe" c="14393661" a="1.00" b="73.8" ct="0.97" lId="Top01_Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_57" icon="items/base/consumables/clothing/top01/top01_57_icon_mmlogo.png" w="48" h="48"/>
+    <s id="IconTop01_57Icon" cId="IconTop01_57" s="items/base/consumables/clothing/top01/top01_57_icon_mmlogo.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_17Color1" name="Color 1" desc="Choose a color" sel="Black" seld="Black">
+      <c id="Black" icon="$bu/icon_black.png" a="0.72" b="49.9" ct="1.44" lId="Top01_Color1"/>
+    </b>
+    <b id="Top01_17Color2" name="Color 2" desc="Choose a color" sel="Indigo" seld="Indigo">
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="14393661" a="1.00" b="73.8" ct="0.97" lId="Top01_Color2"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

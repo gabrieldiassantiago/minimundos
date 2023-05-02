@@ -1,0 +1,27 @@
+<item.SpriteItem name="Caixa de Presente Aberta Listras" desc="Uma caixa de presentes vazia do Natal de 2017 [22 of 25]" tags="rare,misc" icon="items/base/presents/acc_022_icon_adventbox_stripes.png" price="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="7497">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.7,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Base" source="items/base/presents/acc_022_item_adventbox_stripes.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node01">
+      <box min="-0.2,0,-0.2" max="0.2,0.7,0.2"/>
+      <layers>
+        <layer id="Base" texture="Base" y="16">
+          <view angle="45" col="1" y="-4"/>
+          <view angle="135" col="1" y="-4" hm="true"/>
+          <view angle="225" x="-2" y="-4"/>
+          <view angle="315" x="2" y="-4" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,68 @@
+<item.SpriteItem id="5928" name="Asas Fada Neon Play" desc="Vamos fazer a festa acontecer!" tags="rare,back,consumable,actionbar,wear,action_wearable_toggle" icon="items/base/consumables/back/con_bak_icon_265_neonblue.png" price="3220" minLevelType="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" minLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.2333,0.49"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="nature+10"/>
+    <entry key="action_attributes_secondary" value="health+20,speed+20"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Fairy Wings" source="items/base/consumables/back/con_bak_item_265_neonblue.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0.2333,0.49"/>
+      <layers>
+        <layer id="Fairy Wings" texture="Fairy Wings">
+          <view angle="45" x="-10" y="52"/>
+          <view angle="135" x="10" y="52" hm="true"/>
+          <view angle="225" col="1" x="5" y="65"/>
+          <view angle="315" col="1" x="-5" y="65" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Fairy Wings" texture="Fairy Wings">
+          <view angle="45" x="-8" y="55"/>
+          <view angle="135" x="14" y="55" hm="true"/>
+          <view angle="225" col="1" x="6" y="68"/>
+          <view angle="315" col="1" x="-6" y="68" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Fairy Wings" a="0.3"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="3.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x7be9ea" a="0.75"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

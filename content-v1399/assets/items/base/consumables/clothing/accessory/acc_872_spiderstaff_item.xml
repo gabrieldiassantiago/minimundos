@@ -1,0 +1,77 @@
+<item.SpriteItem id="7160" name="Cajado de Aranha Glória" desc="Obrigado por jogar MiniMundos" tags="rare,consumable,actionbar,hand,usable,wear,kudos,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_872_spiderstaff_icon.png" price="10" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,2.25,0.2"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+10,speed+10"/>
+  </data>
+  <textures>
+    <texture id="torch" source="items/base/consumables/clothing/accessory/acc_872_spiderstaff_item.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/consumables/clothing/accessory/acc_872_spiderstaff_light.png" cols="6" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,2.25,0.2"/>
+      <layers>
+        <layer id="mistletoe" texture="torch">
+          <view angle="45" y="10"/>
+          <view angle="135" x="1" y="10" hm="true"/>
+          <view angle="225" y="10"/>
+          <view angle="315" x="1" y="10" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="mistletoe"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" col="5" x="-1" y="-94"/>
+          <view angle="135" col="5" x="-2" y="-94"/>
+          <view angle="225" col="5" x="-1" y="-94"/>
+          <view angle="315" col="5" x="-2" y="-94" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

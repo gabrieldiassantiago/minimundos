@@ -1,0 +1,32 @@
+<f id="Top06_105_RainbowJacket" parentId="Top04">
+  <b id="Gender" sel="SportJacketTorso">
+    <g id="SportJacketTorso" name="Male" icon="$bm/icon_m_retro.png">
+      <s id="Top06_105TorsoBaseM" cId="Torso" s="items/base/consumables/clothing/top06/top06_105_rainbow_torso_m.png" pri="6"/>
+    </g>
+    <g id="SportJacketTorso" name="Female" icon="$bm/icon_m_retro.png">
+      <s id="Top06_105TorsoBaseF" cId="Torso" s="items/base/consumables/clothing/top06/top06_105_rainbow_torso_f.png" pri="6"/>
+    </g>
+  </b>
+  <g id="Arm" name="Arm" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_105ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_105_idle.png" pri="6"/>
+    <s id="Top06_105ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_105_walk1.png" pri="6"/>
+    <s id="Top06_105ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_105_walk2.png" pri="6"/>
+    <s id="Top06_105ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_105_walk3.png" pri="6"/>
+    <s id="Top06_105ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_105_sit.png" pri="6"/>
+    <s id="Top06_105ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_105_throw.png" pri="6"/>
+    <s id="Top06_105ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_105_raise.png" pri="6"/>
+  </g>
+  <g id="LongSkirt" name="Long skirt" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_105BottomIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_105_leg_idle.png" pri="6"/>
+    <s id="Top06_105BottomWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_105_leg_walk1.png" pri="6"/>
+    <s id="Top06_105BottomWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_105_leg_walk2.png" pri="6"/>
+    <s id="Top06_105BottomWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_105_leg_walk3.png" pri="6"/>
+    <s id="Top06_105BottomWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_105_leg_walk4.png" pri="6"/>
+    <s id="Top06_105BottomSit" cId="LegSitUpper" s="items/base/consumables/clothing/top06/top06_105_leg_sit.png" pri="6"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_105" icon="items/base/consumables/clothing/top06/top06_105_rainbow_icon_a.png" w="48" h="48"/>
+    <s id="IconTop06_105Base" cId="IconTop06_105" s="items/base/consumables/clothing/top06/top06_105_rainbow_icon_a.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

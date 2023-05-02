@@ -1,0 +1,225 @@
+<item.SpriteItem id="2143" name="Churrasqueira Titan" desc="Para o churrasco do domingão." tags="rare,table" icon="items/base/modern/icon_m_bbq_02_deluxe.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="110">
+  <volume>
+    <box min="-0.4,0,-0.5" max="0.4,0.95,1.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_bbq_02_deluxe.png" cols="2" rows="1"/>
+    <texture id="top" source="items/base/modern/m_bbq_02_deluxe_top.png" cols="2" rows="1"/>
+    <texture id="flip" source="items/base/modern/m_bbq_02_deluxe_flip.png" cols="1" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+    <texture id="steam" source="items/base/consumables/edible/con_eat_03_coffeecup_steam.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" z="0.5">
+      <box min="-0.4,0,-0.99" max="0.4,0.95,0.99"/>
+      <layers>
+        <layer id="bbq" texture="Texture">
+          <view angle="45" x="-2" y="45"/>
+          <view angle="135" x="2" y="45" hm="true"/>
+          <view angle="225" col="1" x="-5" y="46"/>
+          <view angle="315" col="1" x="5" y="46" hm="true"/>
+        </layer>
+        <layer id="flip" texture="flip" y="-40">
+          <view angle="45" alpha="0"/>
+          <view angle="135" x="2"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="top" texture="top" y="-60">
+          <view angle="45" x="-15" y="8"/>
+          <view angle="135" x="15" y="8" hm="true"/>
+          <view angle="225" col="1" x="-21" y="33" alpha="0"/>
+          <view angle="315" col="1" x="-43" y="1" alpha="0" hm="true"/>
+        </layer>
+        <layer id="burner" texture="flip" y="-40">
+          <view angle="45" row="2" x="-10"/>
+          <view angle="135" row="1" x="2"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="bbq"/>
+          <layerref id="flip"/>
+          <layerref id="top"/>
+        </frame>
+        <frame id="on_01">
+          <layerref id="bbq"/>
+          <layerref id="flip"/>
+          <layerref id="burner" a="0.25"/>
+          <layerref id="top"/>
+        </frame>
+        <frame id="on_02">
+          <layerref id="bbq"/>
+          <layerref id="flip"/>
+          <layerref id="burner" a="0.5"/>
+          <layerref id="top"/>
+        </frame>
+        <frame id="on_03">
+          <layerref id="bbq"/>
+          <layerref id="flip"/>
+          <layerref id="burner"/>
+          <layerref id="top"/>
+        </frame>
+        <frame id="on_04">
+          <layerref id="bbq"/>
+          <layerref id="flip"/>
+          <layerref id="burner"/>
+          <layerref id="top"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4" loop="false">
+          <frameref id="on_04"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="on_03"/>
+          <frameref id="on_02"/>
+          <frameref id="on_01"/>
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Node02" x="-0.32" z="0.5" depthBias="-1">
+      <box min="-0.01,0,-1" max="0.01,0.5,1"/>
+      <layers>
+        <layer id="top" texture="top" y="-60">
+          <view angle="45" x="16" y="-8" alpha="0"/>
+          <view angle="135" x="48" y="24" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-7" y="11"/>
+          <view angle="315" col="1" x="7" y="11" hm="true"/>
+        </layer>
+        <layer id="steam_01" texture="steam" y="-60">
+          <view angle="45" x="-7" y="7"/>
+          <view angle="135" x="-31" y="-10"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="steam_02" texture="steam" y="-60">
+          <view angle="45" col="1" x="-7" y="7"/>
+          <view angle="135" col="1" x="-31" y="-10"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="steam_03" texture="steam" y="-60">
+          <view angle="45" col="2" x="-7" y="7"/>
+          <view angle="135" col="2" x="-31" y="-10"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="top"/>
+        </frame>
+        <frame id="on_01">
+          <layerref id="top"/>
+          <layerref id="steam_01"/>
+        </frame>
+        <frame id="on_02">
+          <layerref id="top"/>
+          <layerref id="steam_02"/>
+        </frame>
+        <frame id="on_03">
+          <layerref id="top"/>
+          <layerref id="steam_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="on_01"/>
+          <frameref id="on_02"/>
+          <frameref id="on_03"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1" z="0.2" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="2" y="1"/>
+          <view angle="135" x="2" y="1" hm="true"/>
+          <view angle="225" x="2" y="1" alpha="0.5"/>
+          <view angle="315" x="2" y="1" alpha="0.5" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On_01">
+          <layerref id="Light" color="0xc6beff"/>
+        </frame>
+        <frame id="On_02">
+          <layerref id="Light" color="0xc6beff" a="0.98"/>
+        </frame>
+        <frame id="On_03">
+          <layerref id="Light" color="0xc6beff" a="0.96"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+        <frame id="On_04">
+          <layerref id="Light" color="0xc6beff" a="0.3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="On_01"/>
+          <frameref id="On_02"/>
+          <frameref id="On_03"/>
+          <frameref id="On_01"/>
+          <frameref id="On_02"/>
+          <frameref id="On_01"/>
+          <frameref id="On_03"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="On_04"/>
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="1" z="0.2" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225" alpha="0.5"/>
+          <view angle="315" alpha="0.5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xc6beff" a="0.2"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

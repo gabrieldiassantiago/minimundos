@@ -1,0 +1,342 @@
+<item.SpriteItem id="0" name="Beans" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Laptop" source="items/base/mystery/mystery_25_potion_hand.png" cols="1" rows="1"/>
+    <texture id="glow" source="items/base/mystery/mystery_25_potion_glow.png" cols="3" rows="1"/>
+    <texture id="bubble" source="items/base/consumables/feet/con_feet_107_mermaid_bubbles.png" cols="1" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="swirl" source="items/base/consumables/magic/effect_generic_wandmagic.png" cols="1" rows="3"/>
+    <texture id="lightning" source="items/base/consumables/magic/con_item_53_bolttrident_lightning.png" cols="4" rows="1"/>
+    <texture id="combobulator" source="items/base/lab/l_combobulator_lightning.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Star" texture="Laptop">
+          <view angle="0" x="-5" y="15"/>
+          <view angle="45" y="15"/>
+          <view angle="90" x="-3" y="12"/>
+          <view angle="135" y="13" hm="true"/>
+          <view angle="180" x="5" y="15" hm="true"/>
+          <view angle="225" x="-2" y="15"/>
+          <view angle="270" x="4" y="15" hm="true"/>
+          <view angle="315" x="-3" y="15" hm="true"/>
+        </layer>
+        <layer id="glow_01" texture="glow">
+          <view angle="0" x="-5" y="15"/>
+          <view angle="45" y="15"/>
+          <view angle="90" x="-3" y="12"/>
+          <view angle="135" y="13" hm="true"/>
+          <view angle="180" x="5" y="15" hm="true"/>
+          <view angle="225" x="-2" y="15"/>
+          <view angle="270" x="4" y="15" hm="true"/>
+          <view angle="315" x="-3" y="15" hm="true"/>
+        </layer>
+        <layer id="glow_02" texture="glow">
+          <view angle="0" col="1" x="-5" y="15"/>
+          <view angle="45" col="1" y="15"/>
+          <view angle="90" col="1" x="-3" y="12"/>
+          <view angle="135" col="1" y="13" hm="true"/>
+          <view angle="180" col="1" x="5" y="15" hm="true"/>
+          <view angle="225" col="1" x="-2" y="15"/>
+          <view angle="270" col="1" x="4" y="15" hm="true"/>
+          <view angle="315" col="1" x="-3" y="15" hm="true"/>
+        </layer>
+        <layer id="glow_03" texture="glow">
+          <view angle="0" col="2" x="-5" y="15"/>
+          <view angle="45" col="2" y="15"/>
+          <view angle="90" col="2" x="-3" y="12"/>
+          <view angle="135" col="2" y="13" hm="true"/>
+          <view angle="180" col="2" x="5" y="15" hm="true"/>
+          <view angle="225" col="2" x="-2" y="15"/>
+          <view angle="270" col="2" x="4" y="15" hm="true"/>
+          <view angle="315" col="2" x="-3" y="15" hm="true"/>
+        </layer>
+        <layer id="Bubbles_01" texture="bubble">
+          <view angle="0" x="-5" y="-7"/>
+          <view angle="45" y="-7"/>
+          <view angle="90" x="-3" y="-7"/>
+          <view angle="135" y="-7" hm="true"/>
+          <view angle="180" x="5" y="-7" hm="true"/>
+          <view angle="225" x="-2" y="-7"/>
+          <view angle="270" x="4" y="-7" hm="true"/>
+          <view angle="315" x="-2" y="-7" hm="true"/>
+        </layer>
+        <layer id="Bubbles_02" texture="bubble">
+          <view angle="0" row="1" x="-5" y="-7"/>
+          <view angle="45" row="1" y="-7"/>
+          <view angle="90" row="1" x="-3" y="-7"/>
+          <view angle="135" row="1" y="-7" hm="true"/>
+          <view angle="180" row="1" x="5" y="-7" hm="true"/>
+          <view angle="225" row="1" x="-2" y="-7"/>
+          <view angle="270" row="1" x="4" y="-7" hm="true"/>
+          <view angle="315" row="1" x="-2" y="-7" hm="true"/>
+        </layer>
+        <layer id="Bubbles_03" texture="bubble">
+          <view angle="0" row="2" x="2" y="-7"/>
+          <view angle="45" row="2" x="8" y="-7"/>
+          <view angle="90" row="2" x="4" y="-7"/>
+          <view angle="135" row="2" x="-5" y="-7" hm="true"/>
+          <view angle="180" row="2" x="-2" y="-7" hm="true"/>
+          <view angle="225" row="2" x="4" y="-7"/>
+          <view angle="270" row="2" x="-3" y="-7" hm="true"/>
+          <view angle="315" row="2" x="-10" y="-7" hm="true"/>
+        </layer>
+        <layer id="swirl_01" texture="swirl">
+          <view angle="0" x="-4" y="45" hm="true"/>
+          <view angle="45" y="45"/>
+          <view angle="90" x="-1" y="45"/>
+          <view angle="135" y="45" hm="true"/>
+          <view angle="180" x="4" y="45"/>
+          <view angle="225" y="47"/>
+          <view angle="270" x="4" y="45"/>
+          <view angle="315" x="-3" y="47" hm="true"/>
+        </layer>
+        <layer id="swirl_02" texture="swirl">
+          <view angle="0" row="1" x="-4" y="45" hm="true"/>
+          <view angle="45" row="1" y="45"/>
+          <view angle="90" row="1" x="-1" y="45"/>
+          <view angle="135" row="1" y="45" hm="true"/>
+          <view angle="180" row="1" x="4" y="45"/>
+          <view angle="225" row="1" y="47"/>
+          <view angle="270" row="1" x="4" y="45"/>
+          <view angle="315" row="1" x="-3" y="47" hm="true"/>
+        </layer>
+        <layer id="swirl_03" texture="swirl">
+          <view angle="0" row="2" x="-4" y="45" hm="true"/>
+          <view angle="45" row="2" y="45"/>
+          <view angle="90" row="2" x="-1" y="45"/>
+          <view angle="135" row="2" y="45" hm="true"/>
+          <view angle="180" row="2" x="4" y="45"/>
+          <view angle="225" row="2" y="47"/>
+          <view angle="270" row="2" x="4" y="45"/>
+          <view angle="315" row="2" x="-3" y="47" hm="true"/>
+        </layer>
+        <layer id="lightning_01" texture="lightning">
+          <view angle="0" x="-4" y="45" hm="true"/>
+          <view angle="45" y="45"/>
+          <view angle="90" x="-1" y="45"/>
+          <view angle="135" y="45" hm="true"/>
+          <view angle="180" x="4" y="45"/>
+          <view angle="225" y="47"/>
+          <view angle="270" x="4" y="45"/>
+          <view angle="315" x="-3" y="47" hm="true"/>
+        </layer>
+        <layer id="lightning_02" texture="lightning">
+          <view angle="0" col="1" x="-4" y="45" hm="true"/>
+          <view angle="45" col="1" y="45"/>
+          <view angle="90" col="1" x="-1" y="45"/>
+          <view angle="135" col="1" y="45" hm="true"/>
+          <view angle="180" col="1" x="4" y="45"/>
+          <view angle="225" col="1" y="47"/>
+          <view angle="270" col="1" x="4" y="45"/>
+          <view angle="315" col="1" x="-3" y="47" hm="true"/>
+        </layer>
+        <layer id="lightning_03" texture="lightning">
+          <view angle="0" col="2" x="-4" y="45" hm="true"/>
+          <view angle="45" col="2" y="45"/>
+          <view angle="90" col="2" x="-1" y="45"/>
+          <view angle="135" col="2" y="45" hm="true"/>
+          <view angle="180" col="2" x="4" y="45"/>
+          <view angle="225" col="2" y="47"/>
+          <view angle="270" col="2" x="4" y="45"/>
+          <view angle="315" col="2" x="-3" y="47" hm="true"/>
+        </layer>
+        <layer id="lightning_04" texture="lightning">
+          <view angle="0" col="3" x="-4" y="45" hm="true"/>
+          <view angle="45" col="3" y="45"/>
+          <view angle="90" col="3" x="-1" y="45"/>
+          <view angle="135" col="3" y="45" hm="true"/>
+          <view angle="180" col="3" x="4" y="45"/>
+          <view angle="225" col="3" y="47"/>
+          <view angle="270" col="3" x="4" y="45"/>
+          <view angle="315" col="3" x="-3" y="47" hm="true"/>
+        </layer>
+        <layer id="combobulator_01" texture="combobulator">
+          <view angle="0" x="-4" y="28" hm="true"/>
+          <view angle="45" x="-3" y="28"/>
+          <view angle="90" x="-3" y="28"/>
+          <view angle="135" y="28" hm="true"/>
+          <view angle="180" x="4" y="28"/>
+          <view angle="225" y="28"/>
+          <view angle="270" x="4" y="28"/>
+          <view angle="315" x="-3" y="28" hm="true"/>
+        </layer>
+        <layer id="combobulator_02" texture="combobulator">
+          <view angle="0" col="1" x="-4" y="28" hm="true"/>
+          <view angle="45" col="1" x="-3" y="28"/>
+          <view angle="90" col="1" x="-3" y="28"/>
+          <view angle="135" col="1" y="28" hm="true"/>
+          <view angle="180" col="1" x="4" y="28"/>
+          <view angle="225" col="1" y="28"/>
+          <view angle="270" col="1" x="4" y="28"/>
+          <view angle="315" col="1" x="-3" y="28" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="swirl_01" color="0x9eea66" a="0.5"/>
+          <layerref id="glow_01"/>
+          <layerref id="combobulator_01" color="0xd6fadb" a="0.2"/>
+          <layerref id="lightning_01" a="0.3"/>
+          <layerref id="Star"/>
+          <layerref id="Bubbles_01" y="-5" color="0xd6fad3"/>
+          <layerref id="Star"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="swirl_02" color="0x9eea66" a="0.5"/>
+          <layerref id="glow_02" a="0.75"/>
+          <layerref id="combobulator_02" color="0xd6fadb" a="0.2"/>
+          <layerref id="lightning_02" a="0.3"/>
+          <layerref id="Star"/>
+          <layerref id="Bubbles_02" y="-5" color="0xd6fad3"/>
+          <layerref id="Star"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="swirl_03" color="0x9eea66" a="0.5"/>
+          <layerref id="glow_03" a="0.5"/>
+          <layerref id="combobulator_01" color="0xd6fadb" a="0.1"/>
+          <layerref id="lightning_03" a="0.3"/>
+          <layerref id="Star"/>
+          <layerref id="Bubbles_03" y="-10" color="0xd6fad3"/>
+          <layerref id="Star"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="swirl_01" color="0x9eea66" a="0.5"/>
+          <layerref id="glow_02" a="0.75"/>
+          <layerref id="combobulator_02" color="0xd6fadb" a="0.1"/>
+          <layerref id="lightning_04" a="0.3"/>
+          <layerref id="Star"/>
+          <layerref id="Bubbles_02" y="-5" color="0xd6fad3"/>
+          <layerref id="Star"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="3">
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="-1" y="-4" hm="true"/>
+          <view angle="45" y="-4"/>
+          <view angle="90" x="-1" y="-5"/>
+          <view angle="135" y="-4" hm="true"/>
+          <view angle="180" x="2" y="-4"/>
+          <view angle="225" x="-1" y="-4"/>
+          <view angle="270" x="2" y="-4"/>
+          <view angle="315" x="-1" y="-4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="diff_01">
+          <layerref id="Light" color="0xb4f7ae"/>
+        </frame>
+        <frame id="diff_02">
+          <layerref id="Light" color="0xb4f7ae" a="0.9"/>
+        </frame>
+        <frame id="diff_03">
+          <layerref id="Light" color="0xb4f7ae" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="3">
+          <frameref id="diff_01"/>
+          <frameref id="diff_02"/>
+          <frameref id="diff_03"/>
+          <frameref id="diff_02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="glow_01" texture="glow">
+          <view angle="0" x="-5" y="15"/>
+          <view angle="45" y="15"/>
+          <view angle="90" x="-3" y="12"/>
+          <view angle="135" y="13" hm="true"/>
+          <view angle="180" x="5" y="15" hm="true"/>
+          <view angle="225" x="-2" y="15"/>
+          <view angle="270" x="4" y="15" hm="true"/>
+          <view angle="315" x="-3" y="15" hm="true"/>
+        </layer>
+        <layer id="glow_02" texture="glow">
+          <view angle="0" col="1" x="-5" y="15"/>
+          <view angle="45" col="1" y="15"/>
+          <view angle="90" col="1" x="-3" y="12"/>
+          <view angle="135" col="1" y="13" hm="true"/>
+          <view angle="180" col="1" x="5" y="15" hm="true"/>
+          <view angle="225" col="1" x="-2" y="15"/>
+          <view angle="270" col="1" x="4" y="15" hm="true"/>
+          <view angle="315" col="1" x="-3" y="15" hm="true"/>
+        </layer>
+        <layer id="glow_03" texture="glow">
+          <view angle="0" col="2" x="-5" y="15"/>
+          <view angle="45" col="2" y="15"/>
+          <view angle="90" col="2" x="-3" y="12"/>
+          <view angle="135" col="2" y="13" hm="true"/>
+          <view angle="180" col="2" x="5" y="15" hm="true"/>
+          <view angle="225" col="2" x="-2" y="15"/>
+          <view angle="270" col="2" x="4" y="15" hm="true"/>
+          <view angle="315" col="2" x="-3" y="15" hm="true"/>
+        </layer>
+        <layer id="combobulator_01" texture="combobulator">
+          <view angle="0" x="-4" y="28" hm="true"/>
+          <view angle="45" x="-3" y="28"/>
+          <view angle="90" x="-3" y="28"/>
+          <view angle="135" y="28" hm="true"/>
+          <view angle="180" x="4" y="28"/>
+          <view angle="225" y="28"/>
+          <view angle="270" x="4" y="28"/>
+          <view angle="315" x="-3" y="28" hm="true"/>
+        </layer>
+        <layer id="combobulator_02" texture="combobulator">
+          <view angle="0" col="1" x="-4" y="28" hm="true"/>
+          <view angle="45" col="1" x="-3" y="28"/>
+          <view angle="90" col="1" x="-3" y="28"/>
+          <view angle="135" col="1" y="28" hm="true"/>
+          <view angle="180" col="1" x="4" y="28"/>
+          <view angle="225" col="1" y="28"/>
+          <view angle="270" col="1" x="4" y="28"/>
+          <view angle="315" col="1" x="-3" y="28" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="glow_01">
+          <layerref id="glow_01" a="0.3"/>
+          <layerref id="combobulator_01" a="0.1"/>
+        </frame>
+        <frame id="glow_02">
+          <layerref id="glow_02" a="0.2"/>
+          <layerref id="combobulator_02" a="0.1"/>
+        </frame>
+        <frame id="glow_03">
+          <layerref id="glow_03" a="0.1"/>
+          <layerref id="combobulator_01" a="0.1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="3">
+          <frameref id="glow_01"/>
+          <frameref id="glow_02"/>
+          <frameref id="glow_03"/>
+          <frameref id="glow_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

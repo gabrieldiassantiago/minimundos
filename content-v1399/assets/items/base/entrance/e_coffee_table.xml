@@ -1,0 +1,27 @@
+<item.SpriteItem name="Mesinha de Centro" desc="Uma mesinha de centro branca com os pés de metal." tags="admin,table" icon="items/base/entrance/icon_e_coffee_table.png" minLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" id="1640" minCPLevel="1" price="55" tokens="550">
+  <volume>
+    <box min="-0.4359,0,-0.2564" max="0.4487,0.3205,1.2564"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/entrance/e_coffee_table.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="table" z="0.5">
+      <box min="-0.4359,0,-0.7564" max="0.4487,0.3205,0.7564"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="1" y="40"/>
+          <view angle="135" x="1" y="40" hm="true"/>
+          <view angle="225" x="1" y="40"/>
+          <view angle="315" x="1" y="40" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

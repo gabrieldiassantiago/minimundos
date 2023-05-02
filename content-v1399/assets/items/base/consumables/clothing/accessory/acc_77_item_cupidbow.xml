@@ -1,0 +1,34 @@
+<item.SpriteItem id="3773" name="Flecha do Cupido" desc="O arco encantado que dispara a flecha do amor." tags="consumable,actionbar,wear,hand,real,usable,rare,action_wearable_toggle" icon="items/base/consumables/clothing/accessory/acc_77_icon_cupidbow.png" price="1000" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.45" max="0.3,0.05,0.45"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="bow" source="items/base/consumables/clothing/accessory/acc_77_item_cupidbow.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="bow">
+      <box min="-0.3,0,-0.45" max="0.3,0.05,0.45"/>
+      <layers>
+        <layer id="bow" texture="bow">
+          <view angle="45" x="-7" y="14"/>
+          <view angle="135" x="7" y="14" hm="true"/>
+          <view angle="225" col="1" x="8" y="23"/>
+          <view angle="315" col="1" x="-8" y="23" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

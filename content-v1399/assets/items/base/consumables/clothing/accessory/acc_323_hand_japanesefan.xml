@@ -1,0 +1,79 @@
+<item.SpriteItem id="0" name="Japanese fan" desc="A traditional Japanese fan" icon="items/base/consumables/clothing/accessory/acc_323_icon_japanesefan.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.1" max="0.4,0.55,0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Japanese  Fan" source="items/base/consumables/clothing/accessory/acc_323_hand_japanesefan.png" cols="5" rows="3"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Japanese Fan">
+      <box min="-0.4,0,-0.1" max="0.4,0.55,0.1"/>
+      <layers>
+        <layer id="wand01" texture="Japanese  Fan">
+          <view angle="0" col="2" x="-2" y="19" hm="true"/>
+          <view angle="45" x="-2" y="19"/>
+          <view angle="90" col="1" x="-1" y="23"/>
+          <view angle="135" x="2" y="19" hm="true"/>
+          <view angle="180" col="2" x="4" y="19"/>
+          <view angle="225" col="3" x="1" y="23"/>
+          <view angle="270" col="4" x="-1" y="10"/>
+          <view angle="315" col="3" x="-1" y="22" hm="true"/>
+        </layer>
+        <layer id="wand02" texture="Japanese  Fan">
+          <view angle="0" col="2" row="1" x="-2" y="19" hm="true"/>
+          <view angle="45" row="1" x="-2" y="19"/>
+          <view angle="90" col="1" row="1" x="-1" y="23"/>
+          <view angle="135" row="1" x="2" y="19" hm="true"/>
+          <view angle="180" col="2" row="1" x="4" y="19"/>
+          <view angle="225" col="3" row="1" x="1" y="23"/>
+          <view angle="270" col="4" row="1" x="-1" y="10"/>
+          <view angle="315" col="3" row="1" x="-1" y="22" hm="true"/>
+        </layer>
+        <layer id="wand03" texture="Japanese  Fan">
+          <view angle="0" col="2" row="2" x="-2" y="19" hm="true"/>
+          <view angle="45" row="2" x="-2" y="19"/>
+          <view angle="90" col="1" row="2" x="-1" y="23"/>
+          <view angle="135" row="2" x="2" y="19" hm="true"/>
+          <view angle="180" col="2" row="2" x="4" y="19"/>
+          <view angle="225" col="3" row="2" x="1" y="23"/>
+          <view angle="270" col="4" row="2" x="-1" y="10"/>
+          <view angle="315" col="3" row="2" x="-1" y="22" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="wand01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="wand02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="wand03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="6">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02" duration="8"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

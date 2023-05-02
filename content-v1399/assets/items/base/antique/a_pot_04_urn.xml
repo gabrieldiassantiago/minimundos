@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="Talvez contenha as cinzas de um faraó. Talvez não." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/antique/icon_a_pot_04_urn.png" id="824" name="Urna Egípcia" tags="decoration" price="7" tokens="70" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.27,1,0.27" min="-0.27,0,-0.27"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action event="toggle" id="Toggle" trigger="false"/>
+    <action event="animate(Open)" id="Open" state="true"/>
+    <action event="animate(Closed)" id="Close" state="true"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/antique/a_pot_04_urn.png"/>
+    <texture cols="1" id="Broken" rows="1" source="items/base/antique/a_pot_04_urnbroken.png"/>
+  </textures>
+  <nodes>
+    <node id="Urn">
+      <box max="0.27,1,0.27" min="-0.27,0,-0.27"/>
+      <layers>
+        <layer id="Urn" texture="Texture">
+          <view angle="45" y="19"/>
+          <view angle="135" hm="true" y="19"/>
+          <view angle="225" y="19"/>
+          <view angle="315" hm="true" y="19"/>
+        </layer>
+        <layer id="Broken" texture="Broken">
+          <view angle="45" y="19"/>
+          <view angle="135" hm="true" y="19"/>
+          <view angle="225" y="19"/>
+          <view angle="315" hm="true" y="19"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Unbroken">
+          <layerref id="Urn"/>
+        </frame>
+        <frame id="Broken">
+          <layerref id="Broken"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Closed">
+          <frameref id="Unbroken"/>
+        </animation>
+        <animation framerate="4" id="Open">
+          <frameref id="Broken"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

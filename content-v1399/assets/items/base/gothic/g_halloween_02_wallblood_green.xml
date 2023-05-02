@@ -1,0 +1,37 @@
+<item.SpriteItem id="7217" name="Sangue na Parede Verde" desc="Um item temporário do Halloween 2017" tags="rare,craftable_craftoween,misc,wall,craftable4" icon="items/base/gothic/icon_g_halloween_02_wallblood_green.png" price="1" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,-0.2,-0.2" max="0,0.2,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="ingredient_1" value="7242"/>
+    <entry key="ingredient_2" value="5355"/>
+    <entry key="ingredient_quantity_1" value="1"/>
+    <entry key="ingredient_quantity_2" value="1"/>
+    <entry key="product_quantity" value="1"/>
+    <entry key="xp_level_required" value="0"/>
+    <entry key="xp_rewarded" value="500"/>
+  </data>
+  <textures>
+    <texture id="image" source="items/base/gothic/g_halloween_02_wallblood_green.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="nodes">
+      <box min="0,-0.2,-0.2" max="0,0.2,0.2"/>
+      <layers>
+        <layer id="mirror_01" texture="image" y="30">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

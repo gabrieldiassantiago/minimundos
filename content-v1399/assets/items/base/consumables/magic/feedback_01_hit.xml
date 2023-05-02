@@ -1,0 +1,51 @@
+<item.SpriteItem id="0" name="Hit" desc="Hit feedback" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="effect" source="items/base/consumables/magic/feedback_01_hit.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="effect 01" texture="effect">
+          <view y="46"/>
+        </layer>
+        <layer id="effect 02" texture="effect">
+          <view y="42"/>
+        </layer>
+        <layer id="effect 03" texture="effect">
+          <view y="38"/>
+        </layer>
+        <layer id="effect 04" texture="effect">
+          <view y="34"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="effect 01">
+          <layerref id="effect 01"/>
+        </frame>
+        <frame id="effect 02">
+          <layerref id="effect 02" a="0.75"/>
+        </frame>
+        <frame id="effect 03">
+          <layerref id="effect 03" a="0.5"/>
+        </frame>
+        <frame id="effect 04">
+          <layerref id="effect 04" a="0.25"/>
+        </frame>
+        <frame id="empty"/>
+      </frames>
+      <animations>
+        <animation id="effect" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="effect 01"/>
+          <frameref id="effect 02"/>
+          <frameref id="effect 03"/>
+          <frameref id="effect 04"/>
+          <frameref id="empty"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

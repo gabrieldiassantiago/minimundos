@@ -1,0 +1,36 @@
+<item.SpriteItem id="4229" name="Guerrinha de Lama Grande C" desc="Lama" tags="admin,floor" icon="items/base/consumables/throwables/icon_thr_09_mud_large_c.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0,0.1"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="action" script="scripts/item/action_throwable.as"/>
+    <event id="select" script="scripts/item/select_throwable.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+    <entry key="targets" value="avatar"/>
+    <entry key="itemThrow" value="Atirar"/>
+    <entry key="itemThrowTip" value="Atire um bolo de lama em alguém!"/>
+  </data>
+  <textures>
+    <texture id="mud" source="items/base/outdoor/o_mud_large_c.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" depthBias="2">
+      <box min="-0.1,0,-0.1" max="0.1,0,0.1"/>
+      <layers>
+        <layer id="mud" texture="mud">
+          <view angle="45" y="38"/>
+          <view angle="135" y="38" hm="true"/>
+          <view angle="225" y="38"/>
+          <view angle="315" y="38" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,157 @@
+<item.SpriteItem id="4669" name="Raposa Branca Zoom" desc="Uma raposa branca para montar" tags="rare,consumable,actionbar,wear,feet,action_ridable_toggle" icon="items/base/consumables/feet/icon_con_feet_item_90_snowfox.png" price="16800" minLevel="1" minCPLevel="80" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" premium="Y">
+  <volume>
+    <box min="-1.4,0,-0.3" max="0.4,1.1,0.3"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_rideable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+80,health+50"/>
+    <entry key="action_attributes" value="frost+30"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_30_pony_shadow.png" cols="3" rows="1"/>
+    <texture id="base" source="items/base/consumables/feet/con_feet_90_snowfox_base.png" cols="5" rows="1"/>
+    <texture id="feet" source="items/base/consumables/feet/con_feet_90_snowfox_feet.png" cols="5" rows="5"/>
+    <texture id="tail" source="items/base/consumables/feet/con_feet_90_snowfox_tail.png" cols="4" rows="8"/>
+    <texture id="eye" source="items/base/consumables/feet/con_feet_90_snowfox_decal.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-1.4,0,-0.3" max="0.4,1.1,0.3"/>
+      <layers>
+        <layer id="eye" texture="eye">
+          <view angle="45" x="32" y="-50"/>
+          <view angle="135" x="-31" y="-50" hm="true"/>
+          <view angle="225" col="1" x="-37" y="-104" alpha="0"/>
+          <view angle="315" col="1" x="36" y="-104" alpha="0" hm="true"/>
+        </layer>
+        <layer id="feet" texture="feet">
+          <view angle="45" x="-34" y="25"/>
+          <view angle="135" x="34" y="25" hm="true"/>
+          <view angle="225" col="3" x="36" y="57"/>
+          <view angle="315" col="3" x="-36" y="57" hm="true"/>
+        </layer>
+        <layer id="base" texture="base">
+          <view angle="45" x="-14" y="-16"/>
+          <view angle="135" x="14" y="-16" hm="true"/>
+          <view angle="225" col="3" x="16" y="-11"/>
+          <view angle="315" col="3" x="-16" y="-11" hm="true"/>
+        </layer>
+        <layer id="tail_01" texture="tail">
+          <view angle="45" x="-94" y="-51"/>
+          <view angle="135" x="95" y="-51" hm="true"/>
+          <view angle="225" col="2" x="95" y="33"/>
+          <view angle="315" col="2" x="-95" y="33" hm="true"/>
+        </layer>
+        <layer id="tail_02" texture="tail">
+          <view angle="45" row="1" x="-94" y="-50"/>
+          <view angle="135" row="1" x="95" y="-51" hm="true"/>
+          <view angle="225" col="2" row="1" x="95" y="33"/>
+          <view angle="315" col="2" row="1" x="-95" y="33" hm="true"/>
+        </layer>
+        <layer id="tail_03" texture="tail">
+          <view angle="45" row="2" x="-93" y="-51"/>
+          <view angle="135" row="2" x="94" y="-51" hm="true"/>
+          <view angle="225" col="2" row="2" x="95" y="33"/>
+          <view angle="315" col="2" row="2" x="-95" y="33" hm="true"/>
+        </layer>
+        <layer id="tail_04" texture="tail">
+          <view angle="45" row="3" x="-93" y="-51"/>
+          <view angle="135" row="3" x="94" y="-51" hm="true"/>
+          <view angle="225" col="2" row="3" x="95" y="33"/>
+          <view angle="315" col="2" row="3" x="-95" y="33" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" x="-31" y="14"/>
+          <view angle="135" x="31" y="14" hm="true"/>
+          <view angle="225" x="27" y="43"/>
+          <view angle="315" x="-27" y="43" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="tail_02"/>
+        </frame>
+        <frame id="02">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="2"/>
+          <layerref id="tail_02" y="1"/>
+        </frame>
+        <frame id="03">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="tail_02"/>
+        </frame>
+        <frame id="04">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base"/>
+          <layerref id="tail_01"/>
+        </frame>
+        <frame id="05">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="tail_03"/>
+        </frame>
+        <frame id="05a">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="eye"/>
+          <layerref id="tail_04"/>
+        </frame>
+        <frame id="06">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="2"/>
+          <layerref id="tail_04" y="1"/>
+        </frame>
+        <frame id="07">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="tail_03"/>
+        </frame>
+        <frame id="08">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base"/>
+          <layerref id="tail_01" y="-1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="05a"/>
+          <frameref id="06"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="08"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

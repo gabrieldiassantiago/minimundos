@@ -1,0 +1,27 @@
+<item.SpriteItem id="7251" name="Rosas Mortas" desc="Temperadas com restos mortais para hidratar" tags="rare,plant" icon="items/base/outdoor/icon_o_oldhalloween_plant_05_flowers_roses.png" price="25" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.55,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="flowers" source="items/base/outdoor/o_oldhalloween_plant_05_flowers_roses.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="flowers">
+      <box min="-0.49,0,-0.49" max="0.49,0.55,0.49"/>
+      <layers>
+        <layer id="Layer" texture="flowers" y="38">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

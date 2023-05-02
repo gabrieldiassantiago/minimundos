@@ -1,0 +1,216 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="Cloud" source="items/base/consumables/feet/con_feet_135_cloudice.png" cols="4" rows="1"/>
+    <texture id="trail" source="items/base/consumables/feet/con_feet_135_cloudice_tail.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="rain" source="items/base/consumables/feet/con_feet_135_cloudice_snow.png" cols="4" rows="4"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="sit" texture="base">
+          <view angle="45" x="4" y="26" alpha="0" hm="true"/>
+          <view angle="135" x="-5" y="33" alpha="0"/>
+          <view angle="225" x="-5" y="23" alpha="0" hm="true"/>
+          <view angle="315" x="15" y="19" alpha="0"/>
+        </layer>
+        <layer id="trail_01" texture="trail">
+          <view angle="0" col="3" x="-88" y="42"/>
+          <view angle="45" x="-51" y="8"/>
+          <view angle="90" col="1" x="-2" y="-18"/>
+          <view angle="135" x="54" y="13" hm="true"/>
+          <view angle="180" col="3" x="94" y="41" hm="true"/>
+          <view angle="225" col="4" x="72" y="70" hm="true"/>
+          <view angle="270" col="2" x="5" y="91" hm="true"/>
+          <view angle="315" col="4" x="-72" y="68"/>
+        </layer>
+        <layer id="cloud_01" texture="Cloud">
+          <view angle="0" col="2" x="-16" y="58"/>
+          <view angle="45" x="-9" y="57"/>
+          <view angle="90" col="1" y="45"/>
+          <view angle="135" x="12" y="60" hm="true"/>
+          <view angle="180" col="2" x="16" y="58" hm="true"/>
+          <view angle="225" col="3" x="9" y="62" hm="true"/>
+          <view angle="270" col="1" x="-6" y="61" vm="true"/>
+          <view angle="315" col="3" x="-10" y="59"/>
+        </layer>
+        <layer id="rain_01" texture="rain">
+          <view angle="0" col="2" x="-30" y="114"/>
+          <view angle="45" x="-37" y="105"/>
+          <view angle="90" col="1" x="7" y="102"/>
+          <view angle="135" x="36" y="105" hm="true"/>
+          <view angle="180" col="2" x="30" y="114" hm="true"/>
+          <view angle="225" col="3" x="25" y="133" hm="true"/>
+          <view angle="270" col="1" y="130"/>
+          <view angle="315" col="3" x="-25" y="133"/>
+        </layer>
+        <layer id="rain_02" texture="rain">
+          <view angle="0" col="2" row="1" x="-30" y="114"/>
+          <view angle="45" row="1" x="-37" y="105"/>
+          <view angle="90" col="1" row="1" x="7" y="102"/>
+          <view angle="135" row="1" x="36" y="105" hm="true"/>
+          <view angle="180" col="2" row="1" x="30" y="114" hm="true"/>
+          <view angle="225" col="3" row="1" x="25" y="133" hm="true"/>
+          <view angle="270" col="1" row="1" y="130"/>
+          <view angle="315" col="3" row="1" x="-25" y="133"/>
+        </layer>
+        <layer id="rain_03" texture="rain">
+          <view angle="0" col="2" row="2" x="-30" y="114"/>
+          <view angle="45" row="2" x="-37" y="105"/>
+          <view angle="90" col="1" row="2" x="7" y="102"/>
+          <view angle="135" row="2" x="36" y="105" hm="true"/>
+          <view angle="180" col="2" row="2" x="30" y="114" hm="true"/>
+          <view angle="225" col="3" row="2" x="25" y="133" hm="true"/>
+          <view angle="270" col="1" row="2" y="130"/>
+          <view angle="315" col="3" row="2" x="-25" y="133"/>
+        </layer>
+        <layer id="rain_04" texture="rain">
+          <view angle="0" col="2" row="3" x="-30" y="114"/>
+          <view angle="45" row="3" x="-37" y="105"/>
+          <view angle="90" col="1" row="3" x="7" y="102"/>
+          <view angle="135" row="3" x="36" y="105" hm="true"/>
+          <view angle="180" col="2" row="3" x="30" y="114" hm="true"/>
+          <view angle="225" col="3" row="3" x="25" y="133" hm="true"/>
+          <view angle="270" col="1" row="3" y="130"/>
+          <view angle="315" col="3" row="3" x="-25" y="133"/>
+        </layer>
+        <layer id="rain_idle_01" texture="rain">
+          <view angle="0" col="1" x="-5" y="107"/>
+          <view angle="45" col="1" y="101"/>
+          <view angle="90" col="1" x="5" y="102"/>
+          <view angle="135" col="1" y="101" hm="true"/>
+          <view angle="180" col="1" x="5" y="107" hm="true"/>
+          <view angle="225" col="1" x="-3" y="108" hm="true"/>
+          <view angle="270" col="1" y="110"/>
+          <view angle="315" col="1" x="3" y="108"/>
+        </layer>
+        <layer id="rain_idle_02" texture="rain">
+          <view angle="0" col="1" row="1" x="-5" y="107"/>
+          <view angle="45" col="1" row="1" y="101"/>
+          <view angle="90" col="1" row="1" x="5" y="102"/>
+          <view angle="135" col="1" row="1" y="101" hm="true"/>
+          <view angle="180" col="1" row="1" x="5" y="107" hm="true"/>
+          <view angle="225" col="1" row="1" x="-3" y="108" hm="true"/>
+          <view angle="270" col="1" row="1" y="110"/>
+          <view angle="315" col="1" row="1" x="3" y="108"/>
+        </layer>
+        <layer id="rain_idle_03" texture="rain">
+          <view angle="0" col="1" row="2" x="-5" y="107"/>
+          <view angle="45" col="1" row="2" y="101"/>
+          <view angle="90" col="1" row="2" x="5" y="102"/>
+          <view angle="135" col="1" row="2" y="101" hm="true"/>
+          <view angle="180" col="1" row="2" x="5" y="107" hm="true"/>
+          <view angle="225" col="1" row="2" x="-3" y="108" hm="true"/>
+          <view angle="270" col="1" row="2" y="110"/>
+          <view angle="315" col="1" row="2" x="3" y="108"/>
+        </layer>
+        <layer id="rain_idle_04" texture="rain">
+          <view angle="0" col="1" row="3" x="-5" y="107"/>
+          <view angle="45" col="1" row="3" y="101"/>
+          <view angle="90" col="1" row="3" x="5" y="102"/>
+          <view angle="135" col="1" row="3" y="101" hm="true"/>
+          <view angle="180" col="1" row="3" x="5" y="107" hm="true"/>
+          <view angle="225" col="1" row="3" x="-3" y="108" hm="true"/>
+          <view angle="270" col="1" row="3" y="110"/>
+          <view angle="315" col="1" row="3" x="3" y="108"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="sit">
+          <layerref id="sit"/>
+        </frame>
+        <frame id="Idle01">
+          <layerref id="cloud_01"/>
+          <layerref id="rain_idle_01"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="cloud_01" y="1"/>
+          <layerref id="rain_idle_02"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="cloud_01" y="2"/>
+          <layerref id="rain_idle_03"/>
+        </frame>
+        <frame id="Idle04">
+          <layerref id="cloud_01" y="1"/>
+          <layerref id="rain_idle_04"/>
+        </frame>
+        <frame id="Walk01">
+          <layerref id="cloud_01"/>
+          <layerref id="trail_01"/>
+          <layerref id="rain_01"/>
+        </frame>
+        <frame id="Walk02">
+          <layerref id="cloud_01"/>
+          <layerref id="trail_01"/>
+          <layerref id="rain_02"/>
+        </frame>
+        <frame id="Walk03">
+          <layerref id="cloud_01"/>
+          <layerref id="trail_01"/>
+          <layerref id="rain_03"/>
+        </frame>
+        <frame id="Walk04">
+          <layerref id="cloud_01"/>
+          <layerref id="trail_01"/>
+          <layerref id="rain_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="6">
+          <frameref id="Walk01"/>
+          <frameref id="Walk02"/>
+          <frameref id="Walk03"/>
+          <frameref id="Walk04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="-2" hm="true"/>
+          <view angle="45" y="-1"/>
+          <view angle="90" x="2" y="-3"/>
+          <view angle="135" x="2" hm="true"/>
+          <view angle="180" x="5"/>
+          <view angle="225" x="2"/>
+          <view angle="270" y="-1"/>
+          <view angle="315" x="-2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xc3f5f5"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

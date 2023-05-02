@@ -1,0 +1,75 @@
+<item.SpriteItem id="7362" name="Bolinha de Natal Gigante" desc="Uma decoração de Natal gigante [22 de 25]" tags="decoration,rare" icon="items/base/consumables/clothing/accessory/acc_911_icon_adventbox_stripes.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1.4,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Red" state="true" event="animate(00)"/>
+    <action id="Green" state="true" event="animate(01)"/>
+    <action id="Blue" state="true" event="animate(02)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="3"/>
+    <entry key="00" value="Red"/>
+    <entry key="01" value="Green"/>
+    <entry key="02" value="Blue"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_911_item_adventbox_stripes.png" cols="2" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="moai">
+      <box min="-0.49,0,-0.49" max="0.49,1.4,0.49"/>
+      <layers>
+        <layer id="Red" texture="Texture">
+          <view angle="45" x="-1" y="34"/>
+          <view angle="135" x="-1" y="32" hm="true"/>
+          <view angle="225" col="1" x="-1" y="32"/>
+          <view angle="315" col="1" y="32" hm="true"/>
+        </layer>
+        <layer id="Green" texture="Texture">
+          <view angle="45" row="1" x="-1" y="28"/>
+          <view angle="135" row="1" x="-1" y="28" hm="true"/>
+          <view angle="225" col="1" row="1" x="-1" y="26"/>
+          <view angle="315" col="1" row="1" y="26" hm="true"/>
+        </layer>
+        <layer id="Blue" texture="Texture">
+          <view angle="45" row="2" x="-1" y="28"/>
+          <view angle="135" row="2" x="-1" y="28" hm="true"/>
+          <view angle="225" col="1" row="2" x="-1" y="26"/>
+          <view angle="315" col="1" row="2" y="26" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Red">
+          <layerref id="Red"/>
+        </frame>
+        <frame id="Green">
+          <layerref id="Green"/>
+        </frame>
+        <frame id="Blue">
+          <layerref id="Blue"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="Red"/>
+        </animation>
+        <animation id="01" framerate="4">
+          <frameref id="Green"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="Blue"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,95 @@
+<item.WidgetItem id="1987" name="Galinheiro" desc=" Uma casinha para frangos, galinhas e pintinhos." tags="rare,misc,door,widget" icon="items/base/outdoor/icon_o_coop.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_portal.swf" price="560">
+  price="560"&gt;
+  <volume>
+    <box min="-1.49,0,-0.49" max="2.49,2,1.49"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+  </events>
+  <actions>
+    <action id="Navigate" trigger="false" event="navigate"/>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate usableRange="2.00"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="portalType" value="portal"/>
+    <entry key="maxLinkedSpaces" value="6"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <textures>
+    <texture id="Tomb Entrance" source="items/base/outdoor/o_door_coop_main.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/outdoor/o_door_coop_doors.png" cols="1" rows="2"/>
+    <texture id="Texture01" source="items/base/outdoor/o_door_coop_back.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="door" x="0.5" z="0.5">
+      <box min="-1.99,0,-0.99" max="1.99,2,0.99"/>
+      <layers>
+        <layer id="Main" texture="Tomb Entrance">
+          <view angle="45" x="-129" y="40"/>
+          <view angle="135" x="128" y="40" hm="true"/>
+          <view angle="225" x="-1" y="60" alpha="0"/>
+          <view angle="315" x="1" y="60" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Back2" texture="Texture01">
+          <view angle="45" y="60" alpha="0"/>
+          <view angle="135" y="60" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="94" y="111"/>
+          <view angle="315" col="1" x="-94" y="110" hm="true"/>
+        </layer>
+        <layer id="Back1" texture="Texture01">
+          <view angle="45" y="60" alpha="0"/>
+          <view angle="135" y="60" alpha="0" hm="true"/>
+          <view angle="225" x="-98" y="69"/>
+          <view angle="315" x="98" y="68" hm="true"/>
+        </layer>
+        <layer id="Closed Door" texture="Texture">
+          <view angle="45" x="70" y="99"/>
+          <view angle="135" x="-70" y="99" hm="true"/>
+          <view angle="225" x="1" y="43" alpha="0"/>
+          <view angle="315" y="43" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Open Door" texture="Texture">
+          <view angle="45" row="1" x="70" y="99"/>
+          <view angle="135" row="1" x="-70" y="99" hm="true"/>
+          <view angle="225" x="33" y="30" alpha="0"/>
+          <view angle="315" x="-31" y="31" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Open">
+          <layerref id="Main"/>
+          <layerref id="Open Door"/>
+          <layerref id="Back1"/>
+          <layerref id="Back2"/>
+        </frame>
+        <frame id="Closed">
+          <layerref id="Main"/>
+          <layerref id="Back1"/>
+          <layerref id="Closed Door"/>
+          <layerref id="Back2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="1" loop="false">
+          <frameref id="Open"/>
+        </animation>
+        <animation id="Closed" framerate="1" loop="false">
+          <frameref id="Closed"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,26 @@
+<f id="Bot03_70DaisyDukesB" parentId="Bot03">
+  <g id="Floral" name="Base" icon="$bm/iconm_legs_shorts.png">
+    <s id="ShortPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_11_idle.png" pri="3"/>
+    <s id="ShortPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_11_walk1.png" pri="3"/>
+    <s id="ShortPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_11_walk2.png" pri="3"/>
+    <s id="ShortPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_11_walk3.png" pri="3"/>
+    <s id="ShortPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_11_walk4.png" pri="3"/>
+    <s id="ShortSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_11_sit.png" pri="3"/>
+    <c sId="ShortPantIdleBase" c="9540095" a="1.00" b="78.6" ct="1.16" lId="Bot03_70Color" lw="N"/>
+    <c sId="ShortPantWalk1Base" c="9540095" a="1.00" b="78.6" ct="1.16" lId="Bot03_70Color" lw="N"/>
+    <c sId="ShortPantWalk2Base" c="9540095" a="1.00" b="78.6" ct="1.16" lId="Bot03_70Color" lw="N"/>
+    <c sId="ShortPantWalk3Base" c="9540095" a="1.00" b="78.6" ct="1.16" lId="Bot03_70Color" lw="N"/>
+    <c sId="ShortPantWalk4Base" c="9540095" a="1.00" b="78.6" ct="1.16" lId="Bot03_70Color" lw="N"/>
+    <c sId="ShortSitUpperBase" c="9540095" a="1.00" b="78.6" ct="1.16" lId="Bot03_70Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop03_70" icon="items/base/consumables/clothing/bot03/bot03_70_icon_daisyshorts.png" w="48" h="48" exurl="items/base/consumables/clothing/bot03/bot03_70_icon_daisydukes_1.png"/>
+    <s id="IconTop03_70Base" cId="IconTop03_70" s="items/base/consumables/clothing/bot03/bot03_70_icon_daisyshorts.png"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot03_70Color" name="Color" desc="Choose a color" sel="Grey" seld="Grey">
+      <c id="Grey" icon="$bu/icon_grey.png" c="9540095" a="1.00" b="78.6" ct="1.16" lId="Bot03_70Color"/>
+    </b>
+  </g>
+  <ds id="JSBottom"/>
+</f>

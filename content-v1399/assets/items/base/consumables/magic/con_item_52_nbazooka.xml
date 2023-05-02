@@ -1,0 +1,68 @@
+<item.SpriteItem id="0" name="Raio de Gelo" desc="Nem tremer será possível depois de atingido por um raio destes." tags="consumable,actionbar,group_frost,magic,gun,bad,reusable,usable,action_consumable_target" icon="items/base/consumables/magic/icon_con_item_52_nbazooka.png" price="6900" tokens="69000" minLevel="1" minCPLevel="40" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.2" max="0.4,0.65,0.2"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="10"/>
+    <entry key="action_attributes" value="frost-30"/>
+    <entry key="action_attributes_secondary" value="speed-90,health-130"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_shoot.png"/>
+  </data>
+  <textures>
+    <texture id="gun" source="items/base/consumables/magic/con_item_52_nbazooka.png" cols="5" rows="1"/>
+    <texture id="stand" source="items/base/consumables/magic/con_item_generic_gunstand.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_against_wall.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.2" max="0.4,0.65,0.2"/>
+      <layers>
+        <layer id="stand" texture="stand" y="10">
+          <view angle="45" y="4"/>
+          <view angle="135" y="4" hm="true"/>
+          <view angle="225" col="1" y="3"/>
+          <view angle="315" col="1" y="3" hm="true"/>
+        </layer>
+        <layer id="gun" texture="gun" y="10">
+          <view angle="45" y="-7"/>
+          <view angle="135" y="-7" hm="true"/>
+          <view angle="225" col="3" y="-7" hm="true"/>
+          <view angle="315" col="3" y="-7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="stand"/>
+          <layerref id="gun"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="0.65" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" col="1" x="5" hm="true"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="1" y="-4" hm="true"/>
+          <view angle="315" col="1" x="7" y="-2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x4be1e2"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

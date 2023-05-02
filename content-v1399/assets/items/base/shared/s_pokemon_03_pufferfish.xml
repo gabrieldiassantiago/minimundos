@@ -1,0 +1,262 @@
+<item.SpriteItem id="6046" name="FoundThree" desc="Found" tags="admin,misc" icon="items/base/shared/s_pokemon_03_pufferfish.png" minLevel="1" minCPLevel="1" gridActive="false" gridSnap="true" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.5,-0.01,-0.5" max="0.5,0,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate_local.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <textures>
+    <texture id="Found" source="items/base/shared/s_pokemon_00_found.png" cols="1" rows="1"/>
+    <texture id="Shadow" source="items/base/consumables/back/con_bak_273_deatheaglewings_shadow.png" cols="1" rows="1"/>
+    <texture id="Bobz" source="items/base/shared/s_pokemon_00_bobz.png" cols="3" rows="4"/>
+    <texture id="Upward" source="items/base/shared/s_pokemon_00_portal.png" cols="1" rows="1"/>
+    <texture id="Char" source="items/base/shared/s_pokemon_00_chars.png" cols="5" rows="3"/>
+    <texture id="Smoke" source="items/base/consumables/back/con_bak_272_battledragon_smokefx.png" cols="2" rows="2"/>
+    <texture id="Lens" source="items/base/consumables/magic/con_125_hold_lunarstaff_glow.png" cols="1" rows="1"/>
+    <texture id="Orb" source="items/base/consumables/clothing/accessory/acc_382_hand_glowstick_orb.png" cols="3" rows="3"/>
+    <texture id="CharRed" source="items/base/shared/s_pokemon_00_charsred.png" cols="5" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_halo_spread.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Plant">
+      <box min="-0.5,-0.01,-0.5" max="0.5,0,0.5"/>
+      <layers>
+        <layer id="shadow" texture="Shadow">
+          <view y="26" alpha="0.75"/>
+        </layer>
+        <layer id="Found" texture="Found">
+          <view x="2" y="-190"/>
+        </layer>
+        <layer id="Bobz01" texture="Bobz">
+          <view row="3" y="-125"/>
+        </layer>
+        <layer id="Bobz02" texture="Bobz">
+          <view col="1" row="3" y="-126"/>
+        </layer>
+        <layer id="Upward" texture="Upward">
+          <view y="28"/>
+        </layer>
+        <layer id="Char01" texture="Char">
+          <view col="4" x="-72" y="-100"/>
+        </layer>
+        <layer id="Char02" texture="Char">
+          <view col="4" x="-36" y="-100"/>
+        </layer>
+        <layer id="Char03" texture="CharRed">
+          <view col="2" row="1" y="-100"/>
+        </layer>
+        <layer id="Char04" texture="Char">
+          <view col="4" x="36" y="-100"/>
+        </layer>
+        <layer id="Char05" texture="Char">
+          <view col="4" x="72" y="-100"/>
+        </layer>
+        <layer id="Smoke01" texture="Smoke">
+          <view y="8"/>
+        </layer>
+        <layer id="Smoke02" texture="Smoke">
+          <view col="1"/>
+        </layer>
+        <layer id="Smoke03" texture="Smoke">
+          <view col="1" row="1" y="-32"/>
+        </layer>
+        <layer id="Lens" texture="Lens">
+          <view y="-120"/>
+        </layer>
+        <layer id="Orb01" texture="Orb">
+          <view col="1" y="-120"/>
+        </layer>
+        <layer id="Orb02" texture="Orb">
+          <view col="2" x="-1" y="-120"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="Upward" a="0.2"/>
+          <layerref id="shadow" a="0.5"/>
+        </frame>
+        <frame id="01">
+          <layerref id="Upward" a="0.5"/>
+          <layerref id="shadow"/>
+          <layerref id="Smoke01" color="0xb1f2f2" a="0.5"/>
+        </frame>
+        <frame id="011">
+          <layerref id="Upward" a="0.75"/>
+          <layerref id="Bobz01" y="120" a="0.2"/>
+          <layerref id="shadow"/>
+          <layerref id="Smoke02" color="0xb1f2f2"/>
+        </frame>
+        <frame id="012">
+          <layerref id="Upward"/>
+          <layerref id="Bobz02" y="60" a="0.6"/>
+          <layerref id="shadow"/>
+          <layerref id="Smoke03" color="0xb1f2f2" a="0.5"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Upward"/>
+          <layerref id="Bobz01"/>
+          <layerref id="shadow"/>
+          <layerref id="Lens" a="0.25"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Found"/>
+          <layerref id="Bobz02"/>
+          <layerref id="Upward"/>
+          <layerref id="shadow"/>
+          <layerref id="Lens" a="0.5"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Char01"/>
+          <layerref id="Char02"/>
+          <layerref id="Char03"/>
+          <layerref id="Char04"/>
+          <layerref id="Char05"/>
+          <layerref id="Found"/>
+          <layerref id="Bobz01"/>
+          <layerref id="Upward"/>
+          <layerref id="shadow"/>
+          <layerref id="Lens" a="0.25"/>
+        </frame>
+        <frame id="041">
+          <layerref id="Char01"/>
+          <layerref id="Char02"/>
+          <layerref id="Char03"/>
+          <layerref id="Char04"/>
+          <layerref id="Char05"/>
+          <layerref id="Found" a="0.85"/>
+          <layerref id="Bobz02"/>
+          <layerref id="Upward"/>
+          <layerref id="shadow"/>
+          <layerref id="Lens" a="0.2"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Char01"/>
+          <layerref id="Char02"/>
+          <layerref id="Char03"/>
+          <layerref id="Char04"/>
+          <layerref id="Char05"/>
+          <layerref id="Bobz01"/>
+          <layerref id="Upward"/>
+          <layerref id="shadow"/>
+        </frame>
+        <frame id="051">
+          <layerref id="Char01"/>
+          <layerref id="Char02"/>
+          <layerref id="Char03"/>
+          <layerref id="Char04"/>
+          <layerref id="Char05"/>
+          <layerref id="Bobz02" a="0.5"/>
+          <layerref id="Upward"/>
+          <layerref id="shadow"/>
+          <layerref id="Orb01" x="-20" y="60" a="0.3"/>
+        </frame>
+        <frame id="052">
+          <layerref id="Char01"/>
+          <layerref id="Char02"/>
+          <layerref id="Char03"/>
+          <layerref id="Char04"/>
+          <layerref id="Char05"/>
+          <layerref id="Bobz01" a="0.5"/>
+          <layerref id="Upward"/>
+          <layerref id="shadow"/>
+          <layerref id="Orb02" x="10" y="20" a="0.6"/>
+        </frame>
+        <frame id="053">
+          <layerref id="Char01"/>
+          <layerref id="Char02"/>
+          <layerref id="Char03"/>
+          <layerref id="Char04"/>
+          <layerref id="Char05"/>
+          <layerref id="Bobz02" a="0.2"/>
+          <layerref id="Upward"/>
+          <layerref id="shadow"/>
+          <layerref id="Orb01"/>
+        </frame>
+        <frame id="054">
+          <layerref id="Char01"/>
+          <layerref id="Char02"/>
+          <layerref id="Char03" y="-5"/>
+          <layerref id="Char04"/>
+          <layerref id="Char05"/>
+          <layerref id="Bobz02" a="0.1"/>
+          <layerref id="Upward"/>
+          <layerref id="shadow"/>
+          <layerref id="Orb02" a="0.5"/>
+          <layerref id="Lens" a="0.3"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Upward"/>
+          <layerref id="Char01"/>
+          <layerref id="Char02"/>
+          <layerref id="Char03" y="-10"/>
+          <layerref id="Char04"/>
+          <layerref id="Char05"/>
+          <layerref id="shadow"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="shadow" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On" framerate="4" loop="false">
+          <frameref id="00"/>
+          <frameref id="01"/>
+          <frameref id="011"/>
+          <frameref id="012"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="041"/>
+          <frameref id="04"/>
+          <frameref id="041"/>
+          <frameref id="04"/>
+          <frameref id="041"/>
+          <frameref id="04"/>
+          <frameref id="041"/>
+          <frameref id="05"/>
+          <frameref id="051"/>
+          <frameref id="052"/>
+          <frameref id="053"/>
+          <frameref id="054"/>
+          <frameref id="06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-32"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Light" color="0xcff7f7"/>
+        </frame>
+        <frame id="Off01">
+          <layerref id="Light" color="0xcff7f7" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off01"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

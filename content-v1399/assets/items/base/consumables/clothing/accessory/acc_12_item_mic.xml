@@ -1,0 +1,34 @@
+<item.SpriteItem id="3320" name="Microfone Wireless Sonix" desc="Uma microfone wireless para carregar e utilizar onde quiser." tags="hand,usable,wear,stackable,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_12_icon_microphone.png" price="350" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" minLevelType="4">
+  <volume>
+    <box min="-0.37,0,-0.12" max="0.37,0.15,0.12"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_12_item_microphone.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.37,0,-0.12" max="0.37,0.15,0.12"/>
+      <layers>
+        <layer id="Mic" texture="Texture">
+          <view angle="45" y="16"/>
+          <view angle="135" x="2" y="15" hm="true"/>
+          <view angle="225" col="1" row="1" y="19"/>
+          <view angle="315" row="1" y="19"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

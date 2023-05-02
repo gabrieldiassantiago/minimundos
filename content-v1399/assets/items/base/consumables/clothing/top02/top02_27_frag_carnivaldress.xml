@@ -1,0 +1,23 @@
+<f id="Top02_27Carnivaldress" parentId="Top02">
+  <g id="Dress" icon="$bu/icon_skinny_trouser.png">
+    <s id="Top02_27IdleBase" cId="LegIdle" s="items/base/consumables/clothing/top02/top02_27_idle.png" pri="4.1"/>
+    <s id="Top02_27Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/top02/top02_27_walk1.png" pri="4.1"/>
+    <s id="Top02_27Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/top02/top02_27_walk2.png" pri="4.1"/>
+    <s id="Top02_27Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/top02/top02_27_walk3.png" pri="4.1"/>
+    <s id="Top02_27Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/top02/top02_27_walk4.png" pri="4.1"/>
+    <s id="Top02_27SitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_27_sit_upper.png" pri="4.1"/>
+    <s id="Top02_27SitLowerBase" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_27_sit_lower.png" pri="4.1"/>
+  </g>
+  <g name="Top" icon="$bm/icon_m_vest.png">
+    <s id="Top02_27Torso" cId="Torso" s="items/base/consumables/clothing/top02/top02_27_item_fantasydress.png" pri="4.2"/>
+    <s id="Top02_27Skin" cId="Torso" s="items/base/consumables/clothing/top02/top02_skin.png" pri="0.1"/>
+    <c sId="Top02_27Skin" c="13405800" a="0.44" b="12.0" ct="0.26" lId="SkinColor" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop02_27" icon="items/base/consumables/clothing/top02/top02_27_icon_carnivaldress.png" w="48" h="48"/>
+    <s id="Icon02_27Base" cId="IconTop02_27" s="items/base/consumables/clothing/top02/top02_27_icon_carnivaldress.png" pri="1.1"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+</f>

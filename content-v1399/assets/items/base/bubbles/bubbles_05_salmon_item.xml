@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem name="Balão do Chat Salmão" desc="O balãozinho do chat com cor de fundo salmão" icon="items/base/bubbles/bubbles_05_salmon_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="avatar" dropTargetClamp="none" id="5608" premium="Y" tags="speechbubble_default,speechbubble">
+  <volume>
+    <box min="NaN,NaN,NaN" max="NaN,NaN,NaN"/>
+  </volume>
+  <data>
+    <entry key="color" value="0xfb7483"/>
+    <entry key="btnIcon" value="speechBubble24Salmon"/>
+    <entry key="largeIcon" value="items/base/bubbles/bubbles_05_salmon_largeicon.png"/>
+  </data>
+</item.SpriteItem>

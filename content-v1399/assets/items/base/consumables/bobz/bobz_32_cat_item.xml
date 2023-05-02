@@ -1,0 +1,181 @@
+<item.SpriteItem id="4886" name="Bobz Gatinho Voador" desc="Um adorável gatinho voador" tags="bobz,usable,consumable,wear,actionbar,action_wearable_toggle" icon="items/base/consumables/bobz/bobz_32_cat_icon.png" price="12500" minLevel="1" minLevelType="2" minCPLevel="1" premium="Y" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,1.2,0.1"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="nature+25"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+25"/>
+  </data>
+  <textures>
+    <texture id="bobz" source="items/base/consumables/bobz/bobz_32_cat_item.png" cols="2" rows="1"/>
+    <texture id="Shadow" source="items/base/consumables/bobz/bobz_generic_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+      <layers>
+        <layer id="bobz01" texture="bobz" y="12">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle01">
+          <layerref id="bobz01"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="bobz01" x="1"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="bobz01" x="2"/>
+        </frame>
+        <frame id="Idle04">
+          <layerref id="bobz01" x="2"/>
+        </frame>
+        <frame id="Idle05">
+          <layerref id="bobz01" x="1"/>
+        </frame>
+        <frame id="Idle06">
+          <layerref id="bobz01"/>
+        </frame>
+        <frame id="Idle07">
+          <layerref id="bobz01" x="-1"/>
+        </frame>
+        <frame id="Idle08">
+          <layerref id="bobz01" x="-1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle05"/>
+          <frameref id="Idle06"/>
+          <frameref id="Idle07"/>
+          <frameref id="Idle08"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.05" s="1.3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="light" texture="intense" align="middle" y="-20">
+          <view x="2" y="-1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="05">
+          <layerref id="light" color="0xed6246"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="05"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.1" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="light" texture="intense" align="middle" y="-20">
+          <view x="4" y="-1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="light" a="0"/>
+        </frame>
+        <frame id="05">
+          <layerref id="light" color="0xe78f42" a="0.4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="05"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Node01" y="1.2">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Shadow" texture="Shadow">
+          <view angle="45" y="102"/>
+          <view angle="135" y="102"/>
+          <view angle="225" y="102"/>
+          <view angle="315" y="102"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Shadow">
+          <layerref id="Shadow"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="On" framerate="2">
+      <frame id="Frame 01" duration="4">
+        <noderef id="Node" y="1.2" animation="Idle"/>
+        <noderef id="Node01" frame="Shadow"/>
+        <noderef id="Diffuse" animation="Idle"/>
+        <noderef id="Intense" animation="Idle"/>
+      </frame>
+      <frame id="Frame 02">
+        <noderef id="Node" y="1.21" animation="Idle"/>
+        <noderef id="Node01" frame="Shadow"/>
+        <noderef id="Diffuse" animation="Idle"/>
+        <noderef id="Intense" animation="Idle"/>
+      </frame>
+      <frame id="Frame 03">
+        <noderef id="Node" y="1.22" animation="Idle"/>
+        <noderef id="Node01" frame="Shadow"/>
+        <noderef id="Diffuse" animation="Idle"/>
+        <noderef id="Intense" animation="Idle"/>
+      </frame>
+      <frame id="Frame 04">
+        <noderef id="Node" y="1.23" animation="Idle"/>
+        <noderef id="Node01" frame="Shadow"/>
+        <noderef id="Diffuse" animation="Idle"/>
+        <noderef id="Intense" animation="Idle"/>
+      </frame>
+      <frame id="Frame 05" duration="4">
+        <noderef id="Node" y="1.24" animation="Idle"/>
+        <noderef id="Node01" frame="Shadow"/>
+        <noderef id="Diffuse" animation="Idle"/>
+        <noderef id="Intense" animation="Idle"/>
+      </frame>
+      <frame id="Frame 06">
+        <noderef id="Node" y="1.23" animation="Idle"/>
+        <noderef id="Node01" frame="Shadow"/>
+        <noderef id="Diffuse" animation="Idle"/>
+        <noderef id="Intense" animation="Idle"/>
+      </frame>
+      <frame id="Frame 07">
+        <noderef id="Node" y="1.22" animation="Idle"/>
+        <noderef id="Node01" frame="Shadow"/>
+        <noderef id="Diffuse" animation="Idle"/>
+        <noderef id="Intense" animation="Idle"/>
+      </frame>
+      <frame id="Frame 08">
+        <noderef id="Node" y="1.21" animation="Idle"/>
+        <noderef id="Node01" frame="Shadow"/>
+        <noderef id="Diffuse" animation="Idle"/>
+        <noderef id="Intense" animation="Idle"/>
+      </frame>
+    </animation>
+  </animations>
+</item.SpriteItem>

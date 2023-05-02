@@ -1,0 +1,280 @@
+<item.SpriteItem id="0" name="flameorbz" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+    <texture id="orb" source="items/base/consumables/clothing/accessory/acc_478_moonsun_hand.png" cols="4" rows="1"/>
+    <texture id="Glow" source="items/base/consumables/clothing/accessory/acc_478_moonsun_glow.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="orb_01" texture="orb">
+          <view angle="0" x="-6" y="1"/>
+          <view angle="45"/>
+          <view angle="90" y="-2"/>
+          <view angle="135" y="-1"/>
+          <view angle="180" x="3" y="-2"/>
+          <view angle="225" y="-2"/>
+          <view angle="270" x="1" y="1"/>
+          <view angle="315" y="1"/>
+        </layer>
+        <layer id="orb_02" texture="orb">
+          <view angle="0" col="1" x="-6" y="1"/>
+          <view angle="45" col="1"/>
+          <view angle="90" col="1" y="-2"/>
+          <view angle="135" col="1" y="-1"/>
+          <view angle="180" col="1" x="3" y="-2"/>
+          <view angle="225" col="1" y="-2"/>
+          <view angle="270" col="1" x="1" y="1"/>
+          <view angle="315" col="1" y="1"/>
+        </layer>
+        <layer id="orb_03" texture="orb">
+          <view angle="0" col="2" x="-6" y="1"/>
+          <view angle="45" col="2"/>
+          <view angle="90" col="2" y="-2"/>
+          <view angle="135" col="2" y="-1"/>
+          <view angle="180" col="2" x="3" y="-2"/>
+          <view angle="225" col="2" y="-2"/>
+          <view angle="270" col="2" x="1" y="1"/>
+          <view angle="315" col="2" y="1"/>
+        </layer>
+        <layer id="orb_04" texture="orb">
+          <view angle="0" col="3" x="-6" y="1"/>
+          <view angle="45" col="3"/>
+          <view angle="90" col="3" y="-2"/>
+          <view angle="135" col="3" y="-1"/>
+          <view angle="180" col="3" x="3" y="-2"/>
+          <view angle="225" col="3" y="-2"/>
+          <view angle="270" col="3" x="1" y="1"/>
+          <view angle="315" col="3" y="1"/>
+        </layer>
+        <layer id="orb_05" texture="orb">
+          <view angle="0" col="2" x="-6" y="1" hm="true"/>
+          <view angle="45" col="2" hm="true"/>
+          <view angle="90" col="2" y="-2" hm="true"/>
+          <view angle="135" col="2" y="-1" hm="true"/>
+          <view angle="180" col="2" x="3" y="-2" hm="true"/>
+          <view angle="225" col="2" y="-2" hm="true"/>
+          <view angle="270" col="2" x="1" y="1" hm="true"/>
+          <view angle="315" col="2" y="1" hm="true"/>
+        </layer>
+        <layer id="orb_06" texture="orb">
+          <view angle="0" col="1" x="-6" y="1" hm="true"/>
+          <view angle="45" col="1" hm="true"/>
+          <view angle="90" col="1" y="-2" hm="true"/>
+          <view angle="135" col="1" y="-1" hm="true"/>
+          <view angle="180" col="1" x="3" y="-2" hm="true"/>
+          <view angle="225" col="1" y="-2" hm="true"/>
+          <view angle="270" col="1" x="1" y="1" hm="true"/>
+          <view angle="315" col="1" y="1" hm="true"/>
+        </layer>
+        <layer id="glow_01" texture="Glow">
+          <view angle="0" x="-7" y="20"/>
+          <view angle="45" x="-1" y="19"/>
+          <view angle="90" x="-1" y="17"/>
+          <view angle="135" x="-1" y="18"/>
+          <view angle="180" x="2" y="17"/>
+          <view angle="225" x="-1" y="17"/>
+          <view angle="270" y="20"/>
+          <view angle="315" x="-1" y="20"/>
+        </layer>
+        <layer id="glow_02" texture="Glow">
+          <view angle="0" col="1" x="-7" y="20"/>
+          <view angle="45" col="1" x="-1" y="19"/>
+          <view angle="90" col="1" x="-1" y="17"/>
+          <view angle="135" col="1" x="-1" y="18"/>
+          <view angle="180" col="1" x="2" y="17"/>
+          <view angle="225" col="1" x="-1" y="17"/>
+          <view angle="270" col="1" y="20"/>
+          <view angle="315" col="1" x="-1" y="20"/>
+        </layer>
+        <layer id="glow_03" texture="Glow">
+          <view angle="0" col="2" x="-7" y="20"/>
+          <view angle="45" col="2" x="-1" y="19"/>
+          <view angle="90" col="2" x="-1" y="17"/>
+          <view angle="135" col="2" x="-1" y="18"/>
+          <view angle="180" col="2" x="2" y="17"/>
+          <view angle="225" col="2" x="-1" y="17"/>
+          <view angle="270" col="2" y="20"/>
+          <view angle="315" col="2" x="-1" y="20"/>
+        </layer>
+        <layer id="glow_04" texture="Glow">
+          <view angle="0" col="3" x="-7" y="20"/>
+          <view angle="45" col="3" x="-1" y="19"/>
+          <view angle="90" col="3" x="-1" y="17"/>
+          <view angle="135" col="3" x="-1" y="18"/>
+          <view angle="180" col="3" x="2" y="17"/>
+          <view angle="225" col="3" x="-1" y="17"/>
+          <view angle="270" col="3" y="20"/>
+          <view angle="315" col="3" x="-1" y="20"/>
+        </layer>
+        <layer id="glow_05" texture="Glow">
+          <view angle="0" col="3" x="-7" y="20" hm="true"/>
+          <view angle="45" col="3" x="-1" y="19" hm="true"/>
+          <view angle="90" col="3" x="-1" y="17" hm="true"/>
+          <view angle="135" col="3" x="-1" y="18" hm="true"/>
+          <view angle="180" col="3" x="2" y="17" hm="true"/>
+          <view angle="225" col="3" x="-1" y="17" hm="true"/>
+          <view angle="270" col="3" y="20" hm="true"/>
+          <view angle="315" col="3" x="-1" y="20" hm="true"/>
+        </layer>
+        <layer id="glow_06" texture="Glow">
+          <view angle="0" col="1" x="-7" y="20" hm="true"/>
+          <view angle="45" col="1" x="-1" y="19" hm="true"/>
+          <view angle="90" col="1" x="-1" y="17" hm="true"/>
+          <view angle="135" col="1" x="-1" y="18" hm="true"/>
+          <view angle="180" col="1" x="2" y="17" hm="true"/>
+          <view angle="225" col="1" x="-1" y="17" hm="true"/>
+          <view angle="270" col="1" y="20" hm="true"/>
+          <view angle="315" col="1" x="-1" y="20" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="glow_01"/>
+          <layerref id="orb_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="glow_02" y="2"/>
+          <layerref id="orb_02" y="2"/>
+        </frame>
+        <frame id="03">
+          <layerref id="glow_03" y="4"/>
+          <layerref id="orb_03" y="4"/>
+        </frame>
+        <frame id="04">
+          <layerref id="glow_04" y="6"/>
+          <layerref id="orb_04" y="6"/>
+        </frame>
+        <frame id="05">
+          <layerref id="glow_05" y="4"/>
+          <layerref id="orb_05" y="4"/>
+        </frame>
+        <frame id="06">
+          <layerref id="glow_06" y="2"/>
+          <layerref id="orb_06" y="2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="1.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="-4" y="-8" hm="true"/>
+          <view angle="45" y="-11"/>
+          <view angle="90" y="-11"/>
+          <view angle="135" y="-11" hm="true"/>
+          <view angle="180" x="2" y="-11"/>
+          <view angle="225" y="-11"/>
+          <view angle="270" y="-8"/>
+          <view angle="315" y="-8" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="glow_01" texture="Glow">
+          <view angle="0" x="-7" y="20"/>
+          <view angle="45" x="-1" y="19"/>
+          <view angle="90" x="-1" y="17"/>
+          <view angle="135" x="-1" y="18"/>
+          <view angle="180" x="2" y="17"/>
+          <view angle="225" x="-1" y="17"/>
+          <view angle="270" y="20"/>
+          <view angle="315" x="-1" y="20"/>
+        </layer>
+        <layer id="glow_02" texture="Glow">
+          <view angle="0" col="1" x="-7" y="20"/>
+          <view angle="45" col="1" x="-1" y="19"/>
+          <view angle="90" col="1" x="-1" y="17"/>
+          <view angle="135" col="1" x="-1" y="18"/>
+          <view angle="180" col="1" x="2" y="17"/>
+          <view angle="225" col="1" x="-1" y="17"/>
+          <view angle="270" col="1" y="20"/>
+          <view angle="315" col="1" x="-1" y="20"/>
+        </layer>
+        <layer id="glow_03" texture="Glow">
+          <view angle="0" col="2" x="-7" y="20"/>
+          <view angle="45" col="2" x="-1" y="19"/>
+          <view angle="90" col="2" x="-1" y="17"/>
+          <view angle="135" col="2" x="-1" y="18"/>
+          <view angle="180" col="2" x="2" y="17"/>
+          <view angle="225" col="2" x="-1" y="17"/>
+          <view angle="270" col="2" y="20"/>
+          <view angle="315" col="2" x="-1" y="20"/>
+        </layer>
+        <layer id="glow_04" texture="Glow">
+          <view angle="0" col="3" x="-7" y="20"/>
+          <view angle="45" col="3" x="-1" y="19"/>
+          <view angle="90" col="3" x="-1" y="17"/>
+          <view angle="135" col="3" x="-1" y="18"/>
+          <view angle="180" col="3" x="2" y="17"/>
+          <view angle="225" col="3" x="-1" y="17"/>
+          <view angle="270" col="3" y="20"/>
+          <view angle="315" col="3" x="-1" y="20"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="glow_01" a="0.5"/>
+        </frame>
+        <frame id="02">
+          <layerref id="glow_02" y="2" a="0.5"/>
+        </frame>
+        <frame id="03">
+          <layerref id="glow_03" y="4" a="0.5"/>
+        </frame>
+        <frame id="04">
+          <layerref id="glow_04" y="6" a="0.5"/>
+        </frame>
+        <frame id="05">
+          <layerref id="glow_03" y="4" a="0.5"/>
+        </frame>
+        <frame id="06">
+          <layerref id="glow_02" y="2" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01" duration="2"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

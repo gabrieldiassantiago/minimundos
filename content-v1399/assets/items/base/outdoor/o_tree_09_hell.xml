@@ -1,0 +1,45 @@
+<item.SpriteItem name="Árvore em Chamas" desc="O fogo passou e só os galhos deixou :(" tags="plant" icon="items/base/outdoor/icon_o_tree_09_hell.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" id="2173" price="65" tokens="650">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.45,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="tree" source="items/base/outdoor/o_tree_09_hell.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_treehell.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Tree">
+      <box min="-0.49,0,-0.49" max="0.49,2.45,0.49"/>
+      <layers>
+        <layer id="tree" texture="tree" y="9">
+          <view angle="45" x="10" y="14"/>
+          <view angle="135" x="-10" y="14" hm="true"/>
+          <view angle="225" x="10" y="14"/>
+          <view angle="315" x="-10" y="14" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="1" y="-12"/>
+          <view angle="135" x="-1" y="-12" hm="true"/>
+          <view angle="225" x="1" y="-12"/>
+          <view angle="315" x="-1" y="-12" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Light">
+          <layerref id="Light" color="0xffc271"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

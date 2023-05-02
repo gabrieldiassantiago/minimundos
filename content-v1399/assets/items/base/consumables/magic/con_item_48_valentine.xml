@@ -1,0 +1,150 @@
+<item.SpriteItem id="1437" name="Beijo de Namorado" desc="Aww S2" tags="consumable,actionbar,group_nature,magic,usable,stackable,action_consumable_target,market" icon="items/base/consumables/magic/icon_con_item_48_valentine.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="14" minLevel="1" minLevelType="4" minCPLevel="1">
+  <volume>
+    <box min="-0.13,0,-0.13" max="0.13,0.42,0.13"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="10"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="action_attributes" value="nature+10"/>
+    <entry key="action_attributes_secondary" value="speed+10,health+20"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_cast.png"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/magic/con_item_48_valentine.png" cols="1" rows="1"/>
+    <texture id="FX" source="items/base/consumables/magic/effect_generic_vialglow.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.13,0,-0.13" max="0.13,0.42,0.13"/>
+      <layers>
+        <layer id="vial" texture="Texture" y="8">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="FX_glow_behind" texture="FX" x="-1" y="13">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="FX_glow_infront" texture="FX" x="-1" y="13">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="FX_glow_behind" color="0x9616f8"/>
+          <layerref id="vial"/>
+          <layerref id="FX_glow_infront" color="0xe5ceeb" a="0.6" blend="add"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="FX_glow_behind" color="0x9616f8"/>
+          <layerref id="vial"/>
+          <layerref id="FX_glow_infront" color="0xe5ceeb" a="0.55" blend="add"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="FX_glow_behind" color="0x9616f8"/>
+          <layerref id="vial"/>
+          <layerref id="FX_glow_infront" color="0xe5ceeb" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="FX_glow_behind" color="0x9616f8"/>
+          <layerref id="vial"/>
+          <layerref id="FX_glow_infront" color="0xe5ceeb" a="0.45" blend="add"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="FX_glow_behind" color="0x9616f8"/>
+          <layerref id="vial"/>
+          <layerref id="FX_glow_infront" color="0xe5ceeb" a="0.4" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4" syncOffsets="0,1">
+          <frameref id="Frame01" duration="2"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="0.7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-1">
+          <view angle="45" x="3"/>
+          <view angle="135" x="3"/>
+          <view angle="225" x="3"/>
+          <view angle="315" x="4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xf1abf1"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xf1abf1" a="0.95"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xf1abf1" a="0.9"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Light" color="0xf1abf1" a="0.85"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Light" color="0xf1abf1" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4" syncOffsets="0,1">
+          <frameref id="Frame01" duration="2"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="0.7" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-1">
+          <view angle="45" x="3"/>
+          <view angle="135" x="3"/>
+          <view angle="225" x="3"/>
+          <view angle="315" x="4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xf1abf1" a="0.4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4" syncOffsets="0,1">
+          <frameref id="Frame01" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

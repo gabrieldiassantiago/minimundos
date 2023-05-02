@@ -1,0 +1,27 @@
+<item.SpriteItem id="0" name="Dracula's Head" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.3,0.65,0.2"/>
+  </volume>
+  <textures>
+    <texture id="Dracula" source="items/base/consumables/head/con_head_156_drac_green.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="WitchHead">
+      <box min="-0.2,0,-0.2" max="0.3,0.65,0.2"/>
+      <layers>
+        <layer id="HeadLayer" texture="Dracula" y="22">
+          <view angle="0" col="4" x="8"/>
+          <view angle="45" col="1" x="4" y="2"/>
+          <view angle="90" x="-1" y="1"/>
+          <view angle="135" col="1" x="-4" y="2" hm="true"/>
+          <view angle="180" col="4" x="-8" hm="true"/>
+          <view angle="225" col="3" x="-10" y="-3" hm="true"/>
+          <view angle="270" col="2" x="5" y="-5"/>
+          <view angle="315" col="3" x="8" y="-3"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

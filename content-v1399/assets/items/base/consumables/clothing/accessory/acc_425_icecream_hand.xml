@@ -1,0 +1,79 @@
+<item.SpriteItem id="0" name="Tribal Warstaff" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bear" source="items/base/consumables/clothing/accessory/acc_425_icecream_hand.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Gardening Fork">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="bear" texture="bear" align="middle">
+          <view angle="0" x="3" y="-21" hm="true"/>
+          <view angle="45" x="8" y="-20" hm="true"/>
+          <view angle="90" x="9" y="-15"/>
+          <view angle="135" x="7" y="-13"/>
+          <view angle="180" x="-3" y="-10" hm="true"/>
+          <view angle="225" x="-10" y="-15" hm="true"/>
+          <view angle="270" x="-13" y="-17"/>
+          <view angle="315" x="-10" y="-20"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="bear"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="bear" texture="bear" align="middle">
+          <view angle="0" x="3" y="-21" hm="true"/>
+          <view angle="45" x="8" y="-20" hm="true"/>
+          <view angle="90" x="9" y="-15"/>
+          <view angle="135" x="7" y="-13"/>
+          <view angle="180" x="-3" y="-10" hm="true"/>
+          <view angle="225" x="-10" y="-15" hm="true"/>
+          <view angle="270" x="-13" y="-17"/>
+          <view angle="315" x="-10" y="-20"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="bear"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse01" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="bear" texture="Light" align="middle">
+          <view angle="0" x="1" y="-16"/>
+          <view angle="45" x="5" y="-14"/>
+          <view angle="90" x="5" y="-12"/>
+          <view angle="135" x="5" y="-10" hm="true"/>
+          <view angle="180" x="-2" y="-8" hm="true"/>
+          <view angle="225" x="-6" y="-12" hm="true"/>
+          <view angle="270" x="-7" y="-14"/>
+          <view angle="315" x="-8" y="-14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="bear"/>
+          <layerref id="bear"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,81 @@
+<item.SpriteItem id="0" name="ButterflyReward" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.28,0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="SmallWolrds Coffee" source="items/base/outdoor/o_butterflyreward_hand.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.28,0.1"/>
+      <layers>
+        <layer id="jar01" texture="SmallWolrds Coffee" y="8">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+          <view angle="90" hm="true"/>
+          <view angle="180" hm="true"/>
+          <view angle="270" hm="true"/>
+          <view angle="0" hm="true"/>
+        </layer>
+        <layer id="jar02" texture="SmallWolrds Coffee" y="8">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1"/>
+          <view angle="90" hm="true"/>
+          <view angle="180" hm="true"/>
+          <view angle="270" hm="true"/>
+          <view angle="0" hm="true"/>
+        </layer>
+        <layer id="jar03" texture="SmallWolrds Coffee" y="8">
+          <view angle="45" row="1"/>
+          <view angle="135" row="1"/>
+          <view angle="225" row="1"/>
+          <view angle="315" row="1"/>
+          <view angle="90" hm="true"/>
+          <view angle="180" hm="true"/>
+          <view angle="270" hm="true"/>
+          <view angle="0" hm="true"/>
+        </layer>
+        <layer id="jar04" texture="SmallWolrds Coffee" y="8">
+          <view angle="45" col="1" row="1"/>
+          <view angle="135" col="1" row="1"/>
+          <view angle="225" col="1" row="1"/>
+          <view angle="315" col="1" row="1"/>
+          <view angle="90" hm="true"/>
+          <view angle="180" hm="true"/>
+          <view angle="270" hm="true"/>
+          <view angle="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="empty01">
+          <layerref id="jar01"/>
+        </frame>
+        <frame id="empty02">
+          <layerref id="jar02"/>
+        </frame>
+        <frame id="empty03">
+          <layerref id="jar03"/>
+        </frame>
+        <frame id="empty04">
+          <layerref id="jar04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="empty01"/>
+          <frameref id="empty02"/>
+          <frameref id="empty03"/>
+          <frameref id="empty04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

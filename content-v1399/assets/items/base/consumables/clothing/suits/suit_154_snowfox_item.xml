@@ -1,0 +1,65 @@
+<item.SpriteItem id="7520" name="Capa Natalina da Raposa Branca" desc="Uma capa especial, para uma pessoa especial [1 de 6]" tags="rare,consumable,clothing,actionbar,wear,suits,nopvp,top07,action_wearable_toggle" icon="items/base/consumables/clothing/suits/suit_154_snowfox_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.5,1.5,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_154_frag_snowfox.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes" value="frost+100"/>
+    <entry key="action_attributes_secondary" value="health+100,speed+100"/>
+  </data>
+  <textures>
+    <texture id="robot" source="items/base/consumables/clothing/suits/suit_154_snowfox_item.png" cols="2" rows="1"/>
+    <texture id="sparkles" source="items/base/mystery/mystery_29_sparkle.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.5,0,-0.5" max="0.5,1.5,0.5"/>
+      <layers>
+        <layer id="Robot" texture="robot" y="15">
+          <view angle="45" x="2" y="33"/>
+          <view angle="135" x="-3" y="33" hm="true"/>
+          <view angle="225" col="1" y="20" hm="true"/>
+          <view angle="315" col="1" y="20"/>
+        </layer>
+        <layer id="sparkle_01" texture="sparkles" y="15">
+          <view angle="45" x="-2" y="11"/>
+          <view angle="135" x="2" y="11" hm="true"/>
+          <view angle="225" x="-6" y="14"/>
+          <view angle="315" x="-1" y="14"/>
+        </layer>
+        <layer id="sparkle_02" texture="sparkles" y="15">
+          <view angle="45" col="1" x="2" y="5"/>
+          <view angle="135" col="1" x="-4" y="8" hm="true"/>
+          <view angle="225" col="1" x="-5" y="10" hm="true"/>
+          <view angle="315" col="1" x="5" y="10"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Robot"/>
+          <layerref id="sparkle_01" a="0.5"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Robot"/>
+          <layerref id="sparkle_02" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="3">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

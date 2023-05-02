@@ -1,0 +1,129 @@
+<item.SpriteItem id="6359" name="Birthday Candle" desc="And maaannnnyy mooooorreee" tags="admin,misc" icon="items/base/urban/icon_u_bigcandle.png" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table, avatar,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="flag" source="items/base/urban/u_bigcandle.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+    <texture id="Texture01" source="items/base/shared/s_flame_big.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="nodes01" s="2">
+      <box min="-0.49,0,-0.49" max="0.49,1,0.49"/>
+      <layers>
+        <layer id="flame01" texture="Texture01" y="190">
+          <view x="3" y="-288"/>
+        </layer>
+        <layer id="flame02" texture="Texture01" y="190">
+          <view col="1" x="5" y="-288"/>
+        </layer>
+        <layer id="flame03" texture="Texture01" y="190">
+          <view row="1" x="1" y="-288"/>
+        </layer>
+        <layer id="flame04" texture="Texture01" y="190">
+          <view col="1" row="1" x="4" y="-289"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="flame01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="flame02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="flame03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="flame04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="nodes">
+      <box min="-0.49,0,-0.49" max="0.49,1,0.49"/>
+      <layers>
+        <layer id="flag" texture="flag" y="100">
+          <view y="-86"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="flag"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="6" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-46"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xedac72" a="0.25"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="15" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Texture" align="middle">
+          <view y="-18"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xfcfbed"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="On">
+      <frame id="Frame01">
+        <noderef id="nodes" animation="On"/>
+        <noderef id="Intense" frame="On"/>
+        <noderef id="Diffuse" frame="On"/>
+        <noderef id="nodes01" animation="On"/>
+      </frame>
+      <frame id="Frame02">
+        <noderef id="nodes" frame="Frame01"/>
+        <noderef id="Intense" frame="On"/>
+        <noderef id="Diffuse" frame="On"/>
+        <noderef id="nodes01" animation="On"/>
+      </frame>
+    </animation>
+  </animations>
+</item.SpriteItem>

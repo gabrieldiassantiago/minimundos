@@ -1,0 +1,48 @@
+<item.SpriteItem id="0" name="Trick Bubblegum Hand" desc="Potent burping soda in hand" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,-0.1,-0.1" max="0.1,0.5,0.1"/>
+  </volume>
+  <textures>
+    <texture id="gum" source="items/base/consumables/magic/con_hand_88_trickgum.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="eat" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,-0.1,-0.1" max="0.1,0.5,0.1"/>
+      <layers>
+        <layer id="gum" texture="gum">
+          <view angle="0" col="2" x="-2" y="8"/>
+          <view angle="45" x="3" y="8"/>
+          <view angle="90" col="1" x="4" y="8"/>
+          <view angle="135" x="3" y="10" hm="true"/>
+          <view angle="180" col="2" x="2" y="8"/>
+          <view angle="225" x="-2" y="10"/>
+          <view angle="270" col="1" x="-2" y="4"/>
+          <view angle="315" x="-2" y="6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="gum">
+          <layerref id="gum"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Warmup" framerate="2" loop="false">
+          <frameref id="gum">
+            <sample id="eat" vol="0.7"/>
+          </frameref>
+          <frameref id="gum" duration="5"/>
+          <frameref id="gum">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="gum"/>
+        </animation>
+        <animation id="Idle" framerate="4">
+          <frameref id="gum"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

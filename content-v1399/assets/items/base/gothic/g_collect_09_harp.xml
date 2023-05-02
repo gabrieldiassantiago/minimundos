@@ -1,0 +1,232 @@
+<item.SpriteItem id="2672" name="Harpa Harmonia" desc="Uma harpa mágica de ouro." tags="rare,misc" icon="items/base/gothic/icon_g_collect_09_harp.png" price="150" minLevel="1" minLevelType="4" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.2" max="0.32,1.3,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <textures>
+    <texture id="box" source="items/base/gothic/g_collect_09_harp.png" cols="2" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="halo" source="items/base/gothic/g_collect_09_harp_halo.png" cols="2" rows="1"/>
+    <texture id="music notes" source="items/base/shared/s_music_notes.png" cols="2" rows="1"/>
+    <texture id="dust" source="items/base/gothic/g_collect_09_harp_dust.png" cols="3" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="harp" source="items/base/gothic/sndfx_harp.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.2" max="0.32,1.3,0.2"/>
+      <layers>
+        <layer id="box" texture="box" y="15">
+          <view angle="45" x="3" y="7"/>
+          <view angle="135" x="-3" y="7" hm="true"/>
+          <view angle="225" col="1" x="-2" y="-11" hm="true"/>
+          <view angle="315" col="1" x="2" y="-11"/>
+        </layer>
+        <layer id="halo" texture="halo" y="15">
+          <view angle="45" x="-4" y="6"/>
+          <view angle="135" x="4" y="5" hm="true"/>
+          <view angle="225" col="1" x="2" y="-7" hm="true"/>
+          <view angle="315" col="1" x="-2" y="-6"/>
+        </layer>
+        <layer id="note01 100%" texture="music notes">
+          <view angle="45" x="5" y="-10"/>
+          <view angle="135" x="15" y="-8"/>
+          <view angle="225" x="14" y="1"/>
+          <view angle="315" x="5" y="-2"/>
+        </layer>
+        <layer id="note01 66%" texture="music notes">
+          <view angle="45" x="5" y="-10" alpha="0.66"/>
+          <view angle="135" x="15" y="-8" alpha="0.66"/>
+          <view angle="225" x="14" y="1" alpha="0.66"/>
+          <view angle="315" x="5" y="-2" alpha="0.66"/>
+        </layer>
+        <layer id="note01 33%" texture="music notes">
+          <view angle="45" x="5" y="-10" alpha="0.33"/>
+          <view angle="135" x="15" y="-8" alpha="0.33"/>
+          <view angle="225" x="14" y="1" alpha="0.33"/>
+          <view angle="315" x="5" y="-2" alpha="0.33"/>
+        </layer>
+        <layer id="note02 100%" texture="music notes">
+          <view angle="45" col="1" x="5" y="-10"/>
+          <view angle="135" col="1" x="15" y="-8"/>
+          <view angle="225" col="1" x="14" y="1"/>
+          <view angle="315" col="1" x="5" y="-2"/>
+        </layer>
+        <layer id="note02 66%" texture="music notes">
+          <view angle="45" col="1" x="5" y="-10" alpha="0.66"/>
+          <view angle="135" col="1" x="15" y="-8" alpha="0.66"/>
+          <view angle="225" col="1" x="14" y="1" alpha="0.66"/>
+          <view angle="315" col="1" x="5" y="-2" alpha="0.66"/>
+        </layer>
+        <layer id="note02 33%" texture="music notes">
+          <view angle="45" col="1" x="5" y="-10" alpha="0.33"/>
+          <view angle="135" col="1" x="15" y="-8" alpha="0.33"/>
+          <view angle="225" col="1" x="14" y="1" alpha="0.33"/>
+          <view angle="315" col="1" x="5" y="-2" alpha="0.33"/>
+        </layer>
+        <layer id="note01 0%" texture="music notes">
+          <view angle="45" x="5" y="-10" alpha="0"/>
+          <view angle="135" x="15" y="-8" alpha="0"/>
+          <view angle="225" x="14" y="1" alpha="0"/>
+          <view angle="315" x="5" y="-2" alpha="0"/>
+        </layer>
+        <layer id="dust_01" texture="dust" y="15">
+          <view angle="45" x="-2" y="-2"/>
+          <view angle="135" x="2" y="-2" hm="true"/>
+          <view angle="225" row="1" x="2" y="-15" hm="true"/>
+          <view angle="315" row="1" x="-2" y="-15"/>
+        </layer>
+        <layer id="dust_02" texture="dust" y="15">
+          <view angle="45" col="1" x="-2" y="-2"/>
+          <view angle="135" col="1" x="2" y="-2" hm="true"/>
+          <view angle="225" col="1" row="1" x="2" y="-15" hm="true"/>
+          <view angle="315" col="1" row="1" x="-2" y="-15"/>
+        </layer>
+        <layer id="dust_03" texture="dust" y="15">
+          <view angle="45" col="2" x="-2" y="-2"/>
+          <view angle="135" col="2" x="2" y="-2" hm="true"/>
+          <view angle="225" col="2" row="1" x="2" y="-15" hm="true"/>
+          <view angle="315" col="2" row="1" x="-2" y="-15"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle01">
+          <layerref id="halo"/>
+          <layerref id="box"/>
+          <layerref id="dust_01"/>
+        </frame>
+        <frame id="idle02">
+          <layerref id="halo" a="0.9"/>
+          <layerref id="box"/>
+          <layerref id="dust_02"/>
+        </frame>
+        <frame id="idle03">
+          <layerref id="halo" a="0.8"/>
+          <layerref id="box"/>
+          <layerref id="dust_03"/>
+        </frame>
+        <frame id="idle04">
+          <layerref id="halo" a="0.7"/>
+          <layerref id="box"/>
+          <layerref id="dust_01"/>
+        </frame>
+        <frame id="idle05">
+          <layerref id="halo" a="0.6"/>
+          <layerref id="box"/>
+          <layerref id="dust_02"/>
+        </frame>
+        <frame id="idle06">
+          <layerref id="halo" a="0.65"/>
+          <layerref id="box"/>
+          <layerref id="dust_03"/>
+        </frame>
+        <frame id="On_01">
+          <layerref id="halo"/>
+          <layerref id="box"/>
+          <layerref id="dust_01"/>
+          <layerref id="note01 66%" x="-11" y="-42"/>
+        </frame>
+        <frame id="On_02">
+          <layerref id="halo" a="0.9"/>
+          <layerref id="box"/>
+          <layerref id="dust_02"/>
+          <layerref id="note01 100%" x="-17" y="-67"/>
+        </frame>
+        <frame id="On_03">
+          <layerref id="halo" a="0.8"/>
+          <layerref id="box"/>
+          <layerref id="dust_03"/>
+          <layerref id="note01 100%" x="-3" y="-92"/>
+          <layerref id="note02 66%" x="-7" y="-46"/>
+        </frame>
+        <frame id="On_04">
+          <layerref id="halo" a="0.7"/>
+          <layerref id="box"/>
+          <layerref id="dust_01"/>
+          <layerref id="note01 100%" x="-5" y="-113"/>
+          <layerref id="note02 100%" x="-19" y="-63"/>
+        </frame>
+        <frame id="On_05">
+          <layerref id="halo" a="0.6"/>
+          <layerref id="box"/>
+          <layerref id="dust_02"/>
+          <layerref id="note01 66%" x="-8" y="-129"/>
+          <layerref id="note02 100%" x="-12" y="-92"/>
+        </frame>
+        <frame id="On_06">
+          <layerref id="halo" a="0.7"/>
+          <layerref id="box"/>
+          <layerref id="dust_03"/>
+          <layerref id="note01 33%" x="-10" y="-137"/>
+          <layerref id="note02 100%" x="-4" y="-114"/>
+        </frame>
+        <frame id="On_07">
+          <layerref id="halo" a="0.8"/>
+          <layerref id="box"/>
+          <layerref id="dust_01"/>
+          <layerref id="note02 66%" x="2" y="-126"/>
+          <layerref id="note01 0%" x="4" y="-137"/>
+        </frame>
+        <frame id="On_08">
+          <layerref id="halo" a="0.9"/>
+          <layerref id="box"/>
+          <layerref id="dust_02"/>
+          <layerref id="note02 33%" x="4" y="-137"/>
+        </frame>
+        <frame id="On_09">
+          <layerref id="halo"/>
+          <layerref id="box"/>
+          <layerref id="dust_03"/>
+          <layerref id="note01 0%" x="4" y="-137"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="On_01">
+            <sample id="harp" loops="-1"/>
+          </frameref>
+          <frameref id="On_02"/>
+          <frameref id="On_03"/>
+          <frameref id="On_04"/>
+          <frameref id="On_05"/>
+          <frameref id="On_06"/>
+          <frameref id="On_07"/>
+          <frameref id="On_08"/>
+          <frameref id="On_09"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="idle01"/>
+          <frameref id="idle02"/>
+          <frameref id="idle03"/>
+          <frameref id="idle04"/>
+          <frameref id="idle05"/>
+          <frameref id="idle06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="3.1" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="2" y="1"/>
+          <view angle="135" x="-1" y="1" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" x="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf7edc8" a="0.5"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

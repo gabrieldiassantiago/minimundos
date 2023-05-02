@@ -1,0 +1,66 @@
+<item.SpriteItem id="3211" name="Banner de Partida" desc="O começo de uma grande corrida." tags="admin,misc" icon="items/base/outdoor/icon_o_snowmission_startbanner.png" minLevel="1" minCPLevel="1" gridActive="false" gridSnap="true" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-2.25" max="0.1,1.5,2.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="StartBanner" source="items/base/outdoor/o_snowmission_startbanner.png" cols="1" rows="1"/>
+    <texture id="BannerOnly" source="items/base/outdoor/o_snowmission_banneronly.png" cols="1" rows="1"/>
+    <texture id="PoleOnly" source="items/base/outdoor/o_snowmission_startbannerpole.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="open right">
+      <box min="-0.1,0,1.8" max="0.1,1.5,2.25"/>
+      <layers>
+        <layer id="PoleOnly" texture="PoleOnly">
+          <view angle="45" x="125" y="-55"/>
+          <view angle="135" x="-125" y="-55"/>
+          <view angle="225" x="125" y="-55"/>
+          <view angle="315" x="-125" y="-55"/>
+        </layer>
+        <layer id="Banner_Pole" texture="StartBanner" y="72">
+          <view angle="45" x="-5" alpha="0"/>
+          <view angle="135" x="3" alpha="0" hm="true"/>
+          <view angle="225" x="-5" alpha="0"/>
+          <view angle="315" x="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="BannerOnly" texture="BannerOnly">
+          <view angle="45" alpha="0"/>
+          <view angle="135" x="5" y="-148" alpha="0"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" x="5" y="-148" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="open left">
+      <box min="-0.1,0,-2.25" max="0.1,1.5,-1.8"/>
+      <layers>
+        <layer id="TPoleOnly" texture="PoleOnly">
+          <view angle="45" x="125" y="-55" alpha="0"/>
+          <view angle="135" x="-125" y="-55" alpha="0"/>
+          <view angle="225" x="125" y="-55" alpha="0"/>
+          <view angle="315" x="-125" y="-55" alpha="0"/>
+        </layer>
+        <layer id="TBanner_Pole" texture="StartBanner" y="72">
+          <view angle="45" x="-5"/>
+          <view angle="135" x="3" hm="true"/>
+          <view angle="225" x="-5"/>
+          <view angle="315" x="3" hm="true"/>
+        </layer>
+        <layer id="TBannerOnly" texture="BannerOnly">
+          <view angle="45" alpha="0"/>
+          <view angle="135" x="5" y="-148"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" x="5" y="-148"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

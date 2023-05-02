@@ -1,0 +1,50 @@
+<item.SpriteItem desc="Para os animados de plantão." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/head/icon_con_head_item_13_smileyhead.png" id="1039" name="Cabeça de Carinha Feliz" tags="consumable,actionbar,wear,head,real,costume,action_wearable_toggle" price="45" tokens="450" minLevel="30" minLevelType="4" minCPLevel="1">
+  <volume>
+    <box max="0.23,0.47,0.23" min="-0.23,0,-0.23"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture cols="4" id="helmet" rows="1" source="items/base/consumables/head/con_head_13_smileyhead.png"/>
+    <texture cols="1" id="head_dropshadow" rows="1" source="items/base/consumables/head/con_head_generic_dropshadow.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.23,0.47,0.23" min="-0.23,0,-0.23"/>
+      <layers>
+        <layer align="middle" id="shadow" texture="head_dropshadow">
+          <view y="4"/>
+        </layer>
+        <layer id="Layer01" texture="helmet" y="25">
+          <view angle="45" col="3" y="-15"/>
+          <view angle="135" col="3" hm="true" y="-15"/>
+          <view angle="225" col="3" y="-15"/>
+          <view angle="315" col="3" hm="true" y="-15"/>
+        </layer>
+        <layer id="Layer02" texture="helmet" y="25">
+          <view angle="45" col="1" y="-15"/>
+          <view angle="135" col="1" hm="true" y="-15"/>
+          <view alpha="0" angle="225" col="3"/>
+          <view alpha="0" angle="315" col="3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="shadow"/>
+          <layerref id="Layer01"/>
+          <layerref id="Layer02"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

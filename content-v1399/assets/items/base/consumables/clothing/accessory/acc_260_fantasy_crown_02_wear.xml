@@ -1,0 +1,148 @@
+<item.SpriteItem id="0" name="Ice Crown" desc="An item" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/clothing/accessory/acc_260_fantasy_crown_02_wear.png" cols="5" rows="1"/>
+    <texture id="reflect" source="items/base/consumables/clothing/accessory/acc_sparkle.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/consumables/clothing/accessory/acc_260_fantasy_crown_02_glow.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="0" x="4" y="-16"/>
+          <view angle="45" col="1" x="-1" y="-15"/>
+          <view angle="90" col="2" x="1" y="-15"/>
+          <view angle="135" col="1" x="-1" y="-15" hm="true"/>
+          <view angle="180" x="-4" y="-16" hm="true"/>
+          <view angle="225" col="3" x="-1" y="-16"/>
+          <view angle="270" col="4" x="1" y="-13"/>
+          <view angle="315" col="3" x="1" y="-16" hm="true"/>
+        </layer>
+        <layer id="reflect_06" texture="reflect">
+          <view angle="45" x="-15" y="-7"/>
+          <view angle="135" x="15" y="-7"/>
+          <view angle="225" x="-24" y="-17"/>
+          <view angle="315" x="24" y="-17"/>
+          <view angle="0" x="-4" y="-1"/>
+          <view angle="90" x="-17" y="-12"/>
+          <view angle="180" x="4" y="-1"/>
+          <view angle="270" x="-17" y="-4"/>
+        </layer>
+        <layer id="reflect_07" texture="reflect">
+          <view angle="45" col="1" x="-15" y="-7"/>
+          <view angle="135" col="1" x="15" y="-7"/>
+          <view angle="225" col="1" x="-23" y="-18"/>
+          <view angle="315" col="1" x="23" y="-18"/>
+          <view angle="0" col="1" x="-4" y="-3"/>
+          <view angle="90" col="1" x="-16" y="-12"/>
+          <view angle="180" col="1" x="4" y="-3"/>
+          <view angle="270" col="1" x="-17" y="-5"/>
+        </layer>
+        <layer id="reflect_08" texture="reflect">
+          <view angle="45" col="2" x="-14" y="-6"/>
+          <view angle="135" col="2" x="14" y="-6"/>
+          <view angle="225" col="2" x="-24" y="-17"/>
+          <view angle="315" col="2" x="24" y="-17"/>
+          <view angle="0" col="2" x="-4" y="-4"/>
+          <view angle="90" col="2" x="-15" y="-12"/>
+          <view angle="180" col="2" x="4" y="-4"/>
+          <view angle="270" col="2" x="-17" y="-5"/>
+        </layer>
+        <layer id="reflect_09" texture="reflect">
+          <view angle="45" col="1" x="-15" y="-7" hm="true"/>
+          <view angle="135" col="1" x="15" y="-7" hm="true"/>
+          <view angle="225" col="1" x="-25" y="-16" hm="true"/>
+          <view angle="315" col="1" x="25" y="-16" hm="true"/>
+          <view angle="0" col="1" x="-4" y="-4" hm="true"/>
+          <view angle="90" col="1" x="-16" y="-12" hm="true"/>
+          <view angle="180" col="1" x="4" y="-4" hm="true"/>
+          <view angle="270" col="1" x="-17" y="-4" hm="true"/>
+        </layer>
+        <layer id="reflect_10" texture="reflect">
+          <view angle="45" x="-15" y="-7" hm="true"/>
+          <view angle="135" x="15" y="-7" hm="true"/>
+          <view angle="225" x="-24" y="-17" hm="true"/>
+          <view angle="315" x="24" y="-17" hm="true"/>
+          <view angle="0" x="-4" y="-3" hm="true"/>
+          <view angle="90" x="-16" y="-12" hm="true"/>
+          <view angle="180" x="4" y="-3" hm="true"/>
+          <view angle="270" x="-18" y="-4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle00">
+          <layerref id="head"/>
+        </frame>
+        <frame id="idle06">
+          <layerref id="head"/>
+          <layerref id="reflect_06"/>
+        </frame>
+        <frame id="idle07">
+          <layerref id="head"/>
+          <layerref id="reflect_07"/>
+        </frame>
+        <frame id="idle08">
+          <layerref id="head"/>
+          <layerref id="reflect_08"/>
+        </frame>
+        <frame id="idle09">
+          <layerref id="head"/>
+          <layerref id="reflect_09"/>
+        </frame>
+        <frame id="idle10">
+          <layerref id="head"/>
+          <layerref id="reflect_10"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="16">
+          <frameref id="idle00" duration="50"/>
+          <frameref id="idle00" duration="20"/>
+          <frameref id="idle06"/>
+          <frameref id="idle07"/>
+          <frameref id="idle08"/>
+          <frameref id="idle09"/>
+          <frameref id="idle10"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="4" y="-8"/>
+          <view angle="45" col="1" y="-8"/>
+          <view angle="90" col="2" y="-7"/>
+          <view angle="135" col="1" y="-8" hm="true"/>
+          <view angle="180" x="-4" y="-8" hm="true"/>
+          <view angle="225" col="3" x="-5" y="-6"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" x="5" y="-6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x5cc9e7"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,59 @@
+<item.SpriteItem id="2807" name="Tulipas de Luxo" desc="Um elegante vaso com tulipas naturais." tags="misc,plant" icon="items/base/modern/icon_m_bathroom_15_rosevase.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="13" tokens="130">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,1,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="rose" source="items/base/modern/m_bathroom_15_rosevase.png" cols="2" rows="1"/>
+  </textures>
+  <sounds/>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,1,0.15"/>
+      <layers>
+        <layer id="rose" texture="rose" y="15">
+          <view angle="45" x="-2" y="-4"/>
+          <view angle="135" x="1" y="-4" hm="true"/>
+          <view angle="225" col="1" x="-2" y="-4"/>
+          <view angle="315" col="1" x="1" y="-4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle01">
+          <layerref id="rose"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4"/>
+        <animation id="On" framerate="1"/>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="glow">
+          <view angle="45" x="2" y="15"/>
+          <view angle="135" x="-1" y="15"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light01" color="0xf7cff7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4"/>
+        <animation id="On" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

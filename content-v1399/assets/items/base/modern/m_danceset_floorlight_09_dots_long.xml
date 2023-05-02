@@ -1,0 +1,153 @@
+<item.SpriteItem id="6006" name="Luz de Chão Pétala Sonix" desc="Uma luz de chão multicolorida" tags="light" icon="items/base/modern/icon_m_danceset_floorlight_09_dots_long.png" price="110" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0,0.2"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_groundlight.png" cols="1" rows="1"/>
+    <texture id="floor light" source="items/base/modern/m_danceset_floorlight_09_dots_long.png" cols="4" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Swirl" layer="floor">
+      <box min="-0.2,0,-0.2" max="0.2,0,0.2"/>
+      <layers>
+        <layer id="Swirl01_C1" texture="floor light">
+          <view y="25"/>
+        </layer>
+        <layer id="Swirl02_C1" texture="floor light">
+          <view col="1" y="25"/>
+        </layer>
+        <layer id="Swirl03_C1" texture="floor light">
+          <view col="2" y="25"/>
+        </layer>
+        <layer id="Swirl04_C1" texture="floor light">
+          <view col="3" y="25"/>
+        </layer>
+        <layer id="Swirl01_C2" texture="floor light">
+          <view row="1" y="25"/>
+        </layer>
+        <layer id="Swirl02_C2" texture="floor light">
+          <view col="1" row="1" y="25"/>
+        </layer>
+        <layer id="Swirl03_C2" texture="floor light">
+          <view col="2" row="1" y="25"/>
+        </layer>
+        <layer id="Swirl04_C2" texture="floor light">
+          <view col="3" row="1" y="25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Swirl01_C1" color="0x62ec74" a="0.25"/>
+          <layerref id="Swirl01_C2" color="0xbc7ced"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Swirl02_C1" color="0x62ec74" a="0.5"/>
+          <layerref id="Swirl02_C2" color="0xbc7ced" a="0.75"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Swirl03_C1" color="0x62ec74" a="0.75"/>
+          <layerref id="Swirl03_C2" color="0xbc7ced" a="0.5"/>
+        </frame>
+        <frame id="On04">
+          <layerref id="Swirl04_C1" color="0x62ec74"/>
+          <layerref id="Swirl04_C2" color="0xbc7ced" a="0.25"/>
+        </frame>
+        <frame id="On05">
+          <layerref id="Swirl01_C1" color="0xbc7ced" a="0.25"/>
+          <layerref id="Swirl01_C2" color="0x62ec74"/>
+        </frame>
+        <frame id="On06">
+          <layerref id="Swirl02_C1" color="0xbc7ced" a="0.5"/>
+          <layerref id="Swirl02_C2" color="0x62ec74" a="0.75"/>
+        </frame>
+        <frame id="On07">
+          <layerref id="Swirl03_C1" color="0xbc7ced" a="0.75"/>
+          <layerref id="Swirl03_C2" color="0x62ec74" a="0.5"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Swirl01_C1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+          <frameref id="On05"/>
+          <frameref id="On06"/>
+          <frameref id="On07"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="Light" align="middle">
+          <view angle="45" x="1" y="-25"/>
+          <view angle="135" x="1" y="-25" hm="true"/>
+          <view angle="225" x="1" y="-25"/>
+          <view angle="315" x="1" y="-25"/>
+        </layer>
+        <layer id="Light02" texture="Light" align="middle">
+          <view angle="45" x="1" y="-25"/>
+          <view angle="135" x="1" y="-25" hm="true"/>
+          <view angle="225" x="1" y="-25"/>
+          <view angle="315" x="1" y="-25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light01" color="0xbc7ced"/>
+          <layerref id="Light02" color="0x62ec74" a="0.25"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light01" color="0xbc7ced" a="0.75"/>
+          <layerref id="Light02" color="0x62ec74" a="0.5"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light01" color="0xbc7ced" a="0.5"/>
+          <layerref id="Light02" color="0x62ec74" a="0.75"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light01" color="0xbc7ced" a="0.25"/>
+          <layerref id="Light02" color="0x62ec74"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,36 @@
+<f id="Bot03_68DenimHighWaistShortsC" parentId="Bot03">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="HWshorts_56_TorsoM" cId="Torso" s="items/base/consumables/clothing/bot03/bot03_56_torso_m.png" pri="3"/>
+      <c sId="HWshorts_56_TorsoM" c="908049" a="1.00" b="17.2" ct="0.26" lId="Bot03_68Color" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="HWshorts_56_TorsoF" cId="Torso" s="items/base/consumables/clothing/bot03/bot03_56_torso_f.png" pri="3"/>
+      <c sId="HWshorts_56_TorsoF" c="58879" a="0.99" b="58.4" ct="1.57" lId="Bot03_68Color" lw="N"/>
+    </g>
+  </b>
+  <g id="Floral" name="Base" icon="$bm/iconm_legs_shorts.png">
+    <s id="HWshorts_56_Idle" cId="LegIdle" s="items/base/consumables/clothing/bot03/Bot03_56_idle.png" pri="3"/>
+    <s id="HWshorts_56_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/bot03/Bot03_56_walk1.png" pri="3"/>
+    <s id="HWshorts_56_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/bot03/Bot03_56_walk2.png" pri="3"/>
+    <s id="HWshorts_56_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/bot03/Bot03_56_walk3.png" pri="3"/>
+    <s id="HWshorts_56_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/bot03/Bot03_56_walk4.png" pri="3"/>
+    <s id="HWshorts_56_Sit" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/Bot03_56_sit.png" pri="3"/>
+    <c sId="HWshorts_56_Idle" c="58879" a="0.99" b="58.4" ct="1.57" lId="Bot03_68Color" lw="N"/>
+    <c sId="HWshorts_56_Walk1" c="58879" a="0.99" b="58.4" ct="1.57" lId="Bot03_68Color" lw="N"/>
+    <c sId="HWshorts_56_Walk2" c="58879" a="0.99" b="58.4" ct="1.57" lId="Bot03_68Color" lw="N"/>
+    <c sId="HWshorts_56_Walk3" c="58879" a="0.99" b="58.4" ct="1.57" lId="Bot03_68Color" lw="N"/>
+    <c sId="HWshorts_56_Walk4" c="58879" a="0.99" b="58.4" ct="1.57" lId="Bot03_68Color" lw="N"/>
+    <c sId="HWshorts_56_Sit" c="58879" a="0.99" b="58.4" ct="1.57" lId="Bot03_68Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop03_68" icon="items/base/consumables/clothing/bot03/bot03_68_icon_seasonalhighwaistshorts_a.png" w="48" h="48"/>
+    <s id="IconTop03_68Base" cId="IconTop03_68" s="items/base/consumables/clothing/bot03/bot03_68_icon_seasonalhighwaistshorts_a.png"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot03_68Color" name="Color" desc="Choose a color" sel="Grey" seld="Grey">
+      <c id="Grey" icon="$bu/icon_grey.png" c="58879" a="0.99" b="58.4" ct="1.57" lId="Bot03_68Color"/>
+    </b>
+  </g>
+  <ds id="JSBottom"/>
+</f>

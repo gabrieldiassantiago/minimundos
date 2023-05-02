@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="1745" name="Information Counter" desc="A circular counter" tags="admin,hub" icon="items/base/hub/icon_hub_circulardesk.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,1.15,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Counter" source="items/base/hub/hub_circulardesk.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" z="0.5">
+      <box min="-0.4,0,-0.99" max="0.4,1.15,0.99"/>
+      <layers>
+        <layer id="Layer" texture="Counter">
+          <view angle="45" x="19" y="70"/>
+          <view angle="135" x="-23" y="70" hm="true"/>
+          <view angle="225" col="1" x="8" y="64" hm="true"/>
+          <view angle="315" col="1" x="-12" y="64"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

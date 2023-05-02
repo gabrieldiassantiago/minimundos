@@ -1,0 +1,398 @@
+<item.SpriteItem id="0" name="Apache" desc="Bobz" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Apache base" source="items/base/consumables/bobz/bobz_02_apache_wear.png" cols="5" rows="2"/>
+    <texture id="Rotors" source="items/base/consumables/bobz/bobz_02_apache_rotor.png" cols="3" rows="1"/>
+    <texture id="lights" source="items/base/consumables/bobz/bobz_02_apache_lights.png" cols="4" rows="4"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="fx_teleport" source="items/base/consumables/bobz/bobz_fx_fire_teleport.png" cols="4" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="Chopper" source="items/base/consumables/bobz/bobz_02_apache_sound.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="Apache Idle" texture="Apache base">
+          <view angle="0" col="2" x="-6" y="32" hm="true"/>
+          <view angle="45" col="1" x="-2" y="26"/>
+          <view angle="90" col="4" x="-2" y="23"/>
+          <view angle="135" col="1" x="1" y="26" hm="true"/>
+          <view angle="180" col="2" x="6" y="32"/>
+          <view angle="225" col="3" x="6" y="38"/>
+          <view angle="270" x="1" y="39"/>
+          <view angle="315" col="3" x="-8" y="38" hm="true"/>
+        </layer>
+        <layer id="Apache Move" texture="Apache base">
+          <view angle="0" col="2" row="1" x="-11" y="26" hm="true"/>
+          <view angle="45" col="1" row="1" x="-6" y="23"/>
+          <view angle="90" col="4" row="1" x="2" y="22"/>
+          <view angle="135" col="1" row="1" x="6" y="23" hm="true"/>
+          <view angle="180" col="2" row="1" x="11" y="26"/>
+          <view angle="225" col="3" row="1" x="12" y="38"/>
+          <view angle="270" row="1" y="42"/>
+          <view angle="315" col="3" row="1" x="-12" y="38" hm="true"/>
+        </layer>
+        <layer id="Rotors Normal01" texture="Rotors">
+          <view angle="0" x="1" y="4"/>
+          <view angle="45" x="1" y="4"/>
+          <view angle="90" x="-1" y="4"/>
+          <view angle="135" x="-1" y="4" hm="true"/>
+          <view angle="180" x="-1" y="4"/>
+          <view angle="225" x="1" y="4"/>
+          <view angle="270" x="-1" y="4"/>
+          <view angle="315" x="-3" y="4" hm="true"/>
+        </layer>
+        <layer id="Rotors Normal02" texture="Rotors">
+          <view angle="0" col="1" x="1" y="4"/>
+          <view angle="45" col="1" x="1" y="4"/>
+          <view angle="90" col="1" x="-1" y="4"/>
+          <view angle="135" col="1" x="-1" y="4" hm="true"/>
+          <view angle="180" col="1" x="-1" y="4"/>
+          <view angle="225" col="1" x="1" y="4"/>
+          <view angle="270" col="1" x="-1" y="4"/>
+          <view angle="315" col="1" x="-3" y="4" hm="true"/>
+        </layer>
+        <layer id="Rotors Normal03" texture="Rotors">
+          <view angle="0" col="2" y="4"/>
+          <view angle="45" col="2" y="4"/>
+          <view angle="90" col="2" x="-2" y="4"/>
+          <view angle="135" col="2" y="4" hm="true"/>
+          <view angle="180" col="2" x="-2" y="4"/>
+          <view angle="225" col="2" y="4"/>
+          <view angle="270" col="2" x="-2" y="4"/>
+          <view angle="315" col="2" x="-2" y="4" hm="true"/>
+        </layer>
+        <layer id="Lights Green Idle" texture="lights" y="5">
+          <view angle="0" row="2" x="-18" y="19" hm="true"/>
+          <view angle="45" col="1" x="-7" y="10"/>
+          <view angle="90" col="3" y="2"/>
+          <view angle="135" col="2" row="1" x="-6" y="13" hm="true"/>
+          <view angle="180" col="2" x="-6" y="23"/>
+          <view angle="225" col="2" row="1" x="-4" y="7"/>
+          <view angle="270" x="1" y="17"/>
+          <view angle="315" col="2" row="2" x="-4" y="18"/>
+        </layer>
+        <layer id="Lights Green Move" texture="lights" y="5">
+          <view angle="0" col="1" row="2" x="-19" y="12" hm="true"/>
+          <view angle="45" col="1" row="1" x="-6" y="3"/>
+          <view angle="90" col="3" row="1" y="-2"/>
+          <view angle="135" col="2" row="1" x="-4" y="11" hm="true"/>
+          <view angle="180" col="2" x="-2" y="23"/>
+          <view angle="225" col="2" row="1" x="-2" y="7"/>
+          <view angle="270" row="1" x="1" y="16"/>
+          <view angle="315" col="3" row="2" x="-8" y="17" hm="true"/>
+        </layer>
+        <layer id="Lights Red Move" texture="lights" y="5">
+          <view angle="0" col="2" row="3" x="4" y="24" hm="true"/>
+          <view angle="45" col="1" row="3" x="-5" y="5"/>
+          <view angle="90" col="3" row="3" x="1"/>
+          <view angle="135" col="1" row="3" x="6" y="6" hm="true"/>
+          <view angle="180" col="2" row="3" x="-3" y="26"/>
+          <view angle="225" col="2" row="3" x="-16" y="21"/>
+          <view angle="270" row="3" y="17"/>
+          <view angle="315" col="2" row="3" x="17" y="19" hm="true"/>
+        </layer>
+        <layer id="fx_teleport_01" texture="fx_teleport">
+          <view y="28"/>
+        </layer>
+        <layer id="fx_teleport_02" texture="fx_teleport">
+          <view col="1" y="28"/>
+        </layer>
+        <layer id="fx_teleport_03" texture="fx_teleport">
+          <view col="2" y="28"/>
+        </layer>
+        <layer id="fx_teleport_04" texture="fx_teleport">
+          <view col="3" y="28"/>
+        </layer>
+        <layer id="fx_teleport_05" texture="fx_teleport">
+          <view row="1" y="28"/>
+        </layer>
+        <layer id="fx_teleport_06" texture="fx_teleport">
+          <view col="1" row="1" y="28"/>
+        </layer>
+        <layer id="fx_teleport_07" texture="fx_teleport">
+          <view col="2" row="1" y="28"/>
+        </layer>
+        <layer id="fx_teleport_08" texture="fx_teleport">
+          <view col="3" row="1" y="28"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle01">
+          <layerref id="Apache Idle"/>
+          <layerref id="Rotors Normal01"/>
+          <layerref id="Lights Green Idle"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="Apache Idle"/>
+          <layerref id="Rotors Normal02"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="Apache Idle"/>
+          <layerref id="Rotors Normal03"/>
+        </frame>
+        <frame id="Idle04">
+          <layerref id="Apache Idle"/>
+          <layerref id="Rotors Normal01"/>
+        </frame>
+        <frame id="Idle05">
+          <layerref id="Apache Idle"/>
+          <layerref id="Rotors Normal02"/>
+        </frame>
+        <frame id="Idle06">
+          <layerref id="Apache Idle"/>
+          <layerref id="Rotors Normal03"/>
+        </frame>
+        <frame id="WalkRed">
+          <layerref id="Apache Move"/>
+          <layerref id="Rotors Normal01"/>
+          <layerref id="Lights Red Move" color="0x93edee" blend="add"/>
+        </frame>
+        <frame id="Walk01">
+          <layerref id="Apache Move"/>
+          <layerref id="Rotors Normal01"/>
+          <layerref id="Lights Green Move" color="0x93edee" blend="add"/>
+        </frame>
+        <frame id="Walk02">
+          <layerref id="Apache Move"/>
+          <layerref id="Rotors Normal02"/>
+        </frame>
+        <frame id="Walk03">
+          <layerref id="Apache Move"/>
+          <layerref id="Rotors Normal03"/>
+        </frame>
+        <frame id="Walk04">
+          <layerref id="Apache Move"/>
+          <layerref id="Rotors Normal01"/>
+        </frame>
+        <frame id="Walk05">
+          <layerref id="Apache Move"/>
+          <layerref id="Rotors Normal02"/>
+        </frame>
+        <frame id="Walk06">
+          <layerref id="Apache Move"/>
+          <layerref id="Rotors Normal03"/>
+        </frame>
+        <frame id="Start01">
+          <layerref id="Apache Idle" color="0xf15555" a="0.1" blend="add"/>
+          <layerref id="Rotors Normal01" color="0xf15555" a="0.1" blend="add"/>
+          <layerref id="fx_teleport_01" color="0xff5f5f" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Start02">
+          <layerref id="Apache Idle" color="0xf15555" a="0.3" blend="add"/>
+          <layerref id="Rotors Normal02" color="0xf15555" a="0.3" blend="add"/>
+          <layerref id="fx_teleport_02" color="0xff5f5f" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Start03">
+          <layerref id="Apache Idle" color="0xf15555" a="0.5" blend="add"/>
+          <layerref id="Rotors Normal03" color="0xf15555" a="0.5" blend="add"/>
+          <layerref id="fx_teleport_03" color="0xff5f5f" blend="add"/>
+        </frame>
+        <frame id="Start04">
+          <layerref id="Apache Idle" color="0xf15555" a="0.6" blend="add"/>
+          <layerref id="Rotors Normal01" color="0xf15555" a="0.6" blend="add"/>
+          <layerref id="fx_teleport_04" color="0xff5f5f" blend="add"/>
+        </frame>
+        <frame id="Start05">
+          <layerref id="Apache Idle" color="0xf15555" a="0.7" blend="overlay"/>
+          <layerref id="Rotors Normal02" color="0xf15555" a="0.7" blend="overlay"/>
+          <layerref id="fx_teleport_05" color="0xff5f5f" blend="add"/>
+        </frame>
+        <frame id="Start06">
+          <layerref id="Apache Idle" a="0.8"/>
+          <layerref id="Rotors Normal03" a="0.8"/>
+          <layerref id="fx_teleport_06" color="0xff5f5f" blend="add"/>
+        </frame>
+        <frame id="Start07">
+          <layerref id="Apache Idle" a="0.9"/>
+          <layerref id="Rotors Normal01" a="0.9"/>
+          <layerref id="fx_teleport_07" color="0xff5f5f" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Start08">
+          <layerref id="Apache Idle"/>
+          <layerref id="Rotors Normal02"/>
+          <layerref id="fx_teleport_08" color="0xff5f5f" a="0.3" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Start" framerate="8" loop="false">
+          <frameref id="Start01">
+            <sample id="Chopper" vol="0.05" loops="-1"/>
+          </frameref>
+          <frameref id="Start02"/>
+          <frameref id="Start03"/>
+          <frameref id="Start04"/>
+          <frameref id="Start05"/>
+          <frameref id="Start06"/>
+          <frameref id="Start07"/>
+          <frameref id="Start08"/>
+        </animation>
+        <animation id="Stop" framerate="8" loop="false">
+          <frameref id="Start08">
+            <sample id="Chopper" vol="0.05" loops="-1"/>
+          </frameref>
+          <frameref id="Start07"/>
+          <frameref id="Start06"/>
+          <frameref id="Start05"/>
+          <frameref id="Start04"/>
+          <frameref id="Start03"/>
+          <frameref id="Start02"/>
+          <frameref id="Start01"/>
+        </animation>
+        <animation id="Idle" framerate="8">
+          <frameref id="Idle01">
+            <sample id="Chopper" vol="0.05" loops="-1"/>
+          </frameref>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle05"/>
+          <frameref id="Idle06"/>
+        </animation>
+        <animation id="Move" framerate="8">
+          <frameref id="Walk01">
+            <sample id="Chopper" vol="0.05" loops="-1"/>
+          </frameref>
+          <frameref id="Walk02"/>
+          <frameref id="Walk03"/>
+          <frameref id="Walk04"/>
+          <frameref id="Walk05"/>
+          <frameref id="Walk06"/>
+        </animation>
+        <animation id="Move Red" framerate="8">
+          <frameref id="WalkRed">
+            <sample id="Chopper" vol="0.05" loops="-1" pr="0.1"/>
+          </frameref>
+          <frameref id="Walk02"/>
+          <frameref id="Walk03"/>
+          <frameref id="Walk04"/>
+          <frameref id="Walk05"/>
+          <frameref id="Walk06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="1.3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" hm="true"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135" hm="true"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" a="0.4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="Bored" framerate="12" loop="false" overridable="false">
+      <frame id="Frame00" duration="3">
+        <noderef id="Node" y="-0.05" a="315" frame="WalkRed">
+          <sample id="Chopper" vol="0.1" loops="-1"/>
+        </noderef>
+        <noderef id="Diffuse" animation="On"/>
+      </frame>
+      <frame id="Frame01">
+        <noderef id="Node" y="-0.08" frame="Walk02"/>
+        <noderef id="Diffuse" animation="On"/>
+      </frame>
+      <frame id="Frame02">
+        <noderef id="Node" y="-0.1" a="45" frame="Walk03"/>
+        <noderef id="Diffuse" y="-0.1" animation="On"/>
+      </frame>
+      <frame id="Frame03">
+        <noderef id="Node" y="-0.15" a="90" frame="WalkRed"/>
+        <noderef id="Diffuse" y="-0.15" animation="On"/>
+      </frame>
+      <frame id="Frame04">
+        <noderef id="Node" y="-0.18" a="135" frame="Walk02"/>
+        <noderef id="Diffuse" y="-0.18" animation="On"/>
+      </frame>
+      <frame id="Frame05">
+        <noderef id="Node" y="-0.22" a="180" frame="Walk03"/>
+        <noderef id="Diffuse" y="-0.22" animation="On"/>
+      </frame>
+      <frame id="Frame06">
+        <noderef id="Node" y="-0.27" a="225" frame="WalkRed"/>
+        <noderef id="Diffuse" y="-0.27" animation="On"/>
+      </frame>
+      <frame id="Frame07">
+        <noderef id="Node" y="-0.32" a="270" frame="Walk02"/>
+        <noderef id="Diffuse" y="-0.32" animation="On"/>
+      </frame>
+      <frame id="Frame08">
+        <noderef id="Node" y="-0.37" a="315" frame="Walk03"/>
+        <noderef id="Diffuse" y="-0.37" animation="On"/>
+      </frame>
+      <frame id="Frame16">
+        <noderef id="Node" y="-0.37" frame="WalkRed"/>
+        <noderef id="Diffuse" y="-0.37" animation="On"/>
+      </frame>
+      <frame id="Frame09">
+        <noderef id="Node" y="-0.37" frame="Idle01"/>
+        <noderef id="Diffuse" y="-0.37" animation="On"/>
+      </frame>
+      <frame id="Frame17">
+        <noderef id="Node" y="-0.37" frame="Idle02"/>
+        <noderef id="Diffuse" y="-0.37" animation="On"/>
+      </frame>
+      <frame id="Frame18">
+        <noderef id="Node" y="-0.37" frame="Idle03"/>
+        <noderef id="Diffuse" y="-0.37" animation="On"/>
+      </frame>
+      <frame id="Frame19">
+        <noderef id="Node" y="-0.37" frame="Idle04"/>
+        <noderef id="Diffuse" y="-0.37" animation="On"/>
+      </frame>
+      <frame id="Frame10">
+        <noderef id="Node" y="-0.32" frame="Idle01"/>
+        <noderef id="Diffuse" y="-0.32" animation="On"/>
+      </frame>
+      <frame id="Frame11">
+        <noderef id="Node" y="-0.25" frame="Idle02"/>
+        <noderef id="Diffuse" y="-0.25" animation="On"/>
+      </frame>
+      <frame id="Frame12">
+        <noderef id="Node" y="-0.18" frame="Idle03"/>
+        <noderef id="Diffuse" y="-0.18" animation="On"/>
+      </frame>
+      <frame id="Frame13">
+        <noderef id="Node" y="-0.1" frame="Idle03"/>
+        <noderef id="Diffuse" y="-0.1" animation="On"/>
+      </frame>
+      <frame id="Frame14">
+        <noderef id="Node" y="-0.08" frame="Idle04"/>
+        <noderef id="Diffuse" y="-0.08" animation="On"/>
+      </frame>
+      <frame id="Frame15">
+        <noderef id="Node" y="-0.04" frame="Idle05"/>
+        <noderef id="Diffuse" y="-0.04" animation="On"/>
+      </frame>
+      <frame id="Frame20">
+        <noderef id="Node" y="-0.04" frame="Idle06"/>
+        <noderef id="Diffuse" y="-0.04" animation="On"/>
+      </frame>
+    </animation>
+  </animations>
+</item.SpriteItem>

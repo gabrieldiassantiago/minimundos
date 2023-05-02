@@ -1,0 +1,86 @@
+<item.SpriteItem id="0" name="Turkey Balloon" desc="A turkey balloon" tags="misc" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.4,0.25"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_rideable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="heartballoons" source="items/base/consumables/clothing/accessory/acc_164_hand_turkey.png" cols="5" rows="1"/>
+    <texture id="string" source="items/base/consumables/clothing/accessory/acc_163_hand_string.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,0.4,0.25"/>
+      <layers>
+        <layer id="balloons" texture="heartballoons" y="-45">
+          <view angle="0" col="2" x="1" y="-47" hm="true"/>
+          <view angle="45" x="-13" y="-38"/>
+          <view angle="90" col="1" x="-9" y="-46"/>
+          <view angle="135" x="-3" y="-47" hm="true"/>
+          <view angle="180" col="2" x="-4" y="-47"/>
+          <view angle="225" col="3" x="13" y="-53"/>
+          <view angle="270" col="4" x="12" y="-49"/>
+          <view angle="315" col="3" x="1" y="-45" hm="true"/>
+        </layer>
+        <layer id="string" texture="string">
+          <view angle="0" col="2" x="-1" y="13" hm="true"/>
+          <view angle="45" y="15"/>
+          <view angle="90" col="1" x="2" y="13"/>
+          <view angle="135" x="3" y="15" hm="true"/>
+          <view angle="180" col="2" x="1" y="13"/>
+          <view angle="225" col="3" x="-3" y="15"/>
+          <view angle="270" col="4" y="15"/>
+          <view angle="315" col="3" x="-2" y="13" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="string"/>
+          <layerref id="balloons"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="string" y="-1"/>
+          <layerref id="balloons" y="-1"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="string"/>
+          <layerref id="balloons"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="string"/>
+          <layerref id="balloons"/>
+        </frame>
+        <frame id="sit"/>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="2">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

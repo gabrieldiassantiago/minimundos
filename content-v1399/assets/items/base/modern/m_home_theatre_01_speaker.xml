@@ -1,0 +1,62 @@
+<item.SpriteItem id="2993" name="Alto-falante Satélite" desc="Um alto-falante do Home Theatre." tags="misc" icon="items/base/modern/icon_m_home_theatre_01_speaker.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="120">
+  <volume>
+    <box min="0,-0.3718,-0.0077" max="0.1754,-0.0667,0.2128"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="torch wall" source="items/base/modern/m_home_theatre_01_speaker.png" cols="1" rows="1"/>
+    <texture id="wobble" source="items/base/modern/m_home_theatre_01_sm_wobble.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Speaker">
+      <box min="0,-0.3718,-0.0077" max="0.1754,-0.0667,0.2128"/>
+      <layers>
+        <layer id="Speaker" texture="torch wall">
+          <view angle="45" x="11" y="46"/>
+          <view angle="135" x="2" y="52" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Wobble" texture="wobble">
+          <view angle="45" x="18" y="30"/>
+          <view angle="135" x="-4" y="36" hm="true"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Speaker"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Speaker"/>
+          <layerref id="Wobble"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="2">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="On" framerate="6">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

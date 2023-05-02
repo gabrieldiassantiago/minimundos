@@ -1,0 +1,35 @@
+<f id="Top06_81_NoelCoat" parentId="Top06">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top06_81TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_81_noel_torso_m.png" pri="6"/>
+      <s id="Top06_81TorsoMaleDecal" cId="Torso" s="items/base/consumables/clothing/top06/top06_81_noel_torso_decal_m.png" pri="6"/>
+    </g>
+    <g id="Female">
+      <s id="Top06_81TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_81_noel_torso_f.png" pri="6"/>
+      <s id="Top06_81TorsoFemaleDecal" cId="Torso" s="items/base/consumables/clothing/top06/top06_81_noel_torso_decal_f.png" pri="6"/>
+    </g>
+  </b>
+  <g id="Arm" name="Arm" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_81ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_81_idle.png" pri="6"/>
+    <s id="Top06_81ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_81_walk1.png" pri="6"/>
+    <s id="Top06_81ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_81_walk2.png" pri="6"/>
+    <s id="Top06_81ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_81_walk3.png" pri="6"/>
+    <s id="Top06_81ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_81_sit.png" pri="6"/>
+    <s id="Top06_81ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_81_throw.png" pri="6"/>
+    <s id="Top06_81ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_81_raise.png" pri="6"/>
+  </g>
+  <g id="Leg" name="Leg" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_81BottomIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_81_leg_idle.png" pri="6"/>
+    <s id="Top06_81BottomWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_81_leg_walk1.png" pri="6"/>
+    <s id="Top06_81BottomWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_81_leg_walk2.png" pri="6"/>
+    <s id="Top06_81BottomWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_81_leg_walk3.png" pri="6"/>
+    <s id="Top06_81BottomWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_81_leg_walk4.png" pri="6"/>
+    <s id="Top06_81BottomSit" cId="LegSitUpper" s="items/base/consumables/clothing/top06/top06_81_leg_sit.png" pri="6"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_81" icon="items/base/consumables/clothing/top06/top06_81_noel_icon_a.png" w="48" h="48"/>
+    <s id="IconTop06_81IconRare" cId="IconTop06_81" s="items/base/consumables/clothing/top01/top01_rare.png" pri="2"/>
+    <s id="IconTop06_81Base" cId="IconTop06_81" s="items/base/consumables/clothing/top06/top06_81_noel_icon_a.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

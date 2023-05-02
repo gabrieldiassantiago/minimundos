@@ -1,0 +1,225 @@
+<item.ChairItem id="7581" name="Banheira do Amor" desc="Uma banheira linda" tags="rare,chair,misc" icon="items/base/modern/icon_m_hearttub.png" price="1490" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" chairType="pool">
+  <seats>
+    <seat y="0.42">
+      <ap x="2" z="-1"/>
+      <ap x="1" z="-1"/>
+      <ap z="-1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+      <ap x="-1" z="2"/>
+    </seat>
+    <seat x="1" y="0.42" z="1" a="90">
+      <ap x="2" z="-1"/>
+      <ap x="2"/>
+      <ap x="2" z="1"/>
+      <ap x="2" z="2"/>
+      <ap x="1" z="2"/>
+      <ap z="2"/>
+      <ap x="-1" z="2"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-1.5,0,-0.48" max="1.5,1.1,2.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="deactivate" script="scripts/item/deactivate_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="activate" script="scripts/item/activate_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="hygiene-3"/>
+  </data>
+  <textures>
+    <texture id="Back" source="items/base/modern/m_hearttub_behind.png" cols="3" rows="1"/>
+    <texture id="Front" source="items/base/modern/m_hearttub_front.png" cols="3" rows="1"/>
+    <texture id="Water" source="items/base/modern/m_hearttub_water.png" cols="3" rows="3"/>
+    <texture id="bubbles" source="items/base/modern/m_hearttub_bubbles.png" cols="3" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_circle_floor.png" cols="1" rows="1"/>
+    <texture id="candlelight" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-1.5,0,-0.48" max="1.5,1.1,2.5"/>
+      <layers>
+        <layer id="Back" texture="Back" align="middle">
+          <view angle="45" x="64" y="-40" alpha="0" hm="true"/>
+          <view angle="135" col="2" x="32" y="-17" hm="true"/>
+          <view angle="225" col="1" x="-63" y="-15"/>
+          <view angle="315" col="1" x="-20" y="-63" alpha="0"/>
+        </layer>
+        <layer id="Front" texture="Front" align="middle">
+          <view angle="45" x="64" y="-59"/>
+          <view angle="135" x="32" y="-32" alpha="0"/>
+          <view angle="225" x="-32" y="-32" alpha="0" hm="true"/>
+          <view angle="315" col="2" x="-50" y="-90"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Water">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Water 1" texture="Water">
+          <view angle="45" x="64" y="64"/>
+          <view angle="135" col="2" x="32" y="106" hm="true"/>
+          <view angle="225" col="1" x="-63" y="108"/>
+          <view angle="315" col="2" x="-50" y="33"/>
+        </layer>
+        <layer id="Water 2" texture="Water">
+          <view angle="45" row="1" x="64" y="64"/>
+          <view angle="135" col="2" row="1" x="32" y="106" hm="true"/>
+          <view angle="225" col="1" row="1" x="-63" y="108"/>
+          <view angle="315" col="2" row="1" x="-50" y="33"/>
+        </layer>
+        <layer id="Water 3" texture="Water">
+          <view angle="45" row="2" x="64" y="64"/>
+          <view angle="135" col="2" row="2" x="32" y="106" hm="true"/>
+          <view angle="225" col="1" row="2" x="-63" y="108"/>
+          <view angle="315" col="2" row="2" x="-50" y="33"/>
+        </layer>
+        <layer id="Bubbles_1" texture="bubbles">
+          <view angle="45" x="64" y="64"/>
+          <view angle="135" col="2" x="32" y="106" hm="true"/>
+          <view angle="225" col="1" x="-63" y="108"/>
+          <view angle="315" col="2" x="-50" y="33"/>
+        </layer>
+        <layer id="Bubbles 2" texture="bubbles">
+          <view angle="45" row="1" x="64" y="64"/>
+          <view angle="135" col="2" row="1" x="32" y="106" hm="true"/>
+          <view angle="225" col="1" row="1" x="-63" y="108"/>
+          <view angle="315" col="2" row="1" x="-50" y="33"/>
+        </layer>
+        <layer id="Bubbles 3" texture="bubbles">
+          <view angle="45" row="2" x="64" y="64"/>
+          <view angle="135" col="2" row="2" x="32" y="106" hm="true"/>
+          <view angle="225" col="1" row="2" x="-63" y="108"/>
+          <view angle="315" col="2" row="2" x="-50" y="33"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="water 1">
+          <layerref id="Water 1" a="0.7"/>
+        </frame>
+        <frame id="water 2">
+          <layerref id="Water 2" a="0.7"/>
+        </frame>
+        <frame id="water 3">
+          <layerref id="Water 3" a="0.7"/>
+        </frame>
+        <frame id="bubbles">
+          <layerref id="Water 1" a="0.7"/>
+          <layerref id="Bubbles_1"/>
+        </frame>
+        <frame id="bubbles_2">
+          <layerref id="Water 2" a="0.7"/>
+          <layerref id="Bubbles 2"/>
+        </frame>
+        <frame id="bubbles_3">
+          <layerref id="Water 3" a="0.7"/>
+          <layerref id="Bubbles 3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="2">
+          <frameref id="water 1"/>
+          <frameref id="water 2"/>
+          <frameref id="water 3"/>
+        </animation>
+        <animation id="On" framerate="2">
+          <frameref id="bubbles"/>
+          <frameref id="bubbles_2"/>
+          <frameref id="bubbles_3"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="LeftArm">
+      <box min="-1.5,0,-0.48" max="1.5,1.1,2.5"/>
+      <layers>
+        <layer id="Back" texture="Back" align="middle">
+          <view angle="45" x="64" y="-59"/>
+          <view angle="135" col="1" x="20" y="1" alpha="0" hm="true"/>
+          <view angle="225" col="2" x="-64" y="-16" alpha="0"/>
+          <view angle="315" col="2" x="-50" y="-90"/>
+        </layer>
+        <layer id="Front" texture="Front" align="middle">
+          <view angle="45" x="64" y="-41" alpha="0" hm="true"/>
+          <view angle="135" col="2" x="32" y="-17" hm="true"/>
+          <view angle="225" col="1" x="-63" y="-15"/>
+          <view angle="315" x="-30" y="-81" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="29" y="-40"/>
+          <view angle="135" x="21" y="-19" hm="true"/>
+          <view angle="225" x="-26" y="-13"/>
+          <view angle="315" x="-27" y="-47"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x69e6e7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="candlelight" align="middle">
+          <view angle="45" x="-10" y="-66"/>
+          <view angle="135" x="69" y="-45"/>
+          <view angle="225" x="18"/>
+          <view angle="315" x="-69" y="-82"/>
+        </layer>
+        <layer id="Light01" texture="candlelight" align="middle">
+          <view angle="45" x="74" y="-68"/>
+          <view angle="135" x="58" y="-3"/>
+          <view angle="225" x="-76" y="-5"/>
+          <view angle="315" x="-69" y="-39"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light" color="0xf5ddb6" a="0.5"/>
+          <layerref id="Light01" color="0xf5ddb6" a="0.5"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light" color="0xf5ddb6" a="0.4"/>
+          <layerref id="Light01" color="0xf5ddb6" a="0.4"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Light" color="0xf5ddb6" a="0.3"/>
+          <layerref id="Light01" color="0xf5ddb6" a="0.3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

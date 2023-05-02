@@ -1,0 +1,77 @@
+<item.SpriteItem id="0" name="Raccoon" desc="Collectible (April 2014)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="redpanda" source="items/base/consumables/head/con_head_175_hedgehogpinka.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_item_175_hedgehogpink_blink.png" cols="3" rows="1"/>
+    <texture id="frown" source="items/base/consumables/head/con_head_175_hedgehogpinkb.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head_01" texture="redpanda">
+          <view angle="0" col="2" x="-2" y="26" hm="true"/>
+          <view angle="45" x="-7" y="23"/>
+          <view angle="90" col="1" x="1" y="25"/>
+          <view angle="135" x="6" y="23" hm="true"/>
+          <view angle="180" col="2" x="3" y="26"/>
+          <view angle="225" col="3" x="15" y="32"/>
+          <view angle="270" col="4" x="2" y="36"/>
+          <view angle="315" col="3" x="-16" y="32" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="21" y="-2" hm="true"/>
+          <view angle="45" x="13" y="1"/>
+          <view angle="90" col="1" y="6"/>
+          <view angle="135" x="-15" y="1" hm="true"/>
+          <view angle="180" col="2" x="-21" y="-2"/>
+          <view angle="225" col="3" x="-18" y="-5"/>
+          <view angle="270" col="4" y="18" alpha="0"/>
+          <view angle="315" col="3" x="18" y="-5" hm="true"/>
+        </layer>
+        <layer id="head_02" texture="frown">
+          <view angle="0" col="2" x="-2" y="27" hm="true"/>
+          <view angle="45" x="-6" y="22"/>
+          <view angle="90" col="1" x="1" y="22"/>
+          <view angle="135" x="5" y="22" hm="true"/>
+          <view angle="180" col="2" x="3" y="27"/>
+          <view angle="225" col="3" x="14" y="32"/>
+          <view angle="270" col="4" x="2" y="33"/>
+          <view angle="315" col="3" x="-15" y="32" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Blink">
+          <layerref id="head_01"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="Normal">
+          <layerref id="head_01"/>
+        </frame>
+        <frame id="Blink01">
+          <layerref id="head_02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="Normal" duration="14"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal" duration="12"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal" duration="8"/>
+          <frameref id="Blink"/>
+          <frameref id="Blink01" duration="8"/>
+          <frameref id="Blink"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

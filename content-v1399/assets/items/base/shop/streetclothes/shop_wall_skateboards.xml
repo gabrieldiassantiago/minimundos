@@ -1,0 +1,134 @@
+<item.SpriteItem id="2215" name="Vitrine de Skates" tags="admin,wall" icon="items/base/shop/streetclothes/icon_shop_wall_skateboards_frame.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,wall,avatar" dropTargetClamp="none" desc="Um skate de mostruário.">
+  <volume>
+    <box min="0,-0.2,-0.4" max="0,0.2,0.4"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="White" state="true" event="animate(00)"/>
+    <action id="Black" state="true" event="animate(01)"/>
+    <action id="Blue" state="true" event="animate(02)"/>
+    <action id="Pink" state="true" event="animate(03)"/>
+    <action id="Green" state="true" event="animate(04)"/>
+    <action id="Red" state="true" event="animate(05)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="singleClickNavigate" value="true"/>
+    <entry key="count" value="6"/>
+    <entry key="00" value="Off"/>
+    <entry key="01" value="Blue"/>
+    <entry key="02" value="Green"/>
+    <entry key="03" value="Red"/>
+    <entry key="04" value="Yellow"/>
+    <entry key="05" value="Pink"/>
+  </data>
+  <textures>
+    <texture id="frame" source="items/base/shop/streetclothes/shop_wall_skateboards_frame.png" cols="1" rows="1"/>
+    <texture id="image01" source="items/base/consumables/feet/con_feet_03_skateboard_boys_inworld.png" cols="2" rows="1"/>
+    <texture id="image02" source="items/base/consumables/feet/con_feet_04_skateboard_girls_inworld.png" cols="2" rows="1"/>
+    <texture id="image03" source="items/base/consumables/feet/con_feet_12_skateboard_inworld.png" cols="2" rows="1"/>
+    <texture id="image04" source="items/base/consumables/feet/con_feet_05_skateboard_long_inworld.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Shelf">
+      <box min="0,-0.2,-0.4" max="0,0.2,0.4"/>
+      <layers>
+        <layer id="Layer00" texture="image01" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="image02" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer02" texture="image03" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer03" texture="image04" align="middle" y="-4">
+          <view angle="45" col="1" hm="true"/>
+          <view angle="135" col="3" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer04" texture="image01" align="middle">
+          <view angle="45" col="1" hm="true"/>
+          <view angle="135" col="1"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer05" texture="image02" align="middle">
+          <view angle="45" col="1" hm="true"/>
+          <view angle="135" col="1"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="frame_backing" texture="frame" align="middle">
+          <view angle="45" x="4" y="8"/>
+          <view angle="135" x="-4" y="8" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="Layer00" color="0xedfcfc"/>
+          <layerref id="frame_backing"/>
+        </frame>
+        <frame id="01">
+          <layerref id="Layer01"/>
+          <layerref id="frame_backing"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Layer02"/>
+          <layerref id="frame_backing"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Layer03"/>
+          <layerref id="frame_backing"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Layer04"/>
+          <layerref id="frame_backing"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Layer05"/>
+          <layerref id="frame_backing"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01">
+          <frameref id="01"/>
+        </animation>
+        <animation id="02">
+          <frameref id="02"/>
+        </animation>
+        <animation id="03">
+          <frameref id="03"/>
+        </animation>
+        <animation id="04">
+          <frameref id="04"/>
+        </animation>
+        <animation id="05">
+          <frameref id="05"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

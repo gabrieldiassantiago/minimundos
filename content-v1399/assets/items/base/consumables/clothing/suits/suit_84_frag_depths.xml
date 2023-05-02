@@ -1,0 +1,58 @@
+<f id="FallenDepths" parentId="Suits">
+  <g id="DepthsSuit">
+    <b id="Depths_Torso" min="2" max="2" sel="Depths_Torso">
+      <s id="Depths_Torso" cId="Torso" s="items/base/consumables/clothing/suits/suit_84_depths_torso.png" pri="1"/>
+    </b>
+    <b id="Depths_Legs" min="2" max="2" sel="Legs">
+      <g id="Legs" icon="$bu/icon_legs_trouser.png">
+        <s id="Depths_Leg_Idle" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_84_depths_leg_idle.png" pri="3"/>
+        <s id="Depths_Leg_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_84_depths_leg_walk1.png" pri="3"/>
+        <s id="Depths_Leg_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_84_depths_leg_walk2.png" pri="3"/>
+        <s id="Depths_Leg_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_84_depths_leg_walk3.png" pri="3"/>
+        <s id="Depths_Leg_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_84_depths_leg_walk4.png" pri="3"/>
+        <s id="Depths_Leg_Sit" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_84_depths_leg_sit.png" pri="3"/>
+      </g>
+    </b>
+    <b id="Depths_Arms" min="2" max="2" sel="ArmHands">
+      <g id="ArmHands" icon="$bm/icon_m_retro.png">
+        <s id="Depths_Arm_Idle" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_84_depths_arm_idle.png" pri="1"/>
+        <s id="Depths_Arm_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_84_depths_arm_walk1.png" pri="1"/>
+        <s id="Depths_Arm_Walk2" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_84_depths_arm_walk2.png" pri="1"/>
+        <s id="Depths_Arm_Walk3" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_84_depths_arm_walk3.png" pri="1"/>
+        <s id="Depths_Arm_Sit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_84_depths_arm_sit.png" pri="1"/>
+        <s id="Depths_Arm_Throw" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_84_depths_arm_throw.png" pri="1"/>
+        <s id="Depths_Arm_Raise" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_84_depths_arm_raise.png" pri="1"/>
+        <s id="Depths_Hand_Idle" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_84_spy_depths_idle.png" pri="2"/>
+        <s id="Depths_Hand_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_84_spy_depths_walk1.png" pri="2"/>
+        <s id="Depths_Hand_Walk2" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_84_spy_depths_walk2.png" pri="2"/>
+        <s id="Depths_Hand_Walk3" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_84_spy_depths_walk3.png" pri="2"/>
+        <s id="Depths_Hand_Sit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_84_spy_depths_sit.png" pri="2"/>
+        <s id="Depths_Hand_Wave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_84_spy_depths_wave1.png" pri="2"/>
+        <s id="Depths_Hand_Wave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_84_spy_depths_wave2.png" pri="2"/>
+        <s id="Depths_Hand_Hold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_84_spy_depths_hold.png" pri="2"/>
+        <s id="Depths_Hand_Open" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_84_spy_depths_open.png" pri="2"/>
+        <s id="Depths_Hand_Point" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_84_spy_depths_point.png" pri="2"/>
+        <s id="Depths_Hand_Stop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_84_spy_depths_stop.png" pri="2"/>
+        <s id="Depths_Hand_Throw" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_84_spy_depths_throw.png" pri="2"/>
+        <s id="Depths_Hand_Thumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_84_spy_depths_thumbs.png" pri="2"/>
+      </g>
+    </b>
+  </g>
+  <g id="Icon">
+    <t id="Icon_Depths" icon="items/base/consumables/clothing/suits/suit_84_depths_icon.png" w="48" h="48"/>
+    <s id="Icon_Depths_suit" cId="Icon_Depths" s="items/base/consumables/clothing/suits/suit_84_depths_icon.png"/>
+  </g>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="JSTop"/>
+</f>

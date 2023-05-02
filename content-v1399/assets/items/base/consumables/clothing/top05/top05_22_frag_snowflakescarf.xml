@@ -1,0 +1,57 @@
+<f id="Top05_22Snowflakescarf" parentId="Top05">
+  <g id="NeckSnowflakescarf" name="Scarf" icon="$bu/icon_scarf.png">
+    <s id="NeckSnowflakescarfBase" cId="Torso" s="items/base/consumables/clothing/top05/top05_22_snowflake_scarf.png" pri="6.2"/>
+    <c sId="NeckSnowflakescarfBase" c="15532032" a="0.69" b="36.6" ct="1.62" lId="Top05_22_Color1" lw="N"/>
+    <s id="NeckSnowflakescarfDecal" cId="Torso" s="items/base/consumables/clothing/top05/top05_22_snowflake_scarf_whites.png" pri="6.2"/>
+    <c sId="NeckSnowflakescarfDecal" c="13223875" a="0.95" b="21.6" ct="1.55" lId="Top05_22_Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop05_22" icon="items/base/consumables/clothing/top05/top05_22_icon_snowflake_scarf_a.png" w="48" h="48"/>
+    <s id="IconTop05_22VIP" cId="IconTop05_22" s="items/base/shared/s_vipbadge.png"/>
+    <s id="IconTop05_22Base" cId="IconTop05_22" s="items/base/consumables/clothing/top05/top05_22_icon_snowflake_scarf_1.png"/>
+    <c sId="IconTop05_22Base" c="15532032" a="0.69" b="36.6" ct="1.62" lId="Top05_22_Color1" lw="N"/>
+    <s id="IconTop05_22Decal" cId="IconTop05_22" s="items/base/consumables/clothing/top05/top05_22_icon_snowflake_scarf_2.png"/>
+    <c sId="IconTop05_22Decal" c="13223875" a="0.95" b="21.6" ct="1.55" lId="Top05_22_Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <wizbox id="UI" uiInitScript="width=300; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top05_22_Color1"/>
+      <wizchoice id="Color2" name="Color 2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top05_22_Color2"/>
+    </wizbox>
+    <b id="Top05_22_Color1" name="Color 1" desc="Choose a color" sel="Red" seld="Red">
+      <c id="Grey" icon="$bu/icon_grey.png" c="7042424" a="1.00" b="76.7" ct="1.90" lId="Top05_22_Color1"/>
+      <c id="White" icon="$bu/icon_white.png" c="13223875" a="1.00" b="81.2" ct="0.83" lId="Top05_22_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="46.3" ct="1.14" lId="Top05_22_Color1"/>
+      <c id="Light Pink" icon="$bu/icon_lightpink.png" c="16739237" a="0.71" b="63.6" ct="1.07" lId="Top05_22_Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16739237" a="0.87" b="49.5" ct="1.58" lId="Top05_22_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="15532032" a="0.69" b="36.6" ct="1.62" lId="Top05_22_Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16744448" a="1.00" b="67.3" ct="0.94" lId="Top05_22_Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16772608" a="0.84" b="51.2" ct="1.15" lId="Top05_22_Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="0.86" b="45.8" ct="1.04" lId="Top05_22_Color1"/>
+      <c id="LightBlue" icon="$bu/icon_faded_denim.png" c="2081791" a="0.49" b="44.7" ct="1.61" lId="Top05_22_Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="237052" a="0.99" b="57.7" ct="1.61" lId="Top05_22_Color1"/>
+      <c id="BlueDark" icon="$bu/icon_medblue.png" c="2843342" a="0.67" b="31.0" ct="1.63" lId="Top05_22_Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9699486" a="0.88" b="41.4" ct="1.58" lId="Top05_22_Color1"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="12085777" a="0.54" b="34.9" ct="1.29" lId="Top05_22_Color1"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="8007424" a="0.73" b="28.1" ct="1.24" lId="Top05_22_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="6908265" b="-39.1" ct="1.62" lId="Top05_22_Color1"/>
+    </b>
+    <b id="Top05_22_Color2" name="Color 2" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="13223875" a="0.95" b="21.6" ct="1.55" lId="Top05_22_Color2"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="-9.6" ct="1.14" lId="Top05_22_Color2"/>
+      <c id="Light Pink" icon="$bu/icon_lightpink.png" c="16739237" a="0.90" b="28.5" ct="1.39" lId="Top05_22_Color2"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216730" a="0.96" b="-2.3" ct="1.07" lId="Top05_22_Color2"/>
+      <c id="Red" icon="$bu/icon_red.png" c="16715278" a="0.79" b="-1.6" ct="0.94" lId="Top05_22_Color2"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="10.3" ct="1.95" lId="Top05_22_Color2"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16514816" a="1.00" b="13.6" ct="0.92" lId="Top05_22_Color2"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="-31.0" ct="1.04" lId="Top05_22_Color2"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="-7.1" ct="1.14" lId="Top05_22_Color2"/>
+      <c id="BlueBaby" icon="$bu/icon_blue.png" c="2858731" a="1.00" b="54.0" ct="1.35" lId="Top05_22_Color2"/>
+      <c id="Blue" icon="$bu/icon_medblue.png" c="207" a="1.00" b="54.0" ct="1.34" lId="Top05_22_Color2"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9515132" a="1.00" b="42.5" ct="0.84" lId="Top05_22_Color2"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="12091409" a="0.99" b="1.0" ct="0.35" lId="Top05_22_Color2"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="3023108" a="0.93" b="62.4" ct="1.94" lId="Top05_22_Color2"/>
+      <c id="Black" icon="$bu/icon_black.png" c="6513507" a="1.00" b="2.6" ct="1.38" lId="Top05_22_Color2"/>
+    </b>
+  </g>
+</f>

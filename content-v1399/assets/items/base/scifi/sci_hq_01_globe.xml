@@ -1,0 +1,166 @@
+<item.SpriteItem id="6537" name="Globo QG do Herói Deluxe" desc="Uma réplica olográfica da terra" tags="rare,misc,floor" icon="items/base/scifi/icon_sci_hq_01_globe.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1.48,0,-0.48" max="0.48,3,1.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/scifi/sci_hq_01_globe_base.png" cols="1" rows="1"/>
+    <texture id="earth" source="items/base/scifi/sci_hq_01_globe_earth.png" cols="4" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Crate">
+      <box min="-1.48,0,-0.48" max="0.48,3,1.48"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" y="17"/>
+          <view angle="135" x="64" y="50"/>
+          <view angle="225" y="81"/>
+          <view angle="315" x="-64" y="49"/>
+        </layer>
+        <layer id="earth_01" texture="earth">
+          <view angle="45" x="-1" y="-38"/>
+          <view angle="135" x="65" y="-5" hm="true"/>
+          <view angle="225" x="-1" y="26"/>
+          <view angle="315" x="-63" y="-6" hm="true"/>
+        </layer>
+        <layer id="earth_02" texture="earth">
+          <view angle="45" col="1" x="-1" y="-38"/>
+          <view angle="135" col="1" x="65" y="-5" hm="true"/>
+          <view angle="225" col="1" x="-1" y="26"/>
+          <view angle="315" col="1" x="-63" y="-6" hm="true"/>
+        </layer>
+        <layer id="earth_03" texture="earth">
+          <view angle="45" col="2" x="-1" y="-38"/>
+          <view angle="135" col="2" x="65" y="-5" hm="true"/>
+          <view angle="225" col="2" x="-1" y="26"/>
+          <view angle="315" col="2" x="-63" y="-6" hm="true"/>
+        </layer>
+        <layer id="earth_04" texture="earth">
+          <view angle="45" col="3" x="-1" y="-38"/>
+          <view angle="135" col="3" x="65" y="-5" hm="true"/>
+          <view angle="225" col="3" x="-1" y="26"/>
+          <view angle="315" col="3" x="-63" y="-6" hm="true"/>
+        </layer>
+        <layer id="earth_05" texture="earth">
+          <view angle="45" row="1" x="-1" y="-38"/>
+          <view angle="135" row="1" x="65" y="-5" hm="true"/>
+          <view angle="225" row="1" x="-1" y="26"/>
+          <view angle="315" row="1" x="-63" y="-6" hm="true"/>
+        </layer>
+        <layer id="earth_06" texture="earth">
+          <view angle="45" col="1" row="1" x="-1" y="-38"/>
+          <view angle="135" col="1" row="1" x="65" y="-5" hm="true"/>
+          <view angle="225" col="1" row="1" x="-1" y="26"/>
+          <view angle="315" col="1" row="1" x="-63" y="-6" hm="true"/>
+        </layer>
+        <layer id="earth_07" texture="earth">
+          <view angle="45" col="2" row="1" x="-1" y="-38"/>
+          <view angle="135" col="2" row="1" x="65" y="-5" hm="true"/>
+          <view angle="225" col="2" row="1" x="-1" y="26"/>
+          <view angle="315" col="2" row="1" x="-63" y="-6" hm="true"/>
+        </layer>
+        <layer id="earth_08" texture="earth">
+          <view angle="45" col="3" row="1" x="-1" y="-38"/>
+          <view angle="135" col="3" row="1" x="65" y="-5" hm="true"/>
+          <view angle="225" col="3" row="1" x="-1" y="26"/>
+          <view angle="315" col="3" row="1" x="-63" y="-6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="earth_01"/>
+          <layerref id="base"/>
+        </frame>
+        <frame id="On_01">
+          <layerref id="earth_01"/>
+          <layerref id="base"/>
+        </frame>
+        <frame id="On_02">
+          <layerref id="earth_02"/>
+          <layerref id="base"/>
+        </frame>
+        <frame id="On_03">
+          <layerref id="earth_03"/>
+          <layerref id="base"/>
+        </frame>
+        <frame id="On_04">
+          <layerref id="earth_04"/>
+          <layerref id="base"/>
+        </frame>
+        <frame id="On_05">
+          <layerref id="earth_05"/>
+          <layerref id="base"/>
+        </frame>
+        <frame id="On_06">
+          <layerref id="earth_06"/>
+          <layerref id="base"/>
+        </frame>
+        <frame id="On_07">
+          <layerref id="earth_07"/>
+          <layerref id="base"/>
+        </frame>
+        <frame id="On_08">
+          <layerref id="earth_08"/>
+          <layerref id="base"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="On_01"/>
+          <frameref id="On_02"/>
+          <frameref id="On_03"/>
+          <frameref id="On_04"/>
+          <frameref id="On_05"/>
+          <frameref id="On_06"/>
+          <frameref id="On_07"/>
+          <frameref id="On_08"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-25"/>
+          <view angle="135" x="11" y="-20"/>
+          <view angle="225" y="-15"/>
+          <view angle="315" x="-10" y="-19"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Light" color="0xb1f2f2" a="0.7"/>
+        </frame>
+        <frame id="On">
+          <layerref id="Light" color="0xb1f2f2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

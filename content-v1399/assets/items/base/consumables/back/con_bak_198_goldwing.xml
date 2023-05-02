@@ -1,0 +1,134 @@
+<item.SpriteItem id="0" name="Tail" desc="A tail" tags="consumable, wearable, actionbar" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+  </volume>
+  <textures>
+    <texture id="wing" source="items/base/consumables/back/con_bak_198_goldwing.png" cols="5" rows="4"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+      <layers>
+        <layer id="idle" texture="wing" y="60">
+          <view angle="0" col="2" row="3" x="2" y="25"/>
+          <view angle="45" col="3" row="3" x="2" y="24"/>
+          <view angle="90" col="4" row="3" x="-14" y="33"/>
+          <view angle="135" col="3" row="3" x="-3" y="25" hm="true"/>
+          <view angle="180" col="2" row="3" x="-3" y="25" hm="true"/>
+          <view angle="225" row="3" x="-12" y="22"/>
+          <view angle="270" col="1" row="3" x="-15" y="18"/>
+          <view angle="315" row="3" x="12" y="22" hm="true"/>
+        </layer>
+        <layer id="idle01" texture="wing" y="60">
+          <view angle="0" col="2" row="3" y="23" alpha="0"/>
+          <view angle="45" col="3" row="3" x="2" y="22" alpha="0"/>
+          <view angle="90" col="4" row="3" x="14" y="33" hm="true"/>
+          <view angle="135" col="3" row="3" x="-3" y="23" alpha="0" hm="true"/>
+          <view angle="180" col="2" row="3" x="-1" y="23" alpha="0" hm="true"/>
+          <view angle="225" row="3" x="-12" y="18" alpha="0"/>
+          <view angle="270" col="1" row="3" x="13" y="18" hm="true"/>
+          <view angle="315" row="3" x="12" y="18" alpha="0" hm="true"/>
+        </layer>
+        <layer id="wing_a_01" texture="wing">
+          <view angle="0" col="2" x="-9" y="60"/>
+          <view angle="45" col="3" x="4" y="74"/>
+          <view angle="90" col="4" x="-28" y="63"/>
+          <view angle="135" col="3" x="-3" y="74" hm="true"/>
+          <view angle="180" col="2" x="8" y="60" hm="true"/>
+          <view angle="225" x="-8" y="70"/>
+          <view angle="270" col="1" x="-33" y="60"/>
+          <view angle="315" x="7" y="70" hm="true"/>
+        </layer>
+        <layer id="wing_a_02" texture="wing">
+          <view angle="0" col="2" x="5" y="24" alpha="0" hm="true"/>
+          <view angle="45" col="3" x="4" y="74" alpha="0"/>
+          <view angle="90" col="4" x="27" y="63" hm="true"/>
+          <view angle="135" col="3" x="-3" y="74" alpha="0" hm="true"/>
+          <view angle="180" col="2" x="-6" y="24" alpha="0"/>
+          <view angle="225" x="-8" y="70" alpha="0"/>
+          <view angle="270" col="1" x="32" y="60" hm="true"/>
+          <view angle="315" x="7" y="70" alpha="0" hm="true"/>
+        </layer>
+        <layer id="wing_b_01" texture="wing">
+          <view angle="0" col="2" row="1" x="-9" y="60"/>
+          <view angle="45" col="3" row="1" x="4" y="74"/>
+          <view angle="90" col="4" row="1" x="-28" y="63"/>
+          <view angle="135" col="3" row="1" x="-3" y="74" hm="true"/>
+          <view angle="180" col="2" row="1" x="8" y="60" hm="true"/>
+          <view angle="225" row="1" x="-8" y="70"/>
+          <view angle="270" col="1" row="1" x="-33" y="60"/>
+          <view angle="315" row="1" x="7" y="70" hm="true"/>
+        </layer>
+        <layer id="wing_b_02" texture="wing">
+          <view angle="0" col="2" row="1" x="5" y="24" alpha="0" hm="true"/>
+          <view angle="45" col="3" row="1" x="4" y="74" alpha="0"/>
+          <view angle="90" col="4" row="1" x="27" y="63" hm="true"/>
+          <view angle="135" col="3" row="1" x="-3" y="74" alpha="0" hm="true"/>
+          <view angle="180" col="2" row="1" x="-6" y="24" alpha="0"/>
+          <view angle="225" row="1" x="-8" y="70" alpha="0"/>
+          <view angle="270" col="1" row="1" x="32" y="60" hm="true"/>
+          <view angle="315" row="1" x="7" y="70" alpha="0" hm="true"/>
+        </layer>
+        <layer id="wing_c_01" texture="wing">
+          <view angle="0" col="2" row="2" x="-9" y="60"/>
+          <view angle="45" col="3" row="2" x="4" y="74"/>
+          <view angle="90" col="4" row="2" x="-28" y="63"/>
+          <view angle="135" col="3" row="2" x="-3" y="74" hm="true"/>
+          <view angle="180" col="2" row="2" x="8" y="60" hm="true"/>
+          <view angle="225" row="2" x="-8" y="70"/>
+          <view angle="270" col="1" row="2" x="-33" y="60"/>
+          <view angle="315" row="2" x="7" y="70" hm="true"/>
+        </layer>
+        <layer id="wing_c_02" texture="wing">
+          <view angle="0" col="2" row="2" x="5" y="24" alpha="0" hm="true"/>
+          <view angle="45" col="3" row="2" x="4" y="74" alpha="0"/>
+          <view angle="90" col="4" row="2" x="27" y="63" hm="true"/>
+          <view angle="135" col="3" row="2" x="-3" y="74" alpha="0" hm="true"/>
+          <view angle="180" col="2" row="2" x="-6" y="24" alpha="0"/>
+          <view angle="225" row="2" x="-8" y="70" alpha="0"/>
+          <view angle="270" col="1" row="2" x="32" y="60" hm="true"/>
+          <view angle="315" row="2" x="7" y="70" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="idle"/>
+          <layerref id="idle01"/>
+        </frame>
+        <frame id="Wing_01">
+          <layerref id="wing_a_01"/>
+          <layerref id="wing_a_02"/>
+        </frame>
+        <frame id="Wing_02">
+          <layerref id="wing_b_01"/>
+          <layerref id="wing_b_02"/>
+        </frame>
+        <frame id="Wing_03">
+          <layerref id="wing_c_01"/>
+          <layerref id="wing_c_02"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="idle" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="Wing_01">
+            <sample id="Sound"/>
+          </frameref>
+          <frameref id="Wing_02"/>
+          <frameref id="Wing_03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

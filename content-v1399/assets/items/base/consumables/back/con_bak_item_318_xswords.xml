@@ -1,0 +1,54 @@
+<item.SpriteItem id="6876" name="Espadas Poderosas Play" desc="Um conjunto de espadas poderosas" tags="rare,consumable,actionbar,wear,back,action_wearable_toggle" icon="items/base/consumables/back/icon_con_bak_318_xswords.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-1" max="0.3,0.2333,1"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="fire+15"/>
+    <entry key="action_attributes_secondary" value="speed+15,health+15"/>
+  </data>
+  <textures>
+    <texture id="Swords" source="items/base/consumables/back/con_bak_item_318_xswords.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-1" max="0.3,0.2333,1"/>
+      <layers>
+        <layer id="Swords" texture="Swords">
+          <view angle="45" y="43"/>
+          <view angle="135" y="43" hm="true"/>
+          <view angle="225" col="1" x="6" y="45" hm="true"/>
+          <view angle="315" col="1" x="-6" y="45"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xd6d0fa" a="0.7"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

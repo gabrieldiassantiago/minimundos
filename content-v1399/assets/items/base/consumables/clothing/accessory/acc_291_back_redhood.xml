@@ -1,0 +1,63 @@
+<item.SpriteItem id="0" name="Ice Cloak" desc="An item" tags="wearable, consumable, actionbar" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+  </volume>
+  <textures>
+    <texture id="IceCloak" source="items/base/consumables/clothing/accessory/acc_291_back_redhood.png" cols="5" rows="1"/>
+    <texture id="IceCloakSit" source="items/base/consumables/clothing/accessory/acc_291_sit_redhood.png" cols="2" rows="1"/>
+    <texture id="cover" source="items/base/consumables/clothing/accessory/acc_291_cover_redhood.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+      <layers>
+        <layer id="CapeTop" texture="IceCloak">
+          <view angle="0" x="2" y="78"/>
+          <view angle="45" col="2" x="2" y="80" hm="true"/>
+          <view angle="90" col="1" y="80"/>
+          <view angle="135" col="2" x="-3" y="80"/>
+          <view angle="180" x="-2" y="78" hm="true"/>
+          <view angle="225" col="4" x="-1" y="75" hm="true"/>
+          <view angle="270" col="3" x="1" y="76"/>
+          <view angle="315" col="4" x="1" y="75"/>
+        </layer>
+        <layer id="Sit" texture="IceCloakSit">
+          <view angle="45" x="7" y="39" hm="true"/>
+          <view angle="135" x="-7" y="39"/>
+          <view angle="225" col="1" x="-5" y="35" hm="true"/>
+          <view angle="315" col="1" x="5" y="35"/>
+        </layer>
+        <layer id="Cover" texture="cover">
+          <view angle="0" x="2" y="78" alpha="0"/>
+          <view angle="45" x="10" y="10"/>
+          <view angle="90" col="1" x="-1" y="10"/>
+          <view angle="135" x="-10" y="10" hm="true"/>
+          <view angle="180" x="-2" y="78" alpha="0" hm="true"/>
+          <view angle="225" col="4" x="-1" y="76" alpha="0" hm="true"/>
+          <view angle="270" col="3" x="1" y="76" alpha="0"/>
+          <view angle="315" col="4" x="1" y="76" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame001">
+          <layerref id="Cover"/>
+          <layerref id="CapeTop"/>
+        </frame>
+        <frame id="Sit">
+          <layerref id="Sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame001"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="Frame001"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

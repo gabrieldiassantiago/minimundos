@@ -1,0 +1,34 @@
+<item.SpriteItem desc="Um vaso amarelo com uma planta vistosa." dropTargetClamp="none" dropTargetList="floor, table" dropTargetType="none" icon="items/base/modern/icon_m_plant_02_shrub.png" id="399" name="Arbusto de Folhas" tags="plant" price="13" tokens="130" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.2,1.3,0.2" min="-0.2,0,-0.2"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture01" rows="1" source="items/base/modern/m_pot_02.png"/>
+    <texture cols="1" id="Texture" rows="1" source="items/base/modern/m_plant_02.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.2,1.3,0.2" min="-0.2,0,-0.2"/>
+      <layers>
+        <layer id="Layer" texture="Texture01">
+          <view angle="45" y="8"/>
+          <view angle="135" mirror="true" y="8"/>
+          <view angle="225" y="8"/>
+          <view angle="315" mirror="true" y="8"/>
+        </layer>
+        <layer id="Layer01" texture="Texture">
+          <view angle="45" x="-3" y="-34"/>
+          <view angle="135" mirror="true" x="3" y="-34"/>
+          <view angle="225" x="-3" y="-34"/>
+          <view angle="315" mirror="true" x="3" y="-34"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

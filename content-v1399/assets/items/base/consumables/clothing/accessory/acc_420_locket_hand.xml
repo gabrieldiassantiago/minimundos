@@ -1,0 +1,118 @@
+<item.SpriteItem id="0" name="Spade Spear" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Locket01" source="items/base/consumables/clothing/accessory/acc_420_locket_hand.png" cols="4" rows="2"/>
+    <texture id="sparkle" source="items/base/consumables/magic/con_sparkle.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Gardening Fork">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Locket01" texture="Locket01">
+          <view angle="0" col="1" x="8" y="48"/>
+          <view angle="45" col="2" x="-2" y="43"/>
+          <view angle="90" col="3" x="3" y="75"/>
+          <view angle="135" row="1" x="-12" y="68"/>
+          <view angle="180" col="1" row="1" y="60"/>
+          <view angle="225" col="2" row="1" x="6" y="65"/>
+          <view angle="270" col="3" row="1" x="-15" y="15" hm="true"/>
+          <view angle="315" x="12" y="43"/>
+        </layer>
+        <layer id="sparkle01" texture="sparkle">
+          <view angle="0" x="15" y="-12"/>
+          <view angle="45" x="9" y="-9"/>
+          <view angle="90" x="6" y="11"/>
+          <view angle="135" x="-10" y="33"/>
+          <view angle="180" x="8" y="11"/>
+          <view angle="225" x="2" y="28"/>
+          <view angle="270" x="-13" y="-30"/>
+          <view angle="315" y="-11"/>
+        </layer>
+        <layer id="sparkle02" texture="sparkle">
+          <view angle="0" col="1" x="15" y="-12"/>
+          <view angle="45" col="1" x="9" y="-9"/>
+          <view angle="90" col="1" x="6" y="11"/>
+          <view angle="135" col="1" x="-10" y="33"/>
+          <view angle="180" col="1" x="8" y="11"/>
+          <view angle="225" col="1" x="2" y="28"/>
+          <view angle="270" col="1" x="-13" y="-30"/>
+          <view angle="315" col="1" y="-11"/>
+        </layer>
+        <layer id="sparkle03" texture="sparkle">
+          <view angle="0" col="2" x="15" y="-12"/>
+          <view angle="45" col="2" x="9" y="-9"/>
+          <view angle="90" col="2" x="6" y="11"/>
+          <view angle="135" col="2" x="-10" y="33"/>
+          <view angle="180" col="2" x="8" y="11"/>
+          <view angle="225" col="2" x="2" y="28"/>
+          <view angle="270" col="2" x="-13" y="-30"/>
+          <view angle="315" col="2" y="-11"/>
+        </layer>
+        <layer id="sparkle04" texture="sparkle">
+          <view angle="0" col="1" x="15" y="-12" hm="true"/>
+          <view angle="45" col="1" x="9" y="-9" hm="true"/>
+          <view angle="90" col="1" x="6" y="11" hm="true"/>
+          <view angle="135" col="1" x="-10" y="33" hm="true"/>
+          <view angle="180" col="1" x="8" y="11" hm="true"/>
+          <view angle="225" col="1" x="2" y="28" hm="true"/>
+          <view angle="270" col="1" x="-13" y="-30" hm="true"/>
+          <view angle="315" col="1" y="-11" hm="true"/>
+        </layer>
+        <layer id="sparkle05" texture="sparkle">
+          <view angle="0" x="15" y="-12" hm="true"/>
+          <view angle="45" x="9" y="-9" hm="true"/>
+          <view angle="90" x="6" y="11" hm="true"/>
+          <view angle="135" x="-10" y="33" hm="true"/>
+          <view angle="180" x="8" y="11" hm="true"/>
+          <view angle="225" x="2" y="28" hm="true"/>
+          <view angle="270" x="-13" y="-30" hm="true"/>
+          <view angle="315" y="-11" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Locket01"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Locket01"/>
+          <layerref id="sparkle01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Locket01"/>
+          <layerref id="sparkle02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Locket01"/>
+          <layerref id="sparkle03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Locket01"/>
+          <layerref id="sparkle04"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Locket01"/>
+          <layerref id="sparkle05"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="16">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame" duration="45"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,150 @@
+<item.SpriteItem id="2874" name="Anjo de Gelo" desc="Uma fragilíssima obra de arte. Vem com refrigeração interna para evitar o derretimento." tags="misc" icon="items/base/modern/icon_m_collect_05_ice_angel.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="5000">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,2.84,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="jar" source="items/base/modern/m_collect_05_ice_angel.png" cols="2" rows="1"/>
+    <texture id="reflect" source="items/base/modern/m_collect_05_ice_angel_reflect.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.48,0,-0.48" max="0.48,2.84,0.48"/>
+      <layers>
+        <layer id="jar" texture="jar" y="15">
+          <view angle="45" x="-1" y="16" hm="true"/>
+          <view angle="135" y="16"/>
+          <view angle="225" col="1" x="-1" y="16" hm="true"/>
+          <view angle="315" col="1" y="16"/>
+        </layer>
+        <layer id="reflect_01" texture="reflect" y="15">
+          <view angle="45" x="-58" y="-173"/>
+          <view angle="135" x="58" y="-173"/>
+          <view angle="225" x="48" y="-200"/>
+          <view angle="315" x="-48" y="-200"/>
+        </layer>
+        <layer id="reflect_02" texture="reflect" y="15">
+          <view angle="45" col="1" x="-58" y="-173"/>
+          <view angle="135" col="1" x="58" y="-173"/>
+          <view angle="225" col="1" x="48" y="-200"/>
+          <view angle="315" col="1" x="-48" y="-200"/>
+        </layer>
+        <layer id="reflect_03" texture="reflect" y="15">
+          <view angle="45" col="2" x="-58" y="-173"/>
+          <view angle="135" col="2" x="58" y="-173"/>
+          <view angle="225" col="2" x="48" y="-200"/>
+          <view angle="315" col="2" x="-48" y="-200"/>
+        </layer>
+        <layer id="reflect_04" texture="reflect" y="15">
+          <view angle="45" col="1" x="-58" y="-173" hm="true"/>
+          <view angle="135" col="1" x="58" y="-173" hm="true"/>
+          <view angle="225" col="1" x="48" y="-200" hm="true"/>
+          <view angle="315" col="1" x="-48" y="-200" hm="true"/>
+        </layer>
+        <layer id="reflect_05" texture="reflect" y="15">
+          <view angle="45" x="-58" y="-173" hm="true"/>
+          <view angle="135" x="58" y="-173" hm="true"/>
+          <view angle="225" x="48" y="-200" hm="true"/>
+          <view angle="315" x="-48" y="-200" hm="true"/>
+        </layer>
+        <layer id="reflect_06" texture="reflect" y="15">
+          <view angle="45" x="51" y="-143"/>
+          <view angle="135" x="-51" y="-143"/>
+          <view angle="225" x="-50" y="-136"/>
+          <view angle="315" x="50" y="-136"/>
+        </layer>
+        <layer id="reflect_07" texture="reflect" y="15">
+          <view angle="45" col="1" x="51" y="-143"/>
+          <view angle="135" col="1" x="-51" y="-143"/>
+          <view angle="225" col="1" x="-50" y="-136"/>
+          <view angle="315" col="1" x="50" y="-136"/>
+        </layer>
+        <layer id="reflect_08" texture="reflect" y="15">
+          <view angle="45" col="2" x="51" y="-143"/>
+          <view angle="135" col="2" x="-51" y="-143"/>
+          <view angle="225" col="2" x="-50" y="-136"/>
+          <view angle="315" col="2" x="50" y="-136"/>
+        </layer>
+        <layer id="reflect_09" texture="reflect" y="15">
+          <view angle="45" col="1" x="51" y="-143" hm="true"/>
+          <view angle="135" col="1" x="-51" y="-143" hm="true"/>
+          <view angle="225" col="1" x="-50" y="-136" hm="true"/>
+          <view angle="315" col="1" x="50" y="-136" hm="true"/>
+        </layer>
+        <layer id="reflect_10" texture="reflect" y="15">
+          <view angle="45" x="51" y="-143" hm="true"/>
+          <view angle="135" x="-51" y="-143" hm="true"/>
+          <view angle="225" x="-50" y="-136" hm="true"/>
+          <view angle="315" x="50" y="-136" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle00">
+          <layerref id="jar"/>
+        </frame>
+        <frame id="idle01">
+          <layerref id="jar"/>
+          <layerref id="reflect_01"/>
+        </frame>
+        <frame id="idle02">
+          <layerref id="jar"/>
+          <layerref id="reflect_02"/>
+        </frame>
+        <frame id="idle03">
+          <layerref id="jar"/>
+          <layerref id="reflect_03"/>
+        </frame>
+        <frame id="idle04">
+          <layerref id="jar"/>
+          <layerref id="reflect_04"/>
+        </frame>
+        <frame id="idle05">
+          <layerref id="jar"/>
+          <layerref id="reflect_05"/>
+        </frame>
+        <frame id="idle06">
+          <layerref id="jar"/>
+          <layerref id="reflect_06"/>
+        </frame>
+        <frame id="idle07">
+          <layerref id="jar"/>
+          <layerref id="reflect_07"/>
+        </frame>
+        <frame id="idle08">
+          <layerref id="jar"/>
+          <layerref id="reflect_08"/>
+        </frame>
+        <frame id="idle09">
+          <layerref id="jar"/>
+          <layerref id="reflect_09"/>
+        </frame>
+        <frame id="idle10">
+          <layerref id="jar"/>
+          <layerref id="reflect_10"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="idle00" duration="50"/>
+          <frameref id="idle01"/>
+          <frameref id="idle02"/>
+          <frameref id="idle03"/>
+          <frameref id="idle04"/>
+          <frameref id="idle05"/>
+          <frameref id="idle00" duration="10"/>
+          <frameref id="idle06"/>
+          <frameref id="idle07"/>
+          <frameref id="idle08"/>
+          <frameref id="idle09"/>
+          <frameref id="idle10"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

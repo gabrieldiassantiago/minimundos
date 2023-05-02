@@ -1,0 +1,33 @@
+<item.SpriteItem desc="Um capa dourada de ave" dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" gridActive="false" icon="items/base/consumables/back/icon_con_bak_item_12_japancape.png" id="2494" name="Capa de Ave Dourada" tags="rare,consumable,actionbar,wear,back,costume,action_wearable_toggle" minLevel="1" minCPLevel="1" price="2000">
+  <volume>
+    <box min="-0.2564,0,-0.256" max="0.2692,0.1154,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="cape" source="items/base/consumables/back/con_bak_item_12_japancape.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2564,0,-0.256" max="0.2692,0.1154,0.25"/>
+      <layers>
+        <layer id="Layer" texture="cape" y="19">
+          <view angle="45" y="-1"/>
+          <view angle="135" y="-1" hm="true"/>
+          <view angle="225" col="1" x="-1" y="-1"/>
+          <view angle="315" col="1" x="1" y="-1" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

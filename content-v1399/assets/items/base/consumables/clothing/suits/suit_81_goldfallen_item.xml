@@ -1,0 +1,125 @@
+<item.SpriteItem id="5527" name="Traje de Anjo Deluxe" desc="Um magnífico traje de anjo dourado" tags="rare,consumable,nopvp,action_wearable_toggle,back,clothing,actionbar,wear,suits" icon="items/base/consumables/clothing/suits/suit_81_goldfallen_icon.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_81_frag_goldfallen.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes" value="nature+50"/>
+    <entry key="action_attributes_secondary" value="speed+100,health+100"/>
+  </data>
+  <textures>
+    <texture id="robot" source="items/base/consumables/clothing/suits/suit_81_goldfallen_item.png" cols="2" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/feet/icon_con_feet_37_shadow.png" cols="2" rows="1"/>
+    <texture id="dust" source="items/base/consumables/clothing/suits/suit_79_adamantium_dust.png" cols="1" rows="1"/>
+    <texture id="wings" source="items/base/consumables/clothing/suits/suit_81_goldfallen_wings.png" cols="5" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+      <layers>
+        <layer id="Robot" texture="robot" y="15">
+          <view angle="45" y="-50"/>
+          <view angle="135" y="-50" hm="true"/>
+          <view angle="225" col="1" x="1" y="-50"/>
+          <view angle="315" col="1" x="1" y="-50" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="30"/>
+          <view angle="135" y="30"/>
+          <view angle="225" y="30"/>
+          <view angle="315" y="30"/>
+        </layer>
+        <layer id="dust_01" texture="dust">
+          <view y="30" alpha="0"/>
+        </layer>
+        <layer id="dust_02" texture="dust">
+          <view y="30" alpha="0" hm="true"/>
+        </layer>
+        <layer id="topwings_01" texture="wings">
+          <view angle="45" x="-20" y="-30"/>
+          <view angle="135" x="20" y="-30" hm="true"/>
+          <view angle="225" col="3" x="22" y="-15" alpha="0" hm="true"/>
+          <view angle="315" col="3" x="-22" y="-15" alpha="0"/>
+        </layer>
+        <layer id="topwings_02" texture="wings">
+          <view angle="45" row="1" x="-20" y="-30"/>
+          <view angle="135" row="1" x="20" y="-30" hm="true"/>
+          <view angle="225" col="3" row="1" x="22" y="-15"/>
+          <view angle="315" col="3" row="1" x="-22" y="-15" alpha="0"/>
+        </layer>
+        <layer id="topwings_03" texture="wings">
+          <view angle="45" row="2" x="-20" y="-30"/>
+          <view angle="135" row="2" x="20" y="-30" hm="true"/>
+          <view angle="225" col="3" row="2" x="22" y="-15"/>
+          <view angle="315" col="3" row="2" x="-22" y="-15" alpha="0"/>
+        </layer>
+        <layer id="botwings_01" texture="wings">
+          <view angle="45" x="-20" y="-30" alpha="0"/>
+          <view angle="135" x="20" y="-30" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="22" y="-15" hm="true"/>
+          <view angle="315" col="3" x="-22" y="-15"/>
+        </layer>
+        <layer id="botwings_02" texture="wings">
+          <view angle="45" row="1" x="-20" y="-30" alpha="0"/>
+          <view angle="135" row="1" x="20" y="-30" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="1" x="22" y="-15" hm="true"/>
+          <view angle="315" col="3" row="1" x="-22" y="-15"/>
+        </layer>
+        <layer id="botwings_03" texture="wings">
+          <view angle="45" row="2" x="-20" y="-30" alpha="0"/>
+          <view angle="135" row="2" x="20" y="-30" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="2" x="22" y="-15" hm="true"/>
+          <view angle="315" col="3" row="2" x="-22" y="-15"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="topwings_03"/>
+          <layerref id="shadow"/>
+          <layerref id="dust_01" a="0.5"/>
+          <layerref id="Robot"/>
+          <layerref id="botwings_03"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="topwings_02" y="1"/>
+          <layerref id="shadow"/>
+          <layerref id="dust_02" a="0.5"/>
+          <layerref id="Robot" y="1"/>
+          <layerref id="botwings_02" y="1"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="topwings_01" y="2"/>
+          <layerref id="shadow"/>
+          <layerref id="dust_01" a="0.5"/>
+          <layerref id="Robot" y="2"/>
+          <layerref id="botwings_01" y="2"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="topwings_02" y="1"/>
+          <layerref id="shadow"/>
+          <layerref id="dust_02" a="0.5"/>
+          <layerref id="Robot" y="1"/>
+          <layerref id="botwings_02" y="1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="7">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

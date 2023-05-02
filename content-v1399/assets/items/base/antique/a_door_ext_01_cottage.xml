@@ -1,0 +1,85 @@
+<item.SpriteItem desc="Super fofa." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/antique/icon_a_door_ext_01_cottage.png" id="2492" name="Porta da Casa de Campo" tags="door" minLevel="1" minCPLevel="1" price="140">
+  <volume>
+    <box min="0.48,0,-0.49" max="0.52,2.8,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="close" script="scripts/item/close_gate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+    <event id="action" script="scripts/item/action_gate.as"/>
+  </events>
+  <actions>
+    <action id="Open" state="true" event="open"/>
+    <action id="Close" state="true" event="close"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="door" source="items/base/antique/a_door_ext_01_cottage.png" cols="1" rows="1"/>
+    <texture id="run" source="items/base/modern/m_door_run.png" cols="1" rows="1"/>
+    <texture id="handle" source="items/base/antique/a_door_handle_brass.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Door" x="0.5">
+      <box min="-0.02,0,-0.49" max="0.02,2.8,0.49"/>
+      <layers>
+        <layer id="Closed" texture="door">
+          <view angle="45" x="-6" y="19"/>
+          <view angle="135" x="6" y="19" hm="true"/>
+          <view angle="225" x="-7" y="19"/>
+          <view angle="315" x="6" y="19" hm="true"/>
+        </layer>
+        <layer id="Open" texture="door">
+          <view angle="45" y="14"/>
+          <view angle="135" x="-1" y="19" hm="true"/>
+          <view angle="225" x="9" y="24"/>
+          <view angle="315" x="-17" y="22" hm="true"/>
+        </layer>
+        <layer id="HandleClosed" texture="handle">
+          <view angle="45" x="-26" y="-84"/>
+          <view angle="135" x="-24" y="-108" hm="true"/>
+          <view angle="225" x="22" y="-108"/>
+          <view angle="315" x="26" y="-85" hm="true"/>
+        </layer>
+        <layer id="HandleOpen" texture="handle">
+          <view angle="45" x="-20" y="-89"/>
+          <view angle="135" x="-31" y="-107" hm="true"/>
+          <view angle="225" x="38" y="-102"/>
+          <view angle="315" x="3" y="-81" hm="true"/>
+        </layer>
+        <layer id="Run" texture="run">
+          <view angle="45" x="2" y="-8" hm="true"/>
+          <view angle="135" x="51" y="20"/>
+          <view angle="225" x="7" y="51" hm="true"/>
+          <view angle="315" x="-69" y="23"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Closed"/>
+          <layerref id="HandleClosed"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="Run"/>
+          <layerref id="Open"/>
+          <layerref id="HandleOpen"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="Closed">
+      <frame id="Frame">
+        <noderef id="Door" frame="Closed"/>
+      </frame>
+    </animation>
+    <animation id="Open">
+      <frame id="Frame">
+        <noderef id="Door" x="0.45" z="0.48" a="270" frame="Open"/>
+      </frame>
+    </animation>
+  </animations>
+</item.SpriteItem>

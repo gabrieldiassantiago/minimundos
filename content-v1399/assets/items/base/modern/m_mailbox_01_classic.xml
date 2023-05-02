@@ -1,0 +1,65 @@
+<item.SpriteItem desc="Uma caixinha de correio." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/modern/icon_m_mailbox_01_classic.png" id="2323" name="Caixa de Correio" tags="misc" minLevel="1" minCPLevel="1" price="75">
+  <volume>
+    <box min="-0.4795,0,-0.3" max="0.4666,1.8487,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <textures>
+    <texture id="Open" source="items/base/modern/m_mailbox_01_open.png" cols="2" rows="1"/>
+    <texture id="Closed" source="items/base/modern/m_mailbox_01_closed.png" cols="2" rows="1"/>
+    <texture id="Text" source="items/base/modern/m_mailbox_01_text.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4795,0,-0.3" max="0.4666,1.8487,0.3"/>
+      <layers>
+        <layer id="Closed" texture="Closed">
+          <view angle="45" col="1" y="14"/>
+          <view angle="135" col="1" y="14" hm="true"/>
+          <view angle="225" x="6" y="21"/>
+          <view angle="315" x="-6" y="21" hm="true"/>
+        </layer>
+        <layer id="Open" texture="Open">
+          <view angle="45" col="1" x="26" y="-65"/>
+          <view angle="135" col="1" x="-26" y="-65" hm="true"/>
+          <view angle="225" x="-19" y="-74"/>
+          <view angle="315" x="19" y="-74" hm="true"/>
+        </layer>
+        <layer id="Text" texture="Text">
+          <view angle="45" col="1" x="22" y="-107"/>
+          <view angle="135" x="-20" y="-107"/>
+          <view angle="225" col="2" y="-4" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Closed"/>
+          <layerref id="Text"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="Closed"/>
+          <layerref id="Open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="Open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

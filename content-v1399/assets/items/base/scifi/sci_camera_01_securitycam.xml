@@ -1,0 +1,235 @@
+<item.SpriteItem id="1334" name="Câmera de Segurança" desc="24 horas de plantão." tags="wall,misc" icon="items/base/scifi/icon_sci_camera_01_securitycam.png" price="25" minLevel="1" minLevelType="2" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" minCPLevel="1">
+  <volume>
+    <box min="0,-0.1,-0.3" max="0.6,0.48,0.3"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <textures>
+    <texture id="camera" source="items/base/scifi/sci_camera_01_securityhead.png" cols="5" rows="1"/>
+    <texture id="base" source="items/base/scifi/sci_camera_01_securitybase.png" cols="1" rows="1"/>
+    <texture id="red_light" source="items/base/scifi/sci_camera_01_reddot.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Camera">
+      <box min="0,-0.1,-0.3" max="0.6,0.48,0.3"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" x="8" y="16" hm="true"/>
+          <view angle="135" x="-8" y="16"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="camera_01" texture="camera">
+          <view angle="45" x="24" y="9" hm="true"/>
+          <view angle="135" x="-25" y="9"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="camera_02" texture="camera">
+          <view angle="45" col="1" x="22" y="9" hm="true"/>
+          <view angle="135" col="3" x="-27" y="7"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="camera_03" texture="camera">
+          <view angle="45" col="2" x="23" y="8" hm="true"/>
+          <view angle="135" col="4" x="-30" y="8"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="camera_04" texture="camera">
+          <view angle="45" col="3" x="26" y="7" hm="true"/>
+          <view angle="135" col="1" x="-23" y="9"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="camera_05" texture="camera">
+          <view angle="45" col="4" x="29" y="8" hm="true"/>
+          <view angle="135" col="2" x="-24" y="8"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="red_light_01" texture="red_light">
+          <view angle="45" x="42" y="6" alpha="0.68" hm="true"/>
+          <view angle="135" x="-36" y="9"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="red_light_02" texture="red_light">
+          <view angle="45" x="34" y="9" hm="true"/>
+          <view angle="135" x="-43" y="5" alpha="0.68"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="red_light_03" texture="red_light">
+          <view angle="45" x="28" y="10" hm="true"/>
+          <view angle="135" col="4" x="-30" y="8"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="red_light_04" texture="red_light">
+          <view angle="45" x="46" y="2" alpha="0.75" hm="true"/>
+          <view angle="135" x="-26" y="11"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="red_light_05" texture="red_light">
+          <view angle="45" x="52" y="8" alpha="0" hm="true"/>
+          <view angle="135" x="-20" y="10"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="base"/>
+          <layerref id="camera_01"/>
+          <layerref id="red_light_01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="base"/>
+          <layerref id="camera_02"/>
+          <layerref id="red_light_02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="base"/>
+          <layerref id="camera_03"/>
+          <layerref id="red_light_03"/>
+        </frame>
+        <frame id="Frame03a">
+          <layerref id="base"/>
+          <layerref id="camera_03"/>
+          <layerref id="red_light_03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="base"/>
+          <layerref id="camera_04"/>
+          <layerref id="red_light_04"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="base"/>
+          <layerref id="camera_05"/>
+          <layerref id="red_light_05"/>
+        </frame>
+        <frame id="Frame05a">
+          <layerref id="base"/>
+          <layerref id="camera_05"/>
+          <layerref id="red_light_05"/>
+        </frame>
+        <frame id="off">
+          <layerref id="base"/>
+          <layerref id="camera_01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2" syncOffsets="0,1">
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame05a"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame05a"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame03a"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame03a"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="0.3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="01" texture="Light" align="middle">
+          <view angle="45" x="101" y="6"/>
+          <view angle="135" x="-157" y="-24" alpha="0.5"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="02" texture="Light" align="middle">
+          <view angle="45" x="121" y="6"/>
+          <view angle="135" x="-146" y="-10" alpha="0.5"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="03" texture="Light" align="middle">
+          <view angle="45" x="150" y="3" alpha="0.8"/>
+          <view angle="135" x="-112" y="8" alpha="0.6"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="04" texture="Light" align="middle">
+          <view angle="45" x="175" y="-19" alpha="0.5"/>
+          <view angle="135" x="-78" y="18"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="05" texture="Light" align="middle">
+          <view angle="45" x="191" y="-44" alpha="0.3"/>
+          <view angle="135" x="-49" y="6"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="01" color="0xef4343"/>
+        </frame>
+        <frame id="02">
+          <layerref id="02" color="0xef4343"/>
+        </frame>
+        <frame id="03">
+          <layerref id="03" color="0xef4343"/>
+        </frame>
+        <frame id="04">
+          <layerref id="04" color="0xef4343"/>
+        </frame>
+        <frame id="05">
+          <layerref id="05" color="0xef4343"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05" duration="5"/>
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01" duration="4"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,59 @@
+<item.SpriteItem id="2813" name="Condicionador" desc="Para todos os tipos de cabelo." tags="misc" icon="items/base/modern/icon_m_bathroom_22_facewash.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="15" tokens="150">
+  <volume>
+    <box min="-0.05,0,-0.1" max="0.05,0.5,0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="facewash" source="items/base/modern/m_bathroom_22_facewash.png" cols="1" rows="1"/>
+  </textures>
+  <sounds/>
+  <nodes>
+    <node id="Node">
+      <box min="-0.05,0,-0.1" max="0.05,0.5,0.1"/>
+      <layers>
+        <layer id="facewash" texture="facewash" y="15">
+          <view angle="45" x="-1" y="-7"/>
+          <view angle="135" x="-1" y="-7" hm="true"/>
+          <view angle="225" x="-1" y="-7"/>
+          <view angle="315" x="-1" y="-7" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle01">
+          <layerref id="facewash"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4"/>
+        <animation id="On" framerate="1"/>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="glow">
+          <view angle="45" x="2" y="15"/>
+          <view angle="135" x="-1" y="15"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light01" color="0xf7cff7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4"/>
+        <animation id="On" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,212 @@
+<item.SpriteItem id="0" name="Freeze Halo" desc="A freeze halo" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="glow" source="items/base/consumables/magic/halo_glow.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_halo_spread.png" cols="1" rows="1"/>
+    <texture id="vine" source="items/base/consumables/magic/halo_79_vinetrap.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="freeze" source="items/base/consumables/magic/sndfx_freeze.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Behind" s="1.3">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="Glow" texture="glow">
+          <view y="32"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In 01">
+          <layerref id="Glow" color="0x52ed46" a="0.1"/>
+        </frame>
+        <frame id="In 02">
+          <layerref id="Glow" color="0x52ed46" a="0.2"/>
+        </frame>
+        <frame id="In 03">
+          <layerref id="Glow" color="0x52ed46" a="0.3"/>
+        </frame>
+        <frame id="Loop (dur 3)">
+          <layerref id="Glow" color="0x52ed46" a="0.4"/>
+        </frame>
+        <frame id="Out 01">
+          <layerref id="Glow" color="0x52ed46" a="0.3"/>
+        </frame>
+        <frame id="Out 02">
+          <layerref id="Glow" color="0x52ed46" a="0.2"/>
+        </frame>
+        <frame id="Out 03">
+          <layerref id="Glow" color="0x52ed46" a="0.1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="In 01">
+            <sample id="freeze"/>
+          </frameref>
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="Loop (dur 3)" duration="3"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="Out 01"/>
+          <frameref id="Out 02"/>
+          <frameref id="Out 03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="vine_01" texture="vine">
+          <view angle="45" y="35" hm="true"/>
+          <view angle="135" y="35"/>
+          <view angle="225" x="4" y="35"/>
+          <view angle="315" x="-4" y="35" hm="true"/>
+          <view angle="0" y="35"/>
+          <view angle="90" y="35"/>
+          <view angle="180" y="35" hm="true"/>
+          <view angle="270" y="35"/>
+        </layer>
+        <layer id="vine_02" texture="vine">
+          <view angle="45" col="1" y="35" hm="true"/>
+          <view angle="135" col="1" y="35"/>
+          <view angle="225" col="1" x="4" y="35"/>
+          <view angle="315" col="1" x="-4" y="35" hm="true"/>
+          <view angle="0" col="1" y="35"/>
+          <view angle="90" col="1" y="35"/>
+          <view angle="180" col="1" y="35" hm="true"/>
+          <view angle="270" col="1" y="35"/>
+        </layer>
+        <layer id="vine_03" texture="vine">
+          <view angle="45" col="2" y="35" hm="true"/>
+          <view angle="135" col="2" y="35"/>
+          <view angle="225" col="2" x="4" y="35"/>
+          <view angle="315" col="2" x="-4" y="35" hm="true"/>
+          <view angle="0" col="2" y="35"/>
+          <view angle="90" col="2" y="35"/>
+          <view angle="180" col="2" y="35" hm="true"/>
+          <view angle="270" col="2" y="35"/>
+        </layer>
+        <layer id="vine_04" texture="vine">
+          <view angle="45" col="3" y="35" hm="true"/>
+          <view angle="135" col="3" y="35"/>
+          <view angle="225" col="3" x="4" y="35"/>
+          <view angle="315" col="3" x="-4" y="35" hm="true"/>
+          <view angle="0" col="3" y="35"/>
+          <view angle="90" col="3" y="35"/>
+          <view angle="180" col="3" y="35" hm="true"/>
+          <view angle="270" col="3" y="35"/>
+        </layer>
+        <layer id="vine_05" texture="vine">
+          <view angle="45" col="4" y="35" hm="true"/>
+          <view angle="135" col="4" y="35"/>
+          <view angle="225" col="4" x="4" y="35"/>
+          <view angle="315" col="4" x="-4" y="35" hm="true"/>
+          <view angle="0" col="4" y="35"/>
+          <view angle="90" col="4" y="35"/>
+          <view angle="180" col="4" y="35" hm="true"/>
+          <view angle="270" col="4" y="35"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In 01">
+          <layerref id="vine_01" a="0"/>
+        </frame>
+        <frame id="In 02">
+          <layerref id="vine_01" a="0.4"/>
+        </frame>
+        <frame id="In 03">
+          <layerref id="vine_02" a="0.5"/>
+        </frame>
+        <frame id="In 04">
+          <layerref id="vine_02" a="0.6"/>
+          <layerref id="vine_03" a="0.3"/>
+        </frame>
+        <frame id="In 05">
+          <layerref id="vine_03" a="0.6"/>
+          <layerref id="vine_04" a="0.3"/>
+        </frame>
+        <frame id="In 06">
+          <layerref id="vine_04" a="0.8"/>
+          <layerref id="vine_05" a="0.3"/>
+        </frame>
+        <frame id="Loop 01">
+          <layerref id="vine_05"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="6" loop="false">
+          <frameref id="In 01">
+            <sample id="freeze"/>
+          </frameref>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+          <frameref id="In 04"/>
+          <frameref id="In 05"/>
+          <frameref id="In 06"/>
+        </animation>
+        <animation id="Loop" framerate="6">
+          <frameref id="Loop 01"/>
+          <frameref id="Loop 01"/>
+          <frameref id="Loop 01"/>
+        </animation>
+        <animation id="Out" framerate="12" loop="false">
+          <frameref id="In 06"/>
+          <frameref id="In 05"/>
+          <frameref id="In 04"/>
+          <frameref id="In 03"/>
+          <frameref id="In 02"/>
+          <frameref id="In 01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.45" s="2.6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Glow" texture="Light">
+          <view y="32"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In 01">
+          <layerref id="Glow" color="0xa3f59c" a="0.25"/>
+        </frame>
+        <frame id="In 02">
+          <layerref id="Glow" color="0xa3f59c" a="0.5"/>
+        </frame>
+        <frame id="In 03">
+          <layerref id="Glow" color="0xa3f59c" a="0.75"/>
+        </frame>
+        <frame id="Loop (dur 3)">
+          <layerref id="Glow" color="0xa3f59c"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="In 01">
+            <sample id="freeze"/>
+          </frameref>
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="Loop (dur 3)" duration="3"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="In 03"/>
+          <frameref id="In 02"/>
+          <frameref id="In 01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

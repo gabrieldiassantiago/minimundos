@@ -1,0 +1,35 @@
+<item.SpriteItem id="6094" name="Cabeça Bola da Tênis Play" desc="Uma cabeça esportiva para sua coleção (4 de 6)" tags="rare,consumable,wear,actionbar,clothing,action_wearable_toggle,hat" icon="items/base/consumables/clothing/accessory/acc_621_icon_tennisballhead.png" price="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2962,0,-0.2962" max="0.3346,0.7,0.2962"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+25,health+25"/>
+  </data>
+  <textures>
+    <texture id="hat" source="items/base/consumables/clothing/accessory/acc_621_item_tennisballhead.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2962,0,-0.2962" max="0.3346,0.7,0.2962"/>
+      <layers>
+        <layer id="hat" texture="hat">
+          <view angle="45" y="28"/>
+          <view angle="135" y="28" hm="true"/>
+          <view angle="225" col="1" y="28" hm="true"/>
+          <view angle="315" col="1" y="28"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,58 @@
+<item.SpriteItem id="5962" name="Decalque Equalizador de Bar" desc="Um equalizador decalque de parede animado" tags="wall" icon="items/base/modern/icon_m_walldecal_32_soundbar.png" price="20" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="lights" source="items/base/modern/m_walldecal_32_soundbar.png" cols="2" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="wall" depthBias="-2">
+      <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+      <layers>
+        <layer id="Bar 01" texture="lights" align="middle">
+          <view angle="45" col="1" y="-1"/>
+          <view angle="135" y="-1"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="Bar 02" texture="lights" align="middle">
+          <view angle="45" col="1" row="1"/>
+          <view angle="135" row="1"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="Bar 03" texture="lights" align="middle">
+          <view angle="45" col="1" row="2"/>
+          <view angle="135" row="2"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Bar 01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Bar 02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Bar 03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

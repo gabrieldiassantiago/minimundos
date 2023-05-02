@@ -1,0 +1,62 @@
+<item.ChairItem id="2762" name="Cadeira Simples" desc="Simples e sentável." tags="unsearchable,chair,destroy" icon="items/base/modern/icon_m_chair_02_slim_dst.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" tokens="250">
+  <seats>
+    <seat x="0.02" y="0.4">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.25,0,-0.34" max="0.25,0.81,0.34"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_chair_02_slim.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-0.25,0,-0.34" max="0.25,0.81,0.34"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" col="1" x="1" y="21"/>
+          <view angle="135" x="-2" y="21" hm="true"/>
+          <view angle="225" row="1" x="-1" y="23" hm="true"/>
+          <view angle="315" col="1" row="1" y="23"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="LeftArm">
+      <box min="-0.25,0,-0.34" max="0.25,0.81,0.34"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="1" y="21"/>
+          <view angle="135" col="1" x="-2" y="21" hm="true"/>
+          <view angle="225" col="1" row="1" x="-1" y="23" hm="true"/>
+          <view angle="315" row="1" y="23"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

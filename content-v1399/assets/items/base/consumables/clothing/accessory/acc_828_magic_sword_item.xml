@@ -1,0 +1,231 @@
+<item.SpriteItem id="6870" name="Espada Mágica Play" desc="Uma espada energizada e forte" tags="rare,consumable,actionbar,wear,hand,usable,nopvp,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_828_magic_sword_icon.png" price="3590" minLevel="1" minCPLevel="340" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,2,0.4"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+25"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+50"/>
+  </data>
+  <textures>
+    <texture id="staff" source="items/base/consumables/clothing/accessory/acc_828_magic_sword_item.png" cols="4" rows="1"/>
+    <texture id="fx" source="items/base/consumables/clothing/accessory/acc_828_magic_sword_sfx.png" cols="2" rows="3"/>
+    <texture id="groundfx" source="items/base/consumables/clothing/accessory/acc_828_magic_sword_groundfx.png" cols="2" rows="2"/>
+    <texture id="itemfx" source="items/base/consumables/clothing/accessory/acc_828_magic_sword_itemfx.png" cols="2" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.4" max="0.4,2,0.4"/>
+      <layers>
+        <layer id="Sword01" texture="staff">
+          <view angle="45" y="8"/>
+          <view angle="135" y="8" hm="true"/>
+          <view angle="225" y="8"/>
+          <view angle="315" y="8" hm="true"/>
+        </layer>
+        <layer id="Sword02" texture="staff">
+          <view angle="45" col="1" y="8"/>
+          <view angle="135" col="1" y="8" hm="true"/>
+          <view angle="225" col="1" y="8"/>
+          <view angle="315" col="1" y="8" hm="true"/>
+        </layer>
+        <layer id="Sword03" texture="staff">
+          <view angle="45" col="2" y="8"/>
+          <view angle="135" col="2" y="8" hm="true"/>
+          <view angle="225" col="2" y="8"/>
+          <view angle="315" col="2" y="8" hm="true"/>
+        </layer>
+        <layer id="Sword04" texture="staff">
+          <view angle="45" col="3" y="8"/>
+          <view angle="135" col="3" y="8" hm="true"/>
+          <view angle="225" col="3" y="8"/>
+          <view angle="315" col="3" y="8" hm="true"/>
+        </layer>
+        <layer id="ItemFx01" texture="itemfx">
+          <view x="3" y="28"/>
+        </layer>
+        <layer id="ItemFx02" texture="itemfx">
+          <view col="1" x="-1" y="46"/>
+        </layer>
+        <layer id="ItemFx03" texture="itemfx">
+          <view row="1" x="-5" y="41"/>
+        </layer>
+        <layer id="ItemFx04" texture="itemfx">
+          <view col="1" row="1" x="-5" y="41"/>
+        </layer>
+        <layer id="GroundFx01" texture="groundfx">
+          <view y="19"/>
+        </layer>
+        <layer id="GroundFx02" texture="groundfx">
+          <view col="1" y="19"/>
+        </layer>
+        <layer id="GroundFx03" texture="groundfx">
+          <view row="1" y="19"/>
+        </layer>
+        <layer id="GroundFx04" texture="groundfx">
+          <view col="1" row="1" y="19"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Sword01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Sword02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Sword03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Sword04"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Sword01"/>
+          <layerref id="ItemFx01"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Sword02"/>
+          <layerref id="ItemFx02" a="0.8"/>
+          <layerref id="GroundFx01"/>
+        </frame>
+        <frame id="07">
+          <layerref id="Sword03"/>
+          <layerref id="ItemFx03" a="0.6"/>
+          <layerref id="GroundFx02"/>
+        </frame>
+        <frame id="08">
+          <layerref id="Sword04"/>
+          <layerref id="ItemFx04" a="0.4"/>
+          <layerref id="GroundFx03"/>
+        </frame>
+        <frame id="09">
+          <layerref id="Sword04"/>
+          <layerref id="GroundFx04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="01" duration="10"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="01" duration="30"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="09"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-17"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xa3f59c" a="0.7"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xa3f59c" a="0.8"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xa3f59c" a="0.9"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xa3f59c"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Light" color="0xa3f59c" a="0.9"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Light" color="0xa3f59c" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="ItemFx01" texture="itemfx">
+          <view x="3" y="28"/>
+        </layer>
+        <layer id="ItemFx02" texture="itemfx">
+          <view col="1" x="-1" y="46"/>
+        </layer>
+        <layer id="ItemFx03" texture="itemfx">
+          <view row="1" x="-5" y="41"/>
+        </layer>
+        <layer id="ItemFx04" texture="itemfx">
+          <view col="1" row="1" x="-5" y="41"/>
+        </layer>
+        <layer id="GroundFx01" texture="groundfx">
+          <view y="19"/>
+        </layer>
+        <layer id="GroundFx02" texture="groundfx">
+          <view col="1" y="19"/>
+        </layer>
+        <layer id="GroundFx03" texture="groundfx">
+          <view row="1" y="19"/>
+        </layer>
+        <layer id="GroundFx04" texture="groundfx">
+          <view col="1" row="1" y="19"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="ItemFx01" a="0"/>
+        </frame>
+        <frame id="02">
+          <layerref id="ItemFx01"/>
+        </frame>
+        <frame id="03">
+          <layerref id="ItemFx02"/>
+          <layerref id="GroundFx01"/>
+        </frame>
+        <frame id="04">
+          <layerref id="ItemFx03"/>
+          <layerref id="GroundFx02"/>
+        </frame>
+        <frame id="05">
+          <layerref id="ItemFx04"/>
+          <layerref id="GroundFx03"/>
+        </frame>
+        <frame id="06">
+          <layerref id="GroundFx04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="01" duration="43"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

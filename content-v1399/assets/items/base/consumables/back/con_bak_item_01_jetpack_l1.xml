@@ -1,0 +1,42 @@
+<item.SpriteItem desc="O destino é o espaço Sideral." dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" icon="items/base/consumables/back/icon_con_bak_item_01_jetpack_l1.png" id="1128" name="Jato à gás." tags="consumable,actionbar,wear,back,scifi,action_wearable_toggle" price="2700" minLevel="30" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.14,0.7,0.14" min="-0.14,0,-0.14"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+10,health+30"/>
+  </data>
+  <textures>
+    <texture cols="1" id="jetpack01" rows="1" source="items/base/consumables/back/con_bak_item_01_jetpack_l1.png"/>
+    <texture cols="3" id="vents" rows="1" source="items/base/consumables/back/con_bak_01_jetpack_vents.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.14,0.7,0.14" min="-0.14,0,-0.14"/>
+      <layers>
+        <layer id="jetpack_01" texture="jetpack01">
+          <view angle="45" y="14"/>
+          <view angle="135" hm="true" x="-1" y="14"/>
+          <view angle="225" y="14"/>
+          <view angle="315" hm="true" x="-1" y="14"/>
+        </layer>
+        <layer id="vent" texture="vents">
+          <view angle="45" x="8" y="-11"/>
+          <view angle="135" hm="true" x="-9" y="-11"/>
+          <view alpha="0" angle="225" col="2"/>
+          <view alpha="0" angle="315" col="3"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

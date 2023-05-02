@@ -1,0 +1,36 @@
+<item.SpriteItem name="Lanterna de Led" desc="Mais novo lançamento em iluminação pessoal e economia de energia." tags="action_holdable_toggle,consumable,light,actionbar,wear,hand,real,usable" icon="items/base/consumables/magic/icon_con_item_41_supertorch.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="1496" price="250" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.4,0,-0.13" max="0.3,0.1,0.13"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="chair"/>
+    <entry key="targetRange" value="2"/>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="storch" source="items/base/consumables/magic/con_item_41_supertorch.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="storch">
+      <box min="-0.4,0,-0.13" max="0.3,0.1,0.13"/>
+      <layers>
+        <layer id="storch" texture="storch">
+          <view angle="45" y="23"/>
+          <view angle="135" x="1" y="23" hm="true"/>
+          <view angle="225" col="3" x="1" y="21"/>
+          <view angle="315" col="3" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

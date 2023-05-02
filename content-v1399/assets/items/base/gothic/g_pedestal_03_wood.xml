@@ -1,0 +1,24 @@
+<item.SpriteItem id="1715" name="Pedestal de Madeira" desc="Para seus objetos preciosos." tags="table" icon="items/base/gothic/icon_g_pedestal_03_wood.png" tokens="500" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="50">
+  <volume>
+    <box min="-0.38,0,-0.38" max="0.38,1.136,0.38"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/gothic/g_pedestal_03_wood.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.38,0,-0.38" max="0.38,1.136,0.38"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="26">
+          <view y="-7"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

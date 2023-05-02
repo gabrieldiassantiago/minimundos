@@ -1,0 +1,158 @@
+<item.SpriteItem id="3005" name="Lustre Master" desc="Um elegante lustre para consumidores requintados." tags="misc" icon="items/base/modern/icon_m_ceiling_06_chandelier.png" minLevel="1" minCPLevel="1" gridActive="false" gridSnap="true" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="1000">
+  <volume>
+    <box min="-0.49,0.1,-0.49" max="0.49,3.25,0.49"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="grid" source="items/base/modern/m_discoball_ceiling.png" cols="1" rows="1"/>
+    <texture id="shadow" source="items/base/modern/m_lights_10_shadow.png" cols="1" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Base" source="items/base/modern/m_ceiling_06_chandelier.png" cols="1" rows="1"/>
+    <texture id="Flare" source="items/base/modern/m_lights_10_chandelier_on.png" cols="1" rows="1"/>
+    <texture id="Glow" source="items/base/modern/m_ceiling_06_lights.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Fan" y="0.25" depthBias="-2">
+      <box min="-0.49,2.8,-0.49" max="0.49,3,0.49"/>
+      <layers>
+        <layer id="Grid" texture="grid" y="-198">
+          <view angle="45" y="-77"/>
+          <view angle="135" y="-77" alpha="0.55" hm="true"/>
+          <view angle="225" y="-77" alpha="0.55"/>
+          <view angle="315" y="-77" alpha="0.55" hm="true"/>
+        </layer>
+        <layer id="On" texture="Base">
+          <view x="1" y="-115"/>
+        </layer>
+        <layer id="glow" texture="Glow">
+          <view x="1" y="-147"/>
+        </layer>
+        <layer id="Flare01" texture="Flare">
+          <view x="2" y="-102"/>
+        </layer>
+        <layer id="Flare02" texture="Flare">
+          <view x="64" y="-184"/>
+        </layer>
+        <layer id="Flare03" texture="Flare">
+          <view x="-62" y="-131"/>
+        </layer>
+        <layer id="Flare04" texture="Flare">
+          <view x="-33" y="-220"/>
+        </layer>
+        <layer id="Off" texture="Base">
+          <view x="1" y="-115"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="On"/>
+          <layerref id="Flare01" color="0xc9f6f6"/>
+          <layerref id="glow"/>
+          <layerref id="Grid"/>
+          <layerref id="glow"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="On"/>
+          <layerref id="Flare02"/>
+          <layerref id="glow"/>
+          <layerref id="Grid"/>
+          <layerref id="glow"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="On"/>
+          <layerref id="Flare03" color="0xcff7f7"/>
+          <layerref id="glow"/>
+          <layerref id="Grid"/>
+          <layerref id="glow"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="On"/>
+          <layerref id="Flare04"/>
+          <layerref id="glow"/>
+          <layerref id="Grid"/>
+          <layerref id="glow"/>
+        </frame>
+        <frame id="FrameOff">
+          <layerref id="Off"/>
+          <layerref id="Grid"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Shadow" depthBias="-2">
+      <box min="-0.49,0.1,-0.49" max="0.49,0.3,0.49"/>
+      <layers>
+        <layer id="Shadow" texture="shadow">
+          <view y="28"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="Shadow" a="0.5"/>
+        </frame>
+        <frame id="Frame_Off">
+          <layerref id="Shadow" a="0.56"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" x="-0.0312" y="1.5313" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light1" texture="light" align="middle">
+          <view y="-8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On1">
+          <layerref id="Light1" color="0xfaf9e1"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="On" framerate="4">
+      <frame id="Frame01" duration="2">
+        <noderef id="Fan" frame="Frame01"/>
+        <noderef id="Shadow" frame="Frame_01"/>
+        <noderef id="Diffuse" frame="On1"/>
+      </frame>
+      <frame id="Frame02" duration="2">
+        <noderef id="Fan" frame="Frame02"/>
+        <noderef id="Shadow" frame="Frame_01"/>
+        <noderef id="Diffuse" frame="On1"/>
+      </frame>
+      <frame id="Frame03" duration="2">
+        <noderef id="Fan" frame="Frame03"/>
+        <noderef id="Shadow" frame="Frame_01"/>
+        <noderef id="Diffuse" frame="On1"/>
+      </frame>
+      <frame id="Frame04" duration="2">
+        <noderef id="Fan" frame="Frame04"/>
+        <noderef id="Shadow" frame="Frame_01"/>
+        <noderef id="Diffuse" frame="On1"/>
+      </frame>
+    </animation>
+    <animation id="Off" framerate="2">
+      <frame id="Frame">
+        <noderef id="Fan" frame="FrameOff"/>
+        <noderef id="Shadow" frame="Frame_Off"/>
+      </frame>
+    </animation>
+  </animations>
+</item.SpriteItem>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="1749" name="Poste de Inox." desc="Poste baixo para limitar as filas." tags="admin,misc" icon="items/base/urban/icon_u_misc_01_bollard.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.12,0,-0.12" max="0.12,0.8,0.12"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="barrier" source="items/base/urban/u_misc_01_bollard.png" cols="1" rows="1"/>
+    <texture id="shadow" source="items/base/urban/u_misc_01_bollard_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="barrier">
+      <box min="-0.12,0,-0.12" max="0.12,0.8,0.12"/>
+      <layers>
+        <layer id="barrier" texture="barrier">
+          <view angle="45" x="1" y="15"/>
+          <view angle="135" x="-1" y="15" hm="true"/>
+          <view angle="225" x="1" y="15"/>
+          <view angle="315" x="-1" y="15" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="shadow">
+      <box min="-0.12,0,-0.12" max="0.12,0.8,0.12"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" x="37" y="51"/>
+          <view angle="135" x="-36" y="52" hm="true"/>
+          <view angle="225" x="-41" y="14" hm="true" vm="true"/>
+          <view angle="315" x="42" y="11" vm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

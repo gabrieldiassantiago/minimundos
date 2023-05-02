@@ -1,0 +1,30 @@
+<item.SpriteItem id="6490" name="Placa da Fama do MiniOscar" desc="Seja uma estrela de Hollywood" tags="rare,floor" icon="items/base/modern/icon_m_swoscarplaque.png" price="1" minLevel="1" minLevelType="4" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.5,0.012,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="red carpet" source="items/base/modern/m_swoscarplaque.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Swoscar Plaque" layer="surface">
+      <box min="-0.5,0,-0.5" max="0.5,0.012,0.5"/>
+      <layers>
+        <layer id="red carpet" texture="red carpet">
+          <view angle="45" x="1" y="36"/>
+          <view angle="135" x="-1" y="36" hm="true"/>
+          <view angle="225" col="1" x="-1" y="36"/>
+          <view angle="315" col="1" x="1" y="36" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

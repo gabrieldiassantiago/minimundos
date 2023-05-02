@@ -1,0 +1,27 @@
+<item.SpriteItem id="7541" name="Presente Circuito de Fevereiro" desc="Esta caixa de presente se transformará no dia 13 de Fevereiro [6 de 25]" tags="rare,destroy,misc" icon="items/base/consumables/clothing/accessory/acc_958_febbox_06_icon.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.45" max="0.35,0.4,0.45"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/accessory/acc_958_febbox_06_item.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node01">
+      <box min="-0.35,0,-0.45" max="0.35,0.4,0.45"/>
+      <layers>
+        <layer id="Layer" texture="Base" y="16">
+          <view angle="45" x="-2" y="8"/>
+          <view angle="135" x="2" y="8" hm="true"/>
+          <view angle="225" x="-2" y="8"/>
+          <view angle="315" x="2" y="8" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

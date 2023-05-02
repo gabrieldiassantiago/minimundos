@@ -1,0 +1,53 @@
+<f id="Top01_48_Star_white" parentId="Top01">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top01_48TorsoMaleBase_white" cId="Torso" s="items/base/consumables/clothing/top01/top01_48_star_m_white.png" pri="1"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_48TorsoFemaleBase_white" cId="Torso" s="items/base/consumables/clothing/top01/top01_48_star_f_white.png" pri="1"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Top01_14ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_short_arm_idle.png" pri="1"/>
+    <s id="Top01_14ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_short_arm_walk1.png" pri="1"/>
+    <s id="Top01_14ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_short_arm_walk2.png" pri="1"/>
+    <s id="Top01_14ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_short_arm_walk3.png" pri="1"/>
+    <s id="Top01_14ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_short_arm_sit.png" pri="1"/>
+    <s id="Top01_14ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_short_arm_throw.png" pri="1"/>
+    <s id="Top01_14ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_short_arm_raise.png" pri="1"/>
+    <c sId="Top01_14ArmIdleBase" a="1.00" b="49.9" ct="0.12" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_14ArmWalk1Base" a="1.00" b="49.9" ct="0.12" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_14ArmWalk2Base" a="1.00" b="49.9" ct="0.12" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_14ArmWalk3Base" a="1.00" b="49.9" ct="0.12" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_14ArmSitBase" a="1.00" b="49.9" ct="0.12" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_14ArmRaiseBase" a="1.00" b="49.9" ct="0.12" lId="Top01_Color1" lw="N"/>
+    <c sId="Top01_14ArmThrowBase" a="1.00" b="49.9" ct="0.12" lId="Top01_Color1" lw="N"/>
+    <s id="Top01_14ArmIdleStripe" cId="ArmIdle" s="items/base/consumables/clothing/top01/top01_14_stripe_idle.png" pri="1.1"/>
+    <c sId="Top01_14ArmIdleStripe" c="16645629" a="1.00" b="66.9" ct="1.51" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_14ArmWalk1Stripe" cId="ArmWalk1" s="items/base/consumables/clothing/top01/top01_14_stripe_walk1.png" pri="1.1"/>
+    <c sId="Top01_14ArmWalk1Stripe" c="16645629" a="1.00" b="66.9" ct="1.51" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_14ArmWalk2Stripe" cId="ArmWalk2" s="items/base/consumables/clothing/top01/top01_14_stripe_walk2.png" pri="1.1"/>
+    <c sId="Top01_14ArmWalk2Stripe" c="16645629" a="1.00" b="66.9" ct="1.51" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_14ArmWalk3Stripe" cId="ArmWalk3" s="items/base/consumables/clothing/top01/top01_14_stripe_walk3.png" pri="1.1"/>
+    <c sId="Top01_14ArmWalk3Stripe" c="16645629" a="1.00" b="66.9" ct="1.51" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_14ArmThrowStripe" cId="ArmThrow" s="items/base/consumables/clothing/top01/top01_14_stripe_throw.png" pri="1.1"/>
+    <c sId="Top01_14ArmThrowStripe" c="16645629" a="1.00" b="66.9" ct="1.51" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_14ArmSitStripe" cId="ArmSit" s="items/base/consumables/clothing/top01/top01_14_stripe_sit.png" pri="1.1"/>
+    <c sId="Top01_14ArmSitStripe" c="16645629" a="1.00" b="66.9" ct="1.51" lId="Top01_Color2" lw="N"/>
+    <s id="Top01_14ArmRaiseStripe" cId="ArmRaise" s="items/base/consumables/clothing/top01/top01_14_stripe_raise.png" pri="1.1"/>
+    <c sId="Top01_14ArmRaiseStripe" c="16645629" a="1.00" b="66.9" ct="1.51" lId="Top01_Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_48_white" icon="items/base/consumables/clothing/top01/top01_48_icon_star_white.png" w="48" h="48"/>
+    <s id="IconTop01_48IconBase_white" cId="IconTop01_48_white" s="items/base/consumables/clothing/top01/top01_48_icon_star_white.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_17Color1" name="Color 1" desc="Choose a color" sel="Black" seld="GreenDark">
+      <c id="Black" icon="$bu/icon_black.png" a="1.00" b="49.9" ct="0.12" lId="Top01_Color1"/>
+    </b>
+    <b id="Top01_17Color2" name="Color 2" desc="Choose a color" sel="White" seld="Orange">
+      <c id="White" icon="$bu/icon_white.png" c="16645629" a="1.00" b="66.9" ct="1.51" lId="Top01_Color2"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

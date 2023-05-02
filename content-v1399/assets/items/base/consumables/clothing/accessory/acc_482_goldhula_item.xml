@@ -1,0 +1,156 @@
+<item.SpriteItem id="5584" name="Bambolê Deluxe Play" desc="Um divertido bambolê de plástico" tags="rare,consumable,actionbar,usable,back,action_wearable_toggle" icon="items/base/consumables/clothing/accessory/acc_482_goldhula_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.4" max="0.1,0.1,0.4"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+50,health+50"/>
+    <entry key="action_attributes" value="arcane+25"/>
+  </data>
+  <textures>
+    <texture id="texture" source="items/base/consumables/clothing/accessory/acc_482_goldhula_item.png" cols="1" rows="1"/>
+    <texture id="sparkle" source="items/base/consumables/clothing/accessory/acc_482_goldhula_sparkle.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.4" max="0.1,0.1,0.4"/>
+      <layers>
+        <layer id="texture" texture="texture" y="18">
+          <view angle="45" y="10"/>
+          <view angle="135" y="10" hm="true"/>
+          <view angle="225" y="10"/>
+          <view angle="315" y="10" hm="true"/>
+        </layer>
+        <layer id="s_01" texture="sparkle" y="9">
+          <view angle="45" x="-19" y="-61"/>
+          <view angle="135" x="19" y="-61"/>
+          <view angle="225" x="-19" y="-61"/>
+          <view angle="315" x="19" y="-61"/>
+        </layer>
+        <layer id="s_02" texture="sparkle" y="9">
+          <view angle="45" col="1" x="-19" y="-61"/>
+          <view angle="135" col="1" x="19" y="-61"/>
+          <view angle="225" col="1" x="-19" y="-61"/>
+          <view angle="315" col="1" x="19" y="-61"/>
+        </layer>
+        <layer id="s_03" texture="sparkle" y="9">
+          <view angle="45" col="2" x="-19" y="-61"/>
+          <view angle="135" col="2" x="19" y="-61"/>
+          <view angle="225" col="2" x="-19" y="-61"/>
+          <view angle="315" col="2" x="19" y="-61"/>
+        </layer>
+        <layer id="s_04" texture="sparkle" y="9">
+          <view angle="45" col="1" x="-19" y="-61" hm="true"/>
+          <view angle="135" col="1" x="19" y="-61" hm="true"/>
+          <view angle="225" col="1" x="-19" y="-61" hm="true"/>
+          <view angle="315" col="1" x="19" y="-61" hm="true"/>
+        </layer>
+        <layer id="s_05" texture="sparkle" y="9">
+          <view angle="45" x="-19" y="-61" hm="true"/>
+          <view angle="135" x="19" y="-61" hm="true"/>
+          <view angle="225" x="-19" y="-61" hm="true"/>
+          <view angle="315" x="19" y="-61" hm="true"/>
+        </layer>
+        <layer id="s_06" texture="sparkle" y="9">
+          <view angle="45" x="10" y="-8"/>
+          <view angle="135" x="-10" y="-8"/>
+          <view angle="225" x="10" y="-8"/>
+          <view angle="315" x="-10" y="-8"/>
+        </layer>
+        <layer id="s_07" texture="sparkle" y="9">
+          <view angle="45" col="1" x="10" y="-8"/>
+          <view angle="135" col="1" x="-10" y="-8"/>
+          <view angle="225" col="1" x="10" y="-8"/>
+          <view angle="315" col="1" x="-10" y="-8"/>
+        </layer>
+        <layer id="s_08" texture="sparkle" y="9">
+          <view angle="45" col="2" x="10" y="-8"/>
+          <view angle="135" col="2" x="-10" y="-8"/>
+          <view angle="225" col="2" x="10" y="-8"/>
+          <view angle="315" col="2" x="-10" y="-8"/>
+        </layer>
+        <layer id="s_09" texture="sparkle" y="9">
+          <view angle="45" col="1" x="10" y="-8" hm="true"/>
+          <view angle="135" col="1" x="-10" y="-8" hm="true"/>
+          <view angle="225" col="1" x="10" y="-8" hm="true"/>
+          <view angle="315" col="1" x="-10" y="-8" hm="true"/>
+        </layer>
+        <layer id="s_10" texture="sparkle" y="9">
+          <view angle="45" x="10" y="-8" hm="true"/>
+          <view angle="135" x="-10" y="-8" hm="true"/>
+          <view angle="225" x="10" y="-8" hm="true"/>
+          <view angle="315" x="-10" y="-8" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="a_01">
+          <layerref id="texture"/>
+          <layerref id="s_01"/>
+        </frame>
+        <frame id="a_02">
+          <layerref id="texture"/>
+          <layerref id="s_02"/>
+        </frame>
+        <frame id="a_03">
+          <layerref id="texture"/>
+          <layerref id="s_03"/>
+        </frame>
+        <frame id="a_04">
+          <layerref id="texture"/>
+          <layerref id="s_04"/>
+        </frame>
+        <frame id="a_05">
+          <layerref id="texture"/>
+          <layerref id="s_05"/>
+        </frame>
+        <frame id="base">
+          <layerref id="texture"/>
+        </frame>
+        <frame id="a_06">
+          <layerref id="texture"/>
+          <layerref id="s_06"/>
+        </frame>
+        <frame id="a_07">
+          <layerref id="texture"/>
+          <layerref id="s_07"/>
+        </frame>
+        <frame id="a_08">
+          <layerref id="texture"/>
+          <layerref id="s_08"/>
+        </frame>
+        <frame id="a_09">
+          <layerref id="texture"/>
+          <layerref id="s_09"/>
+        </frame>
+        <frame id="a_10">
+          <layerref id="texture"/>
+          <layerref id="s_10"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Sparkle" framerate="16">
+          <frameref id="a_01"/>
+          <frameref id="a_02"/>
+          <frameref id="a_03" duration="2"/>
+          <frameref id="a_04"/>
+          <frameref id="a_05"/>
+          <frameref id="base" duration="10"/>
+          <frameref id="a_06"/>
+          <frameref id="a_07"/>
+          <frameref id="a_08"/>
+          <frameref id="a_09"/>
+          <frameref id="a_10"/>
+          <frameref id="base" duration="45"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

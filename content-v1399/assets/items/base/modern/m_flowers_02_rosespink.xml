@@ -1,0 +1,35 @@
+<item.SpriteItem id="1922" name="Rosas Rosa" desc="Rosa é amizade verdadeira. Ou amor sincero." tags="rare,misc,plant" icon="items/base/modern/icon_m_flowers_02_rosespink.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="105">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.74,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_flowers_02_rosespink.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,0.74,0.25"/>
+      <layers>
+        <layer id="jar" texture="Texture" y="15">
+          <view angle="45" x="1" y="-3"/>
+          <view angle="135" y="-4" hm="true"/>
+          <view angle="225" col="1" y="-4"/>
+          <view angle="315" col="1" x="1" y="-3" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="jar"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

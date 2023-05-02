@@ -1,0 +1,30 @@
+<item.SpriteItem id="6635" name="Canto de Banco Clube Deluxe" desc="Um luxuoso banco de bar [7 de 16]" tags="rare,chair,stackable" icon="items/base/modern/m_deluxeclub_07_diningseatcorner_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.42,0,-0.49" max="0.49,0.87,0.42"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_deluxeclub_07_diningseatcorner_item.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="seat">
+      <box min="-0.42,0,-0.49" max="0.49,0.87,0.42"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45" y="-33"/>
+          <view angle="135" col="1" x="-3" y="-37"/>
+          <view angle="225" col="2" x="-1" y="-32"/>
+          <view angle="315" col="1" x="2" y="-36" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

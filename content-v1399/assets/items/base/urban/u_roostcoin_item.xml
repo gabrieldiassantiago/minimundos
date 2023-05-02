@@ -1,0 +1,111 @@
+<item.SpriteItem id="4554" name="Moeda Roost" desc="Moeda para pegar" tags="rare,misc,pickup" icon="items/base/urban/u_roostcoin_icon.png" price="10" minLevel="1" minLevelType="2" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.6,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_pick_up.as"/>
+    <event id="action" script="scripts/item/action_pick_up.as"/>
+  </events>
+  <actions>
+    <action id="Pick Up" event="action"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="action_attributes_secondary" value="speed+5"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/urban/u_roostcoin_item.png" cols="4" rows="1"/>
+    <texture id="Texture01" source="items/base/modern/m_trophy_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,0.6,0.2"/>
+      <layers>
+        <layer id="coin01" texture="Texture" y="-5">
+          <view x="-1"/>
+        </layer>
+        <layer id="coin02" texture="Texture" y="-5">
+          <view col="1" x="-1" y="-1"/>
+        </layer>
+        <layer id="coin03" texture="Texture" y="-5">
+          <view col="2"/>
+        </layer>
+        <layer id="coin04" texture="Texture" y="-5">
+          <view col="3" x="-5"/>
+        </layer>
+        <layer id="Shadow" texture="Texture01">
+          <view y="20" alpha="0.5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Spin01">
+          <layerref id="Shadow"/>
+          <layerref id="coin01"/>
+        </frame>
+        <frame id="Spin02">
+          <layerref id="Shadow"/>
+          <layerref id="coin02"/>
+        </frame>
+        <frame id="Spin03">
+          <layerref id="Shadow"/>
+          <layerref id="coin03"/>
+        </frame>
+        <frame id="Spin04">
+          <layerref id="Shadow"/>
+          <layerref id="coin04"/>
+        </frame>
+        <frame id="Fade01">
+          <layerref id="Shadow" a="0.8"/>
+          <layerref id="coin01" a="0.8"/>
+        </frame>
+        <frame id="Fade02">
+          <layerref id="Shadow" a="0.6"/>
+          <layerref id="coin02" y="-5" a="0.6"/>
+        </frame>
+        <frame id="Fade03">
+          <layerref id="Shadow" a="0.4"/>
+          <layerref id="coin03" y="-10" a="0.4"/>
+        </frame>
+        <frame id="Fade04">
+          <layerref id="Shadow" a="0.2"/>
+          <layerref id="coin04" y="-10" a="0.2"/>
+        </frame>
+        <frame id="Fade05">
+          <layerref id="Shadow" a="0.1"/>
+          <layerref id="coin04" y="-15" a="0"/>
+        </frame>
+        <frame id="Fade06">
+          <layerref id="Shadow" a="0.8"/>
+          <layerref id="coin04" y="2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Visible" framerate="8" syncFrames="false">
+          <frameref id="Spin01"/>
+          <frameref id="Spin02"/>
+          <frameref id="Spin03"/>
+          <frameref id="Spin04"/>
+        </animation>
+        <animation id="Invisible" framerate="4" syncFrames="false">
+          <frameref id="Fade05"/>
+        </animation>
+        <animation id="Show" framerate="8" loop="false" syncFrames="false">
+          <frameref id="Fade05"/>
+          <frameref id="Fade04"/>
+          <frameref id="Fade03"/>
+          <frameref id="Fade02"/>
+          <frameref id="Fade01"/>
+          <frameref id="Fade06"/>
+        </animation>
+        <animation id="Hide" framerate="8" loop="false" syncFrames="false">
+          <frameref id="Spin01"/>
+          <frameref id="Fade01"/>
+          <frameref id="Fade02"/>
+          <frameref id="Fade03"/>
+          <frameref id="Fade05"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

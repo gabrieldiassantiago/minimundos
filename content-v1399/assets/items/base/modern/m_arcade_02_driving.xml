@@ -1,0 +1,162 @@
+<item.WidgetItem id="1041" name="Jogo de Corrida Arcade" desc="Uma máquina arcade com jogo de corrida." tags="widget,misc" icon="items/base/modern/icon_m_arcade_02_driving.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_arcade.swf" price="350" tokens="3500" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.49,2.2,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <actions>
+    <action id="Complete">
+      <eval>
+        <func type="range" id="Score" input="score"/>
+        <func type="relational" id="Game Name" input="name" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+    <action id="Ranking">
+      <eval>
+        <func type="range" id="Rank" input="rank"/>
+        <func type="relational" id="Game Name" input="name" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_xml_path" value="widgets/assets/arcade/control.mxml"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="arcade_genre" value="racing"/>
+    <entry key="arcade_art" value="driving"/>
+    <entry key="widget_background_override" value="widget/GrafittiBG.jpg"/>
+    <entry key="show_advert" value="false"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="iframeWidget" value="true"/>
+  </data>
+  <navigate position="infront" sitRange="1.00" standRange="1.00" targetRange="1.00"/>
+  <textures>
+    <texture id="Arcade" source="items/base/modern/m_arcade_02_driving.png" cols="2" rows="1"/>
+    <texture id="gear box" source="items/base/modern/m_arcade_02_driving_addons.png" cols="2" rows="2"/>
+    <texture id="screen image" source="items/base/modern/m_arcade_02_driving_screen.png" cols="1" rows="1"/>
+    <texture id="logo" source="items/base/modern/m_arcade_02_driving_logo.png" cols="1" rows="1"/>
+    <texture id="animation" source="items/base/modern/m_arcade_02_drivinganim.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_arcade_racing.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="-0.5,0,-0.5" max="0.49,2.2,0.5"/>
+      <layers>
+        <layer id="backgear" texture="gear box">
+          <view angle="45" alpha="0"/>
+          <view angle="135" col="1" alpha="0"/>
+          <view angle="225" row="1" x="-64" y="-43"/>
+          <view angle="315" col="1" row="1" x="64" y="-43" hm="true"/>
+        </layer>
+        <layer id="Arcade" texture="Arcade">
+          <view angle="45" x="5" y="59" hm="true"/>
+          <view angle="135" x="-6" y="60"/>
+          <view angle="225" col="1" x="2" y="43"/>
+          <view angle="315" col="1" x="-1" y="42" hm="true"/>
+        </layer>
+        <layer id="screen" texture="screen image">
+          <view angle="45" x="-1" y="-53" hm="true"/>
+          <view angle="135" y="-53"/>
+          <view angle="225" col="1" x="70" y="98" alpha="0"/>
+          <view angle="315" col="1" x="-70" y="98" alpha="0" hm="true"/>
+        </layer>
+        <layer id="gear box" texture="gear box">
+          <view angle="45" col="1" x="68" y="-18" hm="true"/>
+          <view angle="135" col="1" x="-19" y="8"/>
+          <view angle="225" row="1" x="63" alpha="0"/>
+          <view angle="315" col="1" row="1" x="-5" alpha="0" hm="true"/>
+        </layer>
+        <layer id="gearbox01" texture="gear box">
+          <view angle="45" x="16" y="9" hm="true"/>
+          <view angle="135" x="-69" y="-16"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="3"/>
+        </layer>
+        <layer id="ani01" texture="animation">
+          <view angle="45" x="-1" y="-52" hm="true"/>
+          <view angle="135" y="-52"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="ani02" texture="animation">
+          <view angle="45" col="1" x="-1" y="-52" hm="true"/>
+          <view angle="135" col="1" y="-52"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="ani03" texture="animation">
+          <view angle="45" col="2" x="-1" y="-52" hm="true"/>
+          <view angle="135" col="2" y="-52"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="logo" texture="logo">
+          <view angle="45" y="-123" hm="true"/>
+          <view angle="135" y="-122"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="backgear"/>
+          <layerref id="Arcade"/>
+          <layerref id="gear box"/>
+          <layerref id="screen"/>
+          <layerref id="gearbox01"/>
+          <layerref id="ani01"/>
+          <layerref id="logo"/>
+        </frame>
+        <frame id="02">
+          <layerref id="backgear"/>
+          <layerref id="Arcade"/>
+          <layerref id="gear box"/>
+          <layerref id="screen"/>
+          <layerref id="gearbox01"/>
+          <layerref id="ani02"/>
+          <layerref id="logo"/>
+        </frame>
+        <frame id="03">
+          <layerref id="backgear"/>
+          <layerref id="Arcade"/>
+          <layerref id="gear box"/>
+          <layerref id="screen"/>
+          <layerref id="gearbox01"/>
+          <layerref id="logo"/>
+          <layerref id="ani03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.4" s="4.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" x="1" hm="true"/>
+          <view angle="225" col="1" x="-6"/>
+          <view angle="315" col="1" x="8" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

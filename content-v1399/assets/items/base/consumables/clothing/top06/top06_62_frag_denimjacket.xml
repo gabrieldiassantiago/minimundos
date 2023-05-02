@@ -1,0 +1,25 @@
+<f id="Top06_62KanyeDenimJaket" parentId="Top06">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top06_62TorsoBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_62_denim_torso_m.png" pri="4"/>
+    </g>
+    <g id="Female">
+      <s id="Top06_62TorsoBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_62_denim_torso_f.png" pri="4"/>
+    </g>
+  </b>
+  <g id="LongT" icon="$bm/icon_m_tshirt.png">
+    <s id="Top06_62ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_62_idle.png" pri="4"/>
+    <s id="Top06_62ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_62_walk1.png" pri="4"/>
+    <s id="Top06_62ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_62_walk2.png" pri="4"/>
+    <s id="Top06_62ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_62_walk3.png" pri="4"/>
+    <s id="Top06_62ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_62_sit.png" pri="4"/>
+    <s id="Top06_62ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_62_throw.png" pri="4"/>
+    <s id="Top06_62ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_62_raise.png" pri="4"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_62" icon="items/base/consumables/clothing/top06/top06_62_denim_icon_a.png" w="48" h="48"/>
+    <s id="IconTop06_62IconRare" cId="IconTop06_62" s="items/base/consumables/clothing/top01/top01_rare.png" pri="2"/>
+    <s id="IconTop06_62Base" cId="IconTop06_62" s="items/base/consumables/clothing/top06/top06_62_denim_icon_1.png"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

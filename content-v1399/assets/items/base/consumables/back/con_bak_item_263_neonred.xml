@@ -1,0 +1,68 @@
+<item.SpriteItem id="5927" name="Asas Gárgula Neon Play" desc="A festa termina hoje a noite!" tags="rare,back,consumable,actionbar,wear,action_wearable_toggle" icon="items/base/consumables/back/con_bak_icon_263_neonred.png" price="28880" minLevelType="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" minLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.2333,0.49"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="fire+60"/>
+    <entry key="action_attributes_secondary" value="health+60,speed+60"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Gargoyle Wings" source="items/base/consumables/back/con_bak_item_263_neonred.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0.2333,0.49"/>
+      <layers>
+        <layer id="Gargoyle Wings" texture="Gargoyle Wings">
+          <view angle="45" y="60"/>
+          <view angle="135" y="60" hm="true"/>
+          <view angle="225" col="1" y="60"/>
+          <view angle="315" col="1" y="60" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Gargoyle Wings" texture="Gargoyle Wings">
+          <view angle="45" y="60"/>
+          <view angle="135" y="60" hm="true"/>
+          <view angle="225" col="1" y="60"/>
+          <view angle="315" col="1" y="60" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Gargoyle Wings" a="0.3"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="2.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf04f4f"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

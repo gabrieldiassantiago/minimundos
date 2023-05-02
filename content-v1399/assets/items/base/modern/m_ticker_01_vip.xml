@@ -1,0 +1,84 @@
+<item.WidgetItem id="2020" name="Luminoso Eletrônico" desc="Mensagem personalizada pelo dono." tags="wall,widget" icon="items/base/modern/icon_m_ticker_01_vip.png" price="275" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" widget="widgets/widget_ticker.swf">
+  <volume>
+    <box min="0,0,-2" max="0.001,0.7,1.5"/>
+  </volume>
+  <events>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="Show" trigger="false" event="widget_action(SHOW)"/>
+    <action id="Hide" trigger="false" event="widget_action(HIDE)"/>
+    <action id="Set Text" trigger="false" event="widget_action(SETMESSAGE)">
+      <params>
+        <param type="string" id="Text" label="Set signboard text "/>
+      </params>
+    </action>
+  </actions>
+  <data>
+    <entry key="frame" value="modern"/>
+    <entry key="widget_load_policy" value="view"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="renderWidth" value="500"/>
+    <entry key="renderHeight" value="50"/>
+  </data>
+  <navigate position="infront" sitRange="4.00" standRange="3.00" targetRange="1.00" usableRange="-1.00" accessibleRange="2.00"/>
+  <textures>
+    <texture id="glass" source="items/base/modern/m_ticker_01_vip_glass.png" cols="1" rows="1"/>
+    <texture id="light" source="items/base/modern/m_ticker_01_vip_light.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/modern/m_ticker_01_vip.png" cols="1" rows="1"/>
+    <texture id="back" source="items/base/modern/m_ticker_01_vip_back.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="frame">
+      <box min="0,0,-2" max="0.001,0.7,1.5"/>
+      <layers>
+        <layer id="back" texture="back" align="middle">
+          <view angle="45" x="-11" y="-21"/>
+          <view angle="135" x="-20" y="-35" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="WidgetLayer" type="panel" texture="Texture" w="3.1" h="0.35">
+          <view angle="45" x="-6" y="-21"/>
+          <view angle="135" col="1" x="-24" y="-36"/>
+        </layer>
+        <layer id="base" texture="Texture" align="middle">
+          <view angle="45" x="-16" y="-17"/>
+          <view angle="135" x="-15" y="-31" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen" texture="glass" align="middle">
+          <view angle="45" x="-2" y="-23"/>
+          <view angle="135" x="-28" y="-36" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="1.4" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="-2" y="22" hm="true"/>
+          <view angle="135" x="-5" y="18"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" blend="add"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

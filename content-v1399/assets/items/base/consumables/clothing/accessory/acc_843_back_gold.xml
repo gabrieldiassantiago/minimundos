@@ -1,0 +1,101 @@
+<item.SpriteItem id="0" name="deluxebag" desc="An item" tags="wearable, consumable, actionbar" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+  </volume>
+  <textures>
+    <texture id="CloakTop" source="items/base/consumables/clothing/accessory/acc_843_back_gold.png" cols="5" rows="1"/>
+    <texture id="Sit" source="items/base/consumables/clothing/accessory/acc_843_back_gold.png" cols="5" rows="1"/>
+    <texture id="Flare" source="items/base/consumables/clothing/accessory/acc_843_item_gold_flare.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+      <layers>
+        <layer id="CapeTop" texture="CloakTop">
+          <view angle="0" x="-3" y="35" hm="true"/>
+          <view angle="45" col="3" x="4" y="38"/>
+          <view angle="90" col="4" x="-1" y="37"/>
+          <view angle="135" col="3" x="-4" y="38" hm="true"/>
+          <view angle="180" x="2" y="35"/>
+          <view angle="225" col="1" y="32"/>
+          <view angle="270" col="2" y="28"/>
+          <view angle="315" col="1" y="32" hm="true"/>
+        </layer>
+        <layer id="Sparkle01" texture="Flare">
+          <view angle="0" x="-8" y="3"/>
+          <view angle="45" x="-6" y="8"/>
+          <view angle="90" x="-9" y="6"/>
+          <view angle="135" x="8" y="8" hm="true"/>
+          <view angle="180" x="8" y="4" hm="true"/>
+          <view angle="225" x="14" y="4"/>
+          <view angle="270" x="12"/>
+          <view angle="315" x="-14" y="4" hm="true"/>
+        </layer>
+        <layer id="Sparkle02" texture="Flare">
+          <view angle="0" col="1" x="-9" y="3"/>
+          <view angle="45" col="1" x="-7" y="8"/>
+          <view angle="90" col="1" x="-10" y="6"/>
+          <view angle="135" col="1" x="9" y="8" hm="true"/>
+          <view angle="180" col="1" x="9" y="4" hm="true"/>
+          <view angle="225" col="1" x="13" y="4"/>
+          <view angle="270" col="1" x="11"/>
+          <view angle="315" col="1" x="-13" y="4" hm="true"/>
+        </layer>
+        <layer id="Sparkle03" texture="Flare">
+          <view angle="0" col="2" x="-9" y="3"/>
+          <view angle="45" col="2" x="-7" y="8"/>
+          <view angle="90" col="2" x="-10" y="6"/>
+          <view angle="135" col="2" x="9" y="8" hm="true"/>
+          <view angle="180" col="2" x="8" y="4" hm="true"/>
+          <view angle="225" col="2" x="13" y="4"/>
+          <view angle="270" col="2" x="11"/>
+          <view angle="315" col="2" x="-13" y="4" hm="true"/>
+        </layer>
+        <layer id="Sit" texture="Sit">
+          <view angle="45" col="1" x="5" y="35" hm="true"/>
+          <view angle="135" col="1" x="-6" y="35"/>
+          <view angle="225" col="3" x="-3" y="25"/>
+          <view angle="315" col="3" x="3" y="25" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame001">
+          <layerref id="CapeTop"/>
+          <layerref id="Sparkle01"/>
+        </frame>
+        <frame id="Frame002">
+          <layerref id="CapeTop"/>
+          <layerref id="Sparkle02"/>
+        </frame>
+        <frame id="Frame003">
+          <layerref id="CapeTop"/>
+          <layerref id="Sparkle03"/>
+        </frame>
+        <frame id="Sit">
+          <layerref id="Sit"/>
+        </frame>
+        <frame id="Frame004">
+          <layerref id="CapeTop"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="Frame001"/>
+          <frameref id="Frame002"/>
+          <frameref id="Frame003"/>
+          <frameref id="Frame002"/>
+          <frameref id="Frame001"/>
+          <frameref id="Frame004" duration="30"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="Frame001"/>
+          <frameref id="Frame002"/>
+          <frameref id="Frame003"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

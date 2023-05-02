@@ -1,0 +1,137 @@
+<f id="WetSuit" parentId="Suits">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="WetSuitMTorsoBase" cId="Torso" s="$bm/tshirt_torso.png" pri="1"/>
+      <s id="WetSuitMTorsoDecal" cId="Torso" s="items/base/consumables/clothing/suits/suit_50_torso_m_decal.png" pri="1.1"/>
+      <c sId="WetSuitMTorsoBase" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+      <c sId="WetSuitMTorsoDecal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="WetSuitFTorsoBase" cId="Torso" s="$bf/tshirt_torso.png" pri="1"/>
+      <s id="WetSuitFTorsoDecal" cId="Torso" s="items/base/consumables/clothing/suits/suit_50_torso_f_decal.png" pri="1.1"/>
+      <c sId="WetSuitFTorsoBase" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+      <c sId="WetSuitFTorsoDecal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Arms">
+    <s id="WetsuitArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_long_arm_idle.png" pri="1"/>
+    <s id="WetsuitArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_long_arm_walk1.png" pri="1"/>
+    <s id="WetsuitArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_long_arm_walk2.png" pri="1"/>
+    <s id="WetsuitArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_long_arm_walk3.png" pri="1"/>
+    <s id="WetsuitArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_long_arm_sit.png" pri="1"/>
+    <c sId="WetsuitArmIdleBase" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <c sId="WetsuitArmWalk1Base" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <c sId="WetsuitArmWalk2Base" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <c sId="WetsuitArmWalk3Base" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <c sId="WetsuitArmSitBase" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <s id="WetsuitArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_long_arm_throw.png" pri="1"/>
+    <s id="WetsuitArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_long_arm_raise.png" pri="1"/>
+    <c sId="WetsuitArmThrowBase" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <c sId="WetsuitArmRaiseBase" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <s id="WetsuitArmIdleDecal" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_50_arm_idle_decal.png" pri="1"/>
+    <s id="WetsuitArmWalk1Decal" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_50_arm_walk1_decal.png" pri="1"/>
+    <s id="WetsuitArmWalk2Decal" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_50_arm_walk2_decal.png" pri="1"/>
+    <s id="WetsuitArmWalk3Decal" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_50_arm_walk3_decal.png" pri="1"/>
+    <s id="WetsuitArmSitDecal" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_50_arm_sit_decal.png" pri="1"/>
+    <c sId="WetsuitArmIdleDecal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    <c sId="WetsuitArmWalk1Decal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    <c sId="WetsuitArmWalk2Decal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    <c sId="WetsuitArmWalk3Decal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    <c sId="WetsuitArmSitDecal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    <s id="WetsuitArmThrowDecal" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_50_arm_throw_decal.png" pri="1"/>
+    <s id="WetsuitArmRaiseDecal" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_50_arm_raise_decal.png" pri="1"/>
+    <c sId="WetsuitArmThrowDecal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    <c sId="WetsuitArmRaiseDecal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+  </g>
+  <g id="SkinnyChexBase" name="Legs" icon="$bu/icon_legs_trouser.png">
+    <s id="WetsuitLegIdleBase" cId="LegIdle" s="$bu/skinny_leg_idle.png" pri="1"/>
+    <s id="WetsuitLegWalk1Base" cId="LegWalk1" s="$bu/skinny_leg_walk1.png" pri="1"/>
+    <s id="WetsuitLegWalk2Base" cId="LegWalk2" s="$bu/skinny_leg_walk2.png" pri="1"/>
+    <s id="WetsuitLegWalk3Base" cId="LegWalk3" s="$bu/skinny_leg_walk3.png" pri="1"/>
+    <s id="WetsuitLegWalk4Base" cId="LegWalk4" s="$bu/skinny_leg_walk4.png" pri="1"/>
+    <s id="WetsuitLegSitUpperBase" cId="LegSitUpper" s="$bu/skinny_sit_upper.png" pri="1"/>
+    <s id="WetsuitLegSitLowerBase" cId="LegSitLower" s="$bu/skinny_sit_lower.png" pri="1"/>
+    <c sId="WetsuitLegIdleBase" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <c sId="WetsuitLegWalk1Base" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <c sId="WetsuitLegWalk2Base" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <c sId="WetsuitLegWalk3Base" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <c sId="WetsuitLegWalk4Base" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <c sId="WetsuitLegSitUpperBase" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <c sId="WetsuitLegSitLowerBase" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <s id="WetsuitLegIdleDecal" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_50_leg_idle_decal.png" pri="1.1"/>
+    <s id="WetsuitLegWalk1Decal" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_50_leg_walk1_decal.png" pri="1.1"/>
+    <s id="WetsuitLegWalk2Decal" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_50_leg_walk2_decal.png" pri="1.1"/>
+    <s id="WetsuitLegWalk3Decal" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_50_leg_walk3_decal.png" pri="1.1"/>
+    <s id="WetsuitLegWalk4Decal" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_50_leg_walk4_decal.png" pri="1.1"/>
+    <s id="WetsuitLegSitUpperDecal" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_50_leg_sit_upper_decal.png" pri="1.1"/>
+    <c sId="WetsuitLegIdleDecal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    <c sId="WetsuitLegWalk1Decal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    <c sId="WetsuitLegWalk2Decal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    <c sId="WetsuitLegWalk3Decal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    <c sId="WetsuitLegWalk4Decal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+    <c sId="WetsuitLegSitUpperDecal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="Icon_Wetsuit" icon="items/base/consumables/clothing/suits/suit_39_icon_furry.png" w="48" h="48" exurl="items/base/consumables/clothing/suits/suit_50_icon_wetsuit.png"/>
+    <s id="IconBot02_VIP" cId="Icon_Wetsuit" s="items/base/shared/s_vipbadge.png" pri="1"/>
+    <s id="IconWetsuit_Decal" cId="Icon_Wetsuit" s="items/base/consumables/clothing/suits/icon_suit_50_wetsuit_2.png" pri="1.1"/>
+    <s id="IconWetsuit_Base" cId="Icon_Wetsuit" s="items/base/consumables/clothing/suits/icon_suit_50_wetsuit_1.png" pri="1"/>
+    <c sId="IconWetsuit_Base" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1" lw="N"/>
+    <c sId="IconWetsuit_Decal" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="WetSuit_Color1" name="Color1" desc="Choose a color" sel="Black" seld="Black">
+      <c id="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="66.9" ct="1.54" lId="WetSuit_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7237230" a="1.00" b="65.3" ct="1.54" lId="WetSuit_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="46.3" ct="1.14" lId="WetSuit_Color1"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16238289" a="0.88" b="35.3" ct="1.52" lId="WetSuit_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="64.2" ct="1.05" lId="WetSuit_Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="9719070" a="1.00" b="77.0" ct="1.54" lId="WetSuit_Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.85" b="23.6" ct="1.15" lId="WetSuit_Color1"/>
+      <c id="Green" name="Green" icon="$bu/icon_green.png" c="3826479" a="1.00" b="68.1" ct="1.54" lId="WetSuit_Color1"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="47.4" ct="1.04" lId="WetSuit_Color1"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="38.3" ct="1.61" lId="WetSuit_Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="46.3" ct="1.14" lId="WetSuit_Color1"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="8758471" a="1.00" b="51.1" ct="1.54" lId="WetSuit_Color1"/>
+      <c id="FadedBlue" name="Faded blue" icon="$bu/icon_fadedblue.png" c="4745356" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color1"/>
+      <c id="MedBlue" name="Jean blue" icon="$bu/icon_medblue.png" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color1"/>
+      <c id="DarkBlue" icon="$bu/icon_darkblue.png" c="3822448" a="1.00" b="51.1" ct="1.54" lId="WetSuit_Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="6041443" a="1.00" b="68.1" ct="1.54" lId="WetSuit_Color1"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.6" ct="0.76" lId="WetSuit_Color1"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5525030" a="1.00" b="65.3" ct="1.54" lId="WetSuit_Color1"/>
+      <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="4338962" a="1.00" b="65.3" ct="1.54" lId="WetSuit_Color1"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.87" b="49.1" ct="1.05" lId="WetSuit_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color1"/>
+    </b>
+    <b id="WetSuit_Color2" name="Color2" desc="Choose a color" sel="MedBlue" seld="Jean blue">
+      <c id="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="66.9" ct="1.54" lId="WetSuit_Color2"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7237230" a="1.00" b="65.3" ct="1.54" lId="WetSuit_Color2"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="46.3" ct="1.14" lId="WetSuit_Color2"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16238289" a="1.00" b="28.8" ct="1.95" lId="WetSuit_Color2"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="44.3" ct="1.05" lId="WetSuit_Color2"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="9719070" a="1.00" b="68.1" ct="1.54" lId="WetSuit_Color2"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.85" b="23.6" ct="1.15" lId="WetSuit_Color2"/>
+      <c id="Green" name="Green" icon="$bu/icon_green.png" c="3826479" a="1.00" b="68.1" ct="1.54" lId="WetSuit_Color2"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="47.4" ct="1.04" lId="WetSuit_Color2"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="38.3" ct="1.61" lId="WetSuit_Color2"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="46.3" ct="1.14" lId="WetSuit_Color2"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="8758471" a="1.00" b="51.1" ct="1.54" lId="WetSuit_Color2"/>
+      <c id="FadedBlue" name="Faded blue" icon="$bu/icon_fadedblue.png" c="4745356" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2"/>
+      <c id="MedBlue" name="Jean blue" icon="$bu/icon_medblue.png" c="3297909" a="1.00" b="64.1" ct="2.00" lId="WetSuit_Color2"/>
+      <c id="DarkBlue" icon="$bu/icon_darkblue.png" c="3822448" a="1.00" b="51.1" ct="1.54" lId="WetSuit_Color2"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="6041443" a="1.00" b="68.1" ct="1.54" lId="WetSuit_Color2"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.6" ct="0.76" lId="WetSuit_Color2"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5525030" a="1.00" b="65.3" ct="1.54" lId="WetSuit_Color2"/>
+      <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="4338962" a="1.00" b="65.3" ct="1.54" lId="WetSuit_Color2"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.87" b="49.1" ct="1.05" lId="WetSuit_Color2"/>
+      <c id="Black" icon="$bu/icon_black.png" c="4013373" a="1.00" b="66.8" ct="2.00" lId="WetSuit_Color2"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="WetSuit_Color1"/>
+      <wizchoice id="Color2" name="Color2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="WetSuit_Color2"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+</f>

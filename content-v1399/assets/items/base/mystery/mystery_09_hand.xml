@@ -1,0 +1,89 @@
+<item.SpriteItem id="0" name="Mystery Box" desc="A Small Mysterious Box" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.2" max="0.15,0.55,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/mystery/mystery_09_hand.png" cols="4" rows="2"/>
+    <texture id="Texture01" source="items/base/shared/s_fx_flare_ring_b.png" cols="1" rows="1"/>
+    <texture id="Texture02" source="items/base/consumables/magic/effect_generic_staffstand.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.2" max="0.15,0.55,0.2"/>
+      <layers>
+        <layer id="Mystery Box" texture="Texture">
+          <view angle="0" col="3" row="1" x="5" y="17"/>
+          <view angle="45" x="8" y="19"/>
+          <view angle="90" col="1" y="17"/>
+          <view angle="135" col="2" x="-6" y="17"/>
+          <view angle="180" col="3" y="17"/>
+          <view angle="225" row="1" x="-2" y="20"/>
+          <view angle="270" col="1" row="1" y="19"/>
+          <view angle="315" col="2" row="1" x="7" y="16"/>
+        </layer>
+        <layer id="staffstand_01" texture="Texture02" x="2" y="-25">
+          <view y="12"/>
+        </layer>
+        <layer id="staffstand_02" texture="Texture02" x="2" y="-25">
+          <view col="1" y="12"/>
+        </layer>
+        <layer id="staffstand_03" texture="Texture02" x="2" y="-25">
+          <view col="2" y="12"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="staffstand_01" color="0x7facf0"/>
+          <layerref id="Mystery Box"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="staffstand_02" color="0x7facf0"/>
+          <layerref id="Mystery Box"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="staffstand_03" color="0x7facf0"/>
+          <layerref id="Mystery Box"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Texture01" align="middle" y="10">
+          <view angle="45" x="2"/>
+          <view angle="90"/>
+          <view angle="135" x="-2"/>
+          <view angle="180"/>
+          <view angle="225" x="-2"/>
+          <view angle="270"/>
+          <view angle="315" x="2"/>
+          <view angle="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" y="-22" color="0x79a9ef"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,44 @@
+<item.SpriteItem name="Avental de Laboratório" desc="Jaleco profissional." tags="consumable,clothing,actionbar,wear,top06,action_wearable_toggle" icon="items/base/consumables/clothing/top06/top06_10_icon_labcoat_a.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="2264" price="2150">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,1.65,0.24"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top06/top06_10_frag_labcoat.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="clothes" source="items/base/consumables/clothing/top06/top06_10_item_labcoat.png" cols="2" rows="1"/>
+    <texture id="mannequin" source="items/base/consumables/clothing/top02/top02_mannequin.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,1.65,0.24"/>
+      <layers>
+        <layer id="mannequin" texture="mannequin">
+          <view angle="45" x="-2" y="12"/>
+          <view angle="135" x="2" y="12" hm="true"/>
+          <view angle="225" col="1" x="6" y="16"/>
+          <view angle="315" col="1" x="-6" y="16" hm="true"/>
+        </layer>
+        <layer id="dress" texture="clothes">
+          <view angle="45" y="-31"/>
+          <view angle="135" x="1" y="-31" hm="true"/>
+          <view angle="225" col="1" x="5" y="-25"/>
+          <view angle="315" col="1" x="-5" y="-25" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

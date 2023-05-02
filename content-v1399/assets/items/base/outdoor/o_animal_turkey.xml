@@ -1,0 +1,95 @@
+<item.SpriteItem id="2860" name="Peru Fazendeiro" desc="Um peru de fazenda" tags="outdoor,misc" icon="items/base/outdoor/icon_animal_turkey.png" price="90" minLevel="1" minCPLevel="1" dropTargetType="floor" dropTargetList="floor, table,avatar" dropTargetClamp="floor">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.9,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Pick Up"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/outdoor/o_animal_turkey_base.png" cols="2" rows="1"/>
+    <texture id="misc" source="items/base/outdoor/o_animal_turkey_misc.png" cols="6" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.9,0.3"/>
+      <layers>
+        <layer id="base" texture="base" y="-4">
+          <view angle="45" x="2" y="12"/>
+          <view angle="135" x="-1" y="12" hm="true"/>
+          <view angle="225" col="1" y="3"/>
+          <view angle="315" col="1" y="4" hm="true"/>
+        </layer>
+        <layer id="feet" texture="misc" y="-4">
+          <view angle="45" x="8" y="16"/>
+          <view angle="135" x="-7" y="16" hm="true"/>
+          <view angle="225" col="1" x="-4" y="14"/>
+          <view angle="315" col="1" x="3" y="15" hm="true"/>
+        </layer>
+        <layer id="tail" texture="misc" y="-4">
+          <view angle="45" col="2" x="-11" y="-13"/>
+          <view angle="135" col="2" x="12" y="-13" hm="true"/>
+          <view angle="225" col="3" x="15" y="-3"/>
+          <view angle="315" col="3" x="-15" y="-4" hm="true"/>
+        </layer>
+        <layer id="tail01" texture="misc" y="-4">
+          <view angle="45" col="2" x="-11" y="-13"/>
+          <view angle="135" col="2" x="12" y="-13" hm="true"/>
+          <view angle="225" col="3" x="15" y="-3"/>
+          <view angle="315" col="3" x="-15" y="-4" hm="true"/>
+        </layer>
+        <layer id="blink" texture="misc" y="-4">
+          <view angle="45" col="4" x="15" y="-41"/>
+          <view angle="135" col="4" x="-14" y="-40" hm="true"/>
+          <view angle="225" col="5" x="-15" y="-53"/>
+          <view angle="315" col="5" x="15" y="-52" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="key1">
+          <layerref id="feet"/>
+          <layerref id="tail"/>
+          <layerref id="base"/>
+        </frame>
+        <frame id="key2">
+          <layerref id="feet"/>
+          <layerref id="tail" y="1"/>
+          <layerref id="base" y="1"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="key3">
+          <layerref id="feet"/>
+          <layerref id="tail" y="2"/>
+          <layerref id="base" y="1"/>
+        </frame>
+        <frame id="key4">
+          <layerref id="feet"/>
+          <layerref id="tail" y="1"/>
+          <layerref id="base" y="1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4" syncFrames="false">
+          <frameref id="key1" duration="4"/>
+          <frameref id="key2"/>
+          <frameref id="key3" duration="4"/>
+          <frameref id="key4" duration="4"/>
+          <frameref id="key3"/>
+          <frameref id="key4"/>
+          <frameref id="key3"/>
+          <frameref id="key3"/>
+          <frameref id="key4"/>
+          <frameref id="key3"/>
+          <frameref id="key3"/>
+          <frameref id="key2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

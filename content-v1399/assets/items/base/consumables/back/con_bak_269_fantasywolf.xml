@@ -1,0 +1,69 @@
+<item.SpriteItem id="0" name="Kitten Tail" desc="A tail from a kitten suit" tags="consumable, wearable, actionbar" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+  </volume>
+  <textures>
+    <texture id="tail" source="items/base/consumables/back/con_bak_269_fantasywolf.png" cols="4" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+      <layers>
+        <layer id="tail01" texture="tail" y="60">
+          <view angle="0" col="1" x="-24" y="-16"/>
+          <view angle="45" x="-22" y="-28"/>
+          <view angle="90" col="2" x="-8" y="10" alpha="0"/>
+          <view angle="135" x="21" y="-28" hm="true"/>
+          <view angle="180" col="1" x="24" y="-16" hm="true"/>
+          <view angle="225" col="2" x="18" y="-6" hm="true"/>
+          <view angle="270" col="3" x="-2" y="-18"/>
+          <view angle="315" col="2" x="-18" y="-6"/>
+        </layer>
+        <layer id="tail02" texture="tail" y="60">
+          <view angle="0" col="1" row="1" x="-24" y="-16"/>
+          <view angle="45" row="1" x="-22" y="-28"/>
+          <view angle="90" col="2" row="1" x="-8" y="10" alpha="0"/>
+          <view angle="135" row="1" x="21" y="-28" hm="true"/>
+          <view angle="180" col="1" row="1" x="24" y="-16" hm="true"/>
+          <view angle="225" col="2" row="1" x="18" y="-6" hm="true"/>
+          <view angle="270" col="3" row="1" x="-2" y="-18"/>
+          <view angle="315" col="2" row="1" x="-18" y="-6"/>
+        </layer>
+        <layer id="tail03" texture="tail" y="60">
+          <view angle="0" col="1" row="2" x="-24" y="-16"/>
+          <view angle="45" row="2" x="-22" y="-28"/>
+          <view angle="90" col="2" row="2" x="-8" y="10" alpha="0"/>
+          <view angle="135" row="2" x="21" y="-28" hm="true"/>
+          <view angle="180" col="1" row="2" x="24" y="-16" hm="true"/>
+          <view angle="225" col="2" row="2" x="18" y="-6" hm="true"/>
+          <view angle="270" col="3" row="2" x="-2" y="-18"/>
+          <view angle="315" col="2" row="2" x="-18" y="-6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="tail01"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="tail01" a="0"/>
+        </frame>
+        <frame id="02">
+          <layerref id="tail02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="tail03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

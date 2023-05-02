@@ -1,0 +1,108 @@
+<item.SpriteItem id="4855" name="Estrela Cadente Zoom" desc="Voe com esta estrela brilhante" tags="rare,consumable,actionbar,wear,feet,action_consumable" icon="items/base/consumables/feet/icon_con_feet_item_100_star.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="1000" premium="Y">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.8,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_rideable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+60"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_62_cloud_shadow.png" cols="1" rows="1"/>
+    <texture id="cloud" source="items/base/consumables/feet/con_feet_item_100_star.png" cols="1" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_ring_b.png" cols="1" rows="1"/>
+    <texture id="glow" source="items/base/consumables/feet/con_feet_100_star_glow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0.8,0.49"/>
+      <layers>
+        <layer id="cloud_01" texture="cloud" y="8">
+          <view angle="45" y="31"/>
+          <view angle="135" y="31" hm="true"/>
+          <view angle="225" y="31"/>
+          <view angle="315" y="31" hm="true"/>
+        </layer>
+        <layer id="cloud_02" texture="cloud" y="8">
+          <view angle="45" y="31"/>
+          <view angle="135" y="31" hm="true"/>
+          <view angle="225" y="31"/>
+          <view angle="315" y="31" hm="true"/>
+        </layer>
+        <layer id="cloud_03" texture="cloud" y="8">
+          <view angle="45" y="31"/>
+          <view angle="135" y="31" hm="true"/>
+          <view angle="225" y="31"/>
+          <view angle="315" y="31" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow" y="8">
+          <view angle="45" y="45"/>
+          <view angle="135" y="45" hm="true"/>
+          <view angle="225" y="45"/>
+          <view angle="315" y="45" hm="true"/>
+        </layer>
+        <layer id="glow" texture="glow">
+          <view x="2" y="70"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="shadow"/>
+          <layerref id="glow"/>
+          <layerref id="cloud_01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="shadow"/>
+          <layerref id="glow"/>
+          <layerref id="cloud_02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="shadow"/>
+          <layerref id="glow"/>
+          <layerref id="cloud_03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="shadow"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="-0.245" y="-0.0312" s="7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="2" y="-4"/>
+          <view angle="135" x="-2" y="-4"/>
+          <view angle="225" x="-2" y="-7"/>
+          <view angle="315" x="2" y="-7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xcfe568" a="0.3"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="01" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

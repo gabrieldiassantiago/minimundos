@@ -1,0 +1,58 @@
+<item.SpriteItem id="2371" name="Fogo de Dragão" desc="Fogo de Artifício" tags="rare,magic,consumable,reusable,usable,action_consumable" icon="items/base/consumables/magic/icon_con_item_30_dragonrocket.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" minLevel="1" minCPLevel="1" price="150">
+  <volume>
+    <box min="-0.08,0,-0.08" max="0.08,0.8,0.08"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="itemConsume" value="Hold"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_hold.png"/>
+  </data>
+  <textures>
+    <texture id="Rocket" source="items/base/consumables/magic/con_item_30_dragonrocket.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Rocket">
+      <box min="-0.08,0,-0.08" max="0.08,0.8,0.08"/>
+      <layers>
+        <layer id="Rocket" texture="Rocket">
+          <view angle="45" x="7" y="8"/>
+          <view angle="135" x="-7" y="8" hm="true"/>
+          <view angle="225" x="7" y="8"/>
+          <view angle="315" x="-7" y="8" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Rocket"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Rocket" a="0.66"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Rocket" a="0.33"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Rocket" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Out" framerate="8" loop="false" syncFrames="false">
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

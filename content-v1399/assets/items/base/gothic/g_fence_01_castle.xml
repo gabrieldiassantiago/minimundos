@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="Um muro de castelo" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/gothic/icon_g_fence_01_castle.png" id="1179" name="Muro de Castelo" tags="fence" price="30" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.49,2.95,0.49" min="-0.49,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/gothic/g_fence_01_castle.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.49,2.95,0.49" min="-0.49,0,-0.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="40">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Texture" y="40">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Layer02" texture="Texture" y="40">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer"/>
+          <layerref a="0" color="0xb7a772" id="Layer01"/>
+          <layerref a="0" blend="multiply" id="Layer02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Animation">
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,27 @@
+<item.SpriteItem id="5361" name="Fita Não Ultrapasse da Polícia" desc="O que aconteceu aqui" tags="rare,misc,halloween" icon="items/base/gothic/icon_g_halloween_05_donotcrosstape.png" price="40" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0.49,-0.001,-0.49" max="0.51,0.5,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="base" source="items/base/gothic/g_halloween_05_donotcrosstape.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Unit" x="0.5">
+      <box min="-0.01,-0.001,-0.49" max="0.01,0.5,0.49"/>
+      <layers>
+        <layer id="Layer" texture="base">
+          <view angle="45" y="30"/>
+          <view angle="135" y="30" hm="true"/>
+          <view angle="225" col="1" y="30"/>
+          <view angle="315" col="1" y="30" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

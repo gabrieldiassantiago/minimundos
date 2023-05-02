@@ -1,0 +1,70 @@
+<item.SpriteItem id="0" name="Lunchgun Projectile" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,-0.1,-0.1" max="0.1,0.1,0.1"/>
+  </volume>
+  <textures>
+    <texture id="burger" source="items/base/consumables/throwables/thr_03_burger_proj.png" cols="5" rows="1"/>
+    <texture id="salad" source="items/base/consumables/magic/con_item_124_lunchgun_proj.png" cols="3" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Projectile">
+      <box min="-0.1,-0.1,-0.1" max="0.1,0.1,0.1"/>
+      <layers>
+        <layer id="burger" texture="burger">
+          <view angle="0" y="20"/>
+          <view angle="45" col="1" y="17"/>
+          <view angle="90" col="2" y="20" hm="true"/>
+          <view angle="135" col="1" y="17" hm="true"/>
+          <view angle="180" y="20" hm="true"/>
+          <view angle="225" col="4" y="17" hm="true"/>
+          <view angle="270" col="3" y="20"/>
+          <view angle="315" col="4" y="17"/>
+        </layer>
+        <layer id="salad_A" texture="salad" y="30">
+          <view angle="0" col="1" x="-27" y="6"/>
+          <view angle="45" x="-19" y="-6"/>
+          <view angle="90" col="2" x="2" y="-12"/>
+          <view angle="135" x="19" y="-6" hm="true"/>
+          <view angle="180" col="1" x="26" y="6" hm="true"/>
+          <view angle="225" x="12" y="12" hm="true" vm="true"/>
+          <view angle="270" col="2" x="-1" y="18" vm="true"/>
+          <view angle="315" x="-12" y="12" vm="true"/>
+        </layer>
+        <layer id="salad_B" texture="salad" y="30">
+          <view angle="0" col="1" row="1" x="-27" y="6"/>
+          <view angle="45" row="1" x="-19" y="-6"/>
+          <view angle="90" col="2" row="1" x="2" y="-12"/>
+          <view angle="135" row="1" x="19" y="-6" hm="true"/>
+          <view angle="180" col="1" row="1" x="26" y="6" hm="true"/>
+          <view angle="225" row="1" x="12" y="12" hm="true" vm="true"/>
+          <view angle="270" col="2" row="1" x="-1" y="18" vm="true"/>
+          <view angle="315" row="1" x="-12" y="12" vm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="burger"/>
+          <layerref id="salad_A"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="burger"/>
+          <layerref id="salad_B"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="Frame01">
+            <sample id="woosh"/>
+          </frameref>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

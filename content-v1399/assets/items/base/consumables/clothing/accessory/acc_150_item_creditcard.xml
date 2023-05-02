@@ -1,0 +1,33 @@
+<item.SpriteItem id="4051" name="Cartão de Ouro Deluxe" desc="Um cartão de Ouro Super Raro (Cartão MiniMundos)." tags="consumable,actionbar,hand,usable,rare,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_150_icon_creditcard.png" price="250" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.13" max="0.3,0.1,0.13"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="card" source="items/base/consumables/clothing/accessory/acc_150_item_creditcard.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="card">
+      <box min="-0.4,0,-0.13" max="0.3,0.1,0.13"/>
+      <layers>
+        <layer id="card" texture="card">
+          <view angle="45" y="12"/>
+          <view angle="135" col="1" y="12"/>
+          <view angle="225" row="1" y="12"/>
+          <view angle="315" col="1" row="1" y="12"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

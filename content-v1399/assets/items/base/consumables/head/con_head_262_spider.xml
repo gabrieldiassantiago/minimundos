@@ -1,0 +1,68 @@
+<item.SpriteItem id="0" name="Raccoon" desc="Collectible (April 2014)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="redpanda" source="items/base/consumables/head/con_head_262_spider.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/consumables/head/con_head_262_spider_glow.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="redpanda" texture="redpanda">
+          <view angle="0" col="2" x="-1" y="13"/>
+          <view angle="45" y="18"/>
+          <view angle="90" col="1" y="19"/>
+          <view angle="135" x="-2" y="18" hm="true"/>
+          <view angle="180" col="2" y="13" hm="true"/>
+          <view angle="225" col="3" x="2" y="13" hm="true"/>
+          <view angle="270" col="4" y="14"/>
+          <view angle="315" col="3" x="-2" y="13"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Normal">
+          <layerref id="redpanda"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Normal" duration="18"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" col="2" x="17" y="-10"/>
+          <view angle="45" x="13" y="-7"/>
+          <view angle="90" col="1" x="3" y="-3"/>
+          <view angle="135" x="-12" y="-8" hm="true"/>
+          <view angle="180" col="2" x="-14" y="-10" hm="true"/>
+          <view angle="225" col="3" x="-13" y="-21"/>
+          <view angle="270" col="4" y="1" alpha="0"/>
+          <view angle="315" col="3" x="18" y="-21" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xed674c"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

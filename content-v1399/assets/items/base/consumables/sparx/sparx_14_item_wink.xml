@@ -1,0 +1,72 @@
+<item.SpriteItem id="5260" name="Piscada Sparx" desc="Pisque para alguém" tags="consumable,actionbar,group_good,magic,usable,usable,stackable,action_consumable_target" icon="items/base/consumables/sparx/sparx_14_icon_wink.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="8">
+  <volume>
+    <box min="-0.13,0,-0.13" max="0.13,0.23,0.13"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="50"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_cast.png"/>
+    <entry key="action_attributes_secondary" value="health+25"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/sparx/sparx_14_item_wink.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.13,0,-0.13" max="0.13,0.23,0.13"/>
+      <layers>
+        <layer id="item" texture="Texture" y="8">
+          <view y="9"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="0.05" s="0.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-1">
+          <view x="4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xd0f9d5"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xd0f9d5" a="0.95"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xd0f9d5" a="0.85"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Light" color="0xd0f9d5" a="0.8"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Light" color="0xd0f9d5" a="0.75"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4" syncOffsets="0,1">
+          <frameref id="Frame01" duration="2"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

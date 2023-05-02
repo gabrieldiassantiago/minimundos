@@ -1,0 +1,120 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="Cloud" source="items/base/consumables/clothing/suits/suit_79_adamantium_swirl.png" cols="4" rows="1"/>
+    <texture id="Dust" source="items/base/consumables/clothing/suits/suit_79_adamantium_dust.png" cols="1" rows="1"/>
+    <texture id="santa" source="items/base/consumables/clothing/suits/suit_80_supersanta_surface.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="heart_01" texture="Cloud">
+          <view y="48"/>
+        </layer>
+        <layer id="heart_02" texture="Cloud">
+          <view col="1" y="48"/>
+        </layer>
+        <layer id="heart_03" texture="Cloud">
+          <view col="2" y="48"/>
+        </layer>
+        <layer id="heart_04" texture="Cloud">
+          <view col="3" y="48"/>
+        </layer>
+        <layer id="Dust_01" texture="Dust">
+          <view y="20"/>
+        </layer>
+        <layer id="Dust_02" texture="Dust">
+          <view y="20" hm="true"/>
+        </layer>
+        <layer id="santa_01" texture="santa">
+          <view y="30" alpha="0.4"/>
+        </layer>
+        <layer id="santa_02" texture="santa">
+          <view col="1" y="30" alpha="0.4"/>
+        </layer>
+        <layer id="santa_03" texture="santa">
+          <view col="2" y="30" alpha="0.4"/>
+        </layer>
+        <layer id="santa_04" texture="santa">
+          <view col="3" y="30" alpha="0.4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="heart_01">
+          <layerref id="santa_01"/>
+          <layerref id="heart_02" a="0.1"/>
+          <layerref id="heart_01" a="0.1"/>
+          <layerref id="Dust_01" a="0.5"/>
+        </frame>
+        <frame id="heart_02">
+          <layerref id="santa_02"/>
+          <layerref id="heart_03" a="0.1"/>
+          <layerref id="heart_02" a="0.1"/>
+          <layerref id="Dust_02" a="0.5"/>
+        </frame>
+        <frame id="heart_03">
+          <layerref id="santa_03"/>
+          <layerref id="heart_04" a="0.1"/>
+          <layerref id="heart_03" a="0.1"/>
+          <layerref id="Dust_01" a="0.5"/>
+        </frame>
+        <frame id="heart_04">
+          <layerref id="santa_04"/>
+          <layerref id="heart_01" a="0.1"/>
+          <layerref id="heart_04" a="0.1"/>
+          <layerref id="Dust_02" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="animation">
+          <frameref id="heart_01"/>
+          <frameref id="heart_02"/>
+          <frameref id="heart_03"/>
+          <frameref id="heart_04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="santa_01" texture="santa">
+          <view y="30"/>
+        </layer>
+        <layer id="santa_02" texture="santa">
+          <view col="1" y="30"/>
+        </layer>
+        <layer id="santa_03" texture="santa">
+          <view col="2" y="30"/>
+        </layer>
+        <layer id="santa_04" texture="santa">
+          <view col="3" y="30"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On_01">
+          <layerref id="santa_01"/>
+        </frame>
+        <frame id="On_02">
+          <layerref id="santa_02"/>
+        </frame>
+        <frame id="On_03">
+          <layerref id="santa_03"/>
+        </frame>
+        <frame id="On_04">
+          <layerref id="santa_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="On_01"/>
+          <frameref id="On_02"/>
+          <frameref id="On_03"/>
+          <frameref id="On_04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

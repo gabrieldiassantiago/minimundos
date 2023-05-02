@@ -1,0 +1,42 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="santa" source="items/base/consumables/clothing/suits/suit_84_depths_surface.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="depths_01" texture="santa">
+          <view y="30"/>
+        </layer>
+        <layer id="depths_02" texture="santa">
+          <view col="1" y="30"/>
+        </layer>
+        <layer id="depths_03" texture="santa">
+          <view col="2" y="30"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="depths_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="depths_02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="depths_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="animation" framerate="6">
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

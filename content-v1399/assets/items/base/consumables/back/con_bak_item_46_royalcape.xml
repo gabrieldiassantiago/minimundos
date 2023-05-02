@@ -1,0 +1,36 @@
+<item.SpriteItem id="2141" name="Capa Royal" desc="Para os membros da realeza do MiniMundos." tags="rare,consumable,clothing,actionbar,wear,suits,top07,back,action_wearable_toggle" icon="items/base/consumables/back/icon_con_bak_item_46_royalcape.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.32,0,-0.32" max="0.32,1.7,0.32"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top07/top07_01_frag_royalsuit.xml"/>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="royal" source="items/base/consumables/back/con_bak_item_46_royalcape.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.32,0,-0.32" max="0.32,1.7,0.32"/>
+      <layers>
+        <layer id="royal" texture="royal">
+          <view angle="45" x="-4" y="20"/>
+          <view angle="135" x="4" y="20" hm="true"/>
+          <view angle="225" col="1" x="2" y="20" hm="true"/>
+          <view angle="315" col="1" x="-2" y="20"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

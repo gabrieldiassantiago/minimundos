@@ -1,0 +1,58 @@
+<item.SpriteItem id="6567" name="Listra de Grafiti Play" desc="A expressão da arte ao seu redor" tags="consumable,actionbar,wear,back,action_wearable_toggle,stackable" icon="items/base/consumables/back/icon_con_bak_301_graffiti.png" price="4995" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" premium="Y">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,1,0.15"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="fire+25"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+75"/>
+  </data>
+  <textures>
+    <texture id="bf_03" source="items/base/consumables/back/con_bak_item_301_graffiti.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,1,0.15"/>
+      <layers>
+        <layer id="bg_03" texture="bf_03">
+          <view angle="45" y="12"/>
+          <view angle="135" y="12" hm="true"/>
+          <view angle="225" col="1" x="-3" y="12"/>
+          <view angle="315" col="1" x="3" y="12" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-1" y="-17"/>
+          <view angle="135" x="1" y="-17"/>
+          <view angle="225" y="-17"/>
+          <view angle="315" y="-17"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="light_01">
+          <layerref id="Light" color="0xeb7ad3" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="3">
+          <frameref id="light_01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,134 @@
+<item.SpriteItem id="0" name="Ladybird Wing" desc="A pair of ladybird wing" icon="items/base/consumables/back/icon_con_bak_229_ladybird.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Ladybird Wing" source="items/base/consumables/back/con_bak_229_ladybird.png" cols="6" rows="5"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="OutsideWing01" texture="Ladybird Wing">
+          <view angle="0" col="2" row="4" x="-4" y="65" hm="true"/>
+          <view angle="45" col="2" row="3" x="-15" y="70" hm="true"/>
+          <view angle="90" col="2" row="1" y="65"/>
+          <view angle="135" col="2" row="3" x="15" y="70"/>
+          <view angle="180" col="2" row="4" x="4" y="65"/>
+          <view angle="225" col="2" row="2" x="-3" y="65"/>
+          <view angle="270" col="2" y="60"/>
+          <view angle="315" col="2" row="2" x="3" y="65" hm="true"/>
+        </layer>
+        <layer id="Outsidewing02" texture="Ladybird Wing">
+          <view angle="0" col="3" row="4" x="-4" y="65" hm="true"/>
+          <view angle="45" col="3" row="3" x="-15" y="70" hm="true"/>
+          <view angle="90" col="3" row="1" y="65"/>
+          <view angle="135" col="3" row="3" x="15" y="70"/>
+          <view angle="180" col="3" row="4" x="4" y="65"/>
+          <view angle="225" col="3" row="2" x="-3" y="65"/>
+          <view angle="270" col="3" y="60"/>
+          <view angle="315" col="3" row="2" x="3" y="65" hm="true"/>
+        </layer>
+        <layer id="outsideWIng03" texture="Ladybird Wing">
+          <view angle="0" col="4" row="4" x="-4" y="65" hm="true"/>
+          <view angle="45" col="4" row="3" x="-15" y="70" hm="true"/>
+          <view angle="90" col="4" row="1" y="65"/>
+          <view angle="135" col="4" row="3" x="15" y="70"/>
+          <view angle="180" col="4" row="4" x="4" y="65"/>
+          <view angle="225" col="4" row="2" x="-3" y="65"/>
+          <view angle="270" col="4" y="60"/>
+          <view angle="315" col="4" row="2" x="3" y="65" hm="true"/>
+        </layer>
+        <layer id="insideWing01" texture="Ladybird Wing">
+          <view angle="0" row="4" x="-4" y="65" hm="true"/>
+          <view angle="45" row="3" x="-15" y="70" hm="true"/>
+          <view angle="90" row="1" y="65"/>
+          <view angle="135" row="3" x="15" y="70"/>
+          <view angle="180" row="4" x="4" y="65"/>
+          <view angle="225" row="2" x="-3" y="65"/>
+          <view angle="270" y="60"/>
+          <view angle="315" row="2" x="3" y="65" hm="true"/>
+        </layer>
+        <layer id="insideWing02" texture="Ladybird Wing">
+          <view angle="0" col="1" row="4" x="-4" y="65" hm="true"/>
+          <view angle="45" col="1" row="3" x="-15" y="70" hm="true"/>
+          <view angle="90" col="1" row="1" y="65"/>
+          <view angle="135" col="1" row="3" x="15" y="70"/>
+          <view angle="180" col="1" row="4" x="4" y="65"/>
+          <view angle="225" col="1" row="2" x="-3" y="65"/>
+          <view angle="270" col="1" y="60"/>
+          <view angle="315" col="1" row="2" x="3" y="65" hm="true"/>
+        </layer>
+        <layer id="closeWing" texture="Ladybird Wing">
+          <view angle="0" col="5" row="4" x="-8" y="65" hm="true"/>
+          <view angle="45" col="5" row="3" x="-10" y="65" hm="true"/>
+          <view angle="90" col="5" row="1" y="65"/>
+          <view angle="135" col="5" row="3" x="10" y="65"/>
+          <view angle="180" col="5" row="4" x="4" y="65"/>
+          <view angle="225" col="5" row="2" x="-3" y="60"/>
+          <view angle="270" col="5" y="60"/>
+          <view angle="315" col="5" row="2" x="3" y="60" hm="true"/>
+        </layer>
+        <layer id="Idel" texture="Ladybird Wing">
+          <view angle="0" col="5" row="4" y="65" hm="true"/>
+          <view angle="45" col="5" row="3" x="-11" y="70" hm="true"/>
+          <view angle="90" col="5" row="1" y="65"/>
+          <view angle="135" col="5" row="3" x="11" y="70"/>
+          <view angle="180" col="5" row="4" y="65"/>
+          <view angle="225" col="5" row="2" x="-3" y="60"/>
+          <view angle="270" col="5" y="60"/>
+          <view angle="315" col="5" row="2" x="3" y="60" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="F01">
+          <layerref id="insideWing01"/>
+          <layerref id="OutsideWing01"/>
+        </frame>
+        <frame id="F02">
+          <layerref id="insideWing02"/>
+          <layerref id="Outsidewing02"/>
+        </frame>
+        <frame id="F03">
+          <layerref id="insideWing01"/>
+          <layerref id="outsideWIng03"/>
+        </frame>
+        <frame id="F04">
+          <layerref id="insideWing02"/>
+          <layerref id="Outsidewing02"/>
+        </frame>
+        <frame id="close">
+          <layerref id="closeWing"/>
+        </frame>
+        <frame id="Idle">
+          <layerref id="Idel"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="12">
+          <frameref id="Idle">
+            <sample id="flap" loops="-1"/>
+          </frameref>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="close"/>
+        </animation>
+        <animation id="Walk" framerate="12">
+          <frameref id="F01">
+            <sample id="flap" loops="-1"/>
+          </frameref>
+          <frameref id="F02"/>
+          <frameref id="F03"/>
+          <frameref id="F04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

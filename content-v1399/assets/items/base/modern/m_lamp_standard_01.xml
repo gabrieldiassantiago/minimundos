@@ -1,0 +1,120 @@
+<item.SpriteItem id="394" name="Luminária Vertical Básica" desc="Uma luminária básica, mas encantadora." tags="light" icon="items/base/modern/icon_m_lamp_standard_01.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="20" tokens="200" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,1.62,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="lamp_standard" source="items/base/modern/m_lamp_standard_01.png" cols="1" rows="1"/>
+    <texture id="lamp double" source="items/base/modern/m_lamp_standard_01.png" cols="1" rows="3"/>
+    <texture id="Flare" source="items/base/shared/s_fx_flare.png" cols="1" rows="1"/>
+    <texture id="Flare Diffuse" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring_b.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,1.62,0.2"/>
+      <layers>
+        <layer id="Layer" texture="lamp_standard">
+          <view angle="45" y="11"/>
+          <view angle="135" y="11" hm="true"/>
+          <view angle="225" y="11"/>
+          <view angle="315" y="11" hm="true"/>
+        </layer>
+        <layer id="Layer02" texture="lamp double" y="-87">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Flare" texture="Flare">
+          <view y="-90"/>
+        </layer>
+        <layer id="Flare diffuse" texture="Flare Diffuse">
+          <view y="-78"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="FrameOn_01">
+          <layerref id="Layer"/>
+          <layerref id="Layer02" a="0.5" blend="screen"/>
+          <layerref id="Flare diffuse" color="0xffffcc" a="0.3" blend="lighten"/>
+          <layerref id="Flare" a="0.7" blend="add"/>
+        </frame>
+        <frame id="FrameOff_01">
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4" loop="false">
+          <frameref id="FrameOn_01"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="FrameOff_01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1" s="7.8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xfdfbf2" a="0.72"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="1.4" s="1.8" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view x="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xfbfae7" a="0.3"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

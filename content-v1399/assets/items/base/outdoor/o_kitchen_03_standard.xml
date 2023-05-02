@@ -1,0 +1,27 @@
+<item.SpriteItem id="3117" name="Balcão de Jardim Eco" desc="Um balcão de jardim ecológico." tags="table" icon="items/base/outdoor/icon_o_kitchen_03_standard.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="65" tokens="650">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,1.06,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="base" source="items/base/outdoor/o_kitchen_03_standard.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Unit">
+      <box min="-0.48,0,-0.48" max="0.48,1.06,0.48"/>
+      <layers>
+        <layer id="Layer" texture="base">
+          <view angle="45" x="-3" y="37"/>
+          <view angle="135" y="37" hm="true"/>
+          <view angle="225" col="1" x="2" y="43"/>
+          <view angle="315" col="1" x="-4" y="44" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

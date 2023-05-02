@@ -1,0 +1,39 @@
+<item.SpriteItem desc="Um tapete de altíssima qualidade." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" gridActive="false" icon="items/base/modern/icon_m_rug_08_purple.png" id="2356" name="Tapete Roxo Felpudo" tags="floor,stackable,craftable3,craftable_sewing,market" minLevel="1" minCPLevel="1" price="55" tokens="550">
+  <volume>
+    <box min="-0.96,-0.001,-0.96" max="0.96,0,0.96"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+    <entry key="ingredient_1" value="412"/>
+    <entry key="ingredient_2" value="2378"/>
+    <entry key="ingredient_3" value="2329"/>
+    <entry key="ingredient_quantity_1" value="1"/>
+    <entry key="ingredient_quantity_2" value="3"/>
+    <entry key="ingredient_quantity_3" value="2"/>
+    <entry key="product_quantity" value="1"/>
+    <entry key="xp_level_required" value="70"/>
+    <entry key="xp_rewarded" value="700"/>
+  </data>
+  <textures>
+    <texture id="rug" source="items/base/modern/m_rug_08_purple.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="rug" layer="surface">
+      <box min="-0.96,-0.001,-0.96" max="0.96,0,0.96"/>
+      <layers>
+        <layer id="rug" texture="rug">
+          <view angle="45" y="66"/>
+          <view angle="135" y="66" hm="true"/>
+          <view angle="225" y="66"/>
+          <view angle="315" y="66" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

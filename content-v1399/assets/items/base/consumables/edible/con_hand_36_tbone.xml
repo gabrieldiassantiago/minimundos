@@ -1,0 +1,48 @@
+<item.SpriteItem id="0" name="Tbone " desc="A juicysteak" tags="consumable,food,actionbar,group_edible,edible,stackable" icon="items/base/consumables/edible/icon_con_eat_36_tbone.png" price="3" tokens="30" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.18,0,-0.18" max="0.18,0.25,0.18"/>
+  </volume>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture id="burger" source="items/base/consumables/edible/con_hand_36_tbone.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="eat" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.18,0,-0.18" max="0.18,0.25,0.18"/>
+      <layers>
+        <layer id="Layer01" texture="burger">
+          <view angle="0" col="4" y="13"/>
+          <view angle="45" col="3" x="1" y="12"/>
+          <view angle="90" col="2" x="-2" y="14" hm="true"/>
+          <view angle="135" col="3" y="12" hm="true"/>
+          <view angle="180" col="4" y="13" hm="true"/>
+          <view angle="225" col="1" x="1" y="11"/>
+          <view angle="270" y="13"/>
+          <view angle="315" col="1" x="1" y="11" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

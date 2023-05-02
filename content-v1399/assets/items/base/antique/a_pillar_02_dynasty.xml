@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="6783" name="Pilar Egípcio Deluxe" desc="Um pilar milenar egípcio [7 de 8]" tags="rare,decoration" icon="items/base/antique/icon_a_pillar_02_dynasty.png" price="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.372,0,-1.2959" max="1.3395,3.45,0.36"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="column" source="items/base/antique/a_pillar_02_dynasty.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="column">
+      <box min="-0.372,0,-1.2959" max="1.3395,3.45,0.36"/>
+      <layers>
+        <layer id="column" texture="column">
+          <view angle="45" x="2" y="103"/>
+          <view angle="135" x="-63" y="73" hm="true"/>
+          <view angle="225" y="42"/>
+          <view angle="315" x="60" y="72" hm="true"/>
+        </layer>
+        <layer id="column01" texture="column">
+          <view angle="45" x="2" y="103"/>
+          <view angle="135" x="-63" y="73" hm="true"/>
+          <view angle="225" y="42"/>
+          <view angle="315" x="60" y="72" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="column" color="0xf3c1b6"/>
+          <layerref id="column01" color="0xffff99" a="0.7" blend="overlay"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

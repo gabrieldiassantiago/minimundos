@@ -1,0 +1,36 @@
+<item.SpriteItem id="3630" name="Skate Graffiti Zoom" desc="Um skate urbano com a base grafite e roxa." tags="consumable,actionbar,wear,feet,real,action_wearable_toggle,slave_catalog_colorize,unsearchable" icon="items/base/consumables/feet/feet_56_skateboard_icon.png" price="900" tokens="9000" minLevel="1" minCPLevel="5" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.06,0,-0.48" max="0.16,0.35,0.48"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+15"/>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/skateboards.xml"/>
+  </data>
+  <textures>
+    <texture id="board" source="items/base/consumables/feet/feet_56_skateboard_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.06,0,-0.48" max="0.16,0.35,0.48"/>
+      <layers>
+        <layer id="board" texture="board">
+          <view angle="45" y="24"/>
+          <view angle="135" x="-2" y="24" hm="true"/>
+          <view angle="225" col="1" y="24" hm="true"/>
+          <view angle="315" col="1" y="24"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

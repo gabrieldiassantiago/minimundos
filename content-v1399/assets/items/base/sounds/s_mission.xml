@@ -1,0 +1,67 @@
+<item.SpriteItem id="2923" name="Music for missions" desc="Admin only music for missions" tags="admin,floor,sounds" icon="items/base/sounds/icon_s_mission.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.48,-0.001,-0.48" max="0.48,0,0.48"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="items/base/sounds/action_sound.as"/>
+    <event id="select" script="items/base/sounds/select_sound.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="items/base/sounds/toggle_sound.as"/>
+    <event id="cycle" script="items/base/sounds/cycle_sound.as"/>
+    <event id="update" script="items/base/sounds/update_sound.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Urban On" state="true" event="animate(On_01)"/>
+    <action id="Urban Off" state="true" event="animate(Off_01)"/>
+    <action id="Rural On" state="true" event="animate(On_02)"/>
+    <action id="Rural Off" state="true" event="animate(Off_02)"/>
+    <action id="Waves On" state="true" event="animate(On_03)"/>
+    <action id="Waves Off" state="true" event="animate(Off_03)"/>
+    <action id="Swamp On" state="true" event="animate(On_04)"/>
+    <action id="Swamp Off" state="true" event="animate(Off_04)"/>
+  </actions>
+  <navigate usableRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="updatePeriod" value="1000"/>
+    <entry key="count" value="1"/>
+    <entry key="01" value="Butterfly"/>
+  </data>
+  <textures>
+    <texture id="sound" source="items/base/sounds/s_admin.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="music" source="items/base/sounds/s_mission_butterfly.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="sound" layer="surface">
+      <box min="-0.48,-0.001,-0.48" max="0.48,0,0.48"/>
+      <layers>
+        <layer id="sound" texture="sound">
+          <view y="32"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="sound"/>
+        </frame>
+        <frame id="FrameOff">
+          <layerref id="sound" color="0xf26767" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On_01">
+          <frameref id="Frame">
+            <sample id="music" attn="100" pan="0" loops="-1"/>
+          </frameref>
+        </animation>
+        <animation id="Off_01">
+          <frameref id="FrameOff"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,27 @@
+<item.SpriteItem id="2975" name="Mesa Elegance" desc="Uma elegante mesa de festa de casamento." tags="table" icon="items/base/modern/icon_m_wedding_02_weddingtable.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="160">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.5,0.92,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="table" source="items/base/modern/m_wedding_02_weddingtable.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Table">
+      <box min="-0.5,0,-0.5" max="0.5,0.92,0.5"/>
+      <layers>
+        <layer id="table" texture="table" y="30">
+          <view angle="45" x="-3"/>
+          <view angle="135" x="2" hm="true"/>
+          <view angle="225" x="-3"/>
+          <view angle="315" x="2" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

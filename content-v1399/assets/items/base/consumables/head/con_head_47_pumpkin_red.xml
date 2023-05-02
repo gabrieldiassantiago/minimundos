@@ -1,0 +1,117 @@
+<item.SpriteItem id="0" name="Pumpkin Head" desc="A severed pumpkin head" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.6,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/head/con_head_47_pumpkin_red.png" cols="5" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="eat" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,0.6,0.25"/>
+      <layers>
+        <layer id="glow" texture="head" y="23">
+          <view angle="45" col="4" row="1"/>
+          <view angle="90" col="4" row="1" y="3"/>
+          <view angle="135" col="4" row="1"/>
+          <view angle="180" col="4" row="1" x="-1" y="-1"/>
+          <view angle="225" col="4" row="1" x="2" y="-1"/>
+          <view angle="270" col="4" row="1" x="2" y="-1"/>
+          <view angle="315" col="4" row="1" x="-2" y="-1"/>
+          <view angle="0" col="4" row="1" x="1" y="-1"/>
+        </layer>
+        <layer id="head" texture="head" y="23">
+          <view angle="45" col="2"/>
+          <view angle="90" col="1" y="4"/>
+          <view angle="135" col="2" hm="true"/>
+          <view angle="180" hm="true"/>
+          <view angle="225" col="3"/>
+          <view angle="270" col="4"/>
+          <view angle="315" col="3" hm="true"/>
+          <view angle="0"/>
+        </layer>
+        <layer id="eyes" texture="head" y="23">
+          <view angle="45" col="2" row="1"/>
+          <view angle="90" col="1" row="1" y="4"/>
+          <view angle="135" col="2" row="1" hm="true"/>
+          <view angle="180" row="1" hm="true"/>
+          <view angle="225" col="3" row="1"/>
+          <view angle="270" col="4" row="1" alpha="0"/>
+          <view angle="315" col="3" row="1" hm="true"/>
+          <view angle="0" row="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="pumpkin 05">
+          <layerref id="glow" a="0.8"/>
+          <layerref id="head"/>
+          <layerref id="eyes"/>
+          <layerref id="eyes" a="0.7" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="3">
+          <frameref id="pumpkin 05"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.2" s="1.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-1">
+          <view angle="45" x="2"/>
+          <view angle="135" x="2"/>
+          <view angle="225" x="2" alpha="0.7"/>
+          <view angle="315" x="2" alpha="0.7"/>
+          <view angle="0" alpha="0.7"/>
+          <view angle="90"/>
+          <view angle="180" alpha="0.7"/>
+          <view angle="270" alpha="0.7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xf47f7f" a="0.85"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="3" syncOffsets="0,1">
+          <frameref id="Frame03"/>
+          <frameref id="Frame03" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-1">
+          <view angle="45" x="2" alpha="0.4"/>
+          <view angle="135" x="2" alpha="0.4"/>
+          <view angle="225" x="2" alpha="0.3"/>
+          <view angle="315" x="2" alpha="0.3"/>
+          <view angle="0" alpha="0.3"/>
+          <view angle="90" alpha="0.5"/>
+          <view angle="180" alpha="0.3"/>
+          <view angle="270" alpha="0.3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame04">
+          <layerref id="Light" color="0xf47f7f" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="3" syncOffsets="0,1">
+          <frameref id="Frame04" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

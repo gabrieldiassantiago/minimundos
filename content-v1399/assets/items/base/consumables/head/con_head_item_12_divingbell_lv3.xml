@@ -1,0 +1,56 @@
+<item.SpriteItem desc="Um capacete de mergulho." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/head/icon_con_head_item_12_divingbell_lv3.png" id="1105" name="Capacete de Mergulho Especial" tags="consumable,actionbar,wear,head,real,action_wearable_toggle" price="2700" minLevel="30" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.3,0.61,0.3" min="-0.3,0,-0.3"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="frost+10"/>
+    <entry key="action_attributes_secondary" value="health+30"/>
+  </data>
+  <textures>
+    <texture cols="3" id="base" rows="1" source="items/base/consumables/head/con_head_12_divingb_base.png"/>
+    <texture cols="4" id="level3" rows="1" source="items/base/consumables/head/con_head_12_divingb_stage01.png"/>
+    <texture cols="1" id="shadow" rows="1" source="items/base/consumables/head/con_head_generic_dropshadow.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.3,0.61,0.3" min="-0.3,0,-0.3"/>
+      <layers>
+        <layer id="base" texture="base" y="15">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+        <layer id="level3" texture="level3" y="15">
+          <view angle="45" col="1" x="12" y="-18"/>
+          <view angle="135" col="1" hm="true" x="-12" y="-18"/>
+          <view angle="225" col="3" x="-22" y="-37"/>
+          <view angle="315" col="3" hm="true" x="22" y="-37"/>
+        </layer>
+        <layer id="shadow" texture="shadow" y="-5">
+          <view angle="45" y="28"/>
+          <view angle="135" y="28"/>
+          <view angle="225" y="28"/>
+          <view angle="315" y="28"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="shadow"/>
+          <layerref id="base"/>
+          <layerref id="level3"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

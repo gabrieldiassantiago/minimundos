@@ -1,0 +1,27 @@
+<item.SpriteItem id="4331" name="Linho" desc="Uma planta de linho" tags="plant,seasonal" icon="items/base/outdoor/icon_o_plant_21_flax.png" price="15" tokens="150" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.5,1,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/outdoor/o_plant_21_flax.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Flax">
+      <box min="-0.5,0,-0.5" max="0.5,1,0.5"/>
+      <layers>
+        <layer id="Bamboo" texture="Texture" y="11">
+          <view angle="45" x="2" y="15"/>
+          <view angle="135" x="-3" y="15" hm="true"/>
+          <view angle="225" x="2" y="15"/>
+          <view angle="315" x="-3" y="15" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

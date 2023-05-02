@@ -1,0 +1,45 @@
+<item.SpriteItem id="4650" name="Túnica Moldada Fantasia Play" desc="Uma túnica a moda antiga" tags="consumable,clothing,actionbar,wear,top02,action_wearable_toggle" icon="items/base/consumables/clothing/top02/top02_41_icon_fantasydress_a.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="2075">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,1.65,0.24"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top02/top02_41_frag_fantasydress.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="gender" value="female"/>
+  </data>
+  <textures>
+    <texture id="clothes" source="items/base/consumables/clothing/top02/top02_41_item_fantasydress.png" cols="2" rows="1"/>
+    <texture id="mannequin" source="items/base/consumables/clothing/top02/top02_mannequin.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,1.65,0.24"/>
+      <layers>
+        <layer id="mannequin" texture="mannequin">
+          <view angle="45" x="-2" y="12"/>
+          <view angle="135" x="2" y="12" hm="true"/>
+          <view angle="225" col="1" x="6" y="16"/>
+          <view angle="315" col="1" x="-6" y="16" hm="true"/>
+        </layer>
+        <layer id="dress" texture="clothes">
+          <view angle="45" x="-2"/>
+          <view angle="135" x="2" hm="true"/>
+          <view angle="225" col="1" x="6" y="4"/>
+          <view angle="315" col="1" x="-6" y="4" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,116 @@
+<item.ChairItem id="2620" name="Saco de Dormir Camuflagem Deluxe" desc="Um saco de dormir camuflagem deluxe" tags="rare,chair,misc" icon="items/base/outdoor/icon_o_sleepingbag_01_quality.png" price="400" minLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" chairType="bed" minCPLevel="1">
+  <seats>
+    <seat x="-0.08">
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+      <ap x="2" z="-1"/>
+      <ap x="2" z="1"/>
+      <ap x="2"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.48,0,-0.35" max="1.3133,0.2,0.35"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="activate" script="scripts/item/activate_chair.as"/>
+    <event id="deactivate" script="scripts/item/deactivate_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="Idle" source="items/base/outdoor/o_sleepingbag_01_off.png" cols="2" rows="1"/>
+    <texture id="Hood" source="items/base/outdoor/o_sleepingbag_01_hood_on.png" cols="2" rows="1"/>
+    <texture id="Bag" source="items/base/outdoor/o_sleepingbag_01_main_on.png" cols="2" rows="1"/>
+    <texture id="Shadow" source="items/base/outdoor/o_sleepingbag_01_shadow.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind">
+      <box min="-0.48,0,-0.35" max="1.3133,0.2,0.35"/>
+      <layers>
+        <layer id="hood" texture="Hood">
+          <view angle="45" x="-17" y="15"/>
+          <view angle="135" x="17" y="15" hm="true"/>
+          <view angle="225" col="1" x="11" y="21"/>
+          <view angle="315" col="1" x="-11" y="21" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="Shadow">
+          <view angle="45" x="29" y="46"/>
+          <view angle="135" x="-29" y="46" hm="true"/>
+          <view angle="225" x="-29" y="20"/>
+          <view angle="315" x="29" y="20" hm="true"/>
+        </layer>
+        <layer id="Bag" texture="Bag">
+          <view angle="45" alpha="0"/>
+          <view angle="135" col="1" alpha="0"/>
+          <view angle="225" col="1" x="-27" y="20"/>
+          <view angle="315" col="1" x="27" y="20" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="shadow"/>
+        </frame>
+        <frame id="On">
+          <layerref id="hood"/>
+          <layerref id="Bag"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Bag" texture="Bag">
+          <view angle="45" x="30" y="46"/>
+          <view angle="135" x="-30" y="46" hm="true"/>
+          <view angle="225" col="1" x="-42" y="20" alpha="0"/>
+          <view angle="315" col="1" x="42" y="20" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Off" texture="Idle">
+          <view angle="45" x="30" y="47"/>
+          <view angle="135" x="-30" y="47" hm="true"/>
+          <view angle="225" col="1" x="-27" y="21"/>
+          <view angle="315" col="1" x="27" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Off"/>
+        </frame>
+        <frame id="On">
+          <layerref id="Bag"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

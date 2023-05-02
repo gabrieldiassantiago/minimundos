@@ -1,0 +1,224 @@
+<item.SpriteItem id="1689" name="Cajado da Noite" desc="Uma mágica que transforma o Mini em uma noite estrelada." tags="consumable,actionbar,group_arcane,magic,bad,staff,reusable,usable,action_consumable_target" icon="items/base/consumables/magic/icon_con_item_56_bstaff.png" price="5500" tokens="55000" minLevel="1" minCPLevel="40" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.17,0,-0.17" max="0.17,2.3,0.17"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="14"/>
+    <entry key="action_attributes" value="arcane-30"/>
+    <entry key="action_attributes_secondary" value="speed-70,health-120"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_cast.png"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/magic/con_item_56_bstaff.png" cols="3" rows="1"/>
+    <texture id="holder" source="items/base/consumables/magic/con_item_56_bstaff_holder.png" cols="1" rows="1"/>
+    <texture id="gem" source="items/base/consumables/magic/con_item_56_bstaff_gem.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="staffstand" source="items/base/consumables/magic/effect_generic_staffstand.png" cols="5" rows="1"/>
+    <texture id="flare" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" depthBias="1">
+      <box min="-0.17,0,-0.17" max="0.17,2.3,0.17"/>
+      <layers>
+        <layer id="holder" texture="holder">
+          <view y="14"/>
+        </layer>
+        <layer id="gem_01" texture="gem" y="10">
+          <view angle="45" x="1" y="-163"/>
+          <view angle="135" x="1" y="-163"/>
+          <view angle="225" x="1" y="-163"/>
+          <view angle="315" x="1" y="-163"/>
+        </layer>
+        <layer id="gem_02" texture="gem" y="10">
+          <view angle="45" col="1" x="1" y="-163"/>
+          <view angle="135" col="1" x="1" y="-163"/>
+          <view angle="225" col="1" x="1" y="-163"/>
+          <view angle="315" col="1" x="1" y="-163"/>
+        </layer>
+        <layer id="gem_03" texture="gem" y="10">
+          <view angle="45" col="2" x="1" y="-163"/>
+          <view angle="135" col="2" x="1" y="-163"/>
+          <view angle="225" col="2" x="1" y="-163"/>
+          <view angle="315" col="2" x="1" y="-163"/>
+        </layer>
+        <layer id="gem_04" texture="gem" y="10">
+          <view angle="45" col="2" x="1" y="-163" hm="true"/>
+          <view angle="135" col="2" x="1" y="-163" hm="true"/>
+          <view angle="225" col="2" x="1" y="-163" hm="true"/>
+          <view angle="315" col="2" x="1" y="-163" hm="true"/>
+        </layer>
+        <layer id="gem_05" texture="gem" y="10">
+          <view angle="45" col="1" x="1" y="-163" hm="true"/>
+          <view angle="135" col="1" x="1" y="-163" hm="true"/>
+          <view angle="225" col="1" x="1" y="-163" hm="true"/>
+          <view angle="315" col="1" x="1" y="-163" hm="true"/>
+        </layer>
+        <layer id="gem_06" texture="gem" y="10">
+          <view angle="45" x="1" y="-163" hm="true"/>
+          <view angle="135" x="1" y="-163" hm="true"/>
+          <view angle="225" x="1" y="-163" hm="true"/>
+          <view angle="315" x="1" y="-163" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Texture" y="10">
+          <view angle="45" x="2" y="-44"/>
+          <view angle="135" y="-44" hm="true"/>
+          <view angle="225" x="2" y="-44"/>
+          <view angle="315" y="-44" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="holder"/>
+          <layerref id="gem_01"/>
+          <layerref id="Layer01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="holder"/>
+          <layerref id="gem_02"/>
+          <layerref id="Layer01"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="holder"/>
+          <layerref id="gem_03"/>
+          <layerref id="Layer01"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="holder"/>
+          <layerref id="gem_04"/>
+          <layerref id="Layer01"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="holder"/>
+          <layerref id="gem_05"/>
+          <layerref id="Layer01"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="holder"/>
+          <layerref id="gem_06"/>
+          <layerref id="Layer01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Node01">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="staffstand_01" texture="staffstand" x="2" y="-25">
+          <view/>
+        </layer>
+        <layer id="staffstand_02" texture="staffstand" x="2" y="-25">
+          <view col="1"/>
+        </layer>
+        <layer id="staffstand_03" texture="staffstand" x="2" y="-25">
+          <view col="2"/>
+        </layer>
+        <layer id="staffstand_04" texture="staffstand" x="2" y="-25">
+          <view col="3"/>
+        </layer>
+        <layer id="staffstand_gradient" texture="staffstand" x="1" y="-25">
+          <view col="4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="staffstand_gradient" color="0x4a71ff" blend="add"/>
+          <layerref id="staffstand_01" color="0x4a71ff" blend="add"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="staffstand_gradient" color="0x4a71ff" blend="add"/>
+          <layerref id="staffstand_02" color="0x4a71ff" blend="add"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="staffstand_gradient" color="0x4a71ff" blend="add"/>
+          <layerref id="staffstand_03" color="0x4a71ff" blend="add"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="staffstand_gradient" color="0x4a71ff" blend="add"/>
+          <layerref id="staffstand_04" color="0x4a71ff" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="2.65" s="5.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" y="30">
+          <view y="23" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0x448eff" a="0.96"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0x448eff" a="0.98"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0x448eff"/>
+        </frame>
+        <frame id="_BLANK">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4" loop="false">
+          <frameref id="Frame01" duration="2"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02" duration="2"/>
+          <frameref id="Frame01" duration="2"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame01" duration="2"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame03" duration="2"/>
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="1.6" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="flare">
+          <view x="4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0x44c1e3" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4" loop="false">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

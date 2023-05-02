@@ -1,0 +1,16 @@
+<f id="Bot02_40GoldHightop" parentId="Bot02">
+  <g id="GoldHightop" name="GoldHightop" icon="$bm/icon_shoe_standard.png">
+    <s id="Bot02_40Idle" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_40_idle.png" pri="2"/>
+    <s id="Bot02_40Walk1" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_40_walk1.png" pri="2"/>
+    <s id="Bot02_40Walk2" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_40_walk2.png" pri="2"/>
+    <s id="Bot02_40Walk3" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_40_walk3.png" pri="2"/>
+    <s id="Bot02_40Walk4" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_40_walk4.png" pri="2"/>
+    <s id="Bot02_40Sit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_40_sit.png" pri="2"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot02_40" icon="items/base/consumables/clothing/bot02/bot02_40_icon_gold_hightops.png" w="48" h="48"/>
+    <s id="IconBot02_VIP" cId="IconBot02_32" s="items/base/shared/s_vipbadge.png" pri="1"/>
+    <s id="IconBot02_40" cId="IconBot02_40" s="items/base/consumables/clothing/bot02/bot02_40_icon_gold_hightops.png" pri="1"/>
+  </g>
+  <ds id="JSFeet"/>
+</f>

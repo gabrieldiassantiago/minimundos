@@ -1,0 +1,68 @@
+<item.ChairItem desc="Um clássico das bodegas do século XIX." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/antique/icon_a_bar_stool.png" id="325" name="Banqueta de Bar" tags="chair" price="20" tokens="200" minLevel="1" minCPLevel="1">
+  <seats>
+    <seat y="0.7">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box max="0.25,1.2051,0.25" min="-0.2115,0,-0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture cols="2" id="Texture" rows="1" source="items/base/antique/a_bar_stool.png"/>
+    <texture cols="1" id="Texture01" rows="1" source="items/base/antique/a_bar_stool_back.png"/>
+  </textures>
+  <nodes>
+    <node id="Back">
+      <box max="0.25,1.2051,0.25" min="-0.2115,0,-0.25"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-4" y="23"/>
+          <view angle="135" hm="true" x="3" y="23"/>
+          <view alpha="0" angle="225" row="1" x="3" y="14"/>
+          <view alpha="0" angle="315" hm="true" row="1" x="-4" y="14"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view alpha="0" angle="45"/>
+          <view alpha="0" angle="135" col="1"/>
+          <view angle="225" x="16" y="-39"/>
+          <view angle="315" hm="true" x="-17" y="-39"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Seat">
+      <box max="0.25,1.2051,0.25" min="-0.2115,0,-0.25"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view alpha="0" angle="45" y="15"/>
+          <view alpha="0" angle="135" hm="true" y="15"/>
+          <view angle="225" col="1" x="-2" y="24"/>
+          <view angle="315" col="1" hm="true" x="1" y="24"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

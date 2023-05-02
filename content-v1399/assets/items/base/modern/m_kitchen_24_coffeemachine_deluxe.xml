@@ -1,0 +1,118 @@
+<item.SpriteItem id="2775" name="Cafeteira Chef Master" desc="Rara." tags="rare,misc" icon="items/base/modern/icon_m_kitchen_24_coffeemachine_deluxe.png" price="2000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.4,0.88,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="box" source="items/base/modern/m_kitchen_24_coffeemachine_deluxe.png" cols="2" rows="1"/>
+    <texture id="cup" source="items/base/modern/m_kitchen_24_coffeemachine_deluxe_smokencup.png" cols="3" rows="1"/>
+    <texture id="glow" source="items/base/modern/m_kitchen_24_coffeemachine_deluxe_glow.png" cols="1" rows="1"/>
+  </textures>
+  <sounds/>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.4,0.88,0.35"/>
+      <layers>
+        <layer id="box" texture="box" y="15">
+          <view angle="45" y="10"/>
+          <view angle="135" y="10" hm="true"/>
+          <view angle="225" col="1" y="10" hm="true"/>
+          <view angle="315" col="1" y="10"/>
+        </layer>
+        <layer id="cup_01" texture="cup" y="15">
+          <view angle="45" x="23" y="-4"/>
+          <view angle="135" x="-22" y="-4" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+        <layer id="cup_02" texture="cup" y="15">
+          <view angle="45" col="1" x="23" y="-4"/>
+          <view angle="135" col="1" x="-22" y="-4" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+        <layer id="cup_03" texture="cup" y="15">
+          <view angle="45" col="2" x="23" y="-4"/>
+          <view angle="135" col="2" x="-22" y="-4" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle01">
+          <layerref id="box"/>
+        </frame>
+        <frame id="idle02">
+          <layerref id="box"/>
+        </frame>
+        <frame id="idle03">
+          <layerref id="box"/>
+        </frame>
+        <frame id="On_01">
+          <layerref id="box"/>
+          <layerref id="cup_01"/>
+        </frame>
+        <frame id="On_02">
+          <layerref id="box"/>
+          <layerref id="cup_02"/>
+        </frame>
+        <frame id="On_03">
+          <layerref id="box"/>
+          <layerref id="cup_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="idle01"/>
+          <frameref id="idle02"/>
+          <frameref id="idle03"/>
+        </animation>
+        <animation id="On" framerate="1">
+          <frameref id="On_01">
+            <sample id="pour"/>
+          </frameref>
+          <frameref id="On_02"/>
+          <frameref id="On_03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="glow">
+          <view angle="45" x="2" y="15"/>
+          <view angle="135" x="-1" y="15"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light01" color="0xf7cff7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="01"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

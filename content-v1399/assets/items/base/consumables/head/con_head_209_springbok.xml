@@ -1,0 +1,190 @@
+<item.SpriteItem id="0" name="Sprinbok" desc="A Bunny head" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bunny" source="items/base/consumables/head/con_head_209_sprinkbok_base.png" cols="5" rows="1"/>
+    <texture id="ears" source="items/base/consumables/head/con_head_209_sprinkbok_ear.png" cols="5" rows="3"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_209_sprinkbok_blink.png" cols="4" rows="1"/>
+    <texture id="mouth" source="items/base/consumables/head/con_head_209_sprinkbok_mouth.png" cols="4" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="bunny" texture="bunny">
+          <view angle="0" col="2" x="10" y="29" hm="true"/>
+          <view angle="45" x="-12" y="32"/>
+          <view angle="90" col="1" x="-2" y="30"/>
+          <view angle="135" x="9" y="32" hm="true"/>
+          <view angle="180" col="2" x="-11" y="29"/>
+          <view angle="225" col="3" x="9" y="33"/>
+          <view angle="270" col="4" y="29"/>
+          <view angle="315" col="3" x="-10" y="33" hm="true"/>
+        </layer>
+        <layer id="ears_01" texture="ears">
+          <view angle="0" col="2" x="10" y="29" hm="true"/>
+          <view angle="45" x="-12" y="32"/>
+          <view angle="90" col="1" x="-2" y="30"/>
+          <view angle="135" x="9" y="32" hm="true"/>
+          <view angle="180" col="2" x="-11" y="29"/>
+          <view angle="225" col="3" x="9" y="33"/>
+          <view angle="270" col="4" y="29"/>
+          <view angle="315" col="3" x="-10" y="33" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="10" y="29" hm="true"/>
+          <view angle="45" x="-12" y="32"/>
+          <view angle="90" col="1" x="-2" y="30"/>
+          <view angle="135" x="9" y="32" hm="true"/>
+          <view angle="180" col="2" x="-11" y="29"/>
+          <view angle="225" col="3" x="9" y="33"/>
+          <view angle="270" col="3" y="29" alpha="0"/>
+          <view angle="315" col="3" x="-10" y="33" hm="true"/>
+        </layer>
+        <layer id="mouth_01" texture="mouth">
+          <view angle="0" col="2" x="10" y="29" hm="true"/>
+          <view angle="45" x="-12" y="32"/>
+          <view angle="90" col="1" x="-2" y="30"/>
+          <view angle="135" x="9" y="32" hm="true"/>
+          <view angle="180" col="2" x="-11" y="29"/>
+          <view angle="225" col="3" x="9" y="33"/>
+          <view angle="270" col="4" row="1" y="29"/>
+          <view angle="315" col="3" row="1" x="-10" y="33" hm="true"/>
+        </layer>
+        <layer id="ears_02" texture="ears">
+          <view angle="0" col="2" row="1" x="10" y="29" hm="true"/>
+          <view angle="45" row="1" x="-12" y="32"/>
+          <view angle="90" col="1" row="1" x="-2" y="30"/>
+          <view angle="135" row="1" x="9" y="32" hm="true"/>
+          <view angle="180" col="2" row="1" x="-11" y="29"/>
+          <view angle="225" col="3" row="1" x="9" y="33"/>
+          <view angle="270" col="4" row="1" y="29"/>
+          <view angle="315" col="3" row="1" x="-10" y="33" hm="true"/>
+        </layer>
+        <layer id="ears_03" texture="ears">
+          <view angle="0" col="2" row="2" x="10" y="29" hm="true"/>
+          <view angle="45" row="2" x="-12" y="32"/>
+          <view angle="90" col="1" row="2" x="-2" y="30"/>
+          <view angle="135" row="2" x="9" y="32" hm="true"/>
+          <view angle="180" col="2" row="2" x="-11" y="29"/>
+          <view angle="225" col="3" row="2" x="9" y="33"/>
+          <view angle="270" col="4" row="2" y="29"/>
+          <view angle="315" col="3" row="2" x="-10" y="33" hm="true"/>
+        </layer>
+        <layer id="mouth_02" texture="mouth">
+          <view angle="0" col="2" row="1" x="10" y="29" hm="true"/>
+          <view angle="45" row="1" x="-12" y="32"/>
+          <view angle="90" col="1" row="1" x="-2" y="30"/>
+          <view angle="135" row="1" x="9" y="32" hm="true"/>
+          <view angle="180" col="2" row="1" x="-11" y="29"/>
+          <view angle="225" col="3" row="1" x="9" y="33"/>
+          <view angle="270" col="4" row="1" y="29" alpha="0"/>
+          <view angle="315" col="3" row="1" x="-10" y="33" hm="true"/>
+        </layer>
+        <layer id="mouth_03" texture="mouth">
+          <view angle="0" col="2" row="2" x="10" y="29" hm="true"/>
+          <view angle="45" row="2" x="-12" y="32"/>
+          <view angle="90" col="1" row="2" x="-2" y="30"/>
+          <view angle="135" row="2" x="9" y="32" hm="true"/>
+          <view angle="180" col="2" row="2" x="-11" y="29"/>
+          <view angle="225" col="3" row="2" x="9" y="33"/>
+          <view angle="270" col="4" row="1" y="29" alpha="0"/>
+          <view angle="315" col="3" row="2" x="-10" y="33" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="bunny"/>
+          <layerref id="ears_01"/>
+          <layerref id="mouth_01"/>
+        </frame>
+        <frame id="01_blink">
+          <layerref id="bunny"/>
+          <layerref id="ears_01"/>
+          <layerref id="blink"/>
+          <layerref id="mouth_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="bunny"/>
+          <layerref id="mouth_01"/>
+          <layerref id="ears_01"/>
+        </frame>
+        <frame id="03">
+          <layerref id="bunny"/>
+          <layerref id="mouth_02"/>
+          <layerref id="ears_01"/>
+        </frame>
+        <frame id="04">
+          <layerref id="bunny"/>
+          <layerref id="mouth_03"/>
+          <layerref id="ears_01"/>
+        </frame>
+        <frame id="jump01">
+          <layerref id="bunny" y="1"/>
+          <layerref id="ears_01" y="1"/>
+          <layerref id="mouth_01" y="1"/>
+        </frame>
+        <frame id="jump02">
+          <layerref id="bunny" y="1"/>
+          <layerref id="ears_02" y="1"/>
+          <layerref id="mouth_01" y="1"/>
+        </frame>
+        <frame id="jump03">
+          <layerref id="bunny" y="1"/>
+          <layerref id="ears_03" y="1"/>
+          <layerref id="mouth_01" y="1"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="bunny" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="6">
+          <frameref id="01_blink"/>
+          <frameref id="01" duration="8"/>
+          <frameref id="01_blink"/>
+          <frameref id="01"/>
+          <frameref id="01_blink"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Sit" framerate="6">
+          <frameref id="01_blink"/>
+          <frameref id="01" duration="8"/>
+          <frameref id="01_blink"/>
+          <frameref id="01"/>
+          <frameref id="01_blink"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Walk" framerate="12">
+          <frameref id="jump01"/>
+          <frameref id="jump03" duration="3"/>
+          <frameref id="jump02" duration="2"/>
+          <frameref id="jump01" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

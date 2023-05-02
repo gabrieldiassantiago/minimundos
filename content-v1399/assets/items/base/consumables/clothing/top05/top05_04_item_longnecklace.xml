@@ -1,0 +1,37 @@
+<item.SpriteItem id="1818" name="Colar Longo" desc="Um acessório básico. Uma coisinha a mais sem extravagância." tags="consumable,clothing,clothing_basic,actionbar,wear,top05,neck,action_wearable_toggle" icon="items/base/consumables/clothing/top05/top05_04_icon_longnecklace_a.png" price="200" tokens="2000" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" premium="Y">
+  <volume>
+    <box min="-0.22,0,-0.17" max="0.22,0.05,0.17"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top05/top05_04_frag_longnecklace.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="long" source="items/base/consumables/clothing/top05/top05_04_item_longnecklace.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.22,0,-0.17" max="0.22,0.05,0.17"/>
+      <layers>
+        <layer id="Layer" texture="long">
+          <view angle="45" x="1" y="14"/>
+          <view angle="135" x="-1" y="14" hm="true"/>
+          <view angle="225" col="1" x="2" y="14"/>
+          <view angle="315" col="1" x="-2" y="14" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

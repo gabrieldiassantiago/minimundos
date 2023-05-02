@@ -1,0 +1,39 @@
+<item.SpriteItem name="Capa Deluxe Play" desc="Uma capa de luxo (5 de 9)" tags="rare,consumable,clothing,actionbar,wear,suits,back,top08,action_wearable_toggle,nopvp" icon="items/base/consumables/back/con_bak_263_lv5cape_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="5874">
+  <volume>
+    <box min="-0.32,0,-0.32" max="0.32,1.7,0.32"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top08/top08_005_frag_lv5cape.xml"/>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes" value="fire+25"/>
+    <entry key="action_attributes_secondary" value="health+40,speed+40"/>
+  </data>
+  <textures>
+    <texture id="Lv5Cape" source="items/base/consumables/back/con_bak_item_263_lv5cape.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.32,0,-0.32" max="0.32,1.7,0.32"/>
+      <layers>
+        <layer id="Lv5Cape" texture="Lv5Cape">
+          <view angle="45" x="-26" y="48"/>
+          <view angle="135" x="26" y="48" hm="true"/>
+          <view angle="225" col="1" x="26" y="48"/>
+          <view angle="315" col="1" x="-26" y="48" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

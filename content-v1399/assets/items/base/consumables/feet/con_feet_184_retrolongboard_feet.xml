@@ -1,0 +1,62 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_184_retrolongboard_feet01.png" cols="3" rows="1"/>
+    <texture id="base2" source="items/base/consumables/feet/con_feet_184_retrolongboard_feet02.png" cols="2" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="board" texture="base">
+          <view angle="0" col="2" x="-13" y="37"/>
+          <view angle="45" x="-11" y="44"/>
+          <view angle="90" col="1" y="41" alpha="0"/>
+          <view angle="135" x="7" y="45" hm="true"/>
+          <view angle="180" col="2" x="13" y="32" hm="true"/>
+          <view angle="225" col="1" x="8" y="52" hm="true"/>
+          <view angle="270" col="1" y="32" alpha="0"/>
+          <view angle="315" col="1" x="-6" y="55"/>
+        </layer>
+        <layer id="sit" texture="base">
+          <view angle="45" x="4" y="26" alpha="0" hm="true"/>
+          <view angle="135" x="-5" y="33" alpha="0"/>
+          <view angle="225" x="-5" y="23" alpha="0" hm="true"/>
+          <view angle="315" x="15" y="19" alpha="0"/>
+        </layer>
+        <layer id="board01" texture="base2">
+          <view angle="0" x="10" y="26" alpha="0"/>
+          <view angle="45" x="9" y="36" alpha="0"/>
+          <view angle="90" x="-1" y="55"/>
+          <view angle="135" x="-8" y="33" alpha="0" hm="true"/>
+          <view angle="180" x="-8" y="26" alpha="0" hm="true"/>
+          <view angle="225" y="29" alpha="0" hm="true"/>
+          <view angle="270" col="1" x="1" y="67"/>
+          <view angle="315" x="1" y="31" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="board"/>
+          <layerref id="board01"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

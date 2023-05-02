@@ -1,0 +1,175 @@
+<item.WidgetItem id="362" name="Portal Gótico" desc="Um portal mágico para outros espaços." tags="door,widget" icon="items/base/gothic/icon_g_portal_01_arch.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_portal.swf" price="150" tokens="1500" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.48,0,-1.2" max="0.48,3.1,1.2"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+  </events>
+  <actions>
+    <action id="Navigate" trigger="false" event="navigate"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="6000"/>
+    <entry key="widget_max_load_wait" value="8000"/>
+    <entry key="portalType" value="portal"/>
+    <entry key="maxLinkedSpaces" value="6"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <navigate sitRange="1.00" standRange="1.00" targetRange="1.00"/>
+  <textures>
+    <texture id="vortex" source="items/base/shared/s_portal_vortex.png" cols="7" rows="1"/>
+    <texture id="frame" source="items/base/gothic/g_portal_01_arch.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_against_wall.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Portal">
+      <box min="-0.48,0,-1.2" max="0.48,3.1,1.2"/>
+      <layers>
+        <layer id="back" texture="frame">
+          <view angle="45" col="1" x="35" y="55"/>
+          <view angle="135" col="1" x="-35" y="57" hm="true"/>
+          <view angle="225" col="1" x="35" y="55"/>
+          <view angle="315" col="1" x="-35" y="55" hm="true"/>
+        </layer>
+        <layer id="vortex01" texture="vortex">
+          <view angle="45" x="13" y="1"/>
+          <view angle="135" x="-13" y="1" hm="true"/>
+          <view angle="225" x="13" y="1"/>
+          <view angle="315" x="-13" y="1" hm="true"/>
+        </layer>
+        <layer id="vortex02" texture="vortex">
+          <view angle="45" col="1" x="13" y="1"/>
+          <view angle="135" col="1" x="-13" y="1" hm="true"/>
+          <view angle="225" col="1" x="13" y="1"/>
+          <view angle="315" col="1" x="-13" y="1" hm="true"/>
+        </layer>
+        <layer id="vortex03" texture="vortex">
+          <view angle="45" col="2" x="13" y="1"/>
+          <view angle="135" col="2" x="-13" y="1" hm="true"/>
+          <view angle="225" col="2" x="13" y="1"/>
+          <view angle="315" col="2" x="-13" y="1" hm="true"/>
+        </layer>
+        <layer id="vortex04" texture="vortex">
+          <view angle="45" col="3" x="13" y="1"/>
+          <view angle="135" col="3" x="-13" y="1" hm="true"/>
+          <view angle="225" col="3" x="13" y="1"/>
+          <view angle="315" col="3" x="-13" y="1" hm="true"/>
+        </layer>
+        <layer id="vortex05" texture="vortex">
+          <view angle="45" col="4" x="13" y="1"/>
+          <view angle="135" col="4" x="-13" y="1" hm="true"/>
+          <view angle="225" col="4" x="13" y="1"/>
+          <view angle="315" col="4" x="-13" y="1" hm="true"/>
+        </layer>
+        <layer id="vortex06" texture="vortex">
+          <view angle="45" col="5" x="13" y="1"/>
+          <view angle="135" col="5" x="-13" y="1" hm="true"/>
+          <view angle="225" col="5" x="13" y="1"/>
+          <view angle="315" col="5" x="-13" y="1" hm="true"/>
+        </layer>
+        <layer id="vortex07" texture="vortex">
+          <view angle="45" col="6" x="13" y="1"/>
+          <view angle="135" col="6" x="-13" y="1" hm="true"/>
+          <view angle="225" col="6" x="13" y="1"/>
+          <view angle="315" col="6" x="-13" y="1" hm="true"/>
+        </layer>
+        <layer id="frame" texture="frame">
+          <view angle="45" x="-40" y="55"/>
+          <view angle="135" x="40" y="55" hm="true"/>
+          <view angle="225" x="-40" y="55"/>
+          <view angle="315" x="40" y="55" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="back"/>
+          <layerref id="vortex01"/>
+          <layerref id="frame"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="back"/>
+          <layerref id="vortex02"/>
+          <layerref id="frame"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="back"/>
+          <layerref id="vortex03"/>
+          <layerref id="frame"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="back"/>
+          <layerref id="vortex04"/>
+          <layerref id="frame"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="back"/>
+          <layerref id="vortex05"/>
+          <layerref id="frame"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="back"/>
+          <layerref id="vortex06"/>
+          <layerref id="frame"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="back"/>
+          <layerref id="vortex07"/>
+          <layerref id="frame"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Vortex swirl" framerate="8">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.2" s="5.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" hm="true"/>
+          <view angle="135" x="2"/>
+          <view angle="225" hm="true"/>
+          <view angle="315" x="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light" color="0xdbefff"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Intense" y="1.2" s="3.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="5"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" x="5"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light" color="0x66ccff" a="0.33"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,48 @@
+<f id="Bot03_37SheriffPants" parentId="Bot03">
+  <g id="TrackPants" icon="$bu/icon_skinny_trouser.png">
+    <s id="TrackPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_12_idle.png" pri="4.1"/>
+    <s id="TrackPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_12_walk1.png" pri="4.1"/>
+    <s id="TrackPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_12_walk2.png" pri="4.1"/>
+    <s id="TrackPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_12_walk3.png" pri="4.1"/>
+    <s id="TrackPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_12_walk4.png" pri="4.1"/>
+    <s id="TrackSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_12_sit_upper.png" pri="4.1"/>
+    <s id="TrackSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/bot03/bot03_12_sit_lower.png" pri="4.1"/>
+    <c sId="TrackPantIdleBase" c="4338962" a="1.00" b="56.1" ct="1.49" lId="Bot03_12Color1" lw="N"/>
+    <c sId="TrackPantWalk1Base" c="4338962" a="1.00" b="56.1" ct="1.49" lId="Bot03_12Color1" lw="N"/>
+    <c sId="TrackPantWalk2Base" c="4338962" a="1.00" b="56.1" ct="1.49" lId="Bot03_12Color1" lw="N"/>
+    <c sId="TrackPantWalk3Base" c="4338962" a="1.00" b="56.1" ct="1.49" lId="Bot03_12Color1" lw="N"/>
+    <c sId="TrackPantWalk4Base" c="4338962" a="1.00" b="56.1" ct="1.49" lId="Bot03_12Color1" lw="N"/>
+    <c sId="TrackSitUpperBase" c="4338962" a="1.00" b="56.1" ct="1.49" lId="Bot03_12Color1" lw="N"/>
+    <c sId="TrackSitLowerBase" c="4338962" a="1.00" b="56.1" ct="1.49" lId="Bot03_12Color1" lw="N"/>
+    <s id="TrackPantIdleDecal" cId="LegIdle" s="items/base/brands/walkingdead/wd_10_pants_idle.png" pri="4.1"/>
+    <s id="TrackPantWalk1Decal" cId="LegWalk1" s="items/base/brands/walkingdead/wd_10_pants_walk1.png" pri="4.1"/>
+    <s id="TrackPantWalk2Decal" cId="LegWalk2" s="items/base/brands/walkingdead/wd_10_pants_walk2.png" pri="4.1"/>
+    <s id="TrackPantWalk3Decal" cId="LegWalk3" s="items/base/brands/walkingdead/wd_10_pants_walk3.png" pri="4.1"/>
+    <s id="TrackPantWalk4Decal" cId="LegWalk4" s="items/base/brands/walkingdead/wd_10_pants_walk4.png" pri="4.1"/>
+    <s id="TrackSitUpperDecal" cId="LegSitUpper" s="items/base/brands/walkingdead/wd_10_pants_sit_upper.png" pri="4.1"/>
+    <s id="TrackSitLowerDecal" cId="LegSitLower" s="items/base/brands/walkingdead/wd_10_pants_sit_lower.png" pri="4.1"/>
+    <c sId="TrackPantIdleDecal" c="11445368" a="0.93" b="36.6" ct="0.25" lId="Bot03_12Color2" lw="N"/>
+    <c sId="TrackPantWalk1Decal" c="11445368" a="0.93" b="36.6" ct="0.25" lId="Bot03_12Color2" lw="N"/>
+    <c sId="TrackPantWalk2Decal" c="11445368" a="0.93" b="36.6" ct="0.25" lId="Bot03_12Color2" lw="N"/>
+    <c sId="TrackPantWalk3Decal" c="11445368" a="0.93" b="36.6" ct="0.25" lId="Bot03_12Color2" lw="N"/>
+    <c sId="TrackPantWalk4Decal" c="11445368" a="0.93" b="36.6" ct="0.25" lId="Bot03_12Color2" lw="N"/>
+    <c sId="TrackSitUpperDecal" c="11445368" a="0.93" b="36.6" ct="0.25" lId="Bot03_12Color2" lw="N"/>
+    <c sId="TrackSitLowerDecal" c="11445368" a="0.93" b="36.6" ct="0.25" lId="Bot03_12Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot03_12" icon="items/base/consumables/clothing/bot03/bot03_12_icon_trackpant.png" w="48" h="48"/>
+    <s id="IconBot03_12Base" cId="IconBot03_12" s="items/base/consumables/clothing/bot03/bot03_12_icon_trackpant_a.png"/>
+    <c sId="IconBot03_12Base" c="4338962" a="1.00" b="56.1" ct="1.49" lId="Bot03_12Color1" lw="N"/>
+    <s id="IconBot03_12Decal" cId="IconBot03_12" s="items/base/consumables/clothing/bot03/bot03_12_icon_trackpant_b.png" pri="1"/>
+    <c sId="IconBot03_12Decal" c="11445368" a="0.93" b="36.6" ct="0.25" lId="Bot03_12Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot03_12Color1" name="Color 1" desc="Choose a color" sel="Brown" seld="Brown">
+      <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="4338962" a="1.00" b="56.1" ct="1.49" lId="Bot03_12Color1"/>
+    </b>
+    <b id="Bot03_12Color2" name="Color 2" desc="Choose a color" sel="Kaki" seld="Kaki">
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11445368" a="0.93" b="36.6" ct="0.25" lId="Bot03_12Color2"/>
+    </b>
+  </g>
+  <ds id="JSBottom"/>
+</f>

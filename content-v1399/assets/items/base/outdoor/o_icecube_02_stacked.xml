@@ -1,0 +1,43 @@
+<item.SpriteItem id="1649" name="Parede de Cubo de Gelo" desc="2 cubos formam uma parede." tags="misc" icon="items/base/outdoor/icon_o_icecube_02_stacked.png" minLevel="1" dropTargetType="table" dropTargetList="floor, avatar,avatar" dropTargetClamp="none" minCPLevel="1" price="25" tokens="250">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1.9,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="ice_shadow" source="items/base/outdoor/o_icecube_shadow.png" cols="1" rows="1"/>
+    <texture id="block" source="items/base/outdoor/o_icecube_01.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,1.9,0.49"/>
+      <layers>
+        <layer id="Layer" texture="ice_shadow">
+          <view y="38"/>
+        </layer>
+        <layer id="block" texture="block" y="34">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="block01" texture="block" y="34">
+          <view angle="45" hm="true"/>
+          <view angle="135"/>
+          <view angle="225" hm="true"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Layer"/>
+          <layerref id="block"/>
+          <layerref id="block01" y="-76"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

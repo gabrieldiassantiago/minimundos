@@ -1,0 +1,69 @@
+<item.SpriteItem name="Câmera Digital Blade" desc="Uma câmera digital profissional." tags="rare,consumable,clothing,actionbar,wear,top07,action_wearable_toggle" icon="items/base/consumables/clothing/top07/top07_06_icon_camera.png" price="4000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="3645">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.2,0.24"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top07/top07_06_frag_camera.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/top07/top07_06_item_camera.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/consumables/clothing/accessory/acc_03_hand_glow.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="deer">
+      <box min="-0.24,0,-0.24" max="0.24,0.2,0.24"/>
+      <layers>
+        <layer id="deer" texture="Texture">
+          <view angle="45" x="5" y="17"/>
+          <view angle="135" x="-2" y="17" hm="true"/>
+          <view angle="225" col="1" x="5" y="18" hm="true"/>
+          <view angle="315" col="1" x="-5" y="18"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="deer"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" col="1" x="-3" y="-3"/>
+          <view angle="135" col="1" x="-3" y="-3"/>
+          <view angle="225" col="3" x="2" y="-1"/>
+          <view angle="315" col="3" x="-2" y="-1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x81eaeb"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

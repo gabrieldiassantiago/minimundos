@@ -1,0 +1,53 @@
+<item.SpriteItem id="4024" name="Louro" desc="O papagaio doméstico mais legal." tags="rare,consumable,hand,usable,wear,action_wearable_toggle" icon="items/base/consumables/clothing/accessory/acc_147_icon_brazilparrot.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,1.7,0.35"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="wiz" source="items/base/consumables/clothing/accessory/acc_147_item_brazilparrot.png" cols="2" rows="1"/>
+    <texture id="blink" source="items/base/consumables/clothing/accessory/acc_147_hand_brazilparrot_blink.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,1.7,0.35"/>
+      <layers>
+        <layer id="wiz" texture="wiz">
+          <view angle="45" y="28"/>
+          <view angle="135" y="28" hm="true"/>
+          <view angle="225" col="1" y="28"/>
+          <view angle="315" col="1" y="28" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="45" col="3" x="6" y="-131"/>
+          <view angle="135" col="3" x="-6" y="-131"/>
+          <view angle="225" col="1" x="-12" y="-135" hm="true"/>
+          <view angle="315" col="1" x="12" y="-135"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="blink">
+          <layerref id="wiz"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="open">
+          <layerref id="wiz"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="blinking" framerate="3">
+          <frameref id="blink"/>
+          <frameref id="open" duration="18"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

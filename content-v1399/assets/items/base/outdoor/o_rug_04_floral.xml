@@ -1,0 +1,30 @@
+<item.SpriteItem id="4587" name="Tapete de Flor Fantasia Eco" desc="Um belo tapete de flor" tags="floor" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" icon="items/base/outdoor/icon_o_rug_04_floral.png" price="125">
+  <volume>
+    <box min="-1.5,-0.001,-0.5" max="0.5,0,1.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/outdoor/o_rug_04_floral.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="rug_pattern" layer="surface">
+      <box min="-1.5,-0.001,-0.5" max="0.5,0,1.5"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-1" y="34"/>
+          <view angle="135" x="65" y="65"/>
+          <view angle="225" x="-1" y="96"/>
+          <view angle="315" x="-65" y="65"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

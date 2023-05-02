@@ -1,0 +1,56 @@
+<item.SpriteItem id="0" name="Foam Finger" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.675,0.3463,-0.4962" max="-0.375,0.7463,-0.1962"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/magic/con_hand_87_foamfinger.png" cols="7" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" x="-0.525" y="0.3463" z="-0.3462">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="wand01" texture="Texture">
+          <view angle="0" col="3" x="-9" y="13" hm="true"/>
+          <view angle="45" x="-4" y="17"/>
+          <view angle="90" col="1" x="6" y="18"/>
+          <view angle="135" col="2" x="8" y="23"/>
+          <view angle="180" col="3" x="10" y="31"/>
+          <view angle="225" col="4" x="-2" y="25"/>
+          <view angle="270" col="5" x="-5" y="25"/>
+          <view angle="315" col="6" x="-8" y="23"/>
+        </layer>
+        <layer id="wand02" texture="Texture">
+          <view angle="0" col="3" row="1" x="-9" y="13" hm="true"/>
+          <view angle="45" row="1" x="-9" y="22"/>
+          <view angle="90" col="1" row="1" x="1" y="18"/>
+          <view angle="135" col="2" row="1" x="5" y="20"/>
+          <view angle="180" col="3" row="1" x="10" y="31"/>
+          <view angle="225" col="4" row="1" x="6" y="22"/>
+          <view angle="270" col="5" row="1" x="-1" y="26"/>
+          <view angle="315" col="6" row="1" x="-3" y="27"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="wand01"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="wand02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Wave" framerate="1">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

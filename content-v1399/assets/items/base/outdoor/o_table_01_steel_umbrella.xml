@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="Uma mesa de inox com guarda-sol para exterior." dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/outdoor/icon_o_table_01_steel_umbrella.png" id="855" name="Mesa de Inox com Guarda-Sol" tags="table" price="40" tokens="400" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.49,2.2,0.49" min="-0.49,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="umbrella" rows="1" source="items/base/outdoor/o_umbrella_01_circle.png"/>
+    <texture cols="1" id="steeltable" rows="1" source="items/base/outdoor/o_table_02_steel.png"/>
+  </textures>
+  <nodes>
+    <node id="Table">
+      <box max="0.49,2.2,0.49" min="-0.49,0,-0.49"/>
+      <layers>
+        <layer id="table" texture="steeltable">
+          <view angle="45" y="32"/>
+          <view angle="135" mirror="true" y="32"/>
+          <view angle="225" y="32"/>
+          <view angle="315" mirror="true" y="32"/>
+        </layer>
+        <layer id="umbrella" texture="umbrella">
+          <view angle="45" y="-58"/>
+          <view angle="135" mirror="true" y="-58"/>
+          <view angle="225" y="-58"/>
+          <view angle="315" mirror="true" y="-58"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

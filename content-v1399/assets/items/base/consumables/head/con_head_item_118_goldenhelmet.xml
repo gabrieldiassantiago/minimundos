@@ -1,0 +1,37 @@
+<item.SpriteItem id="2952" name="Capacete Deluxe" desc="Raríssimo capacete de robô feito de puro ouro e titânio." tags="head,consumable,costume,collectible,wear,actionbar,rare,action_wearable_toggle" icon="items/base/consumables/head/icon_con_head_item_118_goldenhelmet.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="12500">
+  <volume>
+    <box min="-0.33,0,-0.33" max="0.33,0.6,0.33"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/consumables/head/con_head_generic_dropshadow.png" cols="1" rows="1"/>
+    <texture id="head" source="items/base/consumables/head/con_head_118_goldenhelmet.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.33,0,-0.33" max="0.33,0.6,0.33"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view y="21"/>
+        </layer>
+        <layer id="head" texture="head">
+          <view angle="45" col="1" x="-2" y="11"/>
+          <view angle="135" col="1" x="2" y="11" hm="true"/>
+          <view angle="225" col="3" x="-2" y="14"/>
+          <view angle="315" col="3" x="2" y="12" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

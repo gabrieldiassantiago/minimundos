@@ -1,0 +1,47 @@
+<item.ChairItem id="4569" name="Rede ao Ar Livre" desc="Uma rede ao ar livre para relaxar" tags="chair" icon="items/base/outdoor/icon_o_couch_06_hammock.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="410">
+  <seats>
+    <seat x="0.15" y="0.65" z="1">
+      <ap x="1" z="1"/>
+      <ap x="1" z="2"/>
+      <ap x="1"/>
+      <ap x="-1" z="1"/>
+      <ap x="-1" z="2"/>
+      <ap x="-1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.4378,0,-0.4772" max="0.425,1.2077,2.49"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="picnic seat" source="items/base/outdoor/o_couch_06_hammock.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Seat" x="0.25" z="0.5">
+      <box min="-0.6878,0,-0.9772" max="0.175,1.2077,1.99"/>
+      <layers>
+        <layer id="bench" texture="picnic seat">
+          <view angle="45" x="15" y="60"/>
+          <view angle="135" x="50" y="90" hm="true"/>
+          <view angle="225" col="1" x="-13" y="107"/>
+          <view angle="315" col="1" x="-50" y="75" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

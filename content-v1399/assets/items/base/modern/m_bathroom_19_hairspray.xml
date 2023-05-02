@@ -1,0 +1,59 @@
+<item.SpriteItem id="2804" name="Spray Fixador" desc="Um spray para penteados descolados." tags="misc" icon="items/base/modern/icon_m_bathroom_19_hairspray.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="15" tokens="150">
+  <volume>
+    <box min="-0.05,0,-0.05" max="0.05,0.55,0.05"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="spray" source="items/base/modern/m_bathroom_19_hairspray.png" cols="2" rows="1"/>
+  </textures>
+  <sounds/>
+  <nodes>
+    <node id="Node">
+      <box min="-0.05,0,-0.05" max="0.05,0.55,0.05"/>
+      <layers>
+        <layer id="spray" texture="spray" y="15">
+          <view angle="45" col="1" y="-7"/>
+          <view angle="135" y="-7"/>
+          <view angle="225" col="1" y="-7"/>
+          <view angle="315" y="-7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle01">
+          <layerref id="spray"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4"/>
+        <animation id="On" framerate="1"/>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="glow">
+          <view angle="45" x="2" y="15"/>
+          <view angle="135" x="-1" y="15"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light01" color="0xf7cff7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4"/>
+        <animation id="On" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,43 @@
+<item.SpriteItem id="3926" name="Pôster de Aniversário" desc="Um pôster de parede para comemorar aniversários." tags="seasonal,misc,wall,welcomeback" icon="items/base/modern/m_welcomeback_01_banner_icon.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="30">
+  <volume>
+    <box min="0,-0.2949,-0.9033" max="0.0128,0.5808,1.07"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Closed" state="true" event="animate(Closed)"/>
+  </actions>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Open" source="items/base/modern/m_welcomeback_01_banner.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="nodes">
+      <box min="0,-0.2949,-0.9033" max="0.0128,0.5808,1.07"/>
+      <layers>
+        <layer id="Open" texture="Open" y="100">
+          <view angle="45" x="7" y="-40"/>
+          <view angle="135" col="1" x="7" y="-40"/>
+          <view angle="225" y="-26" alpha="0"/>
+          <view angle="315" y="-26" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Open">
+          <layerref id="Open"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

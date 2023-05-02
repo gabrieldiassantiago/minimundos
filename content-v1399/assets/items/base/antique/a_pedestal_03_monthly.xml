@@ -1,0 +1,81 @@
+<item.SpriteItem id="1546" name="Pedestal Colecionável" desc="Item exclusivo para apoiar itens raros." tags="admin,table" icon="items/base/antique/icon_a_pedestal_03_monthly.png" minLevel="1" minLevelType="2" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1.73,0.49"/>
+  </volume>
+  <events>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="00" state="true" event="animate(00)"/>
+    <action id="01" state="true" event="animate(01)"/>
+    <action id="02" state="true" event="animate(02)"/>
+    <action id="03" state="true" event="animate(03)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="4"/>
+    <entry key="00" value="00"/>
+    <entry key="01" value="01"/>
+    <entry key="02" value="02"/>
+    <entry key="03" value="03"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/antique/a_pedestal_03_monthly.png" cols="1" rows="1"/>
+    <texture id="Texture01" source="items/base/antique/a_pedestal_03_monthly_top.png" cols="1" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,1.73,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="26">
+          <view y="6"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view y="-114"/>
+        </layer>
+        <layer id="Layer02" texture="Texture01">
+          <view row="1" y="-114"/>
+        </layer>
+        <layer id="Layer03" texture="Texture01">
+          <view row="2" y="-114"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="01">
+          <layerref id="Layer"/>
+          <layerref id="Layer02"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Layer"/>
+          <layerref id="Layer03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="2" loop="false">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01" framerate="2" loop="false">
+          <frameref id="01"/>
+        </animation>
+        <animation id="02" framerate="2" loop="false">
+          <frameref id="02"/>
+        </animation>
+        <animation id="03" framerate="2" loop="false">
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

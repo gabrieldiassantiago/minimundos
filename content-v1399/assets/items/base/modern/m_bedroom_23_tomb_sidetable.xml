@@ -1,0 +1,28 @@
+<item.SpriteItem name="Criado Mudo Tumba Master" desc="Aqui jás os que recem partiram [2 de 8]" tags="rare,table" icon="items/base/modern/m_bedroom_23_tomb_sidetable_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" id="7284">
+  <volume>
+    <box min="-0.48,0,-0.2913" max="-0.0456,0.9775,0.24"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data/>
+  <textures>
+    <texture id="Base" source="items/base/modern/m_bedroom_23_tomb_sidetable.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind">
+      <box min="-0.48,0,-0.2913" max="-0.0456,0.9775,0.24"/>
+      <layers>
+        <layer id="Chest" texture="Base">
+          <view angle="45" x="-19" y="14"/>
+          <view angle="135" x="16" y="12" hm="true"/>
+          <view angle="225" col="1" x="17" y="30"/>
+          <view angle="315" col="1" x="-17" y="30" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

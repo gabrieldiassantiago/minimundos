@@ -1,0 +1,72 @@
+<item.SpriteItem desc="Chip de computador feito de silício." dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" gridActive="false" icon="items/base/modern/icon_m_mis_02_chip.png" id="1162" name="Chip" tags="misc,pickup" price="20" tokens="200" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.13,0.03,0.13" min="-0.13,0,-0.13"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_pick_up.as"/>
+    <event id="action" script="scripts/item/action_pick_up.as"/>
+  </events>
+  <actions>
+    <action id="Pick Up"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate usableRange="3.00"/>
+  <textures>
+    <texture cols="1" id="chip" rows="1" source="items/base/modern/m_mis_02_chip.png"/>
+  </textures>
+  <nodes>
+    <node id="Node" layer="floor">
+      <box max="0.13,0.03,0.13" min="-0.13,0,-0.13"/>
+      <layers>
+        <layer id="chip" texture="chip">
+          <view angle="45" hm="true" y="17"/>
+          <view angle="135" y="17"/>
+          <view angle="225" hm="true" y="17"/>
+          <view angle="315" y="17"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="chip01">
+          <layerref id="chip"/>
+        </frame>
+        <frame id="chip02">
+          <layerref a="0.8" id="chip"/>
+        </frame>
+        <frame id="chip03">
+          <layerref a="0.5" id="chip"/>
+        </frame>
+        <frame id="chip04">
+          <layerref a="0.2" id="chip"/>
+        </frame>
+        <frame id="chip05">
+          <layerref a="0" id="chip"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Visible" syncFrames="false">
+          <frameref id="chip01"/>
+        </animation>
+        <animation framerate="4" id="Invisible" syncFrames="false">
+          <frameref id="chip05"/>
+        </animation>
+        <animation framerate="8" id="Show" loop="false" syncFrames="false">
+          <frameref id="chip05"/>
+          <frameref id="chip04"/>
+          <frameref id="chip03"/>
+          <frameref id="chip02"/>
+          <frameref id="chip01"/>
+        </animation>
+        <animation framerate="8" id="Hide" loop="false" syncFrames="false">
+          <frameref id="chip01"/>
+          <frameref id="chip02"/>
+          <frameref id="chip03"/>
+          <frameref id="chip04"/>
+          <frameref id="chip05"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

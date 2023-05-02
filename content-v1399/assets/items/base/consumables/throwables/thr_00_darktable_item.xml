@@ -1,0 +1,28 @@
+<item.SpriteItem id="6707" name="Find Battles Table" desc="A large circular table" tags="admin,floor" icon="items/base/consumables/throwables/thr_00_darktable_icon.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-2.49,-0.01,-2.49" max="3.49,0,3.49"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/throwables/thr_00_darktable_item.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" x="0.5" z="0.5">
+      <box min="-2.99,-0.01,-2.99" max="2.99,0,2.99"/>
+      <layers>
+        <layer id="right" texture="base" y="155">
+          <view x="148"/>
+        </layer>
+        <layer id="left" texture="base" y="155">
+          <view x="-148" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="right"/>
+          <layerref id="left"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

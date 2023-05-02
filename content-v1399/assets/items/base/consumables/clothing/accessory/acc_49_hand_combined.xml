@@ -1,0 +1,113 @@
+<item.SpriteItem id="0" name="Star" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Laptop" source="items/base/consumables/clothing/accessory/acc_49_hand_combined.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="flares" source="items/base/consumables/clothing/accessory/acc_49_hand_flares.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Star" texture="Laptop">
+          <view angle="0" col="2" x="-6" y="7"/>
+          <view angle="45" col="1" x="-4" y="6"/>
+          <view angle="90" y="2"/>
+          <view angle="135" col="1" x="2" y="6" hm="true"/>
+          <view angle="180" col="2" x="6" y="4" hm="true"/>
+          <view angle="225" col="1" y="6"/>
+          <view angle="270" y="6" hm="true"/>
+          <view angle="315" col="1" x="-2" y="8" hm="true"/>
+        </layer>
+        <layer id="flares01" texture="flares">
+          <view angle="0" x="-3" y="-7"/>
+          <view angle="45" x="-6" y="-4"/>
+          <view angle="90" x="-3" y="-4"/>
+          <view angle="135" x="-2" y="-9" hm="true"/>
+          <view angle="180" x="3" y="-7" hm="true"/>
+          <view angle="225" x="4" y="-8"/>
+          <view angle="270" x="4" y="-4" hm="true"/>
+          <view angle="315" x="1" y="-4" hm="true"/>
+        </layer>
+        <layer id="flares02" texture="flares">
+          <view angle="0" col="1" x="-3" y="-7"/>
+          <view angle="45" col="1" x="-6" y="-4"/>
+          <view angle="90" col="1" x="-3" y="-4"/>
+          <view angle="135" col="1" x="-2" y="-9" hm="true"/>
+          <view angle="180" col="1" x="3" y="-7" hm="true"/>
+          <view angle="225" col="1" x="4" y="-8"/>
+          <view angle="270" col="1" x="4" y="-4" hm="true"/>
+          <view angle="315" col="1" x="1" y="-4" hm="true"/>
+        </layer>
+        <layer id="flares03" texture="flares">
+          <view angle="0" col="2" x="-3" y="-7"/>
+          <view angle="45" col="2" x="-6" y="-4"/>
+          <view angle="90" col="2" x="-3" y="-4"/>
+          <view angle="135" col="2" x="-2" y="-9" hm="true"/>
+          <view angle="180" col="2" x="3" y="-7" hm="true"/>
+          <view angle="225" col="2" x="4" y="-8"/>
+          <view angle="270" col="2" x="4" y="-4" hm="true"/>
+          <view angle="315" col="2" x="1" y="-4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Star off">
+          <layerref id="Star"/>
+        </frame>
+        <frame id="Star 01">
+          <layerref id="Star"/>
+          <layerref id="flares01"/>
+        </frame>
+        <frame id="Star 02">
+          <layerref id="Star"/>
+          <layerref id="flares02"/>
+        </frame>
+        <frame id="Star 03">
+          <layerref id="Star"/>
+          <layerref id="flares03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="Star off" duration="12"/>
+          <frameref id="Star 03"/>
+          <frameref id="Star 02"/>
+          <frameref id="Star 01"/>
+          <frameref id="Star 02"/>
+          <frameref id="Star 03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="Light">
+          <view angle="0" y="33" hm="true"/>
+          <view angle="45" y="29"/>
+          <view angle="90" y="29"/>
+          <view angle="135" x="2" y="29" hm="true"/>
+          <view angle="180" y="29"/>
+          <view angle="225" y="29"/>
+          <view angle="270" y="32"/>
+          <view angle="315" y="32" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Layer" color="0xf4bdf4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,27 @@
+<item.SpriteItem id="0" name="Snow Fox Head" desc="A snow fox head" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <textures>
+    <texture id="fox" source="items/base/consumables/head/con_head_25_snowfox_cyan.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="fox" texture="fox">
+          <view angle="0" x="8" y="17" hm="true"/>
+          <view angle="45" col="1" x="1" y="20"/>
+          <view angle="90" col="2" x="-5" y="18"/>
+          <view angle="135" col="1" x="-1" y="20" hm="true"/>
+          <view angle="180" x="-8" y="17"/>
+          <view angle="225" col="3" x="-2" y="19"/>
+          <view angle="270" col="4" x="-5" y="18"/>
+          <view angle="315" col="3" x="2" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

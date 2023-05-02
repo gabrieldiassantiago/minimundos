@@ -1,0 +1,34 @@
+<item.SpriteItem id="1594" name="Mesa com Toalha Xadrez Verde" desc="Ideal para piqueniques." tags="table" icon="items/base/outdoor/icon_o_table_04_picbench_cover_b.png" price="35" tokens="350" minLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" minCPLevel="1">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,0.67,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="picnic bench" source="items/base/outdoor/o_table_03_picnic_bench.png" cols="1" rows="1"/>
+    <texture id="cloth" source="items/base/outdoor/o_table_04_picbench_cover_b.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Table" z="0.5">
+      <box min="-0.4,0,-0.99" max="0.4,0.67,0.99"/>
+      <layers>
+        <layer id="Layer" texture="picnic bench">
+          <view angle="45" y="52"/>
+          <view angle="135" y="52" hm="true"/>
+          <view angle="225" y="52"/>
+          <view angle="315" y="52" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="cloth">
+          <view angle="45" x="-1" y="18"/>
+          <view angle="135" x="1" y="18" hm="true"/>
+          <view angle="225" x="-1" y="18"/>
+          <view angle="315" x="1" y="18" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

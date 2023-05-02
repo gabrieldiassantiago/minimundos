@@ -1,0 +1,25 @@
+<f id="Top05_17Dookie" parentId="Top05">
+  <g id="NecklaceLong" name="Necklace" icon="items/base/consumables/clothing/top05/top05_17_icon_dookie.png">
+    <s id="NecklaceDookieBase" cId="Torso" s="items/base/consumables/clothing/top05/top05_17_dookie.png" pri="6.2"/>
+    <c sId="NecklaceDookieBase" c="10592673" b="-30.3" ct="0.79" lId="Top05_17Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop05_17" icon="items/base/consumables/clothing/top05/top05_17_icon_dookie.png" w="48" h="48"/>
+    <s id="IconTop05_17VIP" cId="IconTop05_17" s="items/base/shared/s_vipbadge.png" pri="0.2"/>
+    <s id="IconTop05_17Base" cId="IconTop05_17" s="items/base/consumables/clothing/top05/top05_17_icon_dookie.png" pri="0.2"/>
+    <c sId="IconTop05_17Base" c="10592673" b="-30.3" ct="0.79" lId="Top05_17Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top05_17Color1" name="Color" desc="Choose a color" sel="Gold" seld="Gold">
+      <c id="Gold" icon="$bu/icon_metal_gold.png" c="10592673" b="-30.3" ct="0.79" lId="Top05_17Color1"/>
+      <c id="Silver" icon="$bu/icon_metal_silver.png" c="6453655" a="0.90" b="53.2" ct="2.00" lId="Top05_17Color1"/>
+      <c id="Copper" icon="$bu/icon_metal_copper.png" c="6369309" a="0.46" b="9.5" ct="1.47" lId="Top05_17Color1"/>
+      <c id="Platinum" icon="$bu/icon_metal_platinum.png" c="16383963" a="0.97" b="-1.2" ct="0.63" lId="Top05_17Color1"/>
+      <c id="Bronze" icon="$bu/icon_metal_bronze.png" c="4082440" a="0.71" b="52.4" ct="1.69" lId="Top05_17Color1"/>
+      <c id="Steel" icon="$bu/icon_metal_steel.png" c="5395026" a="1.00" b="67.0" ct="1.98" lId="Top05_17Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top05_17Color1"/>
+    </wizbox>
+  </g>
+</f>

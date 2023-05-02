@@ -1,0 +1,60 @@
+<f id="DemonSuit" parentId="Suits">
+  <g id="Demon">
+    <b id="Demon_Torso" min="2" max="2" sel="Demon_Torso">
+      <s id="Demon_Torso" cId="Torso" s="items/base/consumables/clothing/suits/suit_75_demon_torso.png" pri="1"/>
+    </b>
+    <b id="Demon_Legs" min="2" max="2" sel="Legs">
+      <g id="Legs" icon="$bu/icon_legs_trouser.png">
+        <s id="Demon_Leg_Idle" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_75_demon_leg_idle.png" pri="3"/>
+        <s id="Demon_Leg_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_75_demon_leg_walk1.png" pri="3"/>
+        <s id="Demon_Leg_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_75_demon_leg_walk2.png" pri="3"/>
+        <s id="Demon_Leg_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_75_demon_leg_walk3.png" pri="3"/>
+        <s id="Demon_Leg_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_75_demon_leg_walk4.png" pri="3"/>
+        <s id="Demon_Leg_Sit" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_75_demon_leg_sit.png" pri="3"/>
+      </g>
+    </b>
+    <b id="Demon_Arms" min="2" max="2" sel="ArmHands">
+      <g id="ArmHands" icon="$bm/icon_m_retro.png">
+        <s id="Demon_Arm_Idle" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_75_demon_arm_idle.png" pri="1"/>
+        <s id="Demon_Arm_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_75_demon_arm_walk1.png" pri="1"/>
+        <s id="Demon_Arm_Walk2" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_75_demon_arm_walk2.png" pri="1"/>
+        <s id="Demon_Arm_Walk3" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_75_demon_arm_walk3.png" pri="1"/>
+        <s id="Demon_Arm_Sit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_75_demon_arm_sit.png" pri="1"/>
+        <s id="Demon_Arm_Throw" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_75_demon_arm_throw.png" pri="1"/>
+        <s id="Demon_Arm_Raise" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_75_demon_arm_raise.png" pri="1"/>
+        <s id="Demon_Hand_Idle" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_75_demon_hand_idle.png" pri="2"/>
+        <s id="Demon_Hand_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_75_demon_hand_walk1.png" pri="2"/>
+        <s id="Demon_Hand_Walk2" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_75_demon_hand_walk2.png" pri="2"/>
+        <s id="Demon_Hand_Walk3" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_75_demon_hand_walk3.png" pri="2"/>
+        <s id="Demon_Hand_Sit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_75_demon_hand_sit.png" pri="2"/>
+        <s id="Demon_Hand_Wave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_75_demon_hand_wave1.png" pri="2"/>
+        <s id="Demon_Hand_Wave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_75_demon_hand_wave2.png" pri="2"/>
+        <s id="Demon_Hand_Hold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_75_demon_hand_hold.png" pri="2"/>
+        <s id="Demon_Hand_Open" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_75_demon_hand_open.png" pri="2"/>
+        <s id="Demon_Hand_Point" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_75_demon_hand_point.png" pri="2"/>
+        <s id="Demon_Hand_Stop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_75_demon_hand_stop.png" pri="2"/>
+        <s id="Demon_Hand_Throw" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_75_demon_hand_throw.png" pri="2"/>
+        <s id="Demon_Hand_Thumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_75_demon_hand_thumbs.png" pri="2"/>
+      </g>
+    </b>
+  </g>
+  <g id="Icon">
+    <t id="Icon_Demon" icon="items/base/consumables/clothing/suits/suit_75_icon_demon.png" w="48" h="48"/>
+    <s id="Icon_Demon_suit" cId="Icon_Demon" s="items/base/consumables/clothing/suits/suit_75_icon_demon.png"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+</f>

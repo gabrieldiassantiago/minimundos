@@ -1,0 +1,30 @@
+<item.SpriteItem desc="Área que os jogadores podem interagir com o maquinário." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" gridActive="false" icon="items/base/modern/icon_m_factory_09_mat.png" id="1391" name="Área de Trabalho da Fábrica" tags="admin,floor" price="20" tokens="200" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.49,0,0.99" min="-0.49,-0.001,-0.99"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture cols="2" id="markings" rows="2" source="items/base/modern/m_factory_09_mat.png"/>
+  </textures>
+  <nodes>
+    <node id="markings" layer="surface">
+      <box max="0.49,0,0.99" min="-0.49,-0.001,-0.99"/>
+      <layers>
+        <layer id="markings" texture="markings">
+          <view angle="45" y="43"/>
+          <view angle="135" col="1" y="43"/>
+          <view angle="225" row="1" y="43"/>
+          <view angle="315" col="1" row="1" y="43"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

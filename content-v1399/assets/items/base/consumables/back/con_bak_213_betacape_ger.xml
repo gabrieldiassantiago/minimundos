@@ -1,0 +1,85 @@
+<item.SpriteItem id="0" name="Beta Cape 2" desc="A SmallWorld beta user" tags="wearable, consumable, back, actionbar" icon="items/base/consumables/back/icon_con_bak_129_beta.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="CapeF1" source="items/base/consumables/back/con_bak_213_betacape_ger01.png" cols="4" rows="2"/>
+    <texture id="CapeLF2" source="items/base/consumables/back/con_bak_213_betacape_ger02.png" cols="4" rows="2"/>
+    <texture id="CapeLF3" source="items/base/consumables/back/con_bak_213_betacape_ger03.png" cols="4" rows="2"/>
+    <texture id="Sit" source="items/base/consumables/back/con_bak_213_betacape_ger04.png" cols="4" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+      <layers>
+        <layer id="CapeF1" texture="CapeF1">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="CapeF2" texture="CapeLF2">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="CapeF3" texture="CapeLF3">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="Sit" texture="Sit">
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="CapeF1"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="CapeF2"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="CapeF3"/>
+        </frame>
+        <frame id="Sit">
+          <layerref id="Sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Flap" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

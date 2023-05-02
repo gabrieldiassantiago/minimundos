@@ -1,0 +1,61 @@
+<item.SpriteItem name="Bico de Pinguin" desc="Um bico de pinguei para você se juntar ao bando [15 of 25]" tags="rare,actionbar,nopvp,consumable,usable,eye,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_939_janbox_15_icon.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="7466">
+  <volume>
+    <box min="-0.32,0,-0.32" max="0.32,0.8,0.32"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/consumables/head/con_head_generic_dropshadow.png" cols="1" rows="1"/>
+    <texture id="stand" source="items/base/consumables/clothing/accessory/acc_30_fedora_stand.png" cols="2" rows="1"/>
+    <texture id="hat" source="items/base/consumables/clothing/accessory/acc_939_janbox_15_item.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.32,0,-0.32" max="0.32,0.8,0.32"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" x="-6" y="21" alpha="0"/>
+          <view angle="135" x="7" y="23" alpha="0" hm="true"/>
+          <view angle="225" x="4" y="25" alpha="0"/>
+          <view angle="315" x="-3" y="26" alpha="0" hm="true"/>
+        </layer>
+        <layer id="stand" texture="stand">
+          <view angle="45" y="18"/>
+          <view angle="135" y="18" hm="true"/>
+          <view angle="225" col="1" y="18" hm="true"/>
+          <view angle="315" col="1" y="18"/>
+        </layer>
+        <layer id="hat_01" texture="hat">
+          <view angle="45" col="1" x="15" y="-9"/>
+          <view angle="135" col="1" x="-15" y="-9" hm="true"/>
+          <view angle="225" col="3" x="-23" y="-23" alpha="0" hm="true"/>
+          <view angle="315" col="3" x="5" y="-39" alpha="0"/>
+        </layer>
+        <layer id="hat_02" texture="hat">
+          <view angle="45" col="1" x="15" y="-9" alpha="0"/>
+          <view angle="135" col="1" x="-15" y="-9" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="-23" y="-25" hm="true"/>
+          <view angle="315" col="3" x="22" y="-25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="shadow"/>
+          <layerref id="hat_02"/>
+          <layerref id="stand"/>
+          <layerref id="hat_01"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

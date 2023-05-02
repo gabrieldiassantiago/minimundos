@@ -1,0 +1,42 @@
+<item.SpriteItem desc="Muuuuito chocolate." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/edible/con_eat_41_icecream_chocchipflake.png" id="2682" name="Sorvete Duplo de Chocolate" tags="consumable,food,actionbar,group_edible,edible,stackable,action_edible,market" minLevel="1" minCPLevel="1" price="4" tokens="40">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.4,0.1"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_edible.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_edible.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_edible.as"/>
+    <event id="action" script="scripts/item/action_edible.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="food-100"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture id="texture" source="items/base/consumables/edible/con_eat_41_icecream_chocchipflake.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/consumables/edible/con_eat_41_icecream_stand.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.4,0.1"/>
+      <layers>
+        <layer id="texture" texture="texture" y="-10">
+          <view angle="45" y="21"/>
+          <view angle="135" y="21" hm="true"/>
+          <view angle="225" y="21"/>
+          <view angle="315" y="21" hm="true"/>
+        </layer>
+        <layer id="texture01" texture="Texture" y="-10">
+          <view angle="45" x="-1" y="18"/>
+          <view angle="135" y="18" hm="true"/>
+          <view angle="225" x="-1" y="18"/>
+          <view angle="315" y="18" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

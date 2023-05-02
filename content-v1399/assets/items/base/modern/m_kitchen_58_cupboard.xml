@@ -1,0 +1,60 @@
+<item.SpriteItem id="4624" name="Balcão de Copos Branco Chef Master" desc="Um balcão de copos branco chef master" tags="table,seasonal" icon="items/base/modern/icon_m_kitchen_58_cupboard.png" price="55" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-1.49" max="0.49,1.22,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Cabinet" source="items/base/modern/m_kitchen_58_closed.png" cols="2" rows="1"/>
+    <texture id="open" source="items/base/modern/m_kitchen_58_open.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-1.49" max="0.49,1.22,0.49"/>
+      <layers>
+        <layer id="Cabinet" texture="Cabinet">
+          <view angle="45" x="-30" y="68"/>
+          <view angle="135" x="-32" y="36" hm="true"/>
+          <view angle="225" col="1" x="33" y="37"/>
+          <view angle="315" col="1" x="33" y="68" hm="true"/>
+        </layer>
+        <layer id="Door Open" texture="open">
+          <view angle="45" x="33" y="32"/>
+          <view angle="135" x="-94" y="1" hm="true"/>
+          <view angle="225" col="1" x="-55" y="-15"/>
+          <view angle="315" col="1" x="119" y="15" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Cabinet"/>
+        </frame>
+        <frame id="On">
+          <layerref id="Cabinet"/>
+          <layerref id="Door Open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

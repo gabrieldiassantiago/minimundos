@@ -1,0 +1,118 @@
+<item.SpriteItem id="3172" name="Margaridas de Maio" desc="Um lindo vaso de flores." tags="plant,rare,hand,usable,actionbar,stackable,action_holdable_toggle" icon="items/base/modern/icon_m_plant_16_flowerpot.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="2000">
+  <volume>
+    <box min="-0.32,0,-0.32" max="0.32,2,0.32"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Texture01" source="items/base/modern/m_plant_16_flowerpot.png" cols="1" rows="1"/>
+    <texture id="star" source="items/base/modern/m_plant_16_flowerpot_effect.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.32,0,-0.32" max="0.32,2,0.32"/>
+      <layers>
+        <layer id="flower" texture="Texture01">
+          <view angle="45" y="14"/>
+          <view angle="135" y="14" hm="true"/>
+          <view angle="225" y="14"/>
+          <view angle="315" y="14" hm="true"/>
+        </layer>
+        <layer id="StarShower01" texture="star">
+          <view angle="45" y="14"/>
+          <view angle="135" y="14" hm="true"/>
+          <view angle="225" y="14"/>
+          <view angle="315" y="14" hm="true"/>
+        </layer>
+        <layer id="StarShower02" texture="star">
+          <view angle="45" col="1" y="14"/>
+          <view angle="135" col="1" y="14" hm="true"/>
+          <view angle="225" col="1" y="14"/>
+          <view angle="315" col="1" y="14" hm="true"/>
+        </layer>
+        <layer id="StarShower03" texture="star">
+          <view angle="45" col="2" y="14"/>
+          <view angle="135" col="2" y="14" hm="true"/>
+          <view angle="225" col="2" y="14"/>
+          <view angle="315" col="2" y="14" hm="true"/>
+        </layer>
+        <layer id="StarShower04" texture="star">
+          <view angle="45" col="3" y="14"/>
+          <view angle="135" col="3" y="14" hm="true"/>
+          <view angle="225" col="3" y="14"/>
+          <view angle="315" col="3" y="14" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Loop 01">
+          <layerref id="flower"/>
+          <layerref id="StarShower01" a="0.8" blend="add"/>
+          <layerref id="StarShower04" a="0.5" blend="add"/>
+          <layerref id="StarShower03" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Loop 02">
+          <layerref id="flower"/>
+          <layerref id="StarShower02" a="0.8" blend="add"/>
+          <layerref id="StarShower01" a="0.5" blend="add"/>
+          <layerref id="StarShower04" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Loop 03">
+          <layerref id="flower"/>
+          <layerref id="StarShower03" a="0.8" blend="add"/>
+          <layerref id="StarShower02" a="0.5" blend="add"/>
+          <layerref id="StarShower01" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Loop 04">
+          <layerref id="flower"/>
+          <layerref id="StarShower04" a="0.8" blend="add"/>
+          <layerref id="StarShower03" a="0.5" blend="add"/>
+          <layerref id="StarShower02" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Loop 05">
+          <layerref id="flower"/>
+          <layerref id="StarShower01" a="0.8" blend="add"/>
+          <layerref id="StarShower04" a="0.5" blend="add"/>
+          <layerref id="StarShower03" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Loop 06">
+          <layerref id="flower"/>
+          <layerref id="StarShower02" a="0.8" blend="add"/>
+          <layerref id="StarShower01" a="0.5" blend="add"/>
+          <layerref id="StarShower04" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Loop 07">
+          <layerref id="flower"/>
+          <layerref id="StarShower03" a="0.8" blend="add"/>
+          <layerref id="StarShower02" a="0.5" blend="add"/>
+          <layerref id="StarShower01" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Loop 08">
+          <layerref id="flower"/>
+          <layerref id="StarShower04" a="0.8" blend="add"/>
+          <layerref id="StarShower03" a="0.5" blend="add"/>
+          <layerref id="StarShower02" a="0.1" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Loop 01"/>
+          <frameref id="Loop 02"/>
+          <frameref id="Loop 03"/>
+          <frameref id="Loop 04"/>
+          <frameref id="Loop 05"/>
+          <frameref id="Loop 06"/>
+          <frameref id="Loop 07"/>
+          <frameref id="Loop 08"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

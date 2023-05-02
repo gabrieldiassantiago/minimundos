@@ -1,0 +1,30 @@
+<item.SpriteItem id="2734" name="Debris" desc="Broken rubble" tags="admin,floor" icon="items/base/urban/icon_u_debris_02.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,-0.001,-0.25" max="1.25,0,1.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/urban/u_debris_02.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="rug_hair" layer="surface">
+      <box min="-0.25,-0.001,-0.25" max="1.25,0,1.25"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="68" y="50"/>
+          <view angle="135" x="-7" y="81" hm="true"/>
+          <view angle="225" x="-62" y="49"/>
+          <view angle="315" x="-6" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

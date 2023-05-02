@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="2169" name="Moinho" desc="Gera energia do vento!" tags="misc" icon="items/base/lab/icon_l_turbine_01.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,3.4,0.49"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="pole" source="items/base/lab/l_turbine_01_pole.png" cols="1" rows="1"/>
+    <texture id="turbine" source="items/base/lab/l_turbine_01.png" cols="2" rows="1"/>
+    <texture id="fan" source="items/base/lab/l_turbine_01_fan.png" cols="3" rows="1"/>
+    <texture id="cap" source="items/base/lab/l_turbine_01_cap.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Wind Turbine">
+      <box min="-0.49,0,-0.49" max="0.49,3.4,0.49"/>
+      <layers>
+        <layer id="pole" texture="pole">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" y="20"/>
+          <view angle="315" y="20" hm="true"/>
+        </layer>
+        <layer id="turbine front" texture="turbine">
+          <view angle="45" x="-19" y="-206"/>
+          <view angle="135" x="19" y="-206" hm="true"/>
+          <view angle="225" col="1" x="4" y="-190" alpha="0"/>
+          <view angle="315" col="1" x="-4" y="-190" alpha="0" hm="true"/>
+        </layer>
+        <layer id="turbine back" texture="turbine">
+          <view angle="45" x="-19" y="-206" alpha="0"/>
+          <view angle="135" x="19" y="-206" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="4" y="-190"/>
+          <view angle="315" col="1" x="-4" y="-190" hm="true"/>
+        </layer>
+        <layer id="cap front" texture="cap">
+          <view angle="45" x="5" y="-212"/>
+          <view angle="135" x="-5" y="-212" hm="true"/>
+          <view angle="225" col="1" x="-22" y="-224" alpha="0"/>
+          <view angle="315" col="1" x="22" y="-224" alpha="0" hm="true"/>
+        </layer>
+        <layer id="cap back" texture="cap">
+          <view angle="45" x="5" y="-212" alpha="0"/>
+          <view angle="135" x="-5" y="-212" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-22" y="-224"/>
+          <view angle="315" col="1" x="22" y="-224" hm="true"/>
+        </layer>
+        <layer id="fan 01" texture="fan">
+          <view angle="45" x="3" y="-139"/>
+          <view angle="135" x="-3" y="-139" hm="true"/>
+          <view angle="225" x="-18" y="-148"/>
+          <view angle="315" x="18" y="-148" hm="true"/>
+        </layer>
+        <layer id="fan 02" texture="fan">
+          <view angle="45" col="1" x="3" y="-139"/>
+          <view angle="135" col="2" x="-3" y="-139" hm="true"/>
+          <view angle="225" col="2" x="-18" y="-148"/>
+          <view angle="315" col="1" x="18" y="-148" hm="true"/>
+        </layer>
+        <layer id="fan 03" texture="fan">
+          <view angle="45" col="2" x="3" y="-139"/>
+          <view angle="135" col="1" x="-3" y="-139" hm="true"/>
+          <view angle="225" col="1" x="-18" y="-148"/>
+          <view angle="315" col="2" x="18" y="-148" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On 01">
+          <layerref id="pole"/>
+          <layerref id="turbine front"/>
+          <layerref id="cap back"/>
+          <layerref id="fan 01"/>
+          <layerref id="cap front"/>
+          <layerref id="turbine back"/>
+        </frame>
+        <frame id="On 02">
+          <layerref id="pole"/>
+          <layerref id="turbine front"/>
+          <layerref id="cap back"/>
+          <layerref id="fan 02"/>
+          <layerref id="cap front"/>
+          <layerref id="turbine back"/>
+        </frame>
+        <frame id="On 03">
+          <layerref id="pole"/>
+          <layerref id="turbine front"/>
+          <layerref id="cap back"/>
+          <layerref id="fan 03"/>
+          <layerref id="cap front"/>
+          <layerref id="turbine back"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On 01"/>
+          <frameref id="On 02"/>
+          <frameref id="On 03"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="On 01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

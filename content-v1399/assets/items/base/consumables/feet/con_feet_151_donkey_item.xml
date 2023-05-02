@@ -1,0 +1,157 @@
+<item.SpriteItem id="5745" name="Burro Ametista Zoom" desc="Um lindo burro para montar (1 de 9)" tags="rare,consumable,actionbar,wear,feet,action_ridable_toggle,nopvp" icon="items/base/consumables/feet/con_feet_151_donkey_icon.png" price="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1.48,0,-0.48" max="0.48,1.4,0.48"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_rideable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="shadow+30"/>
+    <entry key="action_attributes_secondary" value="health+15,speed+15"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_30_pony_shadow.png" cols="3" rows="1"/>
+    <texture id="base" source="items/base/consumables/feet/con_feet_151_donkey_item.png" cols="2" rows="1"/>
+    <texture id="feet" source="items/base/consumables/feet/con_feet_151_donkey_feet.png" cols="5" rows="5"/>
+    <texture id="tail" source="items/base/consumables/feet/con_feet_151_donkey_tail.png" cols="4" rows="4"/>
+    <texture id="eye" source="items/base/consumables/feet/con_feet_151_donkey_decal.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-1.48,0,-0.48" max="0.48,1.4,0.48"/>
+      <layers>
+        <layer id="eye" texture="eye">
+          <view angle="45" x="24" y="-81"/>
+          <view angle="135" x="-25" y="-81" hm="true"/>
+          <view angle="225" col="1" x="-37" y="-104"/>
+          <view angle="315" col="1" x="36" y="-104" hm="true"/>
+        </layer>
+        <layer id="feet" texture="feet">
+          <view angle="45" x="-31" y="11"/>
+          <view angle="135" x="31" y="11" hm="true"/>
+          <view angle="225" col="3" x="27" y="39"/>
+          <view angle="315" col="3" x="-27" y="39" hm="true"/>
+        </layer>
+        <layer id="base" texture="base">
+          <view angle="45" x="-16" y="-7"/>
+          <view angle="135" x="16" y="-7" hm="true"/>
+          <view angle="225" col="1" x="13" y="-1"/>
+          <view angle="315" col="1" x="-13" y="-1" hm="true"/>
+        </layer>
+        <layer id="tail_01" texture="tail">
+          <view angle="45" x="-79" y="-43"/>
+          <view angle="135" x="79" y="-43" hm="true"/>
+          <view angle="225" col="2" x="67" y="32"/>
+          <view angle="315" col="2" x="-67" y="32" hm="true"/>
+        </layer>
+        <layer id="tail_02" texture="tail">
+          <view angle="45" row="1" x="-78" y="-44"/>
+          <view angle="135" row="1" x="78" y="-44" hm="true"/>
+          <view angle="225" col="2" row="1" x="66" y="32"/>
+          <view angle="315" col="2" row="1" x="-66" y="32" hm="true"/>
+        </layer>
+        <layer id="tail_03" texture="tail">
+          <view angle="45" row="2" x="-78" y="-45"/>
+          <view angle="135" row="2" x="78" y="-45" hm="true"/>
+          <view angle="225" col="2" row="2" x="66" y="32"/>
+          <view angle="315" col="2" row="2" x="-65" y="31" hm="true"/>
+        </layer>
+        <layer id="tail_04" texture="tail">
+          <view angle="45" row="3" x="-78" y="-45"/>
+          <view angle="135" row="3" x="78" y="-45" hm="true"/>
+          <view angle="225" col="2" row="3" x="66" y="32"/>
+          <view angle="315" col="2" row="3" x="-65" y="32" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" x="-31" y="14"/>
+          <view angle="135" x="31" y="14" hm="true"/>
+          <view angle="225" x="27" y="43"/>
+          <view angle="315" x="-27" y="43" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="tail_02"/>
+        </frame>
+        <frame id="02">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="2"/>
+          <layerref id="tail_01" y="1"/>
+        </frame>
+        <frame id="03">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="tail_03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base"/>
+          <layerref id="tail_04" y="-1"/>
+        </frame>
+        <frame id="05">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="tail_03"/>
+        </frame>
+        <frame id="05a">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="tail_03"/>
+          <layerref id="eye"/>
+        </frame>
+        <frame id="06">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="2"/>
+          <layerref id="tail_01" y="1"/>
+        </frame>
+        <frame id="07">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="tail_02"/>
+        </frame>
+        <frame id="08">
+          <layerref id="shadow"/>
+          <layerref id="feet"/>
+          <layerref id="base"/>
+          <layerref id="tail_01" y="-1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="05a"/>
+          <frameref id="06"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="08"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

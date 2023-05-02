@@ -1,0 +1,34 @@
+<item.SpriteItem id="2730" name="Biohazard Syringe" desc="A biohazardous syringe" tags="actionbar,wear,hand,real,usable" icon="items/base/curse/alien/alien_syringe_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.33,0,-0.25" max="0.33,0.59,0.33"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="5"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/curse/alien/alien_syringe_item.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="bio syringe">
+      <box min="-0.33,0,-0.25" max="0.33,0.59,0.33"/>
+      <layers>
+        <layer id="bio syringe" texture="Texture" y="-24">
+          <view angle="45" x="3" y="45"/>
+          <view angle="135" col="1" x="4" y="51"/>
+          <view angle="225" col="3" x="-4" y="51"/>
+          <view angle="315" col="2" x="-2" y="45"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

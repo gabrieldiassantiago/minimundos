@@ -1,0 +1,171 @@
+<item.SpriteItem id="1857" name="Célula de Plasma (Verde)" desc="Um conteiner contendo células de plasma ativas verdes." tags="misc,pickup,master_catalog_colorize" icon="items/base/scifi/icon_sci_obj_03_cell_green.png" price="20" tokens="200" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.08,0,-0.08" max="0.08,0.42,0.08"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_pick_up.as"/>
+    <event id="action" script="scripts/item/action_pick_up.as"/>
+  </events>
+  <actions>
+    <action id="Pick Up"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/plasmacells.xml"/>
+  </data>
+  <textures>
+    <texture id="cell" source="items/base/scifi/sci_obj_03_cells.png" cols="3" rows="1"/>
+    <texture id="diffuse" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="intense" source="items/base/shared/s_fx_flare_generator.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.08,0,-0.08" max="0.08,0.42,0.08"/>
+      <layers>
+        <layer id="cell" texture="cell" y="6">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="cell"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="cell" a="0.8"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="cell" a="0.5"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="cell" a="0.2"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="cell" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Visible" framerate="4" syncFrames="false">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Invisible" framerate="4" syncFrames="false">
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="Show" framerate="8" loop="false" syncFrames="false">
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Hide" framerate="8" loop="false" syncFrames="false">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="diffuse" texture="diffuse" align="middle">
+          <view y="-6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="diffuse" color="0x6dff9a" a="0.4"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="diffuse" color="0x6dff9a" a="0.3"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="diffuse" color="0x6dff9a" a="0.2"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="diffuse" color="0x6dff9a" a="0.1"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="diffuse" color="0x6dff9a" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Visible" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Invisible" framerate="4">
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="Show" framerate="8" loop="false">
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Hide" framerate="8" loop="false">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="intense" texture="intense" align="middle">
+          <view angle="45" col="4" x="1" y="-7"/>
+          <view angle="135" col="4" x="3" y="-7"/>
+          <view angle="225" col="4" x="1" y="-7"/>
+          <view angle="315" col="4" x="3" y="-7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="intense" color="0x9cfcba" a="0.5"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="intense" color="0x9cfcba" a="3.75"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="intense" color="0x9cfcba" a="2.5"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="intense" color="0x9cfcba" a="1.25"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="intense" color="0x9cfcba" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Visible" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Invisible" framerate="4">
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="Show" framerate="8" loop="false">
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Hide" framerate="8" loop="false">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

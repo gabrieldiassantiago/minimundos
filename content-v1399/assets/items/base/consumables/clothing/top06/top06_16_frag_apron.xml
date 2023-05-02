@@ -1,0 +1,83 @@
+<f id="Top06_16_Apron" parentId="Top06">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Top06_16TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_16_torso_apron_m.png" pri="6"/>
+      <c sId="Top06_16TorsoMaleBase" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="Top06_16TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_16_torso_apron_f.png" pri="6"/>
+      <c sId="Top06_16TorsoFemaleBase" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+    </g>
+  </b>
+  <g id="Icon">
+    <t id="IconTop06_16" icon="items/base/consumables/clothing/top06/top06_16_icon_apron_a.png" w="48" h="48"/>
+    <s id="IconTop06_16Base" cId="IconTop06_16" s="items/base/consumables/clothing/top06/top06_16_icon_apron_1.png" pri="1"/>
+    <c sId="IconTop06_16Base" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top06_16Color1" name="Color" desc="Choose a color" sel="Pink" seld="Pink">
+      <g id="White" icon="$bu/icon_white.png">
+        <c icon="$bu/icon_grey.png" c="7895160" b="71.3" ct="0.30" lId="Top06_16Color1"/>
+      </g>
+      <g id="Burgandy" icon="$bu/icon_burgandy.png">
+        <c c="9507603" a="0.73" b="17.2" ct="0.95" lId="Top06_16Color1"/>
+      </g>
+      <g id="Blue" icon="$bu/icon_fadedblue.png">
+        <c icon="$bu/icon_fadedblue.png" c="4280004" a="0.82" b="28.5" ct="1.25" lId="Top06_16Color1"/>
+      </g>
+      <g id="Pink" icon="$bu/icon_lightpink.png">
+        <c c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1"/>
+      </g>
+      <g id="Black" icon="$bu/icon_black.png">
+        <c c="4013373" a="0.79" b="14.8" ct="0.75" lId="Top06_16Color1"/>
+      </g>
+    </b>
+    <b id="Top06_16Logo" name="Logo" desc="Choose a Logo" min="0" sel="Cupcake" seld="Cupcake">
+      <g id="Apple" icon="items/base/consumables/clothing/top06/top06_16_icon_apron_apple.png">
+        <s cId="Torso" s="items/base/consumables/clothing/top06/top06_16_torso_apron_apple.png" pri="6.1"/>
+        <s cId="IconTop06_16" s="items/base/consumables/clothing/top06/top06_16_icon_apron_1_apple.png" pri="2"/>
+      </g>
+      <g id="Cookie" icon="items/base/consumables/clothing/top06/top06_16_icon_apron_cookie.png">
+        <s cId="Torso" s="items/base/consumables/clothing/top06/top06_16_torso_apron_cookie.png" pri="6.1"/>
+        <s cId="IconTop06_16" s="items/base/consumables/clothing/top06/top06_16_icon_apron_1_cookie.png" pri="2"/>
+      </g>
+      <g id="Cupcake" icon="items/base/consumables/clothing/top06/top06_16_icon_apron_cupcake.png">
+        <s cId="Torso" s="items/base/consumables/clothing/top06/top06_16_torso_apron_cupcake.png" pri="6.1"/>
+        <s cId="IconTop06_16" s="items/base/consumables/clothing/top06/top06_16_icon_apron_1_cupcake.png" pri="2"/>
+      </g>
+      <g id="Fork" icon="items/base/consumables/clothing/top06/top06_16_icon_apron_fork.png">
+        <s cId="Torso" s="items/base/consumables/clothing/top06/top06_16_torso_apron_fork.png" pri="6.1"/>
+        <s cId="IconTop06_16" s="items/base/consumables/clothing/top06/top06_16_icon_apron_1_fork.png" pri="2"/>
+      </g>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top06_16Color1"/>
+      <wizchoice id="Logo" name="Logo" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top06_16Logo"/>
+    </wizbox>
+  </g>
+  <g id="LongSkirt" name="Long skirt" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_16BottomIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_16_leg_idle.png" pri="6"/>
+    <s id="Top06_16BottomWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_16_leg_walk1.png" pri="6"/>
+    <s id="Top06_16BottomWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_16_leg_walk2.png" pri="6"/>
+    <s id="Top06_16BottomWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_16_leg_walk3.png" pri="6"/>
+    <s id="Top06_16BottomWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_16_leg_walk4.png" pri="6"/>
+    <s id="Top06_16BottomSitUpper" cId="LegSitUpper" s="items/base/consumables/clothing/top06/top06_16_leg_sit.png" pri="6"/>
+    <c sId="Top06_16BottomIdle" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+    <c sId="Top06_16BottomWalk1" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+    <c sId="Top06_16BottomWalk2" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+    <c sId="Top06_16BottomWalk3" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+    <c sId="Top06_16BottomWalk4" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+    <c sId="Top06_16BottomSitUpper" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+    <s id="Top06_16BottomBackIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_16_leg2_idle.png" ty="2.5" pri="-0.1" dr="0,92,35,92"/>
+    <c sId="Top06_16BottomBackIdle" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+    <s id="Top06_16BottomBackWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_16_leg2_walk1.png" tx="-1" ty="3" pri="-0.1" dr="0,91,50,91"/>
+    <s id="Top06_16BottomBackWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_16_leg2_walk2.png" tx="-1" ty="-1" pri="-0.1" dr="0,90,34,90"/>
+    <s id="Top06_16BottomBackWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_16_leg2_walk3.png" tx="-1" ty="3" pri="-0.1" dr="9,91,34,91"/>
+    <s id="Top06_16BottomBackWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_16_leg2_walk4.png" tx="-1" pri="-0.1" dr="0,86,40,86"/>
+    <c sId="Top06_16BottomBackWalk1" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+    <c sId="Top06_16BottomBackWalk2" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+    <c sId="Top06_16BottomBackWalk3" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+    <c sId="Top06_16BottomBackWalk4" c="16745205" a="0.82" b="47.4" ct="1.16" lId="Top06_16Color1" lw="N"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

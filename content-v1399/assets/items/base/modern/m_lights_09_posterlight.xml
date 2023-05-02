@@ -1,0 +1,114 @@
+<item.SpriteItem id="2513" name="Spot de Galeria" desc="Um iluminação direta para seus quadros." tags="light,wall" icon="items/base/modern/icon_m_lights_09_posterlight.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="45" tokens="450">
+  <volume>
+    <box min="0,-0.1,-0.49" max="0.1,0.1,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="sconce" source="items/base/modern/m_lights_09_posterlight.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/modern/m_lights_09_posterlight_fx.png" cols="1" rows="1"/>
+    <texture id="on" source="items/base/modern/m_lights_09_posterlight_on.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Sconce" depthBias="-0.5">
+      <box min="0,-0.1,-0.49" max="0.1,0.1,0.49"/>
+      <layers>
+        <layer id="sconce" texture="sconce">
+          <view angle="45" x="2" y="51"/>
+          <view angle="135" x="-1" y="51" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="Flare" texture="on">
+          <view angle="45" x="28" y="35"/>
+          <view angle="135" x="-27" y="35" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="sconce"/>
+          <layerref id="Flare" a="0.4" blend="add"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="sconce"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4" loop="false">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.44" y="-0.5812" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view x="-2" y="6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" x="0.15" s="4" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="45" x="1" y="26"/>
+          <view angle="135" x="-1" y="26" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf6fafd" a="0.2"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

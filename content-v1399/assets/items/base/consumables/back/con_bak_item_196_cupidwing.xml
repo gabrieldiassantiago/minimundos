@@ -1,0 +1,35 @@
+<item.SpriteItem id="4287" name="Asas de Cupido Play" desc="Um par de asas de cupido em bronze" tags="rare,consumable,actionbar,wear,back,action_wearable_toggle" icon="items/base/consumables/back/icon_con_bak_item_196_cupidwing.png" price="4820" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.14,0,-0.42" max="0.16,0.07,0.42"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+10,nature+10"/>
+    <entry key="action_attributes_secondary" value="speed+60,health+60"/>
+  </data>
+  <textures>
+    <texture id="awings_level1" source="items/base/consumables/back/con_bak_item_196_cupidwing.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.14,0,-0.42" max="0.16,0.07,0.42"/>
+      <layers>
+        <layer id="awings_level1" texture="awings_level1">
+          <view angle="45" x="2" y="22"/>
+          <view angle="135" x="-2" y="22" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,88 @@
+<f id="Top02_21Nurse" parentId="Top02">
+  <g id="Nurse" icon="$bu/icon_skinny_trouser.png">
+    <s id="Top02_21Torso" cId="Torso" s="items/base/consumables/clothing/top02/top02_21_torso_nurse.png" pri="4.1"/>
+    <s id="Top02_21TorsoDecal" cId="Torso" s="items/base/consumables/clothing/top02/top02_21_torso_nurse_extras.png" pri="4.1"/>
+    <c sId="Top02_21TorsoDecal" c="10420224" a="0.87" b="65.8" ct="1.58" lId="Top02_21_Color2" lw="N"/>
+    <s id="Top02_21IdleBase" cId="LegIdle" s="items/base/consumables/clothing/top02/top02_15_leg_idle.png" pri="4.1"/>
+    <s id="Top02_21Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/top02/top02_15_walk1.png" pri="4.1"/>
+    <s id="Top02_21Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/top02/top02_15_walk2.png" pri="4.1"/>
+    <s id="Top02_21Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/top02/top02_15_walk3.png" pri="4.1"/>
+    <s id="Top02_21Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/top02/top02_15_walk4.png" pri="4.1"/>
+    <s id="Top02_21SitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_15_sit.png" pri="4.1"/>
+    <c sId="Top02_21Torso" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <c sId="Top02_21IdleBase" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <c sId="Top02_21Walk1Base" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <c sId="Top02_21Walk2Base" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <c sId="Top02_21Walk3Base" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <c sId="Top02_21Walk4Base" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <c sId="Top02_21SitUpperBase" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <s id="Top02_21Bracover" icon="$bu/icon_indigo.png" cId="Torso" s="items/base/consumables/clothing/top02/top02_skin.png" pri="0.1"/>
+    <c sId="Top02_21Bracover" c="13405800" a="0.44" b="12.0" ct="0.26" lId="SkinColor" lw="N"/>
+  </g>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Top02_21ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_short_arm_idle.png" pri="4.1"/>
+    <s id="Top02_21ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_short_arm_walk1.png" pri="4.1"/>
+    <s id="Top02_21ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_short_arm_walk2.png" pri="4.1"/>
+    <s id="Top02_21ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_short_arm_walk3.png" pri="4.1"/>
+    <s id="Top02_21ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_short_arm_sit.png" pri="4.1"/>
+    <s id="Top02_21ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_short_arm_throw.png" pri="4.1"/>
+    <s id="Top02_21ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_short_arm_raise.png" pri="4.1"/>
+    <c sId="Top02_21ArmIdleBase" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <c sId="Top02_21ArmWalk1Base" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <c sId="Top02_21ArmWalk2Base" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <c sId="Top02_21ArmWalk3Base" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <c sId="Top02_21ArmSitBase" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <c sId="Top02_21ArmThrowBase" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <c sId="Top02_21ArmRaiseBase" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <s id="Top02_21ArmIdleStripe" cId="ArmIdle" s="items/base/consumables/clothing/top01/top01_14_stripe_idle.png" pri="4.1"/>
+    <c sId="Top02_21ArmIdleStripe" c="10420224" a="0.87" b="65.8" ct="1.58" lId="Top02_21_Color2" lw="N"/>
+    <s id="Top02_21ArmWalk1Stripe" cId="ArmWalk1" s="items/base/consumables/clothing/top01/top01_14_stripe_walk1.png" pri="4.1"/>
+    <c sId="Top02_21ArmWalk1Stripe" c="10420224" a="0.87" b="65.8" ct="1.58" lId="Top02_21_Color2" lw="N"/>
+    <s id="Top02_21ArmWalk2Stripe" cId="ArmWalk2" s="items/base/consumables/clothing/top01/top01_14_stripe_walk2.png" pri="4.1"/>
+    <c sId="Top02_21ArmWalk2Stripe" c="10420224" a="0.87" b="65.8" ct="1.58" lId="Top02_21_Color2" lw="N"/>
+    <s id="Top02_21ArmWalk3Stripe" cId="ArmWalk3" s="items/base/consumables/clothing/top01/top01_14_stripe_walk3.png" pri="4.1"/>
+    <c sId="Top02_21ArmWalk3Stripe" c="10420224" a="0.87" b="65.8" ct="1.58" lId="Top02_21_Color2" lw="N"/>
+    <s id="Top02_21ArmThrowStripe" cId="ArmThrow" s="items/base/consumables/clothing/top01/top01_14_stripe_throw.png" pri="4.1"/>
+    <c sId="Top02_21ArmThrowStripe" c="10420224" a="0.87" b="65.8" ct="1.58" lId="Top02_21_Color2" lw="N"/>
+    <s id="Top02_21ArmSitStripe" cId="ArmSit" s="items/base/consumables/clothing/top01/top01_14_stripe_sit.png" pri="4.1"/>
+    <c sId="Top02_21ArmSitStripe" c="10420224" a="0.87" b="65.8" ct="1.58" lId="Top02_21_Color2" lw="N"/>
+    <s id="Top02_21ArmRaiseStripe" cId="ArmRaise" s="items/base/consumables/clothing/top01/top01_14_stripe_raise.png" pri="4.1"/>
+    <c sId="Top02_21ArmRaiseStripe" c="10420224" a="0.87" b="65.8" ct="1.58" lId="Top02_21_Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop02_21" w="48" h="48"/>
+    <s id="IconTop02_21Base" cId="IconTop02_21" s="items/base/consumables/clothing/top02/top02_21_icon_nurse_1.png"/>
+    <c sId="IconTop02_21Base" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1" lw="N"/>
+    <s id="IconTop02_21Extra" cId="IconTop02_21" s="items/base/consumables/clothing/top02/top02_21_icon_nurse_2.png" pri="0.1"/>
+    <c sId="IconTop02_21Extra" c="10420224" a="0.87" b="65.8" ct="1.58" lId="Top02_21_Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top02_21_Color1" name="Color 1" desc="Choose a color" sel="Blue" seld="Blue">
+      <c id="White" icon="$bu/icon_white.png" c="16777215" a="0.99" b="30.1" ct="1.14" lId="Top02_21_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="56.4" ct="1.90" lId="Top02_21_Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="1.00" b="49.5" ct="1.44" lId="Top02_21_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="49.5" ct="1.58" lId="Top02_21_Color1"/>
+      <c id="Blue" icon="$bu/icon_lightblue.png" c="3168440" a="0.84" b="52.8" ct="1.61" lId="Top02_21_Color1"/>
+      <c id="Dark Blue" icon="$bu/icon_medblue.png" c="4094934" a="0.84" b="7.8" ct="1.61" lId="Top02_21_Color1"/>
+      <c id="Blue Green" icon="$bu/icon_bluegreen.png" c="2851970" a="0.84" b="38.3" ct="1.61" lId="Top02_21_Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="2854275" a="0.88" b="62.4" ct="1.70" lId="Top02_21_Color1"/>
+    </b>
+    <b id="Top02_21_Color2" name="Color 2" desc="Choose a color" sel="Red" seld="Red">
+      <c id="White" icon="$bu/icon_white.png" c="16777215" a="0.99" b="30.1" ct="1.14" lId="Top02_21_Color2"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="56.4" ct="1.90" lId="Top02_21_Color2"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="1.00" b="49.5" ct="1.44" lId="Top02_21_Color2"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="65.8" ct="1.58" lId="Top02_21_Color2"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="41.5" ct="1.61" lId="Top02_21_Color2"/>
+      <c id="Dark Blue" icon="$bu/icon_medblue.png" c="2840519" a="0.84" b="22.5" ct="1.61" lId="Top02_21_Color2"/>
+      <c id="Blue Green" icon="$bu/icon_bluegreen.png" c="2851970" a="0.84" b="38.3" ct="1.61" lId="Top02_21_Color2"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="2854275" a="0.88" b="62.4" ct="1.70" lId="Top02_21_Color2"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top02_21_Color1"/>
+      <wizchoice id="Color2" name="Color 2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top02_21_Color2"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+</f>

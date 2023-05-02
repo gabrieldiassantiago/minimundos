@@ -1,0 +1,39 @@
+<item.SpriteItem name="Relógio de Parede" desc="Para Minis Pontuais." tags="wall" icon="items/base/modern/icon_m_clock_01_60s.png" minLevel="1" minLevelType="2" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" id="1537" price="55" minCPLevel="1">
+  <volume>
+    <box min="0,-0.32,-0.42" max="0.1,0.42,0.42"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <textures>
+    <texture id="sconce" source="items/base/modern/m_clock_01_60s.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Sconce">
+      <box min="0,-0.32,-0.42" max="0.1,0.42,0.42"/>
+      <layers>
+        <layer id="sconce" texture="sconce">
+          <view angle="45" y="39"/>
+          <view angle="135" y="39" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

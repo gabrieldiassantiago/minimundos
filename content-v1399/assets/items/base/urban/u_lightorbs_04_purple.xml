@@ -1,0 +1,76 @@
+<item.SpriteItem name="Orb Festivo Roxo Neon" desc="Ilumine sua festa com esse brilhante orb" tags="rare,light" icon="items/base/urban/icon_u_lightorbs_04_purple.png" price="390" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="5931">
+  <volume>
+    <box min="-1.49,0,-0.49" max="0.49,2,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="green" source="items/base/urban/u_festivallights_purple.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Candle">
+      <box min="-1.49,0,-0.49" max="0.49,2,1.49"/>
+      <layers>
+        <layer id="green" texture="green">
+          <view angle="45" y="125"/>
+          <view angle="135" x="66" y="155"/>
+          <view angle="225" y="190"/>
+          <view angle="315" x="-63" y="155" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="gre">
+          <layerref id="green"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="gre"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="Light" color="0xad5ee9" a="0.95"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="00"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="3.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-21">
+          <view y="-8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="Light" color="0xad5ee9" a="0.95"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="00"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

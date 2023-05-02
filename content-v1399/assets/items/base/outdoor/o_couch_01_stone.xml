@@ -1,0 +1,63 @@
+<item.ChairItem desc="Um banco resistente, feito todinho com pedras." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/outdoor/icon_o_couch_01_stone.png" id="836" name="Banco de Pedra" tags="chair" price="25" tokens="250" minLevel="1" minCPLevel="1">
+  <seats>
+    <seat x="-0.05" y="0.38" z="0.1">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+    <seat x="-0.05" y="0.38" z="0.9">
+      <ap x="1" z="1"/>
+      <ap x="1" z="2"/>
+      <ap x="1"/>
+      <ap z="2"/>
+      <ap x="-1" z="1"/>
+      <ap x="-1" z="2"/>
+      <ap x="-1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box max="0.25,0.38,1.38" min="-0.25,0,-0.38"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture cols="1" id="bench" rows="1" source="items/base/outdoor/o_couch_01_stone.png"/>
+    <texture cols="1" id="grass" rows="1" source="items/base/outdoor/o_couch_01_stone_grass.png"/>
+  </textures>
+  <nodes>
+    <node id="Seat" z="0.5">
+      <box max="0.25,0.38,0.88" min="-0.25,0,-0.88"/>
+      <layers>
+        <layer id="bench" texture="bench">
+          <view angle="45" y="47"/>
+          <view angle="135" hm="true" y="47"/>
+          <view angle="225" y="47"/>
+          <view angle="315" hm="true" y="47"/>
+        </layer>
+        <layer id="grass" texture="grass">
+          <view angle="45" x="30"/>
+          <view angle="135" hm="true" x="15" y="24"/>
+          <view alpha="0" angle="225" x="1" y="45"/>
+          <view alpha="0" angle="315" hm="true" x="-1" y="45"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

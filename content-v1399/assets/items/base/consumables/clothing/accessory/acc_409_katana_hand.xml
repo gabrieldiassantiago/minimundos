@@ -1,0 +1,65 @@
+<item.SpriteItem id="0" name="Goth Staff" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_409_katana_hand.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Axe" texture="Texture">
+          <view angle="0" col="2" x="-4" y="67" hm="true"/>
+          <view angle="45" x="6" y="65"/>
+          <view angle="90" col="1" x="3" y="65"/>
+          <view angle="135" x="-7" y="63" hm="true"/>
+          <view angle="180" col="2" x="4" y="67"/>
+          <view angle="225" col="3" x="7" y="68"/>
+          <view angle="270" col="4" x="1" y="69" hm="true"/>
+          <view angle="315" col="3" x="-7" y="69" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Axe"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Axe"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Axe"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Axe"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Axe"/>
+        </frame>
+        <frame id="Frame">
+          <layerref id="Axe"/>
+        </frame>
+        <frame id="off">
+          <layerref id="Axe"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="16">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame" duration="45"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

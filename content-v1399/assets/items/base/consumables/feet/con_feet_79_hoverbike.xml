@@ -1,0 +1,125 @@
+<item.SpriteItem id="4301" name="Hoverbike Roost Riders Zoom" desc="Uma motocicleta voadora do Roost Riders" tags="rare,consumable,actionbar,wear,feet,action_driveable_toggle" icon="items/base/consumables/feet/con_feet_79_hoverbike_icon.png" price="4000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.44,0,-0.44" max="0.44,1.4,0.44"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="select" script="scripts/item/select_drive.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="speed+100"/>
+  </data>
+  <textures>
+    <texture id="Hoverbike" source="items/base/consumables/feet/con_feet_79_hoverbike_angled.png" cols="2" rows="1"/>
+    <texture id="Shadow" source="items/base/consumables/feet/con_feet_79_hoverbike_shadow.png" cols="3" rows="1"/>
+    <texture id="Handle" source="items/base/consumables/feet/con_feet_79_hoverbike_handles.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.44,0,-0.44" max="0.44,1.4,0.44"/>
+      <layers>
+        <layer id="Shadow01" texture="Shadow">
+          <view angle="45" col="1" x="2" y="35" alpha="0.4"/>
+          <view angle="135" col="1" x="-2" y="35" alpha="0.4" hm="true"/>
+          <view angle="225" col="1" x="3" y="33" alpha="0.4"/>
+          <view angle="315" col="1" x="-3" y="33" alpha="0.4" hm="true"/>
+        </layer>
+        <layer id="Bike" texture="Hoverbike">
+          <view angle="45" x="8" y="14"/>
+          <view angle="135" x="-7" y="14" hm="true"/>
+          <view angle="225" col="1" x="8" y="9"/>
+          <view angle="315" col="1" x="-8" y="9" hm="true"/>
+        </layer>
+        <layer id="Handle02" texture="Handle">
+          <view angle="45" col="1" x="38" y="-67"/>
+          <view angle="135" col="1" x="-40" y="-65" hm="true"/>
+          <view angle="225" col="3" x="25" y="-77"/>
+          <view angle="315" col="3" x="-26" y="-75" hm="true"/>
+        </layer>
+        <layer id="Shadow02" texture="Shadow">
+          <view angle="45" col="1" x="2" y="35" alpha="0.3"/>
+          <view angle="135" col="1" x="-2" y="35" alpha="0.3" hm="true"/>
+          <view angle="225" col="1" x="3" y="33" alpha="0.3"/>
+          <view angle="315" col="1" x="-3" y="33" alpha="0.3" hm="true"/>
+        </layer>
+        <layer id="Shadow03" texture="Shadow">
+          <view angle="45" col="1" x="2" y="35" alpha="0.2"/>
+          <view angle="135" col="1" x="-2" y="35" alpha="0.2" hm="true"/>
+          <view angle="225" col="1" x="3" y="33" alpha="0.2"/>
+          <view angle="315" col="1" x="-3" y="33" alpha="0.2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Shadow01"/>
+          <layerref id="Handle02"/>
+          <layerref id="Bike"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Shadow02"/>
+          <layerref id="Handle02" y="-1"/>
+          <layerref id="Bike" y="-1"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Shadow03"/>
+          <layerref id="Handle02" y="-2"/>
+          <layerref id="Bike" y="-2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Frame" duration="2"/>
+          <frameref id="Frame01" duration="2"/>
+          <frameref id="Frame02" duration="2"/>
+          <frameref id="Frame01" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-5"/>
+          <view angle="135" y="-5"/>
+          <view angle="225" y="-5"/>
+          <view angle="315" y="-5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf5c3f5" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Glow" align="middle">
+          <view angle="45" x="-8" y="-13"/>
+          <view angle="135" x="8" y="-13" hm="true"/>
+          <view angle="225" col="1" x="19" y="-10" hm="true"/>
+          <view angle="315" col="1" x="-19" y="-10"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

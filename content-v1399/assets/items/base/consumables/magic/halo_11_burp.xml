@@ -1,0 +1,260 @@
+<item.SpriteItem id="0" name="Burp" desc="Burp effect" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="FX burp" source="items/base/consumables/magic/halo_11_burp.png" cols="1" rows="4"/>
+    <texture id="TEMP Angle Ref8" source="items/base/consumables/magic/temp_character_8view.png" cols="4" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="burp" source="items/base/consumables/magic/sndfx_burp.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Behind">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="burpA" texture="FX burp">
+          <view angle="0" x="40" y="-120" alpha="0"/>
+          <view angle="45" x="40" y="-110" alpha="0"/>
+          <view angle="90" x="10" y="-100" alpha="0"/>
+          <view angle="135" x="-50" y="-110" alpha="0"/>
+          <view angle="180" x="-45" y="-120" alpha="0"/>
+          <view angle="225" x="-42" y="-124" alpha="0"/>
+          <view angle="270" y="-140" hm="true"/>
+          <view angle="315" x="32" y="-124" alpha="0"/>
+        </layer>
+        <layer id="burpB" texture="FX burp">
+          <view angle="0" row="1" x="40" y="-120" alpha="0"/>
+          <view angle="45" row="1" x="40" y="-110" alpha="0"/>
+          <view angle="90" row="1" x="10" y="-100" alpha="0"/>
+          <view angle="135" row="1" x="-50" y="-110" alpha="0"/>
+          <view angle="180" row="1" x="-45" y="-120" alpha="0"/>
+          <view angle="225" row="1" x="-42" y="-124" alpha="0"/>
+          <view angle="270" row="1" y="-140" hm="true"/>
+          <view angle="315" row="1" x="32" y="-124" alpha="0"/>
+        </layer>
+        <layer id="burpC" texture="FX burp">
+          <view angle="0" row="2" x="40" y="-120" alpha="0"/>
+          <view angle="45" row="2" x="40" y="-110" alpha="0"/>
+          <view angle="90" row="2" x="10" y="-100" alpha="0"/>
+          <view angle="135" row="2" x="-50" y="-110" alpha="0"/>
+          <view angle="180" row="2" x="-45" y="-120" alpha="0"/>
+          <view angle="225" row="2" x="-42" y="-124" alpha="0"/>
+          <view angle="270" row="2" y="-140" hm="true"/>
+          <view angle="315" row="2" x="32" y="-124" alpha="0"/>
+        </layer>
+        <layer id="burpD" texture="FX burp">
+          <view angle="0" row="3" x="40" y="-120" alpha="0"/>
+          <view angle="45" row="3" x="40" y="-110" alpha="0"/>
+          <view angle="90" row="3" x="10" y="-100" alpha="0"/>
+          <view angle="135" row="3" x="-50" y="-110" alpha="0"/>
+          <view angle="180" row="3" x="-45" y="-120" alpha="0"/>
+          <view angle="225" row="3" x="-42" y="-124" alpha="0"/>
+          <view angle="270" row="3" y="-140" hm="true"/>
+          <view angle="315" row="3" x="32" y="-124" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="burpA"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="burpB"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="burpC"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="burpD"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="burpA" texture="FX burp">
+          <view angle="0" x="40" y="-120"/>
+          <view angle="45" x="40" y="-110"/>
+          <view angle="90" x="10" y="-100"/>
+          <view angle="135" x="-50" y="-110" hm="true"/>
+          <view angle="180" x="-45" y="-120" hm="true"/>
+          <view angle="225" x="-42" y="-124" hm="true"/>
+          <view angle="270" x="-42" y="-124" alpha="0"/>
+          <view angle="315" x="32" y="-124"/>
+        </layer>
+        <layer id="burpB" texture="FX burp">
+          <view angle="0" row="1" x="40" y="-120"/>
+          <view angle="45" row="1" x="40" y="-110"/>
+          <view angle="90" row="1" x="10" y="-100"/>
+          <view angle="135" row="1" x="-50" y="-110" hm="true"/>
+          <view angle="180" row="1" x="-45" y="-120" hm="true"/>
+          <view angle="225" row="1" x="-42" y="-124" hm="true"/>
+          <view angle="270" row="1" x="-42" y="-124" alpha="0"/>
+          <view angle="315" row="1" x="32" y="-124"/>
+        </layer>
+        <layer id="burpC" texture="FX burp">
+          <view angle="0" row="2" x="40" y="-120"/>
+          <view angle="45" row="2" x="40" y="-110"/>
+          <view angle="90" row="2" x="10" y="-100"/>
+          <view angle="135" row="2" x="-50" y="-110" hm="true"/>
+          <view angle="180" row="2" x="-45" y="-120" hm="true"/>
+          <view angle="225" row="2" x="-42" y="-124" hm="true"/>
+          <view angle="270" row="2" x="-42" y="-124" alpha="0"/>
+          <view angle="315" row="2" x="32" y="-124"/>
+        </layer>
+        <layer id="burpD" texture="FX burp">
+          <view angle="0" row="3" x="40" y="-120"/>
+          <view angle="45" row="3" x="40" y="-110"/>
+          <view angle="90" row="3" x="10" y="-100"/>
+          <view angle="135" row="3" x="-50" y="-110" hm="true"/>
+          <view angle="180" row="3" x="-45" y="-120" hm="true"/>
+          <view angle="225" row="3" x="-42" y="-124" hm="true"/>
+          <view angle="270" row="3" x="-42" y="-124" alpha="0"/>
+          <view angle="315" row="3" x="32" y="-124"/>
+        </layer>
+        <layer id="burpE" texture="FX burp">
+          <view angle="0" row="3" x="40" y="-120" alpha="0"/>
+          <view angle="45" row="3" x="40" y="-110" alpha="0"/>
+          <view angle="90" row="3" x="10" y="-100" alpha="0"/>
+          <view angle="135" row="3" x="-50" y="-110" alpha="0" hm="true"/>
+          <view angle="180" row="3" x="-45" y="-120" alpha="0" hm="true"/>
+          <view angle="225" row="3" x="-42" y="-124" alpha="0" hm="true"/>
+          <view angle="270" row="3" x="-42" y="-124" alpha="0"/>
+          <view angle="315" row="3" x="32" y="-124" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="burpA" blend="add"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="burpB" blend="add"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="burpC" blend="add"/>
+          <layerref id="burpD" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="burpD" y="-6" blend="add"/>
+        </frame>
+        <frame id="Frame">
+          <layerref id="burpE"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4">
+          <frameref id="Frame01">
+            <sample id="burp"/>
+          </frameref>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame" duration="5"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame" duration="5"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="burpA" texture="FX burp">
+          <view angle="0" x="40" y="-120"/>
+          <view angle="45" x="40" y="-110"/>
+          <view angle="90" x="10" y="-100"/>
+          <view angle="135" x="-50" y="-110" hm="true"/>
+          <view angle="180" x="-45" y="-120" hm="true"/>
+          <view angle="225" x="-42" y="-124" hm="true"/>
+          <view angle="270" x="-42" y="-124" alpha="0"/>
+          <view angle="315" x="32" y="-124"/>
+        </layer>
+        <layer id="burpB" texture="FX burp">
+          <view angle="0" row="1" x="40" y="-120"/>
+          <view angle="45" row="1" x="40" y="-110"/>
+          <view angle="90" row="1" x="10" y="-100"/>
+          <view angle="135" row="1" x="-50" y="-110" hm="true"/>
+          <view angle="180" row="1" x="-45" y="-120" hm="true"/>
+          <view angle="225" row="1" x="-42" y="-124" hm="true"/>
+          <view angle="270" row="1" x="-42" y="-124" alpha="0"/>
+          <view angle="315" row="1" x="32" y="-124"/>
+        </layer>
+        <layer id="burpC" texture="FX burp">
+          <view angle="0" row="2" x="40" y="-120"/>
+          <view angle="45" row="2" x="40" y="-110"/>
+          <view angle="90" row="2" x="10" y="-100"/>
+          <view angle="135" row="2" x="-50" y="-110" hm="true"/>
+          <view angle="180" row="2" x="-45" y="-120" hm="true"/>
+          <view angle="225" row="2" x="-42" y="-124" hm="true"/>
+          <view angle="270" row="2" x="-42" y="-124" alpha="0"/>
+          <view angle="315" row="2" x="32" y="-124"/>
+        </layer>
+        <layer id="burpD" texture="FX burp">
+          <view angle="0" row="3" x="40" y="-120"/>
+          <view angle="45" row="3" x="40" y="-110"/>
+          <view angle="90" row="3" x="10" y="-100"/>
+          <view angle="135" row="3" x="-50" y="-110" hm="true"/>
+          <view angle="180" row="3" x="-45" y="-120" hm="true"/>
+          <view angle="225" row="3" x="-42" y="-124" hm="true"/>
+          <view angle="270" row="3" x="-42" y="-124" alpha="0"/>
+          <view angle="315" row="3" x="32" y="-124"/>
+        </layer>
+        <layer id="burpE" texture="FX burp">
+          <view angle="0" row="3" x="40" y="-120" alpha="0"/>
+          <view angle="45" row="3" x="40" y="-110" alpha="0"/>
+          <view angle="90" row="3" x="10" y="-100" alpha="0"/>
+          <view angle="135" row="3" x="-50" y="-110" alpha="0" hm="true"/>
+          <view angle="180" row="3" x="-45" y="-120" alpha="0" hm="true"/>
+          <view angle="225" row="3" x="-42" y="-124" alpha="0" hm="true"/>
+          <view angle="270" row="3" x="-42" y="-124" alpha="0"/>
+          <view angle="315" row="3" x="32" y="-124" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="burpA" blend="add"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="burpB" blend="add"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="burpC" blend="add"/>
+          <layerref id="burpD" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="burpD" y="-6" blend="add"/>
+        </frame>
+        <frame id="Frame">
+          <layerref id="burpE"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame" duration="5"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame" duration="5"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

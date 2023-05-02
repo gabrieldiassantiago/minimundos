@@ -1,0 +1,306 @@
+<item.SpriteItem id="1165" name="Pirâmide da Esfera Mística" desc="Uma pirâmide de esfera mística" tags="rare,misc,trap,magic,turret" icon="items/base/antique/icon_a_turret_03_orb.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="1100" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,1.35,0.4"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle_turret.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="fire" script="scripts/item/action_turret.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Fire" event="fire"/>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(Idle)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="action_attributes" value="nature-10"/>
+    <entry key="action_attributes_secondary" value="speed-10,health-30"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/antique/a_mystical_orb.png" cols="1" rows="1"/>
+    <texture id="Texture01" source="items/base/antique/a_mystical_orb_glyph.png" cols="4" rows="1"/>
+    <texture id="Flare" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="shockball" source="items/base/consumables/magic/proj_generic_shockball.png" cols="1" rows="3"/>
+    <texture id="radiate" source="items/base/consumables/magic/hit_generic_radiate.png" cols="4" rows="1"/>
+    <texture id="zap" source="items/base/consumables/magic/proj_generic_zap.png" cols="1" rows="4"/>
+    <texture id="candleflame" source="items/base/shared/s_candle_flame.png" cols="2" rows="2"/>
+    <texture id="Texture02" source="items/base/antique/a_mystical_orb_eye.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="Intense2" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.4" max="0.4,1.35,0.4"/>
+      <layers>
+        <layer id="base" texture="Texture" y="25">
+          <view angle="45"/>
+          <view angle="135" x="-2" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" x="-2" hm="true"/>
+        </layer>
+        <layer id="base_horus" texture="Texture02" y="25">
+          <view angle="45" x="-16" y="-22"/>
+          <view angle="135" x="15" y="-22" hm="true"/>
+          <view angle="225" x="-16" y="-22"/>
+          <view angle="315" x="15" y="-22" hm="true"/>
+        </layer>
+        <layer id="glyph0" texture="Texture01" y="25">
+          <view y="-56" alpha="0.7"/>
+        </layer>
+        <layer id="glyph15" texture="Texture01" y="25">
+          <view col="1" y="-56" alpha="0.7"/>
+        </layer>
+        <layer id="glyph30" texture="Texture01" y="25">
+          <view col="2" y="-56" alpha="0.7"/>
+        </layer>
+        <layer id="glyph45" texture="Texture01" y="25">
+          <view col="3" y="-56" alpha="0.7"/>
+        </layer>
+        <layer id="glyph60" texture="Texture01" y="25">
+          <view col="2" y="-56" alpha="0.7" hm="true"/>
+        </layer>
+        <layer id="glyph75" texture="Texture01" y="25">
+          <view col="1" y="-56" alpha="0.7" hm="true"/>
+        </layer>
+        <layer id="Flare" texture="Flare" y="-50">
+          <view/>
+        </layer>
+        <layer id="shockball_01" texture="shockball" y="-30">
+          <view y="-30"/>
+        </layer>
+        <layer id="shockball_02" texture="shockball" y="-30">
+          <view row="1" y="-30"/>
+        </layer>
+        <layer id="shockball_03" texture="shockball" y="-30">
+          <view row="2" y="-30"/>
+        </layer>
+        <layer id="radiate_01" texture="radiate" y="-30">
+          <view col="3"/>
+        </layer>
+        <layer id="radiate_02" texture="radiate" y="-30">
+          <view col="2"/>
+        </layer>
+        <layer id="radiate_03" texture="radiate" y="-30">
+          <view col="1"/>
+        </layer>
+        <layer id="zap_01" texture="zap" y="-25">
+          <view row="2" y="-30"/>
+        </layer>
+        <layer id="zap_02" texture="zap" y="-25">
+          <view row="3" y="-30"/>
+        </layer>
+        <layer id="zap_01x" texture="zap" y="-25">
+          <view row="2" y="-30" hm="true"/>
+        </layer>
+        <layer id="zap_02y" texture="zap" y="-25">
+          <view row="3" y="-30" vm="true"/>
+        </layer>
+        <layer id="cflame_A" texture="candleflame" x="1" y="-42">
+          <view/>
+        </layer>
+        <layer id="cflame_B" texture="candleflame" x="1" y="-40">
+          <view col="1"/>
+        </layer>
+        <layer id="cflame_C" texture="candleflame" x="1" y="-38">
+          <view col="1" row="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Flare" color="0x9f7a66" a="0.8"/>
+          <layerref id="base"/>
+          <layerref id="base_horus"/>
+          <layerref id="glyph0" blend="add"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Flare" color="0x9f7a66" a="0.8"/>
+          <layerref id="base" color="0xfcfcfc"/>
+          <layerref id="base_horus" color="0xfcfcfc"/>
+          <layerref id="glyph15" blend="add"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Flare" color="0x9f7a66" a="0.8"/>
+          <layerref id="base" color="0xfbfaf9"/>
+          <layerref id="base_horus" color="0xfbfaf9"/>
+          <layerref id="glyph30" blend="add"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Flare" color="0x9f7a66" a="0.8"/>
+          <layerref id="base"/>
+          <layerref id="base_horus"/>
+          <layerref id="glyph45" blend="add"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Flare" color="0x9f7a66" a="0.8"/>
+          <layerref id="base" color="0xfcfcfc"/>
+          <layerref id="base_horus" color="0xfcfcfc"/>
+          <layerref id="glyph60" blend="add"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="Flare" color="0x9f7a66" a="0.8"/>
+          <layerref id="base" color="0xfbfaf9"/>
+          <layerref id="base_horus" color="0xfbfaf9"/>
+          <layerref id="glyph75" blend="add"/>
+        </frame>
+        <frame id="In_01">
+          <layerref id="Flare" color="0x9f7a66" a="0.8"/>
+          <layerref id="base"/>
+          <layerref id="base_horus"/>
+          <layerref id="glyph75" color="0xcccccc" a="0.7" blend="add"/>
+          <layerref id="radiate_01" color="0xff9966" a="0.5" blend="add"/>
+          <layerref id="shockball_01" color="0x66ccff" blend="add"/>
+          <layerref id="zap_01" color="0xffcc99" a="0.2" blend="add"/>
+          <layerref id="zap_02" a="0.5" blend="add"/>
+        </frame>
+        <frame id="In_02">
+          <layerref id="Flare" color="0x9f7a66" a="0.8"/>
+          <layerref id="base" color="0xfbfaf9"/>
+          <layerref id="base_horus" color="0xfbfaf9"/>
+          <layerref id="glyph75" color="0x999999" a="0.8" blend="add"/>
+          <layerref id="radiate_02" color="0xcc6666" a="0.5" blend="add"/>
+          <layerref id="shockball_01" color="0x66ccff" a="0.7" blend="add"/>
+          <layerref id="zap_01x" a="0.5" blend="add"/>
+        </frame>
+        <frame id="In_03">
+          <layerref id="Flare" color="0x9f7a66" a="0.8"/>
+          <layerref id="base"/>
+          <layerref id="base_horus"/>
+          <layerref id="glyph75" a="0.7" blend="add"/>
+          <layerref id="radiate_03" color="0x333333" blend="add"/>
+          <layerref id="shockball_01" color="0x66ccff" blend="add"/>
+          <layerref id="zap_01" a="0.2" blend="add"/>
+          <layerref id="zap_02y" a="0.5" blend="add"/>
+        </frame>
+        <frame id="In_04">
+          <layerref id="Flare" color="0x9f7a66" a="0.8"/>
+          <layerref id="base" color="0xfbfaf9"/>
+          <layerref id="base_horus" color="0xfbfaf9"/>
+          <layerref id="glyph75" color="0xcccccc" a="0.8" blend="add"/>
+          <layerref id="radiate_02" color="0xffff99" a="0.5" blend="add"/>
+          <layerref id="zap_01" a="0.4" blend="add"/>
+          <layerref id="shockball_01" color="0x66ccff" a="0.6" blend="add"/>
+          <layerref id="zap_02" a="0.5" blend="add"/>
+        </frame>
+        <frame id="off_01">
+          <layerref id="base"/>
+          <layerref id="base_horus"/>
+          <layerref id="glyph0" a="0" blend="add"/>
+          <layerref id="cflame_A" color="0xff0000" a="0.2" blend="add"/>
+        </frame>
+        <frame id="off_02">
+          <layerref id="base"/>
+          <layerref id="base_horus"/>
+          <layerref id="glyph0" a="0" blend="add"/>
+          <layerref id="cflame_B" color="0xff0000" a="0.2" blend="add"/>
+        </frame>
+        <frame id="off_03">
+          <layerref id="base"/>
+          <layerref id="base_horus"/>
+          <layerref id="glyph0" a="0" blend="add"/>
+          <layerref id="cflame_C" color="0xff0000" a="0.2" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+        </animation>
+        <animation id="In" framerate="8" loop="false" syncOffsets="0,1">
+          <frameref id="In_01"/>
+          <frameref id="In_02"/>
+          <frameref id="In_03"/>
+          <frameref id="In_04"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="In_01"/>
+          <frameref id="In_02"/>
+        </animation>
+        <animation id="Off" framerate="4" syncOffsets="0,1">
+          <frameref id="off_01"/>
+          <frameref id="off_02"/>
+          <frameref id="off_03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xffffcc" a="0.7"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0xf0eea5" a="0.5"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xffffcc" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+        <animation id="Off" framerate="4" syncOffsets="0,1">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="1.1" s="3" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view/>
+        </layer>
+        <layer id="Light01" texture="Intense2" align="middle">
+          <view y="5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" a="0.33"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light01" color="0xf1efab" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Off" framerate="4" syncOffsets="0,1">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="In">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Out">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

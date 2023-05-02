@@ -1,0 +1,578 @@
+<item.SpriteItem id="1772" name="Fogo da Fênix" desc="Uma ave imortal" tags="rare,trap,misc,magic,turret,kudos,craftable_kudos,market" icon="items/base/gothic/icon_g_turret_07_phoenix.png" price="150" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.4" max="1.4,2.3,1.4"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="fire" script="scripts/item/action_turret.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Fire" event="fire"/>
+  </actions>
+  <data>
+    <entry key="action_attributes" value="fire+10"/>
+    <entry key="action_attributes_secondary" value="health+40"/>
+  </data>
+  <textures>
+    <texture id="Body" source="items/base/gothic/g_turret_07_phoenix_body.png" cols="2" rows="1"/>
+    <texture id="HeadFront" source="items/base/gothic/g_turret_07_phoenix_head.png" cols="3" rows="2"/>
+    <texture id="feet" source="items/base/gothic/g_turret_07_phoenix_feet.png" cols="2" rows="1"/>
+    <texture id="radiate" source="items/base/consumables/magic/hit_generic_radiate.png" cols="4" rows="1"/>
+    <texture id="shockball" source="items/base/consumables/magic/proj_generic_shockball.png" cols="1" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="rock" source="items/base/gothic/g_turret_07_phoenix_rock.png" cols="1" rows="1"/>
+    <texture id="wing_01" source="items/base/gothic/g_turret_07_phoenix_wing_01.png" cols="3" rows="2"/>
+    <texture id="wing_02" source="items/base/gothic/g_turret_07_phoenix_wing_02.png" cols="3" rows="2"/>
+    <texture id="rock_light" source="items/base/gothic/g_turret_07_phoenix_rock_light.png" cols="1" rows="1"/>
+    <texture id="flame" source="items/base/gothic/g_turret_07_phoenix_flame.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/consumables/magic/sndfx_transform.mp3"/>
+    <sound id="wing" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.4" max="1.4,2.3,1.4"/>
+      <layers>
+        <layer id="rock" texture="rock" x="40" y="90">
+          <view angle="45" x="23" y="-57"/>
+          <view angle="135" x="-39" y="-25" hm="true"/>
+          <view angle="225" x="-104" y="-57"/>
+          <view angle="315" x="-39" y="-90" hm="true"/>
+        </layer>
+        <layer id="feet" texture="feet" x="40" y="90">
+          <view angle="45" x="25" y="-127"/>
+          <view angle="135" x="-40" y="-95" hm="true"/>
+          <view angle="225" col="1" x="-106" y="-127"/>
+          <view angle="315" col="1" x="-37" y="-160" hm="true"/>
+        </layer>
+        <layer id="Body_01" texture="Body" x="40" y="90">
+          <view angle="45" x="8" y="-125"/>
+          <view angle="135" x="-23" y="-93" hm="true"/>
+          <view angle="225" col="1" x="-90" y="-122"/>
+          <view angle="315" col="1" x="-53" y="-155" hm="true"/>
+        </layer>
+        <layer id="Head_01" texture="HeadFront">
+          <view angle="45" x="93" y="-117"/>
+          <view angle="135" x="-29" y="-85" hm="true"/>
+          <view angle="225" row="1" x="-95" y="-139"/>
+          <view angle="315" row="1" x="31" y="-172" hm="true"/>
+        </layer>
+        <layer id="Head_02" texture="HeadFront">
+          <view angle="45" col="1" x="93" y="-117"/>
+          <view angle="135" col="1" x="-29" y="-85" hm="true"/>
+          <view angle="225" col="1" row="1" x="-95" y="-139"/>
+          <view angle="315" col="1" row="1" x="31" y="-172" hm="true"/>
+        </layer>
+        <layer id="Head_03" texture="HeadFront">
+          <view angle="45" col="2" x="93" y="-117"/>
+          <view angle="135" col="2" x="-29" y="-85" hm="true"/>
+          <view angle="225" col="2" row="1" x="-95" y="-139"/>
+          <view angle="315" col="2" row="1" x="31" y="-172" hm="true"/>
+        </layer>
+        <layer id="shockball 01" texture="shockball" y="-73">
+          <view angle="45" x="98" y="-18"/>
+          <view angle="135" x="-61" y="15"/>
+          <view angle="225" x="-130" y="-66"/>
+          <view angle="315" x="39" y="-100"/>
+        </layer>
+        <layer id="shockball 02" texture="shockball" y="-73">
+          <view angle="45" row="1" x="98" y="-18"/>
+          <view angle="135" row="1" x="-61" y="15"/>
+          <view angle="225" row="1" x="-130" y="-66"/>
+          <view angle="315" row="1" x="39" y="-100"/>
+        </layer>
+        <layer id="shockball 03" texture="shockball" y="-73">
+          <view angle="45" row="2" x="98" y="-18"/>
+          <view angle="135" row="2" x="-61" y="15"/>
+          <view angle="225" row="2" x="-130" y="-66"/>
+          <view angle="315" row="2" x="39" y="-100"/>
+        </layer>
+        <layer id="radiate 01" texture="radiate" y="-73">
+          <view angle="45" x="100" y="8"/>
+          <view angle="135" x="-58" y="42"/>
+          <view angle="225" x="-130" y="-40"/>
+          <view angle="315" x="42" y="-72"/>
+        </layer>
+        <layer id="radiate 02" texture="radiate" y="-73">
+          <view angle="45" col="1" x="100" y="8"/>
+          <view angle="135" col="1" x="-58" y="42"/>
+          <view angle="225" col="1" x="-130" y="-40"/>
+          <view angle="315" col="1" x="42" y="-72"/>
+        </layer>
+        <layer id="radiate 03" texture="radiate" y="-73">
+          <view angle="45" col="2" x="100" y="8"/>
+          <view angle="135" col="2" x="-58" y="42"/>
+          <view angle="225" col="2" x="-130" y="-40"/>
+          <view angle="315" col="2" x="42" y="-72"/>
+        </layer>
+        <layer id="radiate 04" texture="radiate" y="-73">
+          <view angle="45" col="3" x="100" y="8"/>
+          <view angle="135" col="3" x="-58" y="42"/>
+          <view angle="225" col="3" x="-130" y="-40"/>
+          <view angle="315" col="3" x="42" y="-72"/>
+        </layer>
+        <layer id="wing_back_a_01" texture="wing_01">
+          <view angle="45" x="98" y="-39"/>
+          <view angle="135" x="-32" y="-11" hm="true"/>
+          <view angle="225" row="1" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="wing_back_a_02" texture="wing_01">
+          <view angle="45" col="1" x="97" y="-43"/>
+          <view angle="135" col="1" x="-32" y="-11" hm="true"/>
+          <view angle="225" row="1" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="wing_back_a_03" texture="wing_01">
+          <view angle="45" col="2" x="97" y="-43"/>
+          <view angle="135" col="2" x="-32" y="-11" hm="true"/>
+          <view angle="225" row="1" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="wing_front_a_01" texture="wing_02">
+          <view angle="45" x="19" y="-12"/>
+          <view angle="135" x="46" y="16" hm="true"/>
+          <view angle="225" row="1" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="wing_front_a_02" texture="wing_02">
+          <view angle="45" col="1" x="19" y="-16"/>
+          <view angle="135" col="1" x="46" y="16" hm="true"/>
+          <view angle="225" row="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="wing_front_a_03" texture="wing_02">
+          <view angle="45" col="2" x="19" y="-16"/>
+          <view angle="135" col="2" x="46" y="16" hm="true"/>
+          <view angle="225" row="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="wing_back_b_01" texture="wing_02">
+          <view angle="45" x="98" y="-39" alpha="0"/>
+          <view angle="135" x="-32" y="-11" alpha="0" hm="true"/>
+          <view angle="225" row="1" x="-20" y="-43"/>
+          <view angle="315" row="1" x="-43" y="-77" hm="true"/>
+        </layer>
+        <layer id="wing_back_b_02" texture="wing_02">
+          <view angle="45" x="98" y="-39" alpha="0"/>
+          <view angle="135" x="-32" y="-11" alpha="0" hm="true"/>
+          <view angle="225" col="1" row="1" x="-19" y="-45"/>
+          <view angle="315" col="1" row="1" x="-43" y="-78" hm="true"/>
+        </layer>
+        <layer id="wing_back_b_03" texture="wing_02">
+          <view angle="45" x="98" y="-39" alpha="0"/>
+          <view angle="135" x="-32" y="-11" alpha="0" hm="true"/>
+          <view angle="225" col="2" row="1" x="-20" y="-45"/>
+          <view angle="315" col="2" row="1" x="-43" y="-78" hm="true"/>
+        </layer>
+        <layer id="wing_front_b_01" texture="wing_01">
+          <view angle="45" x="19" y="-12" alpha="0"/>
+          <view angle="135" x="46" y="16" alpha="0" hm="true"/>
+          <view angle="225" row="1" x="-99" y="-14"/>
+          <view angle="315" row="1" x="36" y="-47" hm="true"/>
+        </layer>
+        <layer id="wing_front_b_02" texture="wing_01">
+          <view angle="45" x="19" y="-12" alpha="0"/>
+          <view angle="135" x="46" y="16" alpha="0" hm="true"/>
+          <view angle="225" col="1" row="1" x="-98" y="-16"/>
+          <view angle="315" col="1" row="1" x="36" y="-49" hm="true"/>
+        </layer>
+        <layer id="wing_front_b_03" texture="wing_01">
+          <view angle="45" x="19" y="-12" alpha="0"/>
+          <view angle="135" x="46" y="16" alpha="0" hm="true"/>
+          <view angle="225" col="2" row="1" x="-99" y="-16"/>
+          <view angle="315" col="2" row="1" x="36" y="-49" hm="true"/>
+        </layer>
+        <layer id="rock_light" texture="rock_light" x="40" y="90">
+          <view angle="45" x="23" y="-57"/>
+          <view angle="135" x="-39" y="-25" hm="true"/>
+          <view angle="225" x="-104" y="-57"/>
+          <view angle="315" x="-39" y="-90" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="DClosed_01">
+          <layerref id="wing_back_a_01"/>
+          <layerref id="wing_back_b_01"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.1" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_01" y="6"/>
+          <layerref id="Body_01" y="3"/>
+          <layerref id="wing_front_a_01"/>
+          <layerref id="wing_front_b_01"/>
+        </frame>
+        <frame id="DClosed_02">
+          <layerref id="wing_back_a_01" y="1"/>
+          <layerref id="wing_back_b_01" y="1"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.3" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_01" y="5"/>
+          <layerref id="Body_01" y="3"/>
+          <layerref id="wing_front_a_01" y="1"/>
+          <layerref id="wing_front_b_01" y="1"/>
+        </frame>
+        <frame id="DClosed_03">
+          <layerref id="wing_back_a_01" y="2"/>
+          <layerref id="wing_back_b_01" y="2"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.5" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_01" y="4"/>
+          <layerref id="Body_01" y="2"/>
+          <layerref id="wing_front_a_01" y="2"/>
+          <layerref id="wing_front_b_01" y="2"/>
+        </frame>
+        <frame id="DClosed_04">
+          <layerref id="wing_back_a_01" y="3"/>
+          <layerref id="wing_back_b_01" y="3"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.7" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_01" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="wing_front_a_01" y="3"/>
+          <layerref id="wing_front_b_01" y="3"/>
+        </frame>
+        <frame id="DOpen_00">
+          <layerref id="wing_back_a_01"/>
+          <layerref id="wing_back_b_01"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.1" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_01" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="wing_front_a_01"/>
+          <layerref id="wing_front_b_01"/>
+        </frame>
+        <frame id="DOpen_01">
+          <layerref id="wing_back_a_02"/>
+          <layerref id="wing_back_b_02"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.1" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_02" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="wing_front_a_02"/>
+          <layerref id="wing_front_b_02"/>
+        </frame>
+        <frame id="DOpen_02">
+          <layerref id="wing_back_a_03"/>
+          <layerref id="wing_back_b_03"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.3" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_03" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="shockball 01" x="13" y="-17" color="0xedac72" a="0.33" blend="add"/>
+          <layerref id="wing_front_a_03"/>
+          <layerref id="wing_front_b_03"/>
+        </frame>
+        <frame id="DOpen_03">
+          <layerref id="wing_back_a_02"/>
+          <layerref id="wing_back_b_02"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.3" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_03" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="shockball 02" x="13" y="-17" color="0xedac72" a="0.66" blend="add"/>
+          <layerref id="wing_front_a_02"/>
+          <layerref id="wing_front_b_02"/>
+        </frame>
+        <frame id="DOpen_04">
+          <layerref id="wing_back_a_03"/>
+          <layerref id="wing_back_b_03"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.5" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_03" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="radiate 01" x="13" y="-17" color="0xef4343" a="0.25" blend="add"/>
+          <layerref id="shockball 03" x="13" y="-17" color="0xedac72" blend="add"/>
+          <layerref id="wing_front_a_03"/>
+          <layerref id="wing_front_b_03"/>
+        </frame>
+        <frame id="DOpen_05">
+          <layerref id="wing_back_a_02"/>
+          <layerref id="wing_back_b_02"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.5" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_03" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="radiate 02" x="13" y="-17" color="0xef4343" a="0.5" blend="add"/>
+          <layerref id="shockball 01" x="13" y="-17" color="0xedac72" blend="add"/>
+          <layerref id="wing_front_a_02"/>
+          <layerref id="wing_front_b_02"/>
+        </frame>
+        <frame id="DOpen_06">
+          <layerref id="wing_back_a_03"/>
+          <layerref id="wing_back_b_03"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.7" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_03" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="radiate 03" x="13" y="-17" color="0xef4343" blend="add"/>
+          <layerref id="shockball 02" x="13" y="-17" color="0xedac72" blend="add"/>
+          <layerref id="wing_front_a_03"/>
+          <layerref id="wing_front_b_03"/>
+        </frame>
+        <frame id="DOpen_07">
+          <layerref id="wing_back_a_02"/>
+          <layerref id="wing_back_b_02"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.7" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_03" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="radiate 04" x="13" y="-17" color="0xef4343" a="0.5" blend="add"/>
+          <layerref id="shockball 03" x="13" y="-17" color="0xedac72" a="0.75" blend="add"/>
+          <layerref id="wing_front_a_02"/>
+          <layerref id="wing_front_b_02"/>
+        </frame>
+        <frame id="DOpen_08">
+          <layerref id="wing_back_a_03"/>
+          <layerref id="wing_back_b_03"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.5" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_03" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="radiate 01" x="13" y="-17" color="0xef4343" a="0.25" blend="add"/>
+          <layerref id="shockball 01" x="13" y="-17" color="0xedac72" a="0.5" blend="add"/>
+          <layerref id="wing_front_a_03"/>
+          <layerref id="wing_front_b_03"/>
+        </frame>
+        <frame id="DOpen_09">
+          <layerref id="wing_back_a_02"/>
+          <layerref id="wing_back_b_02"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.5" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_03" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="shockball 02" x="13" y="-17" color="0xedac72" a="0.25" blend="add"/>
+          <layerref id="wing_front_a_02"/>
+          <layerref id="wing_front_b_02"/>
+        </frame>
+        <frame id="DOpen_10">
+          <layerref id="wing_back_a_03"/>
+          <layerref id="wing_back_b_03"/>
+          <layerref id="rock"/>
+          <layerref id="rock_light" a="0.3" blend="add"/>
+          <layerref id="feet"/>
+          <layerref id="Head_03" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="wing_front_a_03"/>
+          <layerref id="wing_front_b_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="DClosed_01"/>
+          <frameref id="DClosed_02"/>
+          <frameref id="DClosed_03"/>
+          <frameref id="DClosed_04"/>
+          <frameref id="DClosed_04"/>
+          <frameref id="DClosed_03"/>
+          <frameref id="DClosed_02"/>
+        </animation>
+        <animation id="In" framerate="8" loop="false">
+          <frameref id="DOpen_00">
+            <sample id="Sound"/>
+            <sample id="wing" vol="6"/>
+          </frameref>
+          <frameref id="DOpen_01"/>
+          <frameref id="DOpen_02">
+            <sample id="wing" vol="6"/>
+          </frameref>
+          <frameref id="DOpen_03"/>
+          <frameref id="DOpen_04">
+            <sample id="wing" vol="6"/>
+          </frameref>
+          <frameref id="DOpen_05"/>
+          <frameref id="DOpen_06">
+            <sample id="wing" vol="6"/>
+          </frameref>
+        </animation>
+        <animation id="Out" framerate="8" loop="false">
+          <frameref id="DOpen_07">
+            <sample id="wing" vol="6"/>
+          </frameref>
+          <frameref id="DOpen_08"/>
+          <frameref id="DOpen_09">
+            <sample id="wing" vol="6"/>
+          </frameref>
+          <frameref id="DOpen_10"/>
+          <frameref id="DOpen_01"/>
+          <frameref id="DOpen_00"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="flame" s="5">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="flame_01" texture="flame">
+          <view angle="45" x="16" y="-3" hm="true"/>
+          <view angle="135" x="2" hm="true"/>
+          <view angle="225" x="-15" y="-4"/>
+          <view angle="315" x="2" y="-11" hm="true"/>
+        </layer>
+        <layer id="flame_02" texture="flame">
+          <view angle="45" col="1" x="16" y="-3" hm="true"/>
+          <view angle="135" col="1" x="2" hm="true"/>
+          <view angle="225" col="1" x="-15" y="-4"/>
+          <view angle="315" col="1" x="2" y="-11" hm="true"/>
+        </layer>
+        <layer id="flame_03" texture="flame">
+          <view angle="45" col="2" x="16" y="-3" hm="true"/>
+          <view angle="135" col="2" x="2" hm="true"/>
+          <view angle="225" col="2" x="-15" y="-4"/>
+          <view angle="315" col="2" x="2" y="-11" hm="true"/>
+        </layer>
+        <layer id="flame_04" texture="flame">
+          <view angle="45" col="3" x="16" y="-3" hm="true"/>
+          <view angle="135" col="3" x="4" hm="true"/>
+          <view angle="225" col="3" x="-15" y="-4"/>
+          <view angle="315" col="3" x="2" y="-11" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="flame_01" a="0.4" blend="add"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="flame_02" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="flame_03" a="0.57" blend="add"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="flame_04" a="0.45" blend="add"/>
+        </frame>
+        <frame id="idle">
+          <layerref id="flame_01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="idle"/>
+        </animation>
+        <animation id="In" framerate="4">
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+        </animation>
+        <animation id="Out" framerate="4">
+          <frameref id="Frame_04"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.6719" y="2.05" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="17" y="-1"/>
+          <view angle="135" x="-1" y="6"/>
+          <view angle="225" x="-13"/>
+          <view angle="315" x="1" y="-6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf37373" a="0.2"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xf37373" a="0.4"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xf37373" a="0.8"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xf37373"/>
+        </frame>
+        <frame id="Idle">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncFrames="false">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncFrames="false">
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="rock_light" align="middle">
+          <view angle="45" x="67" y="-14"/>
+          <view angle="135" x="6" y="19" hm="true"/>
+          <view angle="225" x="-60" y="-13"/>
+          <view angle="315" x="3" y="-47" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf2d29e" a="0.2"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xf2d29e" a="0.4"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xf2d29e" a="0.8"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xf2d29e"/>
+        </frame>
+        <frame id="Idle">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+        </animation>
+        <animation id="In" framerate="8" loop="false" syncFrames="false">
+          <frameref id="01" duration="2"/>
+          <frameref id="02" duration="2"/>
+          <frameref id="03" duration="2"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncFrames="false">
+          <frameref id="04"/>
+          <frameref id="03" duration="2"/>
+          <frameref id="02" duration="2"/>
+          <frameref id="01" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

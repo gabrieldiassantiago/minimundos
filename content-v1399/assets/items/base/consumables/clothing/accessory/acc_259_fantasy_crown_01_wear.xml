@@ -1,0 +1,191 @@
+<item.SpriteItem id="0" name="Ice Crown" desc="An item" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/clothing/accessory/acc_259_fantasy_crown_01_wear.png" cols="5" rows="1"/>
+    <texture id="reflect" source="items/base/consumables/clothing/accessory/acc_sparkle.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="0" x="1" y="-18"/>
+          <view angle="45" col="1" y="-19"/>
+          <view angle="90" col="2" y="-20"/>
+          <view angle="135" col="1" y="-19" hm="true"/>
+          <view angle="180" x="-1" y="-18" hm="true"/>
+          <view angle="225" col="4" y="-18" hm="true"/>
+          <view angle="270" col="3" y="-16"/>
+          <view angle="315" col="4" y="-18"/>
+        </layer>
+        <layer id="reflect_01" texture="reflect">
+          <view angle="45" x="7" y="-44"/>
+          <view angle="135" x="-7" y="-44"/>
+          <view angle="225" x="10" y="-45"/>
+          <view angle="315" x="-10" y="-45"/>
+          <view angle="0" x="23" y="-41"/>
+          <view angle="90" x="11" y="-45"/>
+          <view angle="180" x="-23" y="-41"/>
+          <view angle="270" x="11" y="-46"/>
+        </layer>
+        <layer id="reflect_02" texture="reflect">
+          <view angle="45" col="1" x="8" y="-46"/>
+          <view angle="135" col="1" x="-8" y="-46"/>
+          <view angle="225" col="1" x="10" y="-47"/>
+          <view angle="315" col="1" x="-10" y="-47"/>
+          <view angle="0" col="1" x="23" y="-44"/>
+          <view angle="90" col="1" x="11" y="-46"/>
+          <view angle="180" col="1" x="-23" y="-44"/>
+          <view angle="270" col="1" x="11" y="-48"/>
+        </layer>
+        <layer id="reflect_03" texture="reflect">
+          <view angle="45" col="2" x="9" y="-47"/>
+          <view angle="135" col="2" x="-9" y="-47"/>
+          <view angle="225" col="2" x="8" y="-48"/>
+          <view angle="315" col="2" x="-8" y="-48"/>
+          <view angle="0" col="2" x="23" y="-44"/>
+          <view angle="90" col="2" x="10" y="-46"/>
+          <view angle="180" col="2" x="-23" y="-44"/>
+          <view angle="270" col="2" x="10" y="-48"/>
+        </layer>
+        <layer id="reflect_04" texture="reflect">
+          <view angle="45" col="1" x="8" y="-46" hm="true"/>
+          <view angle="135" col="1" x="-8" y="-46" hm="true"/>
+          <view angle="225" col="1" x="9" y="-47" hm="true"/>
+          <view angle="315" col="1" x="-9" y="-47" hm="true"/>
+          <view angle="0" col="1" x="23" y="-43" hm="true"/>
+          <view angle="90" col="1" x="10" y="-46" hm="true"/>
+          <view angle="180" col="1" x="-23" y="-43" hm="true"/>
+          <view angle="270" col="1" x="10" y="-48" hm="true"/>
+        </layer>
+        <layer id="reflect_05" texture="reflect">
+          <view angle="45" x="7" y="-44" hm="true"/>
+          <view angle="135" x="-7" y="-44" hm="true"/>
+          <view angle="225" x="10" y="-45" hm="true"/>
+          <view angle="315" x="-10" y="-45" hm="true"/>
+          <view angle="0" x="23" y="-41" hm="true"/>
+          <view angle="90" x="11" y="-45" hm="true"/>
+          <view angle="180" x="-23" y="-41" hm="true"/>
+          <view angle="270" x="11" y="-46" hm="true"/>
+        </layer>
+        <layer id="reflect_06" texture="reflect">
+          <view angle="45" x="-24" y="-18"/>
+          <view angle="135" x="24" y="-18"/>
+          <view angle="225" x="-24" y="-22"/>
+          <view angle="315" x="24" y="-22"/>
+          <view angle="0" x="-4" y="-13"/>
+          <view angle="90" x="-21" y="-28"/>
+          <view angle="180" x="4" y="-13"/>
+          <view angle="270" x="-17" y="-17"/>
+        </layer>
+        <layer id="reflect_07" texture="reflect">
+          <view angle="45" col="1" x="-23" y="-19"/>
+          <view angle="135" col="1" x="23" y="-19"/>
+          <view angle="225" col="1" x="-24" y="-23"/>
+          <view angle="315" col="1" x="24" y="-23"/>
+          <view angle="0" col="1" x="-4" y="-13"/>
+          <view angle="90" col="1" x="-21" y="-28"/>
+          <view angle="180" col="1" x="4" y="-13"/>
+          <view angle="270" col="1" x="-17" y="-17"/>
+        </layer>
+        <layer id="reflect_08" texture="reflect">
+          <view angle="45" col="2" x="-22" y="-19"/>
+          <view angle="135" col="2" x="22" y="-19"/>
+          <view angle="225" col="2" x="-24" y="-22"/>
+          <view angle="315" col="2" x="24" y="-22"/>
+          <view angle="0" col="2" x="-4" y="-13"/>
+          <view angle="90" col="2" x="-21" y="-28"/>
+          <view angle="180" col="2" x="4" y="-13"/>
+          <view angle="270" col="2" x="-17" y="-17"/>
+        </layer>
+        <layer id="reflect_09" texture="reflect">
+          <view angle="45" col="1" x="-22" y="-21" hm="true"/>
+          <view angle="135" col="1" x="22" y="-21" hm="true"/>
+          <view angle="225" col="1" x="-24" y="-21" hm="true"/>
+          <view angle="315" col="1" x="24" y="-21" hm="true"/>
+          <view angle="0" col="1" x="-4" y="-13" hm="true"/>
+          <view angle="90" col="1" x="-21" y="-28" hm="true"/>
+          <view angle="180" col="1" x="4" y="-13" hm="true"/>
+          <view angle="270" col="1" x="-17" y="-17" hm="true"/>
+        </layer>
+        <layer id="reflect_10" texture="reflect">
+          <view angle="45" x="-24" y="-18" hm="true"/>
+          <view angle="135" x="24" y="-18" hm="true"/>
+          <view angle="225" x="-24" y="-22" hm="true"/>
+          <view angle="315" x="24" y="-22" hm="true"/>
+          <view angle="0" x="-4" y="-13" hm="true"/>
+          <view angle="90" x="-21" y="-28" hm="true"/>
+          <view angle="180" x="4" y="-13" hm="true"/>
+          <view angle="270" x="-17" y="-17" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle00">
+          <layerref id="head"/>
+        </frame>
+        <frame id="idle01">
+          <layerref id="head"/>
+          <layerref id="reflect_01"/>
+        </frame>
+        <frame id="idle02">
+          <layerref id="head"/>
+          <layerref id="reflect_02"/>
+        </frame>
+        <frame id="idle03">
+          <layerref id="head"/>
+          <layerref id="reflect_03"/>
+        </frame>
+        <frame id="idle04">
+          <layerref id="head"/>
+          <layerref id="reflect_04"/>
+        </frame>
+        <frame id="idle05">
+          <layerref id="head"/>
+          <layerref id="reflect_05"/>
+        </frame>
+        <frame id="idle06">
+          <layerref id="head"/>
+          <layerref id="reflect_06"/>
+        </frame>
+        <frame id="idle07">
+          <layerref id="head"/>
+          <layerref id="reflect_07"/>
+        </frame>
+        <frame id="idle08">
+          <layerref id="head"/>
+          <layerref id="reflect_08"/>
+        </frame>
+        <frame id="idle09">
+          <layerref id="head"/>
+          <layerref id="reflect_09"/>
+        </frame>
+        <frame id="idle10">
+          <layerref id="head"/>
+          <layerref id="reflect_10"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="16">
+          <frameref id="idle00" duration="50"/>
+          <frameref id="idle01"/>
+          <frameref id="idle02"/>
+          <frameref id="idle03"/>
+          <frameref id="idle04"/>
+          <frameref id="idle05"/>
+          <frameref id="idle00" duration="20"/>
+          <frameref id="idle06"/>
+          <frameref id="idle07"/>
+          <frameref id="idle08"/>
+          <frameref id="idle09"/>
+          <frameref id="idle10"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,255 @@
+<item.ChairItem id="1763" name="Information Hub Receptionist" desc="A receptionist worker" tags="admin,hub" icon="items/base/hub/icon_hub_npc_chair_01_trek_white.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,1.25,0.4"/>
+  </volume>
+  <events>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Off" label="Desligar" state="true" event="animate(00)"/>
+    <action id="Idle" state="true" event="animate(01)"/>
+    <action id="Type Right" state="true" event="animate(02)"/>
+    <action id="Type Left" state="true" event="animate(03)"/>
+    <action id="Still" state="true" event="animate(04)"/>
+    <action id="Talk" state="true" event="animate(05)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="6"/>
+    <entry key="00" value="Off"/>
+    <entry key="01" value="Idle"/>
+    <entry key="02" value="Type Right"/>
+    <entry key="03" value="Type Left"/>
+    <entry key="04" value="Still"/>
+    <entry key="05" value="Talk"/>
+  </data>
+  <navigate usableRange="-1.00" accessibleRange="2.00"/>
+  <textures>
+    <texture id="Texture" source="items/base/hub/hub_chair_01_trek_white.png" cols="3" rows="1"/>
+    <texture id="NPC_woman_01" source="items/base/hub/hub_npc_01_hostess.png" cols="2" rows="1"/>
+    <texture id="NPC_woman_01_head" source="items/base/hub/hub_npc_01_hostess_head.png" cols="5" rows="1"/>
+    <texture id="NPC_woman_01_hands" source="items/base/hub/hub_npc_chair_typinghands_peach.png" cols="2" rows="2"/>
+    <texture id="NPC_woman_01_earpiece" source="items/base/hub/hub_npc_01_hostess_earpiece.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Back">
+      <box min="-0.4,0,-0.4" max="0.4,1.25,0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-2" y="23"/>
+          <view angle="135" x="2" y="23" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="01">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="02">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="03">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="04">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="05">
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Seat">
+      <box min="-0.4,0,-0.4" max="0.4,1.25,0.4"/>
+      <layers>
+        <layer id="chair" texture="Texture">
+          <view angle="45" y="15" alpha="0"/>
+          <view angle="135" y="15" alpha="0" hm="true"/>
+          <view angle="225" col="2" y="22"/>
+          <view angle="315" col="2" y="22" hm="true"/>
+        </layer>
+        <layer id="woman_01" texture="NPC_woman_01" y="-1">
+          <view angle="45" x="9" y="21" hm="true"/>
+          <view angle="135" x="-11" y="22"/>
+          <view angle="225" col="1" x="-17" y="14"/>
+          <view angle="315" col="1" x="17" y="14" hm="true"/>
+        </layer>
+        <layer id="woman_01_head" texture="NPC_woman_01_head" y="-67">
+          <view angle="45" x="-5" hm="true"/>
+          <view angle="135" x="5"/>
+          <view angle="225" col="3" y="2"/>
+          <view angle="315" col="3" y="2" hm="true"/>
+        </layer>
+        <layer id="woman_01_head_left" texture="NPC_woman_01_head" y="-67">
+          <view angle="45" col="2" x="-5" hm="true"/>
+          <view angle="135" col="1" x="5"/>
+          <view angle="225" col="2" y="2"/>
+          <view angle="315" col="4" y="2"/>
+        </layer>
+        <layer id="woman_01_head_right" texture="NPC_woman_01_head" y="-67">
+          <view angle="45" col="1" x="-5"/>
+          <view angle="135" col="2" x="5"/>
+          <view angle="225" col="4" y="2"/>
+          <view angle="315" col="2" y="2" hm="true"/>
+        </layer>
+        <layer id="woman_01_head_facing" texture="NPC_woman_01_head" y="-67">
+          <view angle="45" col="1" x="-5"/>
+          <view angle="135" col="1" x="5"/>
+          <view angle="225" col="2" y="2"/>
+          <view angle="315" col="2" y="2" hm="true"/>
+        </layer>
+        <layer id="woman_01_hands_01" texture="NPC_woman_01_hands" y="-41">
+          <view angle="45" x="13" y="18"/>
+          <view angle="135" x="-14" y="18" hm="true"/>
+          <view angle="225" row="1" x="-25" y="-2"/>
+          <view angle="315" row="1" x="25" y="-2" hm="true"/>
+        </layer>
+        <layer id="woman_01_hands_02" texture="NPC_woman_01_hands" y="-41">
+          <view angle="45" col="1" x="13" y="18"/>
+          <view angle="135" col="1" x="-14" y="18" hm="true"/>
+          <view angle="225" col="1" row="1" x="-25" y="-2"/>
+          <view angle="315" col="1" row="1" x="25" y="-2" hm="true"/>
+        </layer>
+        <layer id="woman_01_eariece" texture="NPC_woman_01_earpiece" y="-80">
+          <view angle="45" x="-5" alpha="0"/>
+          <view angle="135" x="8" y="2"/>
+          <view angle="225" col="4" y="2"/>
+          <view angle="315" col="2" y="2" alpha="0" hm="true"/>
+        </layer>
+        <layer id="woman_01_eariece_left" texture="NPC_woman_01_earpiece" y="-80">
+          <view angle="45" x="-5" alpha="0"/>
+          <view angle="135" col="1" x="20" y="4"/>
+          <view angle="225" col="2" x="-23" y="1"/>
+          <view angle="315" col="2" y="2" alpha="0" hm="true"/>
+        </layer>
+        <layer id="woman_01_eariece_right" texture="NPC_woman_01_earpiece" y="-80">
+          <view angle="45" col="1" x="10" y="5"/>
+          <view angle="135" col="2" x="-18" y="-1"/>
+          <view angle="225" x="-23" y="1" alpha="0"/>
+          <view angle="315" y="1" alpha="0"/>
+        </layer>
+        <layer id="woman_01_eariece_facing" texture="NPC_woman_01_earpiece" y="-80">
+          <view angle="45" col="1" x="10" y="5"/>
+          <view angle="135" col="1" x="20" y="4"/>
+          <view angle="225" col="2" x="-23" y="1"/>
+          <view angle="315" y="1" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="chair"/>
+        </frame>
+        <frame id="01">
+          <layerref id="chair"/>
+          <layerref id="woman_01"/>
+          <layerref id="woman_01_head"/>
+          <layerref id="woman_01_hands_01"/>
+          <layerref id="woman_01_eariece"/>
+        </frame>
+        <frame id="01_type">
+          <layerref id="chair"/>
+          <layerref id="woman_01"/>
+          <layerref id="woman_01_head"/>
+          <layerref id="woman_01_hands_02"/>
+          <layerref id="woman_01_eariece"/>
+        </frame>
+        <frame id="01_left">
+          <layerref id="chair"/>
+          <layerref id="woman_01"/>
+          <layerref id="woman_01_head_left"/>
+          <layerref id="woman_01_hands_01"/>
+          <layerref id="woman_01_eariece_left"/>
+        </frame>
+        <frame id="01_left_type">
+          <layerref id="chair"/>
+          <layerref id="woman_01"/>
+          <layerref id="woman_01_head_left"/>
+          <layerref id="woman_01_hands_02"/>
+          <layerref id="woman_01_eariece_left"/>
+        </frame>
+        <frame id="01_right">
+          <layerref id="chair"/>
+          <layerref id="woman_01"/>
+          <layerref id="woman_01_head_right"/>
+          <layerref id="woman_01_hands_01"/>
+          <layerref id="woman_01_eariece_right"/>
+        </frame>
+        <frame id="01_right_type">
+          <layerref id="chair"/>
+          <layerref id="woman_01"/>
+          <layerref id="woman_01_head_right"/>
+          <layerref id="woman_01_hands_02"/>
+          <layerref id="woman_01_eariece_right"/>
+        </frame>
+        <frame id="01_facing">
+          <layerref id="chair"/>
+          <layerref id="woman_01"/>
+          <layerref id="woman_01_head_facing"/>
+          <layerref id="woman_01_hands_01"/>
+          <layerref id="woman_01_eariece_facing"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01" framerate="4">
+          <frameref id="01"/>
+          <frameref id="01_type"/>
+          <frameref id="01"/>
+          <frameref id="01_type"/>
+          <frameref id="01_left"/>
+          <frameref id="01_left_type"/>
+          <frameref id="01_left"/>
+          <frameref id="01_left_type"/>
+          <frameref id="01"/>
+          <frameref id="01_type"/>
+          <frameref id="01"/>
+          <frameref id="01_type"/>
+          <frameref id="01"/>
+          <frameref id="01_type"/>
+          <frameref id="01"/>
+          <frameref id="01_left" duration="2"/>
+          <frameref id="01_type"/>
+          <frameref id="01"/>
+          <frameref id="01_type"/>
+          <frameref id="01" duration="5"/>
+          <frameref id="01_right"/>
+          <frameref id="01_right_type"/>
+          <frameref id="01_right"/>
+          <frameref id="01_right_type"/>
+          <frameref id="01_right"/>
+          <frameref id="01_right_type"/>
+        </animation>
+        <animation id="02" framerate="8">
+          <frameref id="01_right"/>
+          <frameref id="01_right_type"/>
+        </animation>
+        <animation id="03" framerate="4">
+          <frameref id="01_left"/>
+          <frameref id="01_left_type"/>
+        </animation>
+        <animation id="04" framerate="4">
+          <frameref id="01"/>
+        </animation>
+        <animation id="05" framerate="4">
+          <frameref id="01_facing"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

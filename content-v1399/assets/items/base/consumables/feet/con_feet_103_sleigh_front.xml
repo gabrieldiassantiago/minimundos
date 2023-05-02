@@ -1,0 +1,133 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="back" source="items/base/consumables/feet/con_feet_103_sleigh_back.png" cols="3" rows="1"/>
+    <texture id="front" source="items/base/consumables/feet/con_feet_103_sleigh_front.png" cols="3" rows="1"/>
+    <texture id="beam" source="items/base/consumables/feet/con_feet_103_sleigh_beam.png" cols="5" rows="1"/>
+    <texture id="santa" source="items/base/consumables/feet/con_feet_103_sleigh_plate.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="front" texture="front">
+          <view angle="0" x="69" y="20"/>
+          <view angle="45" col="1" x="52" y="40"/>
+          <view angle="90" col="2" x="-1" y="51"/>
+          <view angle="135" col="1" x="-52" y="40" hm="true"/>
+          <view angle="180" x="-69" y="20" hm="true"/>
+          <view angle="225" col="3" x="-17" y="-17" alpha="0"/>
+          <view angle="270" col="4" x="-2" y="-19" alpha="0"/>
+          <view angle="315" col="1" x="39" y="-116" alpha="0"/>
+        </layer>
+        <layer id="back" texture="back">
+          <view angle="0" x="-34" y="58"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" x="34" y="58" hm="true"/>
+          <view angle="225" col="2" x="26" y="23" hm="true"/>
+          <view angle="270" col="1" y="9"/>
+          <view angle="315" col="2" x="-27" y="23"/>
+        </layer>
+        <layer id="beam" texture="beam">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="1" x="55" y="6" hm="true"/>
+          <view angle="270" col="2" x="6" y="9"/>
+          <view angle="315" col="1" x="-55" y="6"/>
+        </layer>
+        <layer id="santa" texture="santa">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="2" x="37" y="-30"/>
+          <view angle="270" col="1" y="-40"/>
+          <view angle="315" x="-37" y="-30"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="sit"/>
+        <frame id="Idle01">
+          <layerref id="front"/>
+          <layerref id="back"/>
+          <layerref id="santa"/>
+        </frame>
+        <frame id="Fly_01">
+          <layerref id="front"/>
+          <layerref id="back"/>
+          <layerref id="beam"/>
+          <layerref id="santa"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Idle01"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="2">
+          <frameref id="Fly_01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="0.8" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Idle" texture="Light" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="91" y="-35"/>
+          <view angle="90" x="3" y="-14"/>
+          <view angle="135" x="-84" y="-34" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Walk" texture="Light" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="91" y="-73"/>
+          <view angle="90" x="1" y="-49"/>
+          <view angle="135" x="-90" y="-69" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="Idle" color="0xf39683"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Idle" a="0"/>
+        </frame>
+        <frame id="Walk">
+          <layerref id="Walk" color="0xf39683"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Walk" framerate="2">
+          <frameref id="Walk"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

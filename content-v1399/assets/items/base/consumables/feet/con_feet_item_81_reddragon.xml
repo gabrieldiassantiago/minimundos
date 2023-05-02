@@ -1,0 +1,122 @@
+<item.SpriteItem id="4488" name="Dragão Drake Zoom" desc="Um dragão voador vermelho" tags="rare,consumable,actionbar,wear,feet,action_ridable_toggle" icon="items/base/consumables/feet/icon_con_feet_item_81_reddragon.png" price="1000" minLevel="1" minCPLevel="1" premium="Y" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1.4,0,-0.3" max="0.4,1.5,0.3"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_rideable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+40,health+20"/>
+  </data>
+  <textures>
+    <texture id="feet" source="items/base/consumables/feet/con_feet_item_81_reddragon_leg.png" cols="2" rows="1"/>
+    <texture id="eye" source="items/base/consumables/feet/con_feet_30_pony_decal.png" cols="2" rows="1"/>
+    <texture id="body" source="items/base/consumables/feet/con_feet_item_81_reddragon_body.png" cols="2" rows="1"/>
+    <texture id="head" source="items/base/consumables/feet/con_feet_item_81_reddragon_head.png" cols="2" rows="1"/>
+    <texture id="blink" source="items/base/consumables/feet/con_feet_81_reddragon_blink.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-1.4,0,-0.3" max="0.4,1.5,0.3"/>
+      <layers>
+        <layer id="feet" texture="feet">
+          <view angle="45" x="-15" y="28"/>
+          <view angle="135" x="15" y="28" hm="true"/>
+          <view angle="225" col="1" x="17" y="45"/>
+          <view angle="315" col="1" x="-17" y="45" hm="true"/>
+        </layer>
+        <layer id="base" texture="body">
+          <view angle="45" x="-23" y="18"/>
+          <view angle="135" x="24" y="18" hm="true"/>
+          <view angle="225" col="1" x="26" y="35"/>
+          <view angle="315" col="1" x="-25" y="35" hm="true"/>
+        </layer>
+        <layer id="head" texture="head">
+          <view angle="45" x="19" y="-62"/>
+          <view angle="135" x="-18" y="-62" hm="true"/>
+          <view angle="225" col="1" x="-17" y="-85"/>
+          <view angle="315" col="1" x="18" y="-85" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="45" x="21" y="-78"/>
+          <view angle="135" x="-20" y="-78" hm="true"/>
+          <view angle="225" col="1" x="-17" y="-85"/>
+          <view angle="315" col="1" x="18" y="-85" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="head"/>
+        </frame>
+        <frame id="02">
+          <layerref id="feet"/>
+          <layerref id="base" y="3"/>
+          <layerref id="head" y="3"/>
+        </frame>
+        <frame id="03">
+          <layerref id="feet"/>
+          <layerref id="base" y="2"/>
+          <layerref id="head" y="2"/>
+        </frame>
+        <frame id="04">
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="head" y="1"/>
+        </frame>
+        <frame id="05">
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="head"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="05a">
+          <layerref id="feet"/>
+          <layerref id="base" y="2"/>
+          <layerref id="head" y="1"/>
+        </frame>
+        <frame id="06">
+          <layerref id="feet"/>
+          <layerref id="base" y="3"/>
+          <layerref id="head" y="3"/>
+        </frame>
+        <frame id="07">
+          <layerref id="feet"/>
+          <layerref id="base" y="2"/>
+          <layerref id="head" y="2"/>
+        </frame>
+        <frame id="08">
+          <layerref id="feet"/>
+          <layerref id="base" y="1"/>
+          <layerref id="head" y="1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="05a"/>
+          <frameref id="06"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="08"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

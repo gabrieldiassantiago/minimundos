@@ -1,0 +1,154 @@
+<item.SpriteItem id="5376" name="Crânio de Vela" desc="Uma assustadora vela" tags="rare,misc,halloween,light" icon="items/base/gothic/icon_g_halloween_07_skullcandle.png" price="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.35,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="candle" source="items/base/gothic/g_halloween_07_skullcandle.png" cols="2" rows="1"/>
+    <texture id="Flame" source="items/base/shared/s_candle_flame.png" cols="2" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Candle">
+      <box min="-0.15,0,-0.15" max="0.15,0.35,0.15"/>
+      <layers>
+        <layer id="candle" texture="candle">
+          <view angle="45" x="1" y="14"/>
+          <view angle="135" x="-2" y="14" hm="true"/>
+          <view angle="225" col="1" y="15"/>
+          <view angle="315" col="1" x="-2" y="14" hm="true"/>
+        </layer>
+        <layer id="Flame01" texture="Flame" x="-2" y="-55">
+          <view angle="45" x="2" y="2"/>
+          <view angle="135" x="2" y="2"/>
+          <view angle="225" x="-1" y="2" hm="true"/>
+          <view angle="315" x="2" y="2"/>
+        </layer>
+        <layer id="Flame02" texture="Flame" x="-2" y="-55">
+          <view angle="45" col="1" x="2" y="2"/>
+          <view angle="135" col="1" x="2" y="2"/>
+          <view angle="225" col="1" x="-1" y="2" hm="true"/>
+          <view angle="315" col="1" x="2" y="2"/>
+        </layer>
+        <layer id="Flame03" texture="Flame" x="-2" y="-55">
+          <view angle="45" row="1" x="2" y="2"/>
+          <view angle="135" row="1" x="2" y="2"/>
+          <view angle="225" row="1" x="-1" y="2" hm="true"/>
+          <view angle="315" row="1" x="2" y="2"/>
+        </layer>
+        <layer id="Flame04" texture="Flame" x="-2" y="-55">
+          <view angle="45" col="1" row="1" x="2" y="2"/>
+          <view angle="135" col="1" row="1" x="2" y="2"/>
+          <view angle="225" col="1" row="1" x="-1" y="2" hm="true"/>
+          <view angle="315" col="1" row="1" x="2" y="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="candle"/>
+          <layerref id="Flame01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="candle"/>
+          <layerref id="Flame02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="candle"/>
+          <layerref id="Flame03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="candle"/>
+          <layerref id="Flame04"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="candle"/>
+          <layerref id="Flame01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="Frame01"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="Off" framerate="8">
+          <frameref id="Frame05"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xc18c33"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xc18c33" a="0.97"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xc18c33" a="0.95"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame03" duration="2"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02" duration="2"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="1" s="1.1" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light a" texture="Intense" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light a" color="0xf5ddb6" a="0.33"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light a" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

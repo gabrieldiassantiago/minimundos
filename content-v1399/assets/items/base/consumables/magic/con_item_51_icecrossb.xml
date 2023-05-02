@@ -1,0 +1,86 @@
+<item.SpriteItem id="1684" name="Arco de Gelo" desc="Um instrumento poderoso para disparar flechas de gelo." tags="consumable,actionbar,group_frost,magic,gun,bad,reusable,usable,action_consumable_target" icon="items/base/consumables/magic/icon_con_item_51_icecrossb.png" price="3900" tokens="39000" minLevel="1" minCPLevel="10" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.3" max="0.4,0.63,0.3"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="10"/>
+    <entry key="action_attributes" value="frost-20"/>
+    <entry key="action_attributes_secondary" value="speed-60,health-50"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_shoot.png"/>
+  </data>
+  <textures>
+    <texture id="stand" source="items/base/consumables/magic/con_item_generic_gunstand.png" cols="2" rows="1"/>
+    <texture id="base" source="items/base/consumables/magic/con_item_51_icecrossb_base.png" cols="5" rows="1"/>
+    <texture id="bow" source="items/base/consumables/magic/con_item_51_icecrossb_bow_a.png" cols="5" rows="1"/>
+    <texture id="light_a" source="items/base/shared/s_fx_flare_bow_a.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.3" max="0.4,0.63,0.3"/>
+      <layers>
+        <layer id="stand" texture="stand" y="10">
+          <view angle="45" y="3"/>
+          <view angle="135" y="3" hm="true"/>
+          <view angle="225" col="1" y="3"/>
+          <view angle="315" col="1" y="3" hm="true"/>
+        </layer>
+        <layer id="base" texture="base" y="10">
+          <view angle="45" col="1" x="5" y="-17" hm="true"/>
+          <view angle="135" col="1" x="-5" y="-18"/>
+          <view angle="225" col="3" x="-3" y="-15"/>
+          <view angle="315" col="3" x="3" y="-15" hm="true"/>
+        </layer>
+        <layer id="bow" texture="bow" y="10">
+          <view angle="45" col="1" x="14" y="-18" hm="true"/>
+          <view angle="135" col="1" x="-15" y="-19"/>
+          <view angle="225" col="3" x="-13" y="-33"/>
+          <view angle="315" col="3" x="13" y="-34" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="0.4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="light_a" texture="light_a">
+          <view angle="45" col="1" x="22" y="22" hm="true"/>
+          <view angle="135" col="1" x="-10" y="28"/>
+          <view angle="225" col="3" x="-7" y="10"/>
+          <view angle="315" col="3" x="11" y="11" hm="true"/>
+        </layer>
+        <layer id="light_b" texture="light_b">
+          <view angle="0" col="2" x="35" y="16" hm="true"/>
+          <view angle="45" col="1" x="29" y="23" hm="true"/>
+          <view angle="90" x="3" y="26"/>
+          <view angle="135" col="1" x="-27" y="24"/>
+          <view angle="180" col="2" x="-35" y="13"/>
+          <view angle="225" col="3" x="-23" y="3"/>
+          <view angle="270" col="4" y="-7" hm="true"/>
+          <view angle="315" col="3" x="24" y="-4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="light_a" color="0x8deced"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Warmup" framerate="8" loop="false">
+          <frameref id="Frame01" duration="4"/>
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="idle" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

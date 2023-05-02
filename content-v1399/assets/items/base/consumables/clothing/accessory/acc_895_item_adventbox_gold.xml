@@ -1,0 +1,27 @@
+<item.SpriteItem id="7351" name="Mesa Espiral" desc="Uma linda mesa em espiral [6 de 25]" tags="rare,table" icon="items/base/consumables/clothing/accessory/acc_895_icon_adventbox_gold.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.861,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="legs" source="items/base/consumables/clothing/accessory/acc_895_item_adventbox_gold.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Table">
+      <box min="-0.49,0,-0.49" max="0.49,0.861,0.49"/>
+      <layers>
+        <layer id="table" texture="legs" y="30">
+          <view angle="45" y="-2"/>
+          <view angle="135" y="-2" hm="true"/>
+          <view angle="225" y="-2"/>
+          <view angle="315" y="-2" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

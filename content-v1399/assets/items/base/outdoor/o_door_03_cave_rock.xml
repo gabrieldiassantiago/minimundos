@@ -1,0 +1,94 @@
+<item.WidgetItem desc="Uma entrada para a caverna." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/outdoor/icon_o_door_03_cave_rock.png" id="1201" name="Entrada da Caverna de Pedras" tags="door,widget" widget="widgets/widget_portal.swf" price="150" tokens="1500" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="1.49,2,1.49" min="-0.49,0,-1.49"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+  </events>
+  <actions>
+    <action event="navigate" id="Navigate" trigger="false"/>
+    <action event="animate(Open)" id="Open" state="true"/>
+    <action event="animate(Closed)" id="Close" state="true"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="portalType" value="door"/>
+    <entry key="maxLinkedSpaces" value="1"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <navigate position="infront" sitRange="1.00" standRange="1.00" targetRange="1.00"/>
+  <textures>
+    <texture cols="1" id="entrance" rows="1" source="items/base/outdoor/o_door_03_cave.png"/>
+    <texture cols="2" id="mound" rows="2" source="items/base/outdoor/o_door_01_mound.png"/>
+    <texture cols="3" id="boarded up" rows="1" source="items/base/outdoor/o_door_02_boarded_up_boards.png"/>
+    <texture cols="2" id="warning" rows="1" source="items/base/outdoor/o_door_02_boarded_up_signs.png"/>
+  </textures>
+  <nodes>
+    <node id="Door" x="-1" z="-1">
+      <box max="2.49,2,2.49" min="0.51,0,-0.49"/>
+      <layers>
+        <layer align="middle" id="boarded behind" texture="boarded up">
+          <view alpha="0" angle="45" hm="true" x="185" y="-57"/>
+          <view alpha="0" angle="135" x="-57" y="6"/>
+          <view alpha="0" angle="225" hm="true" x="-193" y="-131"/>
+          <view alpha="0" angle="315" x="67" y="-197"/>
+        </layer>
+        <layer id="mound" texture="mound">
+          <view angle="45" hm="true" row="1" x="138" y="87"/>
+          <view angle="135" row="1" x="-8" y="150"/>
+          <view angle="225" col="1" row="1" x="-143" y="43"/>
+          <view angle="315" col="1" hm="true" row="1" x="17" y="-19"/>
+        </layer>
+        <layer id="cave" texture="entrance">
+          <view angle="45" hm="true" x="198" y="81"/>
+          <view angle="135" x="-76" y="146"/>
+          <view alpha="0" angle="225" col="1" x="-126" y="74"/>
+          <view alpha="0" angle="315" col="1" hm="true" x="-2" y="6"/>
+        </layer>
+        <layer align="middle" id="boarded up" texture="boarded up">
+          <view angle="45" hm="true" x="188" y="-36"/>
+          <view angle="135" x="-67" y="29"/>
+          <view alpha="0" angle="225"/>
+          <view alpha="0" angle="315"/>
+        </layer>
+        <layer align="middle" id="danger" texture="warning">
+          <view angle="45" col="1" x="193" y="-35"/>
+          <view angle="135" x="-73" y="35"/>
+          <view alpha="0" angle="225" col="1" row="1"/>
+          <view alpha="0" angle="315" col="1" row="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="mound"/>
+          <layerref id="cave"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="boarded behind"/>
+          <layerref id="mound"/>
+          <layerref id="cave"/>
+          <layerref id="boarded up"/>
+          <layerref id="danger"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="1" id="Open" loop="false">
+          <frameref id="open"/>
+        </animation>
+        <animation framerate="1" id="Closed" loop="false">
+          <frameref id="closed"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

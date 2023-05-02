@@ -1,0 +1,27 @@
+<item.SpriteItem desc="Um pilar de arenito" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/antique/icon_a_pillar_egypt.png" id="1032" name="Pilar de Arenito" tags="decoration" price="20" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.36,3.45,0.36" min="-0.36,0,-0.36"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="column" rows="1" source="items/base/antique/a_pillar_01_egypt.png"/>
+  </textures>
+  <nodes>
+    <node id="column">
+      <box max="0.36,3.45,0.36" min="-0.36,0,-0.36"/>
+      <layers>
+        <layer id="column" texture="column">
+          <view angle="45" y="41"/>
+          <view angle="135" hm="true" y="41"/>
+          <view angle="225" y="41"/>
+          <view angle="315" hm="true" y="41"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

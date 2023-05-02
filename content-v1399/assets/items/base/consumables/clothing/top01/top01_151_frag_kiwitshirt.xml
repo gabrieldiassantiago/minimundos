@@ -1,0 +1,48 @@
+<f id="Top01_151_kiwi" parentId="Top01">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Top01_151TorsoMaleBase" cId="Torso" s="$bm/tshirt_torso.png" pri="1"/>
+      <c sId="Top01_151TorsoMaleBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_151Color1" lw="N"/>
+      <s id="Top01_151TorsoMaleDecal" cId="Torso" s="items/base/consumables/clothing/top01/top01_151_kiwitshirt_decal_m.png" pri="1.1"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_151TorsoFemaleBase" cId="Torso" s="$bf/tshirt_torso.png" pri="1"/>
+      <c sId="Top01_151TorsoFemaleBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_151Color1" lw="N"/>
+      <s id="Top01_151TorsoFemaleDecal" cId="Torso" s="items/base/consumables/clothing/top01/top01_151_kiwitshirt_decal_f.png" pri="1.1"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Top01_81ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_short_arm_idle.png" pri="1"/>
+    <s id="Top01_81ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_short_arm_walk1.png" pri="1"/>
+    <s id="Top01_81ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_short_arm_walk2.png" pri="1"/>
+    <s id="Top01_81ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_short_arm_walk3.png" pri="1"/>
+    <s id="Top01_81ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_short_arm_sit.png" pri="1"/>
+    <s id="Top01_81ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_short_arm_throw.png" pri="1"/>
+    <s id="Top01_81ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_short_arm_raise.png" pri="1"/>
+    <c sId="Top01_81ArmIdleBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_151Color1" lw="N"/>
+    <c sId="Top01_81ArmWalk1Base" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_151Color1" lw="N"/>
+    <c sId="Top01_81ArmWalk2Base" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_151Color1" lw="N"/>
+    <c sId="Top01_81ArmWalk3Base" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_151Color1" lw="N"/>
+    <c sId="Top01_81ArmSitBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_151Color1" lw="N"/>
+    <c sId="Top01_81ArmThrowBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_151Color1" lw="N"/>
+    <c sId="Top01_81ArmRaiseBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_151Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_151" icon="items/base/consumables/clothing/top01/top01_151_icon_kiwitshirt_a.png" w="48" h="48"/>
+    <s id="IconTop01_151Rare" cId="IconTop01_151" s="items/base/consumables/clothing/top01/top01_rare.png" pri="2.1"/>
+    <s id="IconTop01_151IconBase" cId="IconTop01_151" s="items/base/consumables/clothing/top01/top01_81_icon_gradient_1.png" pri="1"/>
+    <c sId="IconTop01_151IconBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_151Color1" lw="N"/>
+    <s id="IconTop01_151IconDecal01" cId="IconTop01_151" s="items/base/consumables/clothing/top01/top01_151_icon_kiwitshirt_1.png" pri="2"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_151Color1" name="Color 1" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_151Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top01_151Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Top01_151Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=325; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top01_151Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

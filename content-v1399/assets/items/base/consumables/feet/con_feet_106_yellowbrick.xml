@@ -1,0 +1,95 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="Cloud" source="items/base/consumables/feet/con_feet_106_yellowbrick.png" cols="3" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Diffuse" x="-0.245" y="-0.0312" s="7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers/>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="sit" texture="base">
+          <view angle="45" x="4" y="26" alpha="0" hm="true"/>
+          <view angle="135" x="-5" y="33" alpha="0"/>
+          <view angle="225" x="-5" y="23" alpha="0" hm="true"/>
+          <view angle="315" x="15" y="19" alpha="0"/>
+        </layer>
+        <layer id="Idle" texture="Cloud">
+          <view angle="0" col="2" row="2" x="4" y="46"/>
+          <view angle="45" col="2" x="-7" y="44"/>
+          <view angle="90" col="2" row="1" x="3" y="50"/>
+          <view angle="135" col="2" x="7" y="44" hm="true"/>
+          <view angle="180" col="2" row="2" x="-5" y="46" hm="true"/>
+          <view angle="225" col="2" x="-7" y="44"/>
+          <view angle="270" col="2" row="1" x="3" y="50"/>
+          <view angle="315" col="2" x="7" y="44" hm="true"/>
+        </layer>
+        <layer id="Walk01" texture="Cloud">
+          <view angle="0" row="2" x="4" y="46"/>
+          <view angle="45" y="47"/>
+          <view angle="90" row="1" x="3" y="47"/>
+          <view angle="135" y="47" hm="true"/>
+          <view angle="180" row="2" x="-5" y="46" hm="true"/>
+          <view angle="225" y="47"/>
+          <view angle="270" row="1" x="3" y="47"/>
+          <view angle="315" y="47" hm="true"/>
+        </layer>
+        <layer id="Walk02" texture="Cloud">
+          <view angle="0" col="1" row="2" x="4" y="46"/>
+          <view angle="45" col="1" y="47"/>
+          <view angle="90" col="1" row="1" x="3" y="47"/>
+          <view angle="135" col="1" y="47" hm="true"/>
+          <view angle="180" col="1" row="2" x="-5" y="46" hm="true"/>
+          <view angle="225" col="1" y="47"/>
+          <view angle="270" col="1" row="1" x="3" y="47"/>
+          <view angle="315" col="1" y="47" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="Idle"/>
+        </frame>
+        <frame id="Idle01">
+          <layerref id="Idle" a="0.6"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="Idle" a="0.2"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="Idle" a="0"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Walk01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Walk02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8" loop="false">
+          <frameref id="Idle" duration="10"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+        </animation>
+        <animation id="Sit" framerate="8" loop="false">
+          <frameref id="sit" duration="10"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

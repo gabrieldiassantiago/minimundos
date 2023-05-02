@@ -1,0 +1,51 @@
+<item.SpriteItem id="0" name="Cowboy" desc="Collectible (April 2012)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="skin" source="items/base/consumables/head/con_head_124_cowboy_face.png" cols="5" rows="1"/>
+    <texture id="hat" source="items/base/consumables/head/con_head_124_cowboy_hat.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="Bare" texture="skin">
+          <view angle="0" x="9" y="12" hm="true"/>
+          <view angle="45" col="1" y="17"/>
+          <view angle="90" col="2" x="-1" y="18"/>
+          <view angle="135" col="1" x="-2" y="17" hm="true"/>
+          <view angle="180" x="-10" y="12"/>
+          <view angle="225" col="3" x="-10" y="11"/>
+          <view angle="270" col="4" y="16"/>
+          <view angle="315" col="3" x="9" y="11" hm="true"/>
+        </layer>
+        <layer id="hat" texture="hat">
+          <view angle="0" y="7" hm="true"/>
+          <view angle="45" col="1" y="6"/>
+          <view angle="90" col="2" y="3"/>
+          <view angle="135" col="1" x="-1" y="6" hm="true"/>
+          <view angle="180" y="7"/>
+          <view angle="225" col="3" x="3" y="7"/>
+          <view angle="270" col="4" x="1" y="5"/>
+          <view angle="315" col="3" x="-3" y="7" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="head">
+          <layerref id="Bare"/>
+          <layerref id="hat"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="head"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

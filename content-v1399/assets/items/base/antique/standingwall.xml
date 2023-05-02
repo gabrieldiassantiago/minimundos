@@ -1,0 +1,74 @@
+<item.ChairItem id="4853" name="Admin Standing Wall" desc="A standing wall for DE" tags="admin,misc" icon="items/base/antique/icon_standingwall.png" price="88" tokens="888" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" chairType="upright">
+  <seats>
+    <seat y="3.1" z="0.1">
+      <ap x="1"/>
+      <ap x="-1"/>
+    </seat>
+    <seat y="3.1" z="-0.1">
+      <ap x="1"/>
+      <ap x="-1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.5,1.1667,0.5"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_cubicle.as"/>
+    <event id="activate" script="scripts/item/activate_chair.as"/>
+    <event id="deactivate" script="scripts/item/deactivate_chair.as"/>
+  </events>
+  <actions>
+    <action id="On"/>
+    <action id="Off"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <textures>
+    <texture id="Texture" source="items/base/antique/disappearingwall.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="LeftArm" z="0.5">
+      <box min="-0.5,0,-1" max="0.5,1.1667,0"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-35" y="55"/>
+          <view angle="135" x="-1" y="38" alpha="0" hm="true"/>
+          <view angle="225" x="-1" y="48" alpha="0"/>
+          <view angle="315" x="32" y="56" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="RightArm" z="0.5">
+      <box min="-0.5,0,-1" max="0.5,1.1667,0"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="1" y="46" alpha="0"/>
+          <view angle="135" x="-32" y="24" hm="true"/>
+          <view angle="225" x="29" y="24"/>
+          <view angle="315" x="5" y="48" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

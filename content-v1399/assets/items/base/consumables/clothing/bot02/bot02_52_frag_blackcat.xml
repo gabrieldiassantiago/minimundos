@@ -1,0 +1,51 @@
+<f id="Bot02_52BlackCatSlipper" parentId="Bot02">
+  <g id="Slipper_Base" name="Slipper_Base" icon="$bm/icon_shoe_standard.png">
+    <s id="Bot02_52IdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_50_creature_idle.png" pri="2"/>
+    <s id="Bot02_52Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_50_creature_walk1.png" pri="2"/>
+    <s id="Bot02_52Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_50_creature_walk2.png" pri="2"/>
+    <s id="Bot02_52Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_50_creature_walk3.png" pri="2"/>
+    <s id="Bot02_52Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_50_creature_walk4.png" pri="2"/>
+    <s id="Bot02_52SitBase" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_50_creature_sit.png" pri="2"/>
+    <c sId="Bot02_52IdleBase" c="5395026" a="1.00" b="39.8" ct="1.20" lId="Bot02_52_Color" lw="N"/>
+    <c sId="Bot02_52Walk1Base" c="5395026" a="1.00" b="39.8" ct="1.20" lId="Bot02_52_Color" lw="N"/>
+    <c sId="Bot02_52Walk2Base" c="5395026" a="1.00" b="39.8" ct="1.20" lId="Bot02_52_Color" lw="N"/>
+    <c sId="Bot02_52Walk3Base" c="5395026" a="1.00" b="39.8" ct="1.20" lId="Bot02_52_Color" lw="N"/>
+    <c sId="Bot02_52Walk4Base" c="5395026" a="1.00" b="39.8" ct="1.20" lId="Bot02_52_Color" lw="N"/>
+    <c sId="Bot02_52SitBase" c="5395026" a="1.00" b="39.8" ct="1.20" lId="Bot02_52_Color" lw="N"/>
+  </g>
+  <g id="Slipper_Decal" name="Slipper_Decal" icon="$bm/icon_shoe_standard.png">
+    <s id="Bot02_52Idle_Decal" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_50_creature_idle_face.png" pri="2"/>
+    <s id="Bot02_52Walk1_Decal" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_50_creature_walk1_face.png" pri="2"/>
+    <s id="Bot02_52Walk2_Decal" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_50_creature_walk2_face.png" pri="2"/>
+    <s id="Bot02_52Walk3_Decal" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_50_creature_walk3_face.png" pri="2"/>
+    <s id="Bot02_52Walk4_Decal" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_50_creature_walk4_face.png" pri="2"/>
+    <s id="Bot02_52Sit_Decal" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_50_creature_sit_face.png" pri="2"/>
+  </g>
+  <g id="NoShoe" name="Bare feet" icon="$bu/icon_shoe_foot.png">
+    <s id="JumpFootIdleBase" cId="LegIdle" s="$bu/foot_idle.png" pri="0.5"/>
+    <s id="JumpWalk1Base" cId="LegWalk1" s="$bu/foot_walk1.png" pri="0.5"/>
+    <s id="JumpWalk2Base" cId="LegWalk2" s="$bu/foot_walk2.png" pri="0.5"/>
+    <s id="JumpWalk3Base" cId="LegWalk3" s="$bu/foot_walk3.png" pri="0.5"/>
+    <s id="JumpWalk4Base" cId="LegWalk4" s="$bu/foot_walk4.png" pri="0.5"/>
+    <s id="JumpSit" cId="LegSitLower" s="$bu/foot_sit.png" pri="0.5"/>
+    <c sId="JumpFootIdleBase" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="JumpWalk1Base" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="JumpWalk2Base" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="JumpWalk3Base" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="JumpWalk4Base" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="JumpSit" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot02_52" icon="items/base/consumables/clothing/bot02/bot02_52_icon_blackcat_a.png" w="48" h="48"/>
+    <s id="IconBot02_52Rare" cId="IconBot02_52" s="items/base/consumables/clothing/top01/top01_rare.png"/>
+    <s id="IconBot02_52Base" cId="IconBot02_52" s="items/base/consumables/clothing/bot02/bot02_50_icon_creature_1.png"/>
+    <c sId="IconBot02_52Base" c="5395026" a="1.00" b="39.8" ct="1.20" lId="Bot02_52_Color" lw="N"/>
+    <s id="IconBot02_52Decal" cId="IconBot02_52" s="items/base/consumables/clothing/bot02/bot02_50_icon_creature_2.png"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot02_52_Color" name="Color" desc="Choose a color" sel="Black" seld="Brown">
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="1.00" b="39.8" ct="1.20" lId="Bot02_52_Color"/>
+    </b>
+  </g>
+  <ds id="JSFeet"/>
+</f>

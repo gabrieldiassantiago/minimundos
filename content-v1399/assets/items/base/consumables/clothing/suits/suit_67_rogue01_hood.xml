@@ -1,0 +1,47 @@
+<item.SpriteItem id="0" name="Beaver" desc="Collectible (September 2012)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="hood" source="items/base/consumables/clothing/suits/suit_67_rogue01_hood.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="hood" texture="hood">
+          <view angle="0" col="2" y="20" hm="true"/>
+          <view angle="45" y="20"/>
+          <view angle="90" col="1" y="20"/>
+          <view angle="135" x="-2" y="20" hm="true"/>
+          <view angle="180" col="2" y="20"/>
+          <view angle="225" col="3" y="20"/>
+          <view angle="270" col="4" x="-1" y="20"/>
+          <view angle="315" col="3" y="20" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="halo_01">
+          <layerref id="hood"/>
+        </frame>
+        <frame id="halo_02">
+          <layerref id="hood"/>
+        </frame>
+        <frame id="halo_03">
+          <layerref id="hood"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="halo" framerate="7">
+          <frameref id="halo_01"/>
+          <frameref id="halo_02"/>
+          <frameref id="halo_03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

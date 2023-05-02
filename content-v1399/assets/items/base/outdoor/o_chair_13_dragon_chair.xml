@@ -1,0 +1,85 @@
+<item.ChairItem id="6887" name="Poltrona Dragão Tulsa" desc="Relaxe como um Rei" tags="rare,chair" icon="items/base/outdoor/icon_o_chair_13_dragon_chair.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <seats>
+    <seat x="-0.03" y="0.55">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="rock seat" source="items/base/outdoor/o_chair_13_dragon_chair.png" cols="2" rows="1"/>
+    <texture id="arm" source="items/base/outdoor/o_chair_13_dragon_chairarm.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-0.49,0,-0.49" max="0.49,2,0.49"/>
+      <layers>
+        <layer id="rock seat" texture="rock seat" y="-13">
+          <view angle="45" x="1" y="32" alpha="0"/>
+          <view angle="135" x="-2" y="57" hm="true"/>
+          <view angle="225" col="1" x="-1" y="55" alpha="0"/>
+          <view angle="315" col="1" x="1" y="55" hm="true"/>
+        </layer>
+        <layer id="arm" texture="arm" y="-13">
+          <view angle="45" x="-13" y="10"/>
+          <view angle="135" x="15" y="10" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-1" y="55" alpha="0"/>
+          <view angle="315" col="1" x="1" y="55" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="rock seat"/>
+          <layerref id="arm"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="LeftArm">
+      <box min="-0.49,0,-0.49" max="0.49,2,0.49"/>
+      <layers>
+        <layer id="rock seat" texture="rock seat" y="-13">
+          <view angle="45" x="3" y="57"/>
+          <view angle="135" x="2" y="39" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-1" y="55"/>
+          <view angle="315" col="1" x="1" y="55" alpha="0" hm="true"/>
+        </layer>
+        <layer id="arm" texture="arm" y="-13">
+          <view angle="45" x="-13" y="10" alpha="0"/>
+          <view angle="135" x="15" y="10" hm="true"/>
+          <view angle="225" col="1" x="-1" y="55" alpha="0"/>
+          <view angle="315" col="1" x="1" y="55" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="rock seat"/>
+          <layerref id="arm"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

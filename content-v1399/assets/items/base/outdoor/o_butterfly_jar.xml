@@ -1,0 +1,95 @@
+<item.SpriteItem id="2868" name="Pote de Borboletas" desc="Mantém as borboletas felizes." tags="admin,misc" icon="items/base/outdoor/icon_o_butterfly_jar.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.28,0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+  </events>
+  <actions>
+    <action id="Cycle liquid" trigger="false" event="cycle"/>
+    <action id="Clear liquid" state="true" event="animate(00)"/>
+    <action id="Blue liquid" state="true" event="animate(01)"/>
+    <action id="Green liquid" state="true" event="animate(02)"/>
+    <action id="Red liquid" state="true" event="animate(03)"/>
+    <action id="Yellow liquid" state="true" event="animate(04)"/>
+    <action id="Violet liquid" state="true" event="animate(05)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="3"/>
+    <entry key="00" value="Empty"/>
+    <entry key="01" value="Blue Butterfly"/>
+    <entry key="02" value="Yellow Butterfly"/>
+  </data>
+  <textures>
+    <texture id="jar" source="items/base/outdoor/o_butterfly_jar.png" cols="1" rows="1"/>
+    <texture id="butterflies" source="items/base/outdoor/o_butterfly.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.28,0.1"/>
+      <layers>
+        <layer id="jar" texture="jar" y="8">
+          <view/>
+        </layer>
+        <layer id="jar01" texture="jar" y="8">
+          <view/>
+        </layer>
+        <layer id="blue 01" texture="butterflies">
+          <view/>
+        </layer>
+        <layer id="blue 02" texture="butterflies">
+          <view row="1"/>
+        </layer>
+        <layer id="yellow 01" texture="butterflies">
+          <view/>
+        </layer>
+        <layer id="yellow 02" texture="butterflies">
+          <view row="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="empty">
+          <layerref id="jar"/>
+        </frame>
+        <frame id="blue 01">
+          <layerref id="jar"/>
+          <layerref id="blue 01" color="0x33c3ff"/>
+          <layerref id="jar01" a="0.5"/>
+        </frame>
+        <frame id="blue 02">
+          <layerref id="jar"/>
+          <layerref id="blue 02" color="0x33c3ff"/>
+          <layerref id="jar01" a="0.5"/>
+        </frame>
+        <frame id="yellow 01">
+          <layerref id="jar"/>
+          <layerref id="yellow 01" color="0xffef0a"/>
+          <layerref id="jar01" a="0.5"/>
+        </frame>
+        <frame id="yellow 02">
+          <layerref id="jar"/>
+          <layerref id="yellow 02" color="0xffef0a"/>
+          <layerref id="jar01" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="2">
+          <frameref id="empty"/>
+        </animation>
+        <animation id="01" framerate="2">
+          <frameref id="blue 01"/>
+          <frameref id="blue 02"/>
+        </animation>
+        <animation id="02" framerate="2">
+          <frameref id="yellow 01"/>
+          <frameref id="yellow 02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

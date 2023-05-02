@@ -1,0 +1,261 @@
+<item.WidgetItem id="1495" name="Elevador" desc="Um elevador para seu edifício" tags="door,widget" icon="items/base/vip/icon_vip_door_01_elevator.png" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="floor" widget="widgets/widget_portal.swf" price="195" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="0,-1.3,-0.9" max="0.1,1.3,1.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+  </events>
+  <actions>
+    <action id="Navigate" trigger="false" event="navigate"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="portalType" value="door"/>
+    <entry key="maxLinkedSpaces" value="1"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <navigate sitRange="1.00" standRange="1.00" targetRange="1.00"/>
+  <textures>
+    <texture id="door" source="items/base/vip/vip_door_01_elevator.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="details a" source="items/base/vip/vip_door_01_elevator_detailsa.png" cols="2" rows="1"/>
+    <texture id="details b" source="items/base/vip/vip_door_01_elevator_detailsb.png" cols="13" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_bulb.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Elevator">
+      <box min="0,-1.3,-0.9" max="0.1,1.3,1.2"/>
+      <layers>
+        <layer id="elevator" texture="door" align="middle">
+          <view angle="45" col="1" x="3" y="-3"/>
+          <view angle="135" col="1" x="-3" y="-3" hm="true"/>
+          <view angle="225" col="1" x="-2" y="-6" alpha="0.55"/>
+          <view angle="315" col="1" x="2" y="-6" alpha="0.55" hm="true"/>
+        </layer>
+        <layer id="inside" texture="door" align="middle">
+          <view angle="45" x="3" y="-3"/>
+          <view angle="135" x="-3" y="-3" hm="true"/>
+          <view angle="225" x="-2" y="-6" alpha="0"/>
+          <view angle="315" x="2" y="-6" alpha="0" hm="true"/>
+        </layer>
+        <layer id="doors" texture="door" align="middle">
+          <view angle="45" col="2" x="3" y="-3"/>
+          <view angle="135" col="2" x="-3" y="-3" hm="true"/>
+          <view angle="225" col="2" x="-2" y="-6" alpha="0.55"/>
+          <view angle="315" col="2" x="2" y="-6" alpha="0.55" hm="true"/>
+        </layer>
+        <layer id="numbers off" texture="details a" align="middle">
+          <view angle="45" x="2" y="-116"/>
+          <view angle="135" col="1" x="2" y="-114"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="controls" texture="details b" align="middle">
+          <view angle="45" x="76" y="-25"/>
+          <view angle="135" x="69" y="26" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="G" texture="details b" align="middle">
+          <view angle="45" col="5" x="-25" y="-101"/>
+          <view angle="135" col="9" x="-25" y="-125"/>
+          <view angle="225" col="5" alpha="0"/>
+          <view angle="315" col="5" alpha="0" hm="true"/>
+        </layer>
+        <layer id="1" texture="details b" align="middle">
+          <view angle="45" col="6" x="-14" y="-106"/>
+          <view angle="135" col="10" x="-15" y="-120"/>
+          <view angle="225" col="6" alpha="0"/>
+          <view angle="315" col="6" alpha="0" hm="true"/>
+        </layer>
+        <layer id="2" texture="details b" align="middle">
+          <view angle="45" col="7" x="-3" y="-111"/>
+          <view angle="135" col="11" x="-4" y="-116"/>
+          <view angle="225" col="7" alpha="0"/>
+          <view angle="315" col="7" alpha="0" hm="true"/>
+        </layer>
+        <layer id="3" texture="details b" align="middle">
+          <view angle="45" col="8" x="8" y="-116"/>
+          <view angle="135" col="12" x="6" y="-111"/>
+          <view angle="225" col="8" alpha="0"/>
+          <view angle="315" col="8" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Down" texture="details b" align="middle">
+          <view angle="45" col="4" x="43" y="-137"/>
+          <view angle="135" col="4" x="42" y="-95" hm="true"/>
+          <view angle="225" col="4" alpha="0"/>
+          <view angle="315" col="4" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Down Button" texture="details b" align="middle">
+          <view angle="45" col="2" x="76" y="-25"/>
+          <view angle="135" col="2" x="69" y="26" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="G Button">
+          <layerref id="elevator"/>
+          <layerref id="doors"/>
+          <layerref id="numbers off"/>
+          <layerref id="controls"/>
+          <layerref id="G"/>
+          <layerref id="Down Button"/>
+        </frame>
+        <frame id="1">
+          <layerref id="elevator"/>
+          <layerref id="doors"/>
+          <layerref id="numbers off"/>
+          <layerref id="controls"/>
+          <layerref id="1"/>
+          <layerref id="Down"/>
+        </frame>
+        <frame id="2">
+          <layerref id="elevator"/>
+          <layerref id="doors"/>
+          <layerref id="numbers off"/>
+          <layerref id="controls"/>
+          <layerref id="2"/>
+          <layerref id="Down"/>
+        </frame>
+        <frame id="3">
+          <layerref id="elevator"/>
+          <layerref id="doors"/>
+          <layerref id="numbers off"/>
+          <layerref id="controls"/>
+          <layerref id="3"/>
+          <layerref id="Down"/>
+        </frame>
+        <frame id="3 Open">
+          <layerref id="inside"/>
+          <layerref id="elevator"/>
+          <layerref id="numbers off"/>
+          <layerref id="controls"/>
+          <layerref id="3"/>
+          <layerref id="Down"/>
+        </frame>
+        <frame id="G Closed">
+          <layerref id="elevator"/>
+          <layerref id="doors"/>
+          <layerref id="numbers off"/>
+          <layerref id="controls"/>
+          <layerref id="G"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="2" loop="false">
+          <frameref id="G Button" duration="2"/>
+          <frameref id="1"/>
+          <frameref id="2"/>
+          <frameref id="3" duration="2"/>
+          <frameref id="3 Open" duration="5"/>
+          <frameref id="3"/>
+          <frameref id="2"/>
+          <frameref id="1"/>
+        </animation>
+        <animation id="Closed" framerate="2" loop="false">
+          <frameref id="G Closed"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="8" y="5"/>
+          <view angle="135" x="-8" y="5"/>
+          <view angle="225" x="-8"/>
+          <view angle="315" x="8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Open">
+          <layerref id="Light" color="0xfefcf8"/>
+        </frame>
+        <frame id="Closed">
+          <layerref id="Light" color="0xfefcf8" a="0.4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="2" loop="false">
+          <frameref id="Closed" duration="6"/>
+          <frameref id="Open" duration="5"/>
+          <frameref id="Closed" duration="3"/>
+        </animation>
+        <animation id="Closed" framerate="2" loop="false">
+          <frameref id="Closed"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="3" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="G" texture="Intense" align="middle">
+          <view angle="45" x="-8" y="-33"/>
+          <view angle="135" x="-9" y="-41"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="1" texture="Intense" align="middle">
+          <view angle="45" x="-3" y="-35"/>
+          <view angle="135" x="-5" y="-41"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="2" texture="Intense" align="middle">
+          <view angle="45" x="-1" y="-37"/>
+          <view angle="135" y="-39"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="3" texture="Intense" align="middle">
+          <view angle="45" x="3" y="-39"/>
+          <view angle="135" x="3" y="-37"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="G">
+          <layerref id="G" color="0xfafef8" a="0.4"/>
+        </frame>
+        <frame id="1">
+          <layerref id="1" color="0xfafef8" a="0.4"/>
+        </frame>
+        <frame id="2">
+          <layerref id="2" color="0xfafef8" a="0.4"/>
+        </frame>
+        <frame id="3">
+          <layerref id="3" color="0xfafef8" a="0.4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="2" loop="false">
+          <frameref id="G" duration="2"/>
+          <frameref id="1"/>
+          <frameref id="2"/>
+          <frameref id="3" duration="2"/>
+          <frameref id="3" duration="5"/>
+          <frameref id="3"/>
+          <frameref id="2"/>
+          <frameref id="1"/>
+        </animation>
+        <animation id="Closed" framerate="2" loop="false">
+          <frameref id="G"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,102 @@
+<item.SpriteItem id="4603" name="Luminária de Mesa Flor Fantasia Eco" desc="Uma flor de baixa iluminação" tags="light" icon="items/base/outdoor/icon_o_light_deskflowerlamp.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="35">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.7,0.1"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/outdoor/o_light_deskflowerlamp.png" cols="2" rows="1"/>
+    <texture id="Light" source="spaces/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.7,0.1"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="12" y="8"/>
+          <view angle="135" x="-13" y="8" hm="true"/>
+          <view angle="225" col="1" x="-12" y="7" hm="true"/>
+          <view angle="315" col="1" x="12" y="7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-30">
+          <view angle="45" x="16" y="4"/>
+          <view angle="135" x="-13" y="4"/>
+          <view angle="225" x="-19" y="-4"/>
+          <view angle="315" x="22" y="-6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf7e5c8"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" s="2.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="7" y="-9"/>
+          <view angle="135" x="-6" y="-10"/>
+          <view angle="225" x="-8" y="-12"/>
+          <view angle="315" x="9" y="-11"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf4cca9" a="0.65"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

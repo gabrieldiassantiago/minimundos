@@ -1,0 +1,44 @@
+<item.SpriteItem name="Caixa de Presente Aberta Craquelada" desc="Uma caixa de presentes vazia do Natal de 2017 [24 of 25]" tags="rare,actionbar,consumable,hand,usable,wear,action_holdable_toggle" icon="items/base/presents/acc_024_icon_adventbox_hatched.png" price="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="7495">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.4,0.25"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+25"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/presents/acc_024_item_adventbox_hatched.png" cols="2" rows="1"/>
+    <texture id="Shadow" source="items/base/presents/acc_024_item_adventbox_hatched_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,0.4,0.25"/>
+      <layers>
+        <layer id="Shadow" texture="Shadow">
+          <view angle="45" x="-1" y="19"/>
+          <view angle="135" x="1" y="19" hm="true"/>
+          <view angle="225" y="19"/>
+          <view angle="315" x="1" y="19" hm="true"/>
+        </layer>
+        <layer id="Base" texture="Base">
+          <view angle="45" y="14"/>
+          <view angle="135" y="14" hm="true"/>
+          <view angle="225" y="14"/>
+          <view angle="315" y="14" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

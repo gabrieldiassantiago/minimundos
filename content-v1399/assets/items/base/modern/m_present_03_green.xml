@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="Um presente especial." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/modern/icon_m_present_03_green.png" id="1347" name="Caixa de Presentes Verde" tags="misc,present" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.18,0.36,0.27" min="-0.18,0,-0.27"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_unwrap.as"/>
+    <event id="action" script="scripts/item/action_unwrap.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/modern/m_present_03_green.png"/>
+  </textures>
+  <nodes>
+    <node id="Node01">
+      <box max="0.18,0.36,0.27" min="-0.18,0,-0.27"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="16">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

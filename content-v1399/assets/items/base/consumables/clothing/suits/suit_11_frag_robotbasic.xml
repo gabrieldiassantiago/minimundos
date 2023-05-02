@@ -1,0 +1,86 @@
+<f id="RobotSuitBasic" parentId="Suits">
+  <g id="RobotSuit">
+    <c id="UnderRobotColorMaster" sId="ArmorTorso" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor"/>
+    <c id="RobotColorMaster" sId="BulkTorso" c="16766976" a="0.26" b="-18.4" ct="0.70" lId="ArmorColor"/>
+    <b id="ArmorChest" sel="ArmorTorso">
+      <s id="ArmorTorso" cId="Torso" s="items/base/consumables/clothing/suits/suit_09_torso_male.png" pri="1"/>
+    </b>
+    <b id="ArmorLegs" sel="ArmorPants">
+      <g id="ArmorPants" icon="$bu/icon_legs_trouser.png">
+        <s id="ArmorPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_09_leg_idle.png" pri="3"/>
+        <s id="ArmorPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_09_leg_walk1.png" pri="3"/>
+        <s id="ArmorPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_09_leg_walk2.png" pri="3"/>
+        <s id="ArmorPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_09_leg_walk3.png" pri="3"/>
+        <s id="ArmorPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_09_leg_walk4.png" pri="3"/>
+        <s id="ArmorSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_09_leg_sit.png" pri="3"/>
+        <c sId="ArmorPantIdleBase" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+        <c sId="ArmorPantWalk1Base" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+        <c sId="ArmorPantWalk2Base" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+        <c sId="ArmorPantWalk3Base" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+        <c sId="ArmorPantWalk4Base" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+        <c sId="ArmorSitUpperBase" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      </g>
+    </b>
+    <b id="ArmorArms" sel="ArmorOverTop">
+      <g id="ArmorOverTop" icon="$bm/icon_m_retro.png">
+        <s id="ArmorArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_09_arm_idle.png" pri="1"/>
+        <s id="ArmorArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_09_arm_walk1.png" pri="1"/>
+        <s id="ArmorArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_09_arm_walk2.png" pri="1"/>
+        <s id="ArmorArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_09_arm_walk3.png" pri="1"/>
+        <s id="ArmorArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_09_arm_sit.png" pri="1"/>
+        <c sId="ArmorArmIdleBase" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+        <c sId="ArmorArmWalk1Base" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+        <c sId="ArmorArmWalk2Base" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+        <c sId="ArmorArmWalk3Base" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+        <c sId="ArmorArmSitBase" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+        <s id="ArmorArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_09_arm_throw.png" pri="1"/>
+        <s id="ArmorArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_09_arm_raise.png" pri="1"/>
+        <c sId="ArmorArmThrowBase" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+        <c sId="ArmorArmRaiseBase" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      </g>
+    </b>
+    <g id="ArmorOverTop" icon="$bm/icon_m_retro.png">
+      <s id="ArmorHandIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_09_hand_idle.png" pri="2"/>
+      <c sId="ArmorHandIdleBase" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      <s id="ArmorHandWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_09_hand_walk1.png" pri="2"/>
+      <s id="ArmorHandWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_09_hand_walk2.png" pri="2"/>
+      <s id="ArmorHandWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_09_hand_walk3.png" pri="2"/>
+      <s id="ArmorHandSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_09_hand_sit.png" pri="2"/>
+      <c sId="ArmorHandWalk1Base" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      <c sId="ArmorHandWalk2Base" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      <c sId="ArmorHandWalk3Base" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      <c sId="ArmorHandSitBase" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      <s id="ArmorHandWave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_09_hand_wave1.png" pri="2"/>
+      <s id="ArmorHandWave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_09_hand_wave2.png" pri="2"/>
+      <s id="ArmorHandHold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_09_hand_hold.png" pri="2"/>
+      <s id="ArmorHandOpen" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_09_hand_open.png" pri="2"/>
+      <s id="ArmorHandPoint" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_09_hand_point.png" pri="2"/>
+      <s id="ArmorHandStop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_09_hand_stop.png" pri="2"/>
+      <s id="ArmorHandThrow" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_09_hand_throw.png" pri="2"/>
+      <s id="ArmorHandThumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_09_hand_thumbs.png" pri="2"/>
+      <c sId="ArmorHandWave1" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      <c sId="ArmorHandWave2" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      <c sId="ArmorHandHold" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      <c sId="ArmorHandOpen" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      <c sId="ArmorHandPoint" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      <c sId="ArmorHandStop" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      <c sId="ArmorHandThrow" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+      <c sId="ArmorHandThumbs" c="30930" a="0.16" b="-6.4" ct="0.75" lId="UnderArmorColor" lw="N"/>
+    </g>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+</f>

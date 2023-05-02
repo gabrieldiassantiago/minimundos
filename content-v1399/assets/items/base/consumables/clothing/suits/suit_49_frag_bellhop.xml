@@ -1,0 +1,216 @@
+<f id="BellHop" parentId="Suits">
+  <g id="Torso">
+    <s id="BellHopTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_48_torso_base.png" pri="1"/>
+    <c sId="BellHopTorsoBase" c="10420224" a="0.87" b="44.3" ct="1.05" lId="BellHop_Color1" lw="N"/>
+    <s id="BellHopTorsoDecal" cId="Torso" s="items/base/consumables/clothing/suits/suit_49_torso_decal.png" pri="1"/>
+    <c sId="BellHopTorsoDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+  </g>
+  <g id="BellHop" name="Arms">
+    <s id="BellHopArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_long_arm_idle.png" pri="2"/>
+    <s id="BellHopArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_long_arm_walk1.png" pri="2"/>
+    <s id="BellHopArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_long_arm_walk2.png" pri="2"/>
+    <s id="BellHopArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_long_arm_walk3.png" pri="2"/>
+    <s id="BellHopArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_long_arm_sit.png" pri="2"/>
+    <c sId="BellHopArmIdleBase" c="10420224" a="0.87" b="44.3" ct="1.05" lId="BellHop_Color1" lw="N"/>
+    <c sId="BellHopArmWalk1Base" c="10420224" a="0.87" b="44.3" ct="1.05" lId="BellHop_Color1" lw="N"/>
+    <c sId="BellHopArmWalk2Base" c="10420224" a="0.87" b="44.3" ct="1.05" lId="BellHop_Color1" lw="N"/>
+    <c sId="BellHopArmWalk3Base" c="10420224" a="0.87" b="44.3" ct="1.05" lId="BellHop_Color1" lw="N"/>
+    <c sId="BellHopArmSitBase" c="10420224" a="0.87" b="44.3" ct="1.05" lId="BellHop_Color1" lw="N"/>
+    <s id="BellHopArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_long_arm_throw.png" pri="2"/>
+    <s id="BellHopArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_long_arm_raise.png" pri="2"/>
+    <c sId="BellHopArmThrowBase" c="10420224" a="0.87" b="44.3" ct="1.05" lId="BellHop_Color1" lw="N"/>
+    <c sId="BellHopArmRaiseBase" c="10420224" a="0.87" b="44.3" ct="1.05" lId="BellHop_Color1" lw="N"/>
+    <s id="BellHopArmIdleDecal" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_49_arm_idle_decal.png" pri="2.1"/>
+    <s id="BellHopArmWalk1Decal" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_49_arm_walk1_decal.png" pri="2.1"/>
+    <s id="BellHopArmWalk2Decal" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_49_arm_walk2_decal.png" pri="2.1"/>
+    <s id="BellHopArmWalk3Decal" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_49_arm_walk3_decal.png" pri="2.1"/>
+    <s id="BellHopArmSitDecal" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_49_arm_sit_decal.png" pri="2.1"/>
+    <c sId="BellHopArmIdleDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <c sId="BellHopArmWalk1Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <c sId="BellHopArmWalk2Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <c sId="BellHopArmWalk3Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <c sId="BellHopArmSitDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <s id="BellHopArmThrowDecal" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_49_arm_throw_decal.png" pri="2.1"/>
+    <s id="BellHopArmRaiseDecal" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_49_arm_raise_decal.png" pri="2.1"/>
+    <c sId="BellHopArmThrowDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <c sId="BellHopArmRaiseDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+  </g>
+  <g id="Hands" icon="$bm/icon_m_longsleeve.png">
+    <s id="BellHopHandIdleBase" cId="ArmIdle" s="$bu/hand_arm_idle.png" pri="1"/>
+    <s id="BellHopHandWalk1Base" cId="ArmWalk1" s="$bu/arm_walk1.png" pri="1"/>
+    <s id="BellHopHandWalk2Base" cId="ArmWalk2" s="$bu/arm_walk2.png" pri="1"/>
+    <s id="BellHopHandWalk3Base" cId="ArmWalk3" s="$bu/arm_walk3.png" pri="1"/>
+    <s id="BellHopHandSitBase" cId="ArmSit" s="$bu/hand_arm_sit.png" pri="1"/>
+    <c sId="BellHopHandIdleBase" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <c sId="BellHopHandWalk1Base" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <c sId="BellHopHandWalk2Base" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <c sId="BellHopHandWalk3Base" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <c sId="BellHopHandSitBase" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <s id="BellHopHandThrowBase" cId="ArmRaiseWave1" s="$bu/raise_wave1.png" pri="1"/>
+    <s id="BellHopHandRaiseBase" cId="ArmRaiseWave2" s="$bu/raise_wave2.png" pri="1"/>
+    <c sId="BellHopHandThrowBase" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <c sId="BellHopHandRaiseBase" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <s id="BellHopHandThrowHold" cId="ArmThrowHold" s="$bu/throw_hold.png" pri="1"/>
+    <s id="BellHopHandThrowOpen" cId="ArmThrowOpen" s="$bu/throw_open.png" pri="1"/>
+    <s id="BellHopHandThrowPoint" cId="ArmThrowPoint" s="$bu/throw_point.png" pri="1"/>
+    <s id="BellHopHandThrowStop" cId="ArmThrowStop" s="$bu/throw_stop.png" pri="1"/>
+    <s id="BellHopHandThrowThrow" cId="ArmThrowThrow" s="$bu/throw_throw.png" pri="1"/>
+    <s id="BellHopHandThrowThumb" cId="ArmThrowThumb" s="$bu/throw_thumbs.png" pri="1"/>
+    <c sId="BellHopHandThrowHold" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <c sId="BellHopHandThrowOpen" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <c sId="BellHopHandThrowPoint" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <c sId="BellHopHandThrowStop" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <c sId="BellHopHandThrowThrow" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <c sId="BellHopHandThrowThumb" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+  </g>
+  <g id="BellHopBase" name="Legs" icon="$bu/icon_legs_trouser.png">
+    <s id="BellHopLegIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_01_idle.png" pri="2.1"/>
+    <s id="BellHopLegWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_01_walk1.png" pri="2.1"/>
+    <s id="BellHopLegWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_01_walk2.png" pri="2.1"/>
+    <s id="BellHopLegWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_01_walk3.png" pri="2.1"/>
+    <s id="BellHopLegWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_01_walk4.png" pri="2.1"/>
+    <s id="BellHopLegSitUpperbase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_01_sit_upper.png" pri="2.1"/>
+    <s id="BellHopLegSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/bot03/bot03_01_lower.png" pri="2.1"/>
+    <c sId="BellHopLegIdleBase" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <c sId="BellHopLegWalk1Base" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <c sId="BellHopLegWalk2Base" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <c sId="BellHopLegWalk3Base" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <c sId="BellHopLegWalk4Base" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <c sId="BellHopLegSitUpperbase" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <c sId="BellHopLegSitLowerBase" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <s id="BellHopLegIdleDecal" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_49_leg_idle_decal.png" pri="2.2"/>
+    <s id="BellHopLegWalk1Decal" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_49_leg_walk1_decal.png" pri="2.2"/>
+    <s id="BellHopLegWalk2Decal" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_49_leg_walk2_decal.png" pri="2.2"/>
+    <s id="BellHopLegWalk3Decal" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_49_leg_walk3_decal.png" pri="2.2"/>
+    <s id="BellHopLegWalk4Decal" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_49_leg_walk4_decal.png" pri="2.2"/>
+    <s id="BellHopLegSitUpperDecal" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_49_leg_sit_upper_decal.png" pri="2.2"/>
+    <s id="BellHopLegSitLowerDecal" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_49_leg_sit_lower_decal.png" pri="2.2"/>
+    <c sId="BellHopLegIdleDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <c sId="BellHopLegWalk1Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <c sId="BellHopLegWalk2Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <c sId="BellHopLegWalk3Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <c sId="BellHopLegWalk4Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <c sId="BellHopLegSitUpperDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <c sId="BellHopLegSitLowerDecal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+  </g>
+  <g id="Feet" icon="$bm/icon_shoe_standard.png">
+    <s id="BellHopFootIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_16_idle.png" pri="2"/>
+    <s id="BellHopFootWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_16_walk1.png" pri="2"/>
+    <s id="BellHopFootWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_16_walk2.png" pri="2"/>
+    <s id="BellHopFootWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_16_walk3.png" pri="2"/>
+    <s id="BellHopFootWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_16_walk4.png" pri="2"/>
+    <s id="BellHopFootSit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_16_sit.png" pri="2"/>
+    <c sId="BellHopFootIdleBase" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <c sId="BellHopFootWalk1Base" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <c sId="BellHopFootWalk2Base" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <c sId="BellHopFootWalk3Base" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <c sId="BellHopFootWalk4Base" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <c sId="BellHopFootSit" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="Icon_BellHop" icon="items/base/consumables/clothing/suits/suit_49_icon_bellhop_1.png" w="48" h="48" exurl="items/base/consumables/clothing/suits/suit_48_icon_racing.png"/>
+    <s id="BellHop_VIP" cId="Icon_BellHop" s="items/base/shared/s_vipbadge.png" pri="1" vis="false"/>
+    <s id="BellHop_Decal" cId="Icon_BellHop" s="items/base/consumables/clothing/suits/suit_49_icon_bellhop_c.png" pri="1.1"/>
+    <s id="BellHop_Gloves" cId="Icon_BellHop" s="items/base/consumables/clothing/suits/suit_49_icon_bellhop_d.png" pri="1.1"/>
+    <s id="BellHop_PantsBase" cId="Icon_BellHop" s="items/base/consumables/clothing/suits/suit_49_icon_bellhop_b.png" pri="1.1"/>
+    <s id="BellHop_TorsoBase" cId="Icon_BellHop" s="items/base/consumables/clothing/suits/suit_49_icon_bellhop_a.png" pri="1"/>
+    <c sId="BellHop_Decal" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3" lw="N"/>
+    <c sId="BellHop_Gloves" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4" lw="N"/>
+    <c sId="BellHop_PantsBase" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2" lw="N"/>
+    <c sId="BellHop_TorsoBase" c="10420224" a="0.87" b="44.3" ct="1.05" lId="BellHop_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="BellHop_Color1" name="Color1" desc="Choose a color" sel="Red" seld="Red">
+      <c id="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="66.9" ct="1.54" lId="BellHop_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7237230" a="1.00" b="65.3" ct="1.54" lId="BellHop_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="46.3" ct="1.14" lId="BellHop_Color1"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16238289" a="1.00" b="28.8" ct="1.95" lId="BellHop_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="44.3" ct="1.05" lId="BellHop_Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="9719070" a="1.00" b="68.1" ct="1.54" lId="BellHop_Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color1"/>
+      <c id="Green" name="Green" icon="$bu/icon_green.png" c="3826479" a="1.00" b="68.1" ct="1.54" lId="BellHop_Color1"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="47.4" ct="1.04" lId="BellHop_Color1"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="38.3" ct="1.61" lId="BellHop_Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="46.3" ct="1.14" lId="BellHop_Color1"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="8758471" a="1.00" b="51.1" ct="1.54" lId="BellHop_Color1"/>
+      <c id="FadedBlue" name="Faded blue" icon="$bu/icon_fadedblue.png" c="4745356" a="1.00" b="64.1" ct="2.00" lId="BellHop_Color1"/>
+      <c id="MedBlue" name="Jean blue" icon="$bu/icon_medblue.png" c="3297909" a="1.00" b="64.1" ct="2.00" lId="BellHop_Color1"/>
+      <c id="DarkBlue" icon="$bu/icon_darkblue.png" c="3822448" a="1.00" b="51.1" ct="1.54" lId="BellHop_Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="6041443" a="1.00" b="68.1" ct="1.54" lId="BellHop_Color1"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.6" ct="0.76" lId="BellHop_Color1"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5525030" a="1.00" b="65.3" ct="1.54" lId="BellHop_Color1"/>
+      <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="4338962" a="1.00" b="65.3" ct="1.54" lId="BellHop_Color1"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.87" b="49.1" ct="1.05" lId="BellHop_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="4013373" a="1.00" b="66.8" ct="2.00" lId="BellHop_Color1"/>
+    </b>
+    <b id="BellHop_Color2" name="Color2" desc="Choose a color" sel="Black" seld="Black">
+      <c id="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="66.9" ct="1.54" lId="BellHop_Color2"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7237230" a="1.00" b="65.3" ct="1.54" lId="BellHop_Color2"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="46.3" ct="1.14" lId="BellHop_Color2"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16238289" a="1.00" b="28.8" ct="1.95" lId="BellHop_Color2"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="44.3" ct="1.05" lId="BellHop_Color2"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="9719070" a="1.00" b="68.1" ct="1.54" lId="BellHop_Color2"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color2"/>
+      <c id="Green" name="Green" icon="$bu/icon_green.png" c="3826479" a="1.00" b="68.1" ct="1.54" lId="BellHop_Color2"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="47.4" ct="1.04" lId="BellHop_Color2"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="38.3" ct="1.61" lId="BellHop_Color2"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="46.3" ct="1.14" lId="BellHop_Color2"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="8758471" a="1.00" b="51.1" ct="1.54" lId="BellHop_Color2"/>
+      <c id="FadedBlue" name="Faded blue" icon="$bu/icon_fadedblue.png" c="4745356" a="1.00" b="64.1" ct="2.00" lId="BellHop_Color2"/>
+      <c id="MedBlue" name="Jean blue" icon="$bu/icon_medblue.png" c="3297909" a="1.00" b="64.1" ct="2.00" lId="BellHop_Color2"/>
+      <c id="DarkBlue" icon="$bu/icon_darkblue.png" c="3822448" a="1.00" b="51.1" ct="1.54" lId="BellHop_Color2"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="6041443" a="1.00" b="68.1" ct="1.54" lId="BellHop_Color2"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.6" ct="0.76" lId="BellHop_Color2"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5525030" a="1.00" b="65.3" ct="1.54" lId="BellHop_Color2"/>
+      <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="4338962" a="1.00" b="65.3" ct="1.54" lId="BellHop_Color2"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.87" b="49.1" ct="1.05" lId="BellHop_Color2"/>
+      <c id="Black" icon="$bu/icon_black.png" c="4013373" a="1.00" b="60.1" ct="2.00" lId="BellHop_Color2"/>
+    </b>
+    <b id="BellHop_Color3" name="Color3" desc="Choose a color" sel="Yellow" seld="Yellow">
+      <c id="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="66.9" ct="1.54" lId="BellHop_Color3"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7237230" a="1.00" b="65.3" ct="1.54" lId="BellHop_Color3"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="46.3" ct="1.14" lId="BellHop_Color3"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16238289" a="1.00" b="28.8" ct="1.95" lId="BellHop_Color3"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="44.3" ct="1.05" lId="BellHop_Color3"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="9719070" a="1.00" b="68.1" ct="1.54" lId="BellHop_Color3"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.85" b="23.6" ct="1.15" lId="BellHop_Color3"/>
+      <c id="Green" name="Green" icon="$bu/icon_green.png" c="3826479" a="1.00" b="68.1" ct="1.54" lId="BellHop_Color3"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="47.4" ct="1.04" lId="BellHop_Color3"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="38.3" ct="1.61" lId="BellHop_Color3"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="46.3" ct="1.14" lId="BellHop_Color3"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="8758471" a="1.00" b="51.1" ct="1.54" lId="BellHop_Color3"/>
+      <c id="FadedBlue" name="Faded blue" icon="$bu/icon_fadedblue.png" c="4745356" a="1.00" b="64.1" ct="2.00" lId="BellHop_Color3"/>
+      <c id="MedBlue" name="Jean blue" icon="$bu/icon_medblue.png" c="3297909" a="1.00" b="64.1" ct="2.00" lId="BellHop_Color3"/>
+      <c id="DarkBlue" icon="$bu/icon_darkblue.png" c="3822448" a="1.00" b="51.1" ct="1.54" lId="BellHop_Color3"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="6041443" a="1.00" b="68.1" ct="1.54" lId="BellHop_Color3"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.6" ct="0.76" lId="BellHop_Color3"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5525030" a="1.00" b="65.3" ct="1.54" lId="BellHop_Color3"/>
+      <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="4338962" a="1.00" b="65.3" ct="1.54" lId="BellHop_Color3"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.87" b="49.1" ct="1.05" lId="BellHop_Color3"/>
+      <c id="Black" icon="$bu/icon_black.png" c="4013373" a="1.00" b="66.8" ct="2.00" lId="BellHop_Color3"/>
+    </b>
+    <b id="BellHop_Color4" name="Color4" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="54.4" ct="1.35" lId="BellHop_Color4"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=420; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="BellHop_Color1"/>
+      <wizchoice id="Color2" name="Color2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="BellHop_Color2"/>
+      <wizchoice id="Color3" name="Color3" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="BellHop_Color3"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+</f>

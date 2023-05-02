@@ -1,0 +1,106 @@
+<item.WidgetItem id="3312" name="Hidden-Object" desc="Find all hidden objects in the picture" tags="admin,misc,widget" icon="items/base/antique/icon_a_magnifying_glass.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" viewDirection="vertical" widget="widgets/widget_hiddenobject.swf">
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,1.5,0.4"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+  </events>
+  <actions>
+    <action id="Win">
+      <eval>
+        <func type="relational" id="Opponent Name" input="opponent" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+    <action id="Complete">
+      <eval>
+        <func type="relational" id="Opponent Name" input="opponent" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <navigate standRange="2.00" targetRange="1.00" usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="200"/>
+    <entry key="widget_max_load_wait" value="400"/>
+    <entry key="control_xml_path" value="widgets/assets/hiddenobject/control-ui.mxml"/>
+    <entry key="config_xml_path" value="widgets/assets/hiddenobject/config-ui.mxml"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+  </data>
+  <textures>
+    <texture id="Shadow" source="items/base/antique/a_shadow_magnifyglass.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+    <texture id="Magnifying_Glass" source="items/base/antique/a_magnifying_glass.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Magnifying_Glass">
+      <box min="-0.4,0,-0.4" max="0.4,1.5,0.4"/>
+      <layers>
+        <layer id="Shadow" texture="Shadow" y="45">
+          <view/>
+        </layer>
+        <layer id="Magnifying_Glass" texture="Magnifying_Glass">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="origin">
+          <layerref id="Shadow"/>
+          <layerref id="Magnifying_Glass"/>
+        </frame>
+        <frame id="1 down a">
+          <layerref id="Shadow"/>
+          <layerref id="Magnifying_Glass" y="1"/>
+        </frame>
+        <frame id="2 down a">
+          <layerref id="Shadow"/>
+          <layerref id="Magnifying_Glass" y="2"/>
+        </frame>
+        <frame id="3 down">
+          <layerref id="Shadow"/>
+          <layerref id="Magnifying_Glass" y="3"/>
+        </frame>
+        <frame id="2 down b">
+          <layerref id="Shadow"/>
+          <layerref id="Magnifying_Glass" y="2"/>
+        </frame>
+        <frame id="1 down b">
+          <layerref id="Shadow"/>
+          <layerref id="Magnifying_Glass" y="1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="origin" duration="3"/>
+          <frameref id="1 down a" duration="2"/>
+          <frameref id="2 down a" duration="2"/>
+          <frameref id="3 down" duration="3"/>
+          <frameref id="2 down b" duration="2"/>
+          <frameref id="1 down b" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.1" s="2.6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="12">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light" y="-15" color="0xfcdada"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

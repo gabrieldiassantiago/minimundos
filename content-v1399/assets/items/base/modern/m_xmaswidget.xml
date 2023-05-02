@@ -1,0 +1,57 @@
+<item.WidgetItem name="Máquina de Recompensas Natalina" desc="Fabrique suas recompensas das missões de Natal" tags="rare,widget" icon="items/base/modern/icon_m_xmaswidget.png" price="10" tokens="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none" widget="widgets/widget_itemcrafter.swf" id="4908">
+  <volume>
+    <box min="-0.28,0,-0.38" max="0.28,0.8,0.38"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select_crafting_table.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="widget_min_load_wait" value="30000"/>
+    <entry key="widget_max_load_wait" value="31000"/>
+    <entry key="hasEditSecurity" value="true"/>
+    <entry key="craft_tag" value="craftable4"/>
+    <entry key="itemCraftIcon" value="context/item/action/icon_unwrap.png"/>
+  </data>
+  <textures>
+    <texture id="table" source="items/base/modern/m_xmaswidget.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="crafting tools">
+      <box min="-0.28,0,-0.38" max="0.28,0.8,0.38"/>
+      <layers>
+        <layer id="table" texture="table">
+          <view angle="45" x="5" y="30"/>
+          <view angle="135" row="1" x="7" y="30"/>
+          <view angle="225" col="1" row="1" x="-6" y="30"/>
+          <view angle="315" col="1" x="-6" y="30"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="table">
+          <layerref id="table"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" loop="false">
+          <frameref id="table"/>
+        </animation>
+        <animation id="Off" framerate="1" loop="false">
+          <frameref id="table"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,36 @@
+<item.SpriteItem id="3946" name="Mochila de Couro Chic's (Preta)" desc="Uma mochila de couro vintage fabricada com finos materias." tags="consumable,back,wear,actionbar,clothing,action_wearable_toggle,master_catalog_colorize" icon="items/base/consumables/clothing/accessory/acc_133_icon_vintage_black.png" price="1450" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2962,0,-0.2962" max="0.3346,0.2,0.2962"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/leatherbackpacks.xml"/>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top07/top07_frag_black_strap.xml"/>
+  </data>
+  <textures>
+    <texture id="hat" source="items/base/consumables/clothing/accessory/acc_133_item_vintage_black.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2962,0,-0.2962" max="0.3346,0.2,0.2962"/>
+      <layers>
+        <layer id="hat" texture="hat">
+          <view angle="45" x="-4" y="22"/>
+          <view angle="135" x="4" y="22" hm="true"/>
+          <view angle="225" col="1" x="5" y="31"/>
+          <view angle="315" col="1" x="-5" y="31" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

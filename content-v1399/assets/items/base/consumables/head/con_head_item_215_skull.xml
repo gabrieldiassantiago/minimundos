@@ -1,0 +1,40 @@
+<item.SpriteItem id="5972" name="Cabeça de Esqueleto Neon Verde Play" desc="Uma cabeça de esqueleto neon tagarela" tags="rare,head,consumable,animal,costume,wear,actionbar,halloween,action_wearable_toggle" icon="items/base/consumables/head/icon_con_head_215_skull.png" price="1210" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" premium="Y">
+  <volume>
+    <box min="-0.33,0,-0.33" max="0.33,0.7,0.33"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="nature+50"/>
+    <entry key="action_attributes_secondary" value="health+50,speed+50"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/consumables/head/con_head_generic_dropshadow.png" cols="1" rows="1"/>
+    <texture id="head" source="items/base/consumables/head/con_head_item_215_skull.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.33,0,-0.33" max="0.33,0.7,0.33"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view y="22" alpha="0"/>
+        </layer>
+        <layer id="head" texture="head">
+          <view angle="45" y="17"/>
+          <view angle="135" y="17" hm="true"/>
+          <view angle="225" col="1" y="17"/>
+          <view angle="315" col="1" y="17" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

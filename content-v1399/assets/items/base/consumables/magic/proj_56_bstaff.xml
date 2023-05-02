@@ -1,0 +1,138 @@
+<item.SpriteItem id="0" name="Black Hole Staff Projectile" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="proj_generic" source="items/base/consumables/magic/proj_56_bstaff.png" cols="3" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_proj_ring.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+    <texture id="glow" source="items/base/shared/s_fx_flare_ring_b.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+      <layers>
+        <layer id="FX 01" texture="proj_generic" y="18">
+          <view/>
+        </layer>
+        <layer id="FX 02" texture="proj_generic" y="18">
+          <view col="1"/>
+        </layer>
+        <layer id="FX 03" texture="proj_generic" y="18">
+          <view col="2"/>
+        </layer>
+        <layer id="FX 04" texture="proj_generic" y="18">
+          <view row="1"/>
+        </layer>
+        <layer id="FX 05" texture="proj_generic" y="18">
+          <view col="1" row="1"/>
+        </layer>
+        <layer id="FX 06" texture="proj_generic" y="18">
+          <view col="2" row="1"/>
+        </layer>
+        <layer id="light" texture="glow">
+          <view y="26"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="FX 01" color="0x4385e9" blend="screen"/>
+          <layerref id="light" color="0x4385e9" blend="add"/>
+        </frame>
+        <frame id="02">
+          <layerref id="FX 02" color="0x4385e9" blend="screen"/>
+          <layerref id="light" color="0x4385e9" blend="add"/>
+        </frame>
+        <frame id="03">
+          <layerref id="FX 03" color="0x4385e9" blend="screen"/>
+          <layerref id="light" color="0x4385e9" blend="add"/>
+        </frame>
+        <frame id="04">
+          <layerref id="FX 04" color="0x4385e9" blend="screen"/>
+          <layerref id="light" color="0x4385e9" blend="add"/>
+        </frame>
+        <frame id="05">
+          <layerref id="FX 05" color="0x4385e9" blend="screen"/>
+          <layerref id="light" color="0x4385e9" blend="add"/>
+        </frame>
+        <frame id="06">
+          <layerref id="FX 06" color="0x4385e9" blend="screen"/>
+          <layerref id="light" color="0x4385e9" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="8">
+          <frameref id="01">
+            <sample id="Sound"/>
+          </frameref>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x92caf0"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x92caf0" a="0.98"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.1" s="4" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x3b7de1" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

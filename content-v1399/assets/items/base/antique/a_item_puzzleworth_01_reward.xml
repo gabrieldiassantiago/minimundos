@@ -1,0 +1,56 @@
+<item.SpriteItem id="3354" name="Prêmio Sr. Charada" desc="Recompensa pela missão da Propriedade do Sr. Charada." tags="consumable,actionbar,wear,hand,real,usable,action_holdable_toggle" icon="items/base/antique/icon_a_item_puzzleworth_01_reward.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none" price="1">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.25,0.3"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_hold" script="scripts/item/action_wearable.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="select" script="scripts/item/select_holdable_container.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="puzzle_open" source="items/base/antique/a_item_puzzleworth_01_reward_open.png" cols="1" rows="1"/>
+    <texture id="puzzle_closed" source="items/base/antique/a_item_puzzleworth_01_reward_closed.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Barrel">
+      <box min="-0.3,0,-0.3" max="0.3,0.25,0.3"/>
+      <layers>
+        <layer id="Puzzle_Open" texture="puzzle_open" y="18">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Puzzle_Closed" texture="puzzle_closed" y="8">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Puzzle_Closed"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="Puzzle_Open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="Open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

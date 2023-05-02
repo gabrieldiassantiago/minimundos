@@ -1,0 +1,61 @@
+<item.ChairItem desc="Uma poltrona elegante e sofisticada." dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/modern/icon_m_chair_01_black.png" id="381" name="Poltrona Mayer" tags="chair" price="40" minLevel="1" minCPLevel="1">
+  <seats>
+    <seat x="0.12" y="0.42">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box max="0.3846,0.72,0.4" min="-0.4615,0,-0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture cols="2" id="Texture" rows="2" source="items/base/modern/m_chair_01_black.png"/>
+  </textures>
+  <nodes>
+    <node id="RightArm" x="0" y="0" z="0">
+      <box max="0.3846,0.72,0.4" min="-0.4615,0,-0.4"/>
+      <layers>
+        <layer align="middle" id="Layer" texture="Texture">
+          <view angle="45" col="1" row="0" x="-1" y="-27"/>
+          <view angle="135" col="0" mirror="true" row="0" x="2" y="-27"/>
+          <view angle="225" col="0" mirror="true" row="1" x="3" y="-21"/>
+          <view angle="315" col="1" row="1" x="-3" y="-20"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="LeftArm" x="0" y="0" z="0">
+      <box max="0.3846,0.72,0.4" min="-0.4615,0,-0.4"/>
+      <layers>
+        <layer align="middle" id="Layer" texture="Texture">
+          <view angle="45" col="0" row="0" x="-1" y="-27"/>
+          <view angle="135" col="1" mirror="true" row="0" x="2" y="-27"/>
+          <view angle="225" col="1" mirror="true" row="1" x="3" y="-21"/>
+          <view angle="315" col="0" row="1" x="-3" y="-20"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

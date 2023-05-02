@@ -1,0 +1,30 @@
+<item.SpriteItem id="4498" name="Estante Nordic (Pérola)" desc="Uma estante moderna branca" tags="table,master_catalog_colorize" icon="items/base/modern/icon_m_bookshelf_01_pearl.png" price="105" tokens="2100" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.3" max="0.14,2.78,1.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="cabinet" source="items/base/modern/m_bookshelf_01_pearl.png" cols="2" rows="1"/>
+  </textures>
+  <data>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/bookcases.xml"/>
+  </data>
+  <nodes>
+    <node id="Cabinet" z="0.5">
+      <box min="-0.49,0,-0.8" max="0.14,2.78,0.8"/>
+      <layers>
+        <layer id="cabinet" texture="cabinet">
+          <view angle="45" x="-17" y="55"/>
+          <view angle="135" col="1" x="17" y="55"/>
+          <view angle="225" col="1" x="10" y="63" hm="true"/>
+          <view angle="315" x="-8" y="65" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

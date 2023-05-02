@@ -1,0 +1,33 @@
+<item.SpriteItem id="3682" name="Bonequinho de Neve" desc="Um fofo boneco de neve." tags="wear,hand,usable,xmas,rare,action_wearable_toggle" icon="items/base/modern/icon_m_toy_snowman.png" price="125" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.7,0.2"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_toy_item_snowman.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="deer">
+      <box min="-0.2,0,-0.2" max="0.2,0.7,0.2"/>
+      <layers>
+        <layer id="deer" texture="Texture">
+          <view angle="45" x="2" y="18"/>
+          <view angle="135" x="-2" y="18" hm="true"/>
+          <view angle="225" col="1" x="2" y="16"/>
+          <view angle="315" col="1" x="-2" y="16" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

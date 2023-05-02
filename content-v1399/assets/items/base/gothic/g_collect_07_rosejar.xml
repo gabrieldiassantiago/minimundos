@@ -1,0 +1,125 @@
+<item.SpriteItem id="2664" name="Rosa Mágica na Cúpula" desc="Uma magia ancestral está guardada nesta rosa." tags="rare,misc" icon="items/base/gothic/icon_g_collect_07_rosejar.png" price="150" minLevel="1" minLevelType="4" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,1.05,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="box" source="items/base/gothic/g_collect_07_rosejar.png" cols="1" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="flake" source="items/base/gothic/g_collect_07_rosejar_decal.png" cols="3" rows="1"/>
+    <texture id="halo" source="items/base/gothic/g_collect_07_rosejar_halo.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,1.05,0.35"/>
+      <layers>
+        <layer id="box" texture="box" y="15">
+          <view angle="45" y="7"/>
+          <view angle="135" y="7" hm="true"/>
+          <view angle="225" y="7"/>
+          <view angle="315" y="7" hm="true"/>
+        </layer>
+        <layer id="flake01" texture="flake" y="15">
+          <view angle="45" x="1" y="7" hm="true"/>
+          <view angle="135" x="-1" y="7"/>
+          <view angle="225" x="1" y="7" hm="true"/>
+          <view angle="315" x="-1" y="7"/>
+        </layer>
+        <layer id="flake02" texture="flake" y="15">
+          <view angle="45" col="1" x="1" y="7" hm="true"/>
+          <view angle="135" col="1" x="-1" y="7"/>
+          <view angle="225" col="1" x="1" y="7" hm="true"/>
+          <view angle="315" col="1" x="-1" y="7"/>
+        </layer>
+        <layer id="flake03" texture="flake" y="15">
+          <view angle="45" col="2" x="1" y="7" hm="true"/>
+          <view angle="135" col="2" x="-1" y="7"/>
+          <view angle="225" col="2" x="1" y="7" hm="true"/>
+          <view angle="315" col="2" x="-1" y="7"/>
+        </layer>
+        <layer id="halo" texture="halo" y="15">
+          <view angle="45" y="7"/>
+          <view angle="135" y="7" hm="true"/>
+          <view angle="225" y="7"/>
+          <view angle="315" y="7" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle01">
+          <layerref id="halo"/>
+          <layerref id="box"/>
+        </frame>
+        <frame id="idle02">
+          <layerref id="halo" a="0.9"/>
+          <layerref id="box"/>
+        </frame>
+        <frame id="idle03">
+          <layerref id="halo" a="0.8"/>
+          <layerref id="box"/>
+        </frame>
+        <frame id="idle04">
+          <layerref id="halo" a="0.7"/>
+          <layerref id="box"/>
+        </frame>
+        <frame id="idle05">
+          <layerref id="halo" a="0.6"/>
+          <layerref id="box"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="halo"/>
+          <layerref id="box"/>
+          <layerref id="flake01" color="0xf9dbf9"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="halo" a="0.9"/>
+          <layerref id="box"/>
+          <layerref id="flake02" color="0xf9dbf9"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="halo" a="0.8"/>
+          <layerref id="box"/>
+          <layerref id="flake03" color="0xf9dbf9"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="halo" a="0.7"/>
+          <layerref id="box"/>
+          <layerref id="flake01" color="0xf9dbf9"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="halo" a="0.6"/>
+          <layerref id="box"/>
+          <layerref id="flake02" color="0xf9dbf9"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="3.1" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" y="4"/>
+          <view angle="135" y="4" hm="true"/>
+          <view angle="225" y="4"/>
+          <view angle="315" y="4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf7a4a4" a="0.5"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

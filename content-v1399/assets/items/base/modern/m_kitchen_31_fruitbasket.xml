@@ -1,0 +1,40 @@
+<item.SpriteItem id="2790" name="Cesta de Frutas" desc="Para cozinhar como um Mestre." tags="misc" icon="items/base/modern/icon_m_kitchen_31_fruitbasket.png" price="30" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.4" max="0.2,0.4,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="fruit" source="items/base/modern/m_kitchen_31_fruitbasket.png" cols="2" rows="1"/>
+  </textures>
+  <sounds/>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.4" max="0.2,0.4,0.4"/>
+      <layers>
+        <layer id="fruit" texture="fruit" y="15">
+          <view angle="45" y="1"/>
+          <view angle="135" y="1" hm="true"/>
+          <view angle="225" col="1" y="1"/>
+          <view angle="315" col="1" y="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle01">
+          <layerref id="fruit"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

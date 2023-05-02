@@ -1,0 +1,27 @@
+<f id="Top00_01_BellyRing" parentId="Top00">
+  <g id="BellyRing" name="Belly Button Ring" icon="items/base/consumables/clothing/top00/top_00_01_icon_bellyring.png">
+    <s id="BellyButtonBase" cId="Torso" s="items/base/consumables/clothing/top00/top00_01_bellyring.png" pri="0.9"/>
+    <c sId="BellyButtonBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top00_Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop00_01" icon="items/base/consumables/clothing/top00/top_00_01_icon_bellyring.png" w="48" h="48"/>
+    <s id="IconTop00_01Base" cId="IconTop00_01" s="items/base/consumables/clothing/top00/top_00_01_icon_bellyring.png"/>
+    <c sId="IconTop00_01Base" c="1561765" a="0.99" b="46.3" ct="1.14" lId="Top00_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top00_01Color1" name="Color" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top00_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="56.4" ct="1.90" lId="Top00_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="46.3" ct="1.14" lId="Top00_Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="1.00" b="48.8" ct="1.46" lId="Top00_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top00_Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="53.9" ct="1.95" lId="Top00_Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top00_Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="46.3" ct="1.14" lId="Top00_Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Top00_Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top00_01Color1"/>
+    </wizbox>
+  </g>
+</f>

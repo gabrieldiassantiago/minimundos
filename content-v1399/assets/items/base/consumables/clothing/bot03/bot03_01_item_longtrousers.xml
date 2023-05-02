@@ -1,0 +1,90 @@
+<item.SpriteItem id="1811" name="Calça Básica" desc="Todo guarda roupa precisa de uma." tags="consumable,clothing,clothing_basic,actionbar,wear,bot03,action_wearable_toggle" icon="items/base/consumables/clothing/bot03/bot03_01_icon_longtrousers_a.png" price="75" tokens="750" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.24,0,-0.21" max="0.86,0.09,0.21"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable_cycle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/bot03/bot03_01_frag_pant.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="count" value="4"/>
+    <entry key="00" value="blue"/>
+    <entry key="01" value="black"/>
+    <entry key="02" value="brown"/>
+    <entry key="03" value="purple"/>
+  </data>
+  <textures>
+    <texture id="blue" source="items/base/consumables/clothing/bot03/bot03_01_item_longtrousers.png" cols="2" rows="1"/>
+    <texture id="black" source="items/base/consumables/clothing/bot03/bot03_01_item_longtrousers_black.png" cols="2" rows="1"/>
+    <texture id="brown" source="items/base/consumables/clothing/bot03/bot03_01_item_longtrousers_brown.png" cols="2" rows="1"/>
+    <texture id="purple" source="items/base/consumables/clothing/bot03/bot03_01_item_longtrousers_purple.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.21" max="0.86,0.09,0.21"/>
+      <layers>
+        <layer id="blue" texture="blue" y="19">
+          <view angle="45" x="19" y="19"/>
+          <view angle="135" x="-19" y="19" hm="true"/>
+          <view angle="225" col="1" x="-19" y="2"/>
+          <view angle="315" col="1" x="19" y="2" hm="true"/>
+        </layer>
+        <layer id="black" texture="black" y="19">
+          <view angle="45" x="19" y="19"/>
+          <view angle="135" x="-19" y="19" hm="true"/>
+          <view angle="225" col="1" x="-19" y="2"/>
+          <view angle="315" col="1" x="19" y="2" hm="true"/>
+        </layer>
+        <layer id="brown" texture="brown" y="19">
+          <view angle="45" x="19" y="19"/>
+          <view angle="135" x="-19" y="19" hm="true"/>
+          <view angle="225" col="1" x="-19" y="2"/>
+          <view angle="315" col="1" x="19" y="2" hm="true"/>
+        </layer>
+        <layer id="purple" texture="purple" y="19">
+          <view angle="45" x="19" y="19"/>
+          <view angle="135" x="-19" y="19" hm="true"/>
+          <view angle="225" col="1" x="-19" y="2"/>
+          <view angle="315" col="1" x="19" y="2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="blue"/>
+        </frame>
+        <frame id="01">
+          <layerref id="black"/>
+        </frame>
+        <frame id="02">
+          <layerref id="brown"/>
+        </frame>
+        <frame id="03">
+          <layerref id="purple"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="2">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01" framerate="2">
+          <frameref id="01"/>
+        </animation>
+        <animation id="02" framerate="2">
+          <frameref id="02"/>
+        </animation>
+        <animation id="03" framerate="2">
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

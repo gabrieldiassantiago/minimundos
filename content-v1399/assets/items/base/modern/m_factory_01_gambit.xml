@@ -1,0 +1,268 @@
+<item.WidgetItem id="1377" name="Gambit Machine" desc="Earn gold by completing Gambit tasks" tags="admin,widget" icon="items/base/modern/icon_m_factory_01_gambit.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_url_iframe.swf" price="99" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.1,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+  </events>
+  <data>
+    <entry key="frame" value="modern"/>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_button" value="EARN GOLD"/>
+    <entry key="control_button_tooltip" value="Earn gold through by completing Gambit offers"/>
+    <entry key="widget_background_override" value="widget/FactoryBG.jpg"/>
+    <entry key="widget_iframe_file" value="offers/container.html?service_id=1"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="iframeWidget" value="true"/>
+  </data>
+  <navigate position="infront" sitRange="3.00" standRange="3.00" targetRange="3.00"/>
+  <textures>
+    <texture id="base" source="items/base/modern/m_factory_01_base.png" cols="1" rows="1"/>
+    <texture id="ctrl" source="items/base/modern/m_factory_01_ctrl.png" cols="2" rows="1"/>
+    <texture id="branding" source="items/base/modern/m_factory_01_gambit.png" cols="2" rows="1"/>
+    <texture id="siren" source="items/base/modern/m_factory_01_siren.png" cols="1" rows="1"/>
+    <texture id="glows" source="items/base/consumables/magic/effect_generic_vialglow.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" z="0.5">
+      <box min="-0.49,0,-0.99" max="0.49,2.1,0.99"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" x="-1" y="50"/>
+          <view angle="135" x="1" y="50" hm="true"/>
+          <view angle="225" x="-1" y="50"/>
+          <view angle="315" x="1" y="50" hm="true"/>
+        </layer>
+        <layer id="ctrl" texture="ctrl">
+          <view angle="45" x="43" y="22"/>
+          <view angle="135" x="-43" y="22" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="hatch" texture="ctrl">
+          <view angle="45" alpha="0"/>
+          <view angle="135" col="1" x="62" y="-22" hm="true"/>
+          <view angle="225" col="1" x="-62" y="-22"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="branding" texture="branding">
+          <view angle="45" x="29" y="-33"/>
+          <view angle="135" col="1" x="-29" y="-33"/>
+          <view angle="225" x="29" y="-33"/>
+          <view angle="315" col="1" x="-29" y="-33"/>
+        </layer>
+        <layer id="siren 01" texture="siren">
+          <view angle="45" x="-32" y="-99"/>
+          <view angle="135" x="-77" y="-153" hm="true"/>
+          <view angle="225" x="30" y="-176"/>
+          <view angle="315" x="79" y="-121" hm="true"/>
+        </layer>
+        <layer id="siren 02" texture="siren">
+          <view angle="45" x="77" y="-153"/>
+          <view angle="135" x="31" y="-98" hm="true"/>
+          <view angle="225" x="-79" y="-122"/>
+          <view angle="315" x="-29" y="-176" hm="true"/>
+        </layer>
+        <layer id="back glow 01" texture="glows">
+          <view angle="45" col="1" x="-32" y="-101"/>
+          <view angle="135" col="1" x="-76" y="-156" hm="true"/>
+          <view angle="225" col="1" x="30" y="-179"/>
+          <view angle="315" col="1" x="80" y="-124" hm="true"/>
+        </layer>
+        <layer id="back glow 02" texture="glows">
+          <view angle="45" col="1" x="77" y="-156"/>
+          <view angle="135" col="1" x="32" y="-101" hm="true"/>
+          <view angle="225" col="1" x="-79" y="-125"/>
+          <view angle="315" col="1" x="-28" y="-179" hm="true"/>
+        </layer>
+        <layer id="glow 01 A" texture="glows">
+          <view angle="45" x="-34" y="-102"/>
+          <view angle="135" x="-78" y="-157" hm="true"/>
+          <view angle="225" x="28" y="-180"/>
+          <view angle="315" x="78" y="-125" hm="true"/>
+        </layer>
+        <layer id="glow 01 B" texture="glows">
+          <view angle="45" x="-32" y="-101"/>
+          <view angle="135" x="-76" y="-156" hm="true"/>
+          <view angle="225" x="30" y="-179"/>
+          <view angle="315" x="80" y="-124" hm="true"/>
+        </layer>
+        <layer id="glow 01 C" texture="glows">
+          <view angle="45" x="-30" y="-102"/>
+          <view angle="135" x="-74" y="-157" hm="true"/>
+          <view angle="225" x="32" y="-180"/>
+          <view angle="315" x="82" y="-125" hm="true"/>
+        </layer>
+        <layer id="glow 02 A" texture="glows">
+          <view angle="45" col="1" x="75" y="-157"/>
+          <view angle="135" col="1" x="30" y="-102" hm="true"/>
+          <view angle="225" col="1" x="-81" y="-126"/>
+          <view angle="315" col="1" x="-30" y="-180" hm="true"/>
+        </layer>
+        <layer id="glow 02 B" texture="glows">
+          <view angle="45" col="1" x="77" y="-156"/>
+          <view angle="135" col="1" x="32" y="-101" hm="true"/>
+          <view angle="225" col="1" x="-79" y="-125"/>
+          <view angle="315" col="1" x="-28" y="-179" hm="true"/>
+        </layer>
+        <layer id="glow 02 C" texture="glows">
+          <view angle="45" col="1" x="79" y="-157"/>
+          <view angle="135" col="1" x="34" y="-102" hm="true"/>
+          <view angle="225" col="1" x="-77" y="-126"/>
+          <view angle="315" col="1" x="-26" y="-180" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="lights 01">
+          <layerref id="branding"/>
+          <layerref id="base"/>
+          <layerref id="ctrl"/>
+          <layerref id="hatch"/>
+          <layerref id="back glow 01" color="0x37ff42" a="0.4"/>
+          <layerref id="back glow 02" color="0x37ff42" a="0.4"/>
+          <layerref id="siren 01"/>
+          <layerref id="siren 02"/>
+          <layerref id="glow 01 A" color="0xf3f1e1" a="0.8" blend="hardlight"/>
+          <layerref id="glow 02 A" color="0xf3f1e1" a="0.8" blend="hardlight"/>
+        </frame>
+        <frame id="lights 02">
+          <layerref id="branding"/>
+          <layerref id="base"/>
+          <layerref id="ctrl"/>
+          <layerref id="hatch"/>
+          <layerref id="back glow 01" color="0x37ff42" a="0.4"/>
+          <layerref id="back glow 02" color="0x37ff42" a="0.4"/>
+          <layerref id="siren 01"/>
+          <layerref id="siren 02"/>
+          <layerref id="glow 01 B" color="0xf3f1e1" blend="hardlight"/>
+          <layerref id="glow 02 B" color="0xf3f1e1" blend="hardlight"/>
+        </frame>
+        <frame id="lights 03">
+          <layerref id="branding"/>
+          <layerref id="base"/>
+          <layerref id="ctrl"/>
+          <layerref id="hatch"/>
+          <layerref id="back glow 01" color="0x37ff42" a="0.4"/>
+          <layerref id="back glow 02" color="0x37ff42" a="0.4"/>
+          <layerref id="siren 01"/>
+          <layerref id="siren 02"/>
+          <layerref id="glow 01 C" color="0xf3f1e1" a="0.8" blend="hardlight"/>
+          <layerref id="glow 02 C" color="0xf3f1e1" a="0.8" blend="hardlight"/>
+        </frame>
+        <frame id="lights 04">
+          <layerref id="branding"/>
+          <layerref id="base"/>
+          <layerref id="ctrl"/>
+          <layerref id="hatch"/>
+          <layerref id="back glow 01" color="0x37ff42" a="0.4"/>
+          <layerref id="back glow 02" color="0x37ff42" a="0.4"/>
+          <layerref id="siren 01"/>
+          <layerref id="siren 02"/>
+          <layerref id="glow 01 B" color="0xf3f1e1" a="0.4" blend="hardlight"/>
+          <layerref id="glow 02 B" color="0xf3f1e1" a="0.4" blend="hardlight"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="lights 01"/>
+          <frameref id="lights 02"/>
+          <frameref id="lights 03"/>
+          <frameref id="lights 04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.7" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light 01" texture="Light" align="middle">
+          <view angle="45" x="2"/>
+          <view angle="135" x="-21" y="-10"/>
+          <view angle="225" y="-22"/>
+          <view angle="315" x="24" y="-10"/>
+        </layer>
+        <layer id="Light 02" texture="Light" align="middle">
+          <view angle="45" x="54" y="-26"/>
+          <view angle="135" x="32" y="15"/>
+          <view angle="225" x="-55" y="4"/>
+          <view angle="315" x="-29" y="-39"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="on 01">
+          <layerref id="Light 01" color="0x66ff66" a="0.5"/>
+          <layerref id="Light 02" color="0x66ff66" a="0.5"/>
+        </frame>
+        <frame id="on 02">
+          <layerref id="Light 01" color="0x66ff66" a="0.75"/>
+          <layerref id="Light 02" color="0x66ff66" a="0.75"/>
+        </frame>
+        <frame id="on 03">
+          <layerref id="Light 01" color="0x66ff66"/>
+          <layerref id="Light 02" color="0x66ff66"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light 01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="on 01"/>
+          <frameref id="on 02"/>
+          <frameref id="on 03"/>
+          <frameref id="on 02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="1.7" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light 01" texture="Intense" align="middle">
+          <view angle="45" x="2"/>
+          <view angle="135" x="-21" y="-10"/>
+          <view angle="225" y="-22"/>
+          <view angle="315" x="25" y="-9"/>
+        </layer>
+        <layer id="Light 02" texture="Intense" align="middle">
+          <view angle="45" x="57" y="-25"/>
+          <view angle="135" x="33" y="17"/>
+          <view angle="225" x="-53" y="5"/>
+          <view angle="315" x="-28" y="-36"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="on 01">
+          <layerref id="Light 01" a="0.5"/>
+          <layerref id="Light 02" a="0.5"/>
+        </frame>
+        <frame id="on 02">
+          <layerref id="Light 01" a="0.8"/>
+          <layerref id="Light 02" a="0.75"/>
+        </frame>
+        <frame id="on 03">
+          <layerref id="Light 01" a="0.9"/>
+          <layerref id="Light 02" a="0.9"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light 01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="on 01"/>
+          <frameref id="on 02"/>
+          <frameref id="on 03"/>
+          <frameref id="on 02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,50 @@
+<f id="Top06_101_Headless" parentId="Top06">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top06_101TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_101_headless_torso_m.png" pri="6"/>
+      <s id="Top06_101TorsoMaleDecal" cId="Torso" s="items/base/consumables/clothing/top06/top06_101_headless_torso_decal_m.png" pri="6"/>
+    </g>
+    <g id="Female">
+      <s id="Top06_101TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_101_headless_torso_f.png" pri="6"/>
+      <s id="Top06_101TorsoFemaleDecal" cId="Torso" s="items/base/consumables/clothing/top06/top06_101_headless_torso_decal_f.png" pri="6"/>
+    </g>
+  </b>
+  <g id="Arm" name="Arm" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_101ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_101_idle.png" pri="6"/>
+    <s id="Top06_101ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_101_walk1.png" pri="6"/>
+    <s id="Top06_101ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_101_walk2.png" pri="6"/>
+    <s id="Top06_101ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_101_walk3.png" pri="6"/>
+    <s id="Top06_101ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_101_sit.png" pri="6"/>
+    <s id="Top06_101ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_101_throw.png" pri="6"/>
+    <s id="Top06_101ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_101_raise.png" pri="6"/>
+  </g>
+  <g id="Leg" name="Leg" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_101BottomIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_101_leg_idle.png" pri="6"/>
+    <s id="Top06_101BottomWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_101_leg_walk1.png" pri="6"/>
+    <s id="Top06_101BottomWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_101_leg_walk2.png" pri="6"/>
+    <s id="Top06_101BottomWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_101_leg_walk3.png" pri="6"/>
+    <s id="Top06_101BottomWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_101_leg_walk4.png" pri="6"/>
+    <s id="Top06_101BottomSit" cId="LegSitUpper" s="items/base/consumables/clothing/top06/top06_101_leg_sit.png" pri="6"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_101" icon="items/base/consumables/clothing/top06/top06_101_headless_icon.png" w="48" h="48"/>
+    <s id="IconTop06_101IconRare" cId="IconTop06_101" s="items/base/consumables/clothing/top01/top01_rare.png" pri="2"/>
+    <s id="IconTop06_101Base" cId="IconTop06_101" s="items/base/consumables/clothing/top06/top06_101_headless_icon.png" pri="1"/>
+  </g>
+  <g id="Hands" icon="$bm/icon_m_retro.png">
+    <s id="Hand_Idle" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_101_hand_idle.png" pri="1"/>
+    <s id="Hand_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_101_hand_walk1.png" pri="1"/>
+    <s id="Hand_Walk2" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_101_hand_walk2.png" pri="1"/>
+    <s id="Hand_Walk3" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_101_hand_walk3.png" pri="1"/>
+    <s id="Hand_Sit" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_101_hand_sit.png" pri="1"/>
+    <s id="Hand_Wave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/top06/top06_101_hand_wave1.png" pri="1"/>
+    <s id="Hand_Wave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/top06/top06_101_hand_wave2.png" pri="1"/>
+    <s id="Hand_Hold" cId="ArmThrowHold" s="items/base/consumables/clothing/top06/top06_101_hand_hold.png" pri="1"/>
+    <s id="Hand_Open" cId="ArmThrowOpen" s="items/base/consumables/clothing/top06/top06_101_hand_open.png" pri="1"/>
+    <s id="Hand_Point" cId="ArmThrowPoint" s="items/base/consumables/clothing/top06/top06_101_hand_point.png" pri="1"/>
+    <s id="Hand_Stop" cId="ArmThrowStop" s="items/base/consumables/clothing/top06/top06_101_hand_stop.png" pri="1"/>
+    <s id="Hand_Throw" cId="ArmThrowThrow" s="items/base/consumables/clothing/top06/top06_101_hand_throw.png" pri="1"/>
+    <s id="Hand_Thumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/top06/top06_101_hand_thumbs.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

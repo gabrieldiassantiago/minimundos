@@ -1,0 +1,132 @@
+<item.SpriteItem id="0" name="Raccoon" desc="Collectible (April 2014)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="redpanda" source="items/base/consumables/head/con_head_253_kittentiger.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_253_kittentiger_blink.png" cols="3" rows="1"/>
+    <texture id="tongue" source="items/base/consumables/head/con_head_221_mainecat_lick.png" cols="3" rows="4"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="redpanda" texture="redpanda">
+          <view angle="0" col="2" x="-2" y="29" hm="true"/>
+          <view angle="45" x="-1" y="35"/>
+          <view angle="90" col="1" y="37"/>
+          <view angle="135" y="35" hm="true"/>
+          <view angle="180" col="2" x="2" y="29"/>
+          <view angle="225" col="3" x="3" y="27"/>
+          <view angle="270" col="4" y="26"/>
+          <view angle="315" col="3" x="-3" y="27" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="19" y="4" hm="true"/>
+          <view angle="45" x="10" y="6"/>
+          <view angle="90" col="1" y="10"/>
+          <view angle="135" x="-11" y="6" hm="true"/>
+          <view angle="180" col="2" x="-19" y="4"/>
+          <view angle="225" col="2" y="14" alpha="0"/>
+          <view angle="270" col="2" y="18" alpha="0"/>
+          <view angle="315" col="2" x="-1" y="14" alpha="0" hm="true"/>
+        </layer>
+        <layer id="tongue_01" texture="tongue">
+          <view angle="0" col="2" x="22" y="5"/>
+          <view angle="45" x="14" y="12"/>
+          <view angle="90" col="1" x="-3" y="15"/>
+          <view angle="135" x="-15" y="12" hm="true"/>
+          <view angle="180" col="2" x="-23" y="5" hm="true"/>
+          <view angle="225" col="2" x="3" y="27" alpha="0"/>
+          <view angle="270" col="2" y="26" alpha="0"/>
+          <view angle="315" col="2" x="-3" y="27" alpha="0" hm="true"/>
+        </layer>
+        <layer id="tongue_02" texture="tongue">
+          <view angle="0" col="2" row="1" x="22" y="5"/>
+          <view angle="45" row="1" x="14" y="12"/>
+          <view angle="90" col="1" row="1" x="-3" y="15"/>
+          <view angle="135" row="1" x="-15" y="12" hm="true"/>
+          <view angle="180" col="2" row="1" x="-23" y="5" hm="true"/>
+          <view angle="225" col="2" row="1" x="3" y="27" alpha="0"/>
+          <view angle="270" col="2" row="1" y="26" alpha="0"/>
+          <view angle="315" col="2" row="1" x="-3" y="27" alpha="0" hm="true"/>
+        </layer>
+        <layer id="tongue_03" texture="tongue">
+          <view angle="0" col="2" row="2" x="22" y="5"/>
+          <view angle="45" row="2" x="14" y="12"/>
+          <view angle="90" col="1" row="2" x="-3" y="15"/>
+          <view angle="135" row="2" x="-15" y="12" hm="true"/>
+          <view angle="180" col="2" row="2" x="-23" y="5" hm="true"/>
+          <view angle="225" col="2" row="2" x="3" y="27" alpha="0"/>
+          <view angle="270" col="2" row="2" y="26" alpha="0"/>
+          <view angle="315" col="2" row="2" x="-3" y="27" alpha="0" hm="true"/>
+        </layer>
+        <layer id="tongue_04" texture="tongue">
+          <view angle="0" col="2" row="3" x="22" y="5"/>
+          <view angle="45" row="3" x="14" y="12"/>
+          <view angle="90" col="1" row="3" x="-3" y="15"/>
+          <view angle="135" row="3" x="-15" y="12" hm="true"/>
+          <view angle="180" col="2" row="3" x="-23" y="5" hm="true"/>
+          <view angle="225" col="2" row="3" x="3" y="27" alpha="0"/>
+          <view angle="270" col="2" row="3" y="26" alpha="0"/>
+          <view angle="315" col="2" row="3" x="-3" y="27" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Blink">
+          <layerref id="redpanda"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="Normal">
+          <layerref id="redpanda"/>
+        </frame>
+        <frame id="tongue_01">
+          <layerref id="redpanda"/>
+          <layerref id="tongue_01"/>
+        </frame>
+        <frame id="tongue_02">
+          <layerref id="redpanda"/>
+          <layerref id="tongue_02"/>
+        </frame>
+        <frame id="tongue_03">
+          <layerref id="redpanda"/>
+          <layerref id="tongue_03"/>
+        </frame>
+        <frame id="tongue_04">
+          <layerref id="redpanda"/>
+          <layerref id="tongue_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="12">
+          <frameref id="Normal" duration="36"/>
+          <frameref id="Blink" duration="2"/>
+          <frameref id="Normal" duration="24"/>
+          <frameref id="Blink" duration="2"/>
+          <frameref id="Normal" duration="2"/>
+          <frameref id="Blink" duration="2"/>
+          <frameref id="Normal" duration="48"/>
+          <frameref id="Blink" duration="2"/>
+          <frameref id="Normal" duration="16"/>
+          <frameref id="Blink" duration="2"/>
+          <frameref id="Normal" duration="2"/>
+          <frameref id="Blink" duration="2"/>
+          <frameref id="Normal" duration="16"/>
+          <frameref id="tongue_01" duration="2"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_04"/>
+          <frameref id="Normal" duration="8"/>
+          <frameref id="tongue_01" duration="2"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_03"/>
+          <frameref id="Normal" duration="6"/>
+          <frameref id="Blink" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

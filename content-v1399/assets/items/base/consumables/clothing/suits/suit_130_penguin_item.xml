@@ -1,0 +1,51 @@
+<item.SpriteItem id="6526" name="Traje de Pinguim Play" desc="Um traje super fofo de animal" tags="consumable,clothing,actionbar,action_wearable_toggle,wear,suits,nopvp" icon="items/base/consumables/clothing/suits/suit_130_penguin_icon_a.png" price="1995" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_130_frag_penguin.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+25"/>
+    <entry key="action_attributes" value="frost+50"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/consumables/clothing/suits/suit_130_penguin_base_item.png" cols="2" rows="1"/>
+    <texture id="penguin" source="items/base/consumables/clothing/suits/suit_130_penguin_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+      <layers>
+        <layer id="Base" texture="base">
+          <view angle="45" x="2" y="35"/>
+          <view angle="135" x="-6" y="35" hm="true"/>
+          <view angle="225" col="1" x="-3" y="31"/>
+          <view angle="315" col="1" x="2" y="31" hm="true"/>
+        </layer>
+        <layer id="Penguin" texture="penguin" y="15">
+          <view angle="45" x="-4" y="-2"/>
+          <view angle="135" x="-2" y="-2" hm="true"/>
+          <view angle="225" col="1" x="2" y="-2"/>
+          <view angle="315" col="1" x="-2" y="-2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Base"/>
+          <layerref id="Penguin"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

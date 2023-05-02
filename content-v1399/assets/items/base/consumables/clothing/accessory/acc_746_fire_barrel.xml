@@ -1,0 +1,126 @@
+<item.SpriteItem id="6555" name="Barril em Chamas Rebelde Deluxe" desc="Um barril em chamas" tags="rare,misc,floor" icon="items/base/consumables/clothing/accessory/acc_746_icon_fire_barrel.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.15,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/accessory/acc_746_fire_barrel.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Lid" source="items/base/consumables/clothing/accessory/acc_746_fire_lid.png" cols="2" rows="1"/>
+    <texture id="Flames" source="items/base/consumables/clothing/accessory/acc_746_fire_flames.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Barrel">
+      <box min="-0.49,0,-0.49" max="0.49,2.15,0.49"/>
+      <layers>
+        <layer id="Base" texture="Base">
+          <view angle="45" y="26"/>
+          <view angle="135" y="26" hm="true"/>
+          <view angle="225" col="1" x="1" y="26"/>
+          <view angle="315" col="1" y="26" hm="true"/>
+        </layer>
+        <layer id="Flames01" texture="Flames">
+          <view y="-68"/>
+        </layer>
+        <layer id="Flames02" texture="Flames">
+          <view col="1" x="1" y="-69"/>
+        </layer>
+        <layer id="Flames03" texture="Flames">
+          <view row="1" y="-67"/>
+        </layer>
+        <layer id="Flames04" texture="Flames">
+          <view col="1" row="1" x="-1" y="-68"/>
+        </layer>
+        <layer id="Lid" texture="Lid">
+          <view angle="45" y="-73"/>
+          <view angle="135" y="-73" hm="true"/>
+          <view angle="225" col="1" x="1" y="-72"/>
+          <view angle="315" col="1" x="2" y="-72" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Base"/>
+          <layerref id="Flames01"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Base"/>
+          <layerref id="Flames02"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Base"/>
+          <layerref id="Flames03"/>
+        </frame>
+        <frame id="On04">
+          <layerref id="Base"/>
+          <layerref id="Flames04"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Base"/>
+          <layerref id="Lid"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="6">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open" framerate="6">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-22"/>
+          <view angle="135" y="-22" hm="true"/>
+          <view angle="225" y="-22"/>
+          <view angle="315" y="-22" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light" color="0xedc179"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light" color="0xedc179" a="0.9"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Light" color="0xedc179" a="0.8"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open" framerate="6">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,256 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0.2,0" max="0,0.2,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_108_ufo_angled.png" cols="2" rows="1"/>
+    <texture id="front_back" source="items/base/consumables/feet/con_feet_108_ufo_frontback.png" cols="2" rows="1"/>
+    <texture id="Flames" source="items/base/consumables/feet/con_feet_108_ufo_tail.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.2">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="base" texture="base" y="45">
+          <view angle="0" col="2" alpha="0"/>
+          <view angle="45" x="10" y="-15" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" x="-5" y="-13" alpha="0" hm="true"/>
+          <view angle="180" col="2" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-3" y="-23" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="1" alpha="0" hm="true"/>
+        </layer>
+        <layer id="front_back" texture="front_back" y="45">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" y="-65"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Flames01" texture="Flames">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" col="1" x="-49" y="-26" alpha="0"/>
+          <view angle="90" col="1" x="-5" y="-100"/>
+          <view angle="135" col="1" x="54" y="-23" alpha="0" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="4" alpha="0" hm="true"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="4" alpha="0"/>
+        </layer>
+        <layer id="Flames02" texture="Flames">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" col="1" row="1" x="-54" y="-29" alpha="0"/>
+          <view angle="90" col="1" x="-5" y="-100"/>
+          <view angle="135" col="1" row="1" x="61" y="-28" alpha="0" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="4" alpha="0" hm="true"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="4" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="base"/>
+          <layerref id="front_back"/>
+        </frame>
+        <frame id="Idle01">
+          <layerref id="base" y="1"/>
+          <layerref id="front_back" y="1"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="base" y="2"/>
+          <layerref id="front_back" y="2"/>
+        </frame>
+        <frame id="Sit"/>
+        <frame id="Walk01">
+          <layerref id="Flames01" a="0.5"/>
+          <layerref id="Flames02" a="0.25" blend="overlay"/>
+          <layerref id="base"/>
+          <layerref id="front_back"/>
+        </frame>
+        <frame id="Walk02">
+          <layerref id="Flames02" a="0.4"/>
+          <layerref id="Flames01" a="0.25"/>
+          <layerref id="base"/>
+          <layerref id="front_back"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="3">
+          <frameref id="Idle"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Walk01"/>
+          <frameref id="Walk02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Red" texture="beam_light" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="5" y="-9"/>
+          <view angle="90" y="-9"/>
+          <view angle="135" x="-5" y="-9" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Blue" texture="beam_light" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="5" y="-9"/>
+          <view angle="90" y="-9"/>
+          <view angle="135" x="-5" y="-9" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="White" texture="beam_light" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="5" y="-9"/>
+          <view angle="90" y="-9"/>
+          <view angle="135" x="-5" y="-9" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="red">
+          <layerref id="Red" color="0xf37373" a="0.8" blend="add"/>
+        </frame>
+        <frame id="blue">
+          <layerref id="Blue" color="0x7ad3eb" a="0.8" blend="add"/>
+        </frame>
+        <frame id="White">
+          <layerref id="White" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="White"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="White"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="red" duration="2"/>
+          <frameref id="blue" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Red" texture="Intense" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="73" y="-41"/>
+          <view angle="90" x="20" y="-22"/>
+          <view angle="135" x="-61" y="-38" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="1" y="-37" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Blue" texture="Intense" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="41" y="-27"/>
+          <view angle="90" x="-21" y="-23"/>
+          <view angle="135" x="-31" y="-22" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="1" y="-37" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="White" texture="Intense" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="41" y="-27" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="1" y="-37" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On Red">
+          <layerref id="Red" color="0xd83737"/>
+        </frame>
+        <frame id="On Blue">
+          <layerref id="Blue" color="0x4aa6e7"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Red" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="On Red" duration="2"/>
+          <frameref id="On Blue" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,36 @@
+<item.SpriteItem id="6398" name="Harpa Natalina para Segurar" desc="Uma linda harpa para segurar" tags="rare,consumable,actionbar,wear,hand,usable,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_704_icon_xmasharp.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.27,0,-0.27" max="0.27,0.98,0.27"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="frost+25"/>
+    <entry key="action_attributes_secondary" value="health+15,speed+25"/>
+  </data>
+  <textures>
+    <texture id="CandyCane" source="items/base/consumables/clothing/accessory/acc_704_item_xmasharp.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="FruitPhoneGen1">
+      <box min="-0.27,0,-0.27" max="0.27,0.98,0.27"/>
+      <layers>
+        <layer id="CandyCane" texture="CandyCane">
+          <view angle="45" x="-6" y="11"/>
+          <view angle="135" x="6" y="11" hm="true"/>
+          <view angle="225" col="1" x="5" y="11"/>
+          <view angle="315" col="1" x="-5" y="11" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

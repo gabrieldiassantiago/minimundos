@@ -1,0 +1,155 @@
+<item.ChairItem id="7263" name="Banheira Deluxe Gosma Rosa" desc="Que nojeira!" tags="rare,chair,misc" icon="items/base/modern/icon_m_oldhalloween_bathroom_02_deluxebath.png" price="105" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" chairType="pool">
+  <seats>
+    <seat y="0.42" a="270">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+    <seat y="0.42" z="1" a="90">
+      <ap x="1" z="1"/>
+      <ap x="1"/>
+      <ap x="1" z="2"/>
+      <ap z="2"/>
+      <ap x="-1" z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="2"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,1.1,1.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_bathroom_02_deluxebath_main.png" cols="2" rows="1"/>
+    <texture id="Texture01" source="items/base/modern/m_bathroom_02_deluxebath_taps.png" cols="2" rows="1"/>
+    <texture id="Texture02" source="items/base/modern/m_oldhalloween_bathroom_02_deluxebath_water.png" cols="2" rows="1"/>
+    <texture id="Texture03" cols="1" rows="1"/>
+    <texture id="goo" source="items/base/modern/m_oldhalloween_bathroom_01_stdbath_goo.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-0.48,0,-0.48" max="0.48,1.1,1.48"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45" x="30" y="-37"/>
+          <view angle="135" col="1" x="33" y="-47" hm="true"/>
+          <view angle="225" col="1" x="-34" y="-48"/>
+          <view angle="315" x="-31" y="-38" hm="true"/>
+        </layer>
+        <layer id="taps" texture="Texture01">
+          <view angle="45" x="11" y="-53" alpha="0"/>
+          <view angle="135" x="53" y="-20" hm="true"/>
+          <view angle="225" x="-82" y="-7" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-59" y="-11" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Water">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="Texture02">
+          <view angle="45" x="31" y="-38" alpha="0.9"/>
+          <view angle="135" x="31" y="-6" alpha="0.9" hm="true"/>
+          <view angle="225" x="-33" y="-6" alpha="0.9"/>
+          <view angle="315" x="-31" y="-38" alpha="0.9" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Texture02">
+          <view angle="45" col="1" x="31" y="-38" alpha="0.9"/>
+          <view angle="135" col="1" x="31" y="-6" alpha="0.9" hm="true"/>
+          <view angle="225" col="1" x="-33" y="-6" alpha="0.9"/>
+          <view angle="315" col="1" x="-31" y="-38" alpha="0.9" hm="true"/>
+        </layer>
+        <layer id="Layer0150" texture="Texture02">
+          <view angle="45" x="31" y="-38" alpha="0.9"/>
+          <view angle="135" x="31" y="-6" alpha="0.9" hm="true"/>
+          <view angle="225" x="-33" y="-6" alpha="0.9"/>
+          <view angle="315" x="-31" y="-38" alpha="0.9" hm="true"/>
+        </layer>
+        <layer id="Layer0250" texture="Texture02">
+          <view angle="45" col="1" x="31" y="-38" alpha="0.9"/>
+          <view angle="135" col="1" x="31" y="-6" alpha="0.9" hm="true"/>
+          <view angle="225" col="1" x="-33" y="-6" alpha="0.9"/>
+          <view angle="315" col="1" x="-31" y="-38" alpha="0.9" hm="true"/>
+        </layer>
+        <layer id="goo_01" texture="goo">
+          <view angle="45" x="16" y="-68"/>
+          <view angle="135" x="45" y="-35"/>
+          <view angle="225" x="-16" y="-14"/>
+          <view angle="315" x="-53" y="-48"/>
+        </layer>
+        <layer id="goo_02" texture="goo">
+          <view angle="45" col="1" x="16" y="-68"/>
+          <view angle="135" col="1" x="45" y="-36"/>
+          <view angle="225" col="1" x="-16" y="-15"/>
+          <view angle="315" col="1" x="-53" y="-49"/>
+        </layer>
+        <layer id="goo_03" texture="goo">
+          <view angle="45" col="2" x="16" y="-69"/>
+          <view angle="135" col="2" x="45" y="-36"/>
+          <view angle="225" col="2" x="-16" y="-15"/>
+          <view angle="315" col="2" x="-53" y="-49"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="1">
+          <layerref id="Layer"/>
+          <layerref id="goo_01"/>
+        </frame>
+        <frame id="2">
+          <layerref id="Layer01"/>
+          <layerref id="goo_02"/>
+        </frame>
+        <frame id="50">
+          <layerref id="Layer0250" a="0.75"/>
+          <layerref id="Layer0150" a="0.75"/>
+          <layerref id="goo_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="1"/>
+          <frameref id="50"/>
+          <frameref id="2"/>
+          <frameref id="50"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="LeftArm">
+      <box min="-0.48,0,-0.48" max="0.48,1.1,1.48"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45" col="1" x="30" y="-80"/>
+          <view angle="135" x="33" y="-5" hm="true"/>
+          <view angle="225" x="-34" y="-5"/>
+          <view angle="315" col="1" x="-31" y="-80" hm="true"/>
+        </layer>
+        <layer id="taps" texture="Texture01">
+          <view angle="45" x="11" y="-53"/>
+          <view angle="135" x="53" y="-20" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-8" y="23"/>
+          <view angle="315" col="1" x="-58" y="-32" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

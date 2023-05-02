@@ -1,0 +1,152 @@
+<f id="AlienSuit2" parentId="Suits">
+  <g id="BlueAlien">
+    <c id="Alien2TorsoColor" sId="Alien2TorsoBase" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2TorsoBase"/>
+    <c id="Alien2TorsoDecalColor" sId="Alien2TorsoDecal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2DecalTorso"/>
+    <b id="Alien2Legs" min="3" max="3" sel="BlAlienShoe,BlAlienLegDecal,BlAlienLegBase">
+      <g id="BlAlienLegBase" icon="$bu/icon_legs_trouser.png">
+        <s id="Alien2PantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_19_leg_idle_base.png" pri="3"/>
+        <s id="Alien2PantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_19_leg_walk1_base.png" pri="3"/>
+        <s id="Alien2PantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_19_leg_walk2_base.png" pri="3"/>
+        <s id="Alien2PantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_19_leg_walk3_base.png" pri="3"/>
+        <s id="Alien2PantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_19_leg_walk4_base.png" pri="3"/>
+        <s id="Alien2SitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_19_leg_sit_upper_base.png" pri="3"/>
+        <s id="Alien2SitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_19_leg_sit_lower_base.png" pri="3"/>
+        <c sId="Alien2PantIdleBase" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2LegBase"/>
+        <c sId="Alien2PantWalk1Base" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2LegBase"/>
+        <c sId="Alien2PantWalk2Base" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2LegBase"/>
+        <c sId="Alien2PantWalk3Base" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2LegBase"/>
+        <c sId="Alien2PantWalk4Base" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2LegBase"/>
+        <c sId="Alien2SitLowerBase" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2LegBase"/>
+        <c sId="Alien2SitUpperBase" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2LegBase"/>
+      </g>
+      <g id="BlAlienLegDecal" icon="$bu/icon_legs_trouser.png">
+        <s id="Alien2PantIdleDecal" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_19_leg_idle_join.png" pri="3.1"/>
+        <s id="Alien2PantWalk1Decal" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_19_leg_walk1_decal.png" pri="3.1"/>
+        <s id="Alien2PantWalk2Decal" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_19_leg_walk2_decal.png" pri="3.1"/>
+        <s id="Alien2PantWalk3Decal" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_19_leg_walk3_decal.png" pri="3.1"/>
+        <s id="Alien2PantWalk4Decal" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_19_leg_walk4_decal.png" pri="3.1"/>
+        <s id="Alien2SitUpperDecal" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_19_leg_sit_upper_decal.png" pri="3.1"/>
+        <s id="Alien2SitLowerDecal" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_19_leg_sit_lower_decal.png" pri="3.1"/>
+        <c sId="Alien2PantIdleDecal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2DecalLeg"/>
+        <c sId="Alien2PantWalk1Decal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2DecalLeg"/>
+        <c sId="Alien2PantWalk2Decal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2DecalLeg"/>
+        <c sId="Alien2PantWalk3Decal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2DecalLeg"/>
+        <c sId="Alien2PantWalk4Decal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2DecalLeg"/>
+        <c sId="Alien2SitLowerDecal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2DecalLeg"/>
+        <c sId="Alien2SitUpperDecal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2DecalLeg"/>
+      </g>
+      <g id="BlAlienShoe" icon="$bm/icon_shoe_standard.png">
+        <s id="Alien2FootIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_19_shoe_idle_base.png"/>
+        <s id="Alien2FootWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_19_shoe_walk1_base.png"/>
+        <s id="Alien2FootWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_19_shoe_walk2_base.png"/>
+        <s id="Alien2FootWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_19_shoe_walk3_base.png"/>
+        <s id="Alien2FootWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_19_shoe_walk4_base.png"/>
+        <s id="Alien2FootSitBase" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_19_shoe_sit_base.png"/>
+        <c sId="Alien2FootIdleBase" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2FootBase"/>
+        <c sId="Alien2FootWalk1Base" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2FootBase"/>
+        <c sId="Alien2FootWalk2Base" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2FootBase"/>
+        <c sId="Alien2FootWalk3Base" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2FootBase"/>
+        <c sId="Alien2FootWalk4Base" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2FootBase"/>
+        <c sId="Alien2FootSitBase" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2FootBase"/>
+        <s id="Alien2FootIdleDecal" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_19_shoe_idle_decal.png" pri="0.1"/>
+        <s id="Alien2FootWalk1Decal" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_19_shoe_walk1_decal.png" pri="0.1"/>
+        <s id="Alien2FootWalk2Decal" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_19_shoe_walk2_decal.png" pri="0.1"/>
+        <s id="Alien2FootWalk3Decal" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_19_shoe_walk3_decal.png" pri="0.1"/>
+        <s id="Alien2FootWalk4Decal" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_19_shoe_walk4_decal.png" pri="0.1"/>
+        <s id="Alien2FootSitDecal" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_19_shoe_sit_decal.png" pri="0.1"/>
+        <c sId="Alien2FootIdleDecal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2FootDecal"/>
+        <c sId="Alien2FootWalk1Decal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2FootDecal"/>
+        <c sId="Alien2FootWalk2Decal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2FootDecal"/>
+        <c sId="Alien2FootWalk3Decal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2FootDecal"/>
+        <c sId="Alien2FootWalk4Decal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2FootDecal"/>
+        <c sId="Alien2FootSitDecal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2FootDecal"/>
+      </g>
+    </b>
+    <b id="AlienArm" min="2" max="2" sel="BlueAlienArmDecal,BlueAlienArmBase">
+      <g id="BlueAlienArmBase" icon="$bm/icon_m_retro.png">
+        <s id="Alien2ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_19_arm_idle_base.png" pri="1"/>
+        <s id="Alien2ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_19_arm_walk1_base.png" pri="1"/>
+        <s id="Alien2ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_19_arm_walk2_base.png" pri="1"/>
+        <s id="Alien2ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_19_arm_walk3_base.png" pri="1"/>
+        <s id="Alien2ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_19_arm_sit_base.png" pri="1"/>
+        <s id="Alien2ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_19_arm_throw_base.png" pri="1"/>
+        <s id="Alien2ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_19_arm_raise_base.png" pri="1"/>
+        <c sId="Alien2ArmIdleBase" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2ArmBase"/>
+        <c sId="Alien2ArmWalk1Base" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2ArmBase"/>
+        <c sId="Alien2ArmWalk2Base" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2ArmBase"/>
+        <c sId="Alien2ArmWalk3Base" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2ArmBase"/>
+        <c sId="Alien2ArmSitBase" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2ArmBase"/>
+        <c sId="Alien2ArmThrowBase" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2ArmBase"/>
+        <c sId="Alien2ArmRaiseBase" c="7208959" a="0.60" b="-30.2" ct="0.46" lId="Alien2ArmBase"/>
+      </g>
+      <g id="BlueAlienArmDecal" icon="$bm/icon_m_retro.png">
+        <s id="Alien2ArmIdleDecal" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_19_arm_idle_decal.png" pri="1"/>
+        <s id="Alien2ArmWalk1Decal" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_19_arm_walk1_decal.png" pri="1"/>
+        <s id="Alien2ArmWalk2Decal" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_19_arm_walk2_decal.png" pri="1"/>
+        <s id="Alien2ArmWalk3Decal" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_19_arm_walk3_decal.png" pri="1"/>
+        <s id="Alien2ArmSitDecal" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_19_arm_sit_decal.png" pri="1"/>
+        <s id="Alien2ArmThrowDecal" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_19_arm_throw_decal.png" pri="1"/>
+        <s id="Alien2ArmRaiseDecal" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_19_arm_raise_decal.png" pri="1"/>
+        <c sId="Alien2ArmIdleDecal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2ArmDecal"/>
+        <c sId="Alien2ArmWalk1Decal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2ArmDecal"/>
+        <c sId="Alien2ArmWalk2Decal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2ArmDecal"/>
+        <c sId="Alien2ArmWalk3Decal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2ArmDecal"/>
+        <c sId="Alien2ArmSitDecal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2ArmDecal"/>
+        <c sId="Alien2ArmThrowDecal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2ArmDecal"/>
+        <c sId="Alien2ArmRaiseDecal" c="16755175" a="1.00" b="-14.4" ct="0.60" lId="Alien2ArmDecal"/>
+      </g>
+    </b>
+    <b id="AlienChest" min="2" max="2" sel="Alien2TorsoDecal,Alien2TorsoBase">
+      <s id="Alien2TorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_19_torso_base.png" pri="1"/>
+      <s id="Alien2TorsoDecal" cId="Torso" s="items/base/consumables/clothing/suits/suit_19_torso_decal.png" pri="1"/>
+    </b>
+    <b id="AlienPanel" min="2" max="2" sel="AlienTorsoPanel">
+      <s id="AlienTorsoPanel" cId="Torso" s="items/base/consumables/clothing/suits/suit_19_torso_panel.png" pri="1"/>
+    </b>
+  </g>
+  <b id="AlienHand" min="2" max="2" sel="AlienGlove">
+    <g id="AlienGlove" icon="$bm/icon_m_retro.png">
+      <s id="Alien2HandIdleBase" cId="ArmIdle" s="$bu/hand_arm_idle.png" pri="2"/>
+      <s id="Alien2HandWalk1Base" cId="ArmWalk1" s="$bu/hand_arm_walk1.png" pri="2"/>
+      <s id="Alien2HandWalk2Base" cId="ArmWalk2" s="$bu/hand_arm_walk2.png" pri="2"/>
+      <s id="Alien2HandWalk3Base" cId="ArmWalk3" s="$bu/hand_arm_walk3.png" pri="2"/>
+      <s id="Alien2HandSitBase" cId="ArmSit" s="$bu/hand_arm_sit.png" pri="2"/>
+      <s id="Alien2HandWave1" cId="ArmRaiseWave1" s="$bu/raise_wave1.png" pri="2"/>
+      <s id="Alien2HandWave2" cId="ArmRaiseWave2" s="$bu/raise_wave2.png" pri="2"/>
+      <s id="Alien2HandHold" cId="ArmThrowHold" s="$bu/throw_hold.png" pri="2"/>
+      <s id="Alien2HandOpen" cId="ArmThrowOpen" s="$bu/throw_open.png" pri="2"/>
+      <s id="Alien2HandPoint" cId="ArmThrowPoint" s="$bu/throw_point.png" pri="2"/>
+      <s id="Alien2HandStop" cId="ArmThrowStop" s="$bu/throw_stop.png" pri="2"/>
+      <s id="Alien2HandThrow" cId="ArmThrowThrow" s="$bu/throw_throw.png" pri="2"/>
+      <s id="Alien2HandThumbs" cId="ArmThrowThumb" s="$bu/throw_thumbs.png" pri="2"/>
+      <c sId="Alien2HandIdleBase" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+      <c sId="Alien2HandWalk1Base" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+      <c sId="Alien2HandWalk2Base" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+      <c sId="Alien2HandWalk3Base" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+      <c sId="Alien2HandSitBase" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+      <c sId="Alien2HandWave1" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+      <c sId="Alien2HandWave2" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+      <c sId="Alien2HandHold" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+      <c sId="Alien2HandOpen" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+      <c sId="Alien2HandPoint" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+      <c sId="Alien2HandStop" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+      <c sId="Alien2HandThrow" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+      <c sId="Alien2HandThumbs" c="16755175" a="1.00" b="22.4" ct="0.76" lId="Alien2Hand"/>
+    </g>
+  </b>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+</f>

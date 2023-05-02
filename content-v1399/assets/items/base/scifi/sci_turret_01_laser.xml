@@ -1,0 +1,387 @@
+<item.SpriteItem id="1211" name="Torre Laser" desc="Ataca quem chega perto dela. Não se aproxime com ela ligada!" tags="misc,trap,scifi,turret" icon="items/base/scifi/icon_sci_turret_01_laser.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="1100" tokens="11000" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1.35,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="fire" script="scripts/item/action_turret.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Fire" label="Disparar" event="fire"/>
+  </actions>
+  <data>
+    <entry key="action_attributes" value="arcane-10"/>
+    <entry key="action_attributes_secondary" value="health-40"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/scifi/sci_turret_01_laser.png" cols="3" rows="1"/>
+    <texture id="Texture01" source="items/base/scifi/sci_turret_01_laser_eyes.png" cols="4" rows="1"/>
+    <texture id="Flare" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="radiate" source="items/base/consumables/magic/hit_generic_radiate.png" cols="4" rows="1"/>
+    <texture id="zap" source="items/base/consumables/magic/proj_generic_zap.png" cols="1" rows="4"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,1.35,0.49"/>
+      <layers>
+        <layer id="base_01" texture="Texture" y="55">
+          <view angle="45" y="-20"/>
+          <view angle="135" y="-20" hm="true"/>
+          <view angle="225" y="-20"/>
+          <view angle="315" y="-20" hm="true"/>
+        </layer>
+        <layer id="base_02" texture="Texture" y="55">
+          <view angle="45" col="1" y="-66"/>
+          <view angle="135" col="1" y="-66" hm="true"/>
+          <view angle="225" col="1" y="-66"/>
+          <view angle="315" col="1" y="-66" hm="true"/>
+        </layer>
+        <layer id="base_03" texture="Texture" y="55">
+          <view angle="45" col="2" y="-66"/>
+          <view angle="135" col="2" y="-66" hm="true"/>
+          <view angle="225" col="2" y="-66"/>
+          <view angle="315" col="2" y="-66" hm="true"/>
+        </layer>
+        <layer id="glyph90" texture="Texture01" y="64">
+          <view y="-80" alpha="0.7"/>
+        </layer>
+        <layer id="glyph120" texture="Texture01" y="64">
+          <view col="1" y="-80" alpha="0.7"/>
+        </layer>
+        <layer id="glyph150" texture="Texture01" y="64">
+          <view col="2" y="-80" alpha="0.7"/>
+        </layer>
+        <layer id="glyph180" texture="Texture01" y="64">
+          <view col="3" y="-80" alpha="0.7"/>
+        </layer>
+        <layer id="glyph0" texture="Texture01" y="64">
+          <view col="3" y="-80" alpha="0.7" hm="true"/>
+        </layer>
+        <layer id="glyph30" texture="Texture01" y="64">
+          <view col="2" y="-80" alpha="0.7" hm="true"/>
+        </layer>
+        <layer id="glyph60" texture="Texture01" y="64">
+          <view col="1" y="-80" alpha="0.7" hm="true"/>
+        </layer>
+        <layer id="Flare" texture="Flare" y="-30">
+          <view/>
+        </layer>
+        <layer id="radiate_01" texture="radiate" y="-16">
+          <view col="3"/>
+        </layer>
+        <layer id="radiate_02" texture="radiate" y="-16">
+          <view col="2"/>
+        </layer>
+        <layer id="radiate_03" texture="radiate" y="-16">
+          <view col="1"/>
+        </layer>
+        <layer id="zap_01" texture="zap" y="-8">
+          <view row="2" y="-28"/>
+        </layer>
+        <layer id="zap_02" texture="zap" y="-8">
+          <view row="3" y="-28"/>
+        </layer>
+        <layer id="zap_01x" texture="zap" y="-8">
+          <view row="2" y="-28" hm="true"/>
+        </layer>
+        <layer id="zap_02y" texture="zap" y="-8">
+          <view row="3" y="-28" vm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle_01">
+          <layerref id="base_01"/>
+          <layerref id="base_02"/>
+          <layerref id="glyph60" a="0.6" blend="add"/>
+          <layerref id="glyph90" blend="add"/>
+          <layerref id="base_03"/>
+        </frame>
+        <frame id="idle_02">
+          <layerref id="base_01"/>
+          <layerref id="base_02"/>
+          <layerref id="glyph90" a="0.5" blend="add"/>
+          <layerref id="glyph120" blend="add"/>
+          <layerref id="base_03"/>
+        </frame>
+        <frame id="idle_03">
+          <layerref id="base_01"/>
+          <layerref id="base_02"/>
+          <layerref id="glyph120" a="0.5" blend="add"/>
+          <layerref id="glyph150" blend="add"/>
+          <layerref id="base_03"/>
+        </frame>
+        <frame id="idle_04">
+          <layerref id="base_01"/>
+          <layerref id="base_02"/>
+          <layerref id="glyph150" a="0.5" blend="add"/>
+          <layerref id="glyph180" blend="add"/>
+          <layerref id="base_03"/>
+        </frame>
+        <frame id="idle_210">
+          <layerref id="base_01"/>
+          <layerref id="base_02"/>
+          <layerref id="glyph180" a="0.7" blend="add"/>
+          <layerref id="base_03"/>
+        </frame>
+        <frame id="idle_BLANK">
+          <layerref id="base_01"/>
+          <layerref id="base_02"/>
+          <layerref id="base_03"/>
+        </frame>
+        <frame id="idle_330">
+          <layerref id="base_01"/>
+          <layerref id="base_02"/>
+          <layerref id="glyph0" a="0.7"/>
+          <layerref id="base_03"/>
+        </frame>
+        <frame id="idle_05">
+          <layerref id="base_01"/>
+          <layerref id="base_02"/>
+          <layerref id="glyph0" blend="add"/>
+          <layerref id="base_03"/>
+        </frame>
+        <frame id="idle_06">
+          <layerref id="base_01"/>
+          <layerref id="base_02"/>
+          <layerref id="glyph0" a="0.5" blend="add"/>
+          <layerref id="glyph30" blend="add"/>
+          <layerref id="base_03"/>
+        </frame>
+        <frame id="idle_07">
+          <layerref id="base_01"/>
+          <layerref id="base_02"/>
+          <layerref id="glyph30" a="0.5" blend="add"/>
+          <layerref id="glyph60" blend="add"/>
+          <layerref id="base_03"/>
+        </frame>
+        <frame id="step_01">
+          <layerref id="base_01" color="0xfbfaf9"/>
+          <layerref id="base_02" y="-2" color="0xfbfaf9"/>
+          <layerref id="glyph30" a="0.8" blend="add"/>
+          <layerref id="base_03" y="-4"/>
+        </frame>
+        <frame id="step_02">
+          <layerref id="base_01" color="0xfbfaf9"/>
+          <layerref id="base_02" y="-4" color="0xfbfaf9"/>
+          <layerref id="glyph30" y="-2" a="0.8" blend="add"/>
+          <layerref id="base_03" y="-6"/>
+        </frame>
+        <frame id="step_03">
+          <layerref id="base_01" color="0xfbfaf9"/>
+          <layerref id="base_02" y="-8" color="0xfbfaf9"/>
+          <layerref id="glyph30" y="-8" a="0.8" blend="add"/>
+          <layerref id="base_03" y="-12"/>
+        </frame>
+        <frame id="loop_01">
+          <layerref id="base_01"/>
+          <layerref id="base_02" y="-8"/>
+          <layerref id="glyph30" y="-8" color="0xcccccc" a="0.7" blend="add"/>
+          <layerref id="Flare" color="0xff0000" a="0.3" blend="add"/>
+          <layerref id="base_03" y="-12"/>
+          <layerref id="radiate_01" color="0xff0000" a="0.5" blend="add"/>
+          <layerref id="zap_01" color="0xff0000" a="0.5" blend="add"/>
+          <layerref id="zap_02" color="0xff0033" blend="add"/>
+        </frame>
+        <frame id="loop_02">
+          <layerref id="base_01" color="0xfbfaf9"/>
+          <layerref id="base_02" y="-8" color="0xfbfaf9"/>
+          <layerref id="Flare" color="0xff0000" a="0.2" blend="add"/>
+          <layerref id="glyph30" y="-8" a="0.8" blend="add"/>
+          <layerref id="base_03" y="-12"/>
+          <layerref id="radiate_02" color="0xff3333" a="0.5" blend="add"/>
+          <layerref id="zap_01x" color="0xff3366" a="0.5" blend="add"/>
+        </frame>
+        <frame id="loop_03">
+          <layerref id="base_01"/>
+          <layerref id="base_02" y="-8"/>
+          <layerref id="base_03" y="-12"/>
+          <layerref id="glyph30" y="-8" a="0.7" blend="add"/>
+          <layerref id="Flare" color="0xff3366" a="0.2" blend="add"/>
+          <layerref id="radiate_03" color="0xff3366" a="0.5" blend="add"/>
+          <layerref id="zap_01" color="0xff0000" a="0.5" blend="add"/>
+          <layerref id="zap_02y" color="0xff0000" blend="add"/>
+        </frame>
+        <frame id="loop_04">
+          <layerref id="base_01" color="0xfbfaf9"/>
+          <layerref id="base_02" y="-8" color="0xfbfaf9"/>
+          <layerref id="glyph30" y="-8" a="0.8" blend="add"/>
+          <layerref id="Flare" color="0xff0000" a="0.2" blend="add"/>
+          <layerref id="base_03" y="-12"/>
+          <layerref id="radiate_02" color="0xff0033" a="0.5" blend="add"/>
+          <layerref id="zap_01" color="0xff0000" a="0.7" blend="add"/>
+          <layerref id="zap_02" color="0xff3333" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="idle_01"/>
+          <frameref id="idle_02"/>
+          <frameref id="idle_03"/>
+          <frameref id="idle_04"/>
+          <frameref id="idle_210"/>
+          <frameref id="idle_BLANK" duration="3"/>
+          <frameref id="idle_330"/>
+          <frameref id="idle_05"/>
+          <frameref id="idle_06"/>
+          <frameref id="idle_07"/>
+        </animation>
+        <animation id="In" framerate="8" loop="false" syncFrames="false">
+          <frameref id="step_01"/>
+          <frameref id="step_02"/>
+          <frameref id="step_03"/>
+          <frameref id="loop_01"/>
+          <frameref id="loop_02"/>
+          <frameref id="loop_03"/>
+          <frameref id="loop_04"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncFrames="false">
+          <frameref id="step_03"/>
+          <frameref id="step_02"/>
+          <frameref id="step_01"/>
+          <frameref id="idle_04"/>
+          <frameref id="idle_03"/>
+          <frameref id="idle_02"/>
+          <frameref id="idle_01"/>
+          <frameref id="idle_07"/>
+          <frameref id="idle_06"/>
+          <frameref id="idle_07"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.4" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle_01">
+          <layerref id="Light" color="0xf15b5b" a="0.9"/>
+        </frame>
+        <frame id="Idle_02">
+          <layerref id="Light" color="0xf15b5b" a="0.8"/>
+        </frame>
+        <frame id="Idle_03">
+          <layerref id="Light" color="0xf15b5b" a="0.7"/>
+        </frame>
+        <frame id="Idle_04">
+          <layerref id="Light" color="0xf15b5b" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle_01" duration="2"/>
+          <frameref id="Idle_02"/>
+          <frameref id="Idle_03"/>
+          <frameref id="Idle_04" duration="5"/>
+          <frameref id="Idle_03"/>
+          <frameref id="Idle_02" duration="2"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncFrames="false">
+          <frameref id="Idle_01" duration="7"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncFrames="false">
+          <frameref id="Idle_01" duration="10"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.65" s="1.6" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light 01" texture="Intense" align="middle">
+          <view x="2"/>
+        </layer>
+        <layer id="Light 02" texture="Intense" align="middle">
+          <view x="-5"/>
+        </layer>
+        <layer id="Light 03" texture="Intense" align="middle">
+          <view x="-9" y="-2"/>
+        </layer>
+        <layer id="Light 04" texture="Intense" align="middle">
+          <view x="-14" y="-4"/>
+        </layer>
+        <layer id="Light 05" texture="Intense" align="middle">
+          <view x="-18" y="-5"/>
+        </layer>
+        <layer id="Light 06" texture="Intense" align="middle">
+          <view/>
+        </layer>
+        <layer id="Light 07" texture="Intense" align="middle">
+          <view x="24" y="-5"/>
+        </layer>
+        <layer id="Light 08" texture="Intense" align="middle">
+          <view x="23" y="-5"/>
+        </layer>
+        <layer id="Light 09" texture="Intense" align="middle">
+          <view x="15" y="-2"/>
+        </layer>
+        <layer id="Light 10" texture="Intense" align="middle">
+          <view x="7"/>
+        </layer>
+        <layer id="charge" texture="Intense" align="middle">
+          <view y="-8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light 01" a="0.35"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light 02" a="0.25"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light 03" a="0.2"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light 04" a="0.1"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Light 05" a="0.05"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Light 06" a="0"/>
+        </frame>
+        <frame id="07">
+          <layerref id="Light 07" a="0.05"/>
+        </frame>
+        <frame id="08">
+          <layerref id="Light 08" a="0.1"/>
+        </frame>
+        <frame id="09">
+          <layerref id="Light 09" a="0.2"/>
+        </frame>
+        <frame id="10">
+          <layerref id="Light 10" a="0.25"/>
+        </frame>
+        <frame id="charge">
+          <layerref id="charge" a="0.75"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06" duration="3"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="09"/>
+          <frameref id="10"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncFrames="false">
+          <frameref id="06" duration="2"/>
+          <frameref id="charge" duration="5"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncFrames="false">
+          <frameref id="06" duration="10"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

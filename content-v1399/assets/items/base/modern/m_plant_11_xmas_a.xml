@@ -1,0 +1,27 @@
+<item.SpriteItem desc="Uma árvore de natal especial." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/modern/icon_m_plant_11_xmas_a.png" id="1360" name="Árvore de Natal " tags="rare,plant" price="40" tokens="400" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.49,3.2,0.49" min="-0.49,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/modern/m_plant_11_xmas_a.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.49,3.2,0.49" min="-0.49,0,-0.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="12">
+          <view angle="45" x="3" y="23"/>
+          <view angle="135" hm="true" x="-2" y="23"/>
+          <view angle="225" x="3" y="23"/>
+          <view angle="315" hm="true" x="-2" y="23"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,68 @@
+<item.SpriteItem id="5006" name="Clique Aqui" desc="Caminhe até aqui" tags="admin,misc" icon="items/base/shared/icon_s_clickhere_item.png" price="25" tokens="250" minLevel="1" minCPLevel="1" gridActive="false" gridSnap="true" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.5,-0.01,-0.5" max="0.5,0,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <textures>
+    <texture id="Succulent" source="items/base/shared/s_clickhere_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Plant">
+      <box min="-0.5,-0.01,-0.5" max="0.5,0,0.5"/>
+      <layers>
+        <layer id="shadow" texture="Succulent">
+          <view col="1" x="1" y="16"/>
+        </layer>
+        <layer id="Layer" texture="Succulent">
+          <view x="2" y="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="shadow" a="0"/>
+          <layerref id="Layer" a="0"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="shadow"/>
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="shadow"/>
+          <layerref id="Layer" y="1"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="shadow"/>
+          <layerref id="Layer" y="2"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="shadow"/>
+          <layerref id="Layer" y="3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,34 @@
+<item.SpriteItem id="0" name="Round Shield" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Shield" source="items/base/consumables/clothing/accessory/acc_250_hand_roundshield.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Round Shield" texture="Shield">
+          <view angle="0" col="2" x="3" y="39"/>
+          <view angle="45" col="4" x="1" y="40"/>
+          <view angle="90" x="-1" y="36"/>
+          <view angle="135" col="1" x="1" y="41"/>
+          <view angle="180" col="3" x="1" y="42"/>
+          <view angle="225" col="1" x="-3" y="38" hm="true"/>
+          <view angle="270" x="-1" y="37" hm="true"/>
+          <view angle="315" col="4" x="5" y="37" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations>
+        <animation id="On" framerate="2"/>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

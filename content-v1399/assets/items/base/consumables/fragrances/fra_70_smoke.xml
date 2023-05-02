@@ -1,0 +1,36 @@
+<item.SpriteItem name="Fragrância Dinâmica Amarela Play" desc="Uma fragrância esfumaçada amarela" tags="consumable,actionbar,fragrance,action_wearable_toggle,wear,usable" icon="items/base/consumables/fragrances/fra_70_smoke_icon.png" price="4510" minLevel="200" minLevelType="8" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="6489" premium="Y">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.42,0.1"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_perfume.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+50"/>
+    <entry key="action_attributes_secondary" value="health+60"/>
+  </data>
+  <textures>
+    <texture id="texture" source="items/base/consumables/fragrances/fra_70_smoke.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.42,0.1"/>
+      <layers>
+        <layer id="texture" texture="texture" y="6">
+          <view angle="45" x="2"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" x="2"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

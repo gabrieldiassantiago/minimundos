@@ -1,0 +1,363 @@
+<item.ChairItem id="2359" name="Trono Asteca" desc="Para você se sentir um Deus." tags="rare,chair,trap,misc,magic,turret,kudos,craftable_kudos,market" icon="items/base/antique/icon_a_turret_07_aztecthrone.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="150">
+  <seats>
+    <seat x="0.6" y="0.85" z="0.5">
+      <ap x="2"/>
+      <ap x="1" z="-1"/>
+      <ap x="2" z="-1"/>
+      <ap z="-1"/>
+      <ap x="2" z="1"/>
+      <ap x="2" z="2"/>
+      <ap x="1" z="2"/>
+      <ap z="2"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.49,0,-0.49" max="1.49,2,1.49"/>
+  </volume>
+  <events>
+    <event id="fire" script="scripts/item/action_turret.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Fire" label="Disparar" event="fire"/>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+    <entry key="action_attributes" value="shadow+10"/>
+    <entry key="action_attributes_secondary" value="speed+40"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/antique/a_turret_07_aztecthrone.png" cols="2" rows="1"/>
+    <texture id="Texture01" source="items/base/antique/a_turret_07_aztecthrone_hand.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="radiate" source="items/base/consumables/magic/hit_generic_radiate.png" cols="4" rows="1"/>
+    <texture id="shockball" source="items/base/consumables/magic/proj_generic_shockball.png" cols="1" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="RightArm" x="0.5" z="0.5">
+      <box min="-0.99,0,-0.99" max="0.99,2,0.99"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45" col="1" x="-2" y="-77" alpha="0"/>
+          <view angle="135" y="-65"/>
+          <view angle="225" x="-1" y="-68" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-1" y="-64"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view angle="45" col="1" x="-45" y="49" hm="true"/>
+          <view angle="135" col="1" y="-2" alpha="0"/>
+          <view angle="225" x="-2" y="-27" alpha="0"/>
+          <view angle="315" y="-3" alpha="0"/>
+        </layer>
+        <layer id="shockball 01" texture="shockball" y="-73">
+          <view angle="45" x="-8" y="-33"/>
+          <view angle="135" x="6" y="-33"/>
+          <view angle="225" x="-4" y="-22"/>
+          <view angle="315" x="4" y="-19" alpha="0"/>
+        </layer>
+        <layer id="shockball 02" texture="shockball" y="-73">
+          <view angle="45" row="1" x="-8" y="-33"/>
+          <view angle="135" row="1" x="6" y="-33"/>
+          <view angle="225" row="1" x="-4" y="-22"/>
+          <view angle="315" row="1" x="4" y="-19" alpha="0"/>
+        </layer>
+        <layer id="shockball 03" texture="shockball" y="-73">
+          <view angle="45" row="2" x="-8" y="-33"/>
+          <view angle="135" row="2" x="6" y="-33"/>
+          <view angle="225" row="2" x="-4" y="-22"/>
+          <view angle="315" row="2" x="4" y="-19" alpha="0"/>
+        </layer>
+        <layer id="radiate 01" texture="radiate" y="-73">
+          <view angle="45" x="-5" y="-5"/>
+          <view angle="135" x="9" y="-3"/>
+          <view angle="225" x="-9" y="2"/>
+          <view angle="315" x="7" y="5" alpha="0"/>
+        </layer>
+        <layer id="radiate 02" texture="radiate" y="-73">
+          <view angle="45" col="1" x="-5" y="-5"/>
+          <view angle="135" col="1" x="9" y="-3"/>
+          <view angle="225" col="1" x="-9" y="2"/>
+          <view angle="315" col="1" x="7" y="5" alpha="0"/>
+        </layer>
+        <layer id="radiate 03" texture="radiate" y="-73">
+          <view angle="45" col="2" x="-5" y="-5"/>
+          <view angle="135" col="2" x="9" y="-3"/>
+          <view angle="225" col="2" x="-9" y="2"/>
+          <view angle="315" col="2" x="7" y="5" alpha="0"/>
+        </layer>
+        <layer id="radiate 04" texture="radiate" y="-73">
+          <view angle="45" col="3" x="-5" y="-5"/>
+          <view angle="135" col="3" x="9" y="-3"/>
+          <view angle="225" col="3" x="-9" y="2"/>
+          <view angle="315" col="3" x="7" y="5" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle_01">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+        </frame>
+        <frame id="In_01">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+        </frame>
+        <frame id="In_02">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="shockball 01" color="0xf3f1b7" a="0.33" blend="add"/>
+        </frame>
+        <frame id="In_03">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="shockball 02" color="0xf3f1b7" a="0.66" blend="add"/>
+        </frame>
+        <frame id="In_04">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="radiate 01" color="0xe7e269" a="0.25" blend="add"/>
+          <layerref id="shockball 03" color="0xf3f1b7" blend="add"/>
+        </frame>
+        <frame id="In_05">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="radiate 02" color="0xe7e269" a="0.5" blend="add"/>
+          <layerref id="shockball 01" color="0xf3f1b7" blend="add"/>
+        </frame>
+        <frame id="In_06">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="radiate 03" color="0xe7e269" blend="add"/>
+          <layerref id="shockball 02" color="0xf3f1b7" blend="add"/>
+        </frame>
+        <frame id="In_07">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="radiate 04" color="0xe7e269" a="0.5" blend="add"/>
+          <layerref id="shockball 03" color="0xf3f1b7" a="0.75" blend="add"/>
+        </frame>
+        <frame id="In_08">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="radiate 01" color="0xe7e269" a="0.25" blend="add"/>
+          <layerref id="shockball 01" color="0xf3f1b7" a="0.5" blend="add"/>
+        </frame>
+        <frame id="In_09">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="shockball 02" color="0xf3f1b7" a="0.25" blend="add"/>
+        </frame>
+        <frame id="In_10">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Idle_01"/>
+        </animation>
+        <animation id="In" framerate="8">
+          <frameref id="In_01"/>
+          <frameref id="In_02"/>
+          <frameref id="In_03"/>
+          <frameref id="In_04"/>
+          <frameref id="In_05"/>
+          <frameref id="In_06"/>
+        </animation>
+        <animation id="Out" framerate="8" loop="false">
+          <frameref id="In_07"/>
+          <frameref id="In_08"/>
+          <frameref id="In_09"/>
+          <frameref id="In_10"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="LeftArm" x="0.5" z="0.5">
+      <box min="-0.99,0,-0.99" max="0.99,2,0.99"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45" x="-1" y="-65" hm="true"/>
+          <view angle="135" x="2" y="-77" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-1" y="-64" hm="true"/>
+          <view angle="315" x="-1" y="-68" alpha="0"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view angle="45" alpha="0"/>
+          <view angle="135" col="1" x="44" y="49"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" x="3" y="-28" alpha="0" hm="true"/>
+        </layer>
+        <layer id="shockball 01" texture="shockball" y="-73">
+          <view angle="45" x="-8" y="-33" alpha="0"/>
+          <view angle="135" x="6" y="-33" alpha="0"/>
+          <view angle="225" x="-4" y="-22" alpha="0"/>
+          <view angle="315" x="4" y="-19"/>
+        </layer>
+        <layer id="shockball 02" texture="shockball" y="-73">
+          <view angle="45" row="1" x="-8" y="-33" alpha="0"/>
+          <view angle="135" row="1" x="6" y="-33" alpha="0"/>
+          <view angle="225" row="1" x="-4" y="-22" alpha="0"/>
+          <view angle="315" row="1" x="4" y="-19"/>
+        </layer>
+        <layer id="shockball 03" texture="shockball" y="-73">
+          <view angle="45" row="2" x="-8" y="-33" alpha="0"/>
+          <view angle="135" row="2" x="6" y="-33" alpha="0"/>
+          <view angle="225" row="2" x="-4" y="-22" alpha="0"/>
+          <view angle="315" row="2" x="4" y="-19"/>
+        </layer>
+        <layer id="radiate 01" texture="radiate" y="-73">
+          <view angle="45" x="-5" y="-5" alpha="0"/>
+          <view angle="135" x="9" y="-3" alpha="0"/>
+          <view angle="225" x="-9" y="2" alpha="0"/>
+          <view angle="315" x="7" y="5"/>
+        </layer>
+        <layer id="radiate 02" texture="radiate" y="-73">
+          <view angle="45" col="1" x="-5" y="-5" alpha="0"/>
+          <view angle="135" col="1" x="9" y="-3" alpha="0"/>
+          <view angle="225" col="1" x="-9" y="2" alpha="0"/>
+          <view angle="315" col="1" x="7" y="5"/>
+        </layer>
+        <layer id="radiate 03" texture="radiate" y="-73">
+          <view angle="45" col="2" x="-5" y="-5" alpha="0"/>
+          <view angle="135" col="2" x="9" y="-3" alpha="0"/>
+          <view angle="225" col="2" x="-9" y="2" alpha="0"/>
+          <view angle="315" col="2" x="7" y="5"/>
+        </layer>
+        <layer id="radiate 04" texture="radiate" y="-73">
+          <view angle="45" col="3" x="-5" y="-5" alpha="0"/>
+          <view angle="135" col="3" x="9" y="-3" alpha="0"/>
+          <view angle="225" col="3" x="-9" y="2" alpha="0"/>
+          <view angle="315" col="3" x="7" y="5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle_01">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+        </frame>
+        <frame id="In_01">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+        </frame>
+        <frame id="In_02">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="shockball 01" color="0xf3f1b7" a="0.33" blend="add"/>
+        </frame>
+        <frame id="In_03">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="shockball 02" color="0xf3f1b7" a="0.66" blend="add"/>
+        </frame>
+        <frame id="In_04">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="radiate 01" color="0xe7e269" a="0.25" blend="add"/>
+          <layerref id="shockball 03" color="0xf3f1b7" blend="add"/>
+        </frame>
+        <frame id="In_05">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="radiate 02" color="0xe7e269" a="0.5" blend="add"/>
+          <layerref id="shockball 01" color="0xf3f1b7" blend="add"/>
+        </frame>
+        <frame id="In_06">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="radiate 03" color="0xe7e269" blend="add"/>
+          <layerref id="shockball 02" color="0xf3f1b7" blend="add"/>
+        </frame>
+        <frame id="In_07">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="radiate 04" color="0xe7e269" a="0.5" blend="add"/>
+          <layerref id="shockball 03" color="0xf3f1b7" a="0.75" blend="add"/>
+        </frame>
+        <frame id="In_08">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="radiate 01" color="0xe7e269" a="0.25" blend="add"/>
+          <layerref id="shockball 01" color="0xf3f1b7" a="0.5" blend="add"/>
+        </frame>
+        <frame id="In_09">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="shockball 02" color="0xf3f1b7" a="0.25" blend="add"/>
+        </frame>
+        <frame id="In_10">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Idle_01"/>
+        </animation>
+        <animation id="In" framerate="8">
+          <frameref id="In_01"/>
+          <frameref id="In_02"/>
+          <frameref id="In_03"/>
+          <frameref id="In_04"/>
+          <frameref id="In_05"/>
+          <frameref id="In_06"/>
+        </animation>
+        <animation id="Out" framerate="8" loop="false">
+          <frameref id="In_07"/>
+          <frameref id="In_08"/>
+          <frameref id="In_09"/>
+          <frameref id="In_10"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.6719" y="2.05" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="9" y="3"/>
+          <view angle="135" x="26" y="16"/>
+          <view angle="225" x="-7" y="34"/>
+          <view angle="315" x="-24" y="19"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf7f6cf" a="0.22"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xf7f6cf" a="0.4"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xf7f6cf" a="0.8"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xf7f6cf"/>
+        </frame>
+        <frame id="Idle">
+          <layerref id="Light" color="0xf7f6cf" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncFrames="false">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncFrames="false">
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

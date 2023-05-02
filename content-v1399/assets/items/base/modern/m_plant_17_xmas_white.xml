@@ -1,0 +1,98 @@
+<item.SpriteItem id="3675" name="Árvore de Natal Jumbo Prateada" desc="Uma grande árvore de Natal." tags="rare,plant,xmas" icon="items/base/modern/icon_m_plant_17_xmas_white.png" price="400" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1,0,-1" max="1,3.2,1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_plant_17_xmas_white.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="bulbs" source="items/base/modern/m_plant_16_xmas_lights.png" cols="2" rows="1"/>
+    <texture id="shadow" source="items/base/modern/m_plant_16_xmas_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-1,0,-1" max="1,3.2,1"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="53" alpha="0.3"/>
+          <view angle="135" y="53" alpha="0.3"/>
+          <view angle="225" y="53" alpha="0.3"/>
+          <view angle="315" y="53" alpha="0.3"/>
+        </layer>
+        <layer id="Layer" texture="Texture" y="12">
+          <view angle="45" y="39"/>
+          <view angle="135" y="39" hm="true"/>
+          <view angle="225" y="39"/>
+          <view angle="315" y="39" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse lights" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light1" texture="bulbs" align="middle">
+          <view angle="45" x="-4" y="-60"/>
+          <view angle="135" x="5" y="-59" hm="true"/>
+          <view angle="225" x="-4" y="-59"/>
+          <view angle="315" x="4" y="-59" hm="true"/>
+        </layer>
+        <layer id="Light2" texture="bulbs" align="middle">
+          <view angle="45" col="1" x="-3" y="-63"/>
+          <view angle="135" col="1" x="4" y="-61" hm="true"/>
+          <view angle="225" col="1" x="-3" y="-63"/>
+          <view angle="315" col="1" x="2" y="-61" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="light1">
+          <layerref id="Light1" color="0xc85de7"/>
+        </frame>
+        <frame id="light2">
+          <layerref id="Light2" color="0xd4f1f8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="light1" duration="2"/>
+          <frameref id="light2" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse glow" s="8.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light1" texture="Light" align="middle">
+          <view angle="45" y="-20"/>
+          <view angle="135" y="-20"/>
+          <view angle="225" y="-20"/>
+          <view angle="315" y="-20"/>
+        </layer>
+        <layer id="Light2" texture="Light" align="middle">
+          <view angle="45" y="-20"/>
+          <view angle="135" y="-20"/>
+          <view angle="225" y="-20"/>
+          <view angle="315" y="-20"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="light1">
+          <layerref id="Light1" color="0xc288ef" a="0.4"/>
+        </frame>
+        <frame id="light2">
+          <layerref id="Light2" color="0xd4f1f8" a="0.4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="light1" duration="2"/>
+          <frameref id="light2" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,34 @@
+<item.SpriteItem id="4310" name="Regador de Glória" desc="Uma regador verde ecológico." tags="rare,consumable,actionbar,hand,usable,kudos,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_200_wateringcan_icon.png" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="50">
+  <volume>
+    <box min="-0.17,0,-0.1" max="0.3,0.4,0.1"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="health+30"/>
+  </data>
+  <textures>
+    <texture id="Watering Can" source="items/base/consumables/clothing/accessory/acc_200_wateringcan_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="handbag">
+      <box min="-0.17,0,-0.1" max="0.3,0.4,0.1"/>
+      <layers>
+        <layer id="Watering Can" texture="Watering Can">
+          <view angle="45" x="4" y="10"/>
+          <view angle="135" x="-4" y="10" hm="true"/>
+          <view angle="225" col="1" x="-4" y="9"/>
+          <view angle="315" col="1" x="4" y="9" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

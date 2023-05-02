@@ -1,0 +1,567 @@
+<item.SpriteItem id="0" name="Sparkler" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.28" max="0.28,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/magic/con_hand_51_sparkler.png" cols="4" rows="1"/>
+    <texture id="FX_sparkes" source="items/base/consumables/magic/effect_51_sparkler.png" cols="4" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Sparkler">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="wand" texture="Texture">
+          <view angle="0" col="2" x="4" y="13" hm="true"/>
+          <view angle="45" x="3" y="12"/>
+          <view angle="90" col="1" x="-1" y="11"/>
+          <view angle="135" x="-5" y="11" hm="true"/>
+          <view angle="180" col="2" x="-5" y="10"/>
+          <view angle="225" col="3" x="-5" y="8"/>
+          <view angle="270" col="1" x="-1" y="4"/>
+          <view angle="315" col="3" x="5" y="10" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="wand"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Sparkles">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="layer1" texture="FX_sparkes" y="-28">
+          <view angle="0" x="14" y="28"/>
+          <view angle="45" x="14" y="28"/>
+          <view angle="90" y="32"/>
+          <view angle="135" x="-20" y="28"/>
+          <view angle="180" x="-18" y="26"/>
+          <view angle="225" x="-15" y="19"/>
+          <view angle="270" x="-2" y="28"/>
+          <view angle="315" x="12" y="24"/>
+        </layer>
+        <layer id="layer2" texture="FX_sparkes" y="-28">
+          <view angle="0" col="1" x="14" y="28"/>
+          <view angle="45" col="1" x="14" y="28"/>
+          <view angle="90" col="1" y="32"/>
+          <view angle="135" col="1" x="-20" y="28"/>
+          <view angle="180" col="1" x="-18" y="26"/>
+          <view angle="225" col="1" x="-15" y="19"/>
+          <view angle="270" col="1" x="-2" y="28"/>
+          <view angle="315" col="1" x="12" y="24"/>
+        </layer>
+        <layer id="layer3" texture="FX_sparkes" y="-28">
+          <view angle="0" col="2" x="14" y="28"/>
+          <view angle="45" col="2" x="14" y="28"/>
+          <view angle="90" col="2" y="32"/>
+          <view angle="135" col="2" x="-20" y="28"/>
+          <view angle="180" col="2" x="-18" y="26"/>
+          <view angle="225" col="2" x="-15" y="19"/>
+          <view angle="270" col="2" x="-2" y="28"/>
+          <view angle="315" col="2" x="12" y="24"/>
+        </layer>
+        <layer id="layer4" texture="FX_sparkes" y="-28">
+          <view angle="0" col="3" x="14" y="28"/>
+          <view angle="45" col="3" x="14" y="28"/>
+          <view angle="90" col="3" y="32"/>
+          <view angle="135" col="3" x="-20" y="28"/>
+          <view angle="180" col="3" x="-18" y="26"/>
+          <view angle="225" col="3" x="-15" y="19"/>
+          <view angle="270" col="3" x="-2" y="28"/>
+          <view angle="315" col="3" x="12" y="24"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="layer1" color="0xfff5d7" blend="add"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="layer2" color="0xfff5d7" blend="add"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="layer3" color="0xfff5d7" blend="add"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="layer4" color="0xfff5d7" blend="add"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="layer4" y="1" color="0xfff5d7" blend="add"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="layer4" y="2" color="0xfff5d7" a="0.6" blend="add"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="layer4" y="4" color="0xfff5d7" a="0.4" blend="add"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="layer4" y="8" color="0xfff5d7" a="0.3" blend="add"/>
+        </frame>
+        <frame id="Frame09">
+          <layerref id="layer4" y="12" color="0xfff5d7" a="0.25" blend="add"/>
+        </frame>
+        <frame id="Frame10">
+          <layerref id="layer4" y="18" color="0xfff5d7" a="0.2" blend="add"/>
+        </frame>
+        <frame id="Frame11">
+          <layerref id="layer4" y="24" color="0xfff5d7" a="0.15" blend="add"/>
+        </frame>
+        <frame id="Frame12">
+          <layerref id="layer4" y="30" color="0xfff5d7" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Frame13">
+          <layerref id="layer4" y="34" color="0xfff5d7" a="0.05" blend="add"/>
+        </frame>
+        <frame id="Frame14">
+          <layerref id="layer1" color="0xfff5d7" a="0.025" blend="add"/>
+        </frame>
+        <frame id="BLANK">
+          <layerref id="TEMP Angle Ref8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Sparkler" framerate="4" loop="false">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame09"/>
+          <frameref id="Frame10"/>
+          <frameref id="Frame11"/>
+          <frameref id="Frame12"/>
+          <frameref id="Frame13"/>
+          <frameref id="Frame14"/>
+          <frameref id="BLANK"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="7" y="12"/>
+          <view angle="45" x="7" y="13"/>
+          <view angle="90" y="9"/>
+          <view angle="135" x="-5" y="10"/>
+          <view angle="180" x="-3" y="9"/>
+          <view angle="225" x="-2" y="8"/>
+          <view angle="270" y="9"/>
+          <view angle="315" x="6" y="8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xffcc33" a="0.8"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xffcc33" a="0.5"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xffcc33" a="0.8"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xffcc33" a="0.5"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Light" y="1" color="0xffcc33" a="0.8"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Light" y="2" color="0xffcc33" a="0.5"/>
+        </frame>
+        <frame id="07">
+          <layerref id="Light" y="4" color="0xffcc33" a="0.8"/>
+        </frame>
+        <frame id="08">
+          <layerref id="Light" y="6" color="0xffcc33" a="0.5"/>
+        </frame>
+        <frame id="09">
+          <layerref id="Light" y="9" color="0xffcc33" a="0.34"/>
+        </frame>
+        <frame id="10">
+          <layerref id="Light" y="10" color="0xffcc33" a="0.29"/>
+        </frame>
+        <frame id="11">
+          <layerref id="Light" y="12" color="0xffcc33" a="0.24"/>
+        </frame>
+        <frame id="12">
+          <layerref id="Light" y="14" color="0xffcc33" a="0.15"/>
+        </frame>
+        <frame id="13">
+          <layerref id="Light" y="15" color="0xffcc33" a="0.1"/>
+        </frame>
+        <frame id="14">
+          <layerref id="Light" y="16" color="0xffcc33" a="0.05"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Sparkler" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="09"/>
+          <frameref id="10"/>
+          <frameref id="11"/>
+          <frameref id="12"/>
+          <frameref id="13"/>
+          <frameref id="14"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="1.05" s="1.2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="17" y="26"/>
+          <view angle="45" x="12" y="27"/>
+          <view angle="90" x="2" y="27"/>
+          <view angle="135" x="-14" y="23"/>
+          <view angle="180" x="-10" y="20"/>
+          <view angle="225" x="-6" y="17"/>
+          <view angle="270" x="3" y="26"/>
+          <view angle="315" x="16" y="21"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xc5f2a3" a="0.8"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xc5f2a3" a="0.5"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xc5f2a3" a="0.8"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xc5f2a3" a="0.5"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Light" y="1" color="0xc5f2a3" a="0.8"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Light" y="1" color="0xc5f2a3" a="0.8"/>
+        </frame>
+        <frame id="07">
+          <layerref id="Light" y="4" color="0xc5f2a3" a="0.8"/>
+        </frame>
+        <frame id="08">
+          <layerref id="Light" y="6" color="0xc5f2a3" a="0.5"/>
+        </frame>
+        <frame id="09">
+          <layerref id="Light" y="9" color="0xc5f2a3" a="0.34"/>
+        </frame>
+        <frame id="10">
+          <layerref id="Light" y="10" color="0xc5f2a3" a="0.29"/>
+        </frame>
+        <frame id="11">
+          <layerref id="Light" y="12" color="0xc5f2a3" a="0.24"/>
+        </frame>
+        <frame id="12">
+          <layerref id="Light" y="14" color="0xc5f2a3" a="0.15"/>
+        </frame>
+        <frame id="13">
+          <layerref id="Light" y="15" color="0xc5f2a3" a="0.1"/>
+        </frame>
+        <frame id="14">
+          <layerref id="Light" y="16" color="0xc5f2a3" a="0.05"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Sparkler" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="09"/>
+          <frameref id="10"/>
+          <frameref id="11"/>
+          <frameref id="12"/>
+          <frameref id="13"/>
+          <frameref id="14"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

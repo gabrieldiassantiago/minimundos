@@ -1,0 +1,55 @@
+<item.SpriteItem id="0" name="Kitty Cat" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="cat" source="items/base/consumables/head/con_head_161_snowleopard02.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_161_snowleopard02_blink.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="cat" texture="cat">
+          <view angle="0" col="2" x="5" y="16" hm="true"/>
+          <view angle="45" x="2" y="19"/>
+          <view angle="90" col="1" y="22"/>
+          <view angle="135" x="-4" y="19" hm="true"/>
+          <view angle="180" col="2" x="-5" y="16"/>
+          <view angle="225" col="3" x="-1" y="16"/>
+          <view angle="270" col="4" y="21"/>
+          <view angle="315" col="3" x="-2" y="16" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="5" y="16" hm="true"/>
+          <view angle="45" x="2" y="19"/>
+          <view angle="90" col="1" y="22"/>
+          <view angle="135" x="-4" y="19" hm="true"/>
+          <view angle="180" col="2" x="-5" y="16"/>
+          <view angle="225" col="3" x="-1" y="16"/>
+          <view angle="270" col="4" y="21"/>
+          <view angle="315" col="3" x="-2" y="16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Blink">
+          <layerref id="blink"/>
+        </frame>
+        <frame id="Normal">
+          <layerref id="cat"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Normal" duration="18"/>
+          <frameref id="Blink" duration="2"/>
+          <frameref id="Normal" duration="12"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

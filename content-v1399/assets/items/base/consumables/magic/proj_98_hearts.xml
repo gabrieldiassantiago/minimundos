@@ -1,0 +1,127 @@
+<item.SpriteItem id="0" name="Heart projectile" desc="A heart projectile effect." dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,-0.1,-0.1" max="0.1,0.1,0.1"/>
+  </volume>
+  <textures>
+    <texture id="mag_effect_vialglow" source="items/base/consumables/magic/con_mag_effect_vialglow.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_proj_ring.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+    <texture id="Arrow" source="items/base/consumables/magic/proj_98_hearts.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Love">
+      <box min="-0.1,-0.1,-0.1" max="0.1,0.1,0.1"/>
+      <layers>
+        <layer id="Proj Love" type="group">
+          <layer id="Glow 01" texture="mag_effect_vialglow" y="16">
+            <view angle="0" col="1" hm="true"/>
+            <view angle="45" col="1"/>
+            <view angle="90" col="1"/>
+            <view angle="135" col="1" hm="true"/>
+            <view angle="180" col="1"/>
+            <view angle="225" col="1" hm="true" vm="true"/>
+            <view angle="270" col="1"/>
+            <view angle="315" col="1" vm="true"/>
+          </layer>
+          <layer id="Arrow" texture="Arrow" y="42">
+            <view angle="0" x="-31" y="-18"/>
+            <view angle="45" col="1" x="-19" y="-27"/>
+            <view angle="90" col="2" y="-32"/>
+            <view angle="135" col="1" x="19" y="-27" hm="true"/>
+            <view angle="180" x="32" y="-17" hm="true"/>
+            <view angle="225" col="1" x="20" y="-6" hm="true" vm="true"/>
+            <view angle="270" col="2" y="-2" vm="true"/>
+            <view angle="315" col="1" x="-20" y="-6" vm="true"/>
+          </layer>
+          <layer id="Glow 02" texture="mag_effect_vialglow" y="16">
+            <view angle="0" hm="true"/>
+            <view angle="45"/>
+            <view angle="90"/>
+            <view angle="135" hm="true"/>
+            <view angle="180"/>
+            <view angle="225" hm="true" vm="true"/>
+            <view angle="270"/>
+            <view angle="315" vm="true"/>
+          </layer>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Proj Love" type="group">
+          <frame id="Love 01">
+            <layerref id="Arrow"/>
+            <layerref id="Glow 01" color="0x993ede" blend="add"/>
+            <layerref id="Glow 02" color="0xe65cc9" blend="add"/>
+          </frame>
+          <frame id="Idle 01">
+            <layerref id="Glow 01" color="0x993ede" blend="add"/>
+            <layerref id="Glow 02" color="0xe65cc9" blend="add"/>
+          </frame>
+          <frame id="Ilde 02">
+            <layerref id="Glow 01" color="0x993ede" a="0.9" blend="add"/>
+            <layerref id="Glow 02" color="0xe65cc9" blend="add"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle 01"/>
+          <frameref id="Ilde 02"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="Love 01">
+            <sample id="woosh"/>
+          </frameref>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="-0.1" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xd687ed"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xea81eb" a="0.95"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.05" s="4" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf6c2e1" a="0.4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

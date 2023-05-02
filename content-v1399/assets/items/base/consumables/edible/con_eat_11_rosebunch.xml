@@ -1,0 +1,49 @@
+<item.SpriteItem desc="Para enfeitar ou presentear a quem você gosta." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/edible/icon_con_eat_11_rosebunch_item.png" id="926" name="Buquê de Rosas Coloridas" tags="consumable,plant,actionbar,real,good,hand,usable,stackable,action_consumable,market" price="13" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.2,0.65,0.2" min="-0.2,0,-0.2"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemConsume" value="Hold"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_hold.png"/>
+  </data>
+  <textures>
+    <texture cols="1" id="flowers" rows="1" source="items/base/consumables/edible/con_eat_11_rosebunch.png"/>
+    <texture cols="4" id="bow" rows="1" source="items/base/consumables/edible/con_eat_11_rosebunch_bow.png"/>
+    <texture cols="1" id="bowl" rows="1" source="items/base/consumables/edible/con_eat_11_rosebunch_bowl.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.2,0.65,0.2" min="-0.2,0,-0.2"/>
+      <layers>
+        <layer id="flowers" texture="flowers">
+          <view angle="45" x="-1" y="-2"/>
+          <view angle="135" x="-1" y="-2"/>
+          <view angle="225" x="-1" y="-2"/>
+          <view angle="315" x="-1" y="-2"/>
+        </layer>
+        <layer id="bow" texture="bow">
+          <view angle="45" col="1" hm="true" x="1" y="-12"/>
+          <view angle="135" col="1" y="-13"/>
+          <view angle="225" col="2" y="-12"/>
+          <view angle="315" col="2" hm="true" y="-12"/>
+        </layer>
+        <layer id="bowl" texture="bowl">
+          <view angle="45" y="12"/>
+          <view angle="135" hm="true" y="12"/>
+          <view angle="225" y="12"/>
+          <view angle="315" hm="true" y="12"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

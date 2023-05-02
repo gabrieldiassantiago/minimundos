@@ -1,0 +1,106 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="Wheelchair" source="items/base/consumables/feet/con_feet_168_wheelchair_base.png" cols="5" rows="1"/>
+    <texture id="Wheels" source="items/base/consumables/feet/con_feet_168_wheelchair_wheels.png" cols="5" rows="4"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="WheelChair" texture="Wheelchair">
+          <view angle="0" x="-14" y="43"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" x="14" y="43" hm="true"/>
+          <view angle="225" col="3" x="16" y="57"/>
+          <view angle="270" col="4" x="-4" y="53"/>
+          <view angle="315" col="3" x="-18" y="55" hm="true"/>
+        </layer>
+        <layer id="Wheels01" texture="Wheels">
+          <view angle="0" x="-34" y="38"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" x="34" y="38" hm="true"/>
+          <view angle="225" col="3" x="25" y="50"/>
+          <view angle="270" col="4" x="-1" y="49"/>
+          <view angle="315" col="3" x="-26" y="48" hm="true"/>
+        </layer>
+        <layer id="Wheels02" texture="Wheels">
+          <view angle="0" row="1" x="-34" y="38"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" row="1" x="34" y="38" hm="true"/>
+          <view angle="225" col="3" row="1" x="25" y="50"/>
+          <view angle="270" col="4" row="1" x="-1" y="49"/>
+          <view angle="315" col="3" row="1" x="-26" y="48" hm="true"/>
+        </layer>
+        <layer id="Wheels03" texture="Wheels">
+          <view angle="0" row="2" x="-34" y="38"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" row="2" x="34" y="38" hm="true"/>
+          <view angle="225" col="3" row="2" x="25" y="50"/>
+          <view angle="270" col="4" row="2" x="-1" y="49"/>
+          <view angle="315" col="3" row="2" x="-26" y="48" hm="true"/>
+        </layer>
+        <layer id="Wheels04" texture="Wheels">
+          <view angle="0" row="3" x="-34" y="38"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" row="3" x="34" y="38" hm="true"/>
+          <view angle="225" col="3" row="3" x="25" y="50"/>
+          <view angle="270" col="4" row="3" x="-1" y="49"/>
+          <view angle="315" col="3" row="3" x="-26" y="48" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="WheelChair"/>
+          <layerref id="Wheels01"/>
+        </frame>
+        <frame id="Walk01">
+          <layerref id="WheelChair"/>
+          <layerref id="Wheels01"/>
+        </frame>
+        <frame id="Walk02">
+          <layerref id="WheelChair"/>
+          <layerref id="Wheels02"/>
+        </frame>
+        <frame id="Walk03">
+          <layerref id="WheelChair"/>
+          <layerref id="Wheels03"/>
+        </frame>
+        <frame id="Walk04">
+          <layerref id="WheelChair"/>
+          <layerref id="Wheels04"/>
+        </frame>
+        <frame id="Sit"/>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Walk" framerate="16">
+          <frameref id="Walk04"/>
+          <frameref id="Walk03"/>
+          <frameref id="Walk02"/>
+          <frameref id="Walk01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

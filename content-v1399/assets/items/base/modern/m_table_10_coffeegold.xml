@@ -1,0 +1,27 @@
+<item.SpriteItem id="5701" name="Mesa de Centro Master Deluxe" desc="Uma moderna e luxuosa mesa de centro" tags="rare,table" icon="items/base/modern/icon_m_table_10_coffeegold.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="100">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.6,1.49"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_table_10_coffeegold.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="table" z="0.5">
+      <box min="-0.49,0,-0.99" max="0.49,0.6,0.99"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="1" y="56" hm="true"/>
+          <view angle="135" x="-1" y="56"/>
+          <view angle="225" x="1" y="56" hm="true"/>
+          <view angle="315" x="-1" y="56"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="A small mossy rock" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/outdoor/icon_o_rocks_01_mossy_small.png" id="851" name="Small Rock" tags="misc" price="25" tokens="250" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.4,0.3,0.4" min="-0.4,0,-0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="2" id="rocks" rows="2" source="items/base/outdoor/o_rocks_01_mossy.png"/>
+  </textures>
+  <nodes>
+    <node id="rocks">
+      <box max="0.4,0.3,0.4" min="-0.4,0,-0.4"/>
+      <layers>
+        <layer id="rocks" texture="rocks">
+          <view angle="45" col="1" y="50"/>
+          <view angle="135" col="1" hm="true" y="50"/>
+          <view angle="225" col="1" row="1" y="50"/>
+          <view angle="315" col="1" hm="true" row="1" y="50"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,39 @@
+<item.SpriteItem desc="Uma mesa de inox para exterior." dropTargetClamp="none" dropTargetList="floor" dropTargetType="table" icon="items/base/outdoor/icon_o_table_02_steel.png" id="879" name="Mesa de Inox Redonda" tags="table" price="40" tokens="400" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.49,0.75,0.49" min="-0.49,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="steeltable" rows="1" source="items/base/outdoor/o_table_02_steel.png"/>
+    <texture cols="1" id="cap" rows="1" source="items/base/outdoor/o_table_02_steel_holecap.png"/>
+  </textures>
+  <nodes>
+    <node id="Table">
+      <box max="0.49,0.75,0.49" min="-0.49,0,-0.49"/>
+      <layers>
+        <layer id="table" texture="steeltable">
+          <view angle="45" y="32"/>
+          <view angle="135" mirror="true" y="32"/>
+          <view angle="225" y="32"/>
+          <view angle="315" mirror="true" y="32"/>
+        </layer>
+        <layer id="hole cap" texture="cap">
+          <view angle="45" y="-54"/>
+          <view angle="135" mirror="true" y="-54"/>
+          <view angle="225" y="-54"/>
+          <view angle="315" mirror="true" y="-54"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="table"/>
+          <layerref id="hole cap"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

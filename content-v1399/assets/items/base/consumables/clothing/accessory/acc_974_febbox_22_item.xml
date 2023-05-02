@@ -1,0 +1,27 @@
+<item.SpriteItem id="7525" name="Presente Estouro de Fevereiro" desc="Esta caixa de presente se transformará no dia 1° de Março [22 de 25]" tags="rare,destroy,misc" icon="items/base/consumables/clothing/accessory/acc_974_febbox_22_icon.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.25" max="0.3,0.35,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/accessory/acc_974_febbox_22_item.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node01">
+      <box min="-0.3,0,-0.25" max="0.3,0.35,0.25"/>
+      <layers>
+        <layer id="Layer" texture="Base" y="16">
+          <view angle="45" y="4"/>
+          <view angle="135" y="4" hm="true"/>
+          <view angle="225" y="4"/>
+          <view angle="315" y="4" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

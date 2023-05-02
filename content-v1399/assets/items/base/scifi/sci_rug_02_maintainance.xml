@@ -1,0 +1,65 @@
+<item.SpriteItem id="862" name="Chão de Vidro Espacial" desc="Dá para ver o interior na nave!" tags="floor" icon="items/base/scifi/icon_sci_rug_02_maintainance.png" price="40" tokens="400" minLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" minCPLevel="1">
+  <volume>
+    <box min="-1,-0.001,-0.72" max="1,0,0.72"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="shaft" source="items/base/scifi/sci_rug_02_maintainance.png" cols="1" rows="1"/>
+    <texture id="highlight" source="items/base/scifi/sci_rug_highlight.png" cols="2" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_pool.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="rug_glass" layer="surface">
+      <box min="-1,-0.001,-0.72" max="1,0,0.72"/>
+      <layers>
+        <layer id="rug_glass" texture="shaft">
+          <view angle="45" y="52"/>
+          <view angle="135" y="52" hm="true"/>
+          <view angle="225" y="52"/>
+          <view angle="315" y="52" hm="true"/>
+        </layer>
+        <layer id="highlight" texture="highlight">
+          <view angle="45" y="57"/>
+          <view angle="135" col="1" x="1" y="55"/>
+          <view angle="225" row="1" x="-9" y="41"/>
+          <view angle="315" col="1" row="1" x="6" y="41"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="-0.1087" s="2.8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" hm="true"/>
+          <view angle="135"/>
+          <view angle="225" hm="true"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x7bead3"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

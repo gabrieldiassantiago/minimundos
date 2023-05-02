@@ -1,0 +1,327 @@
+<item.SpriteItem id="0" name="Pufferfish" desc="Collectible" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="redpanda" source="items/base/consumables/head/con_head_208_pufferfish.png" cols="5" rows="3"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_208_pufferfish_blink.png" cols="5" rows="2"/>
+    <texture id="fin" source="items/base/consumables/head/con_head_208_pufferfish_fin.png" cols="5" rows="4"/>
+    <texture id="bubble" source="items/base/consumables/head/con_head_12_bubbles.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head01" texture="redpanda">
+          <view angle="0" col="2" x="-9" y="22" hm="true"/>
+          <view angle="45" x="-6" y="24"/>
+          <view angle="90" col="1" x="-1" y="25"/>
+          <view angle="135" x="5" y="24" hm="true"/>
+          <view angle="180" col="2" x="8" y="22"/>
+          <view angle="225" col="3" x="4" y="29"/>
+          <view angle="270" col="4" x="-1" y="32"/>
+          <view angle="315" col="3" x="-5" y="29" hm="true"/>
+        </layer>
+        <layer id="head02" texture="redpanda">
+          <view angle="0" col="2" row="2" x="-9" y="22" hm="true"/>
+          <view angle="45" row="2" x="-6" y="24"/>
+          <view angle="90" col="1" row="2" x="-1" y="25"/>
+          <view angle="135" row="2" x="5" y="24" hm="true"/>
+          <view angle="180" col="2" row="2" x="8" y="22"/>
+          <view angle="225" col="3" row="2" x="4" y="29"/>
+          <view angle="270" col="4" row="2" x="-1" y="32"/>
+          <view angle="315" col="3" row="2" x="-5" y="29" hm="true"/>
+        </layer>
+        <layer id="head03" texture="redpanda">
+          <view angle="0" col="2" row="1" x="-9" y="22" hm="true"/>
+          <view angle="45" row="1" x="-6" y="24"/>
+          <view angle="90" col="1" row="1" x="-1" y="25"/>
+          <view angle="135" row="1" x="5" y="24" hm="true"/>
+          <view angle="180" col="2" row="1" x="8" y="22"/>
+          <view angle="225" col="3" row="1" x="4" y="29"/>
+          <view angle="270" col="4" row="1" x="-1" y="32"/>
+          <view angle="315" col="3" row="1" x="-5" y="29" hm="true"/>
+        </layer>
+        <layer id="blink01" texture="blink">
+          <view angle="0" col="2" x="-8" y="22" hm="true"/>
+          <view angle="45" x="-6" y="24"/>
+          <view angle="90" col="1" x="-1" y="25"/>
+          <view angle="135" x="5" y="24" hm="true"/>
+          <view angle="180" col="2" x="7" y="22"/>
+          <view angle="225" col="3" x="4" y="29"/>
+          <view angle="270" col="4" x="-1" y="31"/>
+          <view angle="315" col="3" x="-5" y="29" hm="true"/>
+        </layer>
+        <layer id="blink02" texture="blink">
+          <view angle="0" col="2" row="1" x="-8" y="22" hm="true"/>
+          <view angle="45" row="1" x="-6" y="24"/>
+          <view angle="90" col="1" row="1" x="-1" y="25"/>
+          <view angle="135" row="1" x="5" y="24" hm="true"/>
+          <view angle="180" col="2" row="1" x="7" y="22"/>
+          <view angle="225" col="3" row="1" x="4" y="29"/>
+          <view angle="270" col="4" row="1" x="-1" y="31"/>
+          <view angle="315" col="3" row="1" x="-5" y="29" hm="true"/>
+        </layer>
+        <layer id="fin_a_01" texture="fin">
+          <view angle="0" col="2" x="-9" y="22" hm="true"/>
+          <view angle="45" x="-6" y="24"/>
+          <view angle="90" col="1" x="-1" y="25"/>
+          <view angle="135" x="5" y="24" hm="true"/>
+          <view angle="180" col="2" x="8" y="22"/>
+          <view angle="225" col="3" x="4" y="29"/>
+          <view angle="270" col="4" x="-1" y="32"/>
+          <view angle="315" col="3" x="-5" y="29" hm="true"/>
+        </layer>
+        <layer id="fin_a_02" texture="fin">
+          <view angle="0" col="2" row="1" x="-9" y="22" hm="true"/>
+          <view angle="45" row="1" x="-6" y="24"/>
+          <view angle="90" col="1" row="1" x="-1" y="25"/>
+          <view angle="135" row="1" x="5" y="24" hm="true"/>
+          <view angle="180" col="2" row="1" x="8" y="22"/>
+          <view angle="225" col="3" row="1" x="4" y="29"/>
+          <view angle="270" col="4" row="1" x="-1" y="32"/>
+          <view angle="315" col="3" row="1" x="-5" y="29" hm="true"/>
+        </layer>
+        <layer id="fin_b_01" texture="fin">
+          <view angle="0" col="2" row="2" x="-9" y="22" hm="true"/>
+          <view angle="45" row="2" x="-6" y="24"/>
+          <view angle="90" col="1" row="2" x="-1" y="25"/>
+          <view angle="135" row="2" x="5" y="24" hm="true"/>
+          <view angle="180" col="2" row="2" x="8" y="22"/>
+          <view angle="225" col="3" row="2" x="4" y="29"/>
+          <view angle="270" col="4" row="2" x="-1" y="32"/>
+          <view angle="315" col="3" row="2" x="-5" y="29" hm="true"/>
+        </layer>
+        <layer id="fin_b_02" texture="fin">
+          <view angle="0" col="2" row="3" x="-9" y="22" hm="true"/>
+          <view angle="45" row="3" x="-6" y="24"/>
+          <view angle="90" col="1" row="3" x="-1" y="25"/>
+          <view angle="135" row="3" x="5" y="24" hm="true"/>
+          <view angle="180" col="2" row="3" x="8" y="22"/>
+          <view angle="225" col="3" row="3" x="4" y="29"/>
+          <view angle="270" col="4" row="3" x="-1" y="32"/>
+          <view angle="315" col="3" row="3" x="-5" y="29" hm="true"/>
+        </layer>
+        <layer id="bubble01" texture="bubble">
+          <view angle="0" x="25" y="-14" hm="true"/>
+          <view angle="45" x="36" y="3"/>
+          <view angle="90" x="10" y="6"/>
+          <view angle="135" x="-37" y="2" hm="true"/>
+          <view angle="180" x="-24" y="-14"/>
+          <view angle="225" x="-33" y="-16" hm="true"/>
+          <view angle="270" x="11" y="-25"/>
+          <view angle="315" x="32" y="-16"/>
+        </layer>
+        <layer id="bubble02" texture="bubble">
+          <view angle="0" col="1" x="25" y="-14" hm="true"/>
+          <view angle="45" col="1" x="36" y="3"/>
+          <view angle="90" col="1" x="10" y="6"/>
+          <view angle="135" col="1" x="-37" y="2" hm="true"/>
+          <view angle="180" col="1" x="-24" y="-14"/>
+          <view angle="225" col="1" x="-33" y="-16" hm="true"/>
+          <view angle="270" col="1" x="11" y="-25"/>
+          <view angle="315" col="1" x="32" y="-16"/>
+        </layer>
+        <layer id="bubble03" texture="bubble">
+          <view angle="0" col="2" x="25" y="-14" hm="true"/>
+          <view angle="45" col="2" x="36" y="3"/>
+          <view angle="90" col="2" x="10" y="6"/>
+          <view angle="135" col="2" x="-37" y="2" hm="true"/>
+          <view angle="180" col="2" x="-24" y="-14"/>
+          <view angle="225" col="2" x="-33" y="-16" hm="true"/>
+          <view angle="270" col="2" x="11" y="-25"/>
+          <view angle="315" col="2" x="32" y="-16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Blink01">
+          <layerref id="head01"/>
+          <layerref id="blink01"/>
+          <layerref id="fin_a_01"/>
+        </frame>
+        <frame id="a_01">
+          <layerref id="head01"/>
+          <layerref id="fin_a_01"/>
+        </frame>
+        <frame id="a_02">
+          <layerref id="head01"/>
+          <layerref id="fin_a_02"/>
+        </frame>
+        <frame id="fill">
+          <layerref id="head02"/>
+          <layerref id="fin_b_01"/>
+        </frame>
+        <frame id="b_01">
+          <layerref id="head03"/>
+          <layerref id="fin_b_02"/>
+          <layerref id="bubble01"/>
+        </frame>
+        <frame id="b_02">
+          <layerref id="head03"/>
+          <layerref id="fin_b_01"/>
+          <layerref id="bubble02"/>
+        </frame>
+        <frame id="b_03">
+          <layerref id="head03"/>
+          <layerref id="fin_b_02"/>
+          <layerref id="bubble03"/>
+        </frame>
+        <frame id="b_04">
+          <layerref id="head03"/>
+          <layerref id="fin_b_01"/>
+          <layerref id="bubble01"/>
+        </frame>
+        <frame id="b_05">
+          <layerref id="head03"/>
+          <layerref id="fin_b_02"/>
+          <layerref id="bubble02"/>
+        </frame>
+        <frame id="b_06">
+          <layerref id="head03"/>
+          <layerref id="fin_b_01"/>
+          <layerref id="bubble03"/>
+        </frame>
+        <frame id="Blink02_3">
+          <layerref id="head03"/>
+          <layerref id="fin_b_02"/>
+          <layerref id="bubble03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="a_02" duration="2"/>
+          <frameref id="Blink01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="a_01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="a_01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="a_01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="Blink01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="a_01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="a_01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="a_01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="Blink01" duration="2"/>
+        </animation>
+        <animation id="Sit" framerate="8">
+          <frameref id="a_02" duration="2"/>
+          <frameref id="Blink01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="a_01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="a_01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="a_01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="Blink01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="a_01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="a_01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="a_01" duration="2"/>
+          <frameref id="a_02" duration="2"/>
+          <frameref id="Blink01" duration="2"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="fill"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="Blink02_3"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="b_03"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="Blink02_3"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="b_03"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="Blink02_3"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="b_03"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="Blink02_3"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="b_03"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="Blink02_3"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="b_03"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="Blink02_3"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="b_03"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="Blink02_3"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+          <frameref id="b_03"/>
+          <frameref id="b_04"/>
+          <frameref id="b_05"/>
+          <frameref id="b_06"/>
+          <frameref id="b_01"/>
+          <frameref id="b_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

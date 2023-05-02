@@ -1,0 +1,37 @@
+<item.SpriteItem id="7054" name="Asas do Anjo Caído Verde" desc="Um par de asas do anjo caído" tags="consumable,actionbar,wear,head,action_wearable_toggle,slave_catalog_colorize,unsearchable" icon="items/base/consumables/back/con_bak_91_fawings_neongreen_icon.png" price="25250" minLevel="80" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.2333,0.49"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="shadow+40,arcane+10"/>
+    <entry key="action_attributes_secondary" value="speed+60,health+80"/>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/fallenangelwings.xml"/>
+  </data>
+  <textures>
+    <texture id="Fallen Angel Wings" source="items/base/consumables/back/con_bak_91_fawings_neongreen_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0.2333,0.49"/>
+      <layers>
+        <layer id="Fallen Angel Wings" texture="Fallen Angel Wings">
+          <view angle="45" x="4" y="27"/>
+          <view angle="135" x="-4" y="27" hm="true"/>
+          <view angle="225" col="1" x="-7" y="21"/>
+          <view angle="315" col="1" x="7" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

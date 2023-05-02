@@ -1,0 +1,89 @@
+<item.SpriteItem id="0" name="Helper Halo" desc="A helper halo" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+  </volume>
+  <textures>
+    <texture id="Glow" source="items/base/consumables/magic/halo_bodyglow.png" cols="1" rows="1"/>
+    <texture id="icon" source="items/base/consumables/back/con_bak_207_staff.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/consumables/magic/halo_glow_lighting.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="icon" texture="icon">
+          <view y="-167"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In 01">
+          <layerref id="icon" a="0.1"/>
+        </frame>
+        <frame id="In 02">
+          <layerref id="icon" a="0.25"/>
+        </frame>
+        <frame id="In 03">
+          <layerref id="icon" a="0.4"/>
+        </frame>
+        <frame id="Loop">
+          <layerref id="icon"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="Loop"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="In 03"/>
+          <frameref id="In 02"/>
+          <frameref id="In 01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view x="1" y="-40"/>
+        </layer>
+        <layer id="Light01" texture="sym" align="middle">
+          <view x="1" y="-74"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In/Out 01">
+          <layerref id="Light01"/>
+        </frame>
+        <frame id="In/Out 02">
+          <layerref id="Light01"/>
+        </frame>
+        <frame id="In/Out 03">
+          <layerref id="Light01"/>
+        </frame>
+        <frame id="Loop">
+          <layerref id="Light01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="In/Out 01"/>
+          <frameref id="In/Out 02"/>
+          <frameref id="In/Out 03"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="Loop"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="In/Out 03"/>
+          <frameref id="In/Out 02"/>
+          <frameref id="In/Out 01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,54 @@
+<item.SpriteItem desc="A snowball hit effect." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" entity="false" name="Snowball hit">
+  <volume>
+    <box max="0.28,0.06,-0.22" min="0.22,0,-0.28"/>
+  </volume>
+  <textures>
+    <texture cols="4" id="hit_03_snowball" rows="1" source="items/base/consumables/magic/hit_03_snowball.png"/>
+  </textures>
+  <sounds>
+    <sound id="soft_impact" source="items/base/consumables/magic/sndfx_hitsoft.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box max="0.28,0.06,-0.22" min="0.22,0,-0.28"/>
+      <layers>
+        <layer id="Hit 01" texture="hit_03_snowball">
+          <view y="-12"/>
+        </layer>
+        <layer id="Hit 02" texture="hit_03_snowball">
+          <view col="1" y="-12"/>
+        </layer>
+        <layer id="Hit 03" texture="hit_03_snowball">
+          <view col="2" y="-12"/>
+        </layer>
+        <layer id="Hit 04" texture="hit_03_snowball">
+          <view col="3" y="-10"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Hit 01">
+          <layerref id="Hit 01" x="-5" y="-20"/>
+        </frame>
+        <frame id="Hit 02">
+          <layerref id="Hit 02" x="-5" y="-20"/>
+        </frame>
+        <frame id="Hit 03">
+          <layerref id="Hit 03" x="-5" y="-20"/>
+        </frame>
+        <frame id="Hit 04">
+          <layerref id="Hit 04" x="-5" y="-20"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Hit" loop="false">
+          <frameref id="Hit 01">
+            <sample id="soft_impact"/>
+          </frameref>
+          <frameref id="Hit 02"/>
+          <frameref id="Hit 03"/>
+          <frameref id="Hit 04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

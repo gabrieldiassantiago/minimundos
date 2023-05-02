@@ -1,0 +1,42 @@
+<item.SpriteItem id="3811" name="Carly Kitty, a Gatinha" desc="Colecionável Mensal (Abril de 2013)" tags="head,consumable,animal,costume,collectible,wear,actionbar,rare,action_wearable_toggle" icon="items/base/consumables/head/icon_con_head_item_148_persiancat.png" price="2000" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.34,0,-0.34" max="0.34,0.7,0.34"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="frost+10"/>
+    <entry key="action_attributes_secondary" value="speed+35,health+5"/>
+  </data>
+  <textures>
+    <texture id="tail" source="items/base/consumables/back/con_bak_item_172_persiancat.png" cols="1" rows="1"/>
+    <texture id="head" source="items/base/consumables/head/con_head_148_persiancat.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.34,0,-0.34" max="0.34,0.7,0.34"/>
+      <layers>
+        <layer id="tail" texture="tail">
+          <view angle="45" y="23"/>
+          <view angle="135" y="23" hm="true"/>
+          <view angle="225" y="23"/>
+          <view angle="315" y="23" hm="true"/>
+        </layer>
+        <layer id="head" texture="head">
+          <view angle="45" x="2" y="12"/>
+          <view angle="135" x="-2" y="12" hm="true"/>
+          <view angle="225" col="3" y="11" hm="true"/>
+          <view angle="315" col="3" y="11"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

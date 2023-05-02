@@ -1,0 +1,70 @@
+<item.SpriteItem id="6476" name="Bolha de Coração Rosa Zoom" desc="Uma bolha de coração rosa flutuante" tags="rare,consumable,actionbar,usable,wear,bubble,action_wearable_toggle" icon="items/base/consumables/clothing/accessory/acc_728_heartbubble_pink_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.8,0.3"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="health+50,speed+10"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_728_heartbubble_pink_item.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.8,0.3"/>
+      <layers>
+        <layer id="item" texture="Texture" y="8">
+          <view angle="45" y="-15"/>
+          <view angle="135" y="-15" hm="true"/>
+          <view angle="225" y="-15"/>
+          <view angle="315" y="-15" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="item"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="item" y="-1"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="item" y="-2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.1438" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-1">
+          <view x="4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xef9ff0" a="0.25"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4" syncOffsets="0,1">
+          <frameref id="Frame01" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

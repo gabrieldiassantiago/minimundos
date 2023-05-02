@@ -1,0 +1,120 @@
+<item.SpriteItem id="5265" name="Traje Vigarista Esmeralda Play" desc="Um traje de tecido leve e encantado" tags="rare,consumable,clothing,actionbar,wear,suits,action_wearable_toggle" icon="items/base/consumables/clothing/suits/suit_68_icon_rogue02.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="2985">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_68_frag_rogue02.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes" value="arcane+25"/>
+    <entry key="action_attributes_secondary" value="health+20,speed+20"/>
+  </data>
+  <textures>
+    <texture id="robot" source="items/base/consumables/clothing/suits/suit_68_item_rogue02.png" cols="2" rows="1"/>
+    <texture id="base" source="items/base/consumables/clothing/suits/suit_65_item_mage02_base.png" cols="1" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_halo_spread.png" cols="1" rows="1"/>
+    <texture id="glow" source="items/base/consumables/clothing/suits/suit_09_robot_glow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+      <layers>
+        <layer id="Robot" texture="robot" y="15">
+          <view angle="45" y="-10"/>
+          <view angle="135" y="-10" hm="true"/>
+          <view angle="225" col="1" x="1" y="-8" hm="true"/>
+          <view angle="315" col="1" x="1" y="-8"/>
+        </layer>
+        <layer id="Base01" texture="base">
+          <view angle="45" y="25"/>
+          <view angle="135" x="1" y="25" hm="true"/>
+          <view angle="225" y="25"/>
+          <view angle="315" x="1" y="25" hm="true"/>
+        </layer>
+        <layer id="Base02" texture="base">
+          <view angle="45" col="1" y="20"/>
+          <view angle="135" col="1" y="20"/>
+          <view angle="225" col="1" y="20"/>
+          <view angle="315" col="1" y="20"/>
+        </layer>
+        <layer id="Base03" texture="base">
+          <view angle="45" col="1" y="20" hm="true"/>
+          <view angle="135" col="1" y="20" hm="true"/>
+          <view angle="225" col="1" y="20" hm="true"/>
+          <view angle="315" col="1" y="20" hm="true"/>
+        </layer>
+        <layer id="Glow" texture="glow">
+          <view angle="45" y="-5" alpha="0"/>
+          <view angle="135" y="-5" alpha="0"/>
+          <view angle="225" y="-5" alpha="0"/>
+          <view angle="315" y="-5" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Base01"/>
+          <layerref id="Robot"/>
+          <layerref id="Glow" color="0x92dbef" a="0.75"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Base01"/>
+          <layerref id="Base02"/>
+          <layerref id="Robot" y="-1"/>
+          <layerref id="Glow" color="0x92dbef" a="0.6"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Base01"/>
+          <layerref id="Base03"/>
+          <layerref id="Robot" y="-2"/>
+          <layerref id="Glow" color="0x92dbef" a="0.45"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.5" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light" y="25" color="0x3b7de1"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light" y="25" color="0x3b7de1" a="0.95"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Light" y="25" color="0x3b7de1" a="0.9"/>
+        </frame>
+        <frame id="On04">
+          <layerref id="Light" y="25" color="0x3b7de1" a="0.85"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+          <frameref id="On03"/>
+          <frameref id="On02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

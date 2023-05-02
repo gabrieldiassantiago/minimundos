@@ -1,0 +1,174 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.23,-0.5026,-0.1026" max="0.0898,0.2436,0.2051"/>
+  </volume>
+  <textures>
+    <texture id="CapeF1" source="items/base/consumables/back/con_bak_04_cape_l1f1.png" cols="4" rows="2"/>
+    <texture id="CapeLF2" source="items/base/consumables/back/con_bak_04_cape_l1f2.png" cols="4" rows="2"/>
+    <texture id="CapeLF3" source="items/base/consumables/back/con_bak_04_cape_l1f3.png" cols="4" rows="2"/>
+    <texture id="Edge1" source="items/base/consumables/back/con_bak_04_capeedgf1.png" cols="4" rows="2"/>
+    <texture id="Edge2" source="items/base/consumables/back/con_bak_04_capeedgf2.png" cols="4" rows="2"/>
+    <texture id="Edge3" source="items/base/consumables/back/con_bak_04_capeedgf3.png" cols="4" rows="2"/>
+    <texture id="Sit" source="items/base/consumables/back/con_bak_04_capesit.png" cols="4" rows="2"/>
+    <texture id="SitEdge" source="items/base/consumables/back/con_bak_04_capesitegde.png" cols="4" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.23,-0.5026,-0.1026" max="0.0898,0.2436,0.2051"/>
+      <layers>
+        <layer id="CapeF1" texture="CapeF1">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="CapeF2" texture="CapeLF2">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="CapeF3" texture="CapeLF3">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="CapeF1col" texture="CapeF1">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="CapeF2col" texture="CapeLF2">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="CapeF3col" texture="CapeLF3">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="Bolt" texture="Bolt">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="Edge1" texture="Edge1">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="Edge2" texture="Edge2">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="Edge3" texture="Edge3">
+          <view angle="0" col="2" row="1" x="1" y="65"/>
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="90" x="1" y="68"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="180" col="2" x="-1" y="65"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="270" row="1" x="1" y="62"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="Sit" texture="Sit">
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="SitCol" texture="Sit">
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="SitEdge" texture="SitEdge">
+          <view angle="45" col="3" row="1" y="67"/>
+          <view angle="135" col="1" y="67"/>
+          <view angle="225" col="3" x="-2" y="64"/>
+          <view angle="315" col="1" row="1" x="2" y="63"/>
+        </layer>
+        <layer id="SitLogo" texture="Bolt">
+          <view angle="45" col="3" row="1" y="67" alpha="0"/>
+          <view angle="135" col="1" y="67" alpha="0"/>
+          <view angle="225" col="3" x="-3" y="60"/>
+          <view angle="315" col="1" row="1" x="3" y="59"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="CapeF1"/>
+          <layerref id="CapeF1col" color="0x1a3865" blend="overlay"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="CapeF2"/>
+          <layerref id="CapeF2col" color="0x1a3865" blend="overlay"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="CapeF3"/>
+          <layerref id="CapeF3col" color="0x1a3865" blend="overlay"/>
+        </frame>
+        <frame id="Sit">
+          <layerref id="Sit"/>
+          <layerref id="SitCol" color="0x1a3865" blend="overlay"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Flap" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

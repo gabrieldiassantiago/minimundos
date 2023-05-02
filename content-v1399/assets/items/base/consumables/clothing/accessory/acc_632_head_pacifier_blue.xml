@@ -1,0 +1,58 @@
+<item.SpriteItem id="0" name="Blue Pacifier" desc="Blue Pacifier" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/clothing/accessory/acc_632_head_pacifier_blue.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head01" texture="head">
+          <view angle="0" x="23" y="12"/>
+          <view angle="45" col="1" x="17" y="17"/>
+          <view angle="90" col="2" x="1" y="22"/>
+          <view angle="135" col="1" x="-17" y="17" hm="true"/>
+          <view angle="180" x="-23" y="12" hm="true"/>
+          <view angle="225" col="3" x="-6" y="1" alpha="0"/>
+          <view angle="270" col="4" x="2" y="-1" alpha="0"/>
+          <view angle="315" col="3" x="6" y="1" alpha="0" hm="true"/>
+        </layer>
+        <layer id="head02" texture="head">
+          <view angle="0" x="26" y="12"/>
+          <view angle="45" col="1" x="19" y="19"/>
+          <view angle="90" col="2" x="1" y="24"/>
+          <view angle="135" col="1" x="-19" y="19" hm="true"/>
+          <view angle="180" x="-26" y="12" hm="true"/>
+          <view angle="225" col="3" x="-6" y="1" alpha="0"/>
+          <view angle="270" col="4" x="2" y="-1" alpha="0"/>
+          <view angle="315" col="3" x="6" y="1" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="head01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="head02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="01" duration="20"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

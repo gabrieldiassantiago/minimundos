@@ -1,0 +1,153 @@
+<item.ChairItem id="7264" name="Banheira Luxuosa Gosma Rosa" desc="Sujeira fedorenta e desagradável" tags="rare,chair,misc" icon="items/base/modern/icon_m_oldhalloween_bathroom_01_stdbath.png" price="85" tokens="850" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" chairType="pool">
+  <seats>
+    <seat y="0.42" a="270">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,1.1,1.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_bathroom_01_stdbath_main.png" cols="2" rows="1"/>
+    <texture id="Texture01" source="items/base/modern/m_bathroom_01_stdbath_taps.png" cols="2" rows="1"/>
+    <texture id="Texture02" source="items/base/modern/m_bathroom_01_stdbath_tiles.png" cols="1" rows="1"/>
+    <texture id="Texture03" source="items/base/modern/m_oldhalloween_bathroom_01_stdbath_water.png" cols="2" rows="1"/>
+    <texture id="goo" source="items/base/modern/m_oldhalloween_bathroom_01_stdbath_goo.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-0.48,0,-0.48" max="0.48,1.1,1.48"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45" col="1" x="27" y="-51" hm="true"/>
+          <view angle="135" x="34" y="-53"/>
+          <view angle="225" x="-34" y="-53" hm="true"/>
+          <view angle="315" col="1" x="-27" y="-51"/>
+        </layer>
+        <layer id="tiles" texture="Texture02" align="middle">
+          <view angle="45" x="32" y="-32" hm="true"/>
+          <view angle="135" x="32" y="-32" alpha="0"/>
+          <view angle="225" x="-32" y="-32" alpha="0" hm="true"/>
+          <view angle="315" x="-32" y="-32"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Water">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="01" texture="Texture03">
+          <view angle="45" x="31" y="-40" alpha="0.85" hm="true"/>
+          <view angle="135" x="33" y="-8" alpha="0.85"/>
+          <view angle="225" x="-32" y="-8" alpha="0.85" hm="true"/>
+          <view angle="315" x="-31" y="-40" alpha="0.85"/>
+        </layer>
+        <layer id="02" texture="Texture03">
+          <view angle="45" col="1" x="31" y="-40" alpha="0.85" hm="true"/>
+          <view angle="135" col="1" x="33" y="-8" alpha="0.85"/>
+          <view angle="225" col="1" x="-32" y="-8" alpha="0.85" hm="true"/>
+          <view angle="315" col="1" x="-31" y="-40" alpha="0.85"/>
+        </layer>
+        <layer id="022" texture="Texture03">
+          <view angle="45" col="1" x="31" y="-40" alpha="0.85" hm="true"/>
+          <view angle="135" col="1" x="33" y="-8" alpha="0.85"/>
+          <view angle="225" col="1" x="-32" y="-8" alpha="0.85" hm="true"/>
+          <view angle="315" col="1" x="-31" y="-40" alpha="0.85"/>
+        </layer>
+        <layer id="012" texture="Texture03">
+          <view angle="45" x="31" y="-40" alpha="0.85" hm="true"/>
+          <view angle="135" x="33" y="-8" alpha="0.85"/>
+          <view angle="225" x="-32" y="-8" alpha="0.85" hm="true"/>
+          <view angle="315" x="-31" y="-40" alpha="0.85"/>
+        </layer>
+        <layer id="goo01" texture="goo">
+          <view angle="45" x="72" y="-77"/>
+          <view angle="135" x="68"/>
+          <view angle="225" x="-73" y="-1"/>
+          <view angle="315" x="-71" y="-79"/>
+        </layer>
+        <layer id="goo02" texture="goo">
+          <view angle="45" col="1" x="72" y="-77"/>
+          <view angle="135" col="1" x="68"/>
+          <view angle="225" col="1" x="-73" y="-1"/>
+          <view angle="315" col="1" x="-71" y="-79"/>
+        </layer>
+        <layer id="goo03" texture="goo">
+          <view angle="45" col="2" x="72" y="-78"/>
+          <view angle="135" col="2" x="68" y="-1"/>
+          <view angle="225" col="2" x="-73" y="-2"/>
+          <view angle="315" col="2" x="-69" y="-79" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="01"/>
+          <layerref id="goo01"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="02"/>
+          <layerref id="goo02"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="022" a="0.75"/>
+          <layerref id="012" a="0.75"/>
+          <layerref id="goo03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="Frame"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="LeftArm">
+      <box min="-0.48,0,-0.48" max="0.48,1.1,1.48"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45" x="30" y="-85" hm="true"/>
+          <view angle="135" col="1" x="37" y="-19"/>
+          <view angle="225" col="1" x="-37" y="-19" hm="true"/>
+          <view angle="315" x="-30" y="-85"/>
+        </layer>
+        <layer id="taps" texture="Texture01">
+          <view angle="45" col="1" x="84" y="-90" hm="true"/>
+          <view angle="135" x="80" y="-5"/>
+          <view angle="225" x="-82" y="-6" hm="true"/>
+          <view angle="315" col="1" x="-81" y="-90"/>
+        </layer>
+        <layer id="tiles" texture="Texture02" align="middle">
+          <view angle="45" x="31" y="-81" alpha="0" hm="true"/>
+          <view angle="135" x="32"/>
+          <view angle="225" x="-32" hm="true"/>
+          <view angle="315" x="-30" y="-81" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

@@ -1,0 +1,194 @@
+<item.SpriteItem id="7354" name="Vela de Natal Gigante" desc="Uma vela de Natal grande [13 de 25]" tags="rare,light" icon="items/base/consumables/clothing/accessory/acc_902_icon_adventbox_reindeer.png" price="250" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table, avatar,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+    <texture id="Liquid" source="items/base/consumables/clothing/accessory/acc_902_item_adventbox_reindeer_liquid.png" cols="1" rows="1"/>
+    <texture id="Flakes" source="items/base/consumables/clothing/accessory/acc_902_item_adventbox_reindeer_flake.png" cols="4" rows="1"/>
+    <texture id="Glass" source="items/base/consumables/clothing/accessory/acc_902_item_adventbox_reindeer.png" cols="2" rows="1"/>
+    <texture id="Flame" source="items/base/consumables/clothing/accessory/acc_902_item_adventbox_reindeer_flame.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="nodes">
+      <box min="-0.49,0,-0.49" max="0.49,1,0.49"/>
+      <layers>
+        <layer id="Glass" texture="Glass" y="100">
+          <view angle="45" y="-63"/>
+          <view angle="135" col="1" y="-63" hm="true"/>
+          <view angle="225" col="1" x="-1" y="-63"/>
+          <view angle="315" col="1" x="-1" y="-63"/>
+        </layer>
+        <layer id="Liquid" texture="Liquid" y="100">
+          <view angle="45" y="-63"/>
+          <view angle="135" x="-1" y="-63" hm="true"/>
+          <view angle="225" y="-63"/>
+          <view angle="315" y="-63"/>
+        </layer>
+        <layer id="Flakes01" texture="Flakes" y="100">
+          <view angle="45" y="-89"/>
+          <view angle="135" x="-1" y="-89" hm="true"/>
+          <view angle="225" y="-89"/>
+          <view angle="315" y="-89"/>
+        </layer>
+        <layer id="Flakes02" texture="Flakes" y="100">
+          <view angle="45" col="1" y="-89"/>
+          <view angle="135" col="1" x="-1" y="-89" hm="true"/>
+          <view angle="225" col="1" y="-89"/>
+          <view angle="315" col="1" y="-89"/>
+        </layer>
+        <layer id="Flakes03" texture="Flakes" y="100">
+          <view angle="45" col="2" y="-89"/>
+          <view angle="135" col="2" x="-1" y="-89" hm="true"/>
+          <view angle="225" col="2" y="-89"/>
+          <view angle="315" col="2" y="-89"/>
+        </layer>
+        <layer id="Flakes04" texture="Flakes" y="100">
+          <view angle="45" col="3" y="-89"/>
+          <view angle="135" col="3" x="-1" y="-89" hm="true"/>
+          <view angle="225" col="3" y="-89"/>
+          <view angle="315" col="3" y="-89"/>
+        </layer>
+        <layer id="Flame01" texture="Flame">
+          <view angle="45" x="6" y="-201"/>
+          <view angle="135" x="-4" y="-201" hm="true"/>
+          <view angle="225" x="4" y="-200"/>
+          <view angle="315" x="-2" y="-202" hm="true"/>
+        </layer>
+        <layer id="Flame02" texture="Flame">
+          <view angle="45" col="1" x="7" y="-201"/>
+          <view angle="135" col="1" x="-8" y="-201" hm="true"/>
+          <view angle="225" col="1" x="8" y="-200"/>
+          <view angle="315" col="1" x="-5" y="-202" hm="true"/>
+        </layer>
+        <layer id="Flame03" texture="Flame">
+          <view angle="45" row="1" x="3" y="-201"/>
+          <view angle="135" row="1" x="-4" y="-201" hm="true"/>
+          <view angle="225" row="1" x="4" y="-200"/>
+          <view angle="315" row="1" x="-2" y="-202" hm="true"/>
+        </layer>
+        <layer id="Flame04" texture="Flame">
+          <view angle="45" col="1" row="1" x="7" y="-201"/>
+          <view angle="135" col="1" row="1" x="-7" y="-201" hm="true"/>
+          <view angle="225" col="1" row="1" x="8" y="-200"/>
+          <view angle="315" col="1" row="1" x="-6" y="-202" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Liquid"/>
+          <layerref id="Flakes01"/>
+          <layerref id="Glass"/>
+          <layerref id="Flame01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Liquid"/>
+          <layerref id="Flakes02"/>
+          <layerref id="Glass"/>
+          <layerref id="Flame02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Liquid"/>
+          <layerref id="Flakes03"/>
+          <layerref id="Glass"/>
+          <layerref id="Flame03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Liquid"/>
+          <layerref id="Flakes04"/>
+          <layerref id="Glass"/>
+          <layerref id="Flame04"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Liquid"/>
+          <layerref id="Flakes01"/>
+          <layerref id="Glass"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="6" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-46"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xedac72" a="0.25"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0xedac72" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="15" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Texture" align="middle">
+          <view y="-18"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xfcfbed"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0xfcfbed" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="On">
+      <frame id="Frame01">
+        <noderef id="nodes" animation="On"/>
+        <noderef id="Intense" frame="On"/>
+        <noderef id="Diffuse" frame="On"/>
+      </frame>
+      <frame id="Frame02">
+        <noderef id="nodes" animation="On"/>
+        <noderef id="Intense" frame="On"/>
+        <noderef id="Diffuse" frame="On"/>
+      </frame>
+    </animation>
+  </animations>
+</item.SpriteItem>

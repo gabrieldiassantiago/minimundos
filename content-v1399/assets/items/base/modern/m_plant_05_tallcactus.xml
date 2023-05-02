@@ -1,0 +1,34 @@
+<item.SpriteItem desc="Cuidado com os espinhos!" dropTargetList="floor, table" gridActive="true" icon="items/base/modern/icon_m_plant_05_tallcactus.png" id="402" name="Cacto Grande" tags="plant" price="13" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.18,1.7,0.18" min="-0.18,0,-0.18"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture01" rows="1" source="items/base/modern/m_pot_03.png"/>
+    <texture cols="1" id="Texture" rows="1" source="items/base/modern/m_plant_05.png"/>
+  </textures>
+  <nodes>
+    <node id="Node" x="0" y="0" z="0">
+      <box max="0.18,1.7,0.18" min="-0.18,0,-0.18"/>
+      <layers>
+        <layer id="Layer" texture="Texture01">
+          <view angle="45" col="0" row="0" y="12"/>
+          <view angle="135" col="0" mirror="true" row="0" y="12"/>
+          <view angle="225" col="0" row="0" y="12"/>
+          <view angle="315" col="0" mirror="true" row="0" y="12"/>
+        </layer>
+        <layer id="Layer01" texture="Texture">
+          <view angle="45" col="0" row="0" y="-33"/>
+          <view angle="135" col="0" mirror="true" row="0" y="-33"/>
+          <view angle="225" col="0" row="0" y="-33"/>
+          <view angle="315" col="0" mirror="true" row="0" y="-33"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

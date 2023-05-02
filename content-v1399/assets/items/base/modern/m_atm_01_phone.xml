@@ -1,0 +1,187 @@
+<item.WidgetItem id="1376" name="Máquina de MiniMoedas pelo Celular" desc="Adquira MiniMoedas pelo celular aqui!" tags="admin,widget" icon="items/base/modern/icon_m_atm_01_phone.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_url_iframe.swf" price="99" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.6513,0.49"/>
+  </volume>
+  <events>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <data>
+    <entry key="frame" value="modern"/>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="widget_action" value="getEither"/>
+    <entry key="control_button" value="GET GOLD"/>
+    <entry key="control_button_tooltip" value="You can buy gold using your mobile phone"/>
+    <entry key="widget_background_override" value="widget/zongBG.jpg"/>
+    <entry key="widget_iframe_override" value="widget/CleanWhiteIFrameBG.jpg"/>
+    <entry key="widget_iframe_file" value="payment/zong-widget.html"/>
+    <entry key="widget_iframe_bg" value="widget/CleanWhiteIFrameBG.jpg"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="iframeWidget" value="true"/>
+  </data>
+  <navigate position="infront" sitRange="2.00" standRange="2.00" targetRange="2.00"/>
+  <textures>
+    <texture id="Base" source="items/base/modern/m_atm_01_phone_base.png" cols="2" rows="1"/>
+    <texture id="atm" source="items/base/modern/m_atm_01_phone_sign.png" cols="2" rows="1"/>
+    <texture id="decals" source="items/base/modern/m_atm_01_phone_decals.png" cols="2" rows="1"/>
+    <texture id="vertzong" source="items/base/modern/m_atm_01_phone_zong_vertical.png" cols="2" rows="1"/>
+    <texture id="zong" source="items/base/modern/m_atm_01_phone_zong.png" cols="1" rows="2"/>
+    <texture id="anm" source="items/base/modern/m_atm_01_phone_anm.png" cols="4" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_atm_phone.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,2.6513,0.49"/>
+      <layers>
+        <layer id="Base" texture="Base" x="4" y="36">
+          <view angle="45" x="-3" y="19"/>
+          <view angle="135" x="-3" y="19" hm="true"/>
+          <view angle="225" col="1" x="-3" y="15"/>
+          <view angle="315" col="1" x="-3" y="15" hm="true"/>
+        </layer>
+        <layer id="atm" texture="atm">
+          <view angle="45" x="21" y="-189"/>
+          <view angle="135" col="1" x="12" y="-169"/>
+          <view angle="225" col="1" x="-20" y="-175" hm="true"/>
+          <view angle="315" x="-11" y="-195" hm="true"/>
+        </layer>
+        <layer id="decals" texture="decals">
+          <view angle="45" col="1" x="30" y="-54"/>
+          <view angle="135" x="-28" y="-54"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="vertzong" texture="vertzong">
+          <view angle="45" x="-30" y="20"/>
+          <view angle="135" col="1" x="30" y="20"/>
+          <view angle="225" x="-40" y="13"/>
+          <view angle="315" col="1" x="40" y="13"/>
+        </layer>
+        <layer id="zong" texture="zong">
+          <view angle="45" x="11" y="-171"/>
+          <view angle="135" row="1" x="-11" y="-173"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" row="1" alpha="0"/>
+        </layer>
+        <layer id="screen_01" texture="anm">
+          <view angle="45" x="23" y="-98"/>
+          <view angle="135" x="-21" y="-98" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen_02" texture="anm">
+          <view angle="45" col="1" x="21" y="-98"/>
+          <view angle="135" col="1" x="-18" y="-96" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen_03" texture="anm">
+          <view angle="45" col="2" x="22" y="-98"/>
+          <view angle="135" col="2" x="-19" y="-96" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen_04" texture="anm">
+          <view angle="45" col="3" x="21" y="-96"/>
+          <view angle="135" col="3" x="-18" y="-95" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Base"/>
+          <layerref id="atm"/>
+          <layerref id="decals"/>
+          <layerref id="vertzong"/>
+          <layerref id="zong"/>
+          <layerref id="screen_01"/>
+          <layerref id="screen_02"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Base"/>
+          <layerref id="atm"/>
+          <layerref id="decals"/>
+          <layerref id="vertzong"/>
+          <layerref id="zong"/>
+          <layerref id="screen_01"/>
+          <layerref id="screen_03"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Base"/>
+          <layerref id="atm"/>
+          <layerref id="decals"/>
+          <layerref id="vertzong"/>
+          <layerref id="zong"/>
+          <layerref id="screen_01"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Base"/>
+          <layerref id="atm"/>
+          <layerref id="decals"/>
+          <layerref id="vertzong"/>
+          <layerref id="zong"/>
+          <layerref id="screen_01"/>
+          <layerref id="screen_04" a="0.5"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Base"/>
+          <layerref id="atm"/>
+          <layerref id="decals"/>
+          <layerref id="vertzong"/>
+          <layerref id="zong"/>
+          <layerref id="screen_01"/>
+          <layerref id="screen_04"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Base"/>
+          <layerref id="atm"/>
+          <layerref id="decals"/>
+          <layerref id="vertzong"/>
+          <layerref id="zong"/>
+          <layerref id="screen_01"/>
+          <layerref id="screen_02" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="Frame01"/>
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04" duration="4"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame05"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.5156" y="1.8" s="3.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" x="4" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

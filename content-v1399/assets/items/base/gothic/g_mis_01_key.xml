@@ -1,0 +1,72 @@
+<item.SpriteItem desc="Uma chave de ouro maciço" dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" gridActive="false" icon="items/base/gothic/icon_g_mis_01_key.png" id="1157" name="Chave Dourada" tags="misc,pickup" price="13" tokens="130" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.24,0.05,0.1" min="-0.24,0,-0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_pick_up.as"/>
+    <event id="action" script="scripts/item/action_pick_up.as"/>
+  </events>
+  <actions>
+    <action id="Pick Up"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate usableRange="3.00"/>
+  <textures>
+    <texture cols="4" id="key" rows="1" source="items/base/gothic/g_mis_01_key.png"/>
+  </textures>
+  <nodes>
+    <node id="Node" layer="floor">
+      <box max="0.24,0.05,0.1" min="-0.24,0,-0.1"/>
+      <layers>
+        <layer id="Key" texture="key">
+          <view angle="45" col="1" hm="true" x="1" y="21"/>
+          <view angle="135" col="3" hm="true" y="20"/>
+          <view angle="225" col="2" hm="true" x="2" y="21"/>
+          <view angle="315" hm="true" x="-2" y="21"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="key1">
+          <layerref id="Key"/>
+        </frame>
+        <frame id="key2">
+          <layerref a="0.8" id="Key"/>
+        </frame>
+        <frame id="key3">
+          <layerref a="0.5" id="Key"/>
+        </frame>
+        <frame id="key4">
+          <layerref a="0.2" id="Key"/>
+        </frame>
+        <frame id="key5">
+          <layerref a="0" id="Key"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Visible" syncFrames="false">
+          <frameref id="key1"/>
+        </animation>
+        <animation framerate="4" id="Invisible" syncFrames="false">
+          <frameref id="key5"/>
+        </animation>
+        <animation framerate="8" id="Show" loop="false" syncFrames="false">
+          <frameref id="key5"/>
+          <frameref id="key4"/>
+          <frameref id="key3"/>
+          <frameref id="key2"/>
+          <frameref id="key1"/>
+        </animation>
+        <animation framerate="8" id="Hide" loop="false" syncFrames="false">
+          <frameref id="key1"/>
+          <frameref id="key2"/>
+          <frameref id="key3"/>
+          <frameref id="key4"/>
+          <frameref id="key5"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

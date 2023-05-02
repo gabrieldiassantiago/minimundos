@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="Um presente especial." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/modern/icon_m_present_02_purple.png" id="1346" name="Caixa de Presentes Roxa" tags="misc,present" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.26,0.4,0.37" min="-0.26,0,-0.37"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_unwrap.as"/>
+    <event id="action" script="scripts/item/action_unwrap.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/modern/m_present_02_purple.png"/>
+  </textures>
+  <nodes>
+    <node id="Node01">
+      <box max="0.26,0.4,0.37" min="-0.26,0,-0.37"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="22">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

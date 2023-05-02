@@ -1,0 +1,78 @@
+<item.SpriteItem id="0" name="Flag_Uruguay" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.28" max="0.28,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_112_hand_flag.png" cols="4" rows="1"/>
+    <texture id="FX_sparkes" source="items/base/consumables/clothing/accessory/acc_287_hand_flag_uruguay.png" cols="4" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Sparkler">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="wand" texture="Texture">
+          <view angle="0" col="2" x="3" y="9" hm="true"/>
+          <view angle="45" x="1" y="9"/>
+          <view angle="90" col="1" x="-1" y="11"/>
+          <view angle="135" x="-1" y="9" hm="true"/>
+          <view angle="180" col="2" x="-4" y="9"/>
+          <view angle="225" col="3" x="-4" y="9"/>
+          <view angle="270" col="1" x="-1" y="4"/>
+          <view angle="315" col="3" x="4" y="9" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="wand"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Sparkles">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="layer1" texture="FX_sparkes" y="-28">
+          <view angle="0" col="2" x="22" y="28"/>
+          <view angle="45" x="17" y="39"/>
+          <view angle="90" col="1" x="5" y="40"/>
+          <view angle="135" x="-18" y="39" hm="true"/>
+          <view angle="180" col="2" x="-24" y="28" hm="true"/>
+          <view angle="225" col="3" x="-18" y="23"/>
+          <view angle="270" col="1" x="-3" y="34" hm="true"/>
+          <view angle="315" col="3" x="17" y="23" hm="true"/>
+        </layer>
+        <layer id="layer2" texture="FX_sparkes" y="-28">
+          <view angle="0" col="2" row="1" x="22" y="28"/>
+          <view angle="45" row="1" x="17" y="39"/>
+          <view angle="90" col="1" row="1" x="5" y="40"/>
+          <view angle="135" row="1" x="-18" y="39" hm="true"/>
+          <view angle="180" col="2" row="1" x="-24" y="28" hm="true"/>
+          <view angle="225" col="3" row="1" x="-18" y="23"/>
+          <view angle="270" col="1" row="1" x="-3" y="34" hm="true"/>
+          <view angle="315" col="3" row="1" x="17" y="23" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="layer1"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="layer2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Flag_US" framerate="2">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

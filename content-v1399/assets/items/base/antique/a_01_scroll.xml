@@ -1,0 +1,84 @@
+<item.SpriteItem desc="Um pergaminho mágico" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" gridActive="false" icon="items/base/antique/icon_a_01_scroll.png" id="1057" name="Pergaminho" tags="misc,pickup" price="20" tokens="200" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.32,0.1,0.08" min="-0.32,0,-0.08"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_pick_up.as"/>
+    <event id="action" script="scripts/item/action_pick_up.as"/>
+  </events>
+  <actions>
+    <action id="Pick Up"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate usableRange="3.00"/>
+  <textures>
+    <texture cols="1" id="scroll" rows="1" source="items/base/antique/a_01_scroll.png"/>
+    <texture cols="2" id="bow" rows="1" source="items/base/antique/a_01_scroll_bow.png"/>
+  </textures>
+  <nodes>
+    <node id="Scroll" layer="floor">
+      <box max="0.32,0.1,0.08" min="-0.32,0,-0.08"/>
+      <layers>
+        <layer id="scroll" texture="scroll">
+          <view angle="45" hm="true" x="-1" y="21"/>
+          <view angle="135" y="22"/>
+          <view angle="225" hm="true" x="-2" y="21"/>
+          <view angle="315" y="21"/>
+        </layer>
+        <layer id="ribbon" texture="bow">
+          <view angle="45" hm="true" x="2" y="5"/>
+          <view angle="135" x="-2" y="5"/>
+          <view angle="225" col="1" x="-3" y="3"/>
+          <view angle="315" col="1" hm="true" x="2" y="3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="scroll1">
+          <layerref id="scroll"/>
+          <layerref id="ribbon"/>
+        </frame>
+        <frame id="scroll2">
+          <layerref a="0.8" id="scroll"/>
+          <layerref a="0.8" id="ribbon"/>
+        </frame>
+        <frame id="scroll3">
+          <layerref a="0.5" id="scroll"/>
+          <layerref a="0.5" id="ribbon"/>
+        </frame>
+        <frame id="scroll4">
+          <layerref a="0.2" id="scroll"/>
+          <layerref a="0.2" id="ribbon"/>
+        </frame>
+        <frame id="scroll5">
+          <layerref a="0" id="scroll"/>
+          <layerref a="0" id="ribbon"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Visible" syncFrames="false">
+          <frameref id="scroll1"/>
+        </animation>
+        <animation framerate="4" id="Invisible" syncFrames="false">
+          <frameref id="scroll5"/>
+        </animation>
+        <animation framerate="8" id="Show" loop="false" syncFrames="false">
+          <frameref id="scroll5"/>
+          <frameref id="scroll4"/>
+          <frameref id="scroll3"/>
+          <frameref id="scroll2"/>
+          <frameref id="scroll1"/>
+        </animation>
+        <animation framerate="8" id="Hide" loop="false" syncFrames="false">
+          <frameref id="scroll1"/>
+          <frameref id="scroll2"/>
+          <frameref id="scroll3"/>
+          <frameref id="scroll4"/>
+          <frameref id="scroll5"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

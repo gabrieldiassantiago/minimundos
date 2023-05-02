@@ -1,0 +1,469 @@
+<item.SpriteItem id="0" name="bfly" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/consumables/back/con_bak_295_flame.png" cols="4" rows="4"/>
+    <texture id="stars" source="items/base/consumables/back/con_bak_293_rainbow_stars.png" cols="5" rows="4"/>
+    <texture id="starsidle" source="items/base/consumables/back/con_bak_293_rainbow_starsidle.png" cols="5" rows="4"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="idle" source="items/base/consumables/back/con_bak_295_flame_idle.png" cols="4" rows="3"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/bobz/bobz_03_fairy_sound.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="skin" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="stars_01" texture="stars">
+          <view angle="0" col="2" x="-100" y="150"/>
+          <view angle="45" x="-70" y="130"/>
+          <view angle="90" col="3" y="100"/>
+          <view angle="135" x="70" y="130" hm="true"/>
+          <view angle="180" col="2" x="100" y="150" hm="true"/>
+          <view angle="225" col="1" x="70" y="175" hm="true"/>
+          <view angle="270" col="4" y="170"/>
+          <view angle="315" col="1" x="-70" y="175"/>
+        </layer>
+        <layer id="stars_02" texture="stars">
+          <view angle="0" col="2" row="1" x="-100" y="150"/>
+          <view angle="45" row="1" x="-70" y="130"/>
+          <view angle="90" col="3" row="1" y="100"/>
+          <view angle="135" row="1" x="70" y="130" hm="true"/>
+          <view angle="180" col="2" row="1" x="100" y="150" hm="true"/>
+          <view angle="225" col="1" row="1" x="70" y="175" hm="true"/>
+          <view angle="270" col="4" row="1" y="170"/>
+          <view angle="315" col="1" row="1" x="-70" y="175"/>
+        </layer>
+        <layer id="stars_03" texture="stars">
+          <view angle="0" col="2" row="2" x="-100" y="150"/>
+          <view angle="45" row="2" x="-70" y="130"/>
+          <view angle="90" col="3" row="2" y="100"/>
+          <view angle="135" row="2" x="70" y="130" hm="true"/>
+          <view angle="180" col="2" row="2" x="100" y="150" hm="true"/>
+          <view angle="225" col="1" row="2" x="70" y="175" hm="true"/>
+          <view angle="270" col="4" row="2" y="170"/>
+          <view angle="315" col="1" row="2" x="-70" y="175"/>
+        </layer>
+        <layer id="stars_04" texture="stars">
+          <view angle="0" col="2" row="3" x="-100" y="150"/>
+          <view angle="45" row="3" x="-70" y="130"/>
+          <view angle="90" col="3" row="3" y="100"/>
+          <view angle="135" row="3" x="70" y="130" hm="true"/>
+          <view angle="180" col="2" row="3" x="100" y="150" hm="true"/>
+          <view angle="225" col="1" row="3" x="70" y="175" hm="true"/>
+          <view angle="270" col="4" row="3" y="170"/>
+          <view angle="315" col="1" row="3" x="-70" y="175"/>
+        </layer>
+        <layer id="stars_idle_01" texture="starsidle">
+          <view angle="0" col="2" x="-100" y="150"/>
+          <view angle="45" x="-70" y="130"/>
+          <view angle="90" col="3" y="100"/>
+          <view angle="135" x="70" y="130" hm="true"/>
+          <view angle="180" col="2" x="100" y="150" hm="true"/>
+          <view angle="225" col="1" x="70" y="175" hm="true"/>
+          <view angle="270" col="4" y="170"/>
+          <view angle="315" col="1" x="-70" y="175"/>
+        </layer>
+        <layer id="stars_idle_02" texture="starsidle">
+          <view angle="0" col="2" row="1" x="-100" y="150"/>
+          <view angle="45" row="1" x="-70" y="130"/>
+          <view angle="90" col="3" row="1" y="100"/>
+          <view angle="135" row="1" x="70" y="130" hm="true"/>
+          <view angle="180" col="2" row="1" x="100" y="150" hm="true"/>
+          <view angle="225" col="1" row="1" x="70" y="175" hm="true"/>
+          <view angle="270" col="4" row="1" y="170"/>
+          <view angle="315" col="1" row="1" x="-70" y="175"/>
+        </layer>
+        <layer id="stars_idle_03" texture="starsidle">
+          <view angle="0" col="2" row="2" x="-100" y="150"/>
+          <view angle="45" row="2" x="-70" y="130"/>
+          <view angle="90" col="3" row="2" y="100"/>
+          <view angle="135" row="2" x="70" y="130" hm="true"/>
+          <view angle="180" col="2" row="2" x="100" y="150" hm="true"/>
+          <view angle="225" col="1" row="2" x="70" y="175" hm="true"/>
+          <view angle="270" col="4" row="2" y="170"/>
+          <view angle="315" col="1" row="2" x="-70" y="175"/>
+        </layer>
+        <layer id="stars_idle_04" texture="starsidle">
+          <view angle="0" col="2" row="3" x="-100" y="150"/>
+          <view angle="45" row="3" x="-70" y="130"/>
+          <view angle="90" col="3" row="3" y="100"/>
+          <view angle="135" row="3" x="70" y="130" hm="true"/>
+          <view angle="180" col="2" row="3" x="100" y="150" hm="true"/>
+          <view angle="225" col="1" row="3" x="70" y="175" hm="true"/>
+          <view angle="270" col="4" row="3" y="170"/>
+          <view angle="315" col="1" row="3" x="-70" y="175"/>
+        </layer>
+        <layer id="frame_idle_01" texture="idle">
+          <view angle="0" col="2" x="-5" y="102"/>
+          <view angle="45" x="-9" y="102"/>
+          <view angle="90" col="3" x="-1" y="88"/>
+          <view angle="135" x="9" y="102" hm="true"/>
+          <view angle="180" col="2" x="5" y="102" hm="true"/>
+          <view angle="225" col="1" x="6" y="99" hm="true"/>
+          <view angle="270" col="3" x="-1" y="85"/>
+          <view angle="315" col="1" x="-6" y="99"/>
+        </layer>
+        <layer id="frame_idle_02" texture="idle">
+          <view angle="0" col="2" row="1" x="-5" y="102"/>
+          <view angle="45" row="1" x="-9" y="102"/>
+          <view angle="90" col="3" row="1" x="-1" y="88"/>
+          <view angle="135" row="1" x="9" y="102" hm="true"/>
+          <view angle="180" col="2" row="1" x="5" y="102" hm="true"/>
+          <view angle="225" col="1" row="1" x="6" y="99" hm="true"/>
+          <view angle="270" col="3" row="1" x="-1" y="85"/>
+          <view angle="315" col="1" row="1" x="-6" y="99"/>
+        </layer>
+        <layer id="frame_idle_03" texture="idle">
+          <view angle="0" col="2" row="2" x="-5" y="102"/>
+          <view angle="45" row="2" x="-9" y="102"/>
+          <view angle="90" col="3" row="2" x="-1" y="88"/>
+          <view angle="135" row="2" x="9" y="102" hm="true"/>
+          <view angle="180" col="2" row="2" x="5" y="102" hm="true"/>
+          <view angle="225" col="1" row="2" x="6" y="99" hm="true"/>
+          <view angle="270" col="3" row="2" x="-1" y="85"/>
+          <view angle="315" col="1" row="2" x="-6" y="99"/>
+        </layer>
+        <layer id="frame1" texture="base">
+          <view angle="0" col="2" x="-88" y="117"/>
+          <view angle="45" x="-71" y="112"/>
+          <view angle="90" col="3" x="-3" y="101"/>
+          <view angle="135" x="70" y="112" hm="true"/>
+          <view angle="180" col="2" x="88" y="117" hm="true"/>
+          <view angle="225" col="1" x="64" y="124" hm="true"/>
+          <view angle="270" col="3" x="-2" y="191" vm="true"/>
+          <view angle="315" col="1" x="-64" y="124"/>
+        </layer>
+        <layer id="frame2" texture="base">
+          <view angle="0" col="2" row="1" x="-88" y="117"/>
+          <view angle="45" row="1" x="-71" y="112"/>
+          <view angle="90" col="3" row="1" x="-3" y="101"/>
+          <view angle="135" row="1" x="70" y="112" hm="true"/>
+          <view angle="180" col="2" row="1" x="88" y="117" hm="true"/>
+          <view angle="225" col="1" row="1" x="64" y="124" hm="true"/>
+          <view angle="270" col="3" row="1" x="-2" y="191" vm="true"/>
+          <view angle="315" col="1" row="1" x="-64" y="124"/>
+        </layer>
+        <layer id="frame3" texture="base">
+          <view angle="0" col="2" row="2" x="-88" y="117"/>
+          <view angle="45" row="2" x="-71" y="112"/>
+          <view angle="90" col="3" row="2" x="-3" y="101"/>
+          <view angle="135" row="2" x="70" y="112" hm="true"/>
+          <view angle="180" col="2" row="2" x="88" y="117" hm="true"/>
+          <view angle="225" col="1" row="2" x="64" y="124" hm="true"/>
+          <view angle="270" col="3" row="2" x="-2" y="191" vm="true"/>
+          <view angle="315" col="1" row="2" x="-64" y="124"/>
+        </layer>
+        <layer id="frame4" texture="base">
+          <view angle="0" col="2" row="3" x="-88" y="117"/>
+          <view angle="45" row="3" x="-71" y="112"/>
+          <view angle="90" col="3" row="3" x="-3" y="101"/>
+          <view angle="135" row="3" x="70" y="112" hm="true"/>
+          <view angle="180" col="2" row="3" x="88" y="117" hm="true"/>
+          <view angle="225" col="1" row="3" x="64" y="124" hm="true"/>
+          <view angle="270" col="3" row="3" x="-2" y="191" vm="true"/>
+          <view angle="315" col="1" row="3" x="-64" y="124"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="frame1"/>
+          <layerref id="stars_01" color="0xf0ba8b"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="frame2"/>
+          <layerref id="stars_02" color="0xf0ba8b" a="0.8"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="frame3"/>
+          <layerref id="stars_03" color="0xf0ba8b"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="frame4"/>
+          <layerref id="stars_04" color="0xf0ba8b" a="0.8"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="frame1" a="0"/>
+        </frame>
+        <frame id="Frame_05">
+          <layerref id="frame1" a="0"/>
+          <layerref id="stars_idle_01" color="0xf0ba8b" a="0.7"/>
+          <layerref id="frame_idle_01"/>
+        </frame>
+        <frame id="Frame_06">
+          <layerref id="stars_idle_02" color="0xf0ba8b"/>
+          <layerref id="frame_idle_02"/>
+        </frame>
+        <frame id="Frame_07">
+          <layerref id="stars_idle_03" color="0xf0ba8b" a="0.5"/>
+          <layerref id="frame_idle_03"/>
+        </frame>
+        <frame id="Frame_08">
+          <layerref id="stars_idle_04" color="0xf0ba8b" a="0.8"/>
+          <layerref id="frame_idle_01"/>
+        </frame>
+        <frame id="Frame_09">
+          <layerref id="frame1" a="0"/>
+          <layerref id="stars_idle_01" color="0xf0ba8b" a="0.7"/>
+          <layerref id="frame_idle_02"/>
+        </frame>
+        <frame id="Frame_10">
+          <layerref id="stars_idle_02" color="0xf0ba8b"/>
+          <layerref id="frame_idle_03"/>
+        </frame>
+        <frame id="Frame_11">
+          <layerref id="stars_idle_03" color="0xf0ba8b" a="0.5"/>
+          <layerref id="frame_idle_01"/>
+        </frame>
+        <frame id="Frame_12">
+          <layerref id="frame1" a="0"/>
+          <layerref id="stars_idle_04" color="0xf0ba8b" a="0.7"/>
+          <layerref id="frame_idle_02"/>
+        </frame>
+        <frame id="Frame_13">
+          <layerref id="stars_idle_01" color="0xf0ba8b"/>
+          <layerref id="frame_idle_03"/>
+        </frame>
+        <frame id="Frame_14">
+          <layerref id="stars_idle_02" color="0xf0ba8b" a="0.5"/>
+          <layerref id="frame_idle_01"/>
+        </frame>
+        <frame id="Frame_15">
+          <layerref id="stars_idle_03" color="0xf0ba8b"/>
+          <layerref id="frame_idle_02"/>
+        </frame>
+        <frame id="Frame_16">
+          <layerref id="stars_idle_04" color="0xf0ba8b"/>
+          <layerref id="frame_idle_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame_05"/>
+          <frameref id="Frame_06"/>
+          <frameref id="Frame_07"/>
+          <frameref id="Frame_08"/>
+          <frameref id="Frame_09"/>
+          <frameref id="Frame_10"/>
+          <frameref id="Frame_11"/>
+          <frameref id="Frame_12"/>
+          <frameref id="Frame_13"/>
+          <frameref id="Frame_14"/>
+          <frameref id="Frame_15"/>
+          <frameref id="Frame_16"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="Frame_01">
+            <sample id="flap"/>
+          </frameref>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="frame1" texture="base">
+          <view angle="0" col="2" x="-90" y="102"/>
+          <view angle="45" x="-70" y="102"/>
+          <view angle="90" col="3" y="87"/>
+          <view angle="135" x="70" y="104" hm="true"/>
+          <view angle="180" col="2" x="86" y="108" hm="true"/>
+          <view angle="225" col="1" x="70" y="113" hm="true"/>
+          <view angle="270" col="3" x="2" y="182" vm="true"/>
+          <view angle="315" col="1" x="-70" y="113"/>
+        </layer>
+        <layer id="frame2" texture="base">
+          <view angle="0" col="2" row="1" x="-90" y="102"/>
+          <view angle="45" row="1" x="-70" y="102"/>
+          <view angle="90" col="3" row="1" y="87"/>
+          <view angle="135" row="1" x="70" y="104" hm="true"/>
+          <view angle="180" col="2" row="1" x="86" y="108" hm="true"/>
+          <view angle="225" col="1" row="1" x="70" y="113" hm="true"/>
+          <view angle="270" col="3" row="1" x="2" y="182" vm="true"/>
+          <view angle="315" col="1" row="1" x="-70" y="113"/>
+        </layer>
+        <layer id="frame3" texture="base">
+          <view angle="0" col="2" row="2" x="-90" y="102"/>
+          <view angle="45" row="2" x="-70" y="102"/>
+          <view angle="90" col="3" row="2" y="87"/>
+          <view angle="135" row="2" x="70" y="104" hm="true"/>
+          <view angle="180" col="2" row="2" x="86" y="108" hm="true"/>
+          <view angle="225" col="1" row="2" x="70" y="113" hm="true"/>
+          <view angle="270" col="3" row="2" x="2" y="182" vm="true"/>
+          <view angle="315" col="1" row="2" x="-70" y="113"/>
+        </layer>
+        <layer id="frame4" texture="base">
+          <view angle="0" col="2" row="3" x="-90" y="102"/>
+          <view angle="45" row="3" x="-70" y="102"/>
+          <view angle="90" col="3" row="3" y="87"/>
+          <view angle="135" row="3" x="70" y="104" hm="true"/>
+          <view angle="180" col="2" row="3" x="86" y="108" hm="true"/>
+          <view angle="225" col="1" row="3" x="70" y="113" hm="true"/>
+          <view angle="270" col="3" row="3" x="2" y="182" vm="true"/>
+          <view angle="315" col="1" row="3" x="-70" y="113"/>
+        </layer>
+        <layer id="stars_01" texture="starsidle">
+          <view angle="0" col="2" x="-100" y="150"/>
+          <view angle="45" x="-70" y="130"/>
+          <view angle="90" col="3" y="100"/>
+          <view angle="135" x="70" y="130" hm="true"/>
+          <view angle="180" col="2" x="100" y="150" hm="true"/>
+          <view angle="225" col="1" x="70" y="175" hm="true"/>
+          <view angle="270" col="4" y="170"/>
+          <view angle="315" col="1" x="-70" y="175"/>
+        </layer>
+        <layer id="stars_02" texture="starsidle">
+          <view angle="0" col="2" row="1" x="-100" y="150"/>
+          <view angle="45" row="1" x="-70" y="130"/>
+          <view angle="90" col="3" row="1" y="100"/>
+          <view angle="135" row="1" x="70" y="130" hm="true"/>
+          <view angle="180" col="2" row="1" x="100" y="150" hm="true"/>
+          <view angle="225" col="1" row="1" x="70" y="175" hm="true"/>
+          <view angle="270" col="4" row="1" y="170"/>
+          <view angle="315" col="1" row="1" x="-70" y="175"/>
+        </layer>
+        <layer id="stars_03" texture="starsidle">
+          <view angle="0" col="2" row="2" x="-100" y="150"/>
+          <view angle="45" row="2" x="-70" y="130"/>
+          <view angle="90" col="3" row="2" y="100"/>
+          <view angle="135" row="2" x="70" y="130" hm="true"/>
+          <view angle="180" col="2" row="2" x="100" y="150" hm="true"/>
+          <view angle="225" col="1" row="2" x="70" y="175" hm="true"/>
+          <view angle="270" col="4" row="2" y="170"/>
+          <view angle="315" col="1" row="2" x="-70" y="175"/>
+        </layer>
+        <layer id="stars_04" texture="starsidle">
+          <view angle="0" col="2" row="3" x="-100" y="150"/>
+          <view angle="45" row="3" x="-70" y="130"/>
+          <view angle="90" col="3" row="3" y="100"/>
+          <view angle="135" row="3" x="70" y="130" hm="true"/>
+          <view angle="180" col="2" row="3" x="100" y="150" hm="true"/>
+          <view angle="225" col="1" row="3" x="70" y="175" hm="true"/>
+          <view angle="270" col="4" row="3" y="170"/>
+          <view angle="315" col="1" row="3" x="-70" y="175"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off"/>
+        <frame id="Frame_01">
+          <layerref id="frame1" color="0xf1efab" a="0.55"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="frame2" color="0xf1efab" a="0.7"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="frame3" color="0xf1efab" a="0.55"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="frame4" color="0xf1efab" a="0.7"/>
+        </frame>
+        <frame id="stars_01">
+          <layerref id="stars_01" color="0xf0ba8b" a="0.7"/>
+        </frame>
+        <frame id="stars_02">
+          <layerref id="stars_02" color="0xf0ba8b" a="0.7"/>
+        </frame>
+        <frame id="stars_03">
+          <layerref id="stars_03" color="0xf0ba8b" a="0.7"/>
+        </frame>
+        <frame id="stars_04">
+          <layerref id="stars_04" color="0xf0ba8b" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="stars_01"/>
+          <frameref id="stars_02"/>
+          <frameref id="stars_03"/>
+          <frameref id="stars_04"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="-23" y="10" hm="true"/>
+          <view angle="45" x="-15" y="4"/>
+          <view angle="90"/>
+          <view angle="135" x="18" y="4" hm="true"/>
+          <view angle="180" x="26" y="10"/>
+          <view angle="225" x="20" y="16"/>
+          <view angle="270" y="12"/>
+          <view angle="315" x="-20" y="18" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+        <frame id="light_01">
+          <layerref id="Light" color="0xf1efab" a="0.6"/>
+        </frame>
+        <frame id="light_02">
+          <layerref id="Light" color="0xf1efab" a="0.6"/>
+        </frame>
+        <frame id="light_03">
+          <layerref id="Light" color="0xf1efab" a="0.6"/>
+        </frame>
+        <frame id="light_04">
+          <layerref id="Light" color="0xf1efab" a="0.6"/>
+        </frame>
+        <frame id="light_idle_01">
+          <layerref id="Light" color="0xf1efab" a="0.4"/>
+        </frame>
+        <frame id="light_idle_02">
+          <layerref id="Light" color="0xf1efab" a="0.3"/>
+        </frame>
+        <frame id="light_idle_03">
+          <layerref id="Light" color="0xf1efab" a="0.2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="light_idle_01"/>
+          <frameref id="light_idle_02"/>
+          <frameref id="light_idle_03"/>
+          <frameref id="light_idle_02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Walk">
+          <frameref id="light_01"/>
+          <frameref id="light_02"/>
+          <frameref id="light_03"/>
+          <frameref id="light_04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

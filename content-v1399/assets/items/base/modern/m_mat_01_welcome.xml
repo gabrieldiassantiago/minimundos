@@ -1,0 +1,37 @@
+<item.SpriteItem desc="Antes de entrar, limpe os pés e o coração." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" gridActive="false" icon="items/base/modern/icon_m_mat_01_welcome.png" id="2324" name="Tapete Bem-Vindo" tags="misc" minLevel="1" minCPLevel="1" price="35" tokens="350">
+  <volume>
+    <box min="-0.4872,-0.001,-0.6667" max="0.4872,0,0.6667"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/modern/m_welcome_mat_01_base.png" cols="2" rows="1"/>
+    <texture id="text" source="items/base/modern/m_welcome_mat_01_text.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="mat_welcome" layer="surface">
+      <box min="-0.4872,-0.001,-0.6667" max="0.4872,0,0.6667"/>
+      <layers>
+        <layer id="mat" texture="base">
+          <view angle="45" col="1" x="1" y="44"/>
+          <view angle="135" col="1" x="1" y="44" hm="true"/>
+          <view angle="225" x="5" y="44"/>
+          <view angle="315" x="-5" y="44" hm="true"/>
+        </layer>
+        <layer id="text" texture="text">
+          <view angle="45" col="1" row="1" x="2" y="25"/>
+          <view angle="135" row="1" y="24"/>
+          <view angle="225" x="2" y="23"/>
+          <view angle="315" col="1" y="22"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

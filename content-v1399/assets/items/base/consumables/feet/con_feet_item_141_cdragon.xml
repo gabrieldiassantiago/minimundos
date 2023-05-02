@@ -1,0 +1,105 @@
+<item.SpriteItem id="5669" name="Dragão Chinês Zoom" desc="Uma criatura voadora majestosa" tags="rare,consumable,actionbar,wear,feet,action_ridable_toggle" icon="items/base/consumables/feet/icon_con_feet_item_141_cdragon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="1000">
+  <volume>
+    <box min="-1.4,0,-0.3" max="0.4,1.5,0.3"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_rideable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+50,health+50"/>
+    <entry key="action_attributes" value="fire+25"/>
+  </data>
+  <textures>
+    <texture id="body" source="items/base/consumables/feet/con_feet_141_cdragon_base.png" cols="5" rows="3"/>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_62_cloud_shadow.png" cols="1" rows="1"/>
+    <texture id="head" source="items/base/consumables/feet/con_feet_141_cdragon_head.png" cols="5" rows="2"/>
+    <texture id="whisker" source="items/base/consumables/feet/con_feet_141_cdragon_whisker.png" cols="5" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-1.4,0,-0.3" max="0.4,1.5,0.3"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" x="-25" y="43"/>
+          <view angle="135" x="25" y="43"/>
+          <view angle="225" x="20" y="60"/>
+          <view angle="315" x="-20" y="60"/>
+        </layer>
+        <layer id="head_01" texture="head">
+          <view angle="45" x="17" y="-97"/>
+          <view angle="135" x="-16" y="-97" hm="true"/>
+          <view angle="225" col="3" x="-15" y="-101" hm="true"/>
+          <view angle="315" col="3" x="16" y="-101"/>
+        </layer>
+        <layer id="body01" texture="body">
+          <view angle="45" x="-51" y="-7"/>
+          <view angle="135" x="51" y="-7" hm="true"/>
+          <view angle="225" col="3" x="48" y="24" hm="true"/>
+          <view angle="315" col="3" x="-48" y="24"/>
+        </layer>
+        <layer id="body02" texture="body">
+          <view angle="45" row="1" x="-51" y="-7"/>
+          <view angle="135" row="1" x="51" y="-7" hm="true"/>
+          <view angle="225" col="3" row="1" x="48" y="24" hm="true"/>
+          <view angle="315" col="3" row="1" x="-48" y="24"/>
+        </layer>
+        <layer id="body03" texture="body">
+          <view angle="45" row="2" x="-51" y="-7"/>
+          <view angle="135" row="2" x="51" y="-7" hm="true"/>
+          <view angle="225" col="3" row="2" x="48" y="24" hm="true"/>
+          <view angle="315" col="3" row="2" x="-48" y="24"/>
+        </layer>
+        <layer id="whisker_01" texture="whisker">
+          <view angle="45" x="17" y="-97"/>
+          <view angle="135" x="-16" y="-97" hm="true"/>
+          <view angle="225" col="3" x="-15" y="-101" hm="true"/>
+          <view angle="315" col="3" x="16" y="-101"/>
+        </layer>
+        <layer id="whisker_02" texture="whisker">
+          <view angle="45" row="1" x="17" y="-97"/>
+          <view angle="135" row="1" x="-16" y="-97" hm="true"/>
+          <view angle="225" col="3" row="1" x="-15" y="-101" hm="true"/>
+          <view angle="315" col="3" row="1" x="16" y="-101"/>
+        </layer>
+        <layer id="whisker_03" texture="whisker">
+          <view angle="45" row="2" x="17" y="-97"/>
+          <view angle="135" row="2" x="-16" y="-97" hm="true"/>
+          <view angle="225" col="3" row="2" x="-15" y="-101" hm="true"/>
+          <view angle="315" col="3" row="2" x="16" y="-101"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="shadow"/>
+          <layerref id="body01"/>
+          <layerref id="head_01"/>
+          <layerref id="whisker_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="shadow"/>
+          <layerref id="body02" y="2"/>
+          <layerref id="head_01" y="2"/>
+          <layerref id="whisker_02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="shadow"/>
+          <layerref id="body03" y="4"/>
+          <layerref id="head_01" y="1"/>
+          <layerref id="whisker_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

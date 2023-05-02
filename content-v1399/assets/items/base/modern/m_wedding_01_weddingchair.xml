@@ -1,0 +1,111 @@
+<item.ChairItem id="2973" name="Cadeira Elegance" desc="Uma elegante cadeira de festa de casamento." tags="chair,misc" icon="items/base/modern/icon_m_wedding_01_weddingchair.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="120">
+  <seats>
+    <seat y="0.56">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.44,0,-0.3" max="0.44,1.22,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="main" source="items/base/modern/m_wedding_01_weddingchair.png" cols="2" rows="1"/>
+    <texture id="back" source="items/base/modern/m_wedding_01_weddingchair_back.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="LeftArm">
+      <box min="-0.44,0,-0.3" max="0.44,1.22,0.3"/>
+      <layers>
+        <layer id="main" texture="main" align="middle">
+          <view angle="45" x="-1" y="-43"/>
+          <view angle="135" x="1" y="-43" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="3" y="-15" alpha="0"/>
+          <view angle="315" col="1" x="-3" y="-15" hm="true"/>
+        </layer>
+        <layer id="back" texture="back">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" x="24" y="6"/>
+          <view angle="315" x="-24" y="6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="main"/>
+          <layerref id="back"/>
+        </frame>
+        <frame id="flush_01">
+          <layerref id="main"/>
+          <layerref id="back"/>
+        </frame>
+        <frame id="flush_02">
+          <layerref id="main"/>
+          <layerref id="back"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="4">
+          <frameref id="idle"/>
+        </animation>
+        <animation id="Closed" framerate="4">
+          <frameref id="flush_01">
+            <sample id="flushing"/>
+          </frameref>
+          <frameref id="flush_02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="RightArm">
+      <box min="-0.44,0,-0.3" max="0.44,1.22,0.3"/>
+      <layers>
+        <layer id="main" texture="main" align="middle">
+          <view angle="45" x="-1" y="-43" alpha="0"/>
+          <view angle="135" x="1" y="-43" hm="true"/>
+          <view angle="225" col="1" x="3" y="-15"/>
+          <view angle="315" col="1" x="-3" y="-15" alpha="0" hm="true"/>
+        </layer>
+        <layer id="back" texture="back">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" x="24" y="6"/>
+          <view angle="315" x="-24" y="6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="main"/>
+          <layerref id="back"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="4">
+          <frameref id="idle"/>
+        </animation>
+        <animation id="Closed" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

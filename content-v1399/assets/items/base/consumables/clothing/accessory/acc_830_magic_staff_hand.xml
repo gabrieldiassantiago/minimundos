@@ -1,0 +1,497 @@
+<item.SpriteItem id="0" name="Magic Staff" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="LightSm" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="LightLrg" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="sfx" source="items/base/consumables/clothing/accessory/acc_830_magic_staff_sfx.png" cols="4" rows="1"/>
+    <texture id="FantasyStaff" source="items/base/consumables/clothing/accessory/acc_830_magic_staff_hand.png" cols="5" rows="1"/>
+    <texture id="GroundFx" source="items/base/consumables/clothing/accessory/acc_830_magic_staff_sfx2.png" cols="3" rows="3"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="LanternStaff">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="FantasyStaff" texture="FantasyStaff">
+          <view angle="0" x="7" y="93"/>
+          <view angle="45" col="1" x="7" y="100"/>
+          <view angle="90" col="2" y="96"/>
+          <view angle="135" col="1" x="-5" y="100" hm="true"/>
+          <view angle="180" x="-7" y="93" hm="true"/>
+          <view angle="225" col="4" x="-9" y="93" hm="true"/>
+          <view angle="270" col="3" x="5" y="94"/>
+          <view angle="315" col="4" x="7" y="95"/>
+        </layer>
+        <layer id="Sfx01" texture="sfx">
+          <view angle="0" x="23" y="-37" hm="true"/>
+          <view angle="45" x="17" y="-28"/>
+          <view angle="90" x="3" y="-21"/>
+          <view angle="135" x="-17" y="-28" hm="true"/>
+          <view angle="180" x="-23" y="-37"/>
+          <view angle="225" x="-16" y="-33"/>
+          <view angle="270" x="14" y="-17"/>
+          <view angle="315" x="16" y="-33" hm="true"/>
+        </layer>
+        <layer id="Sfx02" texture="sfx">
+          <view angle="0" col="1" x="23" y="-37" hm="true"/>
+          <view angle="45" col="1" x="17" y="-28"/>
+          <view angle="90" col="1" x="3" y="-21"/>
+          <view angle="135" col="1" x="-17" y="-28" hm="true"/>
+          <view angle="180" col="1" x="-23" y="-37"/>
+          <view angle="225" col="1" x="-16" y="-33"/>
+          <view angle="270" col="1" x="14" y="-17"/>
+          <view angle="315" col="1" x="16" y="-33" hm="true"/>
+        </layer>
+        <layer id="Sfx03" texture="sfx">
+          <view angle="0" col="2" x="23" y="-37" hm="true"/>
+          <view angle="45" col="2" x="17" y="-28"/>
+          <view angle="90" col="2" x="3" y="-21"/>
+          <view angle="135" col="2" x="-17" y="-28" hm="true"/>
+          <view angle="180" col="2" x="-23" y="-37"/>
+          <view angle="225" col="2" x="-16" y="-33"/>
+          <view angle="270" col="2" x="14" y="-17"/>
+          <view angle="315" col="2" x="16" y="-33" hm="true"/>
+        </layer>
+        <layer id="Sfx04" texture="sfx">
+          <view angle="0" col="3" x="23" y="-37" hm="true"/>
+          <view angle="45" col="3" x="17" y="-28"/>
+          <view angle="90" col="3" x="3" y="-21"/>
+          <view angle="135" col="3" x="-17" y="-28" hm="true"/>
+          <view angle="180" col="3" x="-23" y="-37"/>
+          <view angle="225" col="3" x="-16" y="-33"/>
+          <view angle="270" col="3" x="14" y="-17"/>
+          <view angle="315" col="3" x="16" y="-33" hm="true"/>
+        </layer>
+        <layer id="Ground01" texture="GroundFx">
+          <view angle="0" x="8" y="102"/>
+          <view angle="45" x="2" y="107"/>
+          <view angle="90" y="89"/>
+          <view angle="135" x="2" y="107" hm="true"/>
+          <view angle="180" x="-8" y="102" hm="true"/>
+          <view angle="225" x="2" y="107"/>
+          <view angle="270" y="105"/>
+          <view angle="315" x="-2" y="107" hm="true"/>
+        </layer>
+        <layer id="Ground02" texture="GroundFx">
+          <view angle="0" col="1" x="8" y="102"/>
+          <view angle="45" col="1" x="2" y="107"/>
+          <view angle="90" col="1" y="89"/>
+          <view angle="135" col="1" x="2" y="107" hm="true"/>
+          <view angle="180" col="1" x="-8" y="102" hm="true"/>
+          <view angle="225" col="1" x="2" y="107"/>
+          <view angle="270" col="1" y="105"/>
+          <view angle="315" col="1" x="-2" y="107" hm="true"/>
+        </layer>
+        <layer id="Ground03" texture="GroundFx">
+          <view angle="0" col="2" x="8" y="102"/>
+          <view angle="45" col="2" x="2" y="107"/>
+          <view angle="90" col="2" y="89"/>
+          <view angle="135" col="2" x="2" y="107" hm="true"/>
+          <view angle="180" col="2" x="-8" y="102" hm="true"/>
+          <view angle="225" col="2" x="2" y="107"/>
+          <view angle="270" col="2" y="105"/>
+          <view angle="315" col="2" x="-2" y="107" hm="true"/>
+        </layer>
+        <layer id="Ground04" texture="GroundFx">
+          <view angle="0" row="1" x="8" y="102"/>
+          <view angle="45" row="1" x="2" y="107"/>
+          <view angle="90" row="1" y="89"/>
+          <view angle="135" row="1" x="2" y="107" hm="true"/>
+          <view angle="180" row="1" x="-8" y="102" hm="true"/>
+          <view angle="225" row="1" x="2" y="107"/>
+          <view angle="270" row="1" y="105"/>
+          <view angle="315" row="1" x="-2" y="107" hm="true"/>
+        </layer>
+        <layer id="Ground05" texture="GroundFx">
+          <view angle="0" col="1" row="1" x="8" y="102"/>
+          <view angle="45" col="1" row="1" x="2" y="107"/>
+          <view angle="90" col="1" row="1" y="89"/>
+          <view angle="135" col="1" row="1" x="2" y="107" hm="true"/>
+          <view angle="180" col="1" row="1" x="-8" y="102" hm="true"/>
+          <view angle="225" col="1" row="1" x="2" y="107"/>
+          <view angle="270" col="1" row="1" y="105"/>
+          <view angle="315" col="1" row="1" x="-2" y="107" hm="true"/>
+        </layer>
+        <layer id="Ground06" texture="GroundFx">
+          <view angle="0" col="2" row="1" x="8" y="102"/>
+          <view angle="45" col="2" row="1" x="2" y="107"/>
+          <view angle="90" col="2" row="1" y="89"/>
+          <view angle="135" col="2" row="1" x="2" y="107" hm="true"/>
+          <view angle="180" col="2" row="1" x="-8" y="102" hm="true"/>
+          <view angle="225" col="2" row="1" x="2" y="107"/>
+          <view angle="270" col="2" row="1" y="105"/>
+          <view angle="315" col="2" row="1" x="-2" y="107" hm="true"/>
+        </layer>
+        <layer id="Ground07" texture="GroundFx">
+          <view angle="0" row="2" x="8" y="85"/>
+          <view angle="45" row="2" x="2" y="86"/>
+          <view angle="90" row="2" y="75"/>
+          <view angle="135" row="2" x="2" y="86" hm="true"/>
+          <view angle="180" row="2" x="-8" y="85" hm="true"/>
+          <view angle="225" row="2" x="2" y="86"/>
+          <view angle="270" row="2" y="85"/>
+          <view angle="315" row="2" x="-2" y="86" hm="true"/>
+        </layer>
+        <layer id="Ground08" texture="GroundFx">
+          <view angle="0" col="1" row="2" x="8" y="69"/>
+          <view angle="45" col="1" row="2" x="2" y="69"/>
+          <view angle="90" col="1" row="2" y="66"/>
+          <view angle="135" col="1" row="2" x="2" y="69" hm="true"/>
+          <view angle="180" col="1" row="2" x="-8" y="69" hm="true"/>
+          <view angle="225" col="1" row="2" x="2" y="69"/>
+          <view angle="270" col="1" row="2" y="69"/>
+          <view angle="315" col="1" row="2" x="-2" y="69" hm="true"/>
+        </layer>
+        <layer id="Ground09" texture="GroundFx">
+          <view angle="0" col="2" row="2" x="8" y="56"/>
+          <view angle="45" col="2" row="2" x="2" y="44"/>
+          <view angle="90" col="2" row="2" y="56"/>
+          <view angle="135" col="2" row="2" x="2" y="44" hm="true"/>
+          <view angle="180" col="2" row="2" x="-8" y="56" hm="true"/>
+          <view angle="225" col="2" row="2" x="2" y="44"/>
+          <view angle="270" col="2" row="2" y="56"/>
+          <view angle="315" col="2" row="2" x="-2" y="44" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Sfx01" color="0xf9fefe"/>
+          <layerref id="FantasyStaff"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Sfx02"/>
+          <layerref id="FantasyStaff"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Sfx03"/>
+          <layerref id="FantasyStaff"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Sfx04"/>
+          <layerref id="FantasyStaff"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Sfx01" color="0xf9fefe"/>
+          <layerref id="FantasyStaff"/>
+          <layerref id="Ground01"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="Sfx02"/>
+          <layerref id="FantasyStaff"/>
+          <layerref id="Ground02"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="Sfx03"/>
+          <layerref id="FantasyStaff"/>
+          <layerref id="Ground03"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="Sfx04"/>
+          <layerref id="FantasyStaff"/>
+          <layerref id="Ground04"/>
+        </frame>
+        <frame id="Frame09">
+          <layerref id="Sfx01" color="0xf9fefe"/>
+          <layerref id="FantasyStaff"/>
+          <layerref id="Ground05"/>
+        </frame>
+        <frame id="Frame10">
+          <layerref id="Sfx02"/>
+          <layerref id="FantasyStaff"/>
+          <layerref id="Ground06"/>
+        </frame>
+        <frame id="Frame11">
+          <layerref id="Sfx03"/>
+          <layerref id="FantasyStaff"/>
+          <layerref id="Ground07"/>
+        </frame>
+        <frame id="Frame12">
+          <layerref id="Sfx04"/>
+          <layerref id="FantasyStaff"/>
+          <layerref id="Ground08"/>
+        </frame>
+        <frame id="Frame13">
+          <layerref id="Sfx04"/>
+          <layerref id="FantasyStaff"/>
+          <layerref id="Ground09"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame09"/>
+          <frameref id="Frame10"/>
+          <frameref id="Frame11"/>
+          <frameref id="Frame12"/>
+          <frameref id="Frame13"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="off"/>
+      </animations>
+    </node>
+    <node id="DiffuseLg" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="LightLrg" align="middle">
+          <view angle="0" x="8" y="-5" hm="true"/>
+          <view angle="45" x="8" y="-5"/>
+          <view angle="90" y="-5"/>
+          <view angle="135" x="-8" y="-5" hm="true"/>
+          <view angle="180" x="-8" y="-5"/>
+          <view angle="225" x="-8" y="-5"/>
+          <view angle="270" x="4" y="-5"/>
+          <view angle="315" x="8" y="-5" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light01" color="0x80c1ee"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On01"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Sfx01" texture="sfx">
+          <view angle="0" x="23" y="-37" hm="true"/>
+          <view angle="45" x="17" y="-28"/>
+          <view angle="90" x="3" y="-21"/>
+          <view angle="135" x="-17" y="-28" hm="true"/>
+          <view angle="180" x="-23" y="-37"/>
+          <view angle="225" x="-16" y="-33"/>
+          <view angle="270" x="14" y="-17"/>
+          <view angle="315" x="16" y="-33" hm="true"/>
+        </layer>
+        <layer id="Sfx02" texture="sfx">
+          <view angle="0" col="1" x="23" y="-37" hm="true"/>
+          <view angle="45" col="1" x="17" y="-28"/>
+          <view angle="90" col="1" x="3" y="-21"/>
+          <view angle="135" col="1" x="-17" y="-28" hm="true"/>
+          <view angle="180" col="1" x="-23" y="-37"/>
+          <view angle="225" col="1" x="-16" y="-33"/>
+          <view angle="270" col="1" x="14" y="-17"/>
+          <view angle="315" col="1" x="16" y="-33" hm="true"/>
+        </layer>
+        <layer id="Sfx03" texture="sfx">
+          <view angle="0" col="2" x="23" y="-37" hm="true"/>
+          <view angle="45" col="2" x="17" y="-28"/>
+          <view angle="90" col="2" x="3" y="-21"/>
+          <view angle="135" col="2" x="-17" y="-28" hm="true"/>
+          <view angle="180" col="2" x="-23" y="-37"/>
+          <view angle="225" col="2" x="-16" y="-33"/>
+          <view angle="270" col="2" x="14" y="-17"/>
+          <view angle="315" col="2" x="16" y="-33" hm="true"/>
+        </layer>
+        <layer id="Sfx04" texture="sfx">
+          <view angle="0" col="3" x="23" y="-37" hm="true"/>
+          <view angle="45" col="3" x="17" y="-28"/>
+          <view angle="90" col="3" x="3" y="-21"/>
+          <view angle="135" col="3" x="-17" y="-28" hm="true"/>
+          <view angle="180" col="3" x="-23" y="-37"/>
+          <view angle="225" col="3" x="-16" y="-33"/>
+          <view angle="270" col="3" x="14" y="-17"/>
+          <view angle="315" col="3" x="16" y="-33" hm="true"/>
+        </layer>
+        <layer id="Ground01" texture="GroundFx">
+          <view angle="0" x="8" y="102"/>
+          <view angle="45" x="2" y="107"/>
+          <view angle="90" y="89"/>
+          <view angle="135" x="2" y="107" hm="true"/>
+          <view angle="180" x="-8" y="102" hm="true"/>
+          <view angle="225" x="2" y="107"/>
+          <view angle="270" y="105"/>
+          <view angle="315" x="-2" y="107" hm="true"/>
+        </layer>
+        <layer id="Ground02" texture="GroundFx">
+          <view angle="0" col="1" x="8" y="102"/>
+          <view angle="45" col="1" x="2" y="107"/>
+          <view angle="90" col="1" y="89"/>
+          <view angle="135" col="1" x="2" y="107" hm="true"/>
+          <view angle="180" col="1" x="-8" y="102" hm="true"/>
+          <view angle="225" col="1" x="2" y="107"/>
+          <view angle="270" col="1" y="105"/>
+          <view angle="315" col="1" x="-2" y="107" hm="true"/>
+        </layer>
+        <layer id="Ground03" texture="GroundFx">
+          <view angle="0" col="2" x="8" y="102"/>
+          <view angle="45" col="2" x="2" y="107"/>
+          <view angle="90" col="2" y="89"/>
+          <view angle="135" col="2" x="2" y="107" hm="true"/>
+          <view angle="180" col="2" x="-8" y="102" hm="true"/>
+          <view angle="225" col="2" x="2" y="107"/>
+          <view angle="270" col="2" y="105"/>
+          <view angle="315" col="2" x="-2" y="107" hm="true"/>
+        </layer>
+        <layer id="Ground04" texture="GroundFx">
+          <view angle="0" row="1" x="8" y="102"/>
+          <view angle="45" row="1" x="2" y="107"/>
+          <view angle="90" row="1" y="89"/>
+          <view angle="135" row="1" x="2" y="107" hm="true"/>
+          <view angle="180" row="1" x="-8" y="102" hm="true"/>
+          <view angle="225" row="1" x="2" y="107"/>
+          <view angle="270" row="1" y="105"/>
+          <view angle="315" row="1" x="-2" y="107" hm="true"/>
+        </layer>
+        <layer id="Ground05" texture="GroundFx">
+          <view angle="0" col="1" row="1" x="8" y="102"/>
+          <view angle="45" col="1" row="1" x="2" y="107"/>
+          <view angle="90" col="1" row="1" y="89"/>
+          <view angle="135" col="1" row="1" x="2" y="107" hm="true"/>
+          <view angle="180" col="1" row="1" x="-8" y="102" hm="true"/>
+          <view angle="225" col="1" row="1" x="2" y="107"/>
+          <view angle="270" col="1" row="1" y="105"/>
+          <view angle="315" col="1" row="1" x="-2" y="107" hm="true"/>
+        </layer>
+        <layer id="Ground06" texture="GroundFx">
+          <view angle="0" col="2" row="1" x="8" y="102"/>
+          <view angle="45" col="2" row="1" x="2" y="107"/>
+          <view angle="90" col="2" row="1" y="89"/>
+          <view angle="135" col="2" row="1" x="2" y="107" hm="true"/>
+          <view angle="180" col="2" row="1" x="-8" y="102" hm="true"/>
+          <view angle="225" col="2" row="1" x="2" y="107"/>
+          <view angle="270" col="2" row="1" y="105"/>
+          <view angle="315" col="2" row="1" x="-2" y="107" hm="true"/>
+        </layer>
+        <layer id="Ground07" texture="GroundFx">
+          <view angle="0" row="2" x="8" y="85"/>
+          <view angle="45" row="2" x="2" y="86"/>
+          <view angle="90" row="2" y="75"/>
+          <view angle="135" row="2" x="2" y="86" hm="true"/>
+          <view angle="180" row="2" x="-8" y="85" hm="true"/>
+          <view angle="225" row="2" x="2" y="86"/>
+          <view angle="270" row="2" y="85"/>
+          <view angle="315" row="2" x="-2" y="86" hm="true"/>
+        </layer>
+        <layer id="Ground08" texture="GroundFx">
+          <view angle="0" col="1" row="2" x="8" y="69"/>
+          <view angle="45" col="1" row="2" x="2" y="69"/>
+          <view angle="90" col="1" row="2" y="66"/>
+          <view angle="135" col="1" row="2" x="2" y="69" hm="true"/>
+          <view angle="180" col="1" row="2" x="-8" y="69" hm="true"/>
+          <view angle="225" col="1" row="2" x="2" y="69"/>
+          <view angle="270" col="1" row="2" y="69"/>
+          <view angle="315" col="1" row="2" x="-2" y="69" hm="true"/>
+        </layer>
+        <layer id="Ground09" texture="GroundFx">
+          <view angle="0" col="2" row="2" x="8" y="56"/>
+          <view angle="45" col="2" row="2" x="2" y="44"/>
+          <view angle="90" col="2" row="2" y="56"/>
+          <view angle="135" col="2" row="2" x="2" y="44" hm="true"/>
+          <view angle="180" col="2" row="2" x="-8" y="56" hm="true"/>
+          <view angle="225" col="2" row="2" x="2" y="44"/>
+          <view angle="270" col="2" row="2" y="56"/>
+          <view angle="315" col="2" row="2" x="-2" y="44" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Sfx01" color="0xf9fefe"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Sfx02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Sfx03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Sfx04"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Sfx01" color="0xf9fefe"/>
+          <layerref id="Ground01"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="Sfx02"/>
+          <layerref id="Ground02"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="Sfx03"/>
+          <layerref id="Ground03"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="Sfx04"/>
+          <layerref id="Ground04"/>
+        </frame>
+        <frame id="Frame09">
+          <layerref id="Sfx01" color="0xf9fefe"/>
+          <layerref id="Ground05"/>
+        </frame>
+        <frame id="Frame10">
+          <layerref id="Sfx02"/>
+          <layerref id="Ground06"/>
+        </frame>
+        <frame id="Frame11">
+          <layerref id="Sfx03"/>
+          <layerref id="Ground07"/>
+        </frame>
+        <frame id="Frame12">
+          <layerref id="Sfx04"/>
+          <layerref id="Ground08"/>
+        </frame>
+        <frame id="Frame13">
+          <layerref id="Sfx04"/>
+          <layerref id="Ground09"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6">
+          <frameref id="Frame01"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame09"/>
+          <frameref id="Frame10"/>
+          <frameref id="Frame11"/>
+          <frameref id="Frame12"/>
+          <frameref id="Frame13"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

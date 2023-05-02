@@ -1,0 +1,27 @@
+<item.SpriteItem name="Pirata Morto" desc="Um pirata morto" tags="misc,rare" icon="items/base/gothic/g_deadpirate_icon.png" price="10" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" id="4079" tokens="100">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1.35,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="skeleton" source="items/base/gothic/g_deadpirate_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,1.35,0.49"/>
+      <layers>
+        <layer id="skeleton" texture="skeleton">
+          <view angle="45" y="42"/>
+          <view angle="135" y="42" hm="true"/>
+          <view angle="225" col="1" x="-4" y="65"/>
+          <view angle="315" col="1" x="4" y="65" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

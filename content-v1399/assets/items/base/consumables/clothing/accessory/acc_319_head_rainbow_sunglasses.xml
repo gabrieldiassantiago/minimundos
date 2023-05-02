@@ -1,0 +1,31 @@
+<item.SpriteItem id="0" name="Rainbow Sunglasses" desc="A colorful rainbow sunglasses" icon="items/base/consumables/clothing/accessory/acc_319_icon_rainbow_sunglasses.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/clothing/accessory/acc_319_head_rainbow_sunglasses.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="0" col="2" x="5" y="1" hm="true"/>
+          <view angle="45" x="3" y="5"/>
+          <view angle="90" col="1" y="3"/>
+          <view angle="135" x="-3" y="5" hm="true"/>
+          <view angle="180" col="2" x="-5" y="1"/>
+          <view angle="225" col="3" x="2" y="1"/>
+          <view angle="270" col="4" x="3" y="-1"/>
+          <view angle="315" col="3" x="-2" y="2" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

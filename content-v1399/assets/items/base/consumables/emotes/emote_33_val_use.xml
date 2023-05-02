@@ -1,0 +1,96 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,2.14,0" max="0,2.14,0"/>
+  </volume>
+  <textures>
+    <texture id="Emote" source="items/base/consumables/emotes/emote_33_val_use.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/consumables/emotes/emote_21_love_sound.mp3"/>
+    <sound id="Sound01" source="sounds/teleport/teleport_arrive.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront" y="2.14">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="heart01" texture="Emote">
+          <view x="4" y="7"/>
+        </layer>
+        <layer id="heart02" texture="Emote">
+          <view col="1" x="1" y="6"/>
+        </layer>
+        <layer id="heart03" texture="Emote">
+          <view col="2" x="9" y="-4"/>
+        </layer>
+        <layer id="heart04" texture="Emote">
+          <view col="3" x="5" y="4"/>
+        </layer>
+        <layer id="heart05" texture="Emote">
+          <view col="1" y="7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="heart01" a="0.85"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="heart02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="heart03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="heart04"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="heart04" a="0.75"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="heart05" a="0.6"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="heart01" a="0.4"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="heart04"/>
+          <layerref id="heart02" x="-1" y="1" a="0.4" blend="screen"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03">
+            <sample id="Sound01" vol="0.03"/>
+          </frameref>
+        </animation>
+        <animation id="Loop" framerate="4" loop="false">
+          <frameref id="Frame04">
+            <sample id="Sound" vol="0.25" loops="3"/>
+          </frameref>
+          <frameref id="Frame08"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame08"/>
+        </animation>
+        <animation id="Out" framerate="10" loop="false">
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

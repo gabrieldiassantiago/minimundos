@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="Um canto do muro de castelo" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/gothic/icon_g_fence_01_castle_cnr.png" id="1180" name="Canto do Muro de Castelo" tags="fence" price="30" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.5,2.95,0.5" min="-0.5,0,-0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/gothic/g_fence_01_castle_cnr.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.5,2.95,0.5" min="-0.5,0,-0.5"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="38">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Texture" y="38">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

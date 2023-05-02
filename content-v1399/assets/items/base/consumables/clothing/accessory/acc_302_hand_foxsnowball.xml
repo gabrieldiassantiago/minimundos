@@ -1,0 +1,188 @@
+<item.SpriteItem id="0" name="Tribal Warstaff" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="wood" source="items/base/consumables/clothing/accessory/acc_302_hand_foxsnowball.png" cols="8" rows="1"/>
+    <texture id="snow" source="items/base/consumables/clothing/accessory/acc_301_snow.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="glow" source="items/base/consumables/clothing/accessory/acc_302_fx_foxsnowball.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Gardening Fork">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="wood" texture="wood" align="middle">
+          <view angle="0" y="5"/>
+          <view angle="45" col="1" x="4" y="-2"/>
+          <view angle="90" col="2"/>
+          <view angle="135" col="3" x="-3" y="6"/>
+          <view angle="180" col="4" x="3" y="8"/>
+          <view angle="225" col="5" x="-4" y="13"/>
+          <view angle="270" col="6" x="-3" y="8"/>
+          <view angle="315" col="7" x="2" y="7"/>
+        </layer>
+        <layer id="snow_01" texture="snow" align="middle" y="-80">
+          <view angle="0" x="12" y="18"/>
+          <view angle="45" x="14" y="18"/>
+          <view angle="90" y="22"/>
+          <view angle="135" x="-13" y="26"/>
+          <view angle="180" x="-16" y="20"/>
+          <view angle="225" x="-14" y="18"/>
+          <view angle="270" x="4" y="11"/>
+          <view angle="315" x="11" y="15"/>
+        </layer>
+        <layer id="snow_02" texture="snow" align="middle" y="-80">
+          <view angle="0" col="1" x="12" y="18"/>
+          <view angle="45" col="1" x="14" y="17"/>
+          <view angle="90" col="1" y="22"/>
+          <view angle="135" col="1" x="-13" y="25"/>
+          <view angle="180" col="1" x="-15" y="20"/>
+          <view angle="225" col="1" x="-14" y="18"/>
+          <view angle="270" col="1" x="4" y="11"/>
+          <view angle="315" col="1" x="11" y="14"/>
+        </layer>
+        <layer id="snow_03" texture="snow" align="middle" y="-80">
+          <view angle="0" col="2" x="13" y="18"/>
+          <view angle="45" col="2" x="14" y="17"/>
+          <view angle="90" col="2" y="22"/>
+          <view angle="135" col="2" x="-12" y="25"/>
+          <view angle="180" col="2" x="-14" y="20"/>
+          <view angle="225" col="2" x="-12" y="18"/>
+          <view angle="270" col="2" x="5" y="11"/>
+          <view angle="315" col="2" x="12" y="14"/>
+        </layer>
+        <layer id="glow_01" texture="glow">
+          <view angle="45" x="13" y="-4"/>
+          <view angle="135" x="-14" y="2"/>
+          <view angle="225" x="-14" y="-7"/>
+          <view angle="315" x="11" y="-10"/>
+          <view angle="0" x="13" y="-5"/>
+          <view angle="90" x="1" y="1"/>
+          <view angle="180" x="-15"/>
+          <view angle="270" x="2" y="-10"/>
+        </layer>
+        <layer id="glow_02" texture="glow">
+          <view angle="45" col="1" x="13" y="-4"/>
+          <view angle="135" col="1" x="-14" y="2"/>
+          <view angle="225" col="1" x="-14" y="-7"/>
+          <view angle="315" col="1" x="11" y="-10"/>
+          <view angle="0" col="1" x="13" y="-5"/>
+          <view angle="90" col="1" x="1" y="1"/>
+          <view angle="180" col="1" x="-15"/>
+          <view angle="270" col="1" x="2" y="-10"/>
+        </layer>
+        <layer id="glow_03" texture="glow">
+          <view angle="45" col="2" x="13" y="-4"/>
+          <view angle="135" col="2" x="-14" y="2"/>
+          <view angle="225" col="2" x="-14" y="-7"/>
+          <view angle="315" col="2" x="11" y="-10"/>
+          <view angle="0" col="2" x="13" y="-5"/>
+          <view angle="90" col="2" x="1" y="1"/>
+          <view angle="180" col="2" x="-15"/>
+          <view angle="270" col="2" x="2" y="-10"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Snow_01">
+          <layerref id="glow_01"/>
+          <layerref id="wood"/>
+          <layerref id="snow_01"/>
+        </frame>
+        <frame id="Snow_02">
+          <layerref id="glow_02"/>
+          <layerref id="wood"/>
+          <layerref id="snow_02"/>
+        </frame>
+        <frame id="Snow_03">
+          <layerref id="glow_03"/>
+          <layerref id="wood"/>
+          <layerref id="snow_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="3">
+          <frameref id="Snow_01"/>
+          <frameref id="Snow_02"/>
+          <frameref id="Snow_03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.55" y="0.8" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="-5" y="1"/>
+          <view angle="45" x="-3" y="-3"/>
+          <view angle="90" x="2" y="-1"/>
+          <view angle="135" x="6" y="-2"/>
+          <view angle="180" x="8" y="1"/>
+          <view angle="225" x="5" y="4"/>
+          <view angle="270" x="2" y="5"/>
+          <view angle="315" x="-3" y="4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xabf1f1"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xabf1f1" a="0.96"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xabf1f1" a="0.92"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame01" duration="2"/>
+          <frameref id="Frame03" duration="2"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" x="0.55" y="0.9" s="2.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="0" x="-16" y="4"/>
+          <view angle="45" x="-9" y="-4"/>
+          <view angle="90" x="2" y="-5"/>
+          <view angle="135" x="8" y="-1"/>
+          <view angle="180" x="16" y="5"/>
+          <view angle="225" x="10" y="11"/>
+          <view angle="270" x="2" y="11"/>
+          <view angle="315" x="-10" y="9"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xb7f3f3"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

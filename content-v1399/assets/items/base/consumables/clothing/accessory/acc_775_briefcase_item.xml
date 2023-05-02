@@ -1,0 +1,57 @@
+<item.SpriteItem id="6638" name="Maleta Clube Deluxe" desc="Uma luxuosa maleta [16 de 16]" tags="rare,consumable,actionbar,wear,hand,usable,action_holdable_toggle,stackable" icon="items/base/consumables/clothing/accessory/acc_775_briefcase_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.26,0,-0.33" max="0.3,0.21,0.33"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_hold" script="scripts/item/action_wearable.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="select" script="scripts/item/select_holdable_container.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+50,health+50"/>
+  </data>
+  <textures>
+    <texture id="briefcase open" source="items/base/consumables/clothing/accessory/acc_775_briefcase_item.png" cols="2" rows="1"/>
+    <texture id="briefcase closed" source="items/base/consumables/clothing/accessory/acc_775_briefcase_item_closed.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="briefcase">
+      <box min="-0.26,0,-0.33" max="0.3,0.21,0.33"/>
+      <layers>
+        <layer id="briefcase closed" texture="briefcase closed">
+          <view angle="45" x="5" y="23"/>
+          <view angle="135" x="-5" y="22" hm="true"/>
+          <view angle="225" col="1" x="-2" y="21"/>
+          <view angle="315" col="1" x="2" y="20" hm="true"/>
+        </layer>
+        <layer id="briefcase open" texture="briefcase open">
+          <view angle="45" x="-6" y="23"/>
+          <view angle="135" x="6" y="22" hm="true"/>
+          <view angle="225" col="1" x="4" y="21"/>
+          <view angle="315" col="1" x="-4" y="20" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="closed">
+          <layerref id="briefcase closed"/>
+        </frame>
+        <frame id="open">
+          <layerref id="briefcase open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

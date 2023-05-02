@@ -1,0 +1,103 @@
+<item.SpriteItem id="2242" name="Estátua do Deus Falcão do Egito" desc="Em ouro representando Deus Horos." tags="rare,misc" icon="items/base/antique/icon_a_collect_12_sphinx_hawk.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="150" minLevelType="4">
+  <volume>
+    <box min="-0.3,0,-0.22" max="0.3,1.15,0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="box" source="items/base/antique/a_collect_12_sphinx_hawk.png" cols="2" rows="1"/>
+    <texture id="glow" source="items/base/antique/a_collect_12_sphinx_hawk_glow.png" cols="2" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.22" max="0.3,1.15,0.22"/>
+      <layers>
+        <layer id="box" texture="box" y="15">
+          <view angle="45" x="-1" y="8"/>
+          <view angle="135" x="1" y="7" hm="true"/>
+          <view angle="225" col="1" x="1" y="8"/>
+          <view angle="315" col="1" y="8" hm="true"/>
+        </layer>
+        <layer id="fire 01" texture="glow" y="15">
+          <view angle="45" y="-8"/>
+          <view angle="135" x="1" y="-9" hm="true"/>
+          <view angle="225" col="1" x="1" y="-9"/>
+          <view angle="315" col="1" x="1" y="-8" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="frame 01">
+          <layerref id="box"/>
+          <layerref id="fire 01" a="0.35" blend="hardlight"/>
+        </frame>
+        <frame id="frame 02">
+          <layerref id="box"/>
+          <layerref id="fire 01" a="0.42" blend="hardlight"/>
+        </frame>
+        <frame id="frame 03">
+          <layerref id="box"/>
+          <layerref id="fire 01" a="0.5" blend="hardlight"/>
+        </frame>
+        <frame id="frame 04">
+          <layerref id="box"/>
+          <layerref id="fire 01" a="0.55" blend="hardlight"/>
+        </frame>
+        <frame id="frame 05">
+          <layerref id="box"/>
+          <layerref id="fire 01" a="0.63" blend="hardlight"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="frame 01"/>
+          <frameref id="frame 02"/>
+          <frameref id="frame 03"/>
+          <frameref id="frame 04"/>
+          <frameref id="frame 05"/>
+          <frameref id="frame 04"/>
+          <frameref id="frame 03"/>
+          <frameref id="frame 02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="3.3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="2" y="4"/>
+          <view angle="135" x="1" y="4" hm="true"/>
+          <view angle="225" x="1" y="4"/>
+          <view angle="315" x="2" y="4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf5f3c3" a="0.5"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xf5f3c3" a="0.55" blend="add"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xf5f3c3" a="0.57"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xf5f3c3" a="0.59"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Light" color="0xf5f3c3" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

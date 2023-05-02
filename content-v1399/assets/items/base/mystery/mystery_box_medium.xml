@@ -1,0 +1,34 @@
+<item.SpriteItem id="4138" name="Display Mystery Box" desc="A Medium Mysterious Box" tags="admin,misc" icon="items/base/mystery/mystery_box_medium_icon.png" minLevel="1" minCPLevel="1" dropTargetType="floor" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.47,0,-0.47" max="0.47,0.92,0.47"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/mystery/mystery_box_medium.png" cols="2" rows="1"/>
+    <texture id="Texture_Mirror" source="items/base/mystery/mystery_box_medium_mirror_detail.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Mystery Box">
+      <box min="-0.47,0,-0.47" max="0.47,0.92,0.47"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" y="34"/>
+          <view angle="135" y="35" hm="true"/>
+          <view angle="225" col="1" y="35"/>
+          <view angle="315" col="1" y="34" hm="true"/>
+        </layer>
+        <layer id="Layer_Mirror" texture="Texture_Mirror">
+          <view angle="45" alpha="0"/>
+          <view angle="135" x="1" y="-49"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" col="1" x="1" y="-49"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

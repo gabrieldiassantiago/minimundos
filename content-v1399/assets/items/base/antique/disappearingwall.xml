@@ -1,0 +1,108 @@
+<item.SpriteItem id="4851" name="Admin Disappearing Wall" desc="Disappearing wall for DE" tags="admin,misc" icon="items/base/antique/icon_disappearingwall.png" price="88" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" tokens="888">
+  <volume>
+    <box min="-0.4,0,-0.5" max="0.4,1.84,0.5"/>
+  </volume>
+  <events>
+    <event id="close" script="scripts/item/close_gate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+  </events>
+  <actions>
+    <action id="Open" state="true" event="open"/>
+    <action id="Close" state="true" event="close"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="wall" source="items/base/antique/disappearingwall.png" cols="1" rows="1"/>
+    <texture id="bit" source="items/base/outdoor/o_table_02_steel_holecap.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="open left">
+      <box min="-0.4,0,-0.5" max="0.4,1.84,-0.4"/>
+      <layers>
+        <layer id="post behind01" texture="bit" y="32">
+          <view angle="45" y="-28"/>
+          <view angle="135" y="-28" hm="true"/>
+          <view angle="225" y="-28"/>
+          <view angle="315" y="-28" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="post behind01"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="post behind01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="closed">
+      <box min="-0.1,0,-0.5" max="0.1,1.84,0.5"/>
+      <layers>
+        <layer id="post behind" texture="wall" y="32">
+          <view angle="45" x="-1" y="7"/>
+          <view angle="135" y="7" hm="true"/>
+          <view angle="225" y="7"/>
+          <view angle="315" y="7" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="post behind" a="0"/>
+        </frame>
+        <frame id="closed 01">
+          <layerref id="post behind"/>
+        </frame>
+        <frame id="closed 02">
+          <layerref id="post behind"/>
+        </frame>
+        <frame id="closed 03">
+          <layerref id="post behind"/>
+        </frame>
+        <frame id="closed 04">
+          <layerref id="post behind"/>
+        </frame>
+        <frame id="closed 05">
+          <layerref id="post behind"/>
+        </frame>
+        <frame id="closed 06">
+          <layerref id="post behind"/>
+        </frame>
+        <frame id="closed 07">
+          <layerref id="post behind"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="closed 01"/>
+          <frameref id="closed 02"/>
+          <frameref id="closed 03"/>
+          <frameref id="closed 04"/>
+          <frameref id="closed 05"/>
+          <frameref id="closed 06"/>
+          <frameref id="closed 07"/>
+          <frameref id="closed 06"/>
+          <frameref id="closed 05"/>
+          <frameref id="closed 04"/>
+          <frameref id="closed 03"/>
+          <frameref id="closed 02"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

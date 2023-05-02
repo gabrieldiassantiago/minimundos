@@ -1,0 +1,37 @@
+<item.SpriteItem id="7398" name="Meia de Natal Dourada" desc="Um item temporário de Natal 2017" tags="craftable_xmas,rare,destroy,wall,misc,xmas" icon="items/base/modern/icon_m_stocking_xmas_02_gold.png" price="1" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,-0.44,-0.25" max="0,0.44,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="ingredient_1" value="7450"/>
+    <entry key="ingredient_2" value="7445"/>
+    <entry key="ingredient_quantity_1" value="1"/>
+    <entry key="ingredient_quantity_2" value="1"/>
+    <entry key="product_quantity" value="1"/>
+    <entry key="xp_level_required" value="0"/>
+    <entry key="xp_rewarded" value="500"/>
+  </data>
+  <textures>
+    <texture id="stocking" source="items/base/modern/m_stocking_xmas_02_gold.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="stocking">
+      <box min="0,-0.44,-0.25" max="0,0.44,0.25"/>
+      <layers>
+        <layer id="stocking" texture="stocking" align="middle">
+          <view angle="45"/>
+          <view angle="135" col="1"/>
+          <view angle="225" alpha="0" hm="true"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,143 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,2.14,0" max="0,2.14,0"/>
+  </volume>
+  <textures>
+    <texture id="Emote" source="items/base/consumables/emotes/emote_34_lol_use.png" cols="4" rows="1"/>
+    <texture id="sparkle" source="items/base/consumables/sparx/sparx_03_propose_shine.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront" y="2.14">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="1" texture="Emote">
+          <view/>
+        </layer>
+        <layer id="2" texture="Emote">
+          <view col="1"/>
+        </layer>
+        <layer id="3" texture="Emote">
+          <view col="2"/>
+        </layer>
+        <layer id="4" texture="Emote">
+          <view col="3"/>
+        </layer>
+        <layer id="sparkle01" texture="sparkle">
+          <view x="5" y="-11"/>
+        </layer>
+        <layer id="sparkle02" texture="sparkle">
+          <view col="1" x="7" y="-11"/>
+        </layer>
+        <layer id="sparkle03" texture="sparkle">
+          <view col="2" x="9" y="-11"/>
+        </layer>
+        <layer id="sparkle04" texture="sparkle">
+          <view col="1" x="11" y="-11"/>
+        </layer>
+        <layer id="sparkle05" texture="sparkle">
+          <view x="13" y="-11"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="1" a="0.2"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="1" a="0.4"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="1" a="0.6"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="1" a="0.8"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="1"/>
+        </frame>
+        <frame id="1">
+          <layerref id="1"/>
+        </frame>
+        <frame id="2">
+          <layerref id="2"/>
+        </frame>
+        <frame id="3">
+          <layerref id="3"/>
+        </frame>
+        <frame id="4">
+          <layerref id="4" y="-2"/>
+        </frame>
+        <frame id="sparkle_01">
+          <layerref id="3"/>
+          <layerref id="sparkle01"/>
+        </frame>
+        <frame id="sparkle_02">
+          <layerref id="3"/>
+          <layerref id="sparkle02"/>
+        </frame>
+        <frame id="sparkle_03">
+          <layerref id="3"/>
+          <layerref id="sparkle03"/>
+        </frame>
+        <frame id="sparkle_04">
+          <layerref id="3"/>
+          <layerref id="sparkle04"/>
+        </frame>
+        <frame id="sparkle_05">
+          <layerref id="3"/>
+          <layerref id="sparkle05"/>
+        </frame>
+        <frame id="sparkle_06">
+          <layerref id="3"/>
+          <layerref id="sparkle05" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="8" loop="false">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="Loop" framerate="8" loop="false">
+          <frameref id="1"/>
+          <frameref id="2"/>
+          <frameref id="3" duration="2"/>
+          <frameref id="4"/>
+          <frameref id="3"/>
+          <frameref id="4"/>
+          <frameref id="3"/>
+          <frameref id="4"/>
+          <frameref id="3"/>
+          <frameref id="3" duration="3"/>
+          <frameref id="3"/>
+          <frameref id="4"/>
+          <frameref id="3"/>
+          <frameref id="4"/>
+          <frameref id="3"/>
+          <frameref id="4"/>
+          <frameref id="3"/>
+          <frameref id="3" duration="3"/>
+          <frameref id="3"/>
+          <frameref id="4"/>
+          <frameref id="3"/>
+          <frameref id="4"/>
+          <frameref id="3"/>
+          <frameref id="4"/>
+          <frameref id="3" duration="3"/>
+          <frameref id="sparkle_01"/>
+          <frameref id="sparkle_02"/>
+          <frameref id="sparkle_03"/>
+          <frameref id="sparkle_04"/>
+          <frameref id="sparkle_05"/>
+          <frameref id="sparkle_06"/>
+        </animation>
+        <animation id="Out" framerate="8" loop="false">
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

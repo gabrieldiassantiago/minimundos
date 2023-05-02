@@ -1,0 +1,36 @@
+<item.SpriteItem desc="Tecido fino de qualidade." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/crafting/icon_cra_fabric_02_fine.png" id="2387" name="Rolo de Tecido Fino" tags="craftable_sewing,craftable3,misc,stackable,materials,market" minLevel="1" minCPLevel="1" price="15">
+  <volume>
+    <box min="-0.1128,0,-0.4204" max="0.2539,0.1206,0.4204"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="ingredient_1" value="2379"/>
+    <entry key="ingredient_2" value="1978"/>
+    <entry key="ingredient_quantity_1" value="2"/>
+    <entry key="ingredient_quantity_2" value="3"/>
+    <entry key="product_quantity" value="3"/>
+    <entry key="xp_level_required" value="60"/>
+    <entry key="xp_rewarded" value="600"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/crafting/cra_fabric_02_fine.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1128,0,-0.4204" max="0.2539,0.1206,0.4204"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="13">
+          <view angle="45" x="4" y="12" hm="true"/>
+          <view angle="135" x="-4" y="12"/>
+          <view angle="225" col="1" x="-3" y="11" hm="true"/>
+          <view angle="315" col="1" x="3" y="11"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,228 @@
+<item.SpriteItem id="0" name="Welcome Back Cake" desc="A welcome back cake" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="base" source="items/base/modern/m_birthdaycake_02_eight_hand.png" cols="3" rows="1"/>
+    <texture id="candle01" source="items/base/modern/m_birthdaycake_02_eight_flame.png" cols="2" rows="2"/>
+    <texture id="Texture" source="items/base/modern/m_birthdaycake_02_eight_flame02.png" cols="2" rows="2"/>
+    <texture id="Texture01" source="items/base/modern/m_birthdaycake_02_eight_flame03.png" cols="2" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="base" texture="base" align="middle">
+          <view angle="0" col="2" x="13" y="-6"/>
+          <view angle="45" x="16" y="1"/>
+          <view angle="90" col="1" x="4" y="9"/>
+          <view angle="135" x="-14" hm="true"/>
+          <view angle="180" col="2" x="-16" y="-3"/>
+          <view angle="225" x="-11" y="-12"/>
+          <view angle="270" col="1" x="-1" y="-22"/>
+          <view angle="315" x="6" y="-15" hm="true"/>
+        </layer>
+        <layer id="candle_a01" texture="candle01" align="middle">
+          <view angle="0" x="13" y="-6" alpha="0"/>
+          <view angle="45" x="17" y="-19"/>
+          <view angle="90" x="4" y="9" alpha="0"/>
+          <view angle="135" x="-14" y="-20" hm="true"/>
+          <view angle="180" x="-16" y="-3" alpha="0"/>
+          <view angle="225" x="-10" y="-32"/>
+          <view angle="270" x="-1" y="-22" alpha="0"/>
+          <view angle="315" x="6" y="-35" hm="true"/>
+        </layer>
+        <layer id="candle_a02" texture="candle01" align="middle">
+          <view angle="0" col="1" x="13" y="-6" alpha="0"/>
+          <view angle="45" col="1" x="17" y="-19"/>
+          <view angle="90" col="1" x="4" y="9" alpha="0"/>
+          <view angle="135" col="1" x="-14" y="-20" hm="true"/>
+          <view angle="180" col="1" x="-16" y="-3" alpha="0"/>
+          <view angle="225" col="1" x="-10" y="-32"/>
+          <view angle="270" col="1" x="-1" y="-22" alpha="0"/>
+          <view angle="315" col="1" x="6" y="-35" hm="true"/>
+        </layer>
+        <layer id="candle_a03" texture="candle01" align="middle">
+          <view angle="0" row="1" x="13" y="-6" alpha="0"/>
+          <view angle="45" row="1" x="17" y="-19"/>
+          <view angle="90" row="1" x="4" y="9" alpha="0"/>
+          <view angle="135" row="1" x="-14" y="-20" hm="true"/>
+          <view angle="180" row="1" x="-16" y="-3" alpha="0"/>
+          <view angle="225" row="1" x="-10" y="-32"/>
+          <view angle="270" row="1" x="-1" y="-22" alpha="0"/>
+          <view angle="315" row="1" x="6" y="-35" hm="true"/>
+        </layer>
+        <layer id="candle_a04" texture="candle01" align="middle">
+          <view angle="0" col="1" row="1" x="13" y="-6" alpha="0"/>
+          <view angle="45" col="1" row="1" x="17" y="-19"/>
+          <view angle="90" col="1" row="1" x="4" y="9" alpha="0"/>
+          <view angle="135" col="1" row="1" x="-14" y="-20" hm="true"/>
+          <view angle="180" col="1" row="1" x="-16" y="-3" alpha="0"/>
+          <view angle="225" col="1" row="1" x="-10" y="-32"/>
+          <view angle="270" col="1" row="1" x="-1" y="-22" alpha="0"/>
+          <view angle="315" col="1" row="1" x="6" y="-35" hm="true"/>
+        </layer>
+        <layer id="candle_b01" texture="Texture" align="middle">
+          <view angle="0" x="13" y="-6" alpha="0"/>
+          <view angle="45" x="17" y="-19" alpha="0"/>
+          <view angle="90" x="4" y="-9"/>
+          <view angle="135" x="-14" y="-20" alpha="0" hm="true"/>
+          <view angle="180" x="-16" y="-3" alpha="0"/>
+          <view angle="225" x="-10" y="-32" alpha="0"/>
+          <view angle="270" x="-1" y="-40"/>
+          <view angle="315" x="6" y="-35" alpha="0" hm="true"/>
+        </layer>
+        <layer id="candle_b02" texture="Texture" align="middle">
+          <view angle="0" col="1" x="13" y="-6" alpha="0"/>
+          <view angle="45" col="1" x="17" y="-19" alpha="0"/>
+          <view angle="90" col="1" x="4" y="-9"/>
+          <view angle="135" col="1" x="-14" y="-20" alpha="0" hm="true"/>
+          <view angle="180" col="1" x="-16" y="-3" alpha="0"/>
+          <view angle="225" col="1" x="-10" y="-32" alpha="0"/>
+          <view angle="270" col="1" x="-1" y="-40"/>
+          <view angle="315" col="1" x="6" y="-35" alpha="0" hm="true"/>
+        </layer>
+        <layer id="candle_b03" texture="Texture" align="middle">
+          <view angle="0" row="1" x="13" y="-6" alpha="0"/>
+          <view angle="45" row="1" x="17" y="-19" alpha="0"/>
+          <view angle="90" row="1" x="4" y="-9"/>
+          <view angle="135" row="1" x="-14" y="-20" alpha="0" hm="true"/>
+          <view angle="180" row="1" x="-16" y="-3" alpha="0"/>
+          <view angle="225" row="1" x="-10" y="-32" alpha="0"/>
+          <view angle="270" row="1" x="-1" y="-40"/>
+          <view angle="315" row="1" x="6" y="-35" alpha="0" hm="true"/>
+        </layer>
+        <layer id="candle_b04" texture="Texture" align="middle">
+          <view angle="0" col="1" row="1" x="13" y="-6" alpha="0"/>
+          <view angle="45" col="1" row="1" x="17" y="-19" alpha="0"/>
+          <view angle="90" col="1" row="1" x="4" y="-9"/>
+          <view angle="135" col="1" row="1" x="-14" y="-20" alpha="0" hm="true"/>
+          <view angle="180" col="1" row="1" x="-16" y="-3" alpha="0"/>
+          <view angle="225" col="1" row="1" x="-10" y="-32" alpha="0"/>
+          <view angle="270" col="1" row="1" x="-1" y="-40"/>
+          <view angle="315" col="1" row="1" x="6" y="-35" alpha="0" hm="true"/>
+        </layer>
+        <layer id="candle_c01" texture="Texture01" align="middle">
+          <view angle="0" x="14" y="-24"/>
+          <view angle="45" x="17" y="-19" alpha="0"/>
+          <view angle="90" x="4" y="-9" alpha="0"/>
+          <view angle="135" x="-14" y="-20" alpha="0" hm="true"/>
+          <view angle="180" x="-15" y="-21"/>
+          <view angle="225" x="-10" y="-32" alpha="0"/>
+          <view angle="270" x="-1" y="-40" alpha="0"/>
+          <view angle="315" x="6" y="-35" alpha="0" hm="true"/>
+        </layer>
+        <layer id="candle_c02" texture="Texture01" align="middle">
+          <view angle="0" col="1" x="14" y="-24"/>
+          <view angle="45" col="1" x="17" y="-19" alpha="0"/>
+          <view angle="90" col="1" x="4" y="-9" alpha="0"/>
+          <view angle="135" col="1" x="-14" y="-20" alpha="0" hm="true"/>
+          <view angle="180" col="1" x="-15" y="-21"/>
+          <view angle="225" col="1" x="-10" y="-32" alpha="0"/>
+          <view angle="270" col="1" x="-1" y="-40" alpha="0"/>
+          <view angle="315" col="1" x="6" y="-35" alpha="0" hm="true"/>
+        </layer>
+        <layer id="candle_c03" texture="Texture01" align="middle">
+          <view angle="0" row="1" x="14" y="-24"/>
+          <view angle="45" row="1" x="17" y="-19" alpha="0"/>
+          <view angle="90" row="1" x="4" y="-9" alpha="0"/>
+          <view angle="135" row="1" x="-14" y="-20" alpha="0" hm="true"/>
+          <view angle="180" row="1" x="-15" y="-21"/>
+          <view angle="225" row="1" x="-10" y="-32" alpha="0"/>
+          <view angle="270" row="1" x="-1" y="-40" alpha="0"/>
+          <view angle="315" row="1" x="6" y="-35" alpha="0" hm="true"/>
+        </layer>
+        <layer id="candle_c04" texture="Texture01" align="middle">
+          <view angle="0" col="1" row="1" x="14" y="-24"/>
+          <view angle="45" col="1" row="1" x="17" y="-19" alpha="0"/>
+          <view angle="90" col="1" row="1" x="4" y="-9" alpha="0"/>
+          <view angle="135" col="1" row="1" x="-14" y="-20" alpha="0" hm="true"/>
+          <view angle="180" col="1" row="1" x="-15" y="-21"/>
+          <view angle="225" col="1" row="1" x="-10" y="-32" alpha="0"/>
+          <view angle="270" col="1" row="1" x="-1" y="-40" alpha="0"/>
+          <view angle="315" col="1" row="1" x="6" y="-35" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="base"/>
+          <layerref id="candle_a01"/>
+          <layerref id="candle_b01"/>
+          <layerref id="candle_c01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="base"/>
+          <layerref id="candle_a02"/>
+          <layerref id="candle_b02"/>
+          <layerref id="candle_c02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="base"/>
+          <layerref id="candle_a03"/>
+          <layerref id="candle_b03"/>
+          <layerref id="candle_c03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="base"/>
+          <layerref id="candle_a04"/>
+          <layerref id="candle_b04"/>
+          <layerref id="candle_c04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="5" y="-5" hm="true"/>
+          <view angle="45" x="4" y="-3"/>
+          <view angle="90" y="-1"/>
+          <view angle="135" x="-4" y="-4" hm="true"/>
+          <view angle="180" x="-4" y="-6"/>
+          <view angle="225" x="-3" y="-7"/>
+          <view angle="270" y="-10"/>
+          <view angle="315" x="1" y="-8" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xffd2ae"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xffd2ae" a="0.97"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xffd2ae" a="0.95"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

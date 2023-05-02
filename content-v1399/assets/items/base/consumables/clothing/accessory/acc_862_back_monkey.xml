@@ -1,0 +1,76 @@
+<item.SpriteItem id="0" name="royalcape" desc="An item" tags="wearable, consumable, actionbar" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+  </volume>
+  <textures>
+    <texture id="CloakTop" source="items/base/consumables/clothing/accessory/acc_862_back_monkey.png" cols="5" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+      <layers>
+        <layer id="01" texture="CloakTop" y="10">
+          <view angle="0" col="2" x="-13" y="43"/>
+          <view angle="45" x="-8" y="45"/>
+          <view angle="90" col="1" y="33"/>
+          <view angle="135" x="8" y="45" hm="true"/>
+          <view angle="180" col="2" x="13" y="43" hm="true"/>
+          <view angle="225" col="3" x="7" y="40" hm="true"/>
+          <view angle="270" col="4" x="-1" y="44"/>
+          <view angle="315" col="3" x="-8" y="40"/>
+        </layer>
+        <layer id="02" texture="CloakTop" y="10">
+          <view angle="0" col="2" row="1" x="-13" y="43"/>
+          <view angle="45" row="1" x="-8" y="45"/>
+          <view angle="90" col="1" row="1" y="33"/>
+          <view angle="135" row="1" x="8" y="45" hm="true"/>
+          <view angle="180" col="2" row="1" x="13" y="43" hm="true"/>
+          <view angle="225" col="3" row="1" x="7" y="40" hm="true"/>
+          <view angle="270" col="4" row="1" x="-1" y="44"/>
+          <view angle="315" col="3" row="1" x="-8" y="40"/>
+        </layer>
+        <layer id="03" texture="CloakTop" y="10">
+          <view angle="0" col="2" row="2" x="-13" y="43"/>
+          <view angle="45" row="2" x="-8" y="45"/>
+          <view angle="90" col="1" row="2" y="33"/>
+          <view angle="135" row="2" x="8" y="45" hm="true"/>
+          <view angle="180" col="2" row="2" x="13" y="43" hm="true"/>
+          <view angle="225" col="3" row="2" x="7" y="40" hm="true"/>
+          <view angle="270" col="4" row="2" x="-1" y="44"/>
+          <view angle="315" col="3" row="2" x="-8" y="40"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="6">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

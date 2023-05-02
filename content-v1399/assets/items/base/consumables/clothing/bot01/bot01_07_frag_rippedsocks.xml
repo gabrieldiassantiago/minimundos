@@ -1,0 +1,47 @@
+<f id="Bot01_07RippedSocks" parentId="Bot01">
+  <g id="ColourStockBase" icon="$bu/icon_legs_trouser.png">
+    <s id="Bot01_07SockIdle" cId="LegIdle" s="items/base/consumables/clothing/bot01/bot01_07_leg_idle.png" pri="1.1"/>
+    <s id="Bot01_07SockWalk1" cId="LegWalk1" s="items/base/consumables/clothing/bot01/bot01_07_leg_walk1.png" pri="1.1"/>
+    <s id="Bot01_07SockWalk2" cId="LegWalk2" s="items/base/consumables/clothing/bot01/bot01_07_leg_walk2.png" pri="1.1"/>
+    <s id="Bot01_07SockWalk3" cId="LegWalk3" s="items/base/consumables/clothing/bot01/bot01_07_leg_walk3.png" pri="1.1"/>
+    <s id="Bot01_07SockWalk4" cId="LegWalk4" s="items/base/consumables/clothing/bot01/bot01_07_leg_walk4.png" pri="1.1"/>
+    <s id="Bot01_07SockSitLower" cId="LegSitLower" s="items/base/consumables/clothing/bot01/bot01_07_sit_lower.png" pri="1.1"/>
+    <s id="Bot01_07SockSitUpper" cId="LegSitUpper" s="items/base/consumables/clothing/bot01/bot01_07_sit_upper.png" pri="1.1"/>
+    <c sId="Bot01_07SockIdle" a="1.00" b="73.9" ct="0.56" lId="Bot01_07_Color1" lw="N"/>
+    <c sId="Bot01_07SockWalk1" a="1.00" b="73.9" ct="0.56" lId="Bot01_07_Color1" lw="N"/>
+    <c sId="Bot01_07SockWalk2" a="1.00" b="73.9" ct="0.56" lId="Bot01_07_Color1" lw="N"/>
+    <c sId="Bot01_07SockWalk3" a="1.00" b="73.9" ct="0.56" lId="Bot01_07_Color1" lw="N"/>
+    <c sId="Bot01_07SockWalk4" a="1.00" b="73.9" ct="0.56" lId="Bot01_07_Color1" lw="N"/>
+    <c sId="Bot01_07SockSitLower" a="1.00" b="73.9" ct="0.56" lId="Bot01_07_Color1" lw="N"/>
+    <c sId="Bot01_07SockSitUpper" a="1.00" b="73.9" ct="0.56" lId="Bot01_07_Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot01_07" icon="items/base/consumables/clothing/bot01/bot01_07_icon_rippedsocks_a.png" w="48" h="48"/>
+    <s id="IconRippedSocksVIP" cId="IconBot01_07" s="items/base/shared/s_vipbadge.png" pri="2"/>
+    <s id="IconSock07Base" cId="IconBot01_07" s="items/base/consumables/clothing/bot01/bot01_07_icon_rippedsocks_1.png" pri="1"/>
+    <c sId="IconSock07Base" a="1.00" b="73.9" ct="0.56" lId="Bot01_07_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot01_07_Color1" name="Color 1" desc="Choose a color" sel="Black" seld="Black">
+      <c id="White" icon="$bu/icon_white.png" c="13223875" a="1.00" b="50.4" ct="0.83" lId="Bot01_07_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="48.4" ct="2.00" lId="Bot01_07_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="1.00" b="33.4" ct="0.78" lId="Bot01_07_Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16739237" a="0.87" b="58.8" ct="1.58" lId="Bot01_07_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="41.4" ct="1.09" lId="Bot01_07_Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="0.82" b="42.3" ct="1.21" lId="Bot01_07_Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.97" b="18.8" ct="0.95" lId="Bot01_07_Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="0.66" b="13.8" ct="1.04" lId="Bot01_07_Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Bot01_07_Color1"/>
+      <c id="BlueDark" icon="$bu/icon_medblue.png" c="2843342" a="0.84" b="38.3" ct="1.61" lId="Bot01_07_Color1"/>
+      <c id="FadedBlue" name="Faded blue" icon="$bu/icon_fadedblue.png" c="4745356" a="1.00" b="64.1" ct="2.00" lId="Bot01_07_Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9515132" a="1.00" b="37.8" ct="0.45" lId="Bot01_07_Color1"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="12091409" a="0.90" b="22.4" ct="1.04" lId="Bot01_07_Color1"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="1511424" a="0.95" b="76.7" ct="1.30" lId="Bot01_07_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" a="1.00" b="73.9" ct="0.56" lId="Bot01_07_Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot01_07_Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSFeet"/>
+</f>

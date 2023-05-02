@@ -1,0 +1,56 @@
+<f id="WeddingDress2" parentId="Suits">
+  <g id="WeddingDress">
+    <b id="WeddingTorso" min="2" max="2" sel="WeddingTorsoColour,WeddingTorsoBase">
+      <s id="WeddingTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_21_torso.png" pri="1"/>
+      <c id="WeddingTorsoColour" sId="WeddingTorsoBase" a="0.22" b="-170.6" ct="-0.21" lId="WeddingTorsoBase"/>
+    </b>
+    <b id="WeddingLegs" min="2" max="2" sel="WeddingBottomBase">
+      <g id="WeddingBottomBase" icon="$bu/icon_legs_trouser.png">
+        <s id="WeddingPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_21_leg_idle.png" pri="3"/>
+        <s id="WeddingPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_21_leg_walk1.png" pri="3"/>
+        <s id="WeddingPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_21_leg_walk2.png" pri="3"/>
+        <s id="WeddingPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_21_leg_walk3.png" pri="3"/>
+        <s id="WeddingPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_21_leg_walk4.png" pri="3"/>
+        <s id="WeddingSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_21_leg_sit_upper.png" pri="3"/>
+        <s id="WeddingSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_21_leg_sit_lower.png" pri="3"/>
+        <c id="WeddingPantIdleColour" sId="WeddingPantIdleBase" a="0.22" b="-170.3" ct="-0.21" lId="WeddingTorsoBase"/>
+        <c id="WeddingPantWalk1Colour" sId="WeddingPantWalk1Base" a="0.22" b="-170.6" ct="-0.21" lId="WeddingTorsoBase"/>
+        <c id="WeddingPantWalk2Colour" sId="WeddingPantWalk2Base" a="0.22" b="-170.6" ct="-0.21" lId="WeddingTorsoBase"/>
+        <c id="WeddingPantWalk3Colour" sId="WeddingPantWalk3Base" a="0.22" b="-170.3" ct="-0.21" lId="WeddingTorsoBase"/>
+        <c id="WeddingPantWalk4Colour" sId="WeddingPantWalk4Base" a="0.22" b="-170.6" ct="-0.21" lId="WeddingTorsoBase"/>
+        <c id="WeddingSitUpperColour" sId="WeddingSitUpperBase" a="0.22" b="-171.6" ct="-0.21" lId="WeddingTorsoBase"/>
+        <c id="WeddingSitLowerColour" sId="WeddingSitLowerBase" a="0.22" b="-171.6" ct="-0.21" lId="WeddingTorsoBase"/>
+      </g>
+    </b>
+    <b id="WeddingArms" min="2" max="2" sel="WeddingArmsBase">
+      <g id="WeddingArmsBase" icon="$bm/icon_m_retro.png">
+        <s id="WeddingArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_21_arm_idle.png" pri="1"/>
+        <s id="WeddingArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_21_arm_walk1.png" pri="1"/>
+        <s id="WeddingArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_21_arm_walk2.png" pri="1"/>
+        <s id="WeddingArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_21_arm_walk3.png" pri="1"/>
+        <s id="WeddingArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_21_arm_sit.png" pri="1"/>
+        <s id="WeddingArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_21_arm_throw.png" pri="1"/>
+        <s id="WeddingArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_21_arm_raise.png" pri="1"/>
+        <c id="WeddingArmIdleColour" sId="WeddingArmIdleBase" c="2752512" a="0.22" b="-148.8" ct="-0.21" lId="WeddingTorsoBase"/>
+        <c id="WeddingArmWalk1Colour" sId="WeddingArmWalk1Base" c="2752512" a="0.22" b="-148.0" ct="-0.21" lId="WeddingTorsoBase"/>
+        <c id="WeddingArmWalk2Colour" sId="WeddingArmWalk2Base" c="2752512" a="0.22" b="-148.0" ct="-0.21" lId="WeddingTorsoBase"/>
+        <c id="WeddingArmWalk3Colour" sId="WeddingArmWalk3Base" c="2752512" a="0.22" b="-148.0" ct="-0.21" lId="WeddingTorsoBase"/>
+        <c id="WeddingArmSitColour" sId="WeddingArmSitBase" c="2752512" a="0.22" b="-148.0" ct="-0.21" lId="WeddingTorsoBase"/>
+        <c id="WeddingArmThrowColour" sId="WeddingArmThrowBase" c="2752512" a="0.22" b="-148.0" ct="-0.21" lId="WeddingTorsoBase"/>
+        <c id="WeddingArmRaiseColour" sId="WeddingArmRaiseBase" c="2752512" a="0.22" b="-148.0" ct="-0.21" lId="WeddingTorsoBase"/>
+      </g>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot01"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+</f>

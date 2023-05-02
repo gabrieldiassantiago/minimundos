@@ -1,0 +1,36 @@
+<item.SpriteItem id="3778" name="Capa Michonne" desc="A capa com capuz oficial da Michonne de The Walking Dead." tags="rare,consumable,clothing,actionbar,wear,suits,top07,walkingdead,action_wearable_toggle,hat" icon="items/base/brands/walkingdead/wd_06_cloak_icon.png" price="1750" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.32,0,-0.32" max="0.32,1.8,0.32"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="fragmentURL" value="items/base/brands/walkingdead/wd_06_cloak_frag.xml"/>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="vamp" source="items/base/brands/walkingdead/wd_06_cloak_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.32,0,-0.32" max="0.32,1.8,0.32"/>
+      <layers>
+        <layer id="royal" texture="vamp">
+          <view angle="45" y="20"/>
+          <view angle="135" x="2" y="20" hm="true"/>
+          <view angle="225" col="1" x="2" y="19"/>
+          <view angle="315" col="1" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

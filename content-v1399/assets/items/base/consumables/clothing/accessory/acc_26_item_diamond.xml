@@ -1,0 +1,62 @@
+<item.SpriteItem id="3370" name="Diamante Cintilante" desc="Um cintilante e devoto diamante super brilhante." tags="rare,hand,usable,wear,kudos,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_26_icon_diamond.png" price="150" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_26_item_diamond.png" cols="2" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/clothing/accessory/acc_24_item_shadow.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="16" alpha="0.7"/>
+          <view angle="135" col="1" y="16" alpha="0.7"/>
+          <view angle="225" y="16" alpha="0.7"/>
+          <view angle="315" col="1" y="16" alpha="0.7"/>
+        </layer>
+        <layer id="Layer" texture="Texture">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-10"/>
+          <view angle="135" y="-10"/>
+          <view angle="225" y="-13"/>
+          <view angle="315" y="-13"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf8d5f8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

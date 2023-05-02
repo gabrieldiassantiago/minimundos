@@ -1,0 +1,119 @@
+<item.SpriteItem id="2930" name="SmallWorlds Star Award" desc="An award for SmallWorlds Stars" tags="rare,misc" icon="items/base/modern/icon_m_trophy_04_swstar.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="100">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.7,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="trophy" source="items/base/modern/m_trophy_04_swstar.png" cols="2" rows="2"/>
+    <texture id="light_01" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="reflect" source="items/base/modern/m_collect_05_ice_angel_reflect.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="trophy">
+      <box min="-0.25,0,-0.25" max="0.25,0.7,0.25"/>
+      <layers>
+        <layer id="trophy" texture="trophy">
+          <view angle="45" y="13"/>
+          <view angle="135" col="1" x="-1" y="13"/>
+          <view angle="225" row="1" y="13"/>
+          <view angle="315" col="1" row="1" y="13"/>
+        </layer>
+        <layer id="refelct_01" texture="reflect">
+          <view angle="45" x="26" y="-48"/>
+          <view angle="135" x="24" y="-22"/>
+          <view angle="225" x="-21" y="-24"/>
+          <view angle="315" x="-27" y="-47"/>
+        </layer>
+        <layer id="refelct_02" texture="reflect">
+          <view angle="45" col="1" x="26" y="-48"/>
+          <view angle="135" col="1" x="24" y="-22"/>
+          <view angle="225" col="1" x="-21" y="-24"/>
+          <view angle="315" col="1" x="-27" y="-47"/>
+        </layer>
+        <layer id="refelct_03" texture="reflect">
+          <view angle="45" col="2" x="26" y="-48"/>
+          <view angle="135" col="2" x="24" y="-22"/>
+          <view angle="225" col="2" x="-21" y="-24"/>
+          <view angle="315" col="2" x="-27" y="-47"/>
+        </layer>
+        <layer id="refelct_04" texture="reflect">
+          <view angle="45" col="1" x="26" y="-48" hm="true"/>
+          <view angle="135" col="1" x="24" y="-22" hm="true"/>
+          <view angle="225" col="1" x="-21" y="-24" hm="true"/>
+          <view angle="315" col="1" x="-27" y="-47" hm="true"/>
+        </layer>
+        <layer id="refelct_05" texture="reflect">
+          <view angle="45" x="26" y="-48" hm="true"/>
+          <view angle="135" x="24" y="-22" hm="true"/>
+          <view angle="225" x="-21" y="-24" hm="true"/>
+          <view angle="315" x="-27" y="-47" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_00">
+          <layerref id="trophy"/>
+        </frame>
+        <frame id="Frame_01">
+          <layerref id="trophy"/>
+          <layerref id="refelct_01"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="trophy"/>
+          <layerref id="refelct_02"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="trophy"/>
+          <layerref id="refelct_03"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="trophy"/>
+          <layerref id="refelct_04"/>
+        </frame>
+        <frame id="Frame_05">
+          <layerref id="trophy"/>
+          <layerref id="refelct_05"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="Frame_00" duration="16"/>
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+          <frameref id="Frame_05"/>
+          <frameref id="Frame_00" duration="16"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="-0.01" s="2.1" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light_01" align="middle" y="-1">
+          <view x="2" y="-10"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xf8f7d5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

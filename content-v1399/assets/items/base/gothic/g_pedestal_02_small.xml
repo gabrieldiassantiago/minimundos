@@ -1,0 +1,24 @@
+<item.SpriteItem desc="Tudo que é nobre merece um pedestal." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/gothic/icon_g_pedestal_02_small.png" id="1185" name="Pedestal de Pedra Baixo" tags="table" price="45" tokens="450" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.3,1,0.3" min="-0.3,0,-0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/gothic/g_pedestal_02_small.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.3,1,0.3" min="-0.3,0,-0.3"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="26">
+          <view/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

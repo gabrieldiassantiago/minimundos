@@ -1,0 +1,422 @@
+<item.SpriteItem id="1124" name="Botão Digital" desc="É 0 ou 1?" tags="puzzle,wall" icon="items/base/modern/icon_m_combpuzzle_01_modern.png" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="35" tokens="350" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="0,-0.36,-0.36" max="0.15,0.32,0.36"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle_puzzle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle_puzzle.as"/>
+    <event id="select" script="scripts/item/select_puzzle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Zero On" state="true" event="animate(On_00)"/>
+    <action id="Zero Off" state="true" event="animate(Off_00)"/>
+    <action id="One On" state="true" event="animate(On_01)"/>
+    <action id="One Off" state="true" event="animate(Off_01)"/>
+    <action id="Two On" state="true" event="animate(On_02)"/>
+    <action id="Two Off" state="true" event="animate(Off_02)"/>
+    <action id="Three On" state="true" event="animate(On_03)"/>
+    <action id="Three Off" state="true" event="animate(Off_03)"/>
+    <action id="Four On" state="true" event="animate(On_04)"/>
+    <action id="Four Off" state="true" event="animate(Off_04)"/>
+    <action id="Five On" state="true" event="animate(On_05)"/>
+    <action id="Five Off" state="true" event="animate(Off_05)"/>
+    <action id="Six On" state="true" event="animate(On_06)"/>
+    <action id="Six Off" state="true" event="animate(Off_06)"/>
+    <action id="Seven On" state="true" event="animate(On_07)"/>
+    <action id="Seven Off" state="true" event="animate(Off_07)"/>
+    <action id="Eight On" state="true" event="animate(On_08)"/>
+    <action id="Eight Off" state="true" event="animate(Off_08)"/>
+    <action id="Nine On" state="true" event="animate(On_09)"/>
+    <action id="Nine Off" state="true" event="animate(Off_09)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="10"/>
+    <entry key="00" value="Zero"/>
+    <entry key="01" value="One"/>
+    <entry key="02" value="Two"/>
+    <entry key="03" value="Three"/>
+    <entry key="04" value="Four"/>
+    <entry key="05" value="Five"/>
+    <entry key="06" value="Six"/>
+    <entry key="07" value="Seven"/>
+    <entry key="08" value="Eight"/>
+    <entry key="09" value="Nine"/>
+  </data>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <textures>
+    <texture id="switch" source="items/base/modern/m_combpuzzle_01_modern.png" cols="2" rows="1"/>
+    <texture id="symbols" source="items/base/modern/m_combpuzzle_01_modern_sym.png" cols="5" rows="4"/>
+    <texture id="symbols_on" source="items/base/modern/m_combpuzzle_01_modern_sym_on.png" cols="5" rows="4"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Switch">
+      <box min="0,-0.36,-0.36" max="0.15,0.32,0.36"/>
+      <layers>
+        <layer id="on" texture="switch" y="80">
+          <view angle="45" col="1" x="11" y="-30"/>
+          <view angle="135" col="1" x="-11" y="-30" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="off" texture="switch" y="80">
+          <view angle="45" x="10" y="-30"/>
+          <view angle="135" x="-10" y="-30" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol0" texture="symbols" y="80">
+          <view angle="45" col="4" x="19" y="-42"/>
+          <view angle="135" col="4" row="2" x="-21" y="-44"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol1" texture="symbols" y="80">
+          <view angle="45" x="20" y="-44"/>
+          <view angle="135" row="2" x="-20" y="-46"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol2" texture="symbols" y="80">
+          <view angle="45" col="1" x="19" y="-43"/>
+          <view angle="135" col="1" row="2" x="-21" y="-45"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol3" texture="symbols" y="80">
+          <view angle="45" col="2" x="19" y="-43"/>
+          <view angle="135" col="2" row="2" x="-20" y="-45"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol4" texture="symbols" y="80">
+          <view angle="45" col="3" x="18" y="-45"/>
+          <view angle="135" col="3" row="2" x="-21" y="-45"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol5" texture="symbols" y="80">
+          <view angle="45" row="1" x="22" y="-45"/>
+          <view angle="135" row="3" x="-23" y="-45"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol6" texture="symbols" y="80">
+          <view angle="45" col="1" row="1" x="18" y="-44"/>
+          <view angle="135" col="1" row="3" x="-22" y="-43"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol7" texture="symbols" y="80">
+          <view angle="45" col="2" row="1" x="17" y="-44"/>
+          <view angle="135" col="2" row="3" x="-22" y="-45"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol8" texture="symbols" y="80">
+          <view angle="45" col="3" row="1" x="19" y="-44"/>
+          <view angle="135" col="3" row="3" x="-20" y="-46"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol9" texture="symbols" y="80">
+          <view angle="45" col="4" row="1" x="19" y="-44"/>
+          <view angle="135" col="4" row="3" x="-20" y="-43"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol1on" texture="symbols_on" y="80">
+          <view angle="45" x="15" y="-46"/>
+          <view angle="135" row="2" x="-15" y="-48"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol2on" texture="symbols_on" y="80">
+          <view angle="45" col="1" x="14" y="-46"/>
+          <view angle="135" col="1" row="2" x="-16" y="-47"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol3on" texture="symbols_on" y="80">
+          <view angle="45" col="2" x="14" y="-45"/>
+          <view angle="135" col="2" row="2" x="-15" y="-47"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol4on" texture="symbols_on" y="80">
+          <view angle="45" col="3" x="13" y="-48"/>
+          <view angle="135" col="3" row="2" x="-16" y="-46"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol5on" texture="symbols_on" y="80">
+          <view angle="45" row="1" x="17" y="-48"/>
+          <view angle="135" row="3" x="-18" y="-47"/>
+          <view angle="225" row="1" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol6on" texture="symbols_on" y="80">
+          <view angle="45" col="1" row="1" x="13" y="-47"/>
+          <view angle="135" col="1" row="3" x="-17" y="-45"/>
+          <view angle="225" col="1" row="1" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol7on" texture="symbols_on" y="80">
+          <view angle="45" col="2" row="1" x="12" y="-47"/>
+          <view angle="135" col="2" row="3" x="-18" y="-48"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol8on" texture="symbols_on" y="80">
+          <view angle="45" col="3" row="1" x="13" y="-47"/>
+          <view angle="135" col="3" row="3" x="-15" y="-48"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol0on" texture="symbols_on" y="80">
+          <view angle="45" col="4" x="13" y="-45"/>
+          <view angle="135" col="4" row="2" x="-16" y="-46"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="symbol9on" texture="symbols_on" y="80">
+          <view angle="45" col="4" row="1" x="14" y="-47"/>
+          <view angle="135" col="4" row="3" x="-16" y="-45"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off_00">
+          <layerref id="off"/>
+          <layerref id="symbol0"/>
+        </frame>
+        <frame id="off_01">
+          <layerref id="off"/>
+          <layerref id="symbol1"/>
+        </frame>
+        <frame id="off_02">
+          <layerref id="off"/>
+          <layerref id="symbol2"/>
+        </frame>
+        <frame id="off_03">
+          <layerref id="off"/>
+          <layerref id="symbol3"/>
+        </frame>
+        <frame id="off_04">
+          <layerref id="off"/>
+          <layerref id="symbol4"/>
+        </frame>
+        <frame id="off_05">
+          <layerref id="off"/>
+          <layerref id="symbol5"/>
+        </frame>
+        <frame id="off_06">
+          <layerref id="off"/>
+          <layerref id="symbol6"/>
+        </frame>
+        <frame id="off_07">
+          <layerref id="off"/>
+          <layerref id="symbol7"/>
+        </frame>
+        <frame id="off_08">
+          <layerref id="off"/>
+          <layerref id="symbol8"/>
+        </frame>
+        <frame id="off_09">
+          <layerref id="off"/>
+          <layerref id="symbol9"/>
+        </frame>
+        <frame id="on_01">
+          <layerref id="on"/>
+          <layerref id="symbol1on"/>
+        </frame>
+        <frame id="on_02">
+          <layerref id="on"/>
+          <layerref id="symbol2on"/>
+        </frame>
+        <frame id="on_03">
+          <layerref id="on"/>
+          <layerref id="symbol3on"/>
+        </frame>
+        <frame id="on_04">
+          <layerref id="on"/>
+          <layerref id="symbol4on"/>
+        </frame>
+        <frame id="on_05">
+          <layerref id="on"/>
+          <layerref id="symbol5on"/>
+        </frame>
+        <frame id="on_06">
+          <layerref id="on"/>
+          <layerref id="symbol6on"/>
+        </frame>
+        <frame id="on_07">
+          <layerref id="on"/>
+          <layerref id="symbol7on"/>
+        </frame>
+        <frame id="on_08">
+          <layerref id="on"/>
+          <layerref id="symbol8on"/>
+        </frame>
+        <frame id="on_09">
+          <layerref id="on"/>
+          <layerref id="symbol9on"/>
+        </frame>
+        <frame id="on_00">
+          <layerref id="on"/>
+          <layerref id="symbol0on"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off_00" framerate="4">
+          <frameref id="off_00"/>
+        </animation>
+        <animation id="Off_01" framerate="4">
+          <frameref id="off_01"/>
+        </animation>
+        <animation id="Off_02" framerate="4">
+          <frameref id="off_02"/>
+        </animation>
+        <animation id="Off_03" framerate="4">
+          <frameref id="off_03"/>
+        </animation>
+        <animation id="Off_04" framerate="4">
+          <frameref id="off_04"/>
+        </animation>
+        <animation id="Off_05" framerate="4">
+          <frameref id="off_05"/>
+        </animation>
+        <animation id="Off_06" framerate="4">
+          <frameref id="off_06"/>
+        </animation>
+        <animation id="Off_07" framerate="4">
+          <frameref id="off_07"/>
+        </animation>
+        <animation id="Off_08" framerate="4">
+          <frameref id="off_08"/>
+        </animation>
+        <animation id="Off_09" framerate="4">
+          <frameref id="off_09"/>
+        </animation>
+        <animation id="On_00" framerate="8">
+          <frameref id="on_00" duration="3"/>
+        </animation>
+        <animation id="On_01" framerate="8">
+          <frameref id="on_01" duration="3"/>
+        </animation>
+        <animation id="On_02" framerate="8">
+          <frameref id="on_02" duration="3"/>
+        </animation>
+        <animation id="On_03" framerate="8">
+          <frameref id="on_03" duration="3"/>
+        </animation>
+        <animation id="On_04" framerate="8">
+          <frameref id="on_04" duration="3"/>
+        </animation>
+        <animation id="On_05" framerate="8">
+          <frameref id="on_05" duration="3"/>
+        </animation>
+        <animation id="On_06" framerate="8">
+          <frameref id="on_06" duration="3"/>
+        </animation>
+        <animation id="On_07" framerate="8">
+          <frameref id="on_07" duration="3"/>
+        </animation>
+        <animation id="On_08" framerate="8">
+          <frameref id="on_08" duration="3"/>
+        </animation>
+        <animation id="On_09" framerate="8">
+          <frameref id="on_09" duration="3"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.55" y="0.1" s="1.3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-16" y="3"/>
+          <view angle="135" x="24" y="3"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="on">
+          <layerref id="Light" color="0xf15b5b" a="0.95"/>
+        </frame>
+        <frame id="off">
+          <layerref id="Light" color="0x715aee" a="0.3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off_00" framerate="4">
+          <frameref id="off" duration="2"/>
+        </animation>
+        <animation id="Off_01" framerate="4">
+          <frameref id="off" duration="2"/>
+        </animation>
+        <animation id="Off_02" framerate="4">
+          <frameref id="off" duration="2"/>
+        </animation>
+        <animation id="Off_03" framerate="4">
+          <frameref id="off" duration="2"/>
+        </animation>
+        <animation id="Off_04" framerate="4">
+          <frameref id="off" duration="2"/>
+        </animation>
+        <animation id="Off_05" framerate="4">
+          <frameref id="off" duration="2"/>
+        </animation>
+        <animation id="Off_06" framerate="4">
+          <frameref id="off" duration="2"/>
+        </animation>
+        <animation id="Off_07" framerate="4">
+          <frameref id="off" duration="2"/>
+        </animation>
+        <animation id="Off_08" framerate="4">
+          <frameref id="off" duration="2"/>
+        </animation>
+        <animation id="Off_09" framerate="4">
+          <frameref id="off" duration="2"/>
+        </animation>
+        <animation id="On_00" framerate="4">
+          <frameref id="on" duration="2"/>
+        </animation>
+        <animation id="On_01" framerate="4">
+          <frameref id="on" duration="2"/>
+        </animation>
+        <animation id="On_02" framerate="4">
+          <frameref id="on" duration="2"/>
+        </animation>
+        <animation id="On_03" framerate="4">
+          <frameref id="on" duration="2"/>
+        </animation>
+        <animation id="On_04" framerate="4">
+          <frameref id="on" duration="2"/>
+        </animation>
+        <animation id="On_05" framerate="4">
+          <frameref id="on" duration="2"/>
+        </animation>
+        <animation id="On_06" framerate="4">
+          <frameref id="on" duration="2"/>
+        </animation>
+        <animation id="On_07" framerate="4">
+          <frameref id="on" duration="2"/>
+        </animation>
+        <animation id="On_08" framerate="4">
+          <frameref id="on" duration="2"/>
+        </animation>
+        <animation id="On_09" framerate="4">
+          <frameref id="on" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

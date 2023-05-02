@@ -1,0 +1,171 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,2.14,0" max="0,2.14,0"/>
+  </volume>
+  <textures>
+    <texture id="Gang" source="items/base/consumables/emotes/emote_29_gangster_use.png" cols="1" rows="1"/>
+    <texture id="Gun" source="items/base/consumables/emotes/emote_29_gangun_use.png" cols="1" rows="1"/>
+    <texture id="Mouth" source="items/base/consumables/emotes/emote_29_gangstermouth_use.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/consumables/emotes/emote_29_gangster_sound.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront" y="2.14">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Gangsta" texture="Gang" x="-4" y="1">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="mouth1" texture="Mouth">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="mouth2" texture="Mouth">
+          <view angle="0" col="1"/>
+          <view angle="45" col="1"/>
+          <view angle="90" col="1"/>
+          <view angle="135" col="1"/>
+          <view angle="180" col="1"/>
+          <view angle="225" col="1"/>
+          <view angle="270" col="1"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="mouth3" texture="Mouth">
+          <view angle="0" col="2"/>
+          <view angle="45" col="2"/>
+          <view angle="90" col="2"/>
+          <view angle="135" col="2"/>
+          <view angle="180" col="2"/>
+          <view angle="225" col="2"/>
+          <view angle="270" col="2"/>
+          <view angle="315" col="2"/>
+        </layer>
+        <layer id="Gun" texture="Gun" x="-28" y="12">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Gangsta" a="0.2"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Gangsta" a="0.4"/>
+          <layerref id="Gun" a="0.2"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Gangsta" a="0.6"/>
+          <layerref id="Gun" a="0.5"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Gangsta" a="0.8"/>
+          <layerref id="Gun" a="0.7"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Gangsta" y="-1"/>
+          <layerref id="Gun"/>
+        </frame>
+        <frame id="anim01">
+          <layerref id="Gangsta" y="-2"/>
+          <layerref id="mouth3" x="2" y="-9" a="8"/>
+          <layerref id="Gun" y="-1"/>
+        </frame>
+        <frame id="anim02">
+          <layerref id="Gangsta" y="-3"/>
+          <layerref id="mouth2" x="2" y="-10"/>
+          <layerref id="Gun"/>
+        </frame>
+        <frame id="anim03">
+          <layerref id="Gangsta" y="-5"/>
+          <layerref id="mouth1" x="2" y="-12"/>
+          <layerref id="Gun" y="-1"/>
+        </frame>
+        <frame id="anim04">
+          <layerref id="Gangsta" y="-7"/>
+          <layerref id="mouth1" x="2" y="-14"/>
+          <layerref id="Gun" y="-1"/>
+        </frame>
+        <frame id="anim05">
+          <layerref id="Gangsta" y="-8"/>
+          <layerref id="Gun" y="-2"/>
+        </frame>
+        <frame id="anim06">
+          <layerref id="Gangsta" y="-7"/>
+          <layerref id="mouth1" x="2" y="-14"/>
+          <layerref id="Gun" y="-4"/>
+        </frame>
+        <frame id="anim07">
+          <layerref id="Gangsta" y="-5"/>
+          <layerref id="mouth2" x="2" y="-12"/>
+          <layerref id="Gun" y="-5"/>
+        </frame>
+        <frame id="anim08">
+          <layerref id="Gangsta" y="-3"/>
+          <layerref id="mouth3" x="2" y="-10"/>
+          <layerref id="Gun" y="-4"/>
+        </frame>
+        <frame id="anim09">
+          <layerref id="Gangsta" y="-2"/>
+          <layerref id="mouth3" x="2" y="-9"/>
+          <layerref id="Gun" y="-2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="8" loop="false">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="Loop" framerate="4" loop="false">
+          <frameref id="anim01">
+            <sample id="Sound" loops="1"/>
+          </frameref>
+          <frameref id="anim02"/>
+          <frameref id="anim03"/>
+          <frameref id="anim04"/>
+          <frameref id="anim05"/>
+          <frameref id="anim06"/>
+          <frameref id="anim07"/>
+          <frameref id="anim08"/>
+          <frameref id="anim01"/>
+          <frameref id="anim02"/>
+          <frameref id="anim03"/>
+          <frameref id="anim04"/>
+          <frameref id="anim05"/>
+          <frameref id="anim06"/>
+          <frameref id="anim07"/>
+          <frameref id="anim08"/>
+          <frameref id="anim09" duration="4"/>
+          <frameref id="anim01"/>
+        </animation>
+        <animation id="Out" framerate="10" loop="false">
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,290 @@
+<item.SpriteItem id="6869" name="Arco Mágico Play" desc="Um arco e flecha mágico" tags="rare,consumable,actionbar,wear,hand,usable,nopvp,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_829_magic_crossbow_icon.png" price="2860" minLevel="1" minCPLevel="220" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.3" max="0.4,0.63,0.3"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="fire+25"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+35"/>
+  </data>
+  <textures>
+    <texture id="stand" source="items/base/consumables/magic/con_item_generic_gunstand.png" cols="2" rows="1"/>
+    <texture id="base" source="items/base/consumables/clothing/accessory/acc_829_magic_crossbow_item.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_circle_floor.png" cols="1" rows="1"/>
+    <texture id="HandFx" source="items/base/consumables/clothing/accessory/acc_829_magic_crossbow_handfx.png" cols="2" rows="2"/>
+    <texture id="fx" source="items/base/consumables/clothing/accessory/acc_829_magic_crossbow_fx.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.3" max="0.4,0.63,0.3"/>
+      <layers>
+        <layer id="stand" texture="stand" y="10">
+          <view angle="45" y="3"/>
+          <view angle="135" y="3" hm="true"/>
+          <view angle="225" col="1" y="3"/>
+          <view angle="315" col="1" y="3" hm="true"/>
+        </layer>
+        <layer id="base" texture="base" y="10">
+          <view angle="45" x="3" y="6"/>
+          <view angle="135" x="-3" y="6" hm="true"/>
+          <view angle="225" col="1" x="-3" y="4" hm="true"/>
+          <view angle="315" col="1" x="3" y="4"/>
+        </layer>
+        <layer id="fx01" texture="fx">
+          <view angle="45" x="9" y="1"/>
+          <view angle="135" x="-9" y="1" hm="true"/>
+          <view angle="225" x="2" y="-10" hm="true"/>
+          <view angle="315" x="-2" y="-10"/>
+        </layer>
+        <layer id="fx02" texture="fx">
+          <view angle="45" col="1" x="9" y="-1"/>
+          <view angle="135" col="1" x="-9" y="-1" hm="true"/>
+          <view angle="225" col="1" x="2" y="-12" hm="true"/>
+          <view angle="315" col="1" x="-2" y="-12"/>
+        </layer>
+        <layer id="fx03" texture="fx">
+          <view angle="45" col="2" x="-11" y="-13"/>
+          <view angle="135" col="2" x="11" y="-13" hm="true"/>
+          <view angle="225" col="2" x="21" y="-22" hm="true"/>
+          <view angle="315" col="2" x="-21" y="-22"/>
+        </layer>
+        <layer id="sparks01" texture="HandFx">
+          <view angle="45" x="12" y="20"/>
+          <view angle="135" x="-12" y="20"/>
+          <view angle="225" x="-12" y="20"/>
+          <view angle="315" x="12" y="20"/>
+        </layer>
+        <layer id="sparks02" texture="HandFx">
+          <view angle="45" col="1" x="12" y="20"/>
+          <view angle="135" col="1" x="-12" y="20"/>
+          <view angle="225" col="1" x="-12" y="20"/>
+          <view angle="315" col="1" x="12" y="20"/>
+        </layer>
+        <layer id="sparks03" texture="HandFx">
+          <view angle="45" row="1" x="12" y="20"/>
+          <view angle="135" row="1" x="-12" y="20"/>
+          <view angle="225" row="1" x="-12" y="20"/>
+          <view angle="315" row="1" x="12" y="20"/>
+        </layer>
+        <layer id="sparks04" texture="HandFx">
+          <view angle="45" col="1" row="1" x="12" y="20"/>
+          <view angle="135" col="1" row="1" x="-12" y="20"/>
+          <view angle="225" col="1" row="1" x="-12" y="20"/>
+          <view angle="315" col="1" row="1" x="12" y="20"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="stand"/>
+          <layerref id="base"/>
+          <layerref id="sparks01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="stand"/>
+          <layerref id="base"/>
+          <layerref id="sparks02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="stand"/>
+          <layerref id="base"/>
+          <layerref id="sparks03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="stand"/>
+          <layerref id="base"/>
+          <layerref id="sparks04"/>
+        </frame>
+        <frame id="05">
+          <layerref id="stand"/>
+          <layerref id="base"/>
+          <layerref id="sparks01"/>
+        </frame>
+        <frame id="06">
+          <layerref id="stand"/>
+          <layerref id="fx01"/>
+          <layerref id="base"/>
+          <layerref id="sparks02"/>
+        </frame>
+        <frame id="07">
+          <layerref id="stand"/>
+          <layerref id="fx02"/>
+          <layerref id="base"/>
+          <layerref id="sparks03"/>
+        </frame>
+        <frame id="08">
+          <layerref id="stand"/>
+          <layerref id="fx03"/>
+          <layerref id="base"/>
+          <layerref id="sparks04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="1.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf4cca9" a="0.7"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xf4cca9" a="0.8"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xf4cca9" a="0.9"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xf4cca9"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="fx01" texture="fx">
+          <view angle="45" x="9" y="1"/>
+          <view angle="135" x="-9" y="1" hm="true"/>
+          <view angle="225" x="2" y="-10" hm="true"/>
+          <view angle="315" x="-2" y="-10"/>
+        </layer>
+        <layer id="fx02" texture="fx">
+          <view angle="45" col="1" x="9" y="-1"/>
+          <view angle="135" col="1" x="-9" y="-1" hm="true"/>
+          <view angle="225" col="1" x="2" y="-12" hm="true"/>
+          <view angle="315" col="1" x="-2" y="-12"/>
+        </layer>
+        <layer id="fx03" texture="fx">
+          <view angle="45" col="2" x="-11" y="-13"/>
+          <view angle="135" col="2" x="11" y="-13" hm="true"/>
+          <view angle="225" col="2" x="21" y="-22" hm="true"/>
+          <view angle="315" col="2" x="-21" y="-22"/>
+        </layer>
+        <layer id="sparks01" texture="HandFx">
+          <view angle="45" x="12" y="20"/>
+          <view angle="135" x="-12" y="20"/>
+          <view angle="225" x="-12" y="20"/>
+          <view angle="315" x="12" y="20"/>
+        </layer>
+        <layer id="sparks02" texture="HandFx">
+          <view angle="45" col="1" x="12" y="20"/>
+          <view angle="135" col="1" x="-12" y="20"/>
+          <view angle="225" col="1" x="-12" y="20"/>
+          <view angle="315" col="1" x="12" y="20"/>
+        </layer>
+        <layer id="sparks03" texture="HandFx">
+          <view angle="45" row="1" x="12" y="20"/>
+          <view angle="135" row="1" x="-12" y="20"/>
+          <view angle="225" row="1" x="-12" y="20"/>
+          <view angle="315" row="1" x="12" y="20"/>
+        </layer>
+        <layer id="sparks04" texture="HandFx">
+          <view angle="45" col="1" row="1" x="12" y="20"/>
+          <view angle="135" col="1" row="1" x="-12" y="20"/>
+          <view angle="225" col="1" row="1" x="-12" y="20"/>
+          <view angle="315" col="1" row="1" x="12" y="20"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="stand"/>
+          <layerref id="base"/>
+          <layerref id="sparks01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="stand"/>
+          <layerref id="base"/>
+          <layerref id="sparks02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="stand"/>
+          <layerref id="base"/>
+          <layerref id="sparks03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="stand"/>
+          <layerref id="base"/>
+          <layerref id="sparks04"/>
+        </frame>
+        <frame id="05">
+          <layerref id="stand"/>
+          <layerref id="base"/>
+          <layerref id="sparks01"/>
+        </frame>
+        <frame id="06">
+          <layerref id="stand"/>
+          <layerref id="fx01"/>
+          <layerref id="base"/>
+          <layerref id="sparks02"/>
+        </frame>
+        <frame id="07">
+          <layerref id="stand"/>
+          <layerref id="fx02"/>
+          <layerref id="base"/>
+          <layerref id="sparks03"/>
+        </frame>
+        <frame id="08">
+          <layerref id="stand"/>
+          <layerref id="fx03"/>
+          <layerref id="base"/>
+          <layerref id="sparks04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

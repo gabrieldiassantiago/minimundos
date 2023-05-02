@@ -1,0 +1,136 @@
+<item.WidgetItem id="1034" name="Outdoor de Madeira" desc="Um outdoor de madeira para exibir imagens do seu Flickr." tags="widget" icon="items/base/antique/icon_a_signboard_02_freestand.png" price="120" minLevel="1" minLevelType="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_sign.swf" minCPLevel="1">
+  <volume>
+    <box min="-0.1,0,-1.4" max="0.1,2.23,1.4"/>
+  </volume>
+  <events>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <actions>
+    <action id="Show" trigger="false" event="widget_action(SHOW)"/>
+    <action id="Hide" trigger="false" event="widget_action(HIDE)"/>
+    <action id="Set Text" trigger="false" event="widget_action(SETMESSAGE)">
+      <params>
+        <param type="string" id="Text" label="Set signboard text"/>
+      </params>
+    </action>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+  </data>
+  <navigate sitRange="4.00" standRange="3.00" targetRange="1.00"/>
+  <textures>
+    <texture id="frame" source="items/base/antique/a_signboard_02_freestand.png" cols="1" rows="1"/>
+    <texture id="background" source="items/base/antique/a_signboard_02_background.png" cols="1" rows="1"/>
+    <texture id="shadow" source="items/base/modern/m_poster_02_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Signboard">
+      <box min="-0.1,0,-1.4" max="0.1,2.23,1.4"/>
+      <layers>
+        <layer id="shadow" texture="shadow" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Back" texture="background" align="middle">
+          <view angle="45" x="2" y="-107"/>
+          <view angle="135" x="-2" y="-107" hm="true"/>
+          <view angle="225" y="-106" alpha="0"/>
+          <view angle="315" y="-106" alpha="0" hm="true"/>
+        </layer>
+        <layer id="WidgetLayer" type="panel" texture="Texture" w="2.52" h="1.04" y="-105">
+          <view angle="45" x="2" y="-1"/>
+          <view angle="135" col="1" x="-1" y="-2"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="frame" texture="frame" align="middle">
+          <view angle="45" x="-1" y="-78"/>
+          <view angle="135" x="1" y="-78" hm="true"/>
+          <view angle="225" x="-1" y="-78"/>
+          <view angle="315" x="1" y="-78" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Show">
+          <layerref id="shadow"/>
+          <layerref id="Back"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="frame"/>
+        </frame>
+        <frame id="Hide">
+          <layerref id="shadow"/>
+          <layerref id="Back"/>
+          <layerref id="frame"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Show">
+          <frameref id="Show"/>
+        </animation>
+        <animation id="Hide">
+          <frameref id="Hide"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Signboard01">
+      <box min="-0.1,0,-1.4" max="0.1,2.23,1.4"/>
+      <layers>
+        <layer id="Back" texture="background" align="middle">
+          <view angle="45" x="2" y="-107"/>
+          <view angle="135" x="-2" y="-107" hm="true"/>
+          <view angle="225" y="-106" alpha="0"/>
+          <view angle="315" y="-106" alpha="0" hm="true"/>
+        </layer>
+        <layer id="WidgetLayer" type="panel" texture="Texture" w="2.52" h="1.04" y="-105">
+          <view angle="45" x="2" y="-1"/>
+          <view angle="135" col="1" x="-1" y="-2"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="frame" texture="frame" align="middle">
+          <view angle="45" x="-1" y="-78"/>
+          <view angle="135" x="1" y="-78" hm="true"/>
+          <view angle="225" x="-1" y="-78"/>
+          <view angle="315" x="1" y="-78" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Show">
+          <layerref id="shadow"/>
+          <layerref id="Back"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="frame"/>
+        </frame>
+        <frame id="Hide">
+          <layerref id="shadow"/>
+          <layerref id="Back"/>
+          <layerref id="frame"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Show">
+          <frameref id="Show"/>
+        </animation>
+        <animation id="Hide">
+          <frameref id="Hide"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="Animation">
+      <frame id="Frame">
+        <noderef id="Signboard"/>
+        <noderef id="Signboard01" a="180"/>
+      </frame>
+    </animation>
+  </animations>
+</item.WidgetItem>

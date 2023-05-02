@@ -1,0 +1,37 @@
+<item.SpriteItem id="3908" name="Short Surf Board  Coast" desc="Um short de praia listrado." tags="consumable,clothing,actionbar,wear,bot03,action_wearable_toggle" icon="items/base/consumables/clothing/bot03/bot03_40_icon_shorts_1.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="510" tokens="5100">
+  <volume>
+    <box min="-0.28,0,-0.38" max="0.4,0.05,0.38"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/bot03/bot03_40_frag_boardshorts.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="shortskirt" source="items/base/consumables/clothing/bot03/bot03_40_item_shorts.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.28,0,-0.38" max="0.4,0.05,0.38"/>
+      <layers>
+        <layer id="Layer" texture="shortskirt" y="19">
+          <view angle="45" x="11" y="12"/>
+          <view angle="135" x="-11" y="12" hm="true"/>
+          <view angle="225" col="1" x="-10" y="5" hm="true"/>
+          <view angle="315" col="1" x="10" y="5"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

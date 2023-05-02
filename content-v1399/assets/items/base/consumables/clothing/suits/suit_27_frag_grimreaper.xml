@@ -1,0 +1,101 @@
+<f id="GrimReaper" parentId="Suits">
+  <g id="GrimReaper">
+    <b id="GrimTorso" min="2" max="4" sel="GrimSkelTorsoCol,GrimSkelTorsoBase,GrimTorsoColour,GrimTorsoBase">
+      <s id="GrimTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_27_grim_torso.png" pri="6"/>
+      <c id="GrimTorsoColour" sId="GrimTorsoBase" a="0.09" b="-101.0" ct="-0.09"/>
+      <s id="GrimSkelTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_27_grim_torso_skel.png" pri="5"/>
+      <c id="GrimSkelTorsoCol" sId="GrimSkelTorsoBase" c="15394757" a="0.15" ct="1.72" lw="N"/>
+    </b>
+    <b id="GrimLegs" min="2" max="2" sel="GrimBottomBase">
+      <g id="GrimBottomBase" icon="$bu/icon_legs_trouser.png">
+        <s id="GrimPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_27_grim_idle.png" pri="6"/>
+        <s id="GrimPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_27_grim_walk1.png" pri="6"/>
+        <s id="GrimPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_27_grim_walk2.png" pri="6"/>
+        <s id="GrimPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_27_grim_walk3.png" pri="6"/>
+        <s id="GrimPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_27_grim_walk4.png" pri="6"/>
+        <s id="GrimSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_27_grim_sit_upper.png" pri="3"/>
+        <s id="GrimSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_27_grim_sit_lower.png" pri="6"/>
+        <c id="GrimPantIdleColour" sId="GrimPantIdleBase" a="0.09" b="-99.5" ct="-0.08"/>
+        <c id="GrimPantWalk1Base" sId="GrimPantWalk1Base" a="0.09" b="-99.5" ct="-0.08"/>
+        <c id="GrimPantWalk2Base" sId="GrimPantWalk2Base" a="0.09" b="-99.5" ct="-0.08"/>
+        <c id="GrimPantWalk3Base" sId="GrimPantWalk3Base" a="0.09" b="-99.5" ct="-0.08"/>
+        <c id="GrimPantWalk4Base" sId="GrimPantWalk4Base" a="0.09" b="-99.5" ct="-0.08"/>
+        <c id="GrimSitUpperBase" sId="GrimSitUpperBase" a="0.09" b="-99.5" ct="-0.08"/>
+        <c id="GrimSitLowerBase" sId="GrimSitLowerBase" a="0.09" b="-99.5" ct="-0.08"/>
+      </g>
+    </b>
+    <b id="GrimArms" min="2" max="2" sel="GrimArmsBase">
+      <g id="GrimArmsBase" icon="$bm/icon_m_retro.png">
+        <s id="GrimArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_27_grim_arm_idle.png" pri="6"/>
+        <s id="GrimArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_27_grim_arm_walk_1.png" pri="6"/>
+        <s id="GrimArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_27_grim_arm_walk_2.png" pri="6"/>
+        <s id="GrimArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_27_grim_arm_walk_3.png" pri="6"/>
+        <s id="GrimArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_27_grim_arm_sit.png" pri="6"/>
+        <s id="GrimArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_27_grim_arm_throw.png" pri="6"/>
+        <s id="GrimArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_27_grim_arm_raise.png" pri="6"/>
+        <c id="GrimArmIdleColour" sId="GrimArmIdleBase" a="0.09" b="-99.4" ct="-0.08"/>
+        <c id="GrimArmWalk1Base" sId="GrimArmWalk1Base" a="0.09" b="-99.4" ct="-0.08"/>
+        <c id="GrimArmWalk2Base" sId="GrimArmWalk2Base" a="0.09" b="-99.4" ct="-0.08"/>
+        <c id="GrimArmWalk3Base" sId="GrimArmWalk3Base" a="0.09" b="-99.4" ct="-0.08"/>
+        <c id="GrimArmSitBase" sId="GrimArmSitBase" a="0.09" b="-99.4" ct="-0.08"/>
+        <c id="GrimArmThrowBase" sId="GrimArmThrowBase" a="0.09" b="-99.4" ct="-0.08"/>
+        <c id="GrimArmRaiseBase" sId="GrimArmRaiseBase" a="0.09" b="-99.4" ct="-0.08"/>
+        <s id="GrimSkeletonHandIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_04_hand_idle.png" pri="3"/>
+        <s id="GrimSkeletonHandWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_04_hand_walk1.png" pri="3"/>
+        <s id="GrimSkeletonHandWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_04_hand_arm_walk2.png" pri="3"/>
+        <s id="GrimSkeletonHandWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_04_hand_arm_walk3.png" pri="3"/>
+        <s id="GrimSkeletonHandSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_04_hand_sit_arm.png" pri="3"/>
+        <s id="GrimSkelHandWave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_04_hand_raise_wave1.png" pri="1"/>
+        <s id="GrimSkelHandWave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_04_hand_raise_wave2.png" pri="1"/>
+        <s id="GrimSkelHandHold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_04_hand_throw_hold.png"/>
+        <s id="GrimSkelHandOpen" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_04_hand_throw_open.png" pri="1"/>
+        <s id="GrimSkelHandPoint" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_04_hand_throw_point.png" pri="1"/>
+        <s id="GrimSkelHandStop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_04_hand_throw_stop.png" pri="1"/>
+        <s id="GrimSkelHandThrow" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_04_hand_throw_throw.png" pri="1"/>
+        <s id="GrimSkelHandThumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_04_hand_throw_thumbs.png" pri="1"/>
+        <c id="GrimSkeletonHandIdleBase" sId="GrimSkeletonHandIdleBase" c="15394757" a="0.15" ct="1.72" lw="N"/>
+        <c id="GrimSkeletonHandWalk1Base" sId="GrimSkeletonHandWalk1Base" c="15394757" a="0.15" ct="1.72" lw="N"/>
+        <c id="GrimSkeletonHandWalk2Base" sId="GrimSkeletonHandWalk2Base" c="15394757" a="0.15" ct="1.72" lw="N"/>
+        <c id="GrimSkeletonHandWalk3Base" sId="GrimSkeletonHandWalk3Base" c="15394757" a="0.15" ct="1.72" lw="N"/>
+        <c id="GrimSkeletonHandIdleBase" sId="GrimSkeletonHandSitBase" c="15394757" a="0.15" ct="1.72" lw="N"/>
+        <c id="GrimSkelHandWave1" sId="GrimSkelHandWave1" c="15394757" a="0.15" ct="1.72" lw="N"/>
+        <c id="GrimSkelHandWave2" sId="GrimSkelHandWave2" c="15394757" a="0.15" ct="1.72" lw="N"/>
+        <c id="GrimSkelHandHold" sId="GrimSkelHandHold" c="15394757" a="0.15" ct="1.72" lw="N"/>
+        <c id="GrimSkelHandOpen" sId="GrimSkelHandOpen" c="15394757" a="0.15" ct="1.72" lw="N"/>
+        <c id="GrimSkelHandPoint" sId="GrimSkelHandPoint" c="15394757" a="0.15" ct="1.72" lw="N"/>
+        <c id="GrimSkelHandStop" sId="GrimSkelHandStop" c="15394757" a="0.15" ct="1.72" lw="N"/>
+        <c id="GrimSkelHandThrow" sId="GrimSkelHandThrow" c="15394757" a="0.15" ct="1.72" lw="N"/>
+        <c id="GrimSkelHandThumbs" sId="GrimSkelHandThumbs" c="15394757" a="0.15" ct="1.72" lw="N"/>
+      </g>
+    </b>
+    <g id="GrimFeet" icon="$bm/icon_shoe_standard.png">
+      <s id="GrimFootIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_04_foot_idle.png" pri="3"/>
+      <s id="GrimFootWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_04_foot_walk1.png" pri="3"/>
+      <s id="GrimFootWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_04_foot_walk2.png" pri="3"/>
+      <s id="GrimFootWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_04_foot_walk3.png" pri="3"/>
+      <s id="GrimFootWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_04_foot_walk4.png" pri="3"/>
+      <s id="GrimFootSit" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_04_foot_sit_lower.png" pri="3"/>
+      <c id="GrimFootIdleBase" sId="GrimFootIdleBase" c="15394757" a="0.15" ct="1.72" lw="N"/>
+      <c id="GrimFootWalk1Base" sId="GrimFootWalk1Base" c="15394757" a="0.15" ct="1.72" lw="N"/>
+      <c id="GrimFootWalk2Base" sId="GrimFootWalk2Base" c="15394757" a="0.15" ct="1.72" lw="N"/>
+      <c id="GrimFootWalk3Base" sId="GrimFootWalk3Base" c="15394757" a="0.15" ct="1.72" lw="N"/>
+      <c id="GrimFootWalk4Base" sId="GrimFootWalk4Base" c="15394757" a="0.15" ct="1.72" lw="N"/>
+      <c id="GrimFootSit" sId="GrimFootSit" c="15394757" a="0.15" ct="1.72" lw="N"/>
+    </g>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+</f>

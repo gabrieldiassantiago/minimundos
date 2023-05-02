@@ -1,0 +1,198 @@
+<item.SpriteItem id="3753" name="Trenzinho do Leo MiniMundos" desc="Um trenzinho de brinquedo do Leo MiniMundos" tags="rare,craftable_kudos,misc,decoration,kudos,market" icon="items/base/modern/m_toy_train_set_icon.png" price="150" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.24" max="0.49,0.1,1.24"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="defaultAnimation" value="Off"/>
+    <entry key="ingredient_1" value="3674"/>
+    <entry key="ingredient_2" value="3729"/>
+    <entry key="ingredient_3" value="3747"/>
+    <entry key="ingredient_quantity_1" value="1"/>
+    <entry key="ingredient_quantity_2" value="1"/>
+    <entry key="ingredient_quantity_3" value="1"/>
+    <entry key="product_quantity" value="1"/>
+    <entry key="xp_level_required" value="0"/>
+    <entry key="xp_rewarded" value="1000"/>
+  </data>
+  <textures>
+    <texture id="track" source="items/base/modern/m_toy_train_track.png" cols="1" rows="1"/>
+    <texture id="trains" source="items/base/modern/m_toy_train_set.png" cols="6" rows="2"/>
+    <texture id="decal" source="items/base/modern/m_toy_train_track_decal.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Item">
+      <box min="-0.49,0,-0.24" max="0.49,0.1,1.24"/>
+      <layers>
+        <layer id="track" texture="track">
+          <view angle="45" x="33" y="24"/>
+          <view angle="135" x="30" y="55" hm="true"/>
+          <view angle="225" x="-32" y="56"/>
+          <view angle="315" x="-33" y="24" hm="true"/>
+        </layer>
+        <layer id="train_01" texture="trains">
+          <view angle="45" x="16" y="25"/>
+          <view angle="135" x="47" y="56" hm="true"/>
+          <view angle="225" x="-49" y="57"/>
+          <view angle="315" x="-16" y="25" hm="true"/>
+        </layer>
+        <layer id="train_02" texture="trains">
+          <view angle="45" col="1" x="38" y="20"/>
+          <view angle="135" col="1" x="25" y="51" hm="true"/>
+          <view angle="225" col="1" x="-29" y="53"/>
+          <view angle="315" col="1" x="-38" y="20" hm="true"/>
+        </layer>
+        <layer id="train_03" texture="trains">
+          <view angle="45" col="2" x="59" y="13"/>
+          <view angle="135" col="2" x="7" y="45" hm="true"/>
+          <view angle="225" col="2" x="-5" y="44"/>
+          <view angle="315" col="2" x="-58" y="13" hm="true"/>
+        </layer>
+        <layer id="train_04" texture="trains">
+          <view angle="45" col="3" x="70" y="3"/>
+          <view angle="135" col="3" x="-7" y="34" hm="true"/>
+          <view angle="225" col="3" x="5" y="35"/>
+          <view angle="315" col="3" x="-71" y="2" hm="true"/>
+        </layer>
+        <layer id="train_05" texture="trains">
+          <view angle="45" col="4" x="79" y="-7"/>
+          <view angle="135" col="4" x="-16" y="24" hm="true"/>
+          <view angle="225" col="4" x="14" y="25"/>
+          <view angle="315" col="4" x="-79" y="-7" hm="true"/>
+        </layer>
+        <layer id="train_06" texture="trains">
+          <view angle="45" col="5" x="71" y="-16"/>
+          <view angle="135" col="5" x="-8" y="15" hm="true"/>
+          <view angle="225" col="5" x="6" y="16"/>
+          <view angle="315" col="5" x="-71" y="-16" hm="true"/>
+        </layer>
+        <layer id="train_07" texture="trains">
+          <view angle="45" row="1" x="57" y="-22"/>
+          <view angle="135" row="1" x="7" y="9" hm="true"/>
+          <view angle="225" row="1" x="-7" y="10"/>
+          <view angle="315" row="1" x="-56" y="-22" hm="true"/>
+        </layer>
+        <layer id="train_08" texture="trains">
+          <view angle="45" col="1" row="1" x="37" y="-20"/>
+          <view angle="135" col="1" row="1" x="26" y="11" hm="true"/>
+          <view angle="225" col="1" row="1" x="-28" y="12"/>
+          <view angle="315" col="1" row="1" x="-37" y="-20" hm="true"/>
+        </layer>
+        <layer id="train_09" texture="trains">
+          <view angle="45" col="2" row="1" x="16" y="-15"/>
+          <view angle="135" col="2" row="1" x="45" y="15" hm="true"/>
+          <view angle="225" col="2" row="1" x="-49" y="17"/>
+          <view angle="315" col="2" row="1" x="-18" y="-16" hm="true"/>
+        </layer>
+        <layer id="train_10" texture="trains">
+          <view angle="45" col="3" row="1" x="-3" y="-5"/>
+          <view angle="135" col="3" row="1" x="66" y="26" hm="true"/>
+          <view angle="225" col="3" row="1" x="-68" y="27"/>
+          <view angle="315" col="3" row="1" x="3" y="-5" hm="true"/>
+        </layer>
+        <layer id="train_11" texture="trains">
+          <view angle="45" col="4" row="1" x="-13" y="7"/>
+          <view angle="135" col="4" row="1" x="76" y="38" hm="true"/>
+          <view angle="225" col="4" row="1" x="-77" y="39"/>
+          <view angle="315" col="4" row="1" x="13" y="7" hm="true"/>
+        </layer>
+        <layer id="train_12" texture="trains">
+          <view angle="45" col="5" row="1" x="-4" y="17"/>
+          <view angle="135" col="5" row="1" x="67" y="48" hm="true"/>
+          <view angle="225" col="5" row="1" x="-69" y="49"/>
+          <view angle="315" col="5" row="1" x="4" y="17" hm="true"/>
+        </layer>
+        <layer id="decal" texture="decal">
+          <view angle="45" x="40" y="-27"/>
+          <view angle="135" x="23" y="4" hm="true"/>
+          <view angle="225" x="-25" y="5"/>
+          <view angle="315" x="-40" y="-27" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="track"/>
+          <layerref id="train_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="track"/>
+          <layerref id="train_02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="track"/>
+          <layerref id="train_03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="track"/>
+          <layerref id="train_04"/>
+        </frame>
+        <frame id="05">
+          <layerref id="track"/>
+          <layerref id="train_05"/>
+        </frame>
+        <frame id="06">
+          <layerref id="track"/>
+          <layerref id="train_06"/>
+          <layerref id="decal"/>
+        </frame>
+        <frame id="07">
+          <layerref id="track"/>
+          <layerref id="train_07"/>
+          <layerref id="decal"/>
+        </frame>
+        <frame id="08">
+          <layerref id="track"/>
+          <layerref id="train_08"/>
+          <layerref id="decal"/>
+        </frame>
+        <frame id="09">
+          <layerref id="track"/>
+          <layerref id="train_09"/>
+          <layerref id="decal"/>
+        </frame>
+        <frame id="10">
+          <layerref id="track"/>
+          <layerref id="train_10"/>
+          <layerref id="decal"/>
+        </frame>
+        <frame id="11">
+          <layerref id="track"/>
+          <layerref id="train_11"/>
+        </frame>
+        <frame id="12">
+          <layerref id="track"/>
+          <layerref id="train_12"/>
+        </frame>
+        <frame id="off">
+          <layerref id="track"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="09"/>
+          <frameref id="10"/>
+          <frameref id="11"/>
+          <frameref id="12"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

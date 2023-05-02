@@ -1,0 +1,54 @@
+<item.SpriteItem id="0" name="Flower Bunch" desc="A lovely flower Bunch" tags="plant" icon="items/base/modern/icon_m_plant_16_flowerpot.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.2187,-0.0167,-0.25" max="0.2813,0.3833,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="flowers" source="items/base/modern/m_plant_16_flowerpot_hand.png" cols="1" rows="1"/>
+    <texture id="bow" source="items/base/consumables/edible/con_eat_11_rosebunch_bow.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" x="0.0313" y="-0.0167">
+      <box min="-0.25,0,-0.25" max="0.25,0.4,0.25"/>
+      <layers>
+        <layer id="flowers" texture="flowers">
+          <view angle="0" x="3" y="19" hm="true"/>
+          <view angle="45" x="2" y="21"/>
+          <view angle="90" x="4" y="19" hm="true"/>
+          <view angle="135" x="-3" y="21"/>
+          <view angle="180" x="1" y="18" hm="true"/>
+          <view angle="225" x="-2" y="21"/>
+          <view angle="270" x="1" y="19" hm="true"/>
+          <view angle="315" y="18"/>
+        </layer>
+        <layer id="Layer" texture="bow">
+          <view angle="0" col="3" x="2" y="7"/>
+          <view angle="45" col="3" x="3" y="9" hm="true"/>
+          <view angle="90" col="2" x="3" y="7" hm="true"/>
+          <view angle="135" col="1" y="9" hm="true"/>
+          <view angle="180" y="7" hm="true"/>
+          <view angle="225" col="1" x="-1" y="8"/>
+          <view angle="270" col="2" y="7"/>
+          <view angle="315" col="3" x="2" y="6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="flowers"/>
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

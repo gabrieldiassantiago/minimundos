@@ -1,0 +1,31 @@
+<item.SpriteItem name="Mesa de Jantar Fantasia Eco" desc="Uma grande mesa de jantar" tags="table" icon="items/base/outdoor/icon_o_table_08_fantasydiningtable.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" id="4631" price="325">
+  <volume>
+    <box min="-1.49,0,-0.49" max="0.49,1,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="steeltable" source="items/base/outdoor/o_table_08_fantasydiningtable.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Table">
+      <box min="-1.49,0,-0.49" max="0.49,1,1.49"/>
+      <layers>
+        <layer id="table" texture="steeltable">
+          <view angle="45" x="-1" y="-5"/>
+          <view angle="135" x="64" y="28" hm="true"/>
+          <view angle="225" x="-1" y="59"/>
+          <view angle="315" x="-64" y="28" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="table"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

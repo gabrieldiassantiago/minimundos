@@ -1,0 +1,126 @@
+<item.SpriteItem id="7281" name="Abajur de Abóbora Master" desc="Medo do escuro [6 de 8]" tags="rare,light" icon="items/base/modern/m_lamp_09_pumpkin_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,2,0.2"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring_b.png" cols="1" rows="1"/>
+    <texture id="base" source="items/base/modern/m_lamp_09_pumpkin_base.png" cols="1" rows="1"/>
+    <texture id="stand" source="items/base/modern/m_lamp_09_pumpkin_stand.png" cols="2" rows="1"/>
+    <texture id="shade" source="items/base/modern/m_lamp_09_pumpkin_shade.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,2,0.2"/>
+      <layers>
+        <layer id="stand" texture="stand">
+          <view angle="45" x="-18" y="3"/>
+          <view angle="135" x="18" y="3" hm="true"/>
+          <view angle="225" col="1" x="18" y="2"/>
+          <view angle="315" col="1" x="-18" y="2" hm="true"/>
+        </layer>
+        <layer id="base" texture="base">
+          <view angle="45" x="-1" y="14" hm="true"/>
+          <view angle="135" y="14"/>
+          <view angle="225" x="-1" y="14" hm="true"/>
+          <view angle="315" y="14"/>
+        </layer>
+        <layer id="shade_on" texture="shade">
+          <view angle="45" col="1" y="-93"/>
+          <view angle="135" col="1" x="1" y="-92" hm="true"/>
+          <view angle="225" col="1" x="-1" y="-92"/>
+          <view angle="315" col="1" x="1" y="-92" hm="true"/>
+        </layer>
+        <layer id="shade_off" texture="shade">
+          <view angle="45" y="-93"/>
+          <view angle="135" x="1" y="-92" hm="true"/>
+          <view angle="225" x="-1" y="-92"/>
+          <view angle="315" x="1" y="-92" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="FrameOn_01">
+          <layerref id="base"/>
+          <layerref id="stand"/>
+          <layerref id="shade_on"/>
+        </frame>
+        <frame id="FrameOff_01">
+          <layerref id="base"/>
+          <layerref id="stand"/>
+          <layerref id="shade_off"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="FrameOff_01"/>
+        </animation>
+        <animation id="On" framerate="4" loop="false">
+          <frameref id="FrameOn_01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="13"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xedd786" a="0.72"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="1.4" s="3" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view x="1" y="-3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xe7e269" a="0.3"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

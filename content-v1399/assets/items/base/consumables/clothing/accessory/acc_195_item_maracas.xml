@@ -1,0 +1,33 @@
+<item.SpriteItem id="4289" name="Maracas Play" desc="Ó abre alas que eu quero passar. Maracas raras de carnaval." tags="rare,consumable,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_195_icon_maracas.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2711,0,-0.2711" max="0.3608,0.2231,0.2838"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Flag" source="items/base/consumables/clothing/accessory/acc_195_item_maracas.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.2711,0,-0.2711" max="0.3608,0.2231,0.2838"/>
+      <layers>
+        <layer id="Flag" texture="Flag">
+          <view angle="45" y="17"/>
+          <view angle="135" y="17" hm="true"/>
+          <view angle="225" col="1" y="17"/>
+          <view angle="315" col="1" y="17" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

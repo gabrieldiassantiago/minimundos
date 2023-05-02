@@ -1,0 +1,27 @@
+<item.SpriteItem id="1890" name="Prateleira Vitrine" tags="admin,wall,table" icon="items/base/modern/icon_m_shelf_02_display.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="table" dropTargetList="wall,avatar" dropTargetClamp="none" desc="Acrílico colorido.">
+  <volume>
+    <box min="0,-0.24,-1" max="0.8,0.3,1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <textures>
+    <texture id="Shelf" source="items/base/modern/m_shelf_02_display.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Shelf">
+      <box min="0,-0.24,-1" max="0.8,0.3,1"/>
+      <layers>
+        <layer id="Layer" texture="Shelf" align="middle">
+          <view angle="45" x="25" y="-5"/>
+          <view angle="135" x="-25" y="-5" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

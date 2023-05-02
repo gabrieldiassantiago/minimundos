@@ -1,0 +1,70 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/clothing/accessory/acc_640_eagleclaw_over.png" cols="3" rows="3"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="wing_01" texture="base">
+          <view angle="0" col="2" x="4" y="28" alpha="0" hm="true"/>
+          <view angle="45" x="-26" y="-78"/>
+          <view angle="90" row="1" y="-69"/>
+          <view angle="135" x="25" y="-78" hm="true"/>
+          <view angle="180" col="2" x="-4" y="28" alpha="0"/>
+          <view angle="225" col="1" x="25" y="-35"/>
+          <view angle="270" col="2" x="1" y="-15"/>
+          <view angle="315" col="1" x="-25" y="-35" hm="true"/>
+        </layer>
+        <layer id="wing_02" texture="base">
+          <view angle="0" col="2" row="1" x="4" y="28" alpha="0" hm="true"/>
+          <view angle="45" x="-26" y="-78"/>
+          <view angle="90" row="1" y="-69"/>
+          <view angle="135" x="25" y="-78" hm="true"/>
+          <view angle="180" col="2" x="-4" y="28" alpha="0"/>
+          <view angle="225" col="1" row="1" x="25" y="-35"/>
+          <view angle="270" col="2" row="1" x="1" y="-15"/>
+          <view angle="315" col="1" row="1" x="-25" y="-35" hm="true"/>
+        </layer>
+        <layer id="wing_03" texture="base">
+          <view angle="0" col="2" x="4" y="28" alpha="0" hm="true"/>
+          <view angle="45" x="-26" y="-78"/>
+          <view angle="90" row="1" y="-69"/>
+          <view angle="135" x="25" y="-78" hm="true"/>
+          <view angle="180" col="2" row="2" x="-4" y="28" alpha="0"/>
+          <view angle="225" col="1" row="2" x="25" y="-35"/>
+          <view angle="270" col="2" row="2" x="1" y="-15"/>
+          <view angle="315" col="1" row="2" x="-25" y="-35" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="sit"/>
+        <frame id="Idle01">
+          <layerref id="wing_01"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="wing_02"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="wing_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

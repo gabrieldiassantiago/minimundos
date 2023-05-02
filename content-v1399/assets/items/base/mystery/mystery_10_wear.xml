@@ -1,0 +1,96 @@
+<item.SpriteItem id="0" name="baseball" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/mystery/mystery_10_wear.png" cols="5" rows="1"/>
+    <texture id="wings" source="items/base/mystery/mystery_10_wear2.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="0" col="2" x="10" y="4"/>
+          <view angle="45" col="1" x="2" y="4"/>
+          <view angle="90" y="2"/>
+          <view angle="135" col="1" x="-2" y="4" hm="true"/>
+          <view angle="180" col="2" x="-10" y="4" hm="true"/>
+          <view angle="225" col="3" x="-3" y="6" hm="true"/>
+          <view angle="270" col="4" y="5"/>
+          <view angle="315" col="3" x="3" y="6"/>
+        </layer>
+        <layer id="wing_01" texture="wings">
+          <view angle="0" x="-1" y="-36" hm="true"/>
+          <view angle="45" x="-2" y="-37"/>
+          <view angle="90" x="2" y="-37"/>
+          <view angle="135" x="2" y="-37" hm="true"/>
+          <view angle="180" x="1" y="-36"/>
+          <view angle="225" x="5" y="-36"/>
+          <view angle="270" y="-35"/>
+          <view angle="315" x="-5" y="-36" hm="true"/>
+        </layer>
+        <layer id="wing_02" texture="wings">
+          <view angle="0" col="1" x="-1" y="-36" hm="true"/>
+          <view angle="45" col="1" x="-2" y="-37"/>
+          <view angle="90" col="1" x="2" y="-37"/>
+          <view angle="135" col="1" x="2" y="-37" hm="true"/>
+          <view angle="180" col="1" x="1" y="-36"/>
+          <view angle="225" col="1" x="5" y="-36"/>
+          <view angle="270" col="1" x="1" y="-35"/>
+          <view angle="315" col="1" x="-5" y="-36" hm="true"/>
+        </layer>
+        <layer id="wing_03" texture="wings">
+          <view angle="0" col="2" y="-36" hm="true"/>
+          <view angle="45" col="2" x="-4" y="-37"/>
+          <view angle="90" col="2" x="-1" y="-37"/>
+          <view angle="135" col="2" x="4" y="-37" hm="true"/>
+          <view angle="180" col="2" y="-36"/>
+          <view angle="225" col="2" x="3" y="-36"/>
+          <view angle="270" col="2" x="-1" y="-35"/>
+          <view angle="315" col="2" x="-3" y="-36" hm="true"/>
+        </layer>
+        <layer id="wing_04" texture="wings">
+          <view angle="0" col="3" x="-1" y="-36" hm="true"/>
+          <view angle="45" col="3" x="-2" y="-37"/>
+          <view angle="90" col="3" x="1" y="-37"/>
+          <view angle="135" col="3" x="2" y="-37" hm="true"/>
+          <view angle="180" col="3" x="1" y="-36"/>
+          <view angle="225" col="3" x="5" y="-36"/>
+          <view angle="270" col="3" x="2" y="-35"/>
+          <view angle="315" col="3" x="-5" y="-36" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="wing_01">
+          <layerref id="head"/>
+          <layerref id="wing_01"/>
+        </frame>
+        <frame id="wing_02">
+          <layerref id="head"/>
+          <layerref id="wing_02"/>
+        </frame>
+        <frame id="wing_03">
+          <layerref id="head"/>
+          <layerref id="wing_03"/>
+        </frame>
+        <frame id="wing_04">
+          <layerref id="head"/>
+          <layerref id="wing_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="20">
+          <frameref id="wing_01"/>
+          <frameref id="wing_02"/>
+          <frameref id="wing_03"/>
+          <frameref id="wing_04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

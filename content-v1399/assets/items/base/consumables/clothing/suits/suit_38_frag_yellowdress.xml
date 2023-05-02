@@ -1,0 +1,55 @@
+<f id="YellowDress" parentId="Suits">
+  <g id="YellowDress">
+    <b id="YellowTorso" min="2" max="2" sel="YellowTorsoColour,YellowTorsoBase">
+      <s id="YellowTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_36_torso.png" pri="1"/>
+      <c id="YellowTorsoColour" sId="YellowTorsoBase" c="16769042" a="0.81" b="35.3" ct="1.44" lId="YellowTorsoBase"/>
+    </b>
+    <b id="YellowLegs" min="2" max="2" sel="YellowBottomBase">
+      <g id="YellowBottomBase" icon="$bu/icon_legs_trouser.png">
+        <s id="YellowPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_21_leg_idle.png" pri="3"/>
+        <s id="YellowPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_21_leg_walk1.png" pri="3"/>
+        <s id="YellowPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_21_leg_walk2.png" pri="3"/>
+        <s id="YellowPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_21_leg_walk3.png" pri="3"/>
+        <s id="YellowPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_21_leg_walk4.png" pri="3"/>
+        <s id="YellowSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_21_leg_sit_upper.png" pri="3"/>
+        <s id="YellowSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_21_leg_sit_lower.png" pri="3"/>
+        <c id="ColorIdle" sId="YellowPantIdleBase" c="16772444" a="0.69" b="-22.9" ct="0.79" lId="YellowPantIdleBase"/>
+        <c id="ColorIdle" sId="YellowPantWalk1Base" c="16772444" a="0.69" b="-22.9" ct="0.79" lId="YellowPantWalk1Base"/>
+        <c id="ColorIdle" sId="YellowPantWalk2Base" c="16772444" a="0.69" b="-22.9" ct="0.79" lId="YellowPantWalk2Base"/>
+        <c id="ColorIdle" sId="YellowPantWalk3Base" c="16772444" a="0.69" b="-22.9" ct="0.79" lId="YellowPantWalk3Base"/>
+        <c id="ColorIdle" sId="YellowPantWalk4Base" c="16772444" a="0.69" b="-22.9" ct="0.79" lId="YellowPantWalk4Base"/>
+        <c id="ColorIdle" sId="YellowSitUpperBase" c="16772444" a="0.69" b="-22.9" ct="0.79" lId="YellowSitUpperBase"/>
+        <c id="ColorIdle" sId="YellowSitLowerBase" c="16772444" a="0.69" b="-22.9" ct="0.79" lId="YellowSitLowerBase"/>
+      </g>
+    </b>
+    <b id="YellowArms" min="2" max="2" sel="YellowArmsBase">
+      <g id="YellowArmsBase" icon="$bm/icon_m_retro.png">
+        <s id="YellowArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_36_arm_idle.png" pri="1"/>
+        <s id="YellowArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_36_arm_walk1.png" pri="1"/>
+        <s id="YellowArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_36_arm_walk2.png" pri="1"/>
+        <s id="YellowArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_36_arm_walk3.png" pri="1"/>
+        <s id="YellowArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_36_arm_sit.png" pri="1"/>
+        <s id="YellowArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_36_arm_throw.png" pri="1"/>
+        <s id="YellowArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_36_arm_raise.png" pri="1"/>
+        <c id="ColorIdle" sId="YellowArmIdleBase" c="16771729" a="0.51" b="-18.0" ct="0.53" lId="YellowArmIdleBase"/>
+        <c id="ColorIdle" sId="YellowArmWalk1Base" c="16771729" a="0.51" b="-18.0" ct="0.53" lId="YellowArmWalk1Base"/>
+        <c id="ColorIdle" sId="YellowArmWalk2Base" c="16771729" a="0.51" b="-18.0" ct="0.53" lId="YellowArmWalk2Base"/>
+        <c id="ColorIdle" sId="YellowArmWalk3Base" c="16771729" a="0.51" b="-18.0" ct="0.53" lId="YellowArmWalk3Base"/>
+        <c id="ColorIdle" sId="YellowArmSitBase" c="16771729" a="0.51" b="-18.0" ct="0.53" lId="YellowArmSitBase"/>
+        <c id="ColorIdle" sId="YellowArmThrowBase" c="16771729" a="0.51" b="-18.0" ct="0.53" lId="YellowArmThrowBase"/>
+        <c id="ColorIdle" sId="YellowArmRaiseBase" c="16771729" a="0.51" b="-18.0" ct="0.53" lId="YellowArmRaiseBase"/>
+      </g>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot01"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top06"/>
+</f>

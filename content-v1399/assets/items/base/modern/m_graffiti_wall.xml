@@ -1,0 +1,68 @@
+<item.WidgetItem id="392" name="Tela de Artista" desc="Pinte, crie e exiba o seu talento!" tags="wall,widget,user_content,allow_excess" icon="items/base/modern/icon_m_graffiti_wall.png" price="220" tokens="2200" minLevel="1" minLevelType="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" widget="widgets/widget_painter.swf" minCPLevel="1">
+  <volume>
+    <box min="0,-1.06,-1.47" max="0.001,1.12,1.47"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="Show" trigger="false" event="widget_action(SHOW)"/>
+    <action id="Hide" trigger="false" event="widget_action(HIDE)"/>
+    <action id="Paint A Stroke">
+      <eval>
+        <func type="relational" id="Stroke Count" input="count" operator="equal"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="widget_height_override" value="520"/>
+    <entry key="hasEditSecurity" value="true"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_paint.png"/>
+  </data>
+  <navigate position="infront" sitRange="4.00" standRange="2.00" targetRange="1.00" accessibleRange="2.00"/>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_graffiti_wall.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="frame">
+      <box min="0,-1.06,-1.47" max="0.001,1.12,1.47"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45" x="3" y="-2"/>
+          <view angle="135" x="-4" y="-2" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="WidgetLayer" type="panel" texture="Texture" w="2.9" h="2.05">
+          <view angle="45" x="7" y="-2"/>
+          <view angle="135" col="1" x="-6" y="-1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Show">
+          <layerref id="Layer"/>
+          <layerref id="WidgetLayer"/>
+        </frame>
+        <frame id="Hide">
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Show">
+          <frameref id="Show"/>
+        </animation>
+        <animation id="Hide">
+          <frameref id="Hide"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

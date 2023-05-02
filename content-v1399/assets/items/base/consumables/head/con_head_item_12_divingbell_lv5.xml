@@ -1,0 +1,91 @@
+<item.SpriteItem desc="Um capacete de mergulho." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/head/icon_con_head_item_12_divingbell_lv5.png" id="1107" name="Capacete de Mergulho Master" tags="consumable,actionbar,wear,head,real,action_wearable_toggle" price="10500" minLevel="50" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.3,0.61,0.3" min="-0.3,0,-0.3"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="nature+10,frost+20"/>
+    <entry key="action_attributes_secondary" value="speed+20,health+50"/>
+  </data>
+  <textures>
+    <texture cols="3" id="base" rows="1" source="items/base/consumables/head/con_head_12_divingb_base.png"/>
+    <texture cols="5" id="level4" rows="1" source="items/base/consumables/head/con_head_12_divingb_stage02_b.png"/>
+    <texture cols="3" id="gold_base" rows="1" source="items/base/consumables/head/con_head_12_divingb_stage02_a.png"/>
+    <texture cols="5" id="level5" rows="1" source="items/base/consumables/head/con_head_12_divingb_stage03.png"/>
+    <texture cols="3" id="bubble" rows="1" source="items/base/consumables/head/con_head_12_bubbles.png"/>
+    <texture cols="1" id="shadow" rows="1" source="items/base/consumables/head/con_head_generic_dropshadow.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.3,0.61,0.3" min="-0.3,0,-0.3"/>
+      <layers>
+        <layer id="base" texture="base" y="15">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+        <layer id="gold_base" texture="gold_base" y="15">
+          <view angle="45" col="1" x="3"/>
+          <view angle="135" col="1" hm="true" x="-3"/>
+          <view angle="225" col="1" x="3"/>
+          <view angle="315" col="1" hm="true" x="-3"/>
+        </layer>
+        <layer id="level4" texture="level4" y="15">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="3"/>
+          <view angle="315" col="3" hm="true"/>
+        </layer>
+        <layer id="level5" texture="level5" y="15">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="3"/>
+          <view angle="315" col="3" hm="true"/>
+        </layer>
+        <layer id="bubble_01" texture="bubble" y="22">
+          <view angle="45" x="43" y="-18"/>
+          <view angle="135" hm="true" x="-43" y="-18"/>
+          <view angle="225" hm="true" x="-44" y="-31"/>
+          <view angle="315" x="44" y="-31"/>
+        </layer>
+        <layer id="bubble_02" texture="bubble" y="22">
+          <view angle="45" col="1" x="43" y="-18"/>
+          <view angle="135" col="1" hm="true" x="-43" y="-18"/>
+          <view angle="225" col="1" hm="true" x="-44" y="-31"/>
+          <view angle="315" col="1" x="44" y="-31"/>
+        </layer>
+        <layer id="bubble_03" texture="bubble" y="22">
+          <view angle="45" col="2" x="43" y="-18"/>
+          <view angle="135" col="2" hm="true" x="-43" y="-18"/>
+          <view angle="225" col="2" hm="true" x="-44" y="-31"/>
+          <view angle="315" col="2" x="44" y="-31"/>
+        </layer>
+        <layer id="shadow" texture="shadow" y="-5">
+          <view angle="45" y="28"/>
+          <view angle="135" y="28"/>
+          <view angle="225" y="28"/>
+          <view angle="315" y="28"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame04">
+          <layerref id="shadow"/>
+          <layerref id="base"/>
+          <layerref id="gold_base"/>
+          <layerref id="level4"/>
+          <layerref id="level5"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

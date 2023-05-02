@@ -1,0 +1,41 @@
+<item.SpriteItem name="Patins Inline à Jato" desc="Rodinhas já eram, esse é pra voar!" tags="consumable,actionbar,wear,feet,scifi,action_wearable_toggle" icon="items/base/consumables/feet/icon_con_feet_item_06_gas_inline.png" tokens="22500" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="1678" minLevel="1" minCPLevel="10" price="2250">
+  <volume>
+    <box min="-0.24,0,-0.2" max="0.24,0.38,0.2"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+20"/>
+  </data>
+  <textures>
+    <texture id="boots" source="items/base/consumables/feet/con_feet_06_gas_itemsit.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.2" max="0.24,0.38,0.2"/>
+      <layers>
+        <layer id="boots" texture="boots">
+          <view angle="45" x="-1" y="16"/>
+          <view angle="135" x="2" y="17" hm="true"/>
+          <view angle="225" col="1" row="1" x="4" y="25"/>
+          <view angle="315" col="1" row="1" x="-3" y="24" hm="true"/>
+        </layer>
+        <layer id="tops" texture="boots">
+          <view angle="45" row="1" x="-1" y="16"/>
+          <view angle="135" row="1" x="2" y="16" hm="true"/>
+          <view angle="225" x="5" y="-9" alpha="0"/>
+          <view angle="315" x="-6" y="-9" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

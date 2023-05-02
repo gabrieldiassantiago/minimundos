@@ -1,0 +1,183 @@
+<item.SpriteItem id="0" name="Dance Ball Head" desc="A dance ball head" icon="items/base/consumables/clothing/accessory/acc_586_discohead_icon.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/clothing/accessory/acc_586_discohead_head.png" cols="4" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head_01" texture="head">
+          <view angle="0" x="3" y="30" hm="true"/>
+          <view angle="45" x="1" y="33"/>
+          <view angle="90" y="33"/>
+          <view angle="135" x="-2" y="33" hm="true"/>
+          <view angle="180" x="-3" y="30"/>
+          <view angle="225" y="30"/>
+          <view angle="270" y="30"/>
+          <view angle="315" y="30" hm="true"/>
+        </layer>
+        <layer id="head_02" texture="head">
+          <view angle="0" col="1" x="3" y="30" hm="true"/>
+          <view angle="45" col="1" x="1" y="33"/>
+          <view angle="90" col="1" y="33"/>
+          <view angle="135" col="1" x="-2" y="33" hm="true"/>
+          <view angle="180" col="1" x="-3" y="30"/>
+          <view angle="225" col="1" y="30"/>
+          <view angle="270" col="1" y="30"/>
+          <view angle="315" col="1" y="30" hm="true"/>
+        </layer>
+        <layer id="head_03" texture="head">
+          <view angle="0" col="2" x="3" y="30" hm="true"/>
+          <view angle="45" col="2" x="1" y="33"/>
+          <view angle="90" col="2" y="33"/>
+          <view angle="135" col="2" x="-2" y="33" hm="true"/>
+          <view angle="180" col="2" x="-3" y="30"/>
+          <view angle="225" col="2" y="30"/>
+          <view angle="270" col="2" y="30"/>
+          <view angle="315" col="2" y="30" hm="true"/>
+        </layer>
+        <layer id="head_04" texture="head">
+          <view angle="0" col="3" x="3" y="30" hm="true"/>
+          <view angle="45" col="3" x="1" y="33"/>
+          <view angle="90" col="3" y="33"/>
+          <view angle="135" col="3" x="-2" y="33" hm="true"/>
+          <view angle="180" col="3" x="-3" y="30"/>
+          <view angle="225" col="3" y="30"/>
+          <view angle="270" col="3" y="30"/>
+          <view angle="315" col="3" y="30" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="head_01">
+          <layerref id="head_01"/>
+        </frame>
+        <frame id="head_02">
+          <layerref id="head_02"/>
+        </frame>
+        <frame id="head_03">
+          <layerref id="head_03"/>
+        </frame>
+        <frame id="head_04">
+          <layerref id="head_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="head_01"/>
+          <frameref id="head_02"/>
+          <frameref id="head_03"/>
+          <frameref id="head_04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light">
+          <view angle="0" x="3" y="30" hm="true"/>
+          <view angle="45" x="1" y="33"/>
+          <view angle="90" y="33"/>
+          <view angle="135" x="-2" y="33" hm="true"/>
+          <view angle="180" x="-3" y="30"/>
+          <view angle="225" y="30"/>
+          <view angle="270" y="30"/>
+          <view angle="315" y="30" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="light_01">
+          <layerref id="Light" color="0xa4b5f6" a="0.8"/>
+        </frame>
+        <frame id="light_02">
+          <layerref id="Light" color="0xcea0f2" a="0.75"/>
+        </frame>
+        <frame id="light_03">
+          <layerref id="Light" color="0x9edff1" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="1">
+          <frameref id="light_01"/>
+          <frameref id="light_02"/>
+          <frameref id="light_03"/>
+          <frameref id="light_02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="head_01" texture="head">
+          <view angle="0" x="3" y="30" hm="true"/>
+          <view angle="45" x="1" y="33"/>
+          <view angle="90" y="33"/>
+          <view angle="135" x="-2" y="33" hm="true"/>
+          <view angle="180" x="-3" y="30"/>
+          <view angle="225" y="30"/>
+          <view angle="270" y="30"/>
+          <view angle="315" y="30" hm="true"/>
+        </layer>
+        <layer id="head_02" texture="head">
+          <view angle="0" col="1" x="3" y="30" hm="true"/>
+          <view angle="45" col="1" x="1" y="33"/>
+          <view angle="90" col="1" y="33"/>
+          <view angle="135" col="1" x="-2" y="33" hm="true"/>
+          <view angle="180" col="1" x="-3" y="30"/>
+          <view angle="225" col="1" y="30"/>
+          <view angle="270" col="1" y="30"/>
+          <view angle="315" col="1" y="30" hm="true"/>
+        </layer>
+        <layer id="head_03" texture="head">
+          <view angle="0" col="2" x="3" y="30" hm="true"/>
+          <view angle="45" col="2" x="1" y="33"/>
+          <view angle="90" col="2" y="33"/>
+          <view angle="135" col="2" x="-2" y="33" hm="true"/>
+          <view angle="180" col="2" x="-3" y="30"/>
+          <view angle="225" col="2" y="30"/>
+          <view angle="270" col="2" y="30"/>
+          <view angle="315" col="2" y="30" hm="true"/>
+        </layer>
+        <layer id="head_04" texture="head">
+          <view angle="0" col="3" x="3" y="30" hm="true"/>
+          <view angle="45" col="3" x="1" y="33"/>
+          <view angle="90" col="3" y="33"/>
+          <view angle="135" col="3" x="-2" y="33" hm="true"/>
+          <view angle="180" col="3" x="-3" y="30"/>
+          <view angle="225" col="3" y="30"/>
+          <view angle="270" col="3" y="30"/>
+          <view angle="315" col="3" y="30" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Effect_01">
+          <layerref id="head_01"/>
+        </frame>
+        <frame id="Effect_02">
+          <layerref id="head_02"/>
+        </frame>
+        <frame id="Effect_03">
+          <layerref id="head_03"/>
+        </frame>
+        <frame id="Effect_04">
+          <layerref id="head_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Effect_01"/>
+          <frameref id="Effect_02"/>
+          <frameref id="Effect_03"/>
+          <frameref id="Effect_04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,33 @@
+<f id="Top06_48_furcoat" parentId="Top06">
+  <g id="Torso" name="Torso" icon="$bm/icon_m_retro.png">
+    <s id="torso" cId="Torso" s="items/base/consumables/clothing/top06/top06_48_furcoat_torso.png" pri="6"/>
+  </g>
+  <g id="Arm" name="Arm" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_48ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_48_furcoat_arm_idle.png" pri="6"/>
+    <s id="Top06_48ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_48_furcoat_arm_walk1.png" pri="6"/>
+    <s id="Top06_48ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_48_furcoat_arm_walk2.png" pri="6"/>
+    <s id="Top06_48ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_48_furcoat_arm_walk3.png" pri="6"/>
+    <s id="Top06_48ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_48_furcoat_arm_sit.png" pri="6"/>
+    <s id="Top06_48ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_48_furcoat_arm_throw.png" pri="6"/>
+    <s id="Top06_48ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_48_furcoat_arm_raise.png" pri="6"/>
+  </g>
+  <g id="Leg" name="Leg" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_48BottomIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_48_furcoat_leg_idle.png" pri="6"/>
+    <s id="Top06_48BottomWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_48_furcoat_leg_walk1.png" pri="6"/>
+    <s id="Top06_48BottomWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_48_furcoat_leg_walk2.png" pri="6"/>
+    <s id="Top06_48BottomWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_48_furcoat_leg_walk3.png" pri="6"/>
+    <s id="Top06_48BottomWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_48_furcoat_leg_walk4.png" pri="6"/>
+    <s id="Top06_48BottomSit" cId="LegSitUpper" s="items/base/consumables/clothing/top06/top06_48_furcoat_leg_sit.png" pri="6"/>
+    <s id="Top06_48BottomBackIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_48_furcoat_back.png" tx="5" ty="2.5" pri="0.1" dr="0,0,23,54"/>
+    <s id="Top06_48BottomBackWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_48_furcoat_back.png" tx="13" ty="1" pri="0.5" dr="0,0,30,54"/>
+    <s id="Top06_48BottomBackWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_48_furcoat_back.png" tx="7" ty="1" pri="0.5" dr="0,0,25,54"/>
+    <s id="Top06_48BottomBackWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_48_furcoat_back.png" tx="9" ty="1" pri="0.5" dr="9,0,17,54"/>
+    <s id="Top06_48BottomBackWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_48_furcoat_back.png" tx="10" ty="1" pri="0.5" dr="0,0,28,54"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_48" icon="items/base/consumables/clothing/top06/top06_48_icon_furcoat.png" w="48" h="48"/>
+    <s id="IconTop06_48VIP" cId="IconTop06_48" s="items/base/shared/s_vipbadge.png" pri="1" vis="false"/>
+    <s id="IconTop06_48Base" cId="IconTop06_48" s="items/base/consumables/clothing/top06/top06_48_icon_furcoat.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

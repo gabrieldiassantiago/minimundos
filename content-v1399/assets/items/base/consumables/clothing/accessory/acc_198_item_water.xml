@@ -1,0 +1,47 @@
+<item.SpriteItem id="4299" name="Água Mineral" desc="Uma garrafa de água mineral para você ficar legal." tags="rare,actionbar,consumable,drink,wear,stackable,group_edible,edible,action_drinkable" icon="items/base/consumables/clothing/accessory/acc_198_icon_water.png" price="3" minLevel="1" minLevelType="4" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" tokens="30">
+  <volume>
+    <box min="-0.37,0,-0.12" max="0.37,0.15,0.12"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_drinkable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_drinkable.as"/>
+    <event id="action" script="scripts/item/action_drinkable.as"/>
+    <event id="select" script="scripts/item/select_drinkable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="aiUseInWorldEffects" value="drink-100"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture id="Shadow" source="items/base/consumables/clothing/accessory/acc_198_item_shadow.png" cols="1" rows="1"/>
+    <texture id="bottle" source="items/base/consumables/clothing/accessory/acc_198_item_water.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.37,0,-0.12" max="0.37,0.15,0.12"/>
+      <layers>
+        <layer id="Mic" texture="bottle">
+          <view angle="45" col="1" y="4"/>
+          <view angle="135" col="1" y="4" hm="true"/>
+          <view angle="225" col="3" y="4"/>
+          <view angle="315" col="3" y="4" hm="true"/>
+        </layer>
+        <layer id="Shadow" texture="Shadow">
+          <view angle="45" x="-1" y="8"/>
+          <view angle="135" x="-1" y="8"/>
+          <view angle="225" x="-1" y="8"/>
+          <view angle="315" x="-1" y="8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Shadow"/>
+          <layerref id="Mic"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

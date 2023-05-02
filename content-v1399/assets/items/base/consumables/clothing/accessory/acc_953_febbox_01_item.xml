@@ -1,0 +1,30 @@
+<item.SpriteItem id="7546" name="Tapete de Flor Congelada" desc="Um tapete azul de flor [1 of 25]" tags="rare,misc" icon="items/base/consumables/clothing/accessory/acc_953_febbox_01_icon.png" price="250" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1.2,-0.001,-1.2" max="1.2,0,1.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/accessory/acc_953_febbox_01_item.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="rug_pattern" layer="surface">
+      <box min="-1.2,-0.001,-1.2" max="1.2,0,1.2"/>
+      <layers>
+        <layer id="Base" texture="Base">
+          <view angle="45" y="73"/>
+          <view angle="135" y="73" hm="true"/>
+          <view angle="225" y="73"/>
+          <view angle="315" y="73" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

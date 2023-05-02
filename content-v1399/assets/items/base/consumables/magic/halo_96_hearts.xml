@@ -1,0 +1,305 @@
+<item.SpriteItem id="0" name="Hearts Halo" desc="A love halo" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="glow" source="items/base/consumables/magic/halo_glow.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="Heart" source="items/base/consumables/magic/halo_96_hearts.png" cols="3" rows="1"/>
+    <texture id="Smoke" source="items/base/consumables/magic/hit_99_hearts_smoke.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="glow" texture="glow">
+          <view y="32"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In 01">
+          <layerref id="glow" color="0xa638c6" a="0.2"/>
+        </frame>
+        <frame id="In 02">
+          <layerref id="glow" color="0xa638c6" a="0.3"/>
+        </frame>
+        <frame id="In 03">
+          <layerref id="glow" color="0xa638c6" a="0.4"/>
+        </frame>
+        <frame id="In 04">
+          <layerref id="glow" color="0xa638c6" a="0.5"/>
+        </frame>
+        <frame id="In 05">
+          <layerref id="glow" color="0xa638c6" a="0.6"/>
+        </frame>
+        <frame id="In 06">
+          <layerref id="glow" color="0xa638c6" a="0.7"/>
+        </frame>
+        <frame id="Loop 01">
+          <layerref id="glow" color="0xa638c6" a="0.8"/>
+        </frame>
+        <frame id="Loop 02">
+          <layerref id="glow" color="0xa638c6" a="0.85"/>
+        </frame>
+        <frame id="Loop 03">
+          <layerref id="glow" color="0xa638c6" a="0.9"/>
+        </frame>
+        <frame id="Loop 04">
+          <layerref id="glow" color="0xa638c6" a="0.95"/>
+        </frame>
+        <frame id="Loop 05">
+          <layerref id="glow" color="0xa638c6" a="0.9"/>
+        </frame>
+        <frame id="Loop 06">
+          <layerref id="glow" color="0xa638c6"/>
+        </frame>
+        <frame id="Loop 07">
+          <layerref id="glow" color="0xa638c6" a="0.8"/>
+        </frame>
+        <frame id="Out 01">
+          <layerref id="glow" color="0xa638c6" a="0.7"/>
+        </frame>
+        <frame id="Out 02">
+          <layerref id="glow" color="0xa638c6" a="0.6"/>
+        </frame>
+        <frame id="Out 03">
+          <layerref id="glow" color="0xa638c6" a="0.5"/>
+        </frame>
+        <frame id="Out 04">
+          <layerref id="glow" color="0xa638c6" a="0.4"/>
+        </frame>
+        <frame id="Out 05">
+          <layerref id="glow" color="0xa638c6" a="0.3"/>
+        </frame>
+        <frame id="Out 06">
+          <layerref id="glow" color="0xa638c6" a="0.2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+          <frameref id="In 04"/>
+          <frameref id="In 05"/>
+          <frameref id="In 06"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="Loop 01"/>
+          <frameref id="Loop 02"/>
+          <frameref id="Loop 03"/>
+          <frameref id="Loop 04"/>
+          <frameref id="Loop 05"/>
+          <frameref id="Loop 06"/>
+          <frameref id="Loop 07"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="Out 01"/>
+          <frameref id="Out 02"/>
+          <frameref id="Out 03"/>
+          <frameref id="Out 04"/>
+          <frameref id="Out 05"/>
+          <frameref id="Out 06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="HeartUp" texture="Heart">
+          <view x="3" y="-138"/>
+        </layer>
+        <layer id="HeartMid" texture="Heart">
+          <view col="2" y="-138"/>
+        </layer>
+        <layer id="HeartDown" texture="Heart">
+          <view col="1" y="-138"/>
+        </layer>
+        <layer id="Smoke01" texture="Smoke">
+          <view y="-45"/>
+        </layer>
+        <layer id="Smoke02" texture="Smoke">
+          <view col="1" y="-60"/>
+        </layer>
+        <layer id="Smoke03" texture="Smoke">
+          <view col="2" y="-75"/>
+        </layer>
+        <layer id="Smoke04" texture="Smoke">
+          <view col="3" y="-90"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In 01">
+          <layerref id="Smoke01" y="-15" a="0.25"/>
+        </frame>
+        <frame id="In 02">
+          <layerref id="Smoke02" y="-15" a="0.5"/>
+        </frame>
+        <frame id="In 03">
+          <layerref id="Smoke03" y="-15" a="0.75"/>
+        </frame>
+        <frame id="In 04">
+          <layerref id="Smoke04" y="-15"/>
+          <layerref id="HeartUp" y="-15" a="0.3"/>
+        </frame>
+        <frame id="In 05">
+          <layerref id="Smoke04" y="-15" a="0.5"/>
+          <layerref id="HeartMid" y="-15" a="0.6"/>
+        </frame>
+        <frame id="In 06">
+          <layerref id="Smoke04" y="-15" a="0.2"/>
+          <layerref id="HeartDown" y="-15" a="0.8"/>
+        </frame>
+        <frame id="In 07">
+          <layerref id="HeartMid" y="-15"/>
+        </frame>
+        <frame id="Loop 01">
+          <layerref id="HeartUp" y="-15"/>
+        </frame>
+        <frame id="Loop 02">
+          <layerref id="HeartMid" y="-17"/>
+        </frame>
+        <frame id="Loop 03">
+          <layerref id="HeartDown" y="-19"/>
+        </frame>
+        <frame id="Loop 04">
+          <layerref id="HeartMid" y="-21"/>
+        </frame>
+        <frame id="Loop 05">
+          <layerref id="HeartUp" y="-23"/>
+        </frame>
+        <frame id="Loop 06">
+          <layerref id="HeartMid" y="-21"/>
+        </frame>
+        <frame id="Loop 07">
+          <layerref id="HeartDown" y="-19"/>
+        </frame>
+        <frame id="Loop 08">
+          <layerref id="HeartMid" y="-17"/>
+        </frame>
+        <frame id="Out 01">
+          <layerref id="HeartUp" y="-15"/>
+        </frame>
+        <frame id="Out 02">
+          <layerref id="HeartMid" y="-15"/>
+        </frame>
+        <frame id="Out 03">
+          <layerref id="HeartDown" y="-15" a="0.8"/>
+        </frame>
+        <frame id="Out 04">
+          <layerref id="HeartMid" y="-15" a="0.6"/>
+        </frame>
+        <frame id="Out 05">
+          <layerref id="HeartUp" y="-15" a="0.4"/>
+        </frame>
+        <frame id="Out 06">
+          <layerref id="HeartMid" y="-15" a="0.2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+          <frameref id="In 04"/>
+          <frameref id="In 05"/>
+          <frameref id="In 06"/>
+          <frameref id="In 07"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="Loop 01"/>
+          <frameref id="Loop 02"/>
+          <frameref id="Loop 03"/>
+          <frameref id="Loop 04"/>
+          <frameref id="Loop 05"/>
+          <frameref id="Loop 06"/>
+          <frameref id="Loop 07"/>
+          <frameref id="Loop 08"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="Out 01"/>
+          <frameref id="Out 02"/>
+          <frameref id="Out 03"/>
+          <frameref id="Out 04"/>
+          <frameref id="Out 05"/>
+          <frameref id="Out 06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.2" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xc85de7"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xc85de7" a="0.9"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xc85de7" a="0.3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="01"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="01" duration="2"/>
+          <frameref id="02" duration="2"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="1.2" s="2.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xeb87ec" a="0.6"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xeb87ec" a="0.4"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xeb87ec" a="0.2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="01"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="02"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

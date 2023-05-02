@@ -1,0 +1,39 @@
+<item.SpriteItem name="Óculos Coleção Maple Apex" desc="Um par de óculos casuais criados por Austin Kincaid" tags="rare,eye,consumable,actionbar,nopvp,wear,action_wearable_toggle" icon="items/base/consumables/clothing/accessory/acc_856_glasses_maple_icon.png" price="1" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="6964">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.15,0.24"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+5"/>
+  </data>
+  <textures>
+    <texture id="ears" source="items/base/consumables/clothing/accessory/acc_856_glasses_maple_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,0.15,0.24"/>
+      <layers>
+        <layer id="ears" texture="ears">
+          <view angle="45" x="-2" y="20"/>
+          <view angle="135" x="2" y="20" hm="true"/>
+          <view angle="225" col="1" x="2" y="21"/>
+          <view angle="315" col="1" x="-2" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="ears"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,109 @@
+<f id="Top00_09_strapwimsuit" parentId="Top00">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <g id="Torso">
+        <s id="top00_09_torso_m" cId="Torso" s="items/base/consumables/clothing/top00/top00_09_strap_torso_base_m.png" pri="1"/>
+        <c sId="top00_09_torso_m" c="5213387" a="1.00" b="32.1" ct="2.00" lId="Top00_09Color1" lw="N"/>
+        <s id="top00_09_torso_decal_m" cId="Torso" s="items/base/consumables/clothing/top00/top00_09_strap_torso_decal_m.png" pri="1"/>
+        <c sId="top00_09_torso_decal_m" c="10592673" a="1.00" b="102.1" ct="0.67" lId="Top00_09Color2" lw="N"/>
+      </g>
+    </g>
+    <g id="Female">
+      <g id="Torso">
+        <s id="top00_09_torso_f" cId="Torso" s="items/base/consumables/clothing/top00/top00_09_strap_torso_base_f.png" pri="1"/>
+        <c sId="top00_09_torso_f" c="5213387" a="1.00" b="32.1" ct="2.00" lId="Top00_09Color1" lw="N"/>
+        <s id="top00_09_Skin" cId="Torso" s="items/base/consumables/clothing/top01/top01_18_corset_skin.png" pri="0.5"/>
+        <c sId="top00_09_Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+        <s id="top00_09_torso_decal_f" cId="Torso" s="items/base/consumables/clothing/top00/top00_09_strap_torso_decal_f.png" pri="1"/>
+        <c sId="top00_09_torso_decal_f" c="10592673" a="1.00" b="102.1" ct="0.67" lId="Top00_09Color2" lw="N"/>
+      </g>
+    </g>
+  </b>
+  <g id="bikini" icon="$bf/icon_legs_skirt.png">
+    <s id="top00_09_leg_idle" cId="LegIdle" s="items/base/consumables/clothing/top00/top00_09_swimsuit_idle.png" pri="4.2"/>
+    <s id="top00_09_leg_walk1" cId="LegWalk1" s="items/base/consumables/clothing/top00/top00_09_swimsuit_walk1.png" pri="4.2"/>
+    <s id="top00_09_leg_walk2" cId="LegWalk2" s="items/base/consumables/clothing/top00/top00_09_swimsuit_walk2.png" pri="4.2"/>
+    <s id="top00_09_leg_walk3" cId="LegWalk3" s="items/base/consumables/clothing/top00/top00_09_swimsuit_walk3.png" pri="4.2"/>
+    <s id="top00_09_leg_walk4" cId="LegWalk4" s="items/base/consumables/clothing/top00/top00_09_swimsuit_walk4.png" pri="4.2"/>
+    <s id="top00_09_leg_sit" cId="LegSitUpper" s="items/base/consumables/clothing/top00/top00_09_swimsuit_sit.png" ty="2.5" pri="4.2"/>
+    <c sId="top00_09_leg_idle" c="5213387" a="1.00" b="32.1" ct="2.00" lId="Top00_09Color1" lw="N"/>
+    <c sId="top00_09_leg_walk1" c="5213387" a="1.00" b="32.1" ct="2.00" lId="Top00_09Color1" lw="N"/>
+    <c sId="top00_09_leg_walk2" c="5213387" a="1.00" b="32.1" ct="2.00" lId="Top00_09Color1" lw="N"/>
+    <c sId="top00_09_leg_walk3" c="5213387" a="1.00" b="32.1" ct="2.00" lId="Top00_09Color1" lw="N"/>
+    <c sId="top00_09_leg_walk4" c="5213387" a="1.00" b="32.1" ct="2.00" lId="Top00_09Color1" lw="N"/>
+    <c sId="top00_09_leg_sit" c="5213387" a="1.00" b="32.1" ct="2.00" lId="Top00_09Color1" lw="N"/>
+  </g>
+  <g id="Leg_skin" icon="$bf/icon_legs_skirt.png">
+    <s id="top00_09_idle_skin" cId="LegIdle" s="items/base/consumables/clothing/top00/top00_06_skin_idle.png" pri="4"/>
+    <s id="top00_09_walk1_skin" cId="LegWalk1" s="items/base/consumables/clothing/top00/top00_06_skin_walk1.png" pri="4"/>
+    <s id="top00_09_walk2_skin" cId="LegWalk2" s="items/base/consumables/clothing/top00/top00_06_skin_walk2.png" pri="4"/>
+    <s id="top00_09_walk3_skin" cId="LegWalk3" s="items/base/consumables/clothing/top00/top00_06_skin_walk3.png" pri="4"/>
+    <s id="top00_09_walk4_skin" cId="LegWalk4" s="items/base/consumables/clothing/top00/top00_06_skin_walk4.png" pri="4"/>
+    <s id="top00_09_sit_skin" cId="LegSitUpper" s="items/base/consumables/clothing/top00/top00_06_skin_sit.png" ty="2.5" pri="4"/>
+    <c sId="top00_09_idle_skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="top00_09_walk1_skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="top00_09_walk2_skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="top00_09_walk3_skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="top00_09_walk4_skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="top00_09_sit_skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop00_09" icon="items/base/consumables/clothing/top00/top00_09_strap_icon_a.png" w="48" h="48"/>
+    <s id="IconTop00_09Base" cId="IconTop00_09" s="items/base/consumables/clothing/top00/top00_09_strap_icon_1.png" pri="1"/>
+    <c sId="IconTop00_09Base" c="5213387" a="1.00" b="32.1" ct="2.00" lId="Top00_09Color1" lw="N"/>
+    <s id="IconTop00_09Decal" cId="IconTop00_09" s="items/base/consumables/clothing/top00/top00_09_strap_icon_2.png" pri="1"/>
+    <c sId="IconTop00_09Decal" c="10592673" a="1.00" b="102.1" ct="0.67" lId="Top00_09Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top00_09Color1" name="Color 1" desc="Choose a color" sel="NavyBlue" seld="NavyBlue">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="1.00" b="102.1" ct="0.67" lId="Top00_09Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="0.54" b="33.3" ct="0.20" lId="Top00_09Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="14851055" a="1.00" b="41.5" ct="0.95" lId="Top00_09Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="13921433" a="1.00" b="60.9" ct="1.12" lId="Top00_09Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="1.00" b="56.3" ct="2.00" lId="Top00_09Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16219662" a="1.00" b="53.6" ct="0.67" lId="Top00_09Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="13549580" a="1.00" b="73.3" ct="0.92" lId="Top00_09Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="910453" a="1.00" b="42.6" ct="1.01" lId="Top00_09Color1"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="885791" a="1.00" b="54.3" ct="1.69" lId="Top00_09Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="4838565" a="1.00" b="41.7" ct="0.95" lId="Top00_09Color1"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2856331" a="1.00" b="55.9" ct="1.57" lId="Top00_09Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="3449569" a="1.00" b="54.3" ct="1.61" lId="Top00_09Color1"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="5213387" a="1.00" b="32.1" ct="2.00" lId="Top00_09Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9658590" a="0.82" b="38.1" ct="1.42" lId="Top00_09Color1"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.9" ct="0.76" lId="Top00_09Color1"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.99" b="49.6" ct="1.27" lId="Top00_09Color1"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5528606" a="1.00" b="65.3" ct="2.00" lId="Top00_09Color1"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.99" b="77.8" ct="2.00" lId="Top00_09Color1"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.99" b="67.2" ct="2.00" lId="Top00_09Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="0.86" b="33.4" ct="1.46" lId="Top00_09Color1"/>
+    </b>
+    <b id="Top00_09Color2" name="Color 2" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="1.00" b="102.1" ct="0.67" lId="Top00_09Color2"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="0.54" b="33.3" ct="0.20" lId="Top00_09Color2"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="14851055" a="1.00" b="41.5" ct="0.95" lId="Top00_09Color2"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="13921433" a="1.00" b="60.9" ct="1.12" lId="Top00_09Color2"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="1.00" b="56.3" ct="2.00" lId="Top00_09Color2"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16219662" a="1.00" b="53.6" ct="0.67" lId="Top00_09Color2"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="13549580" a="1.00" b="73.3" ct="0.92" lId="Top00_09Color2"/>
+      <c id="Green" icon="$bu/icon_green.png" c="910453" a="1.00" b="42.6" ct="1.01" lId="Top00_09Color2"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="885791" a="1.00" b="54.3" ct="1.69" lId="Top00_09Color2"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="4838565" a="1.00" b="41.7" ct="0.95" lId="Top00_09Color2"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2856331" a="1.00" b="55.9" ct="1.57" lId="Top00_09Color2"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="3449569" a="1.00" b="54.3" ct="1.61" lId="Top00_09Color2"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="5213387" a="1.00" b="32.1" ct="2.00" lId="Top00_09Color2"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9658590" a="0.82" b="38.1" ct="1.42" lId="Top00_09Color2"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.9" ct="0.76" lId="Top00_09Color2"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.99" b="49.6" ct="1.27" lId="Top00_09Color2"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5528606" a="1.00" b="65.3" ct="2.00" lId="Top00_09Color2"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.99" b="77.8" ct="2.00" lId="Top00_09Color2"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.99" b="67.2" ct="2.00" lId="Top00_09Color2"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="0.86" b="33.4" ct="1.46" lId="Top00_09Color2"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=310; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color 1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top00_09Color1"/>
+      <wizchoice id="Color 2" name="Color 2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top00_09Color2"/>
+    </wizbox>
+  </g>
+  <ds id="JSBottom"/>
+  <ds id="JSTop"/>
+</f>

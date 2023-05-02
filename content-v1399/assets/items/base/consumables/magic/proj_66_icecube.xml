@@ -1,0 +1,166 @@
+<item.SpriteItem id="0" name="Icecube Projectile" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="proj_generic" source="items/base/consumables/magic/proj_generic_magicball.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_proj_ring.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+    <texture id="arrow" source="items/base/consumables/magic/proj_66_icecube.png" cols="3" rows="2"/>
+    <texture id="Texture" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="laser" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+      <layers>
+        <layer id="arrow01" texture="arrow" y="14">
+          <view angle="45" x="-10" y="-3"/>
+          <view angle="135" x="9" y="-2" hm="true"/>
+          <view angle="225" x="10" y="7" hm="true" vm="true"/>
+          <view angle="315" x="-9" y="7" vm="true"/>
+          <view angle="0" col="1" x="-13" y="6"/>
+          <view angle="90" col="2" x="-1" y="-8"/>
+          <view angle="180" col="1" x="14" y="5" hm="true"/>
+          <view angle="270" col="2" x="-1" y="16" vm="true"/>
+        </layer>
+        <layer id="arrow02" texture="arrow" y="14">
+          <view angle="45" row="1" x="-10" y="-3"/>
+          <view angle="135" row="1" x="9" y="-2" hm="true"/>
+          <view angle="225" row="1" x="10" y="7" hm="true" vm="true"/>
+          <view angle="315" row="1" x="-9" y="7" vm="true"/>
+          <view angle="0" col="1" row="1" x="-13" y="6"/>
+          <view angle="90" col="2" row="1" x="-1" y="-8"/>
+          <view angle="180" col="1" row="1" x="14" y="5" hm="true"/>
+          <view angle="270" col="2" row="1" x="-1" y="16" vm="true"/>
+        </layer>
+        <layer id="arrow03" texture="arrow" y="14">
+          <view angle="45" x="-10" y="-3" hm="true" vm="true"/>
+          <view angle="135" x="9" y="-2" vm="true"/>
+          <view angle="225" row="1" x="10" y="7"/>
+          <view angle="315" row="1" x="-9" y="7" hm="true"/>
+          <view angle="0" col="1" row="1" x="-13" y="6" hm="true" vm="true"/>
+          <view angle="90" col="2" row="1" x="-1" y="-8" hm="true" vm="true"/>
+          <view angle="180" col="1" row="1" x="14" y="5" vm="true"/>
+          <view angle="270" col="2" row="1" x="-1" y="16" hm="true"/>
+        </layer>
+        <layer id="Fireball" texture="proj_generic" y="24">
+          <view angle="45" y="8"/>
+          <view angle="135" y="9" hm="true"/>
+          <view angle="225" y="7" hm="true" vm="true"/>
+          <view angle="315" y="7" vm="true"/>
+          <view angle="0" col="2" x="-14" y="11"/>
+          <view angle="90" col="1" x="-3" y="6"/>
+          <view angle="180" col="2" x="15" y="9" hm="true"/>
+          <view angle="270" col="1" x="-3" y="12" vm="true"/>
+        </layer>
+        <layer id="glow" texture="Texture">
+          <view angle="45" x="-3" y="21"/>
+          <view angle="135" x="3" y="21"/>
+          <view angle="225" x="-3" y="21"/>
+          <view angle="315" x="2" y="21"/>
+          <view angle="0" y="24"/>
+          <view angle="90" y="20"/>
+          <view angle="180" x="3" y="23"/>
+          <view angle="270" y="26"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Fireball 01">
+          <layerref id="glow" a="0.3"/>
+          <layerref id="arrow01"/>
+          <layerref id="Fireball" color="0xb7f3f3" a="0.2" blend="add"/>
+        </frame>
+        <frame id="Fireball 02">
+          <layerref id="glow" color="0xdbf9f9" a="0.3"/>
+          <layerref id="arrow02"/>
+          <layerref id="Fireball" color="0xc3f5f5" a="0.22" blend="add"/>
+        </frame>
+        <frame id="Fireball 03">
+          <layerref id="glow" color="0xf3fdfd" a="0.3"/>
+          <layerref id="arrow03"/>
+          <layerref id="Fireball" color="0xbdf4f4" a="0.2" blend="add"/>
+        </frame>
+        <frame id="Fireball 04">
+          <layerref id="glow" color="0xe1fafa" a="0.33"/>
+          <layerref id="arrow02"/>
+          <layerref id="Fireball" color="0xd4f1f8" a="0.25" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="Fireball 01"/>
+        </animation>
+        <animation id="Projectile" framerate="8">
+          <frameref id="Fireball 01">
+            <sample id="laser" vol="0.2"/>
+          </frameref>
+          <frameref id="Fireball 02"/>
+          <frameref id="Fireball 03"/>
+          <frameref id="Fireball 04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.1" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x4be1e2" a="0.5"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x45e0e1" a="0.48"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.1" s="2.8" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="45"/>
+          <view angle="135" y="1"/>
+          <view angle="225"/>
+          <view angle="315" y="1"/>
+          <view angle="0" y="2"/>
+          <view angle="90" x="1"/>
+          <view angle="180" y="3"/>
+          <view angle="270"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xa5f0f0" a="0.33"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

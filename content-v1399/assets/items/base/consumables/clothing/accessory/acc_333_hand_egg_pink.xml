@@ -1,0 +1,31 @@
+<item.SpriteItem id="0" name="Tribal Warstaff" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bear" source="items/base/consumables/clothing/accessory/acc_333_hand_egg_pink.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Gardening Fork">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="bear" texture="bear" align="middle">
+          <view angle="0" x="3"/>
+          <view angle="45" x="17" y="-2"/>
+          <view angle="90" x="12"/>
+          <view angle="135" x="-3" y="4" hm="true"/>
+          <view angle="180" x="-3" y="10" hm="true"/>
+          <view angle="225" x="-5" y="8" hm="true"/>
+          <view angle="270" x="-10" y="-3"/>
+          <view angle="315" x="-10"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

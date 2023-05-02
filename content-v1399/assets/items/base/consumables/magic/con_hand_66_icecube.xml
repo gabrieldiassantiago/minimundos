@@ -1,0 +1,304 @@
+<item.SpriteItem id="0" name="Ice Cube Cannon" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="FX_sparkes" source="items/base/consumables/magic/proj_generic_zap.png" cols="1" rows="4"/>
+    <texture id="FX impact" source="items/base/consumables/magic/effect_generic_flare.png" cols="4" rows="1"/>
+    <texture id="raygun" source="items/base/consumables/magic/con_hand_66_icecube.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="transform" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="gun" texture="raygun">
+          <view angle="0" col="2" x="7" y="12"/>
+          <view angle="45" x="9" y="13"/>
+          <view angle="90" col="1" x="2" y="13"/>
+          <view angle="135" x="-3" y="13" hm="true"/>
+          <view angle="180" col="2" x="-6" y="13" hm="true"/>
+          <view angle="225" col="3" x="-5" y="11" hm="true"/>
+          <view angle="270" col="4" x="-2" y="8"/>
+          <view angle="315" col="3" x="6" y="9"/>
+        </layer>
+        <layer id="layer1" texture="FX_sparkes" y="40">
+          <view angle="0" x="26" y="-25"/>
+          <view angle="45" x="18" y="-19"/>
+          <view angle="90" x="2" y="-7"/>
+          <view angle="135" x="-20" y="-17" hm="true"/>
+          <view angle="180" x="-22" y="-23" hm="true"/>
+          <view angle="225" x="-16" y="-24"/>
+          <view angle="270" x="4" y="-44"/>
+          <view angle="315" x="17" y="-30" hm="true"/>
+        </layer>
+        <layer id="layer4" texture="FX_sparkes" y="40">
+          <view angle="0" row="1" x="22" y="-28"/>
+          <view angle="45" row="1" x="18" y="-21"/>
+          <view angle="90" row="1" x="2" y="-3"/>
+          <view angle="135" row="1" x="-18" y="-23" hm="true"/>
+          <view angle="180" row="1" x="-22" y="-23" hm="true"/>
+          <view angle="225" row="1" x="-17" y="-24"/>
+          <view angle="270" row="1" x="-3" y="-34"/>
+          <view angle="315" row="1" x="17" y="-42" hm="true"/>
+        </layer>
+        <layer id="bubble1" texture="FX impact" y="40">
+          <view angle="0" x="20" y="-17"/>
+          <view angle="45" x="18" y="-9"/>
+          <view angle="90" x="2" y="2"/>
+          <view angle="135" x="-18" y="-9" hm="true"/>
+          <view angle="180" x="-20" y="-12" hm="true"/>
+          <view angle="225" x="-17" y="-24"/>
+          <view angle="270" x="-3" y="-34"/>
+          <view angle="315" x="17" y="-30" hm="true"/>
+        </layer>
+        <layer id="bubble2" texture="FX impact" y="40">
+          <view angle="0" col="1" x="20" y="-17"/>
+          <view angle="45" col="1" x="18" y="-9"/>
+          <view angle="90" col="1" x="2" y="2"/>
+          <view angle="135" col="1" x="-18" y="-9" hm="true"/>
+          <view angle="180" col="1" x="-20" y="-12" hm="true"/>
+          <view angle="225" col="1" x="-17" y="-24"/>
+          <view angle="270" col="1" x="-3" y="-34"/>
+          <view angle="315" col="1" x="17" y="-30" hm="true"/>
+        </layer>
+        <layer id="bubble3" texture="FX impact" y="40">
+          <view angle="0" col="2" x="20" y="-17"/>
+          <view angle="45" col="2" x="18" y="-9"/>
+          <view angle="90" col="2" x="2" y="2"/>
+          <view angle="135" col="2" x="-18" y="-9" hm="true"/>
+          <view angle="180" col="2" x="-20" y="-12" hm="true"/>
+          <view angle="225" col="2" x="-17" y="-24"/>
+          <view angle="270" col="2" x="-3" y="-34"/>
+          <view angle="315" col="2" x="17" y="-30" hm="true"/>
+        </layer>
+        <layer id="bubble1m" texture="FX impact" y="40">
+          <view angle="0" x="20" y="-17" hm="true"/>
+          <view angle="45" x="18" y="-9" hm="true"/>
+          <view angle="90" x="2" y="2" hm="true"/>
+          <view angle="135" x="-18" y="-9"/>
+          <view angle="180" x="-20" y="-12"/>
+          <view angle="225" x="-17" y="-24" hm="true"/>
+          <view angle="270" x="-3" y="-34" hm="true"/>
+          <view angle="315" x="17" y="-30"/>
+        </layer>
+        <layer id="bubble3m" texture="FX impact" y="40">
+          <view angle="0" col="2" x="20" y="-17" hm="true"/>
+          <view angle="45" col="2" x="18" y="-9" hm="true"/>
+          <view angle="90" col="2" x="2" y="2" hm="true"/>
+          <view angle="135" col="2" x="-18" y="-9"/>
+          <view angle="180" col="2" x="-20" y="-12"/>
+          <view angle="225" col="2" x="-17" y="-24" hm="true"/>
+          <view angle="270" col="2" x="-3" y="-34" hm="true"/>
+          <view angle="315" col="2" x="17" y="-30"/>
+        </layer>
+        <layer id="bubbleglow" texture="FX impact" y="40">
+          <view angle="0" col="3" x="20" y="-17"/>
+          <view angle="45" col="3" x="18" y="-9"/>
+          <view angle="90" col="3" x="2" y="2"/>
+          <view angle="135" col="3" x="-18" y="-9" hm="true"/>
+          <view angle="180" col="3" x="-20" y="-12" hm="true"/>
+          <view angle="225" col="3" x="-17" y="-24"/>
+          <view angle="270" col="3" x="-3" y="-34"/>
+          <view angle="315" col="3" x="17" y="-30" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="gun"/>
+          <layerref id="layer1" a="0.5" blend="screen"/>
+          <layerref id="bubbleglow" color="0x8d59eb" a="0" blend="add"/>
+          <layerref id="bubble1" color="0x715aee" blend="add"/>
+          <layerref id="bubble2" color="0x7379f3" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="gun"/>
+          <layerref id="bubbleglow" color="0x806cf0" blend="add"/>
+          <layerref id="bubble2" color="0xef9ff0" a="0.7" blend="add"/>
+          <layerref id="layer1" a="0.5" blend="screen"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="gun"/>
+          <layerref id="bubbleglow" color="0x9565ed" blend="add"/>
+          <layerref id="bubble2" color="0xce6fea" a="0.5" blend="add"/>
+          <layerref id="bubble3" color="0x8d59eb" blend="add"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="gun"/>
+          <layerref id="layer4" color="0xbc7ced" blend="add"/>
+          <layerref id="bubbleglow" color="0xe357e4" blend="add"/>
+          <layerref id="bubble2" color="0xaa58e9" blend="add"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="gun"/>
+          <layerref id="layer1" color="0xb976ed" blend="add"/>
+          <layerref id="bubbleglow" color="0xc85de7" a="0.5" blend="add"/>
+          <layerref id="bubble1m" color="0xa752e8" blend="add"/>
+          <layerref id="bubble2" color="0xc045e3" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="gun"/>
+          <layerref id="bubbleglow" color="0xad5ee9" a="0.5" blend="add"/>
+          <layerref id="bubble2" color="0xa752e8" a="0.5" blend="add"/>
+          <layerref id="bubble3m" color="0xd27beb" blend="add"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="gun"/>
+          <layerref id="bubbleglow" color="0xa44ce7" blend="add"/>
+          <layerref id="bubble2" color="0xa752e8" a="0.4" blend="add"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="gun"/>
+          <layerref id="layer4" color="0x8d59eb" a="0.3" blend="add"/>
+          <layerref id="bubbleglow" color="0xa752e8" a="0.8" blend="add"/>
+          <layerref id="bubble2" color="0xa44ce7" a="0.8" blend="add"/>
+        </frame>
+        <frame id="Frame09">
+          <layerref id="gun"/>
+          <layerref id="bubble1" color="0xb670ec" a="0.25" blend="add"/>
+          <layerref id="bubbleglow" color="0xaa58e9" a="0.6" blend="add"/>
+          <layerref id="bubble2" color="0x915fec" a="0.6" blend="add"/>
+        </frame>
+        <frame id="Frame10">
+          <layerref id="gun"/>
+          <layerref id="bubbleglow" color="0xa752e8" a="0.4" blend="add"/>
+          <layerref id="bubble2" color="0x8147e9" a="0.4" blend="add"/>
+        </frame>
+        <frame id="Frame11">
+          <layerref id="gun"/>
+          <layerref id="bubbleglow" color="0xa752e8" a="0.2" blend="add"/>
+          <layerref id="bubble2" color="0xaa58e9" a="0.2" blend="add"/>
+        </frame>
+        <frame id="Frame12">
+          <layerref id="gun"/>
+          <layerref id="layer4" color="0xad5ee9" a="0.1" blend="add"/>
+          <layerref id="bubbleglow" color="0xca63e8" a="0.1" blend="add"/>
+          <layerref id="bubble2" color="0xc657e6" a="0.1" blend="add"/>
+        </frame>
+        <frame id="BLANK">
+          <layerref id="gun" a="0"/>
+        </frame>
+        <frame id="idle">
+          <layerref id="gun"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="idle" framerate="4">
+          <frameref id="idle"/>
+        </animation>
+        <animation id="Warmup" framerate="8" loop="false">
+          <frameref id="Frame01">
+            <sample id="transform"/>
+          </frameref>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame09"/>
+          <frameref id="Frame10"/>
+          <frameref id="Frame11"/>
+          <frameref id="Frame12"/>
+          <frameref id="idle" duration="4"/>
+          <frameref id="BLANK"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="-0.2031" y="-0.2344" s="1.8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" y="30">
+          <view angle="0" x="26" y="-14"/>
+          <view angle="45" x="20" y="-9"/>
+          <view angle="90" x="3" y="1"/>
+          <view angle="135" x="-17" y="-7" hm="true"/>
+          <view angle="180" x="-21" y="-12" hm="true"/>
+          <view angle="225" x="-17" y="-22"/>
+          <view angle="270" y="-31"/>
+          <view angle="315" x="21" y="-27" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xb99af3"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xcb9af1" a="0.7"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xcea0f2" a="0.5"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Light" color="0xad88f1" a="0.25"/>
+        </frame>
+        <frame id="idle">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Warmup" framerate="4" loop="false">
+          <frameref id="Frame01" duration="5"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="idle"/>
+        </animation>
+        <animation id="idle" framerate="4">
+          <frameref id="idle"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" x="-0.1718" y="-0.1875" s="1.3" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" y="30">
+          <view angle="0" x="26" y="-14"/>
+          <view angle="45" x="20" y="-9"/>
+          <view angle="90" x="3" y="1"/>
+          <view angle="135" x="-17" y="-7" hm="true"/>
+          <view angle="180" x="-21" y="-12" hm="true"/>
+          <view angle="225" x="-17" y="-22"/>
+          <view angle="270" y="-31"/>
+          <view angle="315" x="21" y="-27" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0x8572f0" a="0.6"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xd27beb" a="0.4"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0x996bed" a="0.25"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Light" color="0xbea0f3" a="0.1"/>
+        </frame>
+        <frame id="idle">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Warmup" framerate="4" loop="false">
+          <frameref id="Frame01" duration="5"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="idle"/>
+        </animation>
+        <animation id="idle" framerate="4">
+          <frameref id="idle"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

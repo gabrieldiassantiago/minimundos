@@ -1,0 +1,45 @@
+<f id="PL_Mage03" parentId="Suits">
+  <g id="Mage03">
+    <b id="Mage03_Torso" min="2" max="2" sel="Mage03_Torso">
+      <s id="Mage03_Torso" cId="Torso" s="items/base/consumables/clothing/suits/suit_66_mage03_torso.png" pri="1"/>
+    </b>
+    <b id="Mage03_Legs" min="2" max="2" sel="Legs">
+      <g id="Legs" icon="$bu/icon_legs_trouser.png">
+        <s id="Mage03_Leg_Idle" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_66_mage03_leg_idle.png" pri="3"/>
+        <s id="Mage03_Leg_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_66_mage03_leg_walk1.png" pri="3"/>
+        <s id="Mage03_Leg_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_66_mage03_leg_walk2.png" pri="3"/>
+        <s id="Mage03_Leg_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_66_mage03_leg_walk3.png" pri="3"/>
+        <s id="Mage03_Leg_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_66_mage03_leg_walk4.png" pri="3"/>
+        <s id="Mage03_Leg_Sit" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_66_mage03_leg_sit.png" pri="3"/>
+      </g>
+    </b>
+    <b id="Mage03_Arms" min="2" max="2" sel="ArmHands">
+      <g id="ArmHands" icon="$bm/icon_m_retro.png">
+        <s id="Mage03_Arm_Idle" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_66_mage03_arm_idle.png" pri="1"/>
+        <s id="Mage03_Arm_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_66_mage03_arm_walk1.png" pri="1"/>
+        <s id="Mage03_Arm_Walk2" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_66_mage03_arm_walk2.png" pri="1"/>
+        <s id="Mage03_Arm_Walk3" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_66_mage03_arm_walk3.png" pri="1"/>
+        <s id="Mage03_Arm_Sit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_66_mage03_arm_sit.png" pri="1"/>
+        <s id="Mage03_Arm_Throw" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_66_mage03_arm_throw.png" pri="1"/>
+        <s id="Mage03_Arm_Raise" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_66_mage03_arm_raise.png" pri="1"/>
+      </g>
+    </b>
+  </g>
+  <g id="Icon">
+    <t id="Icon_Mage03" icon="items/base/consumables/clothing/suits/suit_66_icon_mage03.png" w="48" h="48"/>
+    <s id="Icon_Mage03_suit" cId="Icon_Mage03" s="items/base/consumables/clothing/suits/suit_66_icon_mage03.png"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top06"/>
+</f>

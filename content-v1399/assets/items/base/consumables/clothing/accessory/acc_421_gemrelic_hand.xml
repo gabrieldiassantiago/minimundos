@@ -1,0 +1,232 @@
+<item.SpriteItem id="0" name="Beans" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Laptop" source="items/base/consumables/clothing/accessory/acc_421_gemrelic_hand.png" cols="4" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_mini.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="relic_01" texture="Laptop">
+          <view angle="0" x="-5" y="15"/>
+          <view angle="45" x="10" y="15"/>
+          <view angle="90" y="15"/>
+          <view angle="135" x="-5" y="10"/>
+          <view angle="180" x="5" y="15"/>
+          <view angle="225" y="15"/>
+          <view angle="270" y="15"/>
+          <view angle="315" x="-3" y="10"/>
+        </layer>
+        <layer id="relic_02" texture="Laptop">
+          <view angle="0" col="1" x="-5" y="13"/>
+          <view angle="45" col="1" x="10" y="13"/>
+          <view angle="90" col="1" y="13"/>
+          <view angle="135" col="1" x="-5" y="8"/>
+          <view angle="180" col="1" x="5" y="13"/>
+          <view angle="225" col="1" y="13"/>
+          <view angle="270" col="1" y="13"/>
+          <view angle="315" col="1" x="-3" y="8"/>
+        </layer>
+        <layer id="relic_03" texture="Laptop">
+          <view angle="0" col="2" x="-5" y="15"/>
+          <view angle="45" col="2" x="10" y="15"/>
+          <view angle="90" col="2" y="15"/>
+          <view angle="135" col="2" x="-5" y="10"/>
+          <view angle="180" col="2" x="5" y="15"/>
+          <view angle="225" col="2" y="15"/>
+          <view angle="270" col="2" y="15"/>
+          <view angle="315" col="2" x="-3" y="10"/>
+        </layer>
+        <layer id="relic_04" texture="Laptop">
+          <view angle="0" col="3" x="-5" y="14"/>
+          <view angle="45" col="3" x="10" y="14"/>
+          <view angle="90" col="3" y="14"/>
+          <view angle="135" col="3" x="-5" y="9"/>
+          <view angle="180" col="3" x="5" y="14"/>
+          <view angle="225" col="3" y="14"/>
+          <view angle="270" col="3" y="14"/>
+          <view angle="315" col="3" x="-3" y="9"/>
+        </layer>
+        <layer id="relic_05" texture="Laptop">
+          <view angle="0" row="1" x="-5" y="15"/>
+          <view angle="45" row="1" x="10" y="15"/>
+          <view angle="90" row="1" y="15"/>
+          <view angle="135" row="1" x="-5" y="10"/>
+          <view angle="180" row="1" x="5" y="15"/>
+          <view angle="225" row="1" y="15"/>
+          <view angle="270" row="1" y="15"/>
+          <view angle="315" row="1" x="-3" y="10"/>
+        </layer>
+        <layer id="relic_06" texture="Laptop">
+          <view angle="0" col="1" row="1" x="-5" y="14"/>
+          <view angle="45" col="1" row="1" x="10" y="14"/>
+          <view angle="90" col="1" row="1" y="14"/>
+          <view angle="135" col="1" row="1" x="-5" y="9"/>
+          <view angle="180" col="1" row="1" x="5" y="14"/>
+          <view angle="225" col="1" row="1" y="14"/>
+          <view angle="270" col="1" row="1" y="14"/>
+          <view angle="315" col="1" row="1" x="-3" y="9"/>
+        </layer>
+        <layer id="relic_07" texture="Laptop">
+          <view angle="0" col="2" row="1" x="-5" y="15"/>
+          <view angle="45" col="2" row="1" x="10" y="15"/>
+          <view angle="90" col="2" row="1" y="15"/>
+          <view angle="135" col="2" row="1" x="-5" y="10"/>
+          <view angle="180" col="2" row="1" x="5" y="15"/>
+          <view angle="225" col="2" row="1" y="15"/>
+          <view angle="270" col="2" row="1" y="15"/>
+          <view angle="315" col="2" row="1" x="-3" y="10"/>
+        </layer>
+        <layer id="relic_08" texture="Laptop">
+          <view angle="0" col="3" row="1" x="-5" y="13"/>
+          <view angle="45" col="3" row="1" x="10" y="13"/>
+          <view angle="90" col="3" row="1" y="13"/>
+          <view angle="135" col="3" row="1" x="-5" y="8"/>
+          <view angle="180" col="3" row="1" x="5" y="13"/>
+          <view angle="225" col="3" row="1" y="13"/>
+          <view angle="270" col="3" row="1" y="13"/>
+          <view angle="315" col="3" row="1" x="-3" y="8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="relic_01" x="-1" y="-1"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="relic_02"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="relic_03" x="2"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="relic_04" x="2"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="relic_05" x="0.25"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="relic_06" x="-1.5"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="relic_07"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="relic_08"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="7">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light_01" texture="Light" align="middle">
+          <view angle="0" x="-5" y="-4" hm="true"/>
+          <view angle="45" y="-3"/>
+          <view angle="90" x="-4" y="-3"/>
+          <view angle="135" x="-5" y="-5" hm="true"/>
+          <view angle="180" x="-2" y="-3"/>
+          <view angle="225" x="-3" y="-3"/>
+          <view angle="270" x="-3" y="-3"/>
+          <view angle="315" x="-5" y="-5" hm="true"/>
+        </layer>
+        <layer id="Light_02" texture="Light" align="middle">
+          <view angle="0" x="2" y="-4" hm="true"/>
+          <view angle="45" x="7" y="-3"/>
+          <view angle="90" x="4" y="-3"/>
+          <view angle="135" x="2" y="-5" hm="true"/>
+          <view angle="180" x="6" y="-3"/>
+          <view angle="225" x="3" y="-3"/>
+          <view angle="270" x="4" y="-3"/>
+          <view angle="315" x="3" y="-5" hm="true"/>
+        </layer>
+        <layer id="Light_03" texture="Light" align="middle">
+          <view angle="0" x="-1" y="-10" hm="true"/>
+          <view angle="45" x="4" y="-10"/>
+          <view angle="90" x="1" y="-10"/>
+          <view angle="135" x="-1" y="-11" hm="true"/>
+          <view angle="180" x="2" y="-10"/>
+          <view angle="225" y="-10"/>
+          <view angle="270" y="-10"/>
+          <view angle="315" x="-1" y="-11" hm="true"/>
+        </layer>
+        <layer id="Light_04" texture="Light" align="middle">
+          <view angle="0" y="-4" hm="true"/>
+          <view angle="45" y="-3"/>
+          <view angle="90" y="-3"/>
+          <view angle="135" y="-5" hm="true"/>
+          <view angle="180" y="-3"/>
+          <view angle="225" y="-3"/>
+          <view angle="270" y="-3"/>
+          <view angle="315" y="-5" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="light_a">
+          <layerref id="Light_01" color="0xe5e05d"/>
+          <layerref id="Light_02"/>
+          <layerref id="Light_03"/>
+        </frame>
+        <frame id="light_b">
+          <layerref id="Light_03"/>
+          <layerref id="Light_04"/>
+        </frame>
+        <frame id="light_c">
+          <layerref id="Light_01"/>
+          <layerref id="Light_02" color="0xf49eae"/>
+          <layerref id="Light_03"/>
+        </frame>
+        <frame id="light_d">
+          <layerref id="Light_03"/>
+          <layerref id="Light_04" color="0xf49eae"/>
+        </frame>
+        <frame id="light_e">
+          <layerref id="Light_01" color="0xf49eae"/>
+          <layerref id="Light_02" color="0x79ef89"/>
+          <layerref id="Light_03"/>
+        </frame>
+        <frame id="light_f">
+          <layerref id="Light_03"/>
+          <layerref id="Light_04" color="0x79ef89"/>
+        </frame>
+        <frame id="light_g">
+          <layerref id="Light_01" color="0x79ef89"/>
+          <layerref id="Light_02" color="0xe5e05d"/>
+          <layerref id="Light_03"/>
+        </frame>
+        <frame id="light_h">
+          <layerref id="Light_03"/>
+          <layerref id="Light_04" color="0xe5e05d"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="7">
+          <frameref id="light_a"/>
+          <frameref id="light_b"/>
+          <frameref id="light_c"/>
+          <frameref id="light_d"/>
+          <frameref id="light_e"/>
+          <frameref id="light_f"/>
+          <frameref id="light_g"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

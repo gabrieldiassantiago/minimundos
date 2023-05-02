@@ -1,0 +1,34 @@
+<item.SpriteItem id="5539" name="Hoverboard a Vapor do Sr. Charada" desc="Uma hoverboard criada pelo Sr. Charada" tags="rare,consumable,actionbar,wear,feet,action_ridable_toggle" icon="items/base/mystery/mystery_19_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="999">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.38,0.2"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <textures>
+    <texture id="board" source="items/base/mystery/mystery_19_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.48" max="0.1,0.35,0.48"/>
+      <layers>
+        <layer id="board" texture="board">
+          <view angle="45" x="5" y="38"/>
+          <view angle="135" x="-5" y="38" hm="true"/>
+          <view angle="225" col="1" x="-5" y="31"/>
+          <view angle="315" col="1" x="5" y="31" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+10"/>
+  </data>
+</item.SpriteItem>

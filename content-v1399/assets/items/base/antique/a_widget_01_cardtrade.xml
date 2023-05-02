@@ -1,0 +1,64 @@
+<item.WidgetItem id="2383" name="Maquina de Troca de Cartoes Zoltar" desc="Compre ou troque cartoes aqui." tags="widget" icon="items/base/antique/icon_a_widget_01_cardtrade.png" price="10" tokens="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_card_dispenser.swf">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.95,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+  </events>
+  <navigate position="infront" sitRange="5.00" standRange="5.00" targetRange="5.00" usableRange="-1.00" accessibleRange="5.00"/>
+  <data>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_xml_path" value="widgets/assets/card_dispenser/control_ui.mxml"/>
+    <entry key="widget_background_override" value="widget/cardDispenserBG.jpg"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="text" source="items/base/antique/a_widget_01_cardtrade_logo.png" cols="2" rows="1"/>
+    <texture id="Base" source="items/base/antique/a_widget_01_cardtrade.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/antique/a_widget_01_cardtrade_light.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,2.95,0.49"/>
+      <layers>
+        <layer id="Base" texture="Base" y="39">
+          <view angle="45" y="-6"/>
+          <view angle="135" y="-6" hm="true"/>
+          <view angle="225" col="1" x="2" y="-7" hm="true"/>
+          <view angle="315" col="1" x="-2" y="-7"/>
+        </layer>
+        <layer id="Text" texture="text" x="-28" y="-137">
+          <view angle="45" x="53" y="-9"/>
+          <view angle="135" col="1" x="4" y="-10"/>
+          <view angle="225" x="26" y="-8" alpha="0"/>
+          <view angle="315" col="1" x="23" y="-8" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="3.7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-32"/>
+          <view angle="135" y="-32"/>
+          <view angle="225" col="1" y="-32"/>
+          <view angle="315" col="1" x="1" y="-32" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xe669e7"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

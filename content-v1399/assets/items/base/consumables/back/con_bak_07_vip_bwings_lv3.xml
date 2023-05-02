@@ -1,0 +1,66 @@
+<item.SpriteItem desc="An item" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" entity="false" name="bfly1">
+  <volume>
+    <box max="0.15,0.7094,0.15" min="-0.15,0.1094,-0.15"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture cols="1" id="base" rows="6" source="items/base/consumables/back/con_bak_07_vip_bwings_lv3.png"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="skin" y="0.1094">
+      <box max="0.15,0.6,0.15" min="-0.15,0,-0.15"/>
+      <layers>
+        <layer id="frame1" texture="base">
+          <view angle="0" row="4" x="-2" y="42"/>
+          <view angle="45" x="9" y="51"/>
+          <view angle="90" row="2" y="58"/>
+          <view angle="135" hm="true" x="-10" y="48"/>
+          <view angle="180" hm="true" row="4" x="2" y="41"/>
+          <view angle="225" x="1" y="44"/>
+          <view angle="270" row="2" y="43"/>
+          <view angle="315" hm="true" x="-1" y="43"/>
+        </layer>
+        <layer id="frame2" texture="base">
+          <view angle="0" row="5" x="-9" y="45"/>
+          <view angle="45" row="1" x="19" y="54"/>
+          <view angle="90" row="3" y="61"/>
+          <view angle="135" hm="true" row="1" x="-20" y="51"/>
+          <view angle="180" hm="true" row="5" x="9" y="44"/>
+          <view angle="225" row="1" x="11" y="47"/>
+          <view angle="270" row="3" y="46"/>
+          <view angle="315" hm="true" row="1" x="-11" y="46"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="frame1"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="frame2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="8" id="On">
+          <frameref id="Frame_01">
+            <sample id="flap" loops="-1"/>
+          </frameref>
+          <frameref id="Frame_02"/>
+        </animation>
+        <animation framerate="4" id="Sit"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

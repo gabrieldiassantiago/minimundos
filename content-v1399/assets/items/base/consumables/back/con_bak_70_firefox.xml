@@ -1,0 +1,83 @@
+<item.SpriteItem id="0" name="Firefox Tail" desc="A tail from a firefox suit" tags="consumable, wearable, actionbar" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+  </volume>
+  <textures>
+    <texture id="tail" source="items/base/consumables/back/con_bak_70_firefox.png" cols="5" rows="1"/>
+    <texture id="Texture" source="items/base/consumables/back/con_bak_70_firefox_decal.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+      <layers>
+        <layer id="tail" texture="tail" y="60">
+          <view angle="0" x="-24" y="-25"/>
+          <view angle="45" col="1" x="-29" y="-21"/>
+          <view angle="90" col="2" x="-2" y="-22"/>
+          <view angle="135" col="1" x="28" y="-21" hm="true"/>
+          <view angle="180" x="24" y="-25" hm="true"/>
+          <view angle="225" col="3" x="19" y="-11"/>
+          <view angle="270" col="4" y="-15"/>
+          <view angle="315" col="3" x="-19" y="-11" hm="true"/>
+        </layer>
+        <layer id="anim_01" texture="Texture" y="61">
+          <view angle="0" x="-32" y="-64"/>
+          <view angle="45" x="-32" y="-69"/>
+          <view angle="90" y="-72"/>
+          <view angle="135" x="31" y="-69" hm="true"/>
+          <view angle="180" x="32" y="-63" hm="true"/>
+          <view angle="225" x="25" y="-51" hm="true"/>
+          <view angle="270" y="-53"/>
+          <view angle="315" x="-25" y="-50"/>
+        </layer>
+        <layer id="anim_02" texture="Texture" y="61">
+          <view angle="0" col="1" x="-32" y="-64"/>
+          <view angle="45" col="1" x="-32" y="-69"/>
+          <view angle="90" col="1" y="-72"/>
+          <view angle="135" col="1" x="31" y="-69" hm="true"/>
+          <view angle="180" col="1" x="32" y="-63" hm="true"/>
+          <view angle="225" col="1" x="25" y="-51" hm="true"/>
+          <view angle="270" col="1" y="-53"/>
+          <view angle="315" col="1" x="-25" y="-50"/>
+        </layer>
+        <layer id="anim_03" texture="Texture" y="61">
+          <view angle="0" col="2" x="-32" y="-64"/>
+          <view angle="45" col="2" x="-32" y="-69"/>
+          <view angle="90" col="2" y="-72"/>
+          <view angle="135" col="2" x="31" y="-69" hm="true"/>
+          <view angle="180" col="2" x="32" y="-63" hm="true"/>
+          <view angle="225" col="2" x="25" y="-51" hm="true"/>
+          <view angle="270" col="2" y="-53"/>
+          <view angle="315" col="2" x="-25" y="-50"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="anim_01"/>
+          <layerref id="tail"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="anim_02"/>
+          <layerref id="tail"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="anim_03"/>
+          <layerref id="tail"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="tail" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

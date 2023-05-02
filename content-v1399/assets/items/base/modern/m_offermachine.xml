@@ -1,0 +1,44 @@
+<item.WidgetItem id="4021" name="Máquina de MiniMoedas" desc="Ganhe MiniMoedas realizando ofertas!" tags="widget" icon="items/base/modern/m_offermachine_icon.png" price="10" tokens="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_url_iframe.swf">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.5,1.5,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+  </events>
+  <navigate position="infront" sitRange="3.00" standRange="3.00" targetRange="3.00" usableRange="-1.00"/>
+  <data>
+    <entry key="frame" value="modern"/>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_button" value="EARN GOLD"/>
+    <entry key="control_button_tooltip" value="You can earn Gold by completing Offerpal tasks"/>
+    <entry key="widget_background_override" value="widget/FactoryBG.jpg"/>
+    <entry key="widget_iframe_file" value="store/offers/networks?widget=true"/>
+    <entry key="widget_iframe_bg" value="urliframe/factory_generic_background.jpg"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="iframeWidget" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_offermachine.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.5,0,-0.5" max="0.5,1.5,0.5"/>
+      <layers>
+        <layer id="base" texture="Texture">
+          <view angle="45" x="4" y="35"/>
+          <view angle="135" x="-4" y="35" hm="true"/>
+          <view angle="225" col="1" x="-8" y="34" hm="true"/>
+          <view angle="315" col="1" x="8" y="34"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

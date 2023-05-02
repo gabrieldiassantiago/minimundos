@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="1477" name="Coluna de Inox" desc="Do chão ao teto." tags="admin,decoration" icon="items/base/vip/icon_vip_bar_metalpole.png" price="28" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,3.4,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="column" source="items/base/vip/vip_bar_metalpole.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="column">
+      <box min="-0.3,0,-0.3" max="0.3,3.4,0.3"/>
+      <layers>
+        <layer id="column" texture="column">
+          <view angle="45" y="24"/>
+          <view angle="135" y="24" hm="true"/>
+          <view angle="225" y="24"/>
+          <view angle="315" y="24" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

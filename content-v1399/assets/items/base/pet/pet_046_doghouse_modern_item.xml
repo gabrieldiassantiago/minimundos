@@ -1,0 +1,30 @@
+<item.SpriteItem id="4842" name="Casinha de Cachorro Moderna Play" desc="Um aconchegante lugar para seu pet dormir" tags="misc,seasonal" icon="items/base/pet/pet_046_doghouse_modern_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="10">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.75,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/pet/pet_046_doghouse_modern_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0.75,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle" y="-25">
+          <view angle="45" x="1" y="-11"/>
+          <view angle="135" x="-1" y="-11" hm="true"/>
+          <view angle="225" col="1" x="1" y="-13"/>
+          <view angle="315" col="1" x="-1" y="-13" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

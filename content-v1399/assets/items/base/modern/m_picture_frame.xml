@@ -1,0 +1,67 @@
+<item.WidgetItem desc="Uma moldura de quadro para exibir suas imagens favoritas do Flickr." dropTargetClamp="none" dropTargetList="wall" dropTargetType="none" gridActive="false" icon="items/base/modern/icon_m_picture_frame.png" id="397" name="Moldura Moderna" tags="wall,widget,user_content" widget="widgets/widget_flickr.swf" price="130" tokens="1300" minLevel="1" minLevelType="1" minCPLevel="1">
+  <volume>
+    <box max="0.001,0.7436,0.95" min="0,-0.6667,-0.95"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+  </events>
+  <actions>
+    <action event="widget_action(FIRST)" id="First" trigger="false"/>
+    <action event="widget_action(LAST)" id="Last" trigger="false"/>
+    <action event="widget_action(NEXT)" id="Next" trigger="false"/>
+    <action event="widget_action(PREVIOUS)" id="Previous" trigger="false"/>
+    <action event="widget_action(SHOWIMAGE)" id="Show Specific Image" trigger="false">
+      <params>
+        <param id="Image Title" label="Enter image title" type="string"/>
+      </params>
+    </action>
+    <action id="Image Change" state="false">
+      <eval>
+        <func id="Image Title" input="title" maxChars="60" partialMatch="true" type="relational"/>
+      </eval>
+    </action>
+    <action id="Enlarge Image" state="false">
+      <eval>
+        <func id="Image Title" input="title" maxChars="60" partialMatch="true" type="relational"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="frame" value="modern"/>
+    <entry key="renderWidth" value="640"/>
+    <entry key="renderHeight" value="480"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate accessibleRange="2" position="infront" sitRange="4.00" standRange="3.00" targetRange="1.00"/>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/modern/m_picture_frame.png"/>
+  </textures>
+  <nodes>
+    <node id="Frame">
+      <box max="0.001,0.7436,0.95" min="0,-0.6667,-0.95"/>
+      <layers>
+        <layer align="middle" id="Layer" texture="Texture">
+          <view angle="45"/>
+          <view angle="135" mirror="true"/>
+          <view alpha="0" angle="225"/>
+          <view alpha="0" angle="315"/>
+        </layer>
+        <layer h="0.88" id="WidgetLayer" texture="Texture" type="panel" w="1.3">
+          <view angle="45" x="1" y="1"/>
+          <view angle="135" col="1" x="-1" y="1"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

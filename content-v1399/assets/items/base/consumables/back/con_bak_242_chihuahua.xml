@@ -1,0 +1,70 @@
+<item.SpriteItem id="0" name="Chihuahua Tail" desc="A tail from a Chihuahua suit" tags="consumable, wearable, actionbar" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+  </volume>
+  <textures>
+    <texture id="tail" source="items/base/consumables/back/con_bak_242_chihuahua.png" cols="4" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+      <layers>
+        <layer id="tail_01" texture="tail" y="60">
+          <view angle="0" col="1" x="-10" y="-27" hm="true"/>
+          <view angle="45" x="-8" y="-23"/>
+          <view angle="90" col="1" x="-2" y="-20" alpha="0"/>
+          <view angle="135" x="8" y="-23" hm="true"/>
+          <view angle="180" col="1" x="10" y="-27"/>
+          <view angle="225" col="2" x="11" y="-23"/>
+          <view angle="270" col="3" x="2" y="-21"/>
+          <view angle="315" col="2" x="-11" y="-23" hm="true"/>
+        </layer>
+        <layer id="tail_02" texture="tail" y="60">
+          <view angle="0" col="1" row="1" x="-10" y="-27" hm="true"/>
+          <view angle="45" row="1" x="-8" y="-23"/>
+          <view angle="90" col="1" row="1" x="-2" y="-20" alpha="0"/>
+          <view angle="135" row="1" x="8" y="-23" hm="true"/>
+          <view angle="180" col="1" row="1" x="10" y="-27"/>
+          <view angle="225" col="2" row="1" x="11" y="-23"/>
+          <view angle="270" col="3" row="1" x="1" y="-21"/>
+          <view angle="315" col="2" row="1" x="-11" y="-23" hm="true"/>
+        </layer>
+        <layer id="tail_03" texture="tail" y="60">
+          <view angle="0" col="1" row="2" x="-10" y="-27" hm="true"/>
+          <view angle="45" row="2" x="-8" y="-23"/>
+          <view angle="90" col="1" row="2" x="-2" y="-20" alpha="0"/>
+          <view angle="135" row="2" x="8" y="-23" hm="true"/>
+          <view angle="180" col="1" row="2" x="10" y="-27"/>
+          <view angle="225" col="2" row="2" x="11" y="-23"/>
+          <view angle="270" col="3" row="2" x="2" y="-21"/>
+          <view angle="315" col="2" row="2" x="-11" y="-23" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="tail_01"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="tail_02"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="tail_03"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="tail_01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

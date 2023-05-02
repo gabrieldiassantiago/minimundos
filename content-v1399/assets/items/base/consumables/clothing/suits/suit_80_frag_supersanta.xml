@@ -1,0 +1,55 @@
+<f id="SuperSantaSuit" parentId="Suits">
+  <g id="Torso">
+    <s id="SantaTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_80_supersanta_torso.png" pri="1.1"/>
+  </g>
+  <g id="TopTshirtLogo" name="Arms">
+    <s id="SantaArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_80_supersanta_arm_idle.png" pri="1"/>
+    <s id="SantaArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_80_supersanta_arm_walk1.png" pri="1"/>
+    <s id="SantaArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_80_supersanta_arm_walk2.png" pri="1"/>
+    <s id="SantaArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_80_supersanta_arm_walk3.png" pri="1"/>
+    <s id="SantaArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_80_supersanta_arm_sit.png" pri="1"/>
+    <s id="SantaArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_80_supersanta_arm_throw.png" pri="1"/>
+    <s id="SantaArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_80_supersanta_arm_raise.png" pri="1"/>
+  </g>
+  <g id="Hands" icon="$bm/icon_m_longsleeve.png">
+    <s id="GloveArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_idle.png"/>
+    <s id="GloveArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_walk1.png"/>
+    <s id="GloveArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_walk2.png"/>
+    <s id="GloveArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_walk3.png"/>
+    <s id="UnderArmorArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_sit.png"/>
+    <s id="GloveArmWave1Base" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_wave1.png"/>
+    <s id="GloveArmWave2Base" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_wave2.png"/>
+    <s id="GloveArmThrowHold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_hold.png"/>
+    <s id="GloveArmThrowOpen" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_open.png"/>
+    <s id="GloveArmThrowPoint" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_point.png"/>
+    <s id="GloveArmThrowStop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_stop.png"/>
+    <s id="GloveArmThrowThrow" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_throw.png"/>
+    <s id="GloveArmThrowThumb" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_80_supersanta_hand_thumbs.png"/>
+  </g>
+  <g id="SkinnyChexBase" name="Legs" icon="$bu/icon_legs_trouser.png">
+    <s id="SantaLegIdle" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_80_supersanta_leg_idle.png" pri="2"/>
+    <s id="SantaLegWalk1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_80_supersanta_leg_walk1.png" pri="2"/>
+    <s id="SantaLegWalk2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_80_supersanta_leg_walk2.png" pri="2"/>
+    <s id="SantaLegWalk3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_80_supersanta_leg_walk3.png" pri="2"/>
+    <s id="SantaLegWalk4" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_80_supersanta_leg_walk4.png" pri="2"/>
+    <s id="SantaLegSitUpper" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_80_supersanta_leg_sit.png" pri="2"/>
+    <s id="SantaLegSitLower" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_80_supersanta_leg_sit.png" pri="2"/>
+  </g>
+  <g id="Icon">
+    <t id="IconSuit_Santa" icon="items/base/consumables/clothing/suits/suit_80_supersanta_icon.png" w="48" h="48"/>
+    <s id="IconSuit_Santa" cId="IconSuit_Santa" s="items/base/consumables/clothing/suits/suit_80_supersanta_icon.png"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot01"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="JSFeet"/>
+</f>

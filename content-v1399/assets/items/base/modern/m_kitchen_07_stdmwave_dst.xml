@@ -1,0 +1,34 @@
+<item.SpriteItem id="2759" name="Microondas" desc="Para aquecer o purê de quinta no sábado." tags="unsearchable,table,destroy" icon="items/base/modern/icon_m_kitchen_07_stdmwave_dst.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" tokens="340" minLevelType="2">
+  <volume>
+    <box min="-0.39,0,-0.49" max="0.37,0.58,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="base" source="items/base/modern/m_kitchen_07_stdmwave_base.png" cols="2" rows="1"/>
+    <texture id="door" source="items/base/modern/m_kitchen_07_stdmwave_doors.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.39,0,-0.49" max="0.37,0.58,0.49"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" col="1" x="-5" y="35"/>
+          <view angle="135" col="1" x="4" y="35" hm="true"/>
+          <view angle="225" y="36"/>
+          <view angle="315" x="-1" y="36" hm="true"/>
+        </layer>
+        <layer id="door" texture="door">
+          <view angle="45" x="21" y="31"/>
+          <view angle="135" col="1" x="-21" y="29"/>
+          <view angle="225" col="1" x="-23" y="7" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="23" y="6" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

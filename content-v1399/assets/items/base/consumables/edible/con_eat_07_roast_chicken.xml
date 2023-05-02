@@ -1,0 +1,56 @@
+<item.SpriteItem id="922" name="Frango Assado" desc="Um frango assado super dourado." tags="consumable,food,actionbar,group_edible,edible,stackable,action_edible,market" icon="items/base/consumables/edible/icon_con_eat_07_roast_chicken.png" price="3" tokens="30" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.2,0.2"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_edible.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_edible.as"/>
+    <event id="action" script="scripts/item/action_edible.as"/>
+    <event id="select" script="scripts/item/select_edible.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="food-100"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture id="chicken" source="items/base/consumables/edible/con_eat_07_roast_chicken.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="eat" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,0.2,0.2"/>
+      <layers>
+        <layer id="chicken" texture="chicken">
+          <view angle="45" x="-1" y="26"/>
+          <view angle="135" x="-1" y="26" hm="true"/>
+          <view angle="225" col="4" x="-1" y="32" hm="true"/>
+          <view angle="315" col="4" x="-3" y="32"/>
+          <view angle="90" col="1" y="26"/>
+          <view angle="180" col="2" y="31" hm="true"/>
+          <view angle="270" col="3" y="31"/>
+          <view angle="0" col="2" y="31"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="chicken" y="-6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

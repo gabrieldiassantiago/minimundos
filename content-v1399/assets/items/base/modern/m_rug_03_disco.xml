@@ -1,0 +1,789 @@
+<item.SpriteItem id="831" name="Pista de Dança" desc="Piso para os mais divertidos." tags="floor" icon="items/base/modern/icon_m_rug_03_disco.png" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="20" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-1.01,0,-1.01" max="1.01,0.01,1.01"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="floor tile" source="items/base/modern/m_rug_03_disco.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_square_disco.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="disco floor a" x="-0.5" z="-0.5" layer="surface">
+      <box min="-0.51,0,-0.51" max="0.5,0.01,0.5"/>
+      <layers>
+        <layer id="disco tile a" texture="floor tile">
+          <view angle="45"/>
+          <view angle="135" x="32" y="16"/>
+          <view angle="225" y="32"/>
+          <view angle="315" x="-32" y="16"/>
+        </layer>
+        <layer id="disco tile b" texture="floor tile">
+          <view angle="45" x="32" y="16"/>
+          <view angle="135" y="32"/>
+          <view angle="225" x="-32" y="16"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="disco tile c" texture="floor tile">
+          <view angle="45" x="-32" y="16"/>
+          <view angle="135"/>
+          <view angle="225" x="32" y="16"/>
+          <view angle="315" y="32"/>
+        </layer>
+        <layer id="disco tile d" texture="floor tile">
+          <view angle="45" y="32"/>
+          <view angle="135" x="-32" y="16"/>
+          <view angle="225"/>
+          <view angle="315" x="32" y="16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="cycle a" type="group">
+          <frame id="yellow">
+            <layerref id="disco tile a" color="0xffef5b"/>
+            <layerref id="disco tile b" color="0xffef5b"/>
+            <layerref id="disco tile c" color="0xffef5b"/>
+            <layerref id="disco tile d" color="0xffef5b"/>
+          </frame>
+          <frame id="red">
+            <layerref id="disco tile a" color="0xf05881"/>
+            <layerref id="disco tile b" color="0xf05881"/>
+            <layerref id="disco tile c" color="0xf05881"/>
+            <layerref id="disco tile d" color="0xf05881"/>
+          </frame>
+          <frame id="green">
+            <layerref id="disco tile a" color="0xc6db66"/>
+            <layerref id="disco tile b" color="0xc6db66"/>
+            <layerref id="disco tile c" color="0xc6db66"/>
+            <layerref id="disco tile d" color="0xc6db66"/>
+          </frame>
+          <frame id="blue">
+            <layerref id="disco tile a" color="0x7bbae5"/>
+            <layerref id="disco tile b" color="0x7bbae5"/>
+            <layerref id="disco tile c" color="0x7bbae5"/>
+            <layerref id="disco tile d" color="0x7bbae5"/>
+          </frame>
+        </frame>
+        <frame id="cycle b" type="group">
+          <frame id="yellow check">
+            <layerref id="disco tile a" color="0xffef5b"/>
+            <layerref id="disco tile b" color="0x7bbae5"/>
+            <layerref id="disco tile c" color="0x7bbae5"/>
+            <layerref id="disco tile d" color="0xffef5b"/>
+          </frame>
+          <frame id="red check">
+            <layerref id="disco tile a" color="0xf05881"/>
+            <layerref id="disco tile b" color="0xffef5b"/>
+            <layerref id="disco tile c" color="0xffef5b"/>
+            <layerref id="disco tile d" color="0xf05881"/>
+          </frame>
+          <frame id="green check">
+            <layerref id="disco tile a" color="0xc6db66"/>
+            <layerref id="disco tile b" color="0xf05881"/>
+            <layerref id="disco tile c" color="0xf05881"/>
+            <layerref id="disco tile d" color="0xc6db66"/>
+          </frame>
+          <frame id="blue check">
+            <layerref id="disco tile a" color="0x7bbae5"/>
+            <layerref id="disco tile b" color="0xc6db66"/>
+            <layerref id="disco tile c" color="0xc6db66"/>
+            <layerref id="disco tile d" color="0x7bbae5"/>
+          </frame>
+        </frame>
+        <frame id="cycle c" type="group">
+          <frame id="yellow check inverse">
+            <layerref id="disco tile a" color="0x7bbae5"/>
+            <layerref id="disco tile b" color="0xffef5b"/>
+            <layerref id="disco tile c" color="0xffef5b"/>
+            <layerref id="disco tile d" color="0x7bbae5"/>
+          </frame>
+          <frame id="red check inverse">
+            <layerref id="disco tile a" color="0xffef5b"/>
+            <layerref id="disco tile b" color="0xf05881"/>
+            <layerref id="disco tile c" color="0xf05881"/>
+            <layerref id="disco tile d" color="0xffef5b"/>
+          </frame>
+          <frame id="green check inverse">
+            <layerref id="disco tile a" color="0xf05881"/>
+            <layerref id="disco tile b" color="0xc6db66"/>
+            <layerref id="disco tile c" color="0xc6db66"/>
+            <layerref id="disco tile d" color="0xf05881"/>
+          </frame>
+          <frame id="blue check inverse">
+            <layerref id="disco tile a" color="0xc6db66"/>
+            <layerref id="disco tile b" color="0x7bbae5"/>
+            <layerref id="disco tile c" color="0x7bbae5"/>
+            <layerref id="disco tile d" color="0xc6db66"/>
+          </frame>
+        </frame>
+        <frame id="cycle off" type="group">
+          <frame id="off">
+            <layerref id="disco tile a"/>
+            <layerref id="disco tile b"/>
+            <layerref id="disco tile c"/>
+            <layerref id="disco tile d"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" syncOffsets="2,3">
+          <frameref id="yellow"/>
+          <frameref id="red"/>
+          <frameref id="green"/>
+          <frameref id="blue"/>
+          <frameref id="yellow check"/>
+          <frameref id="yellow check inverse"/>
+          <frameref id="red check inverse"/>
+          <frameref id="red check"/>
+          <frameref id="green check"/>
+          <frameref id="green check inverse"/>
+          <frameref id="blue check inverse"/>
+          <frameref id="blue check"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="disco floor b" x="0.5" z="-0.5" layer="surface">
+      <box min="-0.5,0,-0.51" max="0.51,0.01,0.5"/>
+      <layers>
+        <layer id="disco tile a" texture="floor tile">
+          <view angle="45"/>
+          <view angle="135" x="32" y="16"/>
+          <view angle="225" y="32"/>
+          <view angle="315" x="-32" y="16"/>
+        </layer>
+        <layer id="disco tile b" texture="floor tile">
+          <view angle="45" x="32" y="16"/>
+          <view angle="135" y="32"/>
+          <view angle="225" x="-32" y="16"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="disco tile c" texture="floor tile">
+          <view angle="45" x="-32" y="16"/>
+          <view angle="135"/>
+          <view angle="225" x="32" y="16"/>
+          <view angle="315" y="32"/>
+        </layer>
+        <layer id="disco tile d" texture="floor tile">
+          <view angle="45" y="32"/>
+          <view angle="135" x="-32" y="16"/>
+          <view angle="225"/>
+          <view angle="315" x="32" y="16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="cycle a" type="group">
+          <frame id="yellow">
+            <layerref id="disco tile a" color="0xffef5b"/>
+            <layerref id="disco tile b" color="0xffef5b"/>
+            <layerref id="disco tile c" color="0xffef5b"/>
+            <layerref id="disco tile d" color="0xffef5b"/>
+          </frame>
+          <frame id="red">
+            <layerref id="disco tile a" color="0xf05881"/>
+            <layerref id="disco tile b" color="0xf05881"/>
+            <layerref id="disco tile c" color="0xf05881"/>
+            <layerref id="disco tile d" color="0xf05881"/>
+          </frame>
+          <frame id="green">
+            <layerref id="disco tile a" color="0xc6db66"/>
+            <layerref id="disco tile b" color="0xc6db66"/>
+            <layerref id="disco tile c" color="0xc6db66"/>
+            <layerref id="disco tile d" color="0xc6db66"/>
+          </frame>
+          <frame id="blue">
+            <layerref id="disco tile a" color="0x7bbae5"/>
+            <layerref id="disco tile b" color="0x7bbae5"/>
+            <layerref id="disco tile c" color="0x7bbae5"/>
+            <layerref id="disco tile d" color="0x7bbae5"/>
+          </frame>
+        </frame>
+        <frame id="cycle b" type="group">
+          <frame id="yellow check">
+            <layerref id="disco tile a" color="0xffef5b"/>
+            <layerref id="disco tile b" color="0x7bbae5"/>
+            <layerref id="disco tile c" color="0x7bbae5"/>
+            <layerref id="disco tile d" color="0xffef5b"/>
+          </frame>
+          <frame id="red check">
+            <layerref id="disco tile a" color="0xf05881"/>
+            <layerref id="disco tile b" color="0xffef5b"/>
+            <layerref id="disco tile c" color="0xffef5b"/>
+            <layerref id="disco tile d" color="0xf05881"/>
+          </frame>
+          <frame id="green check">
+            <layerref id="disco tile a" color="0xc6db66"/>
+            <layerref id="disco tile b" color="0xf05881"/>
+            <layerref id="disco tile c" color="0xf05881"/>
+            <layerref id="disco tile d" color="0xc6db66"/>
+          </frame>
+          <frame id="blue check">
+            <layerref id="disco tile a" color="0x7bbae5"/>
+            <layerref id="disco tile b" color="0xc6db66"/>
+            <layerref id="disco tile c" color="0xc6db66"/>
+            <layerref id="disco tile d" color="0x7bbae5"/>
+          </frame>
+        </frame>
+        <frame id="cycle c" type="group">
+          <frame id="yellow check inverse">
+            <layerref id="disco tile a" color="0x7bbae5"/>
+            <layerref id="disco tile b" color="0xffef5b"/>
+            <layerref id="disco tile c" color="0xffef5b"/>
+            <layerref id="disco tile d" color="0x7bbae5"/>
+          </frame>
+          <frame id="red check inverse">
+            <layerref id="disco tile a" color="0xffef5b"/>
+            <layerref id="disco tile b" color="0xf05881"/>
+            <layerref id="disco tile c" color="0xf05881"/>
+            <layerref id="disco tile d" color="0xffef5b"/>
+          </frame>
+          <frame id="green check inverse">
+            <layerref id="disco tile a" color="0xf05881"/>
+            <layerref id="disco tile b" color="0xc6db66"/>
+            <layerref id="disco tile c" color="0xc6db66"/>
+            <layerref id="disco tile d" color="0xf05881"/>
+          </frame>
+          <frame id="blue check inverse">
+            <layerref id="disco tile a" color="0xc6db66"/>
+            <layerref id="disco tile b" color="0x7bbae5"/>
+            <layerref id="disco tile c" color="0x7bbae5"/>
+            <layerref id="disco tile d" color="0xc6db66"/>
+          </frame>
+        </frame>
+        <frame id="cycle off" type="group">
+          <frame id="off">
+            <layerref id="disco tile a"/>
+            <layerref id="disco tile b"/>
+            <layerref id="disco tile c"/>
+            <layerref id="disco tile d"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" syncOffsets="2,3">
+          <frameref id="red"/>
+          <frameref id="green"/>
+          <frameref id="blue"/>
+          <frameref id="yellow"/>
+          <frameref id="yellow check"/>
+          <frameref id="yellow check inverse"/>
+          <frameref id="red check inverse"/>
+          <frameref id="red check"/>
+          <frameref id="green check"/>
+          <frameref id="green check inverse"/>
+          <frameref id="blue check inverse"/>
+          <frameref id="blue check"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="disco floor c" x="0.5" z="0.5" layer="surface">
+      <box min="-0.5,0,-0.5" max="0.51,0.01,0.51"/>
+      <layers>
+        <layer id="disco tile a" texture="floor tile">
+          <view angle="45"/>
+          <view angle="135" x="32" y="16"/>
+          <view angle="225" y="32"/>
+          <view angle="315" x="-32" y="16"/>
+        </layer>
+        <layer id="disco tile b" texture="floor tile">
+          <view angle="45" x="32" y="16"/>
+          <view angle="135" y="32"/>
+          <view angle="225" x="-32" y="16"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="disco tile c" texture="floor tile">
+          <view angle="45" x="-32" y="16"/>
+          <view angle="135"/>
+          <view angle="225" x="32" y="16"/>
+          <view angle="315" y="32"/>
+        </layer>
+        <layer id="disco tile d" texture="floor tile">
+          <view angle="45" y="32"/>
+          <view angle="135" x="-32" y="16"/>
+          <view angle="225"/>
+          <view angle="315" x="32" y="16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="cycle a" type="group">
+          <frame id="yellow">
+            <layerref id="disco tile a" color="0xffef5b"/>
+            <layerref id="disco tile b" color="0xffef5b"/>
+            <layerref id="disco tile c" color="0xffef5b"/>
+            <layerref id="disco tile d" color="0xffef5b"/>
+          </frame>
+          <frame id="red">
+            <layerref id="disco tile a" color="0xf05881"/>
+            <layerref id="disco tile b" color="0xf05881"/>
+            <layerref id="disco tile c" color="0xf05881"/>
+            <layerref id="disco tile d" color="0xf05881"/>
+          </frame>
+          <frame id="green">
+            <layerref id="disco tile a" color="0xc6db66"/>
+            <layerref id="disco tile b" color="0xc6db66"/>
+            <layerref id="disco tile c" color="0xc6db66"/>
+            <layerref id="disco tile d" color="0xc6db66"/>
+          </frame>
+          <frame id="blue">
+            <layerref id="disco tile a" color="0x7bbae5"/>
+            <layerref id="disco tile b" color="0x7bbae5"/>
+            <layerref id="disco tile c" color="0x7bbae5"/>
+            <layerref id="disco tile d" color="0x7bbae5"/>
+          </frame>
+        </frame>
+        <frame id="cycle b" type="group">
+          <frame id="yellow check">
+            <layerref id="disco tile a" color="0xffef5b"/>
+            <layerref id="disco tile b" color="0x7bbae5"/>
+            <layerref id="disco tile c" color="0x7bbae5"/>
+            <layerref id="disco tile d" color="0xffef5b"/>
+          </frame>
+          <frame id="red check">
+            <layerref id="disco tile a" color="0xf05881"/>
+            <layerref id="disco tile b" color="0xffef5b"/>
+            <layerref id="disco tile c" color="0xffef5b"/>
+            <layerref id="disco tile d" color="0xf05881"/>
+          </frame>
+          <frame id="green check">
+            <layerref id="disco tile a" color="0xc6db66"/>
+            <layerref id="disco tile b" color="0xf05881"/>
+            <layerref id="disco tile c" color="0xf05881"/>
+            <layerref id="disco tile d" color="0xc6db66"/>
+          </frame>
+          <frame id="blue check">
+            <layerref id="disco tile a" color="0x7bbae5"/>
+            <layerref id="disco tile b" color="0xc6db66"/>
+            <layerref id="disco tile c" color="0xc6db66"/>
+            <layerref id="disco tile d" color="0x7bbae5"/>
+          </frame>
+        </frame>
+        <frame id="cycle c" type="group">
+          <frame id="yellow check inverse">
+            <layerref id="disco tile a" color="0x7bbae5"/>
+            <layerref id="disco tile b" color="0xffef5b"/>
+            <layerref id="disco tile c" color="0xffef5b"/>
+            <layerref id="disco tile d" color="0x7bbae5"/>
+          </frame>
+          <frame id="red check inverse">
+            <layerref id="disco tile a" color="0xffef5b"/>
+            <layerref id="disco tile b" color="0xf05881"/>
+            <layerref id="disco tile c" color="0xf05881"/>
+            <layerref id="disco tile d" color="0xffef5b"/>
+          </frame>
+          <frame id="green check inverse">
+            <layerref id="disco tile a" color="0xf05881"/>
+            <layerref id="disco tile b" color="0xc6db66"/>
+            <layerref id="disco tile c" color="0xc6db66"/>
+            <layerref id="disco tile d" color="0xf05881"/>
+          </frame>
+          <frame id="blue check inverse">
+            <layerref id="disco tile a" color="0xc6db66"/>
+            <layerref id="disco tile b" color="0x7bbae5"/>
+            <layerref id="disco tile c" color="0x7bbae5"/>
+            <layerref id="disco tile d" color="0xc6db66"/>
+          </frame>
+        </frame>
+        <frame id="cycle off" type="group">
+          <frame id="off">
+            <layerref id="disco tile a"/>
+            <layerref id="disco tile b"/>
+            <layerref id="disco tile c"/>
+            <layerref id="disco tile d"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" syncOffsets="2,3">
+          <frameref id="green"/>
+          <frameref id="blue"/>
+          <frameref id="yellow"/>
+          <frameref id="red"/>
+          <frameref id="yellow check"/>
+          <frameref id="yellow check inverse"/>
+          <frameref id="red check inverse"/>
+          <frameref id="red check"/>
+          <frameref id="green check"/>
+          <frameref id="green check inverse"/>
+          <frameref id="blue check inverse"/>
+          <frameref id="blue check"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="disco floor d" x="-0.5" z="0.5" layer="surface">
+      <box min="-0.51,0,-0.5" max="0.5,0.01,0.51"/>
+      <layers>
+        <layer id="disco tile a" texture="floor tile">
+          <view angle="45"/>
+          <view angle="135" x="32" y="16"/>
+          <view angle="225" y="32"/>
+          <view angle="315" x="-32" y="16"/>
+        </layer>
+        <layer id="disco tile b" texture="floor tile">
+          <view angle="45" x="32" y="16"/>
+          <view angle="135" y="32"/>
+          <view angle="225" x="-32" y="16"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="disco tile c" texture="floor tile">
+          <view angle="45" x="-32" y="16"/>
+          <view angle="135"/>
+          <view angle="225" x="32" y="16"/>
+          <view angle="315" y="32"/>
+        </layer>
+        <layer id="disco tile d" texture="floor tile">
+          <view angle="45" y="32"/>
+          <view angle="135" x="-32" y="16"/>
+          <view angle="225"/>
+          <view angle="315" x="32" y="16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="cycle a" type="group">
+          <frame id="yellow">
+            <layerref id="disco tile a" color="0xffef5b"/>
+            <layerref id="disco tile b" color="0xffef5b"/>
+            <layerref id="disco tile c" color="0xffef5b"/>
+            <layerref id="disco tile d" color="0xffef5b"/>
+          </frame>
+          <frame id="red">
+            <layerref id="disco tile a" color="0xf05881"/>
+            <layerref id="disco tile b" color="0xf05881"/>
+            <layerref id="disco tile c" color="0xf05881"/>
+            <layerref id="disco tile d" color="0xf05881"/>
+          </frame>
+          <frame id="green">
+            <layerref id="disco tile a" color="0xc6db66"/>
+            <layerref id="disco tile b" color="0xc6db66"/>
+            <layerref id="disco tile c" color="0xc6db66"/>
+            <layerref id="disco tile d" color="0xc6db66"/>
+          </frame>
+          <frame id="blue">
+            <layerref id="disco tile a" color="0x7bbae5"/>
+            <layerref id="disco tile b" color="0x7bbae5"/>
+            <layerref id="disco tile c" color="0x7bbae5"/>
+            <layerref id="disco tile d" color="0x7bbae5"/>
+          </frame>
+        </frame>
+        <frame id="cycle b" type="group">
+          <frame id="yellow check">
+            <layerref id="disco tile a" color="0xffef5b"/>
+            <layerref id="disco tile b" color="0x7bbae5"/>
+            <layerref id="disco tile c" color="0x7bbae5"/>
+            <layerref id="disco tile d" color="0xffef5b"/>
+          </frame>
+          <frame id="red check">
+            <layerref id="disco tile a" color="0xf05881"/>
+            <layerref id="disco tile b" color="0xffef5b"/>
+            <layerref id="disco tile c" color="0xffef5b"/>
+            <layerref id="disco tile d" color="0xf05881"/>
+          </frame>
+          <frame id="green check">
+            <layerref id="disco tile a" color="0xc6db66"/>
+            <layerref id="disco tile b" color="0xf05881"/>
+            <layerref id="disco tile c" color="0xf05881"/>
+            <layerref id="disco tile d" color="0xc6db66"/>
+          </frame>
+          <frame id="blue check">
+            <layerref id="disco tile a" color="0x7bbae5"/>
+            <layerref id="disco tile b" color="0xc6db66"/>
+            <layerref id="disco tile c" color="0xc6db66"/>
+            <layerref id="disco tile d" color="0x7bbae5"/>
+          </frame>
+        </frame>
+        <frame id="cycle c" type="group">
+          <frame id="yellow check inverse">
+            <layerref id="disco tile a" color="0x7bbae5"/>
+            <layerref id="disco tile b" color="0xffef5b"/>
+            <layerref id="disco tile c" color="0xffef5b"/>
+            <layerref id="disco tile d" color="0x7bbae5"/>
+          </frame>
+          <frame id="red check inverse">
+            <layerref id="disco tile a" color="0xffef5b"/>
+            <layerref id="disco tile b" color="0xf05881"/>
+            <layerref id="disco tile c" color="0xf05881"/>
+            <layerref id="disco tile d" color="0xffef5b"/>
+          </frame>
+          <frame id="green check inverse">
+            <layerref id="disco tile a" color="0xf05881"/>
+            <layerref id="disco tile b" color="0xc6db66"/>
+            <layerref id="disco tile c" color="0xc6db66"/>
+            <layerref id="disco tile d" color="0xf05881"/>
+          </frame>
+          <frame id="blue check inverse">
+            <layerref id="disco tile a" color="0xc6db66"/>
+            <layerref id="disco tile b" color="0x7bbae5"/>
+            <layerref id="disco tile c" color="0x7bbae5"/>
+            <layerref id="disco tile d" color="0xc6db66"/>
+          </frame>
+        </frame>
+        <frame id="cycle off" type="group">
+          <frame id="off">
+            <layerref id="disco tile a"/>
+            <layerref id="disco tile b"/>
+            <layerref id="disco tile c"/>
+            <layerref id="disco tile d"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" syncOffsets="2,3">
+          <frameref id="blue"/>
+          <frameref id="yellow"/>
+          <frameref id="red"/>
+          <frameref id="green"/>
+          <frameref id="yellow check"/>
+          <frameref id="yellow check inverse"/>
+          <frameref id="red check inverse"/>
+          <frameref id="red check"/>
+          <frameref id="green check"/>
+          <frameref id="green check inverse"/>
+          <frameref id="blue check inverse"/>
+          <frameref id="blue check"/>
+        </animation>
+        <animation id="Off" framerate="2">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse a" x="-0.3113" y="0.2" z="-0.62" s="2.1" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" x="12" y="4"/>
+          <view angle="225" x="3" y="10"/>
+          <view angle="315" x="-8" y="6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="yellow">
+          <layerref id="Light" color="0xffffcc"/>
+        </frame>
+        <frame id="red">
+          <layerref id="Light" color="0xff6633"/>
+        </frame>
+        <frame id="green">
+          <layerref id="Light" color="0x66ff99"/>
+        </frame>
+        <frame id="blue">
+          <layerref id="Light" color="0x66ffff"/>
+        </frame>
+        <frame id="yellow mix">
+          <layerref id="Light" color="0xffffcc"/>
+        </frame>
+        <frame id="green mix">
+          <layerref id="Light" color="0x66ffcc"/>
+        </frame>
+        <frame id="red mix">
+          <layerref id="Light" color="0xffccff"/>
+        </frame>
+        <frame id="blue mix">
+          <layerref id="Light" color="0x66ffff"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" syncOffsets="2,3">
+          <frameref id="yellow"/>
+          <frameref id="red"/>
+          <frameref id="green"/>
+          <frameref id="blue"/>
+          <frameref id="yellow mix" duration="2"/>
+          <frameref id="red mix" duration="2"/>
+          <frameref id="green mix" duration="2"/>
+          <frameref id="blue mix" duration="2"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse b" x="0.7013" y="0.2" z="-0.62" s="2.1" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" x="12" y="4"/>
+          <view angle="225" x="3" y="10"/>
+          <view angle="315" x="-8" y="6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="yellow">
+          <layerref id="Light" color="0xffffcc"/>
+        </frame>
+        <frame id="red">
+          <layerref id="Light" color="0xff6633"/>
+        </frame>
+        <frame id="green">
+          <layerref id="Light" color="0x66ff99"/>
+        </frame>
+        <frame id="blue">
+          <layerref id="Light" color="0x66ffff"/>
+        </frame>
+        <frame id="yellow mix">
+          <layerref id="Light" color="0xffffcc"/>
+        </frame>
+        <frame id="green mix">
+          <layerref id="Light" color="0x66ffcc"/>
+        </frame>
+        <frame id="red mix">
+          <layerref id="Light" color="0xffccff"/>
+        </frame>
+        <frame id="blue mix">
+          <layerref id="Light" color="0x66ffff"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" syncOffsets="2,3">
+          <frameref id="red"/>
+          <frameref id="green"/>
+          <frameref id="blue"/>
+          <frameref id="yellow"/>
+          <frameref id="yellow mix" duration="2"/>
+          <frameref id="red mix" duration="2"/>
+          <frameref id="green mix" duration="2"/>
+          <frameref id="blue mix" duration="2"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse c" x="0.7325" y="0.2" z="0.35" s="2.1" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" x="12" y="4"/>
+          <view angle="225" x="3" y="10"/>
+          <view angle="315" x="-8" y="6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="yellow">
+          <layerref id="Light" color="0xffffcc"/>
+        </frame>
+        <frame id="red">
+          <layerref id="Light" color="0xff6633"/>
+        </frame>
+        <frame id="green">
+          <layerref id="Light" color="0x66ff99"/>
+        </frame>
+        <frame id="blue">
+          <layerref id="Light" color="0x66ffff"/>
+        </frame>
+        <frame id="yellow mix">
+          <layerref id="Light" color="0xffffcc"/>
+        </frame>
+        <frame id="green mix">
+          <layerref id="Light" color="0x66ffcc"/>
+        </frame>
+        <frame id="red mix">
+          <layerref id="Light" color="0xffccff"/>
+        </frame>
+        <frame id="blue mix">
+          <layerref id="Light" color="0x66ffff"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" syncOffsets="2,3">
+          <frameref id="green"/>
+          <frameref id="blue"/>
+          <frameref id="yellow"/>
+          <frameref id="red"/>
+          <frameref id="yellow mix" duration="2"/>
+          <frameref id="red mix" duration="2"/>
+          <frameref id="green mix" duration="2"/>
+          <frameref id="blue mix" duration="2"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse d" x="-0.28" y="0.2" z="0.35" s="2.1" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" x="12" y="4"/>
+          <view angle="225" x="3" y="10"/>
+          <view angle="315" x="-8" y="6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="yellow">
+          <layerref id="Light" color="0xffffcc"/>
+        </frame>
+        <frame id="red">
+          <layerref id="Light" color="0xff6633"/>
+        </frame>
+        <frame id="green">
+          <layerref id="Light" color="0x66ff99"/>
+        </frame>
+        <frame id="blue">
+          <layerref id="Light" color="0x66ffff"/>
+        </frame>
+        <frame id="yellow mix">
+          <layerref id="Light" color="0xffffcc"/>
+        </frame>
+        <frame id="green mix">
+          <layerref id="Light" color="0x66ffcc"/>
+        </frame>
+        <frame id="red mix">
+          <layerref id="Light" color="0xffccff"/>
+        </frame>
+        <frame id="blue mix">
+          <layerref id="Light" color="0x66ffff"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" syncOffsets="2,3">
+          <frameref id="blue"/>
+          <frameref id="yellow"/>
+          <frameref id="red"/>
+          <frameref id="green"/>
+          <frameref id="yellow mix" duration="2"/>
+          <frameref id="red mix" duration="2"/>
+          <frameref id="green mix" duration="2"/>
+          <frameref id="blue mix" duration="2"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

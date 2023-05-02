@@ -1,0 +1,184 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,2.14,0" max="0,2.14,0"/>
+  </volume>
+  <textures>
+    <texture id="Emote" source="items/base/consumables/emotes/emote_22_sleep_use.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/consumables/emotes/emote_22_sleep1_use.png" cols="2" rows="1"/>
+    <texture id="Zzz" source="items/base/consumables/emotes/emote_22_sleep2_use.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/consumables/emotes/emote_22_sleep_sound.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront" y="2.14">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Emote" texture="Emote">
+          <view angle="0"/>
+        </layer>
+        <layer id="yawn1" texture="Texture">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="yawn2" texture="Texture">
+          <view angle="0" col="1"/>
+          <view angle="45" col="1"/>
+          <view angle="90" col="1"/>
+          <view angle="135" col="1"/>
+          <view angle="180" col="1"/>
+          <view angle="225" col="1"/>
+          <view angle="270" col="1"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="Zzz1" texture="Zzz">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="Zzz2" texture="Zzz">
+          <view angle="0" col="1"/>
+          <view angle="45" col="1"/>
+          <view angle="90" col="1"/>
+          <view angle="135" col="1"/>
+          <view angle="180" col="1"/>
+          <view angle="225" col="1"/>
+          <view angle="270" col="1"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="Zzz3" texture="Zzz">
+          <view angle="0" col="2"/>
+          <view angle="45" col="2"/>
+          <view angle="90" col="2"/>
+          <view angle="135" col="2"/>
+          <view angle="180" col="2"/>
+          <view angle="225" col="2"/>
+          <view angle="270" col="2"/>
+          <view angle="315" col="2"/>
+        </layer>
+        <layer id="Zzz0" texture="Zzz">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="Zzz3a" texture="Zzz">
+          <view angle="0" col="2"/>
+          <view angle="45" col="2"/>
+          <view angle="90" col="2"/>
+          <view angle="135" col="2"/>
+          <view angle="180" col="2"/>
+          <view angle="225" col="2"/>
+          <view angle="270" col="2"/>
+          <view angle="315" col="2"/>
+        </layer>
+        <layer id="Zzz3b" texture="Zzz">
+          <view angle="0" col="1"/>
+          <view angle="45" col="1"/>
+          <view angle="90" col="1"/>
+          <view angle="135" col="1"/>
+          <view angle="180" col="1"/>
+          <view angle="225" col="1"/>
+          <view angle="270" col="1"/>
+          <view angle="315" col="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Emote" a="0.2"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Emote" a="0.4"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Emote" a="0.6"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Emote" a="0.8"/>
+        </frame>
+        <frame id="01">
+          <layerref id="Emote"/>
+          <layerref id="yawn2" x="5" y="-1" a="0"/>
+          <layerref id="Zzz3a" x="12" y="-10" a="0"/>
+          <layerref id="Zzz1" x="17" y="-30"/>
+          <layerref id="Zzz2" x="8" y="-50"/>
+          <layerref id="Zzz3" x="-6" y="-60" a="0.2"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Emote" y="-3"/>
+          <layerref id="yawn1" x="5" y="-4"/>
+          <layerref id="Zzz3a" x="13" y="-15" a="0.2"/>
+          <layerref id="Zzz1" x="16" y="-35"/>
+          <layerref id="Zzz3" x="4" y="-55" a="0.8"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Emote" y="-4"/>
+          <layerref id="yawn2" x="5" y="-5"/>
+          <layerref id="Zzz3b" x="15" y="-20" a="0.5"/>
+          <layerref id="Zzz1" x="14" y="-40"/>
+          <layerref id="Zzz3" x="1" y="-60" a="0.6"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Emote" y="-2"/>
+          <layerref id="yawn1" x="5" y="-3"/>
+          <layerref id="Zzz0" x="17" y="-25" a="0.8"/>
+          <layerref id="Zzz1" x="11" y="-45"/>
+          <layerref id="Zzz3" x="-3" y="-65" a="0.4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="01">
+            <sample id="Sound"/>
+          </frameref>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>   
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>   
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>             
+        </animation>
+        <animation id="Out" framerate="10" loop="false">
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

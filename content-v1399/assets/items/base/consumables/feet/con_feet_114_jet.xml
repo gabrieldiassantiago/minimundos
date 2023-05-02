@@ -1,0 +1,255 @@
+<item.SpriteItem id="5250" name="Jato Flutuante Zoom" desc="Um jato que desafia a gravidade" tags="rare,back,hand,consumable,actionbar,wear,nopvp,feet,oversized,action_driveable_toggle" icon="items/base/consumables/feet/con_feet_114_jet_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="1000">
+  <volume>
+    <box min="-2,0.2,-0.5" max="0.8,2.2,0.5"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="select" script="scripts/item/select_drive.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+100,health+10"/>
+    <entry key="action_attributes" value="fire+25"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_114_jet_angled.png" cols="2" rows="1"/>
+    <texture id="intense" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+    <texture id="Flames" source="items/base/consumables/feet/con_feet_114_jet_tail.png" cols="2" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_108_ufo_shadow.png" cols="1" rows="1"/>
+    <texture id="smoke" source="items/base/consumables/feet/con_feet_114_jet_smoke.png" cols="3" rows="1"/>
+    <texture id="glass" source="items/base/consumables/feet/con_feet_114_jet_glass.png" cols="7" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.2">
+      <box min="-2,0,-0.5" max="0.8,2,0.5"/>
+      <layers>
+        <layer id="base" texture="base" y="30">
+          <view angle="45" x="-45" y="-40"/>
+          <view angle="135" x="45" y="-40" hm="true"/>
+          <view angle="225" col="1" x="35" y="-20" hm="true"/>
+          <view angle="315" col="1" x="-35" y="-20"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" x="-20" y="120"/>
+          <view angle="135" x="20" y="120" hm="true"/>
+          <view angle="225" x="10" y="120" hm="true"/>
+          <view angle="315" x="-10" y="120"/>
+        </layer>
+        <layer id="Flames01_a" texture="Flames">
+          <view angle="0" x="-65" y="45"/>
+          <view angle="45" x="-80" y="10"/>
+          <view angle="90" x="-65" y="-40"/>
+          <view angle="135" x="80" y="10" hm="true"/>
+          <view angle="180" x="65" y="45" hm="true"/>
+          <view angle="225" x="5" y="50" hm="true"/>
+          <view angle="270" x="-50" y="20"/>
+          <view angle="315" x="-5" y="50"/>
+        </layer>
+        <layer id="Flames02_a" texture="Flames">
+          <view angle="0" col="1" x="-65" y="55"/>
+          <view angle="45" col="1" x="-80"/>
+          <view angle="90" col="1" y="-48"/>
+          <view angle="135" col="1" x="80" hm="true"/>
+          <view angle="180" col="1" x="65" y="45" hm="true"/>
+          <view angle="225" col="1" x="5" y="50" hm="true"/>
+          <view angle="270" col="1" x="-5" y="25"/>
+          <view angle="315" col="1" x="-5" y="50"/>
+        </layer>
+        <layer id="Flames01_b" texture="Flames">
+          <view angle="0" col="1" x="-100" y="-45" alpha="0"/>
+          <view angle="45" col="1" x="-80" y="10" alpha="0"/>
+          <view angle="90" x="65" y="-40" hm="true"/>
+          <view angle="135" col="1" x="80" alpha="0" hm="true"/>
+          <view angle="180" col="1" x="100" y="-45" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="80" y="-11" alpha="0" hm="true"/>
+          <view angle="270" x="50" y="20" hm="true"/>
+          <view angle="315" col="1" x="-80" y="-11" alpha="0"/>
+        </layer>
+        <layer id="Flames02_b" texture="Flames">
+          <view angle="0" col="1" x="-100" y="-45" alpha="0"/>
+          <view angle="45" col="1" x="-80" alpha="0"/>
+          <view angle="90" col="1" y="-48"/>
+          <view angle="135" col="1" x="80" alpha="0" hm="true"/>
+          <view angle="180" col="1" x="100" y="-45" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="80" y="-11" alpha="0" hm="true"/>
+          <view angle="270" col="1" x="-5" y="25"/>
+          <view angle="315" col="1" x="-80" y="-11" alpha="0"/>
+        </layer>
+        <layer id="smoke_01_a" texture="smoke">
+          <view angle="0" col="1" x="-68" y="70" hm="true"/>
+          <view angle="45" col="1" x="-75" y="35"/>
+          <view angle="90" col="1" x="-60"/>
+          <view angle="135" col="1" x="75" y="35" hm="true"/>
+          <view angle="180" col="1" x="68" y="70"/>
+          <view angle="225" col="1" x="10" y="65"/>
+          <view angle="270" col="1" x="-43" y="50"/>
+          <view angle="315" col="1" x="-10" y="65" hm="true"/>
+        </layer>
+        <layer id="smoke_02_a" texture="smoke">
+          <view angle="0" col="2" x="-70" y="70" hm="true"/>
+          <view angle="45" col="2" x="-74" y="35"/>
+          <view angle="90" col="2" x="-58"/>
+          <view angle="135" col="2" x="74" y="35" hm="true"/>
+          <view angle="180" col="2" x="70" y="70"/>
+          <view angle="225" col="2" x="12" y="65"/>
+          <view angle="270" col="2" x="-41" y="50"/>
+          <view angle="315" col="2" x="-12" y="65" hm="true"/>
+        </layer>
+        <layer id="smoke_03_a" texture="smoke">
+          <view angle="0" x="-66" y="70" hm="true"/>
+          <view angle="45" x="-77" y="35"/>
+          <view angle="90" x="-62"/>
+          <view angle="135" x="77" y="35" hm="true"/>
+          <view angle="180" x="66" y="70"/>
+          <view angle="225" x="8" y="65"/>
+          <view angle="270" x="-45" y="50"/>
+          <view angle="315" x="-8" y="65" hm="true"/>
+        </layer>
+        <layer id="smoke_01_b" texture="smoke">
+          <view angle="0" col="1" x="-40" y="25" hm="true"/>
+          <view angle="45" col="1" x="-8" y="10"/>
+          <view angle="90" col="1" x="60" hm="true"/>
+          <view angle="135" col="1" x="8" y="10" hm="true"/>
+          <view angle="180" col="1" x="40" y="25"/>
+          <view angle="225" col="1" x="70" y="25"/>
+          <view angle="270" col="1" x="43" y="50" hm="true"/>
+          <view angle="315" col="1" x="-70" y="25" hm="true"/>
+        </layer>
+        <layer id="smoke_02_b" texture="smoke">
+          <view angle="0" col="2" x="-42" y="25" hm="true"/>
+          <view angle="45" col="2" x="-6" y="10"/>
+          <view angle="90" col="2" x="58" hm="true"/>
+          <view angle="135" col="2" x="6" y="10" hm="true"/>
+          <view angle="180" col="2" x="42" y="25"/>
+          <view angle="225" col="2" x="72" y="25"/>
+          <view angle="270" col="2" x="41" y="50" hm="true"/>
+          <view angle="315" col="2" x="-72" y="25" hm="true"/>
+        </layer>
+        <layer id="smoke_03_b" texture="smoke">
+          <view angle="0" x="-38" y="25" hm="true"/>
+          <view angle="45" x="-10" y="10"/>
+          <view angle="90" x="64"/>
+          <view angle="135" x="10" y="10" hm="true"/>
+          <view angle="180" x="38" y="25"/>
+          <view angle="225" x="68" y="25"/>
+          <view angle="270" x="45" y="50" hm="true"/>
+          <view angle="315" x="-68" y="25" hm="true"/>
+        </layer>
+        <layer id="glass" texture="glass">
+          <view angle="45" col="5" x="10" y="-61"/>
+          <view angle="135" col="5" x="-10" y="-61" hm="true"/>
+          <view angle="225" col="6" x="-13" y="-83" hm="true"/>
+          <view angle="315" col="6" x="13" y="-83"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle01">
+          <layerref id="shadow"/>
+          <layerref id="Flames01_b" a="0.25"/>
+          <layerref id="smoke_01_b" a="0.5"/>
+          <layerref id="Flames01_a" a="0.25"/>
+          <layerref id="smoke_01_a" a="0.5"/>
+          <layerref id="base"/>
+          <layerref id="glass"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="shadow"/>
+          <layerref id="Flames01_b" a="0.5"/>
+          <layerref id="smoke_02_b" a="0.5"/>
+          <layerref id="Flames01_a" a="0.5"/>
+          <layerref id="smoke_02_a" a="0.5"/>
+          <layerref id="base" y="1"/>
+          <layerref id="glass" y="1"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="shadow"/>
+          <layerref id="Flames01_b" a="0.7"/>
+          <layerref id="smoke_03_b" a="0.5"/>
+          <layerref id="Flames01_a" a="0.7"/>
+          <layerref id="smoke_03_a" a="0.5"/>
+          <layerref id="base" y="2"/>
+          <layerref id="glass" y="2"/>
+        </frame>
+        <frame id="Idle04">
+          <layerref id="shadow"/>
+          <layerref id="Flames01_b" a="0.25"/>
+          <layerref id="smoke_01_b" a="0.5"/>
+          <layerref id="Flames01_a" a="0.25"/>
+          <layerref id="smoke_01_a" a="0.5"/>
+          <layerref id="base" y="3"/>
+          <layerref id="glass" y="3"/>
+        </frame>
+        <frame id="Idle05">
+          <layerref id="shadow"/>
+          <layerref id="Flames01_b" a="0.5"/>
+          <layerref id="smoke_02_b" a="0.5"/>
+          <layerref id="Flames01_a" a="0.5"/>
+          <layerref id="smoke_02_a" a="0.5"/>
+          <layerref id="base" y="2"/>
+          <layerref id="glass" y="2"/>
+        </frame>
+        <frame id="Idle06">
+          <layerref id="shadow"/>
+          <layerref id="Flames01_b" a="0.7"/>
+          <layerref id="smoke_03_b" a="0.5"/>
+          <layerref id="Flames01_a" a="0.7"/>
+          <layerref id="smoke_03_a" a="0.5"/>
+          <layerref id="base" y="1"/>
+          <layerref id="glass" y="1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle05"/>
+          <frameref id="Idle06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="-0.2812" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers/>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="round" y="-0.2812" s="1.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="round" texture="intense">
+          <view angle="45" x="-33" y="-114"/>
+          <view angle="135" x="35" y="-114" hm="true"/>
+          <view angle="225" x="32" y="-85"/>
+          <view angle="315" x="-32" y="-85" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="White">
+          <layerref id="round" color="0xf15555"/>
+        </frame>
+        <frame id="off">
+          <layerref id="round" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="White"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="White"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

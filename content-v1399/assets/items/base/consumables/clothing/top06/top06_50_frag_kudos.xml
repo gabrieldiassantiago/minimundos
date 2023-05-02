@@ -1,0 +1,36 @@
+<f id="Top06_50_Kudos_Jacket" parentId="Top06">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top06_50TorsoBaseM" cId="Torso" s="items/base/consumables/clothing/top06/top06_50_kudos_torso_m.png" pri="6"/>
+    </g>
+    <g id="Female">
+      <s id="Top06_50TorsoBaseF" cId="Torso" s="items/base/consumables/clothing/top06/top06_50_kudos_torso_f.png" pri="6"/>
+    </g>
+  </b>
+  <g id="SportJacketTorso" name="LeatherJacket" icon="$bm/icon_m_retro.png">
+    <s id="Top06_50ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/arm_jacket_idle.png" pri="6"/>
+    <s id="Top06_50ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/arm_jacket_walk1.png" pri="6"/>
+    <s id="Top06_50ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/arm_jacket_walk2.png" pri="6"/>
+    <s id="Top06_50ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/arm_jacket_walk3.png" pri="6"/>
+    <s id="Top06_50ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/arm_jacket_sit.png" pri="6"/>
+    <c sId="Top06_50ArmIdleBase" c="9071115" a="0.81" b="64.1" ct="2.00" lId="Top06_50Color1" lw="N"/>
+    <c sId="Top06_50ArmWalk1Base" c="9071115" a="0.81" b="64.1" ct="2.00" lId="Top06_50Color1" lw="N"/>
+    <c sId="Top06_50ArmWalk2Base" c="9071115" a="0.81" b="64.1" ct="2.00" lId="Top06_50Color1" lw="N"/>
+    <c sId="Top06_50ArmWalk3Base" c="9071115" a="0.81" b="64.1" ct="2.00" lId="Top06_50Color1" lw="N"/>
+    <c sId="Top06_50ArmSitBase" c="9071115" a="0.81" b="64.1" ct="2.00" lId="Top06_50Color1" lw="N"/>
+    <s id="Top06_50ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/arm_jacket_throw.png" pri="6"/>
+    <s id="Top06_50ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/arm_jacket_raise.png" pri="6"/>
+    <c sId="Top06_50ArmThrowBase" c="9071115" a="0.81" b="64.1" ct="2.00" lId="Top06_50Color1" lw="N"/>
+    <c sId="Top06_50ArmRaiseBase" c="9071115" a="0.81" b="64.1" ct="2.00" lId="Top06_50Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_50" icon="items/base/consumables/clothing/top06/top06_50_kudos_icon.png" w="48" h="48"/>
+    <s id="IconTop06_50Base" cId="IconTop06_50" s="items/base/consumables/clothing/top06/top06_50_kudos_icon.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top06_50Color1" name="Color" desc="Choose a color" sel="brown" seld="Black">
+      <c id="brown" c="9071115" a="0.81" b="64.1" ct="2.00" lId="Top06_50Color1"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

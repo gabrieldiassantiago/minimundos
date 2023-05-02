@@ -1,0 +1,41 @@
+<item.SpriteItem id="1508" name="Gavetas em Balcão de Mármore" desc="O balcão é de mármore, as gavetas não." tags="table" icon="items/base/modern/icon_m_bar_04_kitchen_draws.png" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="27" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,1.2,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Counter" source="items/base/modern/m_bar_04_kitchen_counter .png" cols="1" rows="1"/>
+    <texture id="door" source="items/base/modern/m_bar_04_kitchen_door.png" cols="2" rows="1"/>
+    <texture id="draws" source="items/base/modern/m_bar_04_kitchen_draws.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.49" max="0.4,1.2,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Counter">
+          <view angle="45" y="34"/>
+          <view angle="135" y="34" hm="true"/>
+          <view angle="225" y="34"/>
+          <view angle="315" y="34" hm="true"/>
+        </layer>
+        <layer id="door" texture="door">
+          <view angle="45" x="-11" y="28"/>
+          <view angle="135" x="11" y="28" hm="true"/>
+          <view angle="225" col="1" x="-51" y="9"/>
+          <view angle="315" col="1" x="51" y="9" hm="true"/>
+        </layer>
+        <layer id="Draws" texture="draws">
+          <view angle="45" x="19" y="22"/>
+          <view angle="135" x="-20" y="22" hm="true"/>
+          <view angle="225" y="34" alpha="0"/>
+          <view angle="315" y="34" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

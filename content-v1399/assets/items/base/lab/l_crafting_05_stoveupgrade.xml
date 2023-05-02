@@ -1,0 +1,157 @@
+<item.WidgetItem id="2951" name="Soja" desc="Muito saudável." tags="unsearchable,widget" icon="items/base/lab/icon_l_crafting_05_stoveupgrade.png" price="88" tokens="888" minLevel="1" minLevelType="7" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_itemcrafter.swf">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,1.75,1.49"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select_crafting_table.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="widget_min_load_wait" value="30000"/>
+    <entry key="widget_max_load_wait" value="31000"/>
+    <entry key="hasEditSecurity" value="true"/>
+    <entry key="craft_tag" value="craftable_cookup"/>
+  </data>
+  <textures>
+    <texture id="table" source="items/base/lab/l_crafting_03_table.png" cols="1" rows="1"/>
+    <texture id="lab" source="items/base/lab/l_crafting_04_master.png" cols="2" rows="1"/>
+    <texture id="shelf" source="items/base/lab/l_crafting_04_shelf.png" cols="2" rows="1"/>
+    <texture id="bulb light" source="items/base/shared/s_fx_flare_bulb.png" cols="1" rows="1"/>
+    <texture id="bubbles" source="items/base/lab/l_crafting_03_bubbles.png" cols="3" rows="1"/>
+    <texture id="diffuse" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="crystal glow" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="table bronze" source="items/base/lab/l_crafting_04_table_bronze.png" cols="1" rows="1"/>
+    <texture id="temp" source="items/base/lab/icon_l_crafting_05_stoveupgrade.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="crafting table" z="0.5">
+      <box min="-0.49,0,-0.99" max="0.49,1.75,0.99"/>
+      <layers>
+        <layer id="table" texture="table">
+          <view angle="45" y="54"/>
+          <view angle="135" y="54" hm="true"/>
+          <view angle="225" y="54"/>
+          <view angle="315" y="54" hm="true"/>
+        </layer>
+        <layer id="shelf" texture="shelf">
+          <view angle="45" x="-20" y="-33"/>
+          <view angle="135" x="20" y="-33" hm="true"/>
+          <view angle="225" col="1" x="20" y="-11"/>
+          <view angle="315" col="1" x="-20" y="-11" hm="true"/>
+        </layer>
+        <layer id="lab" texture="lab">
+          <view angle="45" x="-1" y="-15"/>
+          <view angle="135" x="1" y="-15" hm="true"/>
+          <view angle="225" col="1" x="4" y="-21"/>
+          <view angle="315" col="1" x="-4" y="-21" hm="true"/>
+        </layer>
+        <layer id="bulb light" texture="bulb light">
+          <view angle="45" x="64" y="-52"/>
+          <view angle="135" x="-64" y="-52"/>
+          <view angle="225" x="-64" y="-39"/>
+          <view angle="315" x="64" y="-39"/>
+        </layer>
+        <layer id="bubbles 01" texture="bubbles">
+          <view angle="45" x="7" y="-69"/>
+          <view angle="135" x="-7" y="-69"/>
+          <view angle="225" x="-8" y="-78"/>
+          <view angle="315" x="8" y="-78"/>
+        </layer>
+        <layer id="bubbles 02" texture="bubbles">
+          <view angle="45" col="1" x="7" y="-69"/>
+          <view angle="135" col="1" x="-7" y="-69"/>
+          <view angle="225" col="1" x="-8" y="-78"/>
+          <view angle="315" col="1" x="8" y="-78"/>
+        </layer>
+        <layer id="bubbles 03" texture="bubbles">
+          <view angle="45" col="2" x="7" y="-69"/>
+          <view angle="135" col="2" x="-7" y="-69"/>
+          <view angle="225" col="2" x="-8" y="-78"/>
+          <view angle="315" col="2" x="8" y="-78"/>
+        </layer>
+        <layer id="table bronze" texture="table bronze">
+          <view angle="45" y="44"/>
+          <view angle="135" y="44" hm="true"/>
+          <view angle="225" y="44"/>
+          <view angle="315" y="44" hm="true"/>
+        </layer>
+        <layer id="temp" texture="temp">
+          <view/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" z="0.5" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="diffuse" align="middle">
+          <view y="-12" alpha="0.8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xfff9e2"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Intense" z="0.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="bulb light" align="middle">
+          <view angle="45" x="64" y="-81"/>
+          <view angle="135" x="-62" y="-81"/>
+          <view angle="225" x="-60" y="-66"/>
+          <view angle="315" x="68" y="-68"/>
+        </layer>
+        <layer id="crystal" texture="crystal glow">
+          <view angle="45" x="38" y="-77"/>
+          <view angle="135" x="-35" y="-79"/>
+          <view angle="225" x="-33" y="-38"/>
+          <view angle="315" x="43" y="-37"/>
+        </layer>
+        <layer id="boiler" texture="diffuse">
+          <view angle="45" x="7" y="-43"/>
+          <view angle="135" x="-7" y="-43"/>
+          <view angle="225" x="-2" y="-51"/>
+          <view angle="315" x="2" y="-51"/>
+        </layer>
+        <layer id="orb 01" texture="diffuse">
+          <view angle="45" x="60" y="-124"/>
+          <view angle="135" x="-55" y="-126"/>
+          <view angle="225" x="-55" y="-69"/>
+          <view angle="315" x="63" y="-67"/>
+        </layer>
+        <layer id="orb 02" texture="diffuse">
+          <view angle="45" x="26" y="-122"/>
+          <view angle="135" x="-23" y="-124"/>
+          <view angle="225" x="-23" y="-70"/>
+          <view angle="315" x="29" y="-70"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xfbf28a"/>
+          <layerref id="crystal" color="0xf9ffcf" a="0.8"/>
+          <layerref id="boiler" color="0xecc5bd" a="0.5"/>
+          <layerref id="orb 01" color="0xecc5bd" a="0.3"/>
+          <layerref id="orb 02" color="0xecc5bd" a="0.3"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

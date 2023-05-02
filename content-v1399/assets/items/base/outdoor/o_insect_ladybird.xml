@@ -1,0 +1,1199 @@
+<item.SpriteItem id="3335" name="Ladybird" desc="A tiny insect" tags="admin,floor" icon="items/base/outdoor/icon_o_insect_ladybird.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,-0.001,-0.1" max="0.1,0,0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Idle" state="true" event="animate(00)"/>
+    <action id="Crawl" state="true" event="animate(01)"/>
+    <action id="Fly Away" state="true" event="animate(02)"/>
+    <action id="Turn" state="true" event="animate(03)"/>
+    <action id="Stretch" state="true" event="animate(04)"/>
+    <action id="Land" state="true" event="animate(05)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="6"/>
+    <entry key="00" value="Idle"/>
+    <entry key="01" value="Crawl"/>
+    <entry key="02" value="Fly"/>
+    <entry key="03" value="Turn"/>
+    <entry key="04" value="Stretch"/>
+    <entry key="05" value="Land"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/outdoor/o_insect_ladybird.png" cols="4" rows="4"/>
+  </textures>
+  <nodes>
+    <node id="node" layer="surface">
+      <box min="-0.1,-0.001,-0.1" max="0.1,0,0.1"/>
+      <layers>
+        <layer id="up_01" texture="Texture" y="10">
+          <view/>
+        </layer>
+        <layer id="up_02" texture="Texture" y="10">
+          <view col="1"/>
+        </layer>
+        <layer id="up_03" texture="Texture" y="10">
+          <view col="2"/>
+        </layer>
+        <layer id="up_04" texture="Texture" y="10">
+          <view col="3"/>
+        </layer>
+        <layer id="down_left_01" texture="Texture" y="10">
+          <view row="1" hm="true"/>
+        </layer>
+        <layer id="down_left_02" texture="Texture" y="10">
+          <view col="1" row="1" hm="true"/>
+        </layer>
+        <layer id="down_left_03" texture="Texture" y="10">
+          <view col="2" row="1" hm="true"/>
+        </layer>
+        <layer id="down_left_04" texture="Texture" y="10">
+          <view col="3" row="1" hm="true"/>
+        </layer>
+        <layer id="down_turn_left" texture="Texture" y="10">
+          <view col="2" row="2" hm="true"/>
+        </layer>
+        <layer id="down_turn_down" texture="Texture" y="10">
+          <view col="3" row="2" hm="true"/>
+        </layer>
+        <layer id="down_turn_right" texture="Texture" y="10">
+          <view col="2" row="2" x="3"/>
+        </layer>
+        <layer id="down_right_01" texture="Texture" y="10">
+          <view row="1" x="3"/>
+        </layer>
+        <layer id="down_right_02" texture="Texture" y="10">
+          <view col="1" row="1" x="3"/>
+        </layer>
+        <layer id="down_right_03" texture="Texture" y="10">
+          <view col="2" row="1" x="3"/>
+        </layer>
+        <layer id="down_right_04" texture="Texture" y="10">
+          <view col="3" row="1" x="3"/>
+        </layer>
+        <layer id="right_01" texture="Texture" y="10">
+          <view row="2"/>
+        </layer>
+        <layer id="right_02" texture="Texture" y="10">
+          <view col="1" row="2"/>
+        </layer>
+        <layer id="fly_01" texture="Texture" y="10">
+          <view row="3"/>
+        </layer>
+        <layer id="fly_02" texture="Texture" y="10">
+          <view col="1" row="3"/>
+        </layer>
+        <layer id="fly_03" texture="Texture" y="10">
+          <view col="2" row="3"/>
+        </layer>
+        <layer id="fly_04" texture="Texture" y="10">
+          <view col="3" row="3"/>
+        </layer>
+        <layer id="fly_05" texture="Texture" y="10">
+          <view col="3" row="3" x="5" y="-6"/>
+        </layer>
+        <layer id="fly_06" texture="Texture" y="10">
+          <view col="3" row="3" x="10" y="-17" hm="true"/>
+        </layer>
+        <layer id="fly_07" texture="Texture" y="10">
+          <view col="3" row="3" x="4" y="-21" hm="true"/>
+        </layer>
+        <layer id="fly_08" texture="Texture" y="10">
+          <view col="3" row="3" x="-16" y="-42"/>
+        </layer>
+        <layer id="fly_09" texture="Texture" y="10">
+          <view col="3" row="3" x="-6" y="-44" alpha="0.9"/>
+        </layer>
+        <layer id="fly_10" texture="Texture" y="10">
+          <view col="3" row="3" x="16" y="-90" alpha="0.7"/>
+        </layer>
+        <layer id="fly_11" texture="Texture" y="10">
+          <view col="3" row="3" x="40" y="-140" alpha="0.5"/>
+        </layer>
+        <layer id="fly_12" texture="Texture" y="10">
+          <view col="3" row="3" x="50" y="-195" alpha="0.2"/>
+        </layer>
+        <layer id="_blank" texture="Texture" y="10">
+          <view alpha="0"/>
+        </layer>
+        <layer id="left_01" texture="Texture" y="10">
+          <view row="2" hm="true"/>
+        </layer>
+        <layer id="left_02" texture="Texture" y="10">
+          <view col="1" row="2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="fly_01">
+          <layerref id="fly_01"/>
+        </frame>
+        <frame id="fly_02">
+          <layerref id="fly_02"/>
+        </frame>
+        <frame id="fly_03">
+          <layerref id="fly_03"/>
+        </frame>
+        <frame id="fly_04">
+          <layerref id="fly_04"/>
+        </frame>
+        <frame id="fly_05">
+          <layerref id="fly_05"/>
+        </frame>
+        <frame id="fly_06b">
+          <layerref id="fly_06" y="1"/>
+        </frame>
+        <frame id="fly_06">
+          <layerref id="fly_06"/>
+        </frame>
+        <frame id="fly_07">
+          <layerref id="fly_07"/>
+        </frame>
+        <frame id="fly_08">
+          <layerref id="fly_08"/>
+        </frame>
+        <frame id="fly_08b">
+          <layerref id="fly_08" x="-1" y="1"/>
+        </frame>
+        <frame id="fly_09">
+          <layerref id="fly_09"/>
+        </frame>
+        <frame id="fly_10">
+          <layerref id="fly_10"/>
+        </frame>
+        <frame id="fly_11">
+          <layerref id="fly_11"/>
+        </frame>
+        <frame id="fly_12">
+          <layerref id="fly_12"/>
+        </frame>
+        <frame id="_blank">
+          <layerref id="_blank"/>
+        </frame>
+        <frame id="up_01">
+          <layerref id="up_01"/>
+        </frame>
+        <frame id="up_02">
+          <layerref id="up_02"/>
+        </frame>
+        <frame id="up_03">
+          <layerref id="up_03"/>
+        </frame>
+        <frame id="up_04">
+          <layerref id="up_04"/>
+        </frame>
+        <frame id="up_05">
+          <layerref id="up_01" x="2" y="-1"/>
+        </frame>
+        <frame id="up_06">
+          <layerref id="up_02" x="2" y="-1"/>
+        </frame>
+        <frame id="up_07">
+          <layerref id="up_03" x="2" y="-1"/>
+        </frame>
+        <frame id="up_08">
+          <layerref id="up_04" x="2" y="-1"/>
+        </frame>
+        <frame id="up_09">
+          <layerref id="up_01" x="4" y="-2"/>
+        </frame>
+        <frame id="up_10">
+          <layerref id="up_02" x="4" y="-2"/>
+        </frame>
+        <frame id="up_11">
+          <layerref id="up_03" x="4" y="-2"/>
+        </frame>
+        <frame id="up_12">
+          <layerref id="up_04" x="4" y="-2"/>
+        </frame>
+        <frame id="up_13">
+          <layerref id="up_01" x="6" y="-3"/>
+        </frame>
+        <frame id="up_14">
+          <layerref id="up_02" x="6" y="-3"/>
+        </frame>
+        <frame id="up_15">
+          <layerref id="up_03" x="6" y="-3"/>
+        </frame>
+        <frame id="up_16">
+          <layerref id="up_04" x="6" y="-3"/>
+        </frame>
+        <frame id="up_17">
+          <layerref id="up_01" x="8" y="-4"/>
+        </frame>
+        <frame id="up_18">
+          <layerref id="up_02" x="8" y="-4"/>
+        </frame>
+        <frame id="up_19">
+          <layerref id="up_03" x="8" y="-4"/>
+        </frame>
+        <frame id="up_20">
+          <layerref id="up_04" x="8" y="-4"/>
+        </frame>
+        <frame id="up_21">
+          <layerref id="up_01" x="10" y="-5"/>
+        </frame>
+        <frame id="up_22">
+          <layerref id="up_02" x="10" y="-5"/>
+        </frame>
+        <frame id="up_23">
+          <layerref id="up_03" x="10" y="-5"/>
+        </frame>
+        <frame id="up_24">
+          <layerref id="up_04" x="10" y="-5"/>
+        </frame>
+        <frame id="up_25">
+          <layerref id="up_01" x="12" y="-6"/>
+        </frame>
+        <frame id="up_26">
+          <layerref id="up_02" x="12" y="-6"/>
+        </frame>
+        <frame id="up_27">
+          <layerref id="up_03" x="12" y="-6"/>
+        </frame>
+        <frame id="up_28">
+          <layerref id="up_04" x="12" y="-6"/>
+        </frame>
+        <frame id="turnright_29">
+          <layerref id="right_01" x="14" y="-7" a="0.8"/>
+          <layerref id="up_01" x="14" y="-7" a="0.5"/>
+        </frame>
+        <frame id="right_30">
+          <layerref id="right_01" x="14" y="-7"/>
+        </frame>
+        <frame id="right_31">
+          <layerref id="right_02" x="14" y="-7"/>
+        </frame>
+        <frame id="right_32">
+          <layerref id="right_01" x="15" y="-7"/>
+        </frame>
+        <frame id="right_33">
+          <layerref id="right_02" x="15" y="-7"/>
+        </frame>
+        <frame id="right_34">
+          <layerref id="right_01" x="16" y="-7"/>
+        </frame>
+        <frame id="right_35">
+          <layerref id="right_02" x="16" y="-7"/>
+        </frame>
+        <frame id="right_36">
+          <layerref id="right_01" x="17" y="-7"/>
+        </frame>
+        <frame id="right_37">
+          <layerref id="right_02" x="17" y="-7"/>
+        </frame>
+        <frame id="right_38">
+          <layerref id="right_01" x="18" y="-7"/>
+        </frame>
+        <frame id="right_39">
+          <layerref id="right_02" x="18" y="-7"/>
+        </frame>
+        <frame id="right_40">
+          <layerref id="right_01" x="19" y="-7"/>
+        </frame>
+        <frame id="right_41">
+          <layerref id="right_02" x="19" y="-7"/>
+        </frame>
+        <frame id="right_42">
+          <layerref id="right_01" x="20" y="-7"/>
+        </frame>
+        <frame id="right_43">
+          <layerref id="right_02" x="20" y="-7"/>
+        </frame>
+        <frame id="right_44">
+          <layerref id="right_01" x="21" y="-7"/>
+        </frame>
+        <frame id="right_45">
+          <layerref id="right_02" x="21" y="-7"/>
+        </frame>
+        <frame id="right_46">
+          <layerref id="right_01" x="22" y="-7"/>
+        </frame>
+        <frame id="right_47">
+          <layerref id="right_02" x="22" y="-7"/>
+        </frame>
+        <frame id="right_48">
+          <layerref id="right_01" x="23" y="-7"/>
+        </frame>
+        <frame id="right_49">
+          <layerref id="right_02" x="23" y="-7"/>
+        </frame>
+        <frame id="turndown_50">
+          <layerref id="down_right_01" x="20" y="-7" a="0.7"/>
+          <layerref id="right_01" x="23" y="-7" a="0.75"/>
+        </frame>
+        <frame id="turndown_51">
+          <layerref id="down_right_01" x="20" y="-7"/>
+        </frame>
+        <frame id="turndown_51a">
+          <layerref id="down_right_01" x="20" y="-7" a="0.8"/>
+          <layerref id="down_turn_right" x="20" y="-7" a="0.8"/>
+        </frame>
+        <frame id="turndown_51b">
+          <layerref id="down_turn_right" x="20" y="-7"/>
+        </frame>
+        <frame id="turndown_51c">
+          <layerref id="down_turn_right" x="20" y="-7" a="0.8"/>
+          <layerref id="down_turn_down" x="20" y="-7" a="0.8"/>
+        </frame>
+        <frame id="turndown_51d">
+          <layerref id="down_turn_down" x="20" y="-7"/>
+        </frame>
+        <frame id="turndown_51e">
+          <layerref id="down_turn_down" x="20" y="-7" a="0.8"/>
+          <layerref id="down_turn_left" x="20" y="-7" a="0.8"/>
+        </frame>
+        <frame id="turndown_51f">
+          <layerref id="down_right_01" x="20" y="-7"/>
+        </frame>
+        <frame id="down_left_52">
+          <layerref id="down_left_01" x="20" y="-7"/>
+        </frame>
+        <frame id="down_left_53">
+          <layerref id="down_left_02" x="20" y="-7"/>
+        </frame>
+        <frame id="down_left_54">
+          <layerref id="down_left_03" x="20" y="-7"/>
+        </frame>
+        <frame id="down_left_55">
+          <layerref id="down_left_04" x="20" y="-7"/>
+        </frame>
+        <frame id="down_left_56">
+          <layerref id="down_left_01" x="18" y="-6"/>
+        </frame>
+        <frame id="down_left_57">
+          <layerref id="down_left_02" x="18" y="-6"/>
+        </frame>
+        <frame id="down_left_58">
+          <layerref id="down_left_03" x="18" y="-6"/>
+        </frame>
+        <frame id="down_left_59">
+          <layerref id="down_left_04" x="18" y="-6"/>
+        </frame>
+        <frame id="down_left_60">
+          <layerref id="down_left_01" x="16" y="-5"/>
+        </frame>
+        <frame id="down_left_61">
+          <layerref id="down_left_02" x="16" y="-5"/>
+        </frame>
+        <frame id="down_left_62">
+          <layerref id="down_left_03" x="16" y="-5"/>
+        </frame>
+        <frame id="down_left_63">
+          <layerref id="down_left_04" x="16" y="-5"/>
+        </frame>
+        <frame id="down_left_63a">
+          <layerref id="down_left_01" x="14" y="-4"/>
+        </frame>
+        <frame id="down_left_63b">
+          <layerref id="down_left_02" x="14" y="-4"/>
+        </frame>
+        <frame id="down_left_63c">
+          <layerref id="down_left_03" x="14" y="-4"/>
+        </frame>
+        <frame id="down_left_63d">
+          <layerref id="down_left_04" x="14" y="-4"/>
+        </frame>
+        <frame id="down_left_64">
+          <layerref id="down_left_01" x="12" y="-3"/>
+        </frame>
+        <frame id="down_left_65">
+          <layerref id="down_left_02" x="12" y="-3"/>
+        </frame>
+        <frame id="down_left_66">
+          <layerref id="down_left_03" x="12" y="-3"/>
+        </frame>
+        <frame id="down_left_67">
+          <layerref id="down_left_04" x="12" y="-3"/>
+        </frame>
+        <frame id="down_left_68">
+          <layerref id="down_left_01" x="10" y="-2"/>
+        </frame>
+        <frame id="down_left_69">
+          <layerref id="down_left_02" x="10" y="-2"/>
+        </frame>
+        <frame id="down_left_70">
+          <layerref id="down_left_03" x="10" y="-2"/>
+        </frame>
+        <frame id="down_left_71">
+          <layerref id="down_left_04" x="10" y="-2"/>
+        </frame>
+        <frame id="down_turn_72">
+          <layerref id="down_left_01" x="8" y="-1"/>
+        </frame>
+        <frame id="down_turn_73">
+          <layerref id="down_left_01" x="8" y="-1" a="0.8"/>
+          <layerref id="down_turn_left" x="8" y="-1" a="0.5"/>
+        </frame>
+        <frame id="down_turn_74">
+          <layerref id="down_turn_left" x="8" y="-1"/>
+        </frame>
+        <frame id="down_turn_75">
+          <layerref id="down_turn_left" x="8" y="-1" a="0.8"/>
+          <layerref id="down_turn_down" x="8" y="-1" a="0.5"/>
+        </frame>
+        <frame id="down_turn_76">
+          <layerref id="down_turn_down" x="8" y="-1"/>
+        </frame>
+        <frame id="down_turn_77">
+          <layerref id="down_turn_right" x="8" y="-1" a="0.8"/>
+          <layerref id="down_turn_down" x="8" y="-1" a="0.5"/>
+        </frame>
+        <frame id="down_turn_78">
+          <layerref id="down_turn_right" x="8" y="-1"/>
+        </frame>
+        <frame id="down_turn_79">
+          <layerref id="down_right_01" x="8" y="-1" a="0.8"/>
+          <layerref id="down_turn_right" x="8" y="-1" a="0.5"/>
+        </frame>
+        <frame id="down_right_80">
+          <layerref id="down_right_01" x="8" y="-1"/>
+        </frame>
+        <frame id="down_right_81">
+          <layerref id="down_right_02" x="8" y="-1"/>
+        </frame>
+        <frame id="down_right_82">
+          <layerref id="down_right_03" x="8" y="-1"/>
+        </frame>
+        <frame id="down_right_83">
+          <layerref id="down_right_04" x="8" y="-1"/>
+        </frame>
+        <frame id="down_right_84">
+          <layerref id="down_right_01" x="10"/>
+        </frame>
+        <frame id="down_right_85">
+          <layerref id="down_right_02" x="10"/>
+        </frame>
+        <frame id="down_right_86">
+          <layerref id="down_right_03" x="10"/>
+        </frame>
+        <frame id="down_right_87">
+          <layerref id="down_right_04" x="10"/>
+        </frame>
+        <frame id="down_right_88">
+          <layerref id="down_right_01" x="12" y="1"/>
+        </frame>
+        <frame id="down_right_89">
+          <layerref id="down_right_02" x="12" y="1"/>
+        </frame>
+        <frame id="down_right_90">
+          <layerref id="down_right_03" x="12" y="1"/>
+        </frame>
+        <frame id="down_right_91">
+          <layerref id="down_right_04" x="12" y="1"/>
+        </frame>
+        <frame id="down_right_92">
+          <layerref id="down_right_01" x="14" y="2"/>
+        </frame>
+        <frame id="down_right_93">
+          <layerref id="down_right_02" x="14" y="2"/>
+        </frame>
+        <frame id="down_right_94">
+          <layerref id="down_right_03" x="14" y="2"/>
+        </frame>
+        <frame id="down_right_95">
+          <layerref id="down_right_04" x="14" y="2"/>
+        </frame>
+        <frame id="down_right_96">
+          <layerref id="down_right_01" x="16" y="3"/>
+        </frame>
+        <frame id="down_right_97">
+          <layerref id="down_right_02" x="16" y="3"/>
+        </frame>
+        <frame id="down_right_98">
+          <layerref id="down_right_03" x="16" y="3"/>
+        </frame>
+        <frame id="down_right_99">
+          <layerref id="down_right_04" x="16" y="3"/>
+        </frame>
+        <frame id="down_right_100">
+          <layerref id="down_right_01" x="18" y="4"/>
+        </frame>
+        <frame id="down_right_101">
+          <layerref id="down_right_02" x="18" y="4"/>
+        </frame>
+        <frame id="down_right_102">
+          <layerref id="down_right_03" x="18" y="4"/>
+        </frame>
+        <frame id="down_right_103">
+          <layerref id="down_right_04" x="18" y="4"/>
+        </frame>
+        <frame id="turning_104">
+          <layerref id="down_right_04" x="18" y="4" a="0.8"/>
+          <layerref id="right_01" x="22" y="4" a="0.5"/>
+        </frame>
+        <frame id="turning_105">
+          <layerref id="right_01" x="22" y="4"/>
+        </frame>
+        <frame id="turning_106">
+          <layerref id="right_01" x="22" y="4" a="0.8"/>
+          <layerref id="up_01" x="22" y="4" a="0.4"/>
+        </frame>
+        <frame id="up_right_107">
+          <layerref id="up_01" x="22" y="4"/>
+        </frame>
+        <frame id="up_right_108">
+          <layerref id="up_02" x="22" y="4"/>
+        </frame>
+        <frame id="up_right_109">
+          <layerref id="up_03" x="22" y="4"/>
+        </frame>
+        <frame id="up_right_110">
+          <layerref id="up_04" x="22" y="4"/>
+        </frame>
+        <frame id="up_right_111">
+          <layerref id="up_01" x="24" y="3"/>
+        </frame>
+        <frame id="up_right_112">
+          <layerref id="up_02" x="24" y="3"/>
+        </frame>
+        <frame id="up_right_113">
+          <layerref id="up_03" x="24" y="3"/>
+        </frame>
+        <frame id="up_right_114">
+          <layerref id="up_04" x="24" y="3"/>
+        </frame>
+        <frame id="up_right_115">
+          <layerref id="up_01" x="26" y="2"/>
+        </frame>
+        <frame id="up_right_116">
+          <layerref id="up_02" x="26" y="2"/>
+        </frame>
+        <frame id="up_right_117">
+          <layerref id="up_03" x="26" y="2"/>
+        </frame>
+        <frame id="up_right_118">
+          <layerref id="up_04" x="26" y="2"/>
+        </frame>
+        <frame id="up_right_119">
+          <layerref id="up_01" x="28" y="1"/>
+        </frame>
+        <frame id="up_right_120">
+          <layerref id="up_02" x="28" y="1"/>
+        </frame>
+        <frame id="up_right_121">
+          <layerref id="up_03" x="28" y="1"/>
+        </frame>
+        <frame id="up_right_122">
+          <layerref id="up_04" x="28" y="1"/>
+        </frame>
+        <frame id="up_right_123">
+          <layerref id="up_01" x="30"/>
+        </frame>
+        <frame id="up_right_124">
+          <layerref id="up_02" x="30"/>
+        </frame>
+        <frame id="up_right_125">
+          <layerref id="up_03" x="30"/>
+        </frame>
+        <frame id="up_right_126">
+          <layerref id="up_04" x="30"/>
+        </frame>
+        <frame id="bigturn_127">
+          <layerref id="up_04" x="30" a="0.8"/>
+          <layerref id="right_01" x="32" y="-1" a="0.6"/>
+        </frame>
+        <frame id="bigturn_128">
+          <layerref id="right_01" x="32" y="-1"/>
+        </frame>
+        <frame id="bigturn_129">
+          <layerref id="down_turn_right" x="29" y="-1" a="0.8"/>
+          <layerref id="right_01" x="32" y="-1" a="0.5"/>
+        </frame>
+        <frame id="bigturn_130">
+          <layerref id="down_turn_right" x="29" y="-1"/>
+        </frame>
+        <frame id="bigturn_131">
+          <layerref id="down_turn_right" x="29" y="-1" a="0.8"/>
+          <layerref id="down_turn_down" x="29" y="-1" a="0.4"/>
+        </frame>
+        <frame id="bigturn_132">
+          <layerref id="down_turn_down" x="29" y="-1"/>
+        </frame>
+        <frame id="bigturn_133">
+          <layerref id="down_turn_down" x="29" y="-1" a="0.8"/>
+          <layerref id="down_turn_left" x="29" y="-1" a="0.4"/>
+        </frame>
+        <frame id="bigturn_134">
+          <layerref id="down_turn_left" x="29" y="-1"/>
+        </frame>
+        <frame id="bigturn_135">
+          <layerref id="down_turn_left" x="29" y="-1" a="0.8"/>
+          <layerref id="left_01" x="29" y="-1" a="0.4"/>
+        </frame>
+        <frame id="left_136">
+          <layerref id="left_01" x="29" y="-1"/>
+        </frame>
+        <frame id="left_137">
+          <layerref id="left_02" x="29" y="-1"/>
+        </frame>
+        <frame id="left_138">
+          <layerref id="left_01" x="28" y="-1"/>
+        </frame>
+        <frame id="left_139">
+          <layerref id="left_02" x="28" y="-1"/>
+        </frame>
+        <frame id="left_140">
+          <layerref id="left_01" x="27" y="-1"/>
+        </frame>
+        <frame id="left_141">
+          <layerref id="left_02" x="27" y="-1"/>
+        </frame>
+        <frame id="left_142">
+          <layerref id="left_01" x="26" y="-1"/>
+        </frame>
+        <frame id="left_143">
+          <layerref id="left_02" x="26" y="-1"/>
+        </frame>
+        <frame id="left_144">
+          <layerref id="left_01" x="25" y="-1"/>
+        </frame>
+        <frame id="left_145">
+          <layerref id="left_02" x="25" y="-1"/>
+        </frame>
+        <frame id="left_146">
+          <layerref id="left_01" x="24" y="-1"/>
+        </frame>
+        <frame id="left_147">
+          <layerref id="left_02" x="24" y="-1"/>
+        </frame>
+        <frame id="left_148">
+          <layerref id="left_01" x="23" y="-1"/>
+        </frame>
+        <frame id="left_149">
+          <layerref id="left_02" x="23" y="-1"/>
+        </frame>
+        <frame id="left_150">
+          <layerref id="left_01" x="22" y="-1"/>
+        </frame>
+        <frame id="left_151">
+          <layerref id="left_02" x="22" y="-1"/>
+        </frame>
+        <frame id="left_152">
+          <layerref id="left_01" x="21" y="-1"/>
+        </frame>
+        <frame id="left_153">
+          <layerref id="left_02" x="21" y="-1"/>
+        </frame>
+        <frame id="left_154">
+          <layerref id="left_01" x="20" y="-1"/>
+        </frame>
+        <frame id="left_155">
+          <layerref id="left_02" x="20" y="-1"/>
+        </frame>
+        <frame id="left_156">
+          <layerref id="left_01" x="19" y="-1"/>
+        </frame>
+        <frame id="left_157">
+          <layerref id="left_02" x="19" y="-1"/>
+        </frame>
+        <frame id="left_158">
+          <layerref id="left_01" x="18" y="-1"/>
+        </frame>
+        <frame id="left_159">
+          <layerref id="left_02" x="18" y="-1"/>
+        </frame>
+        <frame id="left_160">
+          <layerref id="left_01" x="17" y="-1"/>
+        </frame>
+        <frame id="left_161">
+          <layerref id="left_02" x="17" y="-1"/>
+        </frame>
+        <frame id="left_162">
+          <layerref id="left_01" x="16" y="-1"/>
+        </frame>
+        <frame id="left_163">
+          <layerref id="left_02" x="16" y="-1"/>
+        </frame>
+        <frame id="left_164">
+          <layerref id="left_01" x="15" y="-1"/>
+        </frame>
+        <frame id="left_165">
+          <layerref id="left_02" x="15" y="-1"/>
+        </frame>
+        <frame id="left_166">
+          <layerref id="left_01" x="14" y="-1"/>
+        </frame>
+        <frame id="left_167">
+          <layerref id="left_02" x="14" y="-1"/>
+        </frame>
+        <frame id="left_168">
+          <layerref id="left_01" x="13" y="-1"/>
+        </frame>
+        <frame id="left_169">
+          <layerref id="left_02" x="13" y="-1"/>
+        </frame>
+        <frame id="left_170">
+          <layerref id="left_01" x="12" y="-1"/>
+        </frame>
+        <frame id="left_171">
+          <layerref id="left_02" x="12" y="-1"/>
+        </frame>
+        <frame id="left_172">
+          <layerref id="left_01" x="11" y="-1"/>
+        </frame>
+        <frame id="left_173">
+          <layerref id="left_02" x="11" y="-1"/>
+        </frame>
+        <frame id="left_174">
+          <layerref id="left_01" x="10" y="-1"/>
+        </frame>
+        <frame id="left_175">
+          <layerref id="left_02" x="10" y="-1"/>
+        </frame>
+        <frame id="left_176">
+          <layerref id="left_01" x="9" y="-1"/>
+        </frame>
+        <frame id="left_177">
+          <layerref id="left_02" x="9" y="-1"/>
+        </frame>
+        <frame id="left_178">
+          <layerref id="left_01" x="8" y="-1"/>
+        </frame>
+        <frame id="left_179">
+          <layerref id="left_02" x="8" y="-1"/>
+        </frame>
+        <frame id="left_180">
+          <layerref id="left_01" x="7" y="-1"/>
+        </frame>
+        <frame id="left_181">
+          <layerref id="left_02" x="7" y="-1"/>
+        </frame>
+        <frame id="left_182">
+          <layerref id="left_01" x="6" y="-1"/>
+        </frame>
+        <frame id="left_183">
+          <layerref id="left_02" x="6" y="-1"/>
+        </frame>
+        <frame id="left_184">
+          <layerref id="left_01" x="5" y="-1"/>
+        </frame>
+        <frame id="left_185">
+          <layerref id="left_02" x="5" y="-1"/>
+        </frame>
+        <frame id="left_186">
+          <layerref id="left_01" x="4" y="-1"/>
+        </frame>
+        <frame id="left_187">
+          <layerref id="left_02" x="4" y="-1"/>
+        </frame>
+        <frame id="left_188">
+          <layerref id="left_01" x="3" y="-1"/>
+        </frame>
+        <frame id="left_189">
+          <layerref id="left_02" x="3" y="-1"/>
+        </frame>
+        <frame id="left_190">
+          <layerref id="left_01" x="2" y="-1"/>
+        </frame>
+        <frame id="left_191">
+          <layerref id="left_02" x="2" y="-1"/>
+        </frame>
+        <frame id="left_192">
+          <layerref id="left_01" x="1" y="-1"/>
+        </frame>
+        <frame id="left_193">
+          <layerref id="left_02" x="1" y="-1"/>
+        </frame>
+        <frame id="left_194">
+          <layerref id="left_01"/>
+        </frame>
+        <frame id="left_195">
+          <layerref id="left_02"/>
+        </frame>
+        <frame id="left_195a">
+          <layerref id="left_01" x="-1"/>
+        </frame>
+        <frame id="left_195b">
+          <layerref id="left_02" x="-1"/>
+        </frame>
+        <frame id="left_195c">
+          <layerref id="left_01" x="-2"/>
+        </frame>
+        <frame id="left_195d">
+          <layerref id="left_02" x="-2"/>
+        </frame>
+        <frame id="left_195e">
+          <layerref id="left_01" x="-3"/>
+        </frame>
+        <frame id="turn_196">
+          <layerref id="left_01" x="-3" a="0.5"/>
+          <layerref id="down_left_01" x="-3" a="0.8"/>
+        </frame>
+        <frame id="turn_197">
+          <layerref id="down_left_01" x="-3"/>
+        </frame>
+        <frame id="turn_198">
+          <layerref id="down_left_01" x="-3" a="0.5"/>
+          <layerref id="down_turn_left" x="-3" a="0.8"/>
+        </frame>
+        <frame id="turn_199">
+          <layerref id="down_turn_left" x="-3"/>
+        </frame>
+        <frame id="turn_200">
+          <layerref id="down_turn_left" x="-3" a="0.5"/>
+          <layerref id="down_turn_down" x="-3" a="0.8"/>
+        </frame>
+        <frame id="turn_201">
+          <layerref id="down_turn_down" x="-3"/>
+        </frame>
+        <frame id="turn_202">
+          <layerref id="down_turn_down" x="-3" a="0.8"/>
+          <layerref id="down_turn_right" x="-3" a="0.5"/>
+        </frame>
+        <frame id="turn_203">
+          <layerref id="down_turn_right" x="-3"/>
+        </frame>
+        <frame id="turn_204">
+          <layerref id="down_turn_right" x="-3" a="0.5"/>
+          <layerref id="down_right_01" x="-3" a="0.8"/>
+        </frame>
+        <frame id="turn_205">
+          <layerref id="down_right_01" x="-3"/>
+        </frame>
+        <frame id="turn_206">
+          <layerref id="down_right_01" x="-3" a="0.5"/>
+          <layerref id="right_01" a="0.8"/>
+        </frame>
+        <frame id="turn_207">
+          <layerref id="right_01"/>
+        </frame>
+        <frame id="turn_208">
+          <layerref id="right_01" a="0.6"/>
+          <layerref id="up_01" a="0.7"/>
+        </frame>
+        <frame id="turn_209">
+          <layerref id="up_01"/>
+        </frame>
+        <frame id="idle_01">
+          <layerref id="up_01"/>
+        </frame>
+        <frame id="idle_02">
+          <layerref id="up_01"/>
+          <layerref id="fly_01" a="0.2"/>
+        </frame>
+        <frame id="idle_03">
+          <layerref id="up_01"/>
+          <layerref id="fly_01" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" loop="false">
+          <frameref id="idle_01" duration="2"/>
+        </animation>
+        <animation id="01" loop="false">
+          <frameref id="up_01"/>
+          <frameref id="up_02"/>
+          <frameref id="up_03"/>
+          <frameref id="up_04"/>
+          <frameref id="up_05"/>
+          <frameref id="up_06"/>
+          <frameref id="up_07"/>
+          <frameref id="up_08" duration="4"/>
+          <frameref id="up_09"/>
+          <frameref id="up_09"/>
+          <frameref id="up_10"/>
+          <frameref id="up_11"/>
+          <frameref id="up_12"/>
+          <frameref id="up_13"/>
+          <frameref id="up_14"/>
+          <frameref id="up_15"/>
+          <frameref id="up_16" duration="4"/>
+          <frameref id="up_17"/>
+          <frameref id="up_18"/>
+          <frameref id="up_19"/>
+          <frameref id="up_20"/>
+          <frameref id="up_21"/>
+          <frameref id="up_22"/>
+          <frameref id="up_23"/>
+          <frameref id="up_24"/>
+          <frameref id="up_25"/>
+          <frameref id="up_26"/>
+          <frameref id="up_27"/>
+          <frameref id="up_28"/>
+          <frameref id="turnright_29"/>
+          <frameref id="right_30"/>
+          <frameref id="right_31"/>
+          <frameref id="right_32"/>
+          <frameref id="right_33"/>
+          <frameref id="right_34"/>
+          <frameref id="right_35"/>
+          <frameref id="right_36"/>
+          <frameref id="right_37"/>
+          <frameref id="right_38"/>
+          <frameref id="right_39"/>
+          <frameref id="right_40"/>
+          <frameref id="right_41"/>
+          <frameref id="right_42"/>
+          <frameref id="right_43"/>
+          <frameref id="right_44"/>
+          <frameref id="right_45"/>
+          <frameref id="right_46"/>
+          <frameref id="right_47"/>
+          <frameref id="right_48"/>
+          <frameref id="right_49"/>
+          <frameref id="turndown_50"/>
+          <frameref id="turndown_51"/>
+          <frameref id="down_left_52"/>
+          <frameref id="down_left_53"/>
+          <frameref id="down_left_54"/>
+          <frameref id="down_left_55"/>
+          <frameref id="down_left_56"/>
+          <frameref id="down_left_57"/>
+          <frameref id="down_left_58"/>
+          <frameref id="down_left_59"/>
+          <frameref id="down_left_60"/>
+          <frameref id="down_left_61"/>
+          <frameref id="down_left_62"/>
+          <frameref id="down_left_63"/>
+          <frameref id="down_left_63a"/>
+          <frameref id="down_left_63b"/>
+          <frameref id="down_left_63c"/>
+          <frameref id="down_left_63d"/>
+          <frameref id="down_left_64"/>
+          <frameref id="down_left_65"/>
+          <frameref id="down_left_66"/>
+          <frameref id="down_left_67"/>
+          <frameref id="down_left_68"/>
+          <frameref id="down_left_69"/>
+          <frameref id="down_left_70"/>
+          <frameref id="down_left_71"/>
+          <frameref id="down_turn_72"/>
+          <frameref id="down_turn_73"/>
+          <frameref id="down_turn_74"/>
+          <frameref id="down_turn_75"/>
+          <frameref id="down_turn_76"/>
+          <frameref id="down_turn_77"/>
+          <frameref id="down_turn_78"/>
+          <frameref id="down_turn_79"/>
+          <frameref id="down_right_80"/>
+          <frameref id="down_right_81"/>
+          <frameref id="down_right_82"/>
+          <frameref id="down_right_83"/>
+          <frameref id="down_right_84"/>
+          <frameref id="down_right_85"/>
+          <frameref id="down_right_86"/>
+          <frameref id="down_right_87"/>
+          <frameref id="down_right_88"/>
+          <frameref id="down_right_89"/>
+          <frameref id="down_right_90"/>
+          <frameref id="down_right_91"/>
+          <frameref id="down_right_92"/>
+          <frameref id="down_right_93"/>
+          <frameref id="down_right_94"/>
+          <frameref id="down_right_95"/>
+          <frameref id="down_right_96"/>
+          <frameref id="down_right_97"/>
+          <frameref id="down_right_98"/>
+          <frameref id="down_right_99"/>
+          <frameref id="down_right_100"/>
+          <frameref id="down_right_101"/>
+          <frameref id="down_right_102"/>
+          <frameref id="down_right_103"/>
+          <frameref id="turning_104"/>
+          <frameref id="turning_105"/>
+          <frameref id="turning_106"/>
+          <frameref id="up_right_107"/>
+          <frameref id="up_right_108"/>
+          <frameref id="up_right_109"/>
+          <frameref id="up_right_110"/>
+          <frameref id="up_right_111"/>
+          <frameref id="up_right_112"/>
+          <frameref id="up_right_113"/>
+          <frameref id="up_right_114"/>
+          <frameref id="up_right_115"/>
+          <frameref id="up_right_116"/>
+          <frameref id="up_right_117"/>
+          <frameref id="up_right_118"/>
+          <frameref id="up_right_119"/>
+          <frameref id="up_right_120"/>
+          <frameref id="up_right_121"/>
+          <frameref id="up_right_122"/>
+          <frameref id="up_right_123"/>
+          <frameref id="up_right_124"/>
+          <frameref id="up_right_125"/>
+          <frameref id="up_right_126"/>
+          <frameref id="bigturn_127"/>
+          <frameref id="bigturn_128"/>
+          <frameref id="bigturn_129"/>
+          <frameref id="bigturn_130"/>
+          <frameref id="bigturn_131"/>
+          <frameref id="bigturn_132"/>
+          <frameref id="bigturn_133"/>
+          <frameref id="bigturn_134"/>
+          <frameref id="bigturn_135"/>
+          <frameref id="left_136"/>
+          <frameref id="left_137"/>
+          <frameref id="left_138"/>
+          <frameref id="left_139"/>
+          <frameref id="left_140"/>
+          <frameref id="left_141"/>
+          <frameref id="left_142"/>
+          <frameref id="left_143"/>
+          <frameref id="left_144"/>
+          <frameref id="left_145"/>
+          <frameref id="left_146"/>
+          <frameref id="left_147"/>
+          <frameref id="left_148"/>
+          <frameref id="left_149"/>
+          <frameref id="left_150"/>
+          <frameref id="left_151"/>
+          <frameref id="left_151a"/>
+          <frameref id="left_151b"/>
+          <frameref id="left_151c"/>
+          <frameref id="left_151d"/>
+          <frameref id="left_151e"/>
+          <frameref id="left_151f"/>
+          <frameref id="left_152"/>
+          <frameref id="left_153"/>
+          <frameref id="left_154"/>
+          <frameref id="left_155"/>
+          <frameref id="left_156"/>
+          <frameref id="left_157"/>
+          <frameref id="left_158"/>
+          <frameref id="left_159"/>
+          <frameref id="left_160"/>
+          <frameref id="left_161"/>
+          <frameref id="left_162"/>
+          <frameref id="left_163"/>
+          <frameref id="left_164"/>
+          <frameref id="left_165"/>
+          <frameref id="left_166"/>
+          <frameref id="left_167"/>
+          <frameref id="left_168"/>
+          <frameref id="left_169"/>
+          <frameref id="left_170"/>
+          <frameref id="left_171"/>
+          <frameref id="left_172"/>
+          <frameref id="left_173"/>
+          <frameref id="left_174"/>
+          <frameref id="left_175"/>
+          <frameref id="left_176"/>
+          <frameref id="left_177"/>
+          <frameref id="left_178"/>
+          <frameref id="left_179"/>
+          <frameref id="left_180"/>
+          <frameref id="left_181"/>
+          <frameref id="left_182"/>
+          <frameref id="left_183"/>
+          <frameref id="left_184"/>
+          <frameref id="left_185"/>
+          <frameref id="left_186"/>
+          <frameref id="left_187"/>
+          <frameref id="left_188"/>
+          <frameref id="left_189"/>
+          <frameref id="left_190"/>
+          <frameref id="left_191"/>
+          <frameref id="left_192"/>
+          <frameref id="left_193"/>
+          <frameref id="left_194"/>
+          <frameref id="left_195"/>
+          <frameref id="left_195a"/>
+          <frameref id="left_195b"/>
+          <frameref id="left_195c"/>
+          <frameref id="left_195d"/>
+          <frameref id="left_195e"/>
+          <frameref id="turn_196"/>
+          <frameref id="turn_197"/>
+          <frameref id="turn_198"/>
+          <frameref id="turn_199"/>
+          <frameref id="turn_200"/>
+          <frameref id="turn_201"/>
+          <frameref id="turn_202"/>
+          <frameref id="turn_203"/>
+          <frameref id="turn_204"/>
+          <frameref id="turn_205"/>
+          <frameref id="turn_206"/>
+          <frameref id="turn_207"/>
+          <frameref id="turn_208"/>
+        </animation>
+        <animation id="02" loop="false">
+          <frameref id="up_01" duration="2"/>
+          <frameref id="fly_01" duration="2"/>
+          <frameref id="fly_02" duration="2"/>
+          <frameref id="fly_03"/>
+          <frameref id="fly_02" duration="2"/>
+          <frameref id="fly_03"/>
+          <frameref id="fly_04" duration="2"/>
+          <frameref id="fly_05"/>
+          <frameref id="fly_06"/>
+          <frameref id="fly_06b"/>
+          <frameref id="fly_07"/>
+          <frameref id="fly_08"/>
+          <frameref id="fly_08b"/>
+          <frameref id="fly_09"/>
+          <frameref id="fly_10"/>
+          <frameref id="fly_11"/>
+          <frameref id="fly_12"/>
+          <frameref id="_blank" duration="50"/>
+          <frameref id="fly_12"/>
+          <frameref id="fly_11"/>
+          <frameref id="fly_10"/>
+          <frameref id="fly_09"/>
+          <frameref id="fly_08"/>
+          <frameref id="fly_07"/>
+          <frameref id="fly_06"/>
+          <frameref id="fly_05"/>
+          <frameref id="fly_04" duration="2"/>
+          <frameref id="fly_03"/>
+          <frameref id="fly_02" duration="2"/>
+          <frameref id="fly_03"/>
+          <frameref id="fly_02" duration="2"/>
+          <frameref id="fly_01" duration="4"/>
+          <frameref id="idle_03" duration="15"/>
+          <frameref id="idle_02" duration="15"/>
+          <frameref id="idle_01"/>
+        </animation>
+        <animation id="03" loop="false">
+          <frameref id="turn_208"/>
+          <frameref id="turn_207"/>
+          <frameref id="turn_206"/>
+          <frameref id="turn_205"/>
+          <frameref id="turn_204"/>
+          <frameref id="turn_203"/>
+          <frameref id="turn_202"/>
+          <frameref id="turn_201"/>
+          <frameref id="turn_200"/>
+          <frameref id="turn_199"/>
+          <frameref id="turn_198"/>
+          <frameref id="turn_197"/>
+          <frameref id="turn_196"/>
+          <frameref id="turn_197"/>
+          <frameref id="turn_198"/>
+          <frameref id="turn_199"/>
+          <frameref id="turn_200"/>
+          <frameref id="turn_201"/>
+          <frameref id="turn_202"/>
+          <frameref id="turn_203"/>
+          <frameref id="turn_204"/>
+          <frameref id="turn_205"/>
+          <frameref id="turn_206"/>
+          <frameref id="turn_207"/>
+          <frameref id="turn_208"/>
+        </animation>
+        <animation id="04" loop="false">
+          <frameref id="idle_01" duration="30"/>
+          <frameref id="idle_02"/>
+          <frameref id="idle_03"/>
+        </animation>
+        <animation id="05" loop="false">
+          <frameref id="turn_208"/>
+          <frameref id="turn_207"/>
+          <frameref id="turn_206"/>
+          <frameref id="turn_205" duration="30"/>
+          <frameref id="turn_206"/>
+          <frameref id="turn_207"/>
+          <frameref id="turn_208"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

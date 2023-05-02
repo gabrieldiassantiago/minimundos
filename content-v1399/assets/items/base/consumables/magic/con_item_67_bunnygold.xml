@@ -1,0 +1,35 @@
+<item.SpriteItem id="1981" name="Coelhinho de Ouro" desc="Um coelhinho de chocolate embrulhado em papel dourado muito especial." tags="rare,consumable,actionbar,action_edible,group_good,edible,good,usable,stackable" icon="items/base/consumables/magic/icon_con_item_67_bunnygold.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="250">
+  <volume>
+    <box min="-0.13,0,-0.13" max="0.13,0.6,0.13"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="food-100"/>
+    <entry key="action_attributes_secondary" value="health+5"/>
+  </data>
+  <textures>
+    <texture id="bunny" source="items/base/consumables/magic/con_item_67_bunnygold.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.13,0,-0.13" max="0.13,0.6,0.13"/>
+      <layers>
+        <layer id="Layer01" texture="bunny">
+          <view angle="45" y="9"/>
+          <view angle="135" y="9" hm="true"/>
+          <view angle="225" col="1" y="9"/>
+          <view angle="315" col="1" y="9" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,43 @@
+<f id="Top01_127_Shirt" parentId="Top01">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top01_TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_99_torso_m.png" pri="1"/>
+      <c sId="Top01_TorsoMaleBase" c="4611297" a="1.00" b="64.2" ct="2.00" lId="Top01_127_Color" lw="N"/>
+      <s id="Top01_TorsoMaleDecal" cId="Torso" s="items/base/consumables/clothing/top01/top01_127_shirt_torso_m.png" pri="1.1"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_99_torso_f.png" pri="1"/>
+      <c sId="Top01_TorsoFemaleBase" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Top01_127_Color" lw="N"/>
+      <s id="Top01_TorsoFemaleDecal" cId="Torso" s="items/base/consumables/clothing/top01/top01_127_shirt_torso_f.png" pri="1"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Top01_ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_short_arm_idle.png" pri="1"/>
+    <s id="Top01_ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_short_arm_walk1.png" pri="1"/>
+    <s id="Top01_ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_short_arm_walk2.png" pri="1"/>
+    <s id="Top01_ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_short_arm_walk3.png" pri="1"/>
+    <s id="Top01_ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_short_arm_sit.png" pri="1"/>
+    <s id="Top01_ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_short_arm_throw.png" pri="1"/>
+    <s id="Top01_ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_short_arm_raise.png" pri="1"/>
+    <c sId="Top01_ArmIdleBase" c="4611297" a="1.00" b="64.2" ct="2.00" lId="Top01_127_Color" lw="N"/>
+    <c sId="Top01_ArmWalk1Base" c="4611297" a="1.00" b="64.2" ct="2.00" lId="Top01_127_Color" lw="N"/>
+    <c sId="Top01_ArmWalk2Base" c="4611297" a="1.00" b="64.2" ct="2.00" lId="Top01_127_Color" lw="N"/>
+    <c sId="Top01_ArmWalk3Base" c="4611297" a="1.00" b="64.2" ct="2.00" lId="Top01_127_Color" lw="N"/>
+    <c sId="Top01_ArmSitBase" c="4611297" a="1.00" b="64.2" ct="2.00" lId="Top01_127_Color" lw="N"/>
+    <c sId="Top01_ArmThrowBase" c="4611297" a="1.00" b="64.2" ct="2.00" lId="Top01_127_Color" lw="N"/>
+    <c sId="Top01_ArmRaiseBase" c="4611297" a="1.00" b="64.2" ct="2.00" lId="Top01_127_Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_127" icon="items/base/consumables/clothing/top01/top01_127_shirt_icon_a.png" w="48" h="48"/>
+    <s id="IconTop01_127IconRare" cId="IconTop01_127" s="items/base/consumables/clothing/top01/top01_rare.png" pri="2"/>
+    <s id="IconTop01_127IconBase" cId="IconTop01_127" s="items/base/consumables/clothing/top01/top01_99_symbolcat_icon_1.png" pri="1"/>
+    <c sId="IconTop01_127IconBase" c="4611297" a="1.00" b="64.2" ct="2.00" lId="Top01_127_Color" lw="N"/>
+    <s id="IconTop01_127IconDecal" cId="IconTop01_127" s="items/base/consumables/clothing/top01/top01_127_shirt_icon_1.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_127_Color" name="Color" desc="Choose a color" sel="Blue" seld="White">
+      <c id="Blue" icon="$bu/icon_blue.png" c="4611297" a="1.00" b="64.2" ct="2.00" lId="Top01_127_Color"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

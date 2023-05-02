@@ -1,0 +1,91 @@
+<item.SpriteItem id="1831" name="Camiseta Masculina Estampada" desc="Escolha a sua estampa." tags="consumable,clothing,clothing_basic,actionbar,wear,top01,action_wearable_toggle" icon="items/base/consumables/clothing/top01/top01_03_icon_tlogo_a.png" price="100" tokens="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,0.05,0.35"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable_cycle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top01/top01_03_frag_tlogo.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="gender" value="male"/>
+    <entry key="count" value="4"/>
+    <entry key="00" value="red"/>
+    <entry key="01" value="black"/>
+    <entry key="02" value="bluegreen"/>
+    <entry key="03" value="kaki"/>
+  </data>
+  <textures>
+    <texture id="black" source="items/base/consumables/clothing/top01/top01_03_item_tlogo_black.png" cols="2" rows="1"/>
+    <texture id="red" source="items/base/consumables/clothing/top01/top01_03_item_tlogo.png" cols="2" rows="1"/>
+    <texture id="bluegreen" source="items/base/consumables/clothing/top01/top01_03_item_tlogo_bluegreen.png" cols="2" rows="1"/>
+    <texture id="kaki" source="items/base/consumables/clothing/top01/top01_03_item_tlogo_kaki.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,0.05,0.35"/>
+      <layers>
+        <layer id="red" texture="red">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+        <layer id="black" texture="black">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+        <layer id="bluegreen" texture="bluegreen">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+        <layer id="kaki" texture="kaki">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="red"/>
+        </frame>
+        <frame id="01">
+          <layerref id="black"/>
+        </frame>
+        <frame id="02">
+          <layerref id="bluegreen"/>
+        </frame>
+        <frame id="03">
+          <layerref id="kaki"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="2">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01" framerate="2">
+          <frameref id="01"/>
+        </animation>
+        <animation id="02" framerate="2">
+          <frameref id="02"/>
+        </animation>
+        <animation id="03" framerate="2">
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

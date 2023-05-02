@@ -1,0 +1,62 @@
+<item.SpriteItem id="0" name="Cystal Fairy Wings" desc="A pair of crystal fairy wings" icon="items/base/consumables/back/icon_con_bak_item_244_crystalfairywings.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Cystal Fairy Wings" source="items/base/consumables/back/con_bak_244_crystalfairywings.png" cols="2" rows="5"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="frame1" texture="Cystal Fairy Wings">
+          <view angle="0" row="4" x="5" y="70" hm="true"/>
+          <view angle="45" row="3" x="5" y="70" hm="true"/>
+          <view angle="90" row="1" y="70"/>
+          <view angle="135" row="3" x="-5" y="70"/>
+          <view angle="180" row="4" x="-5" y="70"/>
+          <view angle="225" row="2" x="-5" y="70"/>
+          <view angle="270" y="70"/>
+          <view angle="315" row="2" x="5" y="70" hm="true"/>
+        </layer>
+        <layer id="frame2" texture="Cystal Fairy Wings">
+          <view angle="0" col="1" row="4" x="5" y="70" hm="true"/>
+          <view angle="45" col="1" row="3" x="5" y="70" hm="true"/>
+          <view angle="90" col="1" row="1" y="70"/>
+          <view angle="135" col="1" row="3" x="-5" y="70"/>
+          <view angle="180" col="1" row="4" x="-5" y="70"/>
+          <view angle="225" col="1" row="2" x="-5" y="70"/>
+          <view angle="270" col="1" y="70"/>
+          <view angle="315" col="1" row="2" x="5" y="70" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="frame1"/>
+        </frame>
+        <frame id="alpha"/>
+        <frame id="Frame_02">
+          <layerref id="frame2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame_01">
+            <sample id="flap" loops="-1"/>
+          </frameref>
+          <frameref id="Frame_02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Frame_01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

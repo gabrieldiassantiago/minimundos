@@ -1,0 +1,54 @@
+<item.SpriteItem id="0" name="tron" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/head/con_head_170_tronhelmet.png" cols="6" rows="1"/>
+    <texture id="Visor" source="items/base/consumables/head/con_head_170_tronvisor.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="VisorBack" texture="Visor">
+          <view angle="0" col="2" x="28" y="3" alpha="0" hm="true"/>
+          <view angle="45" x="16" y="10"/>
+          <view angle="90" col="1" y="14" alpha="0"/>
+          <view angle="135" x="-16" y="10" hm="true"/>
+          <view angle="180" col="2" x="-28" y="2" alpha="0"/>
+          <view angle="225" col="3" x="-14" y="-6"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" x="14" y="-8" hm="true"/>
+        </layer>
+        <layer id="head" texture="head">
+          <view angle="0" col="2" x="4" y="7"/>
+          <view angle="45" x="2" y="9"/>
+          <view angle="90" col="1" y="7"/>
+          <view angle="135" x="-2" y="9" hm="true"/>
+          <view angle="180" col="2" x="-4" y="7" hm="true"/>
+          <view angle="225" col="3" y="3"/>
+          <view angle="270" col="4"/>
+          <view angle="315" col="3" y="3" hm="true"/>
+        </layer>
+        <layer id="VisorFront" texture="Visor">
+          <view angle="0" col="2" x="28" y="6" hm="true"/>
+          <view angle="45" x="16" y="10" alpha="0"/>
+          <view angle="90" col="1" y="16"/>
+          <view angle="135" x="-15" y="12" alpha="0" hm="true"/>
+          <view angle="180" col="2" x="-28" y="5"/>
+          <view angle="225" col="3" x="-14" y="-6" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" x="14" y="-8" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame"/>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

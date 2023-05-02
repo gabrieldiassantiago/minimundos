@@ -1,0 +1,89 @@
+<item.SpriteItem id="0" name="tron" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/head/con_head_259_neonhelmet.png" cols="5" rows="1"/>
+    <texture id="glow" source="items/base/consumables/head/con_head_259_neonhelmet_glow.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/consumables/head/con_head_259_neonhelmet_light.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="0" col="2" x="1" y="15"/>
+          <view angle="45" x="-2" y="16"/>
+          <view angle="90" col="1" y="16"/>
+          <view angle="135" x="1" y="16" hm="true"/>
+          <view angle="180" col="2" x="-1" y="15" hm="true"/>
+          <view angle="225" col="3" y="15" hm="true"/>
+          <view angle="270" col="4" y="15"/>
+          <view angle="315" col="3" x="-1" y="15"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame"/>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="head">
+          <view angle="0" col="2" x="1" y="15"/>
+          <view angle="45" x="-2" y="16"/>
+          <view angle="90" col="1" y="16"/>
+          <view angle="135" x="1" y="16" hm="true"/>
+          <view angle="180" col="2" x="-1" y="15" hm="true"/>
+          <view angle="225" col="3" y="15" hm="true"/>
+          <view angle="270" col="4" y="15"/>
+          <view angle="315" col="3" x="-1" y="15"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off"/>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" col="2" x="59" y="-37"/>
+          <view angle="45" x="47" y="-23"/>
+          <view angle="90" col="1" x="2" y="-14"/>
+          <view angle="135" x="-46" y="-22" hm="true"/>
+          <view angle="180" col="2" x="-59" y="-37" hm="true"/>
+          <view angle="225" col="3" x="-53" y="-65" hm="true"/>
+          <view angle="270" col="4" x="2" y="-77"/>
+          <view angle="315" col="3" x="50" y="-65"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

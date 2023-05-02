@@ -1,0 +1,296 @@
+<item.SpriteItem id="5794" name="Tricerátopo Zoom" desc="Um grande dinossauro para montar" tags="rare,nopvp,consumable,actionbar,wear,feet,action_ridable_toggle" icon="items/base/consumables/feet/con_feet_item_153_triceratops_icon.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1.48,0,-0.48" max="0.48,1.4,0.48"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_rideable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="nature+50"/>
+    <entry key="action_attributes_secondary" value="speed+15,health+50"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_108_ufo_shadow.png" cols="1" rows="1"/>
+    <texture id="base" source="items/base/consumables/feet/con_feet_153_triceratops_body.png" cols="5" rows="1"/>
+    <texture id="tail" source="items/base/consumables/feet/con_feet_153_triceratops_tail.png" cols="4" rows="3"/>
+    <texture id="head" source="items/base/consumables/feet/con_feet_153_triceratops_head.png" cols="5" rows="3"/>
+    <texture id="leg" source="items/base/consumables/feet/con_feet_153_triceratops_leg.png" cols="5" rows="5"/>
+    <texture id="decal" source="items/base/consumables/feet/con_feet_153_triceratops_decal.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-1.48,0,-0.48" max="0.48,1.4,0.48"/>
+      <layers>
+        <layer id="leg" texture="leg">
+          <view angle="45" x="-28" y="25"/>
+          <view angle="135" x="28" y="25" hm="true"/>
+          <view angle="225" col="3" x="28" y="60" hm="true"/>
+          <view angle="315" col="3" x="-28" y="60"/>
+        </layer>
+        <layer id="base" texture="base">
+          <view angle="45" x="-32" y="-20"/>
+          <view angle="135" x="32" y="-20" hm="true"/>
+          <view angle="225" col="3" x="32" y="-2" hm="true"/>
+          <view angle="315" col="3" x="-32" y="-2"/>
+        </layer>
+        <layer id="tail_01" texture="tail">
+          <view angle="45" x="-103" y="-33"/>
+          <view angle="135" x="104" y="-33" hm="true"/>
+          <view angle="225" col="2" x="106" y="70" hm="true"/>
+          <view angle="315" col="2" x="-105" y="70"/>
+        </layer>
+        <layer id="tail_02" texture="tail">
+          <view angle="45" row="1" x="-103" y="-33"/>
+          <view angle="135" row="1" x="104" y="-33" hm="true"/>
+          <view angle="225" col="2" row="1" x="106" y="70" hm="true"/>
+          <view angle="315" col="2" row="1" x="-105" y="70"/>
+        </layer>
+        <layer id="tail_03" texture="tail">
+          <view angle="45" row="2" x="-103" y="-33"/>
+          <view angle="135" row="2" x="104" y="-33" hm="true"/>
+          <view angle="225" col="2" row="2" x="106" y="70" hm="true"/>
+          <view angle="315" col="2" row="2" x="-105" y="70"/>
+        </layer>
+        <layer id="head_01" texture="head">
+          <view angle="45" x="28" y="7"/>
+          <view angle="135" x="-28" y="7" hm="true"/>
+          <view angle="225" col="3" x="-33" y="-26" hm="true"/>
+          <view angle="315" col="3" x="33" y="-26"/>
+        </layer>
+        <layer id="head_02" texture="head">
+          <view angle="45" row="1" x="28" y="7"/>
+          <view angle="135" row="1" x="-28" y="7" hm="true"/>
+          <view angle="225" col="3" row="1" x="-33" y="-26" hm="true"/>
+          <view angle="315" col="3" row="1" x="33" y="-26"/>
+        </layer>
+        <layer id="head_03" texture="head">
+          <view angle="45" row="2" x="28" y="7"/>
+          <view angle="135" row="2" x="-28" y="7" hm="true"/>
+          <view angle="225" col="3" row="2" x="-33" y="-26" hm="true"/>
+          <view angle="315" col="3" row="2" x="33" y="-26"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" x="-17" y="66"/>
+          <view angle="135" x="15" y="66" hm="true"/>
+          <view angle="225" x="24" y="84"/>
+          <view angle="315" x="-24" y="84" hm="true"/>
+        </layer>
+        <layer id="decal01" texture="decal">
+          <view angle="45" x="-30" y="55" alpha="0"/>
+          <view angle="135" x="30" y="55" alpha="0" hm="true"/>
+          <view angle="225" x="-7" y="-59"/>
+          <view angle="315" x="7" y="-59" hm="true"/>
+        </layer>
+        <layer id="decal02" texture="decal">
+          <view angle="45" x="-30" y="55" alpha="0"/>
+          <view angle="135" x="30" y="55" alpha="0" hm="true"/>
+          <view angle="225" x="-18" y="-34"/>
+          <view angle="315" x="18" y="-34" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base" y="-1"/>
+          <layerref id="leg"/>
+          <layerref id="tail_01" y="-1"/>
+          <layerref id="head_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base"/>
+          <layerref id="leg"/>
+          <layerref id="tail_02"/>
+          <layerref id="head_02" y="1"/>
+        </frame>
+        <frame id="03">
+          <layerref id="shadow"/>
+          <layerref id="decal01" y="3"/>
+          <layerref id="decal02"/>
+          <layerref id="base" y="1"/>
+          <layerref id="leg"/>
+          <layerref id="tail_01" y="1"/>
+          <layerref id="head_03" y="2"/>
+        </frame>
+        <frame id="04">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base" y="-1"/>
+          <layerref id="leg"/>
+          <layerref id="tail_01" y="-1"/>
+          <layerref id="head_01" y="3"/>
+        </frame>
+        <frame id="05">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base"/>
+          <layerref id="leg"/>
+          <layerref id="tail_03"/>
+          <layerref id="head_01" y="2"/>
+        </frame>
+        <frame id="06">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base" y="1"/>
+          <layerref id="leg"/>
+          <layerref id="tail_03" y="1"/>
+          <layerref id="head_01" y="1"/>
+        </frame>
+        <frame id="07">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base" y="-1"/>
+          <layerref id="leg"/>
+          <layerref id="tail_01" y="-1"/>
+          <layerref id="head_01"/>
+        </frame>
+        <frame id="08">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base"/>
+          <layerref id="leg"/>
+          <layerref id="tail_02"/>
+          <layerref id="head_01" y="1"/>
+        </frame>
+        <frame id="09">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base" y="1"/>
+          <layerref id="leg"/>
+          <layerref id="tail_01" y="1"/>
+          <layerref id="head_01" y="2"/>
+        </frame>
+        <frame id="10">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base" y="-1"/>
+          <layerref id="leg"/>
+          <layerref id="tail_01" y="-1"/>
+          <layerref id="head_01" y="3"/>
+        </frame>
+        <frame id="11">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base"/>
+          <layerref id="leg"/>
+          <layerref id="tail_03"/>
+          <layerref id="head_01" y="2"/>
+        </frame>
+        <frame id="12">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base" y="1"/>
+          <layerref id="leg"/>
+          <layerref id="tail_03" y="1"/>
+          <layerref id="head_01" y="1"/>
+        </frame>
+        <frame id="13">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base" y="-1"/>
+          <layerref id="leg"/>
+          <layerref id="tail_01" y="-1"/>
+          <layerref id="head_01"/>
+        </frame>
+        <frame id="14">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base"/>
+          <layerref id="leg"/>
+          <layerref id="tail_02"/>
+          <layerref id="head_01" y="1"/>
+        </frame>
+        <frame id="15">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base" y="1"/>
+          <layerref id="leg"/>
+          <layerref id="tail_01" y="1"/>
+          <layerref id="head_01" y="2"/>
+        </frame>
+        <frame id="16">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base" y="-1"/>
+          <layerref id="leg"/>
+          <layerref id="tail_01" y="-1"/>
+          <layerref id="head_01" y="3"/>
+        </frame>
+        <frame id="17">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base"/>
+          <layerref id="leg"/>
+          <layerref id="tail_03"/>
+          <layerref id="head_01" y="2"/>
+        </frame>
+        <frame id="18">
+          <layerref id="shadow"/>
+          <layerref id="decal01"/>
+          <layerref id="decal02"/>
+          <layerref id="base" y="1"/>
+          <layerref id="leg"/>
+          <layerref id="tail_03" y="1"/>
+          <layerref id="head_01" y="1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="09"/>
+          <frameref id="10"/>
+          <frameref id="11"/>
+          <frameref id="12"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="09"/>
+          <frameref id="10"/>
+          <frameref id="11"/>
+          <frameref id="12"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="09"/>
+          <frameref id="10"/>
+          <frameref id="11"/>
+          <frameref id="12"/>
+          <frameref id="13"/>
+          <frameref id="14"/>
+          <frameref id="15"/>
+          <frameref id="16"/>
+          <frameref id="17"/>
+          <frameref id="18"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

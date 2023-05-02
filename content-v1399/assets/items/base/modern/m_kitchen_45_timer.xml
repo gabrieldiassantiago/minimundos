@@ -1,0 +1,27 @@
+<item.SpriteItem id="3292" name="Timer Master Chef" desc="Um preciso timer." tags="misc" icon="items/base/modern/icon_m_kitchen_45_timer.png" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="25" tokens="250" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.09,0,-0.12" max="0.09,0.25,0.12"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Kitchen Timer" source="items/base/modern/m_kitchen_45_timer.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.09,0,-0.12" max="0.09,0.25,0.12"/>
+      <layers>
+        <layer id="Layer" texture="Kitchen Timer" y="8">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,34 @@
+<item.SpriteItem id="5717" name="Óculos Polarizado Rock" desc="Um belo par de óculos escuros" tags="consumable,wear,actionbar,clothing,action_wearable_toggle,eye" icon="items/base/consumables/clothing/accessory/acc_537_icon_streamlined_sun_glasses.png" price="725" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" premium="Y">
+  <volume>
+    <box min="-0.32,0,-0.32" max="0.32,0.8,0.32"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="streamlined sunglasses" source="items/base/consumables/clothing/accessory/acc_537_item_streamlined_sun_glasses.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.32,0,-0.32" max="0.32,0.8,0.32"/>
+      <layers>
+        <layer id="streamlined sunglasses" texture="streamlined sunglasses">
+          <view angle="45" x="-7" y="20"/>
+          <view angle="135" x="7" y="20" hm="true"/>
+          <view angle="225" col="1" x="5" y="20"/>
+          <view angle="315" col="1" x="-5" y="20" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

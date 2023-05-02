@@ -1,0 +1,27 @@
+<item.SpriteItem desc="Muito utilizando como divisória em espaços abertos." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/outdoor/icon_o_plant_10_bamboo.png" id="2369" name="Bambu" tags="plant" price="15" tokens="150" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.5,1,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/outdoor/o_plant_10_bamboo.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Bamboo_Clump">
+      <box min="-0.5,0,-0.5" max="0.5,1,0.5"/>
+      <layers>
+        <layer id="Bamboo" texture="Texture" y="11">
+          <view angle="45" x="-23" y="6"/>
+          <view angle="135" x="23" y="6" hm="true"/>
+          <view angle="225" x="9" y="26"/>
+          <view angle="315" x="-9" y="26" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

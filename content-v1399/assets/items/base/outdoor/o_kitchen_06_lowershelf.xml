@@ -1,0 +1,40 @@
+<item.SpriteItem id="3114" name="Móvel Baixo de Jardim Eco" desc="Um móvel de jardim ecológico." tags="table" icon="items/base/outdoor/icon_o_kitchen_06_lowershelf.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="65" tokens="650">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,0.51,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Base" source="items/base/outdoor/o_kitchen_06_lowershelf.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind">
+      <box min="-0.48,0,-0.48" max="0.48,0.51,0.48"/>
+      <layers>
+        <layer id="Base" texture="Base">
+          <view angle="45" x="-3" y="36"/>
+          <view angle="135" x="2" y="36" hm="true"/>
+          <view angle="225" col="1" x="3" y="45"/>
+          <view angle="315" col="1" x="-5" y="45" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Infront" x="-0.47" depthBias="-0.1">
+      <box min="0.01,0,-0.4" max="0.01,0.51,0.4"/>
+      <layers>
+        <layer id="Base" texture="Base">
+          <view angle="45" x="-3" y="36" alpha="0"/>
+          <view angle="135" x="2" y="36" alpha="0" hm="true"/>
+          <view angle="225" col="2" x="-24" y="31"/>
+          <view angle="315" col="2" x="23" y="31" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

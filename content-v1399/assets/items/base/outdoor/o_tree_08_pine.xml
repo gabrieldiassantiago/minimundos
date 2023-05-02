@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="1963" name="Pinheiro" desc="Um pinheiro de verdade." tags="plant" icon="items/base/outdoor/icon_o_tree_08_pine.png" price="65" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" tokens="650">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,3.2,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="pine" source="items/base/outdoor/o_tree_08_pine.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Tree">
+      <box min="-0.49,0,-0.49" max="0.49,3.2,0.49"/>
+      <layers>
+        <layer id="Big Tree" texture="pine" y="9">
+          <view angle="45" x="2" y="24"/>
+          <view angle="135" x="-2" y="24" hm="true"/>
+          <view angle="225" x="2" y="24"/>
+          <view angle="315" x="-2" y="24" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

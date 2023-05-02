@@ -1,0 +1,68 @@
+<f id="Top00_12_MaleLeotard" parentId="Top00">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <g id="Torso">
+        <s id="top00_12_torso" cId="Torso" s="items/base/consumables/clothing/top00/top00_12_leotard_torso_m.png" pri="1"/>
+        <c sId="top00_12_torso" c="5395026" a="0.86" b="43.0" ct="1.97" lId="Top00_12Color" lw="N"/>
+      </g>
+    </g>
+    <g id="Female">
+      <g id="Torso">
+        <s id="top00_12_torso" cId="Torso" s="items/base/consumables/clothing/top00/top00_12_leotard_torso_f.png" pri="1"/>
+        <c sId="top00_12_torso" c="5395026" a="0.86" b="43.0" ct="1.97" lId="Top00_12Color" lw="N"/>
+      </g>
+    </g>
+  </b>
+  <g id="Leg" icon="$bf/icon_legs_skirt.png">
+    <s id="Top00_12_leg_idle" cId="LegIdle" s="$bu/skinny_leg_idle.png" pri="4.2"/>
+    <s id="Top00_12_leg_walk1" cId="LegWalk1" s="$bu/skinny_leg_walk1.png" pri="4.2"/>
+    <s id="Top00_12_leg_walk2" cId="LegWalk2" s="$bu/skinny_leg_walk2.png" pri="4.2"/>
+    <s id="Top00_12_leg_walk3" cId="LegWalk3" s="$bu/skinny_leg_walk3.png" pri="4.2"/>
+    <s id="Top00_12_leg_walk4" cId="LegWalk4" s="$bu/skinny_leg_walk4.png" pri="4.2"/>
+    <s id="Top00_12_leg_uppersit" cId="LegSitUpper" s="$bu/skinny_sit_upper.png" ty="2.5" pri="4.2"/>
+    <s id="Top00_12_leg_lowersit" cId="LegSitLower" s="$bu/skinny_sit_lower.png" ty="2.5" pri="4.2"/>
+    <c sId="Top00_12_leg_idle" c="5395026" a="0.86" b="43.0" ct="1.97" lId="Top00_12Color" lw="N"/>
+    <c sId="Top00_12_leg_walk1" c="5395026" a="0.86" b="43.0" ct="1.97" lId="Top00_12Color" lw="N"/>
+    <c sId="Top00_12_leg_walk2" c="5395026" a="0.86" b="43.0" ct="1.97" lId="Top00_12Color" lw="N"/>
+    <c sId="Top00_12_leg_walk3" c="5395026" a="0.86" b="43.0" ct="1.97" lId="Top00_12Color" lw="N"/>
+    <c sId="Top00_12_leg_walk4" c="5395026" a="0.86" b="43.0" ct="1.97" lId="Top00_12Color" lw="N"/>
+    <c sId="Top00_12_leg_uppersit" c="5395026" a="0.86" b="43.0" ct="1.97" lId="Top00_12Color" lw="N"/>
+    <c sId="Top00_12_leg_lowersit" c="5395026" a="0.86" b="43.0" ct="1.97" lId="Top00_12Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop00_12" icon="items/base/consumables/clothing/top00/top00_12_mleotard_icon_a.png" w="48" h="48"/>
+    <s id="IconTop00_12Base" cId="IconTop00_12" s="items/base/consumables/clothing/top00/top00_12_mleotard_icon_1.png" pri="1"/>
+    <c sId="IconTop00_12Base" c="5395026" a="0.86" b="43.0" ct="1.97" lId="Top00_12Color" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top00_12Color" name="Color" desc="Choose a color" sel="Black" seld="Black">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="1.00" b="77.5" ct="1.44" lId="Top00_12Color"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="0.54" b="33.3" ct="0.64" lId="Top00_12Color"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="14851055" a="1.00" b="28.5" ct="1.17" lId="Top00_12Color"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16231623" a="0.91" b="39.9" ct="0.74" lId="Top00_12Color"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="13921433" a="1.00" b="57.5" ct="0.89" lId="Top00_12Color"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="1.00" b="56.3" ct="2.00" lId="Top00_12Color"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16219662" a="0.73" b="46.3" ct="1.11" lId="Top00_12Color"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="13549580" a="1.00" b="52.4" ct="1.25" lId="Top00_12Color"/>
+      <c id="Green" icon="$bu/icon_green.png" c="910453" a="1.00" b="28.1" ct="1.01" lId="Top00_12Color"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="885791" a="1.00" b="41.5" ct="2.00" lId="Top00_12Color"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="4838565" a="1.00" b="33.7" ct="1.17" lId="Top00_12Color"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2856331" a="1.00" b="47.9" ct="1.67" lId="Top00_12Color"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="7772884" a="1.00" b="43.1" ct="1.25" lId="Top00_12Color"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="3449569" a="1.00" b="54.3" ct="1.61" lId="Top00_12Color"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="5213387" a="1.00" b="24.1" ct="2.00" lId="Top00_12Color"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9658590" a="0.82" b="31.7" ct="1.59" lId="Top00_12Color"/>
+      <c id="Cream" icon="$bu/icon_cream.png" c="13734180" a="0.28" b="40.1" ct="0.34" lId="Top00_12Color"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.9" ct="1.24" lId="Top00_12Color"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.99" b="49.6" ct="1.49" lId="Top00_12Color"/>
+      <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="5528606" a="1.00" b="65.3" ct="2.00" lId="Top00_12Color"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.99" b="73.0" ct="2.00" lId="Top00_12Color"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.99" b="67.2" ct="2.00" lId="Top00_12Color"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="0.86" b="43.0" ct="1.97" lId="Top00_12Color"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=310; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top00_12Color"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

@@ -1,0 +1,94 @@
+<item.SpriteItem id="5407" name="Traje Risco Biológico Play" desc="Um traje que protege você do perigo" tags="rare,consumable,clothing,actionbar,wear,suits,action_wearable_toggle" icon="items/base/consumables/clothing/suits/suit_77_icon_biohazardsuit.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,1.85,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_77_frag_biohazardsuit.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes_secondary" value="speed+50,health+10"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/consumables/clothing/suits/suit_77_item_biohazardsuit_base.png" cols="1" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_halo_spread.png" cols="1" rows="1"/>
+    <texture id="glow" source="items/base/consumables/clothing/suits/suit_09_robot_glow.png" cols="1" rows="1"/>
+    <texture id="BiohazardSuit" source="items/base/consumables/clothing/suits/suit_77_item_biohazardsuit.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,1.85,0.35"/>
+      <layers>
+        <layer id="Robot" texture="BiohazardSuit" y="25">
+          <view angle="45" x="2" y="-28"/>
+          <view angle="135" x="-2" y="-28" hm="true"/>
+          <view angle="225" col="1" x="-4" y="-27" hm="true"/>
+          <view angle="315" col="1" x="4" y="-27"/>
+        </layer>
+        <layer id="Base01" texture="base" y="10">
+          <view angle="45" y="13"/>
+          <view angle="135" y="13" hm="true"/>
+          <view angle="225" y="13"/>
+          <view angle="315" y="13" hm="true"/>
+        </layer>
+        <layer id="Glow" texture="glow" y="23">
+          <view angle="45" y="-26"/>
+          <view angle="135" y="-26"/>
+          <view angle="225" y="-26"/>
+          <view angle="315" y="-26"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Base01"/>
+          <layerref id="Robot"/>
+          <layerref id="Glow" color="0xe8cb62" a="0.75"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.35" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view y="-17"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light" y="25" color="0xea9d5a"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light" y="25" color="0xea9d5a" a="0.95"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Light" y="25" color="0xea9d5a" a="0.9"/>
+        </frame>
+        <frame id="On04">
+          <layerref id="Light" y="25" color="0xea9d5a" a="0.85"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+          <frameref id="On03"/>
+          <frameref id="On02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,37 @@
+<item.SpriteItem id="3901" name="Medalha de Cidadão Bronze" desc="Uma medalha para um cidadão de bronze" tags="consumable,clothing,rare,actionbar,wear,top05,neck,kudos,action_wearable_toggle" icon="items/base/consumables/clothing/top05/top05_31_icon_bronze_medal.png" price="50" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.25" max="0.35,0.1,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top05/top05_31_frag_bronzemedal.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="medal" source="items/base/consumables/clothing/top05/top05_31_item_bronze_medal.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.25" max="0.35,0.1,0.2"/>
+      <layers>
+        <layer id="medal" texture="medal">
+          <view angle="45" y="25"/>
+          <view angle="135" y="25" hm="true"/>
+          <view angle="225" col="1" y="25"/>
+          <view angle="315" col="1" y="25" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

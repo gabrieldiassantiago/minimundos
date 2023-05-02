@@ -1,0 +1,36 @@
+<item.SpriteItem name="Coroa Rubi Play" desc="Uma belíssima coroa (2 de 9)" tags="rare,actionbar,consumable,usable,hat,wear,action_holdable_toggle,nopvp" icon="items/base/consumables/clothing/accessory/acc_521_icon_lv2crown.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="5946">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.5,1,0.5"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+10"/>
+    <entry key="action_attributes_secondary" value="health+20,speed+5"/>
+  </data>
+  <textures>
+    <texture id="crown" source="items/base/consumables/clothing/accessory/acc_521_item_lv2crown.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Crown">
+      <box min="-0.5,0,-0.5" max="0.5,1,0.5"/>
+      <layers>
+        <layer id="Crown" texture="crown" y="25">
+          <view angle="45" x="-1" y="21"/>
+          <view angle="135" x="1" y="21" hm="true"/>
+          <view angle="225" col="1" x="-1" y="21"/>
+          <view angle="315" col="1" x="1" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

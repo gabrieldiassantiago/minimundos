@@ -1,0 +1,354 @@
+<item.SpriteItem id="0" name="Eagle" desc="Bobz" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,0.8,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="fx" source="items/base/consumables/bobz/bobz_fx_nature_wind.png" cols="4" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="EagleMain" source="items/base/consumables/bobz/bobz_16_eagle_wear.png" cols="5" rows="6"/>
+    <texture id="EagleBored" source="items/base/consumables/bobz/bobz_16_eagle_bored.png" cols="4" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="Intro" source="items/base/consumables/bobz/bobz_07_angel_sound_poof.mp3"/>
+    <sound id="Sound" source="items/base/consumables/bobz/bobz_07_angel_sound.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node01">
+      <box min="-0.48,0,-0.48" max="0.48,0.8,0.48"/>
+      <layers>
+        <layer id="Idle01" texture="EagleMain">
+          <view angle="0" row="2"/>
+          <view angle="45" col="1" row="2"/>
+          <view angle="90" col="2" row="2" x="-1" y="3"/>
+          <view angle="135" col="1" row="2" hm="true"/>
+          <view angle="180" row="2" hm="true"/>
+          <view angle="225" col="3" row="2" y="2"/>
+          <view angle="270" col="4" row="2" x="1" y="-2"/>
+          <view angle="315" col="3" row="2" y="2" hm="true"/>
+        </layer>
+        <layer id="Idle02" texture="EagleMain">
+          <view angle="0" y="-13"/>
+          <view angle="45" col="1" x="1" y="-10"/>
+          <view angle="90" col="2" x="-1" y="-5"/>
+          <view angle="135" col="1" x="-1" y="-10" hm="true"/>
+          <view angle="180" y="-13" hm="true"/>
+          <view angle="225" col="3" x="4" y="-6"/>
+          <view angle="270" col="4" x="2"/>
+          <view angle="315" col="3" x="-4" y="-6" hm="true"/>
+        </layer>
+        <layer id="Idle03" texture="EagleMain">
+          <view angle="0" row="1" y="2"/>
+          <view angle="45" col="1" row="1" y="10"/>
+          <view angle="90" col="2" row="1" x="-1" y="13"/>
+          <view angle="135" col="1" row="1" y="10" hm="true"/>
+          <view angle="180" row="1" x="2" hm="true"/>
+          <view angle="225" col="3" row="1" x="1" y="9"/>
+          <view angle="270" col="4" row="1" x="1" y="5"/>
+          <view angle="315" col="3" row="1" x="2" y="9" hm="true"/>
+        </layer>
+        <layer id="Move01" texture="EagleMain">
+          <view angle="0" row="3" x="4"/>
+          <view angle="45" col="1" row="3" x="1" y="4"/>
+          <view angle="90" col="2" row="3" x="-1" y="13"/>
+          <view angle="135" col="1" row="3" x="-1" y="4" hm="true"/>
+          <view angle="180" row="3" x="-4" hm="true"/>
+          <view angle="225" col="3" row="3" x="-1" y="4"/>
+          <view angle="270" col="4" row="3" x="1" y="-2"/>
+          <view angle="315" col="3" row="3" x="1" y="4" hm="true"/>
+        </layer>
+        <layer id="Move02" texture="EagleMain">
+          <view angle="0" row="5" x="4" y="-2"/>
+          <view angle="45" col="1" row="5" x="1" y="2"/>
+          <view angle="90" col="2" row="5" x="1" y="7"/>
+          <view angle="135" col="1" row="5" x="-1" y="2" hm="true"/>
+          <view angle="180" row="4" x="-3" y="-3" hm="true"/>
+          <view angle="225" col="3" row="5" x="-1" y="2"/>
+          <view angle="270" col="4" row="5" x="1" y="-3"/>
+          <view angle="315" col="3" row="5" x="1" y="2" hm="true"/>
+        </layer>
+        <layer id="Move03" texture="EagleMain">
+          <view angle="0" row="4" x="5" y="-1"/>
+          <view angle="45" col="1" row="4" x="-2" y="3"/>
+          <view angle="90" col="2" row="4" x="1" y="11"/>
+          <view angle="135" col="1" row="4" x="1" y="1" hm="true"/>
+          <view angle="180" row="5" x="-4" y="2" hm="true"/>
+          <view angle="225" col="3" row="4" x="-1" y="1"/>
+          <view angle="270" col="4" row="4" y="-6"/>
+          <view angle="315" col="3" row="4" y="3" hm="true"/>
+        </layer>
+        <layer id="Eagle_Bored01" texture="EagleBored">
+          <view angle="0" x="-10" y="-10"/>
+          <view angle="45" col="1" x="13" y="3"/>
+          <view angle="90" col="2" x="11" y="15"/>
+          <view angle="135" col="3" x="18" y="32"/>
+          <view angle="180" row="1" x="-6" y="47"/>
+          <view angle="225" col="1" row="1" x="-32" y="34"/>
+          <view angle="270" col="2" row="1" x="-24" y="13"/>
+          <view angle="315" col="3" row="1" x="-14" y="-4"/>
+        </layer>
+        <layer id="Eagle_Bored02" texture="EagleBored">
+          <view angle="0" col="1" x="13" y="3"/>
+          <view angle="45" col="2" x="11" y="15"/>
+          <view angle="90" col="3" x="18" y="32"/>
+          <view angle="135" row="1" x="-6" y="47"/>
+          <view angle="180" col="1" row="1" x="-32" y="34"/>
+          <view angle="225" col="2" row="1" x="-24" y="13"/>
+          <view angle="270" col="3" row="1" x="-14" y="-4"/>
+          <view angle="315" x="-10" y="-10"/>
+        </layer>
+        <layer id="Eagle_Bored03" texture="EagleBored">
+          <view angle="0" col="2" x="11" y="15"/>
+          <view angle="45" col="3" x="18" y="32"/>
+          <view angle="90" row="1" x="-6" y="47"/>
+          <view angle="135" col="1" row="1" x="-32" y="34"/>
+          <view angle="180" col="2" row="1" x="-24" y="13"/>
+          <view angle="225" col="3" row="1" x="-14" y="-4"/>
+          <view angle="270" x="-10" y="-10"/>
+          <view angle="315" col="1" x="13" y="3"/>
+        </layer>
+        <layer id="Eagle_Bored04" texture="EagleBored">
+          <view angle="0" col="3" x="18" y="32"/>
+          <view angle="45" row="1" x="-6" y="47"/>
+          <view angle="90" col="1" row="1" x="-32" y="34"/>
+          <view angle="135" col="2" row="1" x="-24" y="13"/>
+          <view angle="180" col="3" row="1" x="-14" y="-4"/>
+          <view angle="225" x="-10" y="-10"/>
+          <view angle="270" col="1" x="13" y="3"/>
+          <view angle="315" col="2" x="11" y="15"/>
+        </layer>
+        <layer id="Eagle_Bored05" texture="EagleBored">
+          <view angle="0" row="1" x="-6" y="47"/>
+          <view angle="45" col="1" row="1" x="-32" y="34"/>
+          <view angle="90" col="2" row="1" x="-24" y="13"/>
+          <view angle="135" col="3" row="1" x="-14" y="-4"/>
+          <view angle="180" x="-10" y="-10"/>
+          <view angle="225" col="1" x="13" y="3"/>
+          <view angle="270" col="2" x="11" y="15"/>
+          <view angle="315" col="3" x="18" y="32"/>
+        </layer>
+        <layer id="Eagle_Bored06" texture="EagleBored">
+          <view angle="0" col="1" row="1" x="-32" y="34"/>
+          <view angle="45" col="2" row="1" x="-24" y="13"/>
+          <view angle="90" col="3" row="1" x="-14" y="-4"/>
+          <view angle="135" x="-10" y="-10"/>
+          <view angle="180" col="1" x="13" y="3"/>
+          <view angle="225" col="2" x="11" y="15"/>
+          <view angle="270" col="3" x="18" y="32"/>
+          <view angle="315" row="1" x="-6" y="47"/>
+        </layer>
+        <layer id="Eagle_Bored07" texture="EagleBored">
+          <view angle="0" col="2" row="1" x="-24" y="13"/>
+          <view angle="45" col="3" row="1" x="-14" y="-4"/>
+          <view angle="90" x="-10" y="-10"/>
+          <view angle="135" col="1" x="13" y="3"/>
+          <view angle="180" col="2" x="11" y="15"/>
+          <view angle="225" col="3" x="18" y="32"/>
+          <view angle="270" row="1" x="-6" y="47"/>
+          <view angle="315" col="1" row="1" x="-32" y="34"/>
+        </layer>
+        <layer id="Eagle_Bored08" texture="EagleBored">
+          <view angle="0" col="3" row="1" x="-14" y="-4"/>
+          <view angle="45" x="-10" y="-10"/>
+          <view angle="90" col="1" x="13" y="3"/>
+          <view angle="135" col="2" x="11" y="15"/>
+          <view angle="180" col="3" x="18" y="32"/>
+          <view angle="225" row="1" x="-6" y="47"/>
+          <view angle="270" col="1" row="1" x="-32" y="34"/>
+          <view angle="315" col="2" row="1" x="-24" y="13"/>
+        </layer>
+        <layer id="fx_teleport_01" texture="fx">
+          <view x="-1" y="10"/>
+        </layer>
+        <layer id="fx_teleport_02" texture="fx">
+          <view col="1" x="-1" y="10"/>
+        </layer>
+        <layer id="fx_teleport_03" texture="fx">
+          <view col="2" x="-1" y="10"/>
+        </layer>
+        <layer id="fx_teleport_04" texture="fx">
+          <view col="3" x="-1" y="10"/>
+        </layer>
+        <layer id="fx_teleport_05" texture="fx">
+          <view row="1" x="-1" y="10"/>
+        </layer>
+        <layer id="fx_teleport_06" texture="fx">
+          <view col="1" row="1" x="-1" y="10"/>
+        </layer>
+        <layer id="fx_teleport_07" texture="fx">
+          <view col="2" row="1" x="-1" y="10"/>
+        </layer>
+        <layer id="fx_teleport_08" texture="fx">
+          <view col="3" row="1" x="-1" y="10"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle01">
+          <layerref id="Idle01"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="Idle02"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="Idle03"/>
+        </frame>
+        <frame id="Move01">
+          <layerref id="Move01"/>
+        </frame>
+        <frame id="Move02">
+          <layerref id="Move02"/>
+        </frame>
+        <frame id="Move03">
+          <layerref id="Move01" y="-6"/>
+        </frame>
+        <frame id="Move04">
+          <layerref id="Move03"/>
+        </frame>
+        <frame id="Bored01">
+          <layerref id="Eagle_Bored01"/>
+        </frame>
+        <frame id="Bored02">
+          <layerref id="Eagle_Bored02"/>
+        </frame>
+        <frame id="Bored03">
+          <layerref id="Eagle_Bored03"/>
+        </frame>
+        <frame id="Bored04">
+          <layerref id="Eagle_Bored04"/>
+        </frame>
+        <frame id="Bored05">
+          <layerref id="Eagle_Bored05"/>
+        </frame>
+        <frame id="Bored06">
+          <layerref id="Eagle_Bored06"/>
+        </frame>
+        <frame id="Bored07">
+          <layerref id="Eagle_Bored07"/>
+        </frame>
+        <frame id="Bored08">
+          <layerref id="Eagle_Bored08"/>
+        </frame>
+        <frame id="Start01">
+          <layerref id="Idle01" a="0.1"/>
+          <layerref id="fx_teleport_01" color="0xbdf4f4" a="0.15" blend="overlay"/>
+        </frame>
+        <frame id="Start02">
+          <layerref id="Idle02" a="0.3"/>
+          <layerref id="fx_teleport_02" color="0xbdf4f4" a="0.5" blend="overlay"/>
+        </frame>
+        <frame id="Start03">
+          <layerref id="Idle03" a="0.5"/>
+          <layerref id="fx_teleport_03" color="0xbdf4f4" blend="overlay"/>
+        </frame>
+        <frame id="Start04">
+          <layerref id="Idle01" a="0.6"/>
+          <layerref id="fx_teleport_04" color="0xbdf4f4" blend="overlay"/>
+        </frame>
+        <frame id="Start05">
+          <layerref id="Idle02" a="0.7"/>
+          <layerref id="fx_teleport_05" color="0xbdf4f4" blend="overlay"/>
+        </frame>
+        <frame id="Start06">
+          <layerref id="Idle03" a="0.8"/>
+          <layerref id="fx_teleport_06" color="0xbdf4f4" blend="overlay"/>
+        </frame>
+        <frame id="Start07">
+          <layerref id="Idle01" a="0.9"/>
+          <layerref id="fx_teleport_07" color="0xbdf4f4" blend="overlay"/>
+        </frame>
+        <frame id="Start08">
+          <layerref id="Idle02"/>
+          <layerref id="fx_teleport_08" color="0xbdf4f4" blend="overlay"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Start" loop="false">
+          <frameref id="Start01"/>
+          <frameref id="Start02"/>
+          <frameref id="Start03"/>
+          <frameref id="Start04"/>
+          <frameref id="Start05"/>
+          <frameref id="Start06"/>
+          <frameref id="Start07"/>
+          <frameref id="Start08"/>
+        </animation>
+        <animation id="Stop" loop="false">
+          <frameref id="Start08"/>
+          <frameref id="Start07"/>
+          <frameref id="Start06"/>
+          <frameref id="Start05"/>
+          <frameref id="Start04"/>
+          <frameref id="Start03"/>
+          <frameref id="Start02"/>
+          <frameref id="Start01"/>
+        </animation>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+        </animation>
+        <animation id="Move" framerate="8">
+          <frameref id="Move01" duration="5"/>
+          <frameref id="Move02" duration="2"/>
+          <frameref id="Move03" duration="6"/>
+          <frameref id="Move04" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="Bored" framerate="4">
+      <frame id="B1">
+        <noderef id="Node01" frame="Bored01"/>
+      </frame>
+      <frame id="B2">
+        <noderef id="Node01" y="0.1" frame="Bored02"/>
+      </frame>
+      <frame id="B3">
+        <noderef id="Node01" y="0.5" frame="Bored04"/>
+      </frame>
+      <frame id="B4">
+        <noderef id="Node01" y="0.6" frame="Bored05"/>
+      </frame>
+      <frame id="B5">
+        <noderef id="Node01" y="0.7" frame="Bored06"/>
+      </frame>
+      <frame id="B6">
+        <noderef id="Node01" y="0.8" frame="Bored07"/>
+      </frame>
+      <frame id="B7">
+        <noderef id="Node01" y="0.9" frame="Bored08"/>
+      </frame>
+      <frame id="B8">
+        <noderef id="Node01" y="0.8" frame="Bored01"/>
+      </frame>
+      <frame id="B9">
+        <noderef id="Node01" y="0.7" frame="Bored02"/>
+      </frame>
+      <frame id="B10">
+        <noderef id="Node01" y="0.6" frame="Bored03"/>
+      </frame>
+      <frame id="B11">
+        <noderef id="Node01" y="0.5" frame="Bored04"/>
+      </frame>
+      <frame id="B12">
+        <noderef id="Node01" y="0.4" frame="Bored05"/>
+      </frame>
+      <frame id="B13">
+        <noderef id="Node01" y="0.3" frame="Bored06"/>
+      </frame>
+      <frame id="B14">
+        <noderef id="Node01" y="0.2" frame="Bored07"/>
+      </frame>
+      <frame id="B15">
+        <noderef id="Node01" y="0.1" frame="Bored08"/>
+      </frame>
+      <frame id="B16">
+        <noderef id="Node01" frame="Bored01"/>
+      </frame>
+    </animation>
+  </animations>
+</item.SpriteItem>

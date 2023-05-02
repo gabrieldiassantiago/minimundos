@@ -1,0 +1,27 @@
+<item.SpriteItem name="Destroços do Muro de Berlim" desc="Um pedaço de concreto histórico" tags="misc,rare" icon="items/base/antique/icon_a_fence_berlinwall.png" price="10" tokens="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" id="4852">
+  <volume>
+    <box min="-0.35,0,-0.49" max="0.35,1,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/antique/a_fence_berlinwall.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.49" max="0.35,1,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="40">
+          <view angle="45" x="-2" y="2"/>
+          <view angle="135" x="1" y="2" hm="true"/>
+          <view angle="225" col="1" y="2" hm="true"/>
+          <view angle="315" col="1" y="2"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

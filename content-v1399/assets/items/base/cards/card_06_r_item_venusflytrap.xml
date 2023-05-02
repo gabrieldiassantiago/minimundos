@@ -1,0 +1,30 @@
+<item.SpriteItem id="2389" name="Cartão Planta Carnívora" desc="Um cartão impressionante." tags="card,element_nature,card_rarity_epic_1,stackable,market" icon="items/base/cards/card_06_r_icon_venusflytrap.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none" price="15" gridActive="false">
+  <volume>
+    <box min="-0.19,0,-0.12" max="0.19,0.01,0.12"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="largeIcon" value="items/base/cards/card_06_r_venusflytrap.png"/>
+  </data>
+  <textures>
+    <texture id="card" source="items/base/cards/card_06_r_item_venusflytrap.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Card" layer="floor">
+      <box min="-0.19,0,-0.12" max="0.19,0.01,0.12"/>
+      <layers>
+        <layer id="card" texture="card">
+          <view angle="45" y="12"/>
+          <view angle="135" y="12" hm="true"/>
+          <view angle="225" col="1" y="12"/>
+          <view angle="315" col="1" y="12" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,48 @@
+<item.WidgetItem id="1646" name="Livro de Visitas" desc="Visitantes podem deixar sua marca nele." tags="admin,entrance,widget" icon="items/base/entrance/icon_e_guest_book.png" minLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" viewDirection="vertical" widget="widgets/widget_guestbook.swf" minCPLevel="1" minLevelType="4">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,0.07,0.35"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <data>
+    <entry key="frame" value="modern"/>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_xml_path" value="widgets/assets/guestbook/control-ui.mxml"/>
+    <entry key="config_xml_path" value="widgets/assets/guestbook/config-ui.mxml"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate sitRange="2.00" standRange="2.00" targetRange="1.00" usableRange="-1.00"/>
+  <textures>
+    <texture id="book" source="items/base/entrance/e_guest_book.png" cols="1" rows="1"/>
+    <texture id="pen" source="items/base/entrance/e_guest_pen.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,0.07,0.35"/>
+      <layers>
+        <layer id="book" texture="book">
+          <view angle="45" y="22"/>
+          <view angle="135" y="22" hm="true"/>
+          <view angle="225" y="22"/>
+          <view angle="315" x="1" y="22" hm="true"/>
+        </layer>
+        <layer id="pen" texture="pen">
+          <view angle="45" x="-8" y="10"/>
+          <view angle="135" col="1" x="-14"/>
+          <view angle="225" col="2" x="7" y="-3"/>
+          <view angle="315" col="3" x="15" y="9"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

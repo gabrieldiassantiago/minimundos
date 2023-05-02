@@ -1,0 +1,113 @@
+<item.SpriteItem id="3116" name="Grelha de Jardim Eco" desc="Uma grelha de jardim ecológica." tags="table" icon="items/base/outdoor/icon_o_kitchen_04_grill.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="65" tokens="650">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,1.06,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/outdoor/o_kitchen_03_standard.png" cols="2" rows="1"/>
+    <texture id="hob" source="items/base/outdoor/o_kitchen_04_controls.png" cols="2" rows="1"/>
+    <texture id="gas" source="items/base/outdoor/o_kitchen_04_gas.png" cols="2" rows="2"/>
+    <texture id="Light" source="items/base/outdoor/o_kitchen_04_flare.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Unit">
+      <box min="-0.48,0,-0.48" max="0.48,1.06,0.48"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" x="-2" y="37"/>
+          <view angle="135" y="37" hm="true"/>
+          <view angle="225" col="1" x="2" y="43"/>
+          <view angle="315" col="1" x="-4" y="44" hm="true"/>
+        </layer>
+        <layer id="controls01" texture="hob">
+          <view angle="45" x="8" y="-54"/>
+          <view angle="135" x="-8" y="-54" hm="true"/>
+          <view angle="225" x="-7" y="-64"/>
+          <view angle="315" x="7" y="-64" hm="true"/>
+        </layer>
+        <layer id="controls02" texture="hob">
+          <view angle="45" col="1" x="25" y="-27"/>
+          <view angle="135" col="1" x="-25" y="-27" hm="true"/>
+          <view angle="225" x="-7" y="-64" alpha="0"/>
+          <view angle="315" x="7" y="-64" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Gas01" texture="gas">
+          <view angle="45" row="1" x="6" y="-67" hm="true"/>
+          <view angle="135" row="1" x="-6" y="-67"/>
+          <view angle="225" x="-6" y="-79"/>
+          <view angle="315" x="6" y="-79" hm="true"/>
+        </layer>
+        <layer id="Gas02" texture="gas">
+          <view angle="45" col="1" row="1" x="6" y="-67" hm="true"/>
+          <view angle="135" col="1" row="1" x="-6" y="-67"/>
+          <view angle="225" col="1" x="-6" y="-79"/>
+          <view angle="315" col="1" x="6" y="-79" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="base"/>
+          <layerref id="controls01"/>
+          <layerref id="controls02"/>
+        </frame>
+        <frame id="On01">
+          <layerref id="base"/>
+          <layerref id="controls01"/>
+          <layerref id="controls02"/>
+          <layerref id="Gas01"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="base"/>
+          <layerref id="controls01"/>
+          <layerref id="controls02"/>
+          <layerref id="Gas02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light 1" texture="Light" align="middle">
+          <view angle="45" x="7" y="-82"/>
+          <view angle="135" x="-4" y="-82" hm="true"/>
+          <view angle="225" x="-9" y="-92"/>
+          <view angle="315" x="12" y="-95" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light 1"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light 1" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

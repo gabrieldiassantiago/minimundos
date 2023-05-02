@@ -1,0 +1,44 @@
+<item.SpriteItem id="0" name="Pizza pie projectile" desc="Pizza pie" tags="light" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.08,-0.15,-0.2" max="0.08,0.3,0.2"/>
+  </volume>
+  <textures>
+    <texture id="pie" source="items/base/consumables/throwables/thr_02_pizza_proj.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Pie">
+      <box min="-0.08,-0.15,-0.2" max="0.08,0.3,0.2"/>
+      <layers>
+        <layer id="pie" texture="pie">
+          <view angle="0" y="20"/>
+          <view angle="45" col="1" y="20"/>
+          <view angle="90" col="2" y="20" hm="true"/>
+          <view angle="135" col="1" y="20" hm="true"/>
+          <view angle="180" y="20" hm="true"/>
+          <view angle="225" col="4" y="20" hm="true"/>
+          <view angle="270" col="3" y="20"/>
+          <view angle="315" col="4" y="20"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="pie"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="Frame">
+            <sample id="woosh"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

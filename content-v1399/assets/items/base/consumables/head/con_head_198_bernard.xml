@@ -1,0 +1,59 @@
+<item.SpriteItem id="0" name="St. Bernard" desc="St. Bernard head" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bunny" source="items/base/consumables/head/con_head_198_bernard.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_198_bernard_blink.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="bunny" texture="bunny">
+          <view angle="0" col="2" x="6" y="17"/>
+          <view angle="45" x="-1" y="17"/>
+          <view angle="90" col="1" y="19"/>
+          <view angle="135" y="17" hm="true"/>
+          <view angle="180" col="2" x="-6" y="17" hm="true"/>
+          <view angle="225" col="3" x="1" y="16"/>
+          <view angle="270" col="4" x="-1" y="15"/>
+          <view angle="315" col="3" x="-2" y="16" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="16" y="-2"/>
+          <view angle="45" x="12" y="-3"/>
+          <view angle="90" col="1" y="-1"/>
+          <view angle="135" x="-13" y="-3" hm="true"/>
+          <view angle="180" col="2" x="-16" y="-2" hm="true"/>
+          <view angle="225" x="-32" y="-13" alpha="0"/>
+          <view angle="270" col="1" row="1" y="33"/>
+          <view angle="315" x="31" y="-15" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="blink">
+          <layerref id="bunny"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="normal">
+          <layerref id="bunny"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="normal" duration="15"/>
+          <frameref id="blink"/>
+          <frameref id="normal" duration="10"/>
+          <frameref id="blink"/>
+          <frameref id="normal"/>
+          <frameref id="blink"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

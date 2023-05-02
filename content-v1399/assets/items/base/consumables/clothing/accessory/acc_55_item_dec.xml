@@ -1,0 +1,33 @@
+<item.SpriteItem id="3674" name="Presente de Natal Vermelho" desc="Um embrulho de natal vermelho." tags="rare,hand,usable,wear,kudos,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_55_icon_dec.png" price="150" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.19,0,-0.19" max="0.19,0.25,0.19"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_55_item_dec.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.19,0,-0.19" max="0.19,0.25,0.19"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-1" y="16"/>
+          <view angle="135" y="15" hm="true"/>
+          <view angle="225" col="1" y="15"/>
+          <view angle="315" col="1" y="15" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

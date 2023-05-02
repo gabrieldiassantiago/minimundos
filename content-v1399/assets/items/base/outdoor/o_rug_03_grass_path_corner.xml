@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="A grassy path corner" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" entity="false" gridActive="false" name="Grassy Path Corner" tags="floor">
+  <volume>
+    <box max="1.5,0,1.5" min="-0.5,-0.001,-0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture cols="3" id="Texture" rows="1" source="items/base/outdoor/o_rug_03_grass_path_corner.png"/>
+  </textures>
+  <nodes>
+    <node id="grass" layer="surface" x="0.5" z="0.5">
+      <box max="1,0,1" min="-1,-0.001,-1"/>
+      <layers>
+        <layer id="Layer01" texture="Texture" y="69">
+          <view angle="45"/>
+          <view angle="135" col="2"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="2" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

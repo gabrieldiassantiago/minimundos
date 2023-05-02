@@ -1,0 +1,30 @@
+<item.SpriteItem id="3293" name="Bule de Porcelana Elegance" desc="Um elegante bule para servir chá aos seus convidados." tags="misc" icon="items/base/modern/icon_m_kitchen_46_teapot.png" price="30" tokens="300" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.175,0,-0.175" max="0.175,0.25,0.175"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Teapot" source="items/base/modern/m_kitchen_46_teapot.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.175,0,-0.175" max="0.175,0.25,0.175"/>
+      <layers>
+        <layer id="Layer" texture="Teapot" y="8">
+          <view angle="45" x="2"/>
+          <view angle="135" x="-2" hm="true"/>
+          <view angle="225" col="1" x="-2"/>
+          <view angle="315" col="1" x="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

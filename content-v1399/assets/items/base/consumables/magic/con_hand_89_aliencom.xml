@@ -1,0 +1,70 @@
+<item.SpriteItem id="0" name="Alien Communicator Hand" desc="Potent burping soda in hand" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,-0.1,-0.1" max="0.1,0.5,0.1"/>
+  </volume>
+  <textures>
+    <texture id="com" source="items/base/consumables/magic/con_hand_89_aliencom.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="drink" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,-0.1,-0.1" max="0.1,0.5,0.1"/>
+      <layers>
+        <layer id="com" texture="com">
+          <view angle="0" x="-1" y="7"/>
+          <view angle="45" x="4" y="7"/>
+          <view angle="90" x="4" y="8"/>
+          <view angle="135" x="4" y="9" hm="true"/>
+          <view angle="180" y="11"/>
+          <view angle="225" x="-4" y="10"/>
+          <view angle="270" x="-8" y="6"/>
+          <view angle="315" x="-3" y="5" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="gum">
+          <layerref id="com"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Warmup" framerate="2" loop="false">
+          <frameref id="gum"/>
+        </animation>
+        <animation id="Idle" framerate="4">
+          <frameref id="gum"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="0.9" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" y="-4" hm="true"/>
+          <view angle="45" x="8" y="-9"/>
+          <view angle="90" x="7" y="-4"/>
+          <view angle="135" x="3" y="-4" hm="true"/>
+          <view angle="180" x="4" y="-2"/>
+          <view angle="225" x="-1" y="-1"/>
+          <view angle="270" x="-3" y="-6"/>
+          <view angle="315" x="-3" y="-9" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xabffb4" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Warmup" framerate="4" loop="false">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Idle" framerate="4" loop="false">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

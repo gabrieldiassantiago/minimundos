@@ -1,0 +1,122 @@
+<item.SpriteItem id="1371" name="Lanterna Chinesa" desc="Tradicional iluminação de espaços." tags="light,wall" icon="items/base/antique/icon_a_lamp_04_chi_lantern.png" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="12" tokens="120" minLevel="1" minLevelType="4" minCPLevel="1">
+  <volume>
+    <box min="0,-0.3,-0.25" max="0.001,0.3,0.25"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="hook_single" source="items/base/antique/a_lamp_04_chi_hook_single.png" cols="1" rows="1"/>
+    <texture id="lantern" source="items/base/antique/a_lamp_04_chi_lantern_single.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="lights">
+      <box min="0,-0.3,-0.25" max="0.001,0.3,0.25"/>
+      <layers>
+        <layer id="hook_single" texture="hook_single" align="middle" y="-16">
+          <view angle="45" x="8"/>
+          <view angle="135" x="-8" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="lantern" texture="lantern" align="middle" y="12">
+          <view angle="45" x="14"/>
+          <view angle="135" x="-13" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="lantern_glow" texture="lantern" align="middle" y="12">
+          <view angle="45" col="1" x="14"/>
+          <view angle="135" col="1" x="-13" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="hook_single"/>
+          <layerref id="lantern"/>
+        </frame>
+        <frame id="On">
+          <layerref id="hook_single"/>
+          <layerref id="lantern_glow"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.25" s="3.8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf26767" a="0.8"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0xf26767" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" x="0.25" s="0.8" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" x="2"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xfce0e0" a="0.2"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0xfce0e0" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

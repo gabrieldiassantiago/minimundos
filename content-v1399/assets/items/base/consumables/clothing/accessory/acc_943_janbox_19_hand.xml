@@ -1,0 +1,31 @@
+<item.SpriteItem id="0" name="Wheelbarrow" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="wheelbarrow" source="items/base/consumables/clothing/accessory/acc_943_janbox_19_hand.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Gardening Fork">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="wheelbarrow" texture="wheelbarrow" align="middle">
+          <view angle="0" col="2" x="40" y="55"/>
+          <view angle="45" x="39" y="66"/>
+          <view angle="90" col="1" x="12" y="80"/>
+          <view angle="135" x="-22" y="71" hm="true"/>
+          <view angle="180" col="2" x="-40" y="65" hm="true"/>
+          <view angle="225" col="3" x="-30" y="57" hm="true"/>
+          <view angle="270" col="4" x="-10" y="53"/>
+          <view angle="315" col="3" x="15" y="50"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,87 @@
+<item.WidgetItem desc="Uma entrada para a caverna." dropTargetClamp="floor" dropTargetList="wall,avatar" dropTargetType="none" icon="items/base/outdoor/icon_o_door_03_cave_interior.png" id="1200" name="Entrada da Caverna" tags="door,widget" widget="widgets/widget_portal.swf" price="150" tokens="1500" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.49,2.55,1.49" min="-0.5,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+  </events>
+  <actions>
+    <action event="navigate" id="Navigate" trigger="false"/>
+    <action event="animate(Open)" id="Open" state="true"/>
+    <action event="animate(Closed)" id="Close" state="true"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="portalType" value="door"/>
+    <entry key="maxLinkedSpaces" value="1"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <navigate position="infront" sitRange="1.00" standRange="1.00" targetRange="1.00"/>
+  <textures>
+    <texture cols="1" id="entrance" rows="1" source="items/base/outdoor/o_door_03_cave.png"/>
+    <texture cols="1" id="door" rows="1" source="items/base/outdoor/o_door_03_cave_interior.png"/>
+    <texture cols="3" id="boarded up" rows="1" source="items/base/outdoor/o_door_02_boarded_up_boards.png"/>
+    <texture cols="2" id="sign" rows="1" source="items/base/outdoor/o_door_02_boarded_up_signs.png"/>
+  </textures>
+  <nodes>
+    <node id="Door" x="-0.5" z="0.5">
+      <box max="0.99,2.55,0.99" min="0,0,-0.99"/>
+      <layers>
+        <layer align="middle" id="cave" texture="entrance" y="-100">
+          <view angle="45" hm="true" x="40" y="75"/>
+          <view angle="135" x="-37" y="75"/>
+          <view alpha="0.55" angle="225" hm="true" x="-25" y="42"/>
+          <view alpha="0.55" angle="315" x="25" y="42"/>
+        </layer>
+        <layer align="middle" id="door" texture="door" y="-155">
+          <view angle="45" hm="true" x="21" y="82"/>
+          <view angle="135" x="-19" y="83"/>
+          <view alpha="0" angle="225" hm="true" x="-38" y="52"/>
+          <view alpha="0" angle="315" x="38" y="52"/>
+        </layer>
+        <layer align="middle" id="boarded up" texture="boarded up" y="-100">
+          <view angle="45" hm="true" x="35" y="51"/>
+          <view angle="135" x="-32" y="54"/>
+          <view alpha="0.55" angle="225" hm="true" x="-33" y="29"/>
+          <view alpha="0.55" angle="315" x="33" y="29"/>
+        </layer>
+        <layer align="middle" id="danger" texture="sign" y="-100">
+          <view angle="45" col="1" x="40" y="60"/>
+          <view angle="135" x="-33" y="64"/>
+          <view alpha="0.55" angle="225" col="1" x="-21" y="32"/>
+          <view alpha="0.55" angle="315" x="21" y="32"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="cave"/>
+          <layerref id="door"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="cave"/>
+          <layerref id="door"/>
+          <layerref id="boarded up"/>
+          <layerref id="danger"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="1" id="Open" loop="false">
+          <frameref id="open"/>
+        </animation>
+        <animation framerate="1" id="Closed" loop="false">
+          <frameref id="closed"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

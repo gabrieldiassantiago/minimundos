@@ -1,0 +1,45 @@
+<item.SpriteItem id="0" name="D handbag" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_424_dumbbell_hand.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="dumbbell" texture="Texture">
+          <view angle="0" col="2" x="-42" y="65" hm="true"/>
+          <view angle="45" x="-30" y="54"/>
+          <view angle="90" col="1" x="-4" y="47" hm="true"/>
+          <view angle="135" x="25" y="47" hm="true"/>
+          <view angle="180" col="2" x="44" y="60"/>
+          <view angle="225" x="36" y="75"/>
+          <view angle="270" col="3" x="6" y="87"/>
+          <view angle="315" x="-27" y="80" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="dumbbell"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Idle"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

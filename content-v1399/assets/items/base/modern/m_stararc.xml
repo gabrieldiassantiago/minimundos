@@ -1,0 +1,139 @@
+<item.SpriteItem id="7521" name="Arco de Estrela Glória" desc="Obrigado por jogar MiniMundos" tags="rare,misc" icon="items/base/modern/icon_m_stararc.png" price="10" minLevel="1" minCPLevel="1" gridActive="false" gridSnap="true" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.5,0,-1.5" max="0.5,2.8,1.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="gate" source="items/base/modern/m_stararc.png" cols="4" rows="2"/>
+    <texture id="spark" source="items/base/consumables/magic/con_sparkle.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="open right" z="1">
+      <box min="-0.5,0,-0.5" max="0.5,2.8,0.5"/>
+      <layers>
+        <layer id="front" texture="gate" y="58">
+          <view angle="45" x="-37" y="3" alpha="0"/>
+          <view angle="135" row="1" x="-31" y="-28"/>
+          <view angle="225" col="1" row="1" x="9" y="-28"/>
+          <view angle="315" x="37" y="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="behind" texture="gate">
+          <view angle="45" col="3" row="1" x="-7" y="27"/>
+          <view angle="135" x="-93" y="-30" alpha="0" hm="true"/>
+          <view angle="225" x="92" y="-30" alpha="0"/>
+          <view angle="315" col="2" row="1" x="20" y="27"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="open left" z="1">
+      <box min="-0.5,0,-2.5" max="0.5,2.8,-1.5"/>
+      <layers>
+        <layer id="front" texture="gate" y="58">
+          <view angle="45" x="-107" y="45"/>
+          <view angle="135" x="-26" y="-29" alpha="0" hm="true"/>
+          <view angle="225" x="26" y="-29" alpha="0"/>
+          <view angle="315" col="2" x="124" y="42"/>
+        </layer>
+        <layer id="behind" texture="gate">
+          <view angle="45" x="29" y="2" alpha="0"/>
+          <view angle="135" col="1" x="-122" y="-5"/>
+          <view angle="225" col="3" x="126" y="-11"/>
+          <view angle="315" x="-30" y="2" alpha="0" hm="true"/>
+        </layer>
+        <layer id="spark01" texture="spark">
+          <view angle="45" x="-75" y="-140"/>
+          <view angle="135" x="-40" y="-197"/>
+          <view angle="225" x="10" y="-120"/>
+          <view angle="315" x="123" y="-77"/>
+        </layer>
+        <layer id="spark02" texture="spark">
+          <view angle="45" col="1" x="-75" y="-140"/>
+          <view angle="135" col="1" x="-40" y="-197"/>
+          <view angle="225" col="1" x="10" y="-120"/>
+          <view angle="315" col="1" x="123" y="-77"/>
+        </layer>
+        <layer id="spark03" texture="spark">
+          <view angle="45" col="1" x="-75" y="-140"/>
+          <view angle="135" col="1" x="-40" y="-197"/>
+          <view angle="225" col="1" x="10" y="-120"/>
+          <view angle="315" col="1" x="123" y="-77"/>
+        </layer>
+        <layer id="spark04" texture="spark">
+          <view angle="45" x="-132" y="76"/>
+          <view angle="135" x="-146" y="-102"/>
+          <view angle="225" x="111" y="-69"/>
+          <view angle="315" x="172" y="62"/>
+        </layer>
+        <layer id="spark05" texture="spark">
+          <view angle="45" col="1" x="-132" y="76"/>
+          <view angle="135" col="1" x="-146" y="-102"/>
+          <view angle="225" col="1" x="111" y="-69"/>
+          <view angle="315" col="1" x="172" y="62"/>
+        </layer>
+        <layer id="spark06" texture="spark">
+          <view angle="45" col="2" x="-132" y="76"/>
+          <view angle="135" col="2" x="-146" y="-102"/>
+          <view angle="225" col="2" x="111" y="-69"/>
+          <view angle="315" col="2" x="172" y="62"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="FrameOff">
+          <layerref id="behind"/>
+          <layerref id="front"/>
+        </frame>
+        <frame id="Frame00">
+          <layerref id="behind"/>
+          <layerref id="front"/>
+          <layerref id="spark01"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="behind"/>
+          <layerref id="front"/>
+          <layerref id="spark02"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="behind"/>
+          <layerref id="front"/>
+          <layerref id="spark03"/>
+          <layerref id="spark04"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="behind"/>
+          <layerref id="front"/>
+          <layerref id="spark05"/>
+          <layerref id="spark01"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="behind"/>
+          <layerref id="front"/>
+          <layerref id="spark06"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="behind"/>
+          <layerref id="front"/>
+          <layerref id="spark04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="FrameOff" duration="30"/>
+          <frameref id="Frame00"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

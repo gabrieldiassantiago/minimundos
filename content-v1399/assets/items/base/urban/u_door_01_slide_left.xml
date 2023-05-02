@@ -1,0 +1,778 @@
+<item.SpriteItem id="1769" name="Porta Automática Esquerda" desc="Parece magia, mas é só sensor de movimento mesmo." tags="admin,misc" icon="items/base/urban/icon_u_door_01_slide_left.png" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0.25,0,-3.49" max="0.49,3.4,-1.505"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action event="toggle" id="Toggle" trigger="false"/>
+    <action event="animate(Open)" id="Open" state="true"/>
+    <action event="animate(Closed)" id="Close" state="true"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="doors" source="items/base/urban/u_door_01_slide_glass.png" cols="1" rows="1"/>
+    <texture id="frame 01" source="items/base/urban/u_door_04_slide_top.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="sign" source="items/base/urban/u_door_01_slide_sign.png" cols="1" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="closed" z="0.5">
+      <box min="0.25,0,-3.99" max="0.49,3.4,-2.005"/>
+      <layers>
+        <layer id="top left_a" texture="frame 01" y="58">
+          <view angle="45" x="-165" y="-167" hm="true"/>
+          <view angle="135" x="-92" y="-296"/>
+          <view angle="225" x="38" y="-322" hm="true"/>
+          <view angle="315" x="217" y="-194"/>
+        </layer>
+        <layer id="top left_b" texture="frame 01" y="58">
+          <view angle="45" x="-37" y="-231" hm="true"/>
+          <view angle="135" x="-220" y="-360"/>
+          <view angle="225" x="166" y="-386" hm="true"/>
+          <view angle="315" x="89" y="-258"/>
+        </layer>
+        <layer id="door left_a_00" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="34" y="-71" hm="true"/>
+          <view angle="315" x="95" y="-6"/>
+        </layer>
+        <layer id="door left_b_00" texture="doors" y="58">
+          <view angle="45" x="-35" y="23" hm="true"/>
+          <view angle="135" x="-94" y="-42"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_01" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="42" y="-75" hm="true"/>
+          <view angle="315" x="99" y="-4"/>
+        </layer>
+        <layer id="door left_b_01" texture="doors" y="58">
+          <view angle="45" x="-43" y="27" hm="true"/>
+          <view angle="135" x="-102" y="-46"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_02" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="50" y="-79" hm="true"/>
+          <view angle="315" x="109" y="1"/>
+        </layer>
+        <layer id="door left_b_02" texture="doors" y="58">
+          <view angle="45" x="-51" y="31" hm="true"/>
+          <view angle="135" x="-108" y="-49"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_03" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="58" y="-83" hm="true"/>
+          <view angle="315" x="115" y="4"/>
+        </layer>
+        <layer id="door left_b_03" texture="doors" y="58">
+          <view angle="45" x="-59" y="35" hm="true"/>
+          <view angle="135" x="-116" y="-53"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_04" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="66" y="-87" hm="true"/>
+          <view angle="315" x="125" y="9"/>
+        </layer>
+        <layer id="door left_b_04" texture="doors" y="58">
+          <view angle="45" x="-67" y="39" hm="true"/>
+          <view angle="135" x="-124" y="-57"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_05" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="74" y="-91" hm="true"/>
+          <view angle="315" x="131" y="12"/>
+        </layer>
+        <layer id="door left_b_05" texture="doors" y="58">
+          <view angle="45" x="-73" y="42" hm="true"/>
+          <view angle="135" x="-132" y="-61"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_06" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="82" y="-95" hm="true"/>
+          <view angle="315" x="141" y="17"/>
+        </layer>
+        <layer id="door left_b_06" texture="doors" y="58">
+          <view angle="45" x="-81" y="46" hm="true"/>
+          <view angle="135" x="-140" y="-65"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_07" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="92" y="-100" hm="true"/>
+          <view angle="315" x="149" y="21"/>
+        </layer>
+        <layer id="door left_b_07" texture="doors" y="58">
+          <view angle="45" x="-91" y="51" hm="true"/>
+          <view angle="135" x="-150" y="-70"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_08" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="98" y="-103" hm="true"/>
+          <view angle="315" x="157" y="25"/>
+        </layer>
+        <layer id="door left_b_08" texture="doors" y="58">
+          <view angle="45" x="-99" y="55" hm="true"/>
+          <view angle="135" x="-158" y="-74"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_09" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="108" y="-108" hm="true"/>
+          <view angle="315" x="163" y="28"/>
+        </layer>
+        <layer id="door left_b_09" texture="doors" y="58">
+          <view angle="45" x="-107" y="59" hm="true"/>
+          <view angle="135" x="-166" y="-78"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_10" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="114" y="-111" hm="true"/>
+          <view angle="315" x="173" y="33"/>
+        </layer>
+        <layer id="door left_b_10" texture="doors" y="58">
+          <view angle="45" x="-115" y="63" hm="true"/>
+          <view angle="135" x="-172" y="-81"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_11" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="124" y="-116" hm="true"/>
+          <view angle="315" x="179" y="36"/>
+        </layer>
+        <layer id="door left_b_11" texture="doors" y="58">
+          <view angle="45" x="-123" y="67" hm="true"/>
+          <view angle="135" x="-182" y="-86"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_12" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="130" y="-119" hm="true"/>
+          <view angle="315" x="189" y="41"/>
+        </layer>
+        <layer id="door left_b_12" texture="doors" y="58">
+          <view angle="45" x="-131" y="71" hm="true"/>
+          <view angle="135" x="-190" y="-90"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_13" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="140" y="-124" hm="true"/>
+          <view angle="315" x="197" y="45"/>
+        </layer>
+        <layer id="door left_b_13" texture="doors" y="58">
+          <view angle="45" x="-139" y="75" hm="true"/>
+          <view angle="135" x="-198" y="-94"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_14" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="146" y="-127" hm="true"/>
+          <view angle="315" x="205" y="49"/>
+        </layer>
+        <layer id="door left_b_14" texture="doors" y="58">
+          <view angle="45" x="-147" y="79" hm="true"/>
+          <view angle="135" x="-204" y="-97"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_15" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="156" y="-132" hm="true"/>
+          <view angle="315" x="211" y="52"/>
+        </layer>
+        <layer id="door left_b_15" texture="doors" y="58">
+          <view angle="45" x="-155" y="83" hm="true"/>
+          <view angle="135" x="-214" y="-102"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_16" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="163" y="-135" hm="true"/>
+          <view angle="315" x="220" y="57"/>
+        </layer>
+        <layer id="door left_b_16" texture="doors" y="58">
+          <view angle="45" x="-163" y="87" hm="true"/>
+          <view angle="135" x="-222" y="-106"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="sign" texture="sign" y="58">
+          <view angle="45" x="22" y="-271"/>
+          <view angle="135" row="1" x="-19" y="-269"/>
+          <view angle="225" x="-31" y="-300"/>
+          <view angle="315" row="1" x="38" y="-301"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="hidden">
+          <layerref id="top left_a" a="0"/>
+        </frame>
+        <frame id="open_01">
+          <layerref id="door left_a_00"/>
+          <layerref id="door left_b_00"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_02">
+          <layerref id="door left_a_01"/>
+          <layerref id="door left_b_01"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_03">
+          <layerref id="door left_a_02"/>
+          <layerref id="door left_b_02"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_04">
+          <layerref id="door left_a_03"/>
+          <layerref id="door left_b_03"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_05">
+          <layerref id="door left_a_04"/>
+          <layerref id="door left_b_04"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_06">
+          <layerref id="door left_a_05"/>
+          <layerref id="door left_b_05"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_07">
+          <layerref id="door left_a_06"/>
+          <layerref id="door left_b_06"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_08">
+          <layerref id="door left_a_07"/>
+          <layerref id="door left_b_07"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_09">
+          <layerref id="door left_a_08"/>
+          <layerref id="door left_b_08"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_10">
+          <layerref id="door left_a_09"/>
+          <layerref id="door left_b_09"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_11">
+          <layerref id="door left_a_10"/>
+          <layerref id="door left_b_10"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_12">
+          <layerref id="door left_a_11"/>
+          <layerref id="door left_b_11"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_13">
+          <layerref id="door left_a_12"/>
+          <layerref id="door left_b_12"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_14">
+          <layerref id="door left_a_13"/>
+          <layerref id="door left_b_13"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_15">
+          <layerref id="door left_a_14"/>
+          <layerref id="door left_b_14"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_16">
+          <layerref id="door left_a_15"/>
+          <layerref id="door left_b_15"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_17">
+          <layerref id="door left_a_16"/>
+          <layerref id="door left_b_16"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="16" loop="false">
+          <frameref id="open_17"/>
+          <frameref id="open_16"/>
+          <frameref id="open_15"/>
+          <frameref id="open_14"/>
+          <frameref id="open_13"/>
+          <frameref id="open_12"/>
+          <frameref id="open_11"/>
+          <frameref id="open_10"/>
+          <frameref id="open_09"/>
+          <frameref id="open_08"/>
+          <frameref id="open_07"/>
+          <frameref id="open_06"/>
+          <frameref id="open_05"/>
+          <frameref id="open_04"/>
+          <frameref id="open_03"/>
+          <frameref id="open_02"/>
+          <frameref id="open_01"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="hidden"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open" z="0.5">
+      <box min="0.25,0,-3.99" max="0.49,3.4,-2.005"/>
+      <layers>
+        <layer id="top left_a" texture="frame 01" y="58">
+          <view angle="45" x="-165" y="-167" hm="true"/>
+          <view angle="135" x="-92" y="-296"/>
+          <view angle="225" x="38" y="-322" hm="true"/>
+          <view angle="315" x="217" y="-194"/>
+        </layer>
+        <layer id="top left_b" texture="frame 01" y="58">
+          <view angle="45" x="-37" y="-231" hm="true"/>
+          <view angle="135" x="-220" y="-360"/>
+          <view angle="225" x="166" y="-386" hm="true"/>
+          <view angle="315" x="89" y="-258"/>
+        </layer>
+        <layer id="door left_a_00" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="34" y="-71" hm="true"/>
+          <view angle="315" x="95" y="-6"/>
+        </layer>
+        <layer id="door left_b_00" texture="doors" y="58">
+          <view angle="45" x="-35" y="23" hm="true"/>
+          <view angle="135" x="-94" y="-42"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_01" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="42" y="-75" hm="true"/>
+          <view angle="315" x="99" y="-4"/>
+        </layer>
+        <layer id="door left_b_01" texture="doors" y="58">
+          <view angle="45" x="-43" y="27" hm="true"/>
+          <view angle="135" x="-102" y="-46"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_02" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="50" y="-79" hm="true"/>
+          <view angle="315" x="109" y="1"/>
+        </layer>
+        <layer id="door left_b_02" texture="doors" y="58">
+          <view angle="45" x="-51" y="31" hm="true"/>
+          <view angle="135" x="-108" y="-49"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_03" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="58" y="-83" hm="true"/>
+          <view angle="315" x="115" y="4"/>
+        </layer>
+        <layer id="door left_b_03" texture="doors" y="58">
+          <view angle="45" x="-59" y="35" hm="true"/>
+          <view angle="135" x="-116" y="-53"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_04" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="66" y="-87" hm="true"/>
+          <view angle="315" x="125" y="9"/>
+        </layer>
+        <layer id="door left_b_04" texture="doors" y="58">
+          <view angle="45" x="-67" y="39" hm="true"/>
+          <view angle="135" x="-124" y="-57"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_05" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="74" y="-91" hm="true"/>
+          <view angle="315" x="131" y="12"/>
+        </layer>
+        <layer id="door left_b_05" texture="doors" y="58">
+          <view angle="45" x="-73" y="42" hm="true"/>
+          <view angle="135" x="-132" y="-61"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_06" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="82" y="-95" hm="true"/>
+          <view angle="315" x="141" y="17"/>
+        </layer>
+        <layer id="door left_b_06" texture="doors" y="58">
+          <view angle="45" x="-81" y="46" hm="true"/>
+          <view angle="135" x="-140" y="-65"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_07" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="92" y="-100" hm="true"/>
+          <view angle="315" x="149" y="21"/>
+        </layer>
+        <layer id="door left_b_07" texture="doors" y="58">
+          <view angle="45" x="-91" y="51" hm="true"/>
+          <view angle="135" x="-150" y="-70"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_08" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="98" y="-103" hm="true"/>
+          <view angle="315" x="157" y="25"/>
+        </layer>
+        <layer id="door left_b_08" texture="doors" y="58">
+          <view angle="45" x="-99" y="55" hm="true"/>
+          <view angle="135" x="-158" y="-74"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_09" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="108" y="-108" hm="true"/>
+          <view angle="315" x="163" y="28"/>
+        </layer>
+        <layer id="door left_b_09" texture="doors" y="58">
+          <view angle="45" x="-107" y="59" hm="true"/>
+          <view angle="135" x="-166" y="-78"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_10" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="114" y="-111" hm="true"/>
+          <view angle="315" x="173" y="33"/>
+        </layer>
+        <layer id="door left_b_10" texture="doors" y="58">
+          <view angle="45" x="-115" y="63" hm="true"/>
+          <view angle="135" x="-172" y="-81"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_11" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="124" y="-116" hm="true"/>
+          <view angle="315" x="179" y="36"/>
+        </layer>
+        <layer id="door left_b_11" texture="doors" y="58">
+          <view angle="45" x="-123" y="67" hm="true"/>
+          <view angle="135" x="-182" y="-86"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_12" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="130" y="-119" hm="true"/>
+          <view angle="315" x="189" y="41"/>
+        </layer>
+        <layer id="door left_b_12" texture="doors" y="58">
+          <view angle="45" x="-131" y="71" hm="true"/>
+          <view angle="135" x="-190" y="-90"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_13" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="140" y="-124" hm="true"/>
+          <view angle="315" x="197" y="45"/>
+        </layer>
+        <layer id="door left_b_13" texture="doors" y="58">
+          <view angle="45" x="-139" y="75" hm="true"/>
+          <view angle="135" x="-198" y="-94"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_14" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="146" y="-127" hm="true"/>
+          <view angle="315" x="205" y="49"/>
+        </layer>
+        <layer id="door left_b_14" texture="doors" y="58">
+          <view angle="45" x="-147" y="79" hm="true"/>
+          <view angle="135" x="-204" y="-97"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_15" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="156" y="-132" hm="true"/>
+          <view angle="315" x="211" y="52"/>
+        </layer>
+        <layer id="door left_b_15" texture="doors" y="58">
+          <view angle="45" x="-155" y="83" hm="true"/>
+          <view angle="135" x="-214" y="-102"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="door left_a_16" texture="doors" y="58">
+          <view angle="45" x="-169" y="84" hm="true"/>
+          <view angle="135" x="-216" y="-109"/>
+          <view angle="225" x="163" y="-135" hm="true"/>
+          <view angle="315" x="220" y="57"/>
+        </layer>
+        <layer id="door left_b_16" texture="doors" y="58">
+          <view angle="45" x="-163" y="87" hm="true"/>
+          <view angle="135" x="-222" y="-106"/>
+          <view angle="225" x="169" y="-132" hm="true"/>
+          <view angle="315" x="214" y="60"/>
+        </layer>
+        <layer id="sign" texture="sign" y="58">
+          <view angle="45" x="22" y="-271"/>
+          <view angle="135" row="1" x="-19" y="-269"/>
+          <view angle="225" x="-31" y="-300"/>
+          <view angle="315" row="1" x="38" y="-301"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="hidden">
+          <layerref id="top left_a" a="0"/>
+        </frame>
+        <frame id="open_01">
+          <layerref id="door left_a_00"/>
+          <layerref id="door left_b_00"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_02">
+          <layerref id="door left_a_01"/>
+          <layerref id="door left_b_01"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_03">
+          <layerref id="door left_a_02"/>
+          <layerref id="door left_b_02"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_04">
+          <layerref id="door left_a_03"/>
+          <layerref id="door left_b_03"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_05">
+          <layerref id="door left_a_04"/>
+          <layerref id="door left_b_04"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_06">
+          <layerref id="door left_a_05"/>
+          <layerref id="door left_b_05"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_07">
+          <layerref id="door left_a_06"/>
+          <layerref id="door left_b_06"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_08">
+          <layerref id="door left_a_07"/>
+          <layerref id="door left_b_07"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_09">
+          <layerref id="door left_a_08"/>
+          <layerref id="door left_b_08"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_10">
+          <layerref id="door left_a_09"/>
+          <layerref id="door left_b_09"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_11">
+          <layerref id="door left_a_10"/>
+          <layerref id="door left_b_10"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_12">
+          <layerref id="door left_a_11"/>
+          <layerref id="door left_b_11"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_13">
+          <layerref id="door left_a_12"/>
+          <layerref id="door left_b_12"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_14">
+          <layerref id="door left_a_13"/>
+          <layerref id="door left_b_13"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_15">
+          <layerref id="door left_a_14"/>
+          <layerref id="door left_b_14"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_16">
+          <layerref id="door left_a_15"/>
+          <layerref id="door left_b_15"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+        <frame id="open_17">
+          <layerref id="door left_a_16"/>
+          <layerref id="door left_b_16"/>
+          <layerref id="top left_b"/>
+          <layerref id="top left_a"/>
+          <layerref id="sign"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="hidden"/>
+        </animation>
+        <animation id="Open" framerate="16" loop="false">
+          <frameref id="open_01"/>
+          <frameref id="open_02"/>
+          <frameref id="open_03"/>
+          <frameref id="open_04"/>
+          <frameref id="open_05"/>
+          <frameref id="open_06"/>
+          <frameref id="open_07"/>
+          <frameref id="open_08"/>
+          <frameref id="open_09"/>
+          <frameref id="open_10"/>
+          <frameref id="open_11"/>
+          <frameref id="open_12"/>
+          <frameref id="open_13"/>
+          <frameref id="open_14"/>
+          <frameref id="open_15"/>
+          <frameref id="open_16"/>
+          <frameref id="open_17"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

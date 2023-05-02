@@ -1,0 +1,40 @@
+<item.SpriteItem id="1937" name="Parede de Madeira Velha" desc="Uma parede de madeira antiga." tags="misc" icon="items/base/gothic/icon_g_fence_03_wooden.png" price="35" tokens="350" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.49" max="0.2,2.56,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="x" source="items/base/gothic/g_fence_03_wooden_x.png" cols="1" rows="1"/>
+    <texture id="wall" source="items/base/gothic/g_fence_03_wooden.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" z="0.5">
+      <box min="-0.2,0,-0.99" max="0.2,2.56,0.99"/>
+      <layers>
+        <layer id="wall_behind" texture="wall">
+          <view angle="45" x="31" y="12" hm="true"/>
+          <view angle="135" x="-32" y="12"/>
+          <view angle="225" x="31" y="12" hm="true"/>
+          <view angle="315" x="-31" y="12"/>
+        </layer>
+        <layer id="wall" texture="wall">
+          <view angle="45" x="-35" y="44" hm="true"/>
+          <view angle="135" x="35" y="44"/>
+          <view angle="225" x="-35" y="44" hm="true"/>
+          <view angle="315" x="35" y="44"/>
+        </layer>
+        <layer id="x" texture="x" y="-15">
+          <view angle="45" y="38" hm="true"/>
+          <view angle="135" y="38"/>
+          <view angle="225" y="38" hm="true"/>
+          <view angle="315" y="38"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

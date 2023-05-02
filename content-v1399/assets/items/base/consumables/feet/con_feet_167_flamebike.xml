@@ -1,0 +1,116 @@
+<item.SpriteItem id="6246" name="Motocicleta Fogo Zoom" desc="Sinta o calor" tags="rare,consumable,actionbar,wear,feet,action_driveable_toggle" icon="items/base/consumables/feet/icon_con_feet_167_flamebike.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.44,0,-0.18" max="1.44,1.15,0.18"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="select" script="scripts/item/select_drive.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+50,speed+100"/>
+    <entry key="action_attributes" value="fire+50"/>
+  </data>
+  <textures>
+    <texture id="Bike" source="items/base/consumables/feet/con_feet_167_flamebike_angled.png" cols="2" rows="1"/>
+    <texture id="kickstand" source="items/base/consumables/feet/con_feet_33_scooter_kickstand.png" cols="5" rows="1"/>
+    <texture id="Handle" source="items/base/consumables/feet/con_feet_167_flamebike_decal.png" cols="2" rows="1"/>
+    <texture id="flame_idle" source="items/base/consumables/feet/con_feet_167_flamebike_idle.png" cols="5" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.44,0,-0.18" max="1.44,1.15,0.18"/>
+      <layers>
+        <layer id="kickstand" texture="kickstand">
+          <view angle="45" x="20" y="23"/>
+          <view angle="135" x="-19" y="22" hm="true"/>
+          <view angle="225" col="3" x="-45" y="6" hm="true"/>
+          <view angle="315" col="3" x="46" y="6"/>
+        </layer>
+        <layer id="Bike" texture="Bike">
+          <view angle="45" x="29" y="64"/>
+          <view angle="135" x="-29" y="64" hm="true"/>
+          <view angle="225" col="1" x="-28" y="29"/>
+          <view angle="315" col="1" x="28" y="29" hm="true"/>
+        </layer>
+        <layer id="Handle" texture="Handle">
+          <view angle="45" x="65" y="-63"/>
+          <view angle="135" x="-65" y="-63" hm="true"/>
+          <view angle="225" col="1" x="-30" y="-106"/>
+          <view angle="315" col="1" x="31" y="-105" hm="true"/>
+        </layer>
+        <layer id="Flame_Idle_01" texture="flame_idle">
+          <view angle="45" x="39" y="55"/>
+          <view angle="135" x="-38" y="55" hm="true"/>
+          <view angle="225" col="1" x="-26" y="16"/>
+          <view angle="315" col="1" x="27" y="16" hm="true"/>
+        </layer>
+        <layer id="Flame_Idle_02" texture="flame_idle">
+          <view angle="45" row="1" x="39" y="55"/>
+          <view angle="135" row="1" x="-38" y="55" hm="true"/>
+          <view angle="225" col="1" row="1" x="-26" y="16"/>
+          <view angle="315" col="1" row="1" x="27" y="16" hm="true"/>
+        </layer>
+        <layer id="Flame_Idle_03" texture="flame_idle">
+          <view angle="45" row="2" x="39" y="55"/>
+          <view angle="135" row="2" x="-38" y="55" hm="true"/>
+          <view angle="225" col="1" row="2" x="-26" y="16"/>
+          <view angle="315" col="1" row="2" x="27" y="16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="kickstand"/>
+          <layerref id="Bike"/>
+          <layerref id="Handle"/>
+          <layerref id="Flame_Idle_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="kickstand"/>
+          <layerref id="Bike"/>
+          <layerref id="Handle"/>
+          <layerref id="Flame_Idle_02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="kickstand"/>
+          <layerref id="Bike"/>
+          <layerref id="Handle"/>
+          <layerref id="Flame_Idle_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="13" y="-6"/>
+          <view angle="135" x="-13" y="-6"/>
+          <view angle="225" x="-11" y="-14"/>
+          <view angle="315" x="11" y="-14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf9cac1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

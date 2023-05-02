@@ -1,0 +1,418 @@
+<item.SpriteItem id="6225" name="Zombie Target" desc="Eeeeek!" tags="admin,misc" icon="items/base/urban/u_popzombie_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate_local.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Off" state="true" event="animate(00)"/>
+    <action id="Spawn" state="true" event="animate(01)"/>
+    <action id="Die" state="true" event="animate(02)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="count" value="3"/>
+    <entry key="00" value="Off"/>
+    <entry key="01" value="Spawn"/>
+    <entry key="02" value="Die"/>
+  </data>
+  <textures>
+    <texture id="Cracks" source="items/base/consumables/surfaces/sur_14_cracks_surface.png" cols="4" rows="1"/>
+    <texture id="ZombieHand" source="items/base/urban/u_popzombie_hands.png" cols="4" rows="2"/>
+    <texture id="ZombieHead" source="items/base/urban/u_popzombie_head.png" cols="4" rows="2"/>
+    <texture id="ZombieTorso" source="items/base/urban/u_popzombie_torso.png" cols="3" rows="2"/>
+    <texture id="ZombieStanding" source="items/base/urban/u_popzombie_standing.png" cols="4" rows="1"/>
+    <texture id="Dust01" source="items/base/consumables/fragrances/fra_22_flys_halo.png" cols="4" rows="1"/>
+    <texture id="ZombieDie" source="items/base/urban/u_popzombie_die.png" cols="5" rows="2"/>
+    <texture id="Splat" source="items/base/urban/u_popzombie_splat.png" cols="2" rows="2"/>
+    <texture id="Blood" source="items/base/gothic/g_halloween_01_floorblood.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/gothic/sndfx_coffinroar.mp3"/>
+    <sound id="Sound01" source="items/base/consumables/magic/chainsaw_loop.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0,0.49"/>
+      <layers>
+        <layer id="Crack01" texture="Cracks">
+          <view angle="45" x="1" y="37"/>
+          <view angle="135" x="1" y="37" hm="true"/>
+          <view angle="225" x="1" y="37"/>
+          <view angle="315" x="1" y="37" hm="true"/>
+        </layer>
+        <layer id="Crack02" texture="Cracks">
+          <view angle="45" col="1" x="1" y="37"/>
+          <view angle="135" col="1" x="1" y="37" hm="true"/>
+          <view angle="225" col="1" x="1" y="37"/>
+          <view angle="315" col="1" x="1" y="37" hm="true"/>
+        </layer>
+        <layer id="Crack03" texture="Cracks">
+          <view angle="45" col="2" x="1" y="37"/>
+          <view angle="135" col="2" x="1" y="37" hm="true"/>
+          <view angle="225" col="2" x="1" y="37"/>
+          <view angle="315" col="2" x="1" y="37" hm="true"/>
+        </layer>
+        <layer id="Crack04" texture="Cracks">
+          <view angle="45" col="3" x="1" y="37"/>
+          <view angle="135" col="3" x="1" y="37" hm="true"/>
+          <view angle="225" col="3" x="1" y="37"/>
+          <view angle="315" col="3" x="1" y="37" hm="true"/>
+        </layer>
+        <layer id="Hand01" texture="ZombieHand">
+          <view angle="45" x="-7" y="19"/>
+          <view angle="135" x="10" y="20" hm="true"/>
+          <view angle="225" row="1" x="-26" y="12"/>
+          <view angle="315" row="1" x="26" y="12" hm="true"/>
+        </layer>
+        <layer id="Hand02" texture="ZombieHand">
+          <view angle="45" col="1" x="-6" y="19" hm="true"/>
+          <view angle="135" col="1" x="8" y="19"/>
+          <view angle="225" col="1" row="1" x="-24" y="13" hm="true"/>
+          <view angle="315" col="1" row="1" x="24" y="13"/>
+        </layer>
+        <layer id="Hand03" texture="ZombieHand">
+          <view angle="45" col="2" x="-3" y="19" hm="true"/>
+          <view angle="135" col="2" x="5" y="20"/>
+          <view angle="225" col="2" row="1" x="-27" y="12" hm="true"/>
+          <view angle="315" col="2" row="1" x="27" y="12"/>
+        </layer>
+        <layer id="Hand04" texture="ZombieHand">
+          <view angle="45" col="3" x="-6" y="21" hm="true"/>
+          <view angle="135" col="3" x="6" y="20"/>
+          <view angle="225" col="3" row="1" x="-26" y="11" hm="true"/>
+          <view angle="315" col="3" row="1" x="26" y="11"/>
+        </layer>
+        <layer id="Head01" texture="ZombieHead">
+          <view angle="45" x="8" y="10"/>
+          <view angle="135" x="-4" y="10" hm="true"/>
+          <view angle="225" row="1" x="8" y="18" hm="true"/>
+          <view angle="315" row="1" x="-8" y="18"/>
+        </layer>
+        <layer id="Head02" texture="ZombieHead">
+          <view angle="45" col="1" x="8" y="10"/>
+          <view angle="135" col="1" x="-4" y="10" hm="true"/>
+          <view angle="225" col="1" row="1" x="9" y="18" hm="true"/>
+          <view angle="315" col="1" row="1" x="-9" y="18"/>
+        </layer>
+        <layer id="Head03" texture="ZombieHead">
+          <view angle="45" col="2" x="8" y="10"/>
+          <view angle="135" col="2" x="-4" y="10" hm="true"/>
+          <view angle="225" col="2" row="1" x="9" y="19" hm="true"/>
+          <view angle="315" col="2" row="1" x="-9" y="19"/>
+        </layer>
+        <layer id="Head04" texture="ZombieHead">
+          <view angle="45" col="3" x="8" y="10"/>
+          <view angle="135" col="3" x="-4" y="10" hm="true"/>
+          <view angle="225" col="3" row="1" x="7" y="19" hm="true"/>
+          <view angle="315" col="3" row="1" x="-7" y="19"/>
+        </layer>
+        <layer id="Torso01" texture="ZombieTorso">
+          <view angle="45" x="8" y="9"/>
+          <view angle="135" x="-4" y="10" hm="true"/>
+          <view angle="225" row="1" x="7" y="18"/>
+          <view angle="315" row="1" x="-7" y="18" hm="true"/>
+        </layer>
+        <layer id="Torso02" texture="ZombieTorso">
+          <view angle="45" col="1" x="8" y="9"/>
+          <view angle="135" col="1" x="-4" y="10" hm="true"/>
+          <view angle="225" col="1" row="1" x="5" y="18"/>
+          <view angle="315" col="1" row="1" x="-5" y="18" hm="true"/>
+        </layer>
+        <layer id="Torso03" texture="ZombieTorso">
+          <view angle="45" col="2" x="8" y="9"/>
+          <view angle="135" col="2" x="-4" y="10" hm="true"/>
+          <view angle="225" col="2" row="1" x="5" y="18"/>
+          <view angle="315" col="2" row="1" x="-5" y="18" hm="true"/>
+        </layer>
+        <layer id="ArmsDown" texture="ZombieStanding">
+          <view angle="45" x="8" y="9"/>
+          <view angle="135" x="-4" y="10" hm="true"/>
+          <view angle="225" col="1" x="5" y="18"/>
+          <view angle="315" col="1" x="-5" y="18" hm="true"/>
+        </layer>
+        <layer id="ArmsUp01" texture="ZombieStanding">
+          <view angle="45" col="2" x="20" y="10"/>
+          <view angle="135" col="2" x="-14" y="10" hm="true"/>
+          <view angle="225" col="3" x="-14" y="10"/>
+          <view angle="315" col="3" x="14" y="10" hm="true"/>
+        </layer>
+        <layer id="ArmsUp02" texture="ZombieStanding">
+          <view angle="45" col="2" x="18" y="10"/>
+          <view angle="135" col="2" x="-11" y="10" hm="true"/>
+          <view angle="225" col="3" x="-11" y="10"/>
+          <view angle="315" col="3" x="11" y="10" hm="true"/>
+        </layer>
+        <layer id="Dust01" texture="Dust01">
+          <view angle="45" col="2" x="5" y="15" alpha="0.75"/>
+          <view angle="135" col="3" x="-4" y="10" hm="true"/>
+          <view angle="225" col="3" row="1" x="5" y="8"/>
+          <view angle="315" col="3" row="1" x="-3" y="8" hm="true"/>
+        </layer>
+        <layer id="Dust02" texture="Dust01">
+          <view angle="45" col="1" x="5" y="15" alpha="0.75"/>
+          <view angle="135" col="1" x="-4" y="10" hm="true"/>
+          <view angle="225" col="1" x="5" y="8"/>
+          <view angle="315" col="1" x="-3" y="8" hm="true"/>
+        </layer>
+        <layer id="Splat01" texture="Splat">
+          <view angle="45" x="24" y="-33"/>
+          <view angle="135" x="-24" y="-33" hm="true"/>
+          <view angle="225" x="-24" y="-33"/>
+          <view angle="315" x="24" y="-33" hm="true"/>
+        </layer>
+        <layer id="Splat02" texture="Splat">
+          <view angle="45" col="1" x="24" y="-26"/>
+          <view angle="135" col="1" x="-24" y="-26" hm="true"/>
+          <view angle="225" col="1" x="-24" y="-26"/>
+          <view angle="315" col="1" x="24" y="-26" hm="true"/>
+        </layer>
+        <layer id="Splat03" texture="Splat">
+          <view angle="45" row="1" x="24" y="-23"/>
+          <view angle="135" row="1" x="-24" y="-23" hm="true"/>
+          <view angle="225" row="1" x="-24" y="-23"/>
+          <view angle="315" row="1" x="24" y="-23" hm="true"/>
+        </layer>
+        <layer id="Splat04" texture="Splat">
+          <view angle="45" col="1" row="1" x="24" y="-23"/>
+          <view angle="135" col="1" row="1" x="-24" y="-23" hm="true"/>
+          <view angle="225" col="1" row="1" x="-24" y="-23"/>
+          <view angle="315" col="1" row="1" x="24" y="-23" hm="true"/>
+        </layer>
+        <layer id="Die01" texture="ZombieDie">
+          <view angle="45" x="14" y="40"/>
+          <view angle="135" x="-14" y="40" hm="true"/>
+          <view angle="225" row="1" x="-9" y="29"/>
+          <view angle="315" row="1" x="9" y="29" hm="true"/>
+        </layer>
+        <layer id="Die02" texture="ZombieDie">
+          <view angle="45" col="1" x="26" y="40"/>
+          <view angle="135" col="1" x="-26" y="40" hm="true"/>
+          <view angle="225" col="1" row="1" x="-10" y="29"/>
+          <view angle="315" col="1" row="1" x="10" y="29" hm="true"/>
+        </layer>
+        <layer id="Die03" texture="ZombieDie">
+          <view angle="45" col="2" x="13" y="40"/>
+          <view angle="135" col="2" x="-13" y="40" hm="true"/>
+          <view angle="225" col="2" row="1" x="5" y="8"/>
+          <view angle="315" col="2" row="1" x="-3" y="8" hm="true"/>
+        </layer>
+        <layer id="Die04" texture="ZombieDie">
+          <view angle="45" col="3" x="26" y="40"/>
+          <view angle="135" col="3" x="-26" y="40" hm="true"/>
+          <view angle="225" col="3" row="1" x="-8" y="32"/>
+          <view angle="315" col="3" row="1" x="8" y="32" hm="true"/>
+        </layer>
+        <layer id="Die05" texture="ZombieDie">
+          <view angle="45" col="4" x="25" y="40"/>
+          <view angle="135" col="4" x="-25" y="40" hm="true"/>
+          <view angle="225" col="4" row="1" x="-9" y="32"/>
+          <view angle="315" col="4" row="1" x="9" y="32" hm="true"/>
+        </layer>
+        <layer id="Splat05" texture="Splat">
+          <view angle="45" x="15" y="12"/>
+          <view angle="135" x="-4" y="10" hm="true"/>
+          <view angle="225" x="5" y="8"/>
+          <view angle="315" x="-3" y="8" hm="true"/>
+        </layer>
+        <layer id="Splat06" texture="Splat">
+          <view angle="45" col="1" x="15" y="12"/>
+          <view angle="135" col="1" x="-4" y="10" hm="true"/>
+          <view angle="225" col="1" x="5" y="8"/>
+          <view angle="315" col="1" x="-3" y="8" hm="true"/>
+        </layer>
+        <layer id="Puddle" texture="Blood">
+          <view angle="45" y="40"/>
+          <view angle="135" y="40"/>
+          <view angle="225" y="40"/>
+          <view angle="315" y="40"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Crack01" a="0"/>
+        </frame>
+        <frame id="In01">
+          <layerref id="Crack01"/>
+        </frame>
+        <frame id="In02">
+          <layerref id="Crack02"/>
+        </frame>
+        <frame id="In03">
+          <layerref id="Crack03"/>
+        </frame>
+        <frame id="In04">
+          <layerref id="Crack04"/>
+        </frame>
+        <frame id="In05">
+          <layerref id="Crack04"/>
+          <layerref id="Hand01"/>
+        </frame>
+        <frame id="In06">
+          <layerref id="Crack04"/>
+          <layerref id="Hand02"/>
+        </frame>
+        <frame id="In07">
+          <layerref id="Crack04"/>
+          <layerref id="Hand03"/>
+        </frame>
+        <frame id="In08">
+          <layerref id="Crack04"/>
+          <layerref id="Hand04"/>
+        </frame>
+        <frame id="In09">
+          <layerref id="Crack04"/>
+          <layerref id="Hand04"/>
+          <layerref id="Head01"/>
+        </frame>
+        <frame id="In10">
+          <layerref id="Crack04"/>
+          <layerref id="Hand04"/>
+          <layerref id="Head02"/>
+        </frame>
+        <frame id="In11">
+          <layerref id="Crack04"/>
+          <layerref id="Hand04"/>
+          <layerref id="Head03"/>
+        </frame>
+        <frame id="In12">
+          <layerref id="Crack04"/>
+          <layerref id="Head04"/>
+          <layerref id="Hand04"/>
+        </frame>
+        <frame id="In13">
+          <layerref id="Crack04"/>
+          <layerref id="Torso01"/>
+        </frame>
+        <frame id="In14">
+          <layerref id="Crack04"/>
+          <layerref id="Torso02"/>
+        </frame>
+        <frame id="In15">
+          <layerref id="Crack04"/>
+          <layerref id="Torso03"/>
+        </frame>
+        <frame id="In16">
+          <layerref id="Crack04"/>
+          <layerref id="ArmsDown"/>
+          <layerref id="Dust01" a="0.75"/>
+        </frame>
+        <frame id="In17">
+          <layerref id="Crack04"/>
+          <layerref id="ArmsUp01"/>
+          <layerref id="Dust02"/>
+        </frame>
+        <frame id="Out01">
+          <layerref id="Crack04"/>
+          <layerref id="ArmsUp01"/>
+          <layerref id="Splat01"/>
+        </frame>
+        <frame id="Out02">
+          <layerref id="Crack04"/>
+          <layerref id="ArmsUp01"/>
+          <layerref id="Splat02"/>
+        </frame>
+        <frame id="Out03">
+          <layerref id="Crack04"/>
+          <layerref id="ArmsUp02" a="0.3"/>
+          <layerref id="ArmsUp01"/>
+          <layerref id="Splat03"/>
+        </frame>
+        <frame id="Out04">
+          <layerref id="Crack04"/>
+          <layerref id="ArmsUp01" a="0.3"/>
+          <layerref id="ArmsUp02"/>
+          <layerref id="Splat04"/>
+        </frame>
+        <frame id="Out05">
+          <layerref id="Crack04"/>
+          <layerref id="ArmsUp02" a="0.3"/>
+          <layerref id="ArmsUp01"/>
+        </frame>
+        <frame id="Out06">
+          <layerref id="Crack04"/>
+          <layerref id="ArmsUp01" a="0.3"/>
+          <layerref id="ArmsUp02"/>
+        </frame>
+        <frame id="Out07">
+          <layerref id="Crack04"/>
+          <layerref id="ArmsUp01"/>
+        </frame>
+        <frame id="Out08">
+          <layerref id="Crack04"/>
+          <layerref id="Die01"/>
+          <layerref id="Splat02"/>
+        </frame>
+        <frame id="Out09">
+          <layerref id="Crack04"/>
+          <layerref id="Die02"/>
+          <layerref id="Splat05"/>
+        </frame>
+        <frame id="Out10">
+          <layerref id="Crack04"/>
+          <layerref id="Die02"/>
+          <layerref id="Splat04"/>
+        </frame>
+        <frame id="Out11">
+          <layerref id="Puddle"/>
+          <layerref id="Crack04"/>
+          <layerref id="Die04"/>
+        </frame>
+        <frame id="Out12">
+          <layerref id="Puddle"/>
+          <layerref id="Crack04"/>
+          <layerref id="Die05"/>
+        </frame>
+        <frame id="Out13">
+          <layerref id="Puddle" a="0.6"/>
+          <layerref id="Crack04" a="0.5"/>
+          <layerref id="Die05" a="0.5"/>
+        </frame>
+        <frame id="Out14">
+          <layerref id="Puddle" a="0.2"/>
+          <layerref id="Crack04" a="0.1"/>
+          <layerref id="Die05" a="0.1"/>
+        </frame>
+        <frame id="Out15">
+          <layerref id="Puddle" a="0"/>
+          <layerref id="Crack04" a="0"/>
+          <layerref id="Die05" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00">
+          <frameref id="In01"/>
+        </animation>
+        <animation id="01" framerate="4" loop="false">
+          <frameref id="Off"/>
+          <frameref id="In01"/>
+          <frameref id="In06">
+            <sample id="Sound"/>
+          </frameref>
+          <frameref id="In08"/>
+          <frameref id="In10"/>
+          <frameref id="In11"/>
+          <frameref id="In14"/>
+          <frameref id="In17"/>
+        </animation>
+        <animation id="02" framerate="4" loop="false">
+          <frameref id="Out04">
+            <sample id="Sound01" vol="4"/>
+          </frameref>
+          <frameref id="Out08"/>
+          <frameref id="Out10" duration="2"/>
+          <frameref id="Out11" duration="2"/>
+          <frameref id="Out12" duration="16"/>
+          <frameref id="Out14"/>
+          <frameref id="Out15"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

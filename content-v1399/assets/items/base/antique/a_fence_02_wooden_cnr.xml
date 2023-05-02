@@ -1,0 +1,34 @@
+<item.SpriteItem desc="Um canto da cerca de madeira" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/antique/icon_a_fence_02_wooden_cnr.png" id="1063" name="Canto da Cerca de Madeira" tags="misc" price="13" tokens="130" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.5,1,0.2" min="-0.2,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="2" id="fence" rows="1" source="items/base/antique/a_fence_02_wooden.png"/>
+    <texture cols="4" id="posts" rows="1" source="items/base/antique/a_fence_02_wooden_cnr_posts.png"/>
+  </textures>
+  <nodes>
+    <node id="fence">
+      <box max="0.5,1,0.2" min="-0.2,0,-0.49"/>
+      <layers>
+        <layer id="fence" texture="fence" y="92">
+          <view angle="45" col="1"/>
+          <view alpha="0" angle="135" col="1" hm="true"/>
+          <view angle="225" col="1" y="-32"/>
+          <view alpha="0" angle="315" col="1" hm="true"/>
+        </layer>
+        <layer id="posts" texture="posts" y="32">
+          <view alpha="0" angle="45"/>
+          <view angle="135" hm="true" x="-30" y="-6"/>
+          <view alpha="0" angle="225" col="1" y="-32"/>
+          <view angle="315" col="1" hm="true" x="28" y="-6"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

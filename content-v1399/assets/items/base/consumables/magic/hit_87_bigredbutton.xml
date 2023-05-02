@@ -1,0 +1,98 @@
+<item.SpriteItem id="0" name="Big Red Button Hit" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="anvil" source="items/base/consumables/magic/hit_87_bigredbutton.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="effect" source="items/base/consumables/magic/sndfx_explosion.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="anvil 01" texture="anvil">
+          <view y="-300" alpha="0.5"/>
+        </layer>
+        <layer id="anvil 02" texture="anvil">
+          <view y="-260"/>
+        </layer>
+        <layer id="anvil 03" texture="anvil">
+          <view y="-230"/>
+        </layer>
+        <layer id="anvil 04" texture="anvil">
+          <view y="-190"/>
+        </layer>
+        <layer id="anvil 05" texture="anvil">
+          <view y="-140"/>
+        </layer>
+        <layer id="bang" texture="anvil">
+          <view col="1" y="-120"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Hit 01">
+          <layerref id="anvil 01"/>
+        </frame>
+        <frame id="Hit 02">
+          <layerref id="anvil 02"/>
+        </frame>
+        <frame id="Hit 03">
+          <layerref id="anvil 03"/>
+        </frame>
+        <frame id="Hit 04">
+          <layerref id="anvil 04"/>
+        </frame>
+        <frame id="Hit 05">
+          <layerref id="bang"/>
+          <layerref id="anvil 05"/>
+        </frame>
+        <frame id="Hit 06">
+          <layerref id="bang" a="0.5"/>
+          <layerref id="anvil 05"/>
+        </frame>
+        <frame id="Hit 07">
+          <layerref id="anvil 05" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="8" loop="false">
+          <frameref id="Hit 01"/>
+          <frameref id="Hit 02"/>
+          <frameref id="Hit 03"/>
+          <frameref id="Hit 04">
+            <sample id="effect"/>
+          </frameref>
+          <frameref id="Hit 05" duration="4"/>
+          <frameref id="Hit 06"/>
+          <frameref id="Hit 07"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-76"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xfdfedf" a="0.5"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="8" loop="false">
+          <frameref id="Off" duration="5"/>
+          <frameref id="On"/>
+          <frameref id="Off" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

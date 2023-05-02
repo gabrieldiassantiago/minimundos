@@ -1,0 +1,30 @@
+<item.SpriteItem desc="Um tapete macio para a sua casa." dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" gridActive="false" icon="items/base/modern/icon_m_rug_02_hair.png" id="412" name="Tapete Bege Felpudo" tags="floor" price="40" tokens="400" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="1.01,0,1.01" min="-1.01,-0.001,-1.01"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/modern/m_rug_02_hair.png"/>
+  </textures>
+  <nodes>
+    <node id="rug_hair" layer="surface">
+      <box max="1.01,0,1.01" min="-1.01,-0.001,-1.01"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-1" y="67"/>
+          <view angle="135" mirror="true" y="67"/>
+          <view angle="225" x="-1" y="67"/>
+          <view angle="315" mirror="true" x="-1" y="67"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

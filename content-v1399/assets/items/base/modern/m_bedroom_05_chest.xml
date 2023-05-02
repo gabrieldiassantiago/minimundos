@@ -1,0 +1,34 @@
+<item.SpriteItem id="2120" name="Cômoda Básica" desc="Para guardar as roupas." tags="table" icon="items/base/modern/icon_m_bedroom_05_drawd.png" price="60" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.32,0,-0.36" max="0.32,0.92,1.36"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Counter" source="items/base/modern/m_bedroom_05_chestd.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/modern/m_bedroom_05_drawd.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.32,0,-0.36" max="0.32,0.92,1.36"/>
+      <layers>
+        <layer id="Layer" texture="Counter">
+          <view angle="45" x="33" y="25"/>
+          <view angle="135" x="31" y="57" hm="true"/>
+          <view angle="225" x="-32" y="57"/>
+          <view angle="315" x="-34" y="26" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Texture">
+          <view angle="45" x="51" y="6"/>
+          <view angle="135" x="14" y="38" hm="true"/>
+          <view angle="225" x="-32" y="57" alpha="0"/>
+          <view angle="315" x="-34" y="26" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

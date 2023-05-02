@@ -1,0 +1,40 @@
+<f id="Adamantium" parentId="Suits">
+  <g id="Adamantium">
+    <b id="Adamantium_Torso" min="2" max="2" sel="Adamantium_Torso">
+      <s id="Adamantium_Torso" cId="Torso" s="items/base/consumables/clothing/suits/suit_79_adamantium_torso.png" pri="1"/>
+    </b>
+    <b id="Adamantium_Legs" min="2" max="2" sel="Legs">
+      <g id="Legs" icon="$bu/icon_legs_trouser.png">
+        <s id="Adamantium_Leg_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_79_adamantium_leg.png" pri="3"/>
+        <s id="Adamantium_Leg_Sit" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_79_adamantium_leg_sit.png" pri="3"/>
+      </g>
+    </b>
+    <b id="Adamantium_Arms" min="2" max="2" sel="ArmHands">
+      <g id="ArmHands" icon="$bm/icon_m_retro.png">
+        <s id="Adamantium_Arm_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_79_adamantium_arm.png" pri="1"/>
+        <s id="Adamantium_Hand_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_79_adamantium_hand.png" pri="2"/>
+        <s id="Adamantium_Arm_Sit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_79_adamantium_arm_sit.png" pri="1"/>
+        <s id="Adamantium_Hand_Sit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_79_adamantium_hand_sit.png" pri="2"/>
+      </g>
+    </b>
+  </g>
+  <g id="Icon">
+    <t id="Icon_Adamantium" icon="items/base/consumables/clothing/suits/suit_79_adamantium_icon.png" w="48" h="48"/>
+    <s id="Icon_Adamantium_suit" cId="Icon_Adamantium" s="items/base/consumables/clothing/suits/suit_79_adamantium_icon.png"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+</f>

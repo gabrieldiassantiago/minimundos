@@ -1,0 +1,27 @@
+<item.SpriteItem id="3326" name="Bandeja Auxiliar de Salão Luxe" desc="Uma bandeja de salão para ter tudo sempre ao alcance das mãos." tags="table" icon="items/base/modern/icon_m_fashionmission_tray.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="55" tokens="550">
+  <volume>
+    <box min="-0.27,0,-0.22" max="0.27,0.74,0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_fashionmission_tray.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.27,0,-0.22" max="0.27,0.74,0.22"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="13">
+          <view angle="45" hm="true"/>
+          <view angle="135"/>
+          <view angle="225" hm="true"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

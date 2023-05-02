@@ -1,0 +1,55 @@
+<item.SpriteItem id="6016" name="Traje Mago de Fogo Play" desc="Um traje de crânio com proteção de fogo" tags="consumable,clothing,actionbar,wear,suits,action_wearable_toggle,rare" icon="items/base/consumables/clothing/suits/suit_110_magefire_icon.png" price="5210" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_110_frag_magefire.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes" value="fire+25"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+25"/>
+  </data>
+  <textures>
+    <texture id="robot" source="items/base/consumables/clothing/suits/suit_110_magefire_item.png" cols="2" rows="1"/>
+    <texture id="base" source="items/base/consumables/clothing/suits/suit_110_magefire_item_base.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+      <layers>
+        <layer id="Robot" texture="robot" y="15">
+          <view angle="45" y="-17"/>
+          <view angle="135" y="-17" hm="true"/>
+          <view angle="225" col="1" x="1" y="-17" hm="true"/>
+          <view angle="315" col="1" x="1" y="-17"/>
+        </layer>
+        <layer id="Base" texture="base">
+          <view angle="45" y="25"/>
+          <view angle="135" x="1" y="25" hm="true"/>
+          <view angle="225" y="25"/>
+          <view angle="315" x="1" y="25" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Base"/>
+          <layerref id="Robot"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

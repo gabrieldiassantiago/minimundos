@@ -1,0 +1,37 @@
+<item.SpriteItem id="3267" name="Pote de Plantas Púrpura" desc="Um pote com plantas púrpura." tags="plant,slave_catalog_colorize,unsearchable" icon="items/base/outdoor/icon_o_plant_violet_pot.png" price="45" tokens="450" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table, avatar,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.125,0,-0.125" max="0.125,0.4,0.125"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="plant" source="items/base/outdoor/o_plant_violet_pot.png" cols="1" rows="1"/>
+    <texture id="pot" source="items/base/outdoor/o_plant_base_pot.png" cols="1" rows="1"/>
+  </textures>
+  <data>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/potplants.xml"/>
+  </data>
+  <nodes>
+    <node id="Node">
+      <box min="-0.125,0,-0.125" max="0.125,0.4,0.125"/>
+      <layers>
+        <layer id="pot" texture="pot">
+          <view angle="45" y="6"/>
+          <view angle="135" y="6" hm="true"/>
+          <view angle="225" y="6"/>
+          <view angle="315" y="6" hm="true"/>
+        </layer>
+        <layer id="plant" texture="plant">
+          <view angle="45" y="-1"/>
+          <view angle="135" y="-1" hm="true"/>
+          <view angle="225" y="-1"/>
+          <view angle="315" y="-1" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

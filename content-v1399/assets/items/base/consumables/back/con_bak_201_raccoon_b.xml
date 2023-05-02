@@ -1,0 +1,83 @@
+<item.SpriteItem id="0" name="Raccoon Back" desc="An item" tags="wearable, consumable, actionbar" icon="items/base/consumables/back/icon_con_head_15_level1.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+  </volume>
+  <textures>
+    <texture id="New Fr1" source="items/base/consumables/back/back_200_cape_frame1.png" cols="5" rows="1"/>
+    <texture id="New Fr2" source="items/base/consumables/back/back_200_cape_frame2.png" cols="5" rows="1"/>
+    <texture id="New Fr3" source="items/base/consumables/back/back_200_cape_frame3.png" cols="5" rows="1"/>
+    <texture id="Tail" source="items/base/consumables/back/con_bak_201_raccoon_b.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+      <layers>
+        <layer id="New F1" texture="New Fr1">
+          <view angle="0" col="3" x="3" y="36"/>
+          <view angle="45" col="4" x="2" y="39"/>
+          <view angle="90" x="-1" y="42"/>
+          <view angle="135" col="4" x="-3" y="39" hm="true"/>
+          <view angle="180" col="3" x="-3" y="36" hm="true"/>
+          <view angle="225" col="2" x="-3" y="33" hm="true"/>
+          <view angle="270" col="1" x="1" y="33"/>
+          <view angle="315" col="2" x="3" y="33"/>
+        </layer>
+        <layer id="New F2" texture="New Fr2">
+          <view angle="0" col="3" x="3" y="36"/>
+          <view angle="45" col="4" x="2" y="39"/>
+          <view angle="90" y="46"/>
+          <view angle="135" col="4" x="-3" y="39" hm="true"/>
+          <view angle="180" col="3" x="-3" y="36" hm="true"/>
+          <view angle="225" col="2" x="-3" y="33" hm="true"/>
+          <view angle="270" col="1" x="1" y="33"/>
+          <view angle="315" col="2" x="3" y="33"/>
+        </layer>
+        <layer id="New F3" texture="New Fr3">
+          <view angle="0" col="3" x="3" y="36"/>
+          <view angle="45" col="4" x="2" y="39"/>
+          <view angle="90" x="-1" y="45"/>
+          <view angle="135" col="4" x="-3" y="39" hm="true"/>
+          <view angle="180" col="3" x="-3" y="36" hm="true"/>
+          <view angle="225" col="2" x="-3" y="33" hm="true"/>
+          <view angle="270" col="1" x="1" y="33"/>
+          <view angle="315" col="2" x="3" y="33"/>
+        </layer>
+        <layer id="tail" texture="Tail" y="60">
+          <view angle="0" col="1" x="-18" y="21" hm="true"/>
+          <view angle="45" x="-15" y="22"/>
+          <view angle="90" col="3" y="9" alpha="0"/>
+          <view angle="135" x="14" y="22" hm="true"/>
+          <view angle="180" col="1" x="18" y="21"/>
+          <view angle="225" col="2" x="12" y="21"/>
+          <view angle="270" col="3" y="24"/>
+          <view angle="315" col="2" x="-12" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="tail"/>
+          <layerref id="New F1"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="tail"/>
+          <layerref id="New F2"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="tail"/>
+          <layerref id="New F3"/>
+        </frame>
+        <frame id="Sit"/>
+      </frames>
+      <animations>
+        <animation id="Flap" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

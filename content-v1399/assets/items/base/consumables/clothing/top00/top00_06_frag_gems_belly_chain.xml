@@ -1,0 +1,51 @@
+<f id="Top00_06_GemsBellyChain" parentId="Top00">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="GemsBellyChainBaseMale" cId="Torso" s="items/base/consumables/clothing/top00/top00_06_gems_belly_chain_m.png" pri="0.9"/>
+      <c sId="GemsBellyChainBaseMale" c="6453655" a="0.90" b="53.2" ct="2.00" lId="Top00_06Color1" lw="N"/>
+      <s id="GemsBellyChainDecalMale" cId="Torso" s="items/base/consumables/clothing/top00/top00_06_gems_belly_chain_decal_m.png" pri="0.9"/>
+      <c sId="GemsBellyChainDecalMale" c="16216719" a="1.00" b="48.8" ct="1.46" lId="Top00_06Color2" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="GemsBellyChainBaseFemale" cId="Torso" s="items/base/consumables/clothing/top00/top00_06_gems_belly_chain_f.png" pri="0.9"/>
+      <c sId="GemsBellyChainBaseFemale" c="16383963" a="0.89" b="41.5" ct="0.63" lId="Top00_06Color1" lw="N"/>
+      <s id="GemsBellyChainDecalFemale" cId="Torso" s="items/base/consumables/clothing/top00/top00_06_gems_belly_chain_decal_f.png" pri="0.9"/>
+      <c sId="GemsBellyChainDecalFemale" c="16216719" a="0.92" b="28.9" ct="1.46" lId="Top00_06Color2" lw="N"/>
+    </g>
+  </b>
+  <g id="Icon">
+    <t id="IconTop00_01" icon="items/base/consumables/clothing/top00/top_00_06_icon_gems_belly_chain_a.png" w="48" h="48"/>
+    <s id="IconTop00_01Base" cId="IconTop00_01" s="items/base/consumables/clothing/top00/top_00_06_icon_gems_belly_chain.png"/>
+    <c sId="IconTop00_01Base" c="16383963" a="0.89" b="41.5" ct="0.63" lId="Top00_06Color1" lw="N"/>
+    <s id="IconTop00_01Decal" cId="IconTop00_01" s="items/base/consumables/clothing/top00/top_00_06_icon_gems_belly_chain_2.png"/>
+    <c sId="IconTop00_01Decal" c="16216719" a="0.92" b="28.9" ct="1.46" lId="Top00_06Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top00_06Color1" name="Color1" desc="Choose a color" sel="Platinum" seld="Gold">
+      <c id="Gold" icon="$bu/icon_metal_gold.png" c="16771092" a="0.61" b="-32.6" ct="2.00" lId="Top00_06Color1"/>
+      <c id="Silver" icon="$bu/icon_metal_silver.png" c="6453655" a="0.90" b="152.0" ct="0.55" lId="Top00_06Color1"/>
+      <c id="Copper" icon="$bu/icon_metal_copper.png" c="6369309" a="0.46" b="9.5" ct="1.47" lId="Top00_06Color1"/>
+      <c id="Platinum" icon="$bu/icon_metal_platinum.png" c="16383963" a="0.89" b="41.5" ct="0.63" lId="Top00_06Color1"/>
+      <c id="Bronze" icon="$bu/icon_metal_bronze.png" c="4082440" a="0.71" b="52.4" ct="1.69" lId="Top00_06Color1"/>
+      <c id="Steel" icon="$bu/icon_metal_steel.png" c="5395026" a="1.00" b="67.0" ct="1.98" lId="Top00_06Color1"/>
+    </b>
+    <b id="Top00_06Color2" name="Color2" desc="Choose a color" sel="Pink" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top00_06Color2"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="56.4" ct="1.90" lId="Top00_06Color2"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="1.00" b="-3.2" ct="1.03" lId="Top00_06Color2"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="0.92" b="28.9" ct="1.46" lId="Top00_06Color2"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="54.0" ct="1.05" lId="Top00_06Color2"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="29.8" ct="1.95" lId="Top00_06Color2"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="0.90" b="18.8" ct="1.04" lId="Top00_06Color2"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.89" b="46.3" ct="1.14" lId="Top00_06Color2"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.75" b="20.4" ct="1.61" lId="Top00_06Color2"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top00_06Color1">
+        <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top00_06Color1"/>
+      </wizchoice>
+      <wizchoice id="Color2" name="Color2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top00_06Color2"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

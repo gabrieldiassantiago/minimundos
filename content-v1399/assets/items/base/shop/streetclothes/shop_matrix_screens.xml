@@ -1,0 +1,261 @@
+<item.SpriteItem id="2211" name="Matriz de TVs LCD" desc="Por que uma só? Personalizável com videos do youtube." tags="admin,wall" icon="items/base/shop/streetclothes/icon_shop_matrix_screens.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="table" dropTargetList="wall,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,-1.1,-1.4" max="0.1,1.1,1.4"/>
+  </volume>
+  <events>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="White" state="true" event="animate(00)"/>
+    <action id="Black" state="true" event="animate(01)"/>
+    <action id="Blue" state="true" event="animate(02)"/>
+    <action id="Pink" state="true" event="animate(03)"/>
+    <action id="Green" state="true" event="animate(04)"/>
+    <action id="Red" state="true" event="animate(05)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="6"/>
+    <entry key="00" value="Off"/>
+    <entry key="01" value="Blue"/>
+    <entry key="02" value="Green"/>
+    <entry key="03" value="Red"/>
+    <entry key="04" value="Yellow"/>
+    <entry key="05" value="Pink"/>
+  </data>
+  <textures>
+    <texture id="screen" source="items/base/shop/streetclothes/shop_matrix_screens.png" cols="1" rows="1"/>
+    <texture id="wire" source="items/base/shop/streetclothes/shop_matrix_wire.png" cols="1" rows="1"/>
+    <texture id="image_a" source="items/base/shop/streetclothes/shop_matrix_picture_01.png" cols="3" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_tv_steampunk.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="0,-1.1,-1.4" max="0.1,1.1,1.4"/>
+      <layers>
+        <layer id="Layer09" texture="screen" align="middle">
+          <view angle="45" x="62" y="30"/>
+          <view angle="135" x="-62" y="30" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer08" texture="screen" align="middle">
+          <view angle="45" y="61"/>
+          <view angle="135" y="61" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer07" texture="screen" align="middle">
+          <view angle="45" x="-62" y="92"/>
+          <view angle="135" x="62" y="92" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer06" texture="screen" align="middle">
+          <view angle="45" x="62" y="-30"/>
+          <view angle="135" x="-62" y="-30" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer05" texture="screen" align="middle">
+          <view angle="45" y="1"/>
+          <view angle="135" y="1" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer04" texture="screen" align="middle">
+          <view angle="45" x="-62" y="32"/>
+          <view angle="135" x="62" y="32" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer03" texture="screen" align="middle">
+          <view angle="45" x="62" y="-90"/>
+          <view angle="135" x="-62" y="-90" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer02" texture="screen" align="middle">
+          <view angle="45" y="-59"/>
+          <view angle="135" y="-59" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="screen" align="middle">
+          <view angle="45" x="-62" y="-28"/>
+          <view angle="135" x="62" y="-28" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="wire" texture="wire">
+          <view angle="45" x="-94" y="36" hm="true"/>
+          <view angle="135" x="93" y="36"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="wire01" texture="wire">
+          <view angle="45" x="-94" y="97" hm="true"/>
+          <view angle="135" x="93" y="97"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="image_a_01" texture="image_a" align="middle" y="-60">
+          <view angle="45" x="-56" y="33"/>
+          <view angle="135" x="56" y="33" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="image_a_02" texture="image_a" align="middle" y="-60">
+          <view angle="45" col="1" x="6" y="2"/>
+          <view angle="135" col="1" x="-6" y="2" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="image_a_03" texture="image_a" align="middle" y="-60">
+          <view angle="45" col="2" x="68" y="-29"/>
+          <view angle="135" col="2" x="-68" y="-29" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="image_a_04" texture="image_a" align="middle">
+          <view angle="45" row="1" x="-56" y="33"/>
+          <view angle="135" row="1" x="56" y="33" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="image_a_05" texture="image_a" align="middle">
+          <view angle="45" col="1" row="1" x="6" y="2"/>
+          <view angle="135" col="1" row="1" x="-6" y="2" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="image_a_06" texture="image_a" align="middle">
+          <view angle="45" col="2" row="1" x="68" y="-29"/>
+          <view angle="135" col="2" row="1" x="-68" y="-29" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="image_a_07" texture="image_a" align="middle">
+          <view angle="45" row="2" x="-56" y="93"/>
+          <view angle="135" row="2" x="56" y="93" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="image_a_08" texture="image_a" align="middle">
+          <view angle="45" col="1" row="2" x="6" y="62"/>
+          <view angle="135" col="1" row="2" x="-6" y="62" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="image_a_09" texture="image_a" align="middle">
+          <view angle="45" col="2" row="2" x="68" y="31"/>
+          <view angle="135" col="2" row="2" x="-68" y="31" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="Layer09"/>
+          <layerref id="Layer08"/>
+          <layerref id="Layer07"/>
+          <layerref id="Layer06"/>
+          <layerref id="Layer05" color="0xedfcfc"/>
+          <layerref id="Layer04"/>
+          <layerref id="Layer03"/>
+          <layerref id="Layer02"/>
+          <layerref id="Layer01"/>
+          <layerref id="wire"/>
+          <layerref id="wire01"/>
+          <layerref id="image_a_01"/>
+          <layerref id="image_a_02"/>
+          <layerref id="image_a_03"/>
+          <layerref id="image_a_05"/>
+          <layerref id="image_a_06"/>
+          <layerref id="image_a_04"/>
+          <layerref id="image_a_07"/>
+          <layerref id="image_a_08"/>
+          <layerref id="image_a_09"/>
+        </frame>
+        <frame id="01">
+          <layerref id="Layer09"/>
+          <layerref id="Layer08"/>
+          <layerref id="Layer07"/>
+          <layerref id="Layer06"/>
+          <layerref id="Layer05" color="0xedfcfc"/>
+          <layerref id="Layer04"/>
+          <layerref id="Layer03"/>
+          <layerref id="Layer02"/>
+          <layerref id="Layer01"/>
+          <layerref id="wire"/>
+          <layerref id="wire01"/>
+          <layerref id="image_a_01"/>
+          <layerref id="image_a_02"/>
+          <layerref id="image_a_03"/>
+          <layerref id="image_a_05"/>
+          <layerref id="image_a_06"/>
+          <layerref id="image_a_04"/>
+          <layerref id="image_a_07"/>
+          <layerref id="image_a_08"/>
+          <layerref id="image_a_09"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01">
+          <frameref id="00"/>
+        </animation>
+        <animation id="02"/>
+        <animation id="03"/>
+        <animation id="04"/>
+        <animation id="05"/>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.13" s="8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="01" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="03" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="04" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="05" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

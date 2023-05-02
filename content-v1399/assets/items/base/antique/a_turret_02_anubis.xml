@@ -1,0 +1,218 @@
+<item.SpriteItem id="1164" name="Anúbis Místico do Egito" desc="Uma estátua mística do Deus Anúbis" tags="rare,misc,trap,magic,turret" icon="items/base/antique/icon_a_turret_02_anubis.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="1100" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.4" max="0.49,2.4,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="fire" script="scripts/item/action_turret.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Fire" event="fire"/>
+  </actions>
+  <data>
+    <entry key="action_attributes" value="fire-10"/>
+    <entry key="action_attributes_secondary" value="health-40"/>
+  </data>
+  <textures>
+    <texture id="anubis" source="items/base/antique/a_anubis.png" cols="2" rows="1"/>
+    <texture id="radiate" source="items/base/consumables/magic/hit_generic_radiate.png" cols="4" rows="1"/>
+    <texture id="shockball" source="items/base/consumables/magic/proj_generic_shockball.png" cols="1" rows="3"/>
+    <texture id="plaque" source="items/base/antique/a_anubis_plaque.png" cols="1" rows="1"/>
+    <texture id="eyes" source="items/base/antique/a_anubis_eyes.png" cols="2" rows="1"/>
+    <texture id="Texture" source="items/base/antique/a_anubis_base.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Anubis">
+      <box min="-0.49,0,-0.4" max="0.49,2.4,0.4"/>
+      <layers>
+        <layer id="Layer01" texture="Texture">
+          <view angle="45" y="31" hm="true"/>
+          <view angle="135" y="33"/>
+          <view angle="225" x="1" y="31" hm="true"/>
+          <view angle="315" y="31"/>
+        </layer>
+        <layer id="Layer" texture="anubis">
+          <view angle="45" x="17" y="-19" hm="true"/>
+          <view angle="135" x="-14" y="-17"/>
+          <view angle="225" col="1" x="-14" y="-21" hm="true"/>
+          <view angle="315" col="1" x="15" y="-20"/>
+        </layer>
+        <layer id="eye_glow" texture="eyes">
+          <view angle="45" x="8" y="-153" hm="true"/>
+          <view angle="135" x="-3" y="-153"/>
+          <view angle="225" col="1" x="-10" y="-161"/>
+          <view angle="315" col="1" x="15" y="-161" hm="true"/>
+        </layer>
+        <layer id="shockball_01" texture="shockball" y="-73">
+          <view angle="45" x="34" y="-28"/>
+          <view angle="135" x="-34" y="-28"/>
+          <view angle="225" x="-34" y="-60"/>
+          <view angle="315" x="34" y="-60"/>
+        </layer>
+        <layer id="shockball_02" texture="shockball" y="-73">
+          <view angle="45" row="1" x="34" y="-28"/>
+          <view angle="135" row="1" x="-34" y="-28"/>
+          <view angle="225" row="1" x="-34" y="-60"/>
+          <view angle="315" row="1" x="34" y="-60"/>
+        </layer>
+        <layer id="shockball_03" texture="shockball" y="-73">
+          <view angle="45" row="2" x="34" y="-28"/>
+          <view angle="135" row="2" x="-34" y="-28"/>
+          <view angle="225" row="2" x="-34" y="-60"/>
+          <view angle="315" row="2" x="34" y="-60"/>
+        </layer>
+        <layer id="radiate_01" texture="radiate" y="-73">
+          <view angle="45" x="37"/>
+          <view angle="135" x="-30"/>
+          <view angle="225" x="-30" y="-32"/>
+          <view angle="315" x="34" y="-31"/>
+        </layer>
+        <layer id="radiate_02" texture="radiate" y="-73">
+          <view angle="45" col="1" x="37"/>
+          <view angle="135" col="1" x="-30"/>
+          <view angle="225" col="1" x="-30" y="-32"/>
+          <view angle="315" col="1" x="34" y="-31"/>
+        </layer>
+        <layer id="radiate_03" texture="radiate" y="-73">
+          <view angle="45" col="2" x="37"/>
+          <view angle="135" col="2" x="-30"/>
+          <view angle="225" col="2" x="-30" y="-32"/>
+          <view angle="315" col="2" x="34" y="-31"/>
+        </layer>
+        <layer id="radiate_04" texture="radiate" y="-73">
+          <view angle="45" col="3" x="37"/>
+          <view angle="135" col="3" x="-30"/>
+          <view angle="225" col="3" x="-30" y="-32"/>
+          <view angle="315" col="3" x="34" y="-31"/>
+        </layer>
+        <layer id="plaque" texture="plaque" y="-8">
+          <view angle="45" x="19" hm="true"/>
+          <view angle="135" x="-16" y="2"/>
+          <view angle="225" x="-15" y="-16" hm="true"/>
+          <view angle="315" x="18" y="-16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle_01">
+          <layerref id="Layer01"/>
+          <layerref id="Layer"/>
+          <layerref id="eye_glow" a="0"/>
+          <layerref id="plaque"/>
+        </frame>
+        <frame id="idle_02">
+          <layerref id="Layer01"/>
+          <layerref id="Layer"/>
+          <layerref id="eye_glow" a="0.5"/>
+          <layerref id="plaque"/>
+        </frame>
+        <frame id="idle_03">
+          <layerref id="Layer01"/>
+          <layerref id="Layer"/>
+          <layerref id="eye_glow"/>
+          <layerref id="plaque"/>
+        </frame>
+        <frame id="In_01">
+          <layerref id="Layer01"/>
+          <layerref id="Layer"/>
+          <layerref id="plaque"/>
+          <layerref id="eye_glow"/>
+          <layerref id="shockball_01" color="0xcc6699" blend="add"/>
+          <layerref id="shockball_02" color="0xff3333" blend="add"/>
+          <layerref id="radiate_01" color="0xff3300" blend="add"/>
+        </frame>
+        <frame id="In_02">
+          <layerref id="Layer01"/>
+          <layerref id="Layer"/>
+          <layerref id="plaque"/>
+          <layerref id="eye_glow"/>
+          <layerref id="shockball_01" color="0xcc6699" blend="add"/>
+          <layerref id="shockball_03" color="0xff3333" blend="add"/>
+          <layerref id="radiate_02" color="0xff3399" blend="add"/>
+        </frame>
+        <frame id="In_03">
+          <layerref id="Layer01"/>
+          <layerref id="Layer"/>
+          <layerref id="plaque"/>
+          <layerref id="eye_glow"/>
+          <layerref id="shockball_01" color="0xcc6699" blend="add"/>
+          <layerref id="shockball_02" color="0xff3333" blend="add"/>
+          <layerref id="radiate_03" color="0xcc0066" blend="add"/>
+        </frame>
+        <frame id="In_04">
+          <layerref id="Layer01"/>
+          <layerref id="Layer"/>
+          <layerref id="plaque"/>
+          <layerref id="eye_glow"/>
+          <layerref id="shockball_01" color="0xcc6699" blend="add"/>
+          <layerref id="shockball_03" color="0xff3333" blend="add"/>
+          <layerref id="radiate_04" color="0xcc3300" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="idle_01" duration="20"/>
+          <frameref id="idle_02" duration="3"/>
+          <frameref id="idle_03"/>
+        </animation>
+        <animation id="In" framerate="8" loop="false">
+          <frameref id="In_01"/>
+          <frameref id="In_02"/>
+          <frameref id="In_03"/>
+          <frameref id="In_04"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="idle_03"/>
+          <frameref id="idle_02"/>
+          <frameref id="idle_01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.55" y="1.85" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf36d6d" a="0.2"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xf36d6d" a="0.4"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xf36d6d" a="0.8"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xf36d6d"/>
+        </frame>
+        <frame id="Idle">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

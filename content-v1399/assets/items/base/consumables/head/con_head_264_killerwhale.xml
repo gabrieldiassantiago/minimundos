@@ -1,0 +1,194 @@
+<item.SpriteItem id="0" name="Fin the Dolphin" desc="Collectible (June 2010)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="dolphin" source="items/base/consumables/head/con_head_264_killerwhale.png" cols="5" rows="4"/>
+    <texture id="bubble" source="items/base/consumables/head/con_head_12_bubbles.png" cols="3" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_264_killerwhale_blink.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="bubble_01" texture="bubble" y="22">
+          <view angle="0" x="20" y="-48"/>
+          <view angle="45" x="20" y="-46"/>
+          <view angle="90" x="10" y="-43"/>
+          <view angle="135" x="-24" y="-45" hm="true"/>
+          <view angle="180" x="-23" y="-48" hm="true"/>
+          <view angle="225" x="-17" y="-51" hm="true"/>
+          <view angle="270" x="8" y="-53"/>
+          <view angle="315" x="15" y="-51"/>
+        </layer>
+        <layer id="bubble_02" texture="bubble" y="22">
+          <view angle="0" col="1" x="20" y="-48"/>
+          <view angle="45" col="1" x="20" y="-46"/>
+          <view angle="90" col="1" x="10" y="-43"/>
+          <view angle="135" col="1" x="-24" y="-45" hm="true"/>
+          <view angle="180" col="1" x="-23" y="-48" hm="true"/>
+          <view angle="225" col="1" x="-17" y="-51" hm="true"/>
+          <view angle="270" col="1" x="8" y="-53"/>
+          <view angle="315" col="1" x="15" y="-51"/>
+        </layer>
+        <layer id="bubble_03" texture="bubble" y="22">
+          <view angle="0" col="2" x="20" y="-48"/>
+          <view angle="45" col="2" x="20" y="-46"/>
+          <view angle="90" col="2" x="10" y="-43"/>
+          <view angle="135" col="2" x="-24" y="-45" hm="true"/>
+          <view angle="180" col="2" x="-23" y="-48" hm="true"/>
+          <view angle="225" col="2" x="-17" y="-51" hm="true"/>
+          <view angle="270" col="2" x="8" y="-53"/>
+          <view angle="315" col="2" x="15" y="-51"/>
+        </layer>
+        <layer id="dolphin_01" texture="dolphin">
+          <view angle="0" col="2" x="3" y="13"/>
+          <view angle="45" x="6" y="16"/>
+          <view angle="90" col="1" x="3" y="17"/>
+          <view angle="135" x="-8" y="16" hm="true"/>
+          <view angle="180" col="2" x="-4" y="13" hm="true"/>
+          <view angle="225" col="3" x="-3" y="14" hm="true"/>
+          <view angle="270" col="4" x="-2" y="14" hm="true"/>
+          <view angle="315" col="3" x="3" y="14"/>
+        </layer>
+        <layer id="dolphin_02" texture="dolphin">
+          <view angle="0" col="2" row="1" x="3" y="13"/>
+          <view angle="45" row="1" x="6" y="16"/>
+          <view angle="90" col="1" row="1" x="3" y="17"/>
+          <view angle="135" row="1" x="-8" y="16" hm="true"/>
+          <view angle="180" col="2" row="1" x="-4" y="13" hm="true"/>
+          <view angle="225" col="3" row="1" x="-3" y="14" hm="true"/>
+          <view angle="270" col="4" row="1" x="-2" y="14" hm="true"/>
+          <view angle="315" col="3" row="1" x="3" y="14"/>
+        </layer>
+        <layer id="dolphin_03" texture="dolphin">
+          <view angle="0" col="2" row="2" x="3" y="13"/>
+          <view angle="45" row="2" x="6" y="16"/>
+          <view angle="90" col="1" row="2" x="3" y="17"/>
+          <view angle="135" row="2" x="-8" y="16" hm="true"/>
+          <view angle="180" col="2" row="2" x="-4" y="13" hm="true"/>
+          <view angle="225" col="3" row="2" x="-3" y="14" hm="true"/>
+          <view angle="270" col="4" row="2" x="-2" y="14" hm="true"/>
+          <view angle="315" col="3" row="2" x="3" y="14"/>
+        </layer>
+        <layer id="dolphin_04" texture="dolphin">
+          <view angle="0" col="2" row="3" x="3" y="13"/>
+          <view angle="45" row="3" x="6" y="16"/>
+          <view angle="90" col="1" row="3" x="3" y="17"/>
+          <view angle="135" row="3" x="-8" y="16" hm="true"/>
+          <view angle="180" col="2" row="3" x="-4" y="13" hm="true"/>
+          <view angle="225" col="3" row="3" x="-3" y="14" hm="true"/>
+          <view angle="270" col="4" row="3" x="-2" y="14" hm="true"/>
+          <view angle="315" col="3" row="3" x="3" y="14"/>
+        </layer>
+        <layer id="bubble_01_blink" texture="blink">
+          <view angle="0" col="2" x="7"/>
+          <view angle="45" x="-6" y="1"/>
+          <view angle="90" col="1" y="-3"/>
+          <view angle="135" x="5" y="1" hm="true"/>
+          <view angle="180" col="2" x="-7" hm="true"/>
+          <view angle="225" col="3" x="-18" y="-7" hm="true"/>
+          <view angle="270" col="3" x="-2" y="14" alpha="0" hm="true"/>
+          <view angle="315" col="3" x="19" y="-7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="dolphin_01"/>
+          <layerref id="bubble_01"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="dolphin_01"/>
+          <layerref id="bubble_02"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="dolphin_02"/>
+          <layerref id="bubble_03"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="dolphin_02"/>
+          <layerref id="bubble_01"/>
+        </frame>
+        <frame id="Frame_05">
+          <layerref id="dolphin_03"/>
+          <layerref id="bubble_02"/>
+        </frame>
+        <frame id="Frame_06">
+          <layerref id="dolphin_03"/>
+          <layerref id="bubble_03"/>
+        </frame>
+        <frame id="Frame_07">
+          <layerref id="dolphin_04"/>
+          <layerref id="bubble_01"/>
+        </frame>
+        <frame id="Frame_08">
+          <layerref id="dolphin_04"/>
+          <layerref id="bubble_02"/>
+        </frame>
+        <frame id="01_blink">
+          <layerref id="dolphin_01"/>
+          <layerref id="bubble_01"/>
+          <layerref id="bubble_01_blink"/>
+        </frame>
+        <frame id="05_blink">
+          <layerref id="dolphin_03"/>
+          <layerref id="bubble_02"/>
+          <layerref id="bubble_01_blink"/>
+        </frame>
+        <frame id="07_blink">
+          <layerref id="dolphin_04"/>
+          <layerref id="bubble_01"/>
+          <layerref id="bubble_01_blink"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01_blink"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+          <frameref id="Frame_05"/>
+          <frameref id="Frame_06"/>
+          <frameref id="Frame_07"/>
+          <frameref id="Frame_08"/>
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+          <frameref id="05_blink"/>
+          <frameref id="Frame_06"/>
+          <frameref id="07_blink"/>
+          <frameref id="Frame_08"/>
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+          <frameref id="Frame_05"/>
+          <frameref id="Frame_06"/>
+          <frameref id="Frame_07"/>
+          <frameref id="Frame_08"/>
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+          <frameref id="Frame_05"/>
+          <frameref id="Frame_06"/>
+          <frameref id="Frame_07"/>
+          <frameref id="Frame_08"/>
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+          <frameref id="Frame_05"/>
+          <frameref id="Frame_06"/>
+          <frameref id="Frame_07"/>
+          <frameref id="Frame_08"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,79 @@
+<item.SpriteItem id="0" name="Penguin" desc="Peach Penguin" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="blink" source="items/base/consumables/head/con_head_244_penguin_peach_blink.png" cols="3" rows="2"/>
+    <texture id="penguin" source="items/base/consumables/head/con_head_244_penguin_peach.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="penguin" texture="penguin">
+          <view angle="0" col="2" x="11" y="22"/>
+          <view angle="45" x="10" y="25"/>
+          <view angle="90" col="1" y="23"/>
+          <view angle="135" x="-10" y="25" hm="true"/>
+          <view angle="180" col="2" x="-12" y="22" hm="true"/>
+          <view angle="225" col="3" x="-5" y="23" hm="true"/>
+          <view angle="270" col="4" y="20"/>
+          <view angle="315" col="3" x="4" y="23"/>
+        </layer>
+        <layer id="blink_01" texture="blink">
+          <view angle="0" col="2" x="20" y="-3"/>
+          <view angle="45" x="12" y="5"/>
+          <view angle="90" col="1" x="1" y="2"/>
+          <view angle="135" x="-11" y="5" hm="true"/>
+          <view angle="180" col="2" x="-20" y="-3" hm="true"/>
+          <view angle="225" col="3" x="1" y="20" alpha="0" hm="true"/>
+          <view angle="270" col="4" y="25" alpha="0"/>
+          <view angle="315" col="3" x="-2" y="20" alpha="0"/>
+        </layer>
+        <layer id="blink_02" texture="blink">
+          <view angle="0" col="2" row="1" x="20" y="-3"/>
+          <view angle="45" row="1" x="12" y="5"/>
+          <view angle="90" col="1" row="1" x="1" y="2"/>
+          <view angle="135" row="1" x="-11" y="5" hm="true"/>
+          <view angle="180" col="2" row="1" x="-20" y="-3" hm="true"/>
+          <view angle="225" col="3" x="1" y="20" alpha="0" hm="true"/>
+          <view angle="270" col="4" y="25" alpha="0"/>
+          <view angle="315" col="3" x="-2" y="20" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="penguin"/>
+        </frame>
+        <frame id="02">
+          <layerref id="penguin"/>
+          <layerref id="blink_01"/>
+        </frame>
+        <frame id="03">
+          <layerref id="penguin"/>
+          <layerref id="blink_02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="01" duration="10"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01" duration="40"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="03" duration="5"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

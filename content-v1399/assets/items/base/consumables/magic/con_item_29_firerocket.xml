@@ -1,0 +1,56 @@
+<item.SpriteItem desc="Uma explosão única" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/magic/icon_con_item_29_firerocket.png" id="914" name="Bombinha de Artifício" tags="consumable,real,usable,stackable,market" price="3" tokens="30" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.08,0.8,0.08" min="-0.08,0,-0.08"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture cols="1" id="Rocket" rows="1" source="items/base/consumables/magic/con_item_29_firerocket.png"/>
+  </textures>
+  <nodes>
+    <node id="Rocket">
+      <box max="0.08,0.8,0.08" min="-0.08,0,-0.08"/>
+      <layers>
+        <layer id="Rocket" texture="Rocket">
+          <view angle="45" x="1" y="8"/>
+          <view angle="135" hm="true" y="8"/>
+          <view angle="225" x="1" y="8"/>
+          <view angle="315" hm="true" y="8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Rocket"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref a="0.66" id="Rocket"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref a="0.33" id="Rocket"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref a="0" id="Rocket"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="In">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation framerate="4" id="Loop">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation framerate="8" id="Out" loop="false" syncFrames="false">
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

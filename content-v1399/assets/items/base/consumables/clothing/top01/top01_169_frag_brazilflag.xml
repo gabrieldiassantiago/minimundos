@@ -1,0 +1,38 @@
+<f id="Top01_169_Brazilflag" parentId="Top01">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top01_169_TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_169_brazilflag_torso_m.png" pri="1"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_169_TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_169_brazilflag_torso_f.png" pri="1"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt">
+    <s id="Top01_169ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top01/top01_154_idle.png" pri="1"/>
+    <s id="Top01_169ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top01/top01_154_walk1.png" pri="1"/>
+    <s id="Top01_169ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top01/top01_154_walk2.png" pri="1"/>
+    <s id="Top01_169ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top01/top01_154_walk3.png" pri="1"/>
+    <s id="Top01_169ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top01/top01_154_sit.png" pri="1"/>
+    <c sId="Top01_169ArmIdleBase" c="879408" a="0.96" b="62.1" ct="0.91" lId="Top01_169_Color" lw="N"/>
+    <c sId="Top01_169ArmWalk1Base" c="879408" a="0.96" b="62.1" ct="0.91" lId="Top01_169_Color" lw="N"/>
+    <c sId="Top01_169ArmWalk2Base" c="879408" a="0.96" b="62.1" ct="0.91" lId="Top01_169_Color" lw="N"/>
+    <c sId="Top01_169ArmWalk3Base" c="879408" a="0.96" b="62.1" ct="0.91" lId="Top01_169_Color" lw="N"/>
+    <c sId="Top01_169ArmSitBase" c="879408" a="0.96" b="62.1" ct="0.91" lId="Top01_169_Color" lw="N"/>
+    <s id="Top01_169ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top01/top01_154_throw.png" pri="1"/>
+    <s id="Top01_169ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top01/top01_154_raise.png" pri="1"/>
+    <c sId="Top01_169ArmThrowBase" c="879408" a="0.96" b="62.1" ct="0.91" lId="Top01_169_Color" lw="N"/>
+    <c sId="Top01_169ArmRaiseBase" c="879408" a="0.96" b="62.1" ct="0.91" lId="Top01_169_Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_169" icon="items/base/consumables/clothing/top01/top01_169_brazilflag_icon_a.png" w="48" h="48"/>
+    <s id="IconTop01_169IconBase" cId="IconTop01_169" s="items/base/consumables/clothing/top01/top01_166_usaflag_icon_1.png" pri="1"/>
+    <c sId="IconTop01_169IconBase" c="879408" a="0.96" b="62.1" ct="0.91" lId="Top01_169_Color" lw="N"/>
+    <s id="IconTop01_169IconDecal" cId="IconTop01_169" s="items/base/consumables/clothing/top01/top01_169_brazilflag_icon_2.png" pri="1.1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_169_Color" name="Color" desc="Choose a color" sel="GreenDark" seld="GreenDark">
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="879408" a="0.96" b="62.1" ct="0.91" lId="Top01_169_Color"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

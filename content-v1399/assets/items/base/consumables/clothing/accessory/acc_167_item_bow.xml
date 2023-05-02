@@ -1,0 +1,35 @@
+<item.SpriteItem id="4200" name="Arco e Flechas Herói Play" desc="Salve o dia com este incrível conjunto heróico." tags="consumable,back,wear,actionbar,clothing,stackable,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_167_icon_bow.png" price="8860" minLevel="50" minLevelType="3" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.15,0,-0.3" max="0.15,1.25,0.3"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/accessory/acc_167_frag_quiver_strap.xml"/>
+  </data>
+  <textures>
+    <texture id="bow" source="items/base/consumables/clothing/accessory/acc_167_item_bow.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.3" max="0.15,1.25,0.3"/>
+      <layers>
+        <layer id="bow" texture="bow">
+          <view angle="45" y="15"/>
+          <view angle="135" y="15" hm="true"/>
+          <view angle="225" col="1" y="15"/>
+          <view angle="315" col="1" y="15" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

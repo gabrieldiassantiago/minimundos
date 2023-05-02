@@ -1,0 +1,33 @@
+<item.SpriteItem name="Estacas Afiadas" desc="Aqui jaz os traidores" tags="rare,misc,halloween" icon="items/base/gothic/icon_g_halloween_13_sharpenedsticks.png" price="10" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table, avatar,avatar" dropTargetClamp="none" id="5387">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Sharpened Sticks" source="items/base/gothic/g_halloween_13_sharpenedsticks.png" cols="2" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/gothic/sndfx_coffinroar.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="nodes">
+      <box min="-0.49,0,-0.49" max="0.49,2,0.49"/>
+      <layers>
+        <layer id="Sharpened Sticks" texture="Sharpened Sticks" y="100">
+          <view angle="45" x="-7" y="-67"/>
+          <view angle="135" x="5" y="-66" hm="true"/>
+          <view angle="225" col="1" x="2" y="-68"/>
+          <view angle="315" col="1" x="-5" y="-69" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,27 @@
+<item.SpriteItem desc="Em madeira de lei, com uma enciclopédia completa sobre a vida." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/gothic/icon_g_book_case.png" id="347" name="Estante Gótica" tags="misc" price="40" tokens="400" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.05,2.66,1.46" min="-0.49,0,-0.46"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="2" id="Texture" rows="1" source="items/base/gothic/g_book_case.png"/>
+  </textures>
+  <nodes>
+    <node id="Bookcase" z="0.5">
+      <box max="0.05,2.66,0.96" min="-0.49,0,-0.96"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-13" y="36"/>
+          <view angle="135" hm="true" x="13" y="36"/>
+          <view angle="225" col="1" hm="true" x="14" y="49"/>
+          <view angle="315" col="1" x="-14" y="49"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

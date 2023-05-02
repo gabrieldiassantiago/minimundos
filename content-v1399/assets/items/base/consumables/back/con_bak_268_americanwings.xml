@@ -1,0 +1,378 @@
+<item.SpriteItem id="0" name="Eagle Wings" desc="A pair of eagle wings" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Eagle_wings" source="items/base/consumables/back/con_bak_268_americanwings.png" cols="2" rows="5"/>
+    <texture id="Shoot" source="items/base/consumables/magic/effect_01_fireworks_shoot.png" cols="1" rows="1"/>
+    <texture id="Boom01" source="items/base/consumables/magic/effect_01_fireworks_boom.png" cols="1" rows="1"/>
+    <texture id="Boom02" source="items/base/consumables/magic/effect_01_fireworks_boom_02.png" cols="1" rows="1"/>
+    <texture id="Boom03" source="items/base/consumables/magic/effect_01_fireworks_boom_03.png" cols="1" rows="1"/>
+    <texture id="Light_Oval" source="items/base/shared/s_fx_flare_oval.png" cols="1" rows="1"/>
+    <texture id="Light_Small" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+    <texture id="Light_Med" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Light_Large" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="Wingframe1" texture="Eagle_wings">
+          <view angle="0" row="4" x="-14" y="40" hm="true"/>
+          <view angle="45" row="3" x="-18" y="35" hm="true"/>
+          <view angle="90" row="1" x="-2" y="39"/>
+          <view angle="135" row="3" x="18" y="35"/>
+          <view angle="180" row="4" x="14" y="40"/>
+          <view angle="225" row="2" x="7" y="44"/>
+          <view angle="270" y="59"/>
+          <view angle="315" row="2" x="-7" y="44" hm="true"/>
+        </layer>
+        <layer id="Wingframe2" texture="Eagle_wings">
+          <view angle="0" col="1" row="4" y="81" hm="true"/>
+          <view angle="45" col="1" row="3" x="9" y="72" hm="true"/>
+          <view angle="90" col="1" row="1" x="-2" y="78"/>
+          <view angle="135" col="1" row="3" x="-9" y="72"/>
+          <view angle="180" col="1" row="4" y="81"/>
+          <view angle="225" col="1" row="2" x="-15" y="75"/>
+          <view angle="270" col="1" x="-2" y="65"/>
+          <view angle="315" col="1" row="2" x="15" y="75" hm="true"/>
+        </layer>
+        <layer id="ShootA" texture="Shoot">
+          <view/>
+        </layer>
+        <layer id="ShootB" texture="Shoot">
+          <view/>
+        </layer>
+        <layer id="ShootC" texture="Shoot">
+          <view/>
+        </layer>
+        <layer id="Flash A" texture="Boom01">
+          <view/>
+        </layer>
+        <layer id="Flash B" texture="Boom01">
+          <view/>
+        </layer>
+        <layer id="Boom01A" texture="Boom02">
+          <view/>
+        </layer>
+        <layer id="Boom01B" texture="Boom02">
+          <view/>
+        </layer>
+        <layer id="Boom02A" texture="Boom03">
+          <view/>
+        </layer>
+        <layer id="Boom02B" texture="Boom03">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="Wingframe1"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="Wingframe2"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="ShootA" x="20" color="0xc23131" blend="add"/>
+          <layerref id="Wingframe1"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="ShootA" x="20" y="-25" color="0xc23131" blend="add"/>
+          <layerref id="Wingframe2"/>
+        </frame>
+        <frame id="Frame_05">
+          <layerref id="ShootA" x="20" y="-50" color="0xc23131" blend="add"/>
+          <layerref id="Wingframe1"/>
+        </frame>
+        <frame id="Frame_06">
+          <layerref id="Flash A" x="20" y="-125" color="0xc23131" blend="add"/>
+          <layerref id="ShootA" x="20" y="-75" color="0xc23131" a="0.6" blend="add"/>
+          <layerref id="Wingframe2"/>
+        </frame>
+        <frame id="Frame_07">
+          <layerref id="Boom01A" x="20" y="-100" color="0xc23131" blend="add"/>
+          <layerref id="Flash A" x="20" y="-125" color="0xc23131" a="0.4" blend="add"/>
+          <layerref id="ShootA" x="20" y="-75" color="0xc23131" a="0.2" blend="add"/>
+          <layerref id="Wingframe1"/>
+        </frame>
+        <frame id="Frame_08">
+          <layerref id="Boom01A" x="20" y="-100" color="0xc23131" blend="add"/>
+          <layerref id="Boom02A" x="20" y="-75" color="0xc23131" blend="add"/>
+          <layerref id="Flash A" x="20" y="-125" color="0xc23131" a="0.2" blend="add"/>
+          <layerref id="Wingframe2"/>
+        </frame>
+        <frame id="Frame_09">
+          <layerref id="Boom01A" x="20" y="-100" color="0xc23131" a="0.6" blend="add"/>
+          <layerref id="Boom02A" x="20" y="-75" color="0xc23131" blend="add"/>
+          <layerref id="ShootB" blend="add"/>
+          <layerref id="Wingframe1"/>
+        </frame>
+        <frame id="Frame_10">
+          <layerref id="Boom01A" x="20" y="-100" color="0xc23131" a="0.3" blend="add"/>
+          <layerref id="Boom02A" x="20" y="-75" color="0xc23131" a="0.66" blend="add"/>
+          <layerref id="ShootB" y="-25" blend="add"/>
+          <layerref id="Wingframe2"/>
+        </frame>
+        <frame id="Frame_11">
+          <layerref id="Boom02A" x="20" y="-75" color="0xc23131" a="0.33" blend="add"/>
+          <layerref id="ShootB" y="-50" blend="add"/>
+          <layerref id="Wingframe1"/>
+        </frame>
+        <frame id="Frame_12">
+          <layerref id="ShootB" y="-75" blend="add"/>
+          <layerref id="Wingframe2"/>
+        </frame>
+        <frame id="Frame_13">
+          <layerref id="ShootC" x="-20" color="0x244d8a" blend="add"/>
+          <layerref id="Flash A" y="-150" blend="add"/>
+          <layerref id="ShootB" y="-100" a="0.6" blend="add"/>
+          <layerref id="Wingframe1"/>
+        </frame>
+        <frame id="Frame_14">
+          <layerref id="Boom01B" y="-125" blend="add"/>
+          <layerref id="ShootC" x="-20" y="-25" color="0x244d8a" blend="add"/>
+          <layerref id="Flash B" y="-150" a="0.4" blend="add"/>
+          <layerref id="ShootB" y="-100" a="0.2" blend="add"/>
+          <layerref id="Wingframe2"/>
+        </frame>
+        <frame id="Frame_15">
+          <layerref id="Boom02B" y="-100"/>
+          <layerref id="Boom01B" y="-125" a="0.66" blend="add"/>
+          <layerref id="ShootC" x="-20" y="-50" color="0x244d8a" blend="add"/>
+          <layerref id="Flash B" y="-150" a="0.2" blend="add"/>
+          <layerref id="Wingframe1"/>
+        </frame>
+        <frame id="Frame_16">
+          <layerref id="Flash A" x="-20" y="-125" color="0x244d8a" blend="add"/>
+          <layerref id="Boom02B" y="-100"/>
+          <layerref id="Boom01B" y="-125" a="0.2" blend="add"/>
+          <layerref id="ShootC" x="-20" y="-75" color="0x244d8a" blend="add"/>
+          <layerref id="Wingframe2"/>
+        </frame>
+        <frame id="Frame_17">
+          <layerref id="Flash A" x="-20" y="-125" color="0x244d8a" a="0.4" blend="add"/>
+          <layerref id="Boom02B" y="-100" a="0.66"/>
+          <layerref id="Boom01A" x="-20" y="-100" color="0x244d8a" blend="add"/>
+          <layerref id="ShootC" x="-20" y="-75" color="0x244d8a" a="0.2" blend="add"/>
+          <layerref id="Wingframe1"/>
+        </frame>
+        <frame id="Frame_18">
+          <layerref id="Flash A" x="-20" y="-125" color="0x244d8a" a="0.2" blend="add"/>
+          <layerref id="Boom02A" x="-20" y="-75" color="0x244d8a"/>
+          <layerref id="Boom02B" y="-100" a="0.15"/>
+          <layerref id="Boom01A" x="-20" y="-100" color="0x244d8a" blend="add"/>
+          <layerref id="Wingframe2"/>
+        </frame>
+        <frame id="Frame_19">
+          <layerref id="Boom02A" x="-20" y="-75" color="0x244d8a" blend="add"/>
+          <layerref id="Boom01A" x="-20" y="-100" color="0x244d8a" a="0.6" blend="add"/>
+          <layerref id="Wingframe1"/>
+        </frame>
+        <frame id="Frame_20">
+          <layerref id="Boom02A" x="-20" y="-75" color="0x244d8a" a="0.6" blend="add"/>
+          <layerref id="Boom01A" x="-20" y="-100" color="0x244d8a" a="0.2" blend="add"/>
+          <layerref id="Wingframe2"/>
+        </frame>
+        <frame id="Frame_21">
+          <layerref id="Boom02A" x="-20" y="-75" color="0x244d8a" a="0.3" blend="add"/>
+          <layerref id="Wingframe1"/>
+        </frame>
+        <frame id="Frame_22">
+          <layerref id="Boom02A" x="-20" y="-75" color="0x244d8a" a="0.15" blend="add"/>
+          <layerref id="Wingframe2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame_01">
+            <sample id="flap" loops="-1"/>
+          </frameref>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+          <frameref id="Frame_05"/>
+          <frameref id="Frame_06"/>
+          <frameref id="Frame_07"/>
+          <frameref id="Frame_08"/>
+          <frameref id="Frame_09"/>
+          <frameref id="Frame_10"/>
+          <frameref id="Frame_11"/>
+          <frameref id="Frame_12"/>
+          <frameref id="Frame_13"/>
+          <frameref id="Frame_14"/>
+          <frameref id="Frame_15"/>
+          <frameref id="Frame_16"/>
+          <frameref id="Frame_17"/>
+          <frameref id="Frame_18"/>
+          <frameref id="Frame_19"/>
+          <frameref id="Frame_20"/>
+          <frameref id="Frame_21"/>
+          <frameref id="Frame_22"/>
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+        </animation>
+        <animation id="Sit" framerate="4"/>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="ShootA" texture="Light_Oval">
+          <view/>
+        </layer>
+        <layer id="ShootB" texture="Light_Oval">
+          <view/>
+        </layer>
+        <layer id="Flash A" texture="Light_Small">
+          <view/>
+        </layer>
+        <layer id="Flash B" texture="Light_Small">
+          <view/>
+        </layer>
+        <layer id="Boom A01" texture="Light_Med">
+          <view/>
+        </layer>
+        <layer id="Boom A02" texture="Light_Med">
+          <view/>
+        </layer>
+        <layer id="Boom B01" texture="Light_Large">
+          <view/>
+        </layer>
+        <layer id="Boom B02" texture="Light_Large">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="ShootA" a="0"/>
+        </frame>
+        <frame id="01">
+          <layerref id="ShootA" a="0"/>
+        </frame>
+        <frame id="02">
+          <layerref id="ShootA" a="0"/>
+        </frame>
+        <frame id="03">
+          <layerref id="ShootA" x="5" y="-5" color="0xc23131"/>
+        </frame>
+        <frame id="04">
+          <layerref id="ShootA" x="5" y="-15" color="0xc23131"/>
+        </frame>
+        <frame id="05">
+          <layerref id="ShootA" x="5" y="-20" color="0xc23131" blend="add"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Flash A" x="5" y="-33" color="0xc23131"/>
+          <layerref id="ShootA" x="5" y="-30" color="0xc23131" blend="add"/>
+        </frame>
+        <frame id="07">
+          <layerref id="Boom A01" x="6" y="-20" color="0xc23131" blend="add"/>
+          <layerref id="Flash A" x="5" y="-33" color="0xc23131" blend="add"/>
+          <layerref id="ShootA" x="5" y="-30" color="0xc23131" blend="add"/>
+        </frame>
+        <frame id="08">
+          <layerref id="Boom B01" x="4" y="-15" color="0xc23131" blend="add"/>
+        </frame>
+        <frame id="09">
+          <layerref id="Boom B01" x="4" y="-15" color="0xc23131" a="0.6" blend="add"/>
+          <layerref id="ShootB" blend="add"/>
+        </frame>
+        <frame id="10">
+          <layerref id="Boom B01" x="4" y="-15" color="0xc23131" a="0.3" blend="add"/>
+          <layerref id="ShootB" y="-10" blend="add"/>
+        </frame>
+        <frame id="11">
+          <layerref id="Boom B01" x="4" y="-15" color="0xc23131" a="0.15" blend="add"/>
+          <layerref id="ShootB" y="-20" blend="add"/>
+        </frame>
+        <frame id="12">
+          <layerref id="ShootB" y="-30" blend="add"/>
+          <layerref id="ShootA" x="-7" color="0x244d8a" blend="add"/>
+        </frame>
+        <frame id="13">
+          <layerref id="ShootB" y="-30" blend="add"/>
+          <layerref id="Boom A02" y="-25" blend="add"/>
+          <layerref id="ShootA" x="-7" y="-10" color="0x244d8a" blend="add"/>
+        </frame>
+        <frame id="14">
+          <layerref id="ShootB" y="-30" a="0.6" blend="add"/>
+          <layerref id="Boom B02" y="-20" blend="add"/>
+          <layerref id="ShootA" x="-7" y="-20" color="0x244d8a" blend="add"/>
+        </frame>
+        <frame id="15">
+          <layerref id="ShootB" y="-30" a="0.3" blend="add"/>
+          <layerref id="Boom B02" y="-20" a="0.6" blend="add"/>
+          <layerref id="ShootA" x="-7" y="-35" color="0x244d8a" blend="add"/>
+        </frame>
+        <frame id="16">
+          <layerref id="Boom B02" y="-20" a="0.4" blend="add"/>
+          <layerref id="ShootA" x="-7" y="-35" color="0x244d8a" blend="add"/>
+          <layerref id="Flash A" x="-7" y="-33" color="0x244d8a" blend="add"/>
+        </frame>
+        <frame id="17">
+          <layerref id="Boom A01" x="-7" y="-18" color="0x244d8a" blend="add"/>
+          <layerref id="Boom B02" y="-20" a="0.3" blend="add"/>
+          <layerref id="ShootA" x="-7" y="-35" color="0x244d8a" blend="add"/>
+          <layerref id="Flash A" x="-7" y="-33" color="0x244d8a" a="0.6" blend="add"/>
+        </frame>
+        <frame id="18">
+          <layerref id="Boom B01" x="-7" y="-13" color="0x244d8a" blend="add"/>
+          <layerref id="Boom B02" y="-20" a="0.15" blend="add"/>
+          <layerref id="ShootA" x="-7" y="-35" color="0x244d8a" blend="add"/>
+          <layerref id="Flash A" x="-7" y="-33" color="0x244d8a" a="0.3" blend="add"/>
+        </frame>
+        <frame id="19">
+          <layerref id="Boom B01" x="-7" y="-13" color="0x244d8a" a="0.6" blend="add"/>
+        </frame>
+        <frame id="20">
+          <layerref id="Boom B01" x="-7" y="-13" color="0x244d8a" a="0.4" blend="add"/>
+        </frame>
+        <frame id="21">
+          <layerref id="Boom B01" x="-7" y="-13" color="0x244d8a" a="0.2" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="09"/>
+          <frameref id="10"/>
+          <frameref id="11"/>
+          <frameref id="12"/>
+          <frameref id="13"/>
+          <frameref id="14"/>
+          <frameref id="15"/>
+          <frameref id="16"/>
+          <frameref id="17"/>
+          <frameref id="18"/>
+          <frameref id="19"/>
+          <frameref id="20"/>
+          <frameref id="21"/>
+          <frameref id="Off"/>
+          <frameref id="Off"/>
+          <frameref id="Off"/>
+          <frameref id="Off"/>
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

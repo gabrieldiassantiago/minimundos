@@ -1,0 +1,27 @@
+<item.SpriteItem id="4616" name="Mesa de Centro Fantasia Eco" desc="Uma adorável mesa de centro" tags="table" icon="items/base/outdoor/icon_o_table_06_fantasycoffeetable.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="65">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.5,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="aluminium table" source="items/base/outdoor/o_table_06_fantasycoffeetable.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Table">
+      <box min="-0.49,0,-0.49" max="0.49,0.5,1.49"/>
+      <layers>
+        <layer id="Layer" texture="aluminium table">
+          <view angle="45" x="21" y="17" hm="true"/>
+          <view angle="135" x="38" y="47"/>
+          <view angle="225" x="-39" y="47" hm="true"/>
+          <view angle="315" x="-24" y="16"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

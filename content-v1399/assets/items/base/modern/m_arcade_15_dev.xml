@@ -1,0 +1,144 @@
+<item.WidgetItem id="1694" name="Máquina Arcade Profissional Blade" desc="Uma máquina só para os fortes" tags="appliance,widget" icon="items/base/modern/icon_m_arcade_15_dev.png" price="250" tokens="2500" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_arcade.swf">
+  <volume>
+    <box min="-0.2,0,-0.5" max="1.65,2.62,0.5"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <actions>
+    <action id="Complete">
+      <eval>
+        <func type="range" id="Score" input="score"/>
+        <func type="relational" id="Game Name" input="name" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+    <action id="Ranking">
+      <eval>
+        <func type="range" id="Rank" input="rank"/>
+        <func type="relational" id="Game Name" input="name" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="control_xml_path" value="widgets/assets/arcade/control.mxml"/>
+    <entry key="arcade_art" value="generic"/>
+    <entry key="arcade_mode" value="singleGame"/>
+    <entry key="widget_background_override" value="widget/GrafittiBG.jpg"/>
+    <entry key="show_advert" value="false"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="iframeWidget" value="true"/>
+  </data>
+  <navigate position="infront" sitRange="1.00" standRange="1.00" targetRange="1.00" usableRange="-1.00"/>
+  <textures>
+    <texture id="cabinet" source="items/base/modern/m_arcade_15.png" cols="2" rows="1"/>
+    <texture id="screen" source="items/base/modern/m_arcade_15_screen.png" cols="3" rows="1"/>
+    <texture id="panel" source="items/base/modern/m_arcade_15_panel.png" cols="2" rows="1"/>
+    <texture id="text" source="items/base/modern/m_arcade_15_text.png" cols="1" rows="1"/>
+    <texture id="backpanel" source="items/base/modern/m_arcade_15_panel_02.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_tiltscreen.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/shared/s_fx_flare_screen_arcade_old.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Arcade" x="0.6">
+      <box min="-0.8,0,-0.5" max="1.05,2.62,0.5"/>
+      <layers>
+        <layer id="cabinet" texture="cabinet">
+          <view angle="45" x="-11" y="54"/>
+          <view angle="135" x="11" y="54" hm="true"/>
+          <view angle="225" col="1" x="13" y="49"/>
+          <view angle="315" col="1" x="-15" y="49" hm="true"/>
+        </layer>
+        <layer id="screen01" texture="screen">
+          <view angle="45" x="-4" y="-88"/>
+          <view angle="135" x="4" y="-89" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen02" texture="screen">
+          <view angle="45" col="1" x="-4" y="-88"/>
+          <view angle="135" col="1" x="4" y="-89" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="screen03" texture="screen">
+          <view angle="45" col="2" x="-4" y="-88"/>
+          <view angle="135" col="2" x="4" y="-89" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+        <layer id="panel" texture="panel">
+          <view angle="45" x="22" y="-50"/>
+          <view angle="135" col="1" x="-22" y="-50"/>
+          <view angle="225" row="1" x="-49" y="-91" alpha="0"/>
+          <view angle="315" col="1" row="1" x="48" y="-91" alpha="0"/>
+        </layer>
+        <layer id="text" texture="text">
+          <view angle="45" x="45" y="-144" alpha="0"/>
+          <view angle="135" x="-18" y="-152"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="Layer" texture="backpanel">
+          <view angle="45" alpha="0"/>
+          <view angle="135" col="1" alpha="0"/>
+          <view angle="225" x="-46" y="-73"/>
+          <view angle="315" col="1" x="43" y="-73"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="cabinet"/>
+          <layerref id="screen01"/>
+          <layerref id="panel"/>
+          <layerref id="text"/>
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="cabinet"/>
+          <layerref id="screen02"/>
+          <layerref id="panel"/>
+          <layerref id="text"/>
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="1">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.35" y="1.05" s="3.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="8" y="-5"/>
+          <view angle="135" x="-6" y="-5" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="Layer2" texture="Texture">
+          <view angle="45" x="1" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" x="11" y="36"/>
+          <view angle="315" x="-9" y="36" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light"/>
+          <layerref id="Layer2"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

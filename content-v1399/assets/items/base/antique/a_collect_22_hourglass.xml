@@ -1,0 +1,120 @@
+<item.SpriteItem id="3060" name="Ampulheta" desc="Uma colecionável ampulheta de madeira." tags="rare,misc" icon="items/base/antique/icon_a_collect_22_hourglass.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="150">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.8,0.24"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="glass" source="items/base/antique/a_collect_22_glass.png" cols="1" rows="1"/>
+    <texture id="sand" source="items/base/antique/a_collect_22_sand.png" cols="3" rows="2"/>
+    <texture id="base" source="items/base/antique/a_collect_22_base.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,0.8,0.24"/>
+      <layers>
+        <layer id="base" texture="base" y="15">
+          <view angle="45" y="1"/>
+          <view angle="135" y="1" hm="true"/>
+          <view angle="225" y="1"/>
+          <view angle="315" y="1" hm="true"/>
+        </layer>
+        <layer id="sand_01" texture="sand" y="15">
+          <view angle="45" y="-12"/>
+          <view angle="135" y="-12" hm="true"/>
+          <view angle="225" y="-12"/>
+          <view angle="315" y="-12" hm="true"/>
+        </layer>
+        <layer id="sand_02" texture="sand" y="15">
+          <view angle="45" col="1" y="-12"/>
+          <view angle="135" col="1" y="-12" hm="true"/>
+          <view angle="225" col="1" y="-12"/>
+          <view angle="315" col="1" y="-12" hm="true"/>
+        </layer>
+        <layer id="sand_03" texture="sand" y="15">
+          <view angle="45" col="2" y="-12"/>
+          <view angle="135" col="2" y="-12" hm="true"/>
+          <view angle="225" col="2" y="-12"/>
+          <view angle="315" col="2" y="-12" hm="true"/>
+        </layer>
+        <layer id="sand_04" texture="sand" y="15">
+          <view angle="45" row="1" y="-12"/>
+          <view angle="135" row="1" y="-12" hm="true"/>
+          <view angle="225" row="1" y="-12"/>
+          <view angle="315" row="1" y="-12" hm="true"/>
+        </layer>
+        <layer id="sand_05" texture="sand" y="15">
+          <view angle="45" col="1" row="1" y="-12"/>
+          <view angle="135" col="1" row="1" y="-12" hm="true"/>
+          <view angle="225" col="1" row="1" y="-12"/>
+          <view angle="315" col="1" row="1" y="-12" hm="true"/>
+        </layer>
+        <layer id="sand_06" texture="sand" y="15">
+          <view angle="45" col="2" row="1" y="-12"/>
+          <view angle="135" col="2" row="1" y="-12" hm="true"/>
+          <view angle="225" col="2" row="1" y="-12"/>
+          <view angle="315" col="2" row="1" y="-12" hm="true"/>
+        </layer>
+        <layer id="glass" texture="glass" y="15">
+          <view angle="45" y="1"/>
+          <view angle="135" y="1" hm="true"/>
+          <view angle="225" y="1"/>
+          <view angle="315" y="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="base"/>
+          <layerref id="sand_01"/>
+          <layerref id="glass"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="base"/>
+          <layerref id="sand_02"/>
+          <layerref id="glass"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="base"/>
+          <layerref id="sand_03"/>
+          <layerref id="glass"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="base"/>
+          <layerref id="sand_04"/>
+          <layerref id="glass"/>
+        </frame>
+        <frame id="Frame_05">
+          <layerref id="base"/>
+          <layerref id="sand_05"/>
+          <layerref id="glass"/>
+        </frame>
+        <frame id="Frame_06">
+          <layerref id="base"/>
+          <layerref id="sand_06"/>
+          <layerref id="glass"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1">
+          <frameref id="Frame_01" duration="2"/>
+          <frameref id="Frame_02" duration="2"/>
+          <frameref id="Frame_03" duration="2"/>
+          <frameref id="Frame_04" duration="2"/>
+          <frameref id="Frame_05" duration="2"/>
+          <frameref id="Frame_06" duration="4"/>
+        </animation>
+        <animation id="Off" framerate="6" loop="false">
+          <frameref id="Frame_06"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

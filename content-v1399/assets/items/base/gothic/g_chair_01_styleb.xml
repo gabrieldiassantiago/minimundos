@@ -1,0 +1,74 @@
+<item.ChairItem desc="Uma cadeira magestosa." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/gothic/icon_g_chair_01_styleb.png" id="348" name="Cadeira Gótica" tags="chair" price="55" tokens="550" minLevel="1" minCPLevel="1">
+  <seats>
+    <seat x="0.04" y="0.4">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box max="0.49,2.05,0.49" min="-0.49,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture cols="2" id="Texture" rows="1" source="items/base/gothic/g_chair_01_styleb.png"/>
+    <texture cols="2" id="Texture01" rows="1" source="items/base/gothic/g_chair_01_styleb_02.png"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box max="0.49,2.05,0.49" min="-0.49,0,-0.49"/>
+      <layers>
+        <layer align="middle" id="Layer" texture="Texture">
+          <view alpha="0" angle="45" col="1" x="-2" y="-81"/>
+          <view angle="135" hm="true" x="-2" y="-81"/>
+          <view alpha="0" angle="225" hm="true" x="-1" y="-72"/>
+          <view angle="315" col="1" x="-1" y="-72"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view angle="45" col="1" x="-24" y="31"/>
+          <view alpha="0" angle="135" col="1"/>
+          <view angle="225" hm="true" x="2" y="31"/>
+          <view alpha="0" angle="315"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="LeftArm">
+      <box max="0.49,2.05,0.49" min="-0.49,0,-0.49"/>
+      <layers>
+        <layer align="middle" id="Layer" texture="Texture">
+          <view angle="45" x="2" y="-81"/>
+          <view alpha="0" angle="135" hm="true" x="2" y="-81"/>
+          <view angle="225" col="1" hm="true" x="-1" y="-72"/>
+          <view alpha="0" angle="315" x="-1" y="-72"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view alpha="0" angle="45"/>
+          <view angle="135" col="1" hm="true" x="24" y="31"/>
+          <view alpha="0" angle="225" col="1"/>
+          <view angle="315" x="-2" y="31"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

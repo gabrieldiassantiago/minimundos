@@ -1,0 +1,83 @@
+<item.SpriteItem desc="Um sarcófago do Egito" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/antique/icon_a_tomb_01_mummy.png" id="1035" name="Sarcófago do Egito" tags="rare,misc" price="90" tokens="900" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.49,0.45,1.2" min="-0.49,0,-1.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action event="toggle" id="Toggle" trigger="false"/>
+    <action event="animate(Open)" id="Open" state="true"/>
+    <action event="animate(Closed)" id="Close" state="true"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture cols="2" id="coffin" rows="1" source="items/base/antique/a_tomb_01_coffin.png"/>
+    <texture cols="2" id="cover" rows="1" source="items/base/antique/a_tomb_01_mummy.png"/>
+    <texture cols="2" id="body" rows="1" source="items/base/antique/a_tomb_01_body.png"/>
+  </textures>
+  <nodes>
+    <node id="sarcophagus">
+      <box max="0.49,0.45,1.2" min="-0.49,0,-1.2"/>
+      <layers>
+        <layer id="coffin" texture="coffin" y="30">
+          <view angle="45" hm="true" x="-3" y="27"/>
+          <view angle="135" col="1" x="-2" y="24"/>
+          <view angle="225" col="1" hm="true" x="2" y="24"/>
+          <view angle="315" x="3" y="27"/>
+        </layer>
+        <layer id="coffin01" texture="coffin" y="30">
+          <view angle="45" hm="true" x="-3" y="27"/>
+          <view angle="135" col="1" x="-2" y="24"/>
+          <view angle="225" col="1" hm="true" x="2" y="24"/>
+          <view angle="315" x="3" y="27"/>
+        </layer>
+        <layer id="cover" texture="cover" y="30">
+          <view angle="45" hm="true" x="-2" y="-22"/>
+          <view angle="135" col="1" x="-1" y="-23"/>
+          <view angle="225" col="1" hm="true" x="1" y="-23"/>
+          <view angle="315" x="2" y="-22"/>
+        </layer>
+        <layer id="body" texture="body" y="30">
+          <view angle="45" hm="true" x="-3" y="-22"/>
+          <view angle="135" col="1" x="-4" y="-25"/>
+          <view angle="225" col="1" hm="true" x="4" y="-25"/>
+          <view angle="315" x="3" y="-22"/>
+        </layer>
+        <layer id="body01" texture="body" y="30">
+          <view angle="45" hm="true" x="-3" y="-22"/>
+          <view angle="135" col="1" x="-4" y="-25"/>
+          <view angle="225" col="1" hm="true" x="4" y="-25"/>
+          <view angle="315" x="3" y="-22"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref color="0xf3c1b9" id="coffin"/>
+          <layerref a="0.7" blend="overlay" color="0xfff999" id="coffin01"/>
+          <layerref color="0xff9933" id="body"/>
+          <layerref a="0.8" id="body01"/>
+        </frame>
+        <frame id="closed">
+          <layerref color="0xf3c1b9" id="coffin"/>
+          <layerref a="0.7" blend="overlay" color="0xfff999" id="coffin01"/>
+          <layerref id="cover"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="1" id="Closed" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation framerate="1" id="Open" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

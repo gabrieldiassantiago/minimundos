@@ -1,0 +1,189 @@
+<item.SpriteItem name="Relíquia do Cyborgue" desc="Obrigado por jogador MiniMundos" tags="rare,misc" icon="items/base/consumables/clothing/accessory/acc_886_cyborg_icon.png" price="1" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="7286">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.5,0.15"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="glow" source="items/base/consumables/clothing/accessory/acc_886_cyborg_glow.png" cols="1" rows="1"/>
+    <texture id="coffin" source="items/base/consumables/clothing/accessory/acc_886_cyborg_item.png" cols="1" rows="1"/>
+    <texture id="Shadow" source="items/base/consumables/clothing/accessory/acc_111_hand_giftbasket_shadow.png" cols="1" rows="1"/>
+    <texture id="effects" source="items/base/consumables/clothing/accessory/acc_886_cyborg_effect.png" cols="3" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.5,0.15"/>
+      <layers>
+        <layer id="Coffin" texture="coffin">
+          <view angle="45" y="-8"/>
+          <view angle="135" y="-8" hm="true"/>
+          <view angle="225" y="-8"/>
+          <view angle="315" y="-8" hm="true"/>
+        </layer>
+        <layer id="Shadow" texture="Shadow">
+          <view y="20"/>
+        </layer>
+        <layer id="fx01" texture="effects">
+          <view angle="45" x="7"/>
+          <view angle="135" x="7"/>
+          <view angle="225" x="6"/>
+          <view angle="315" x="7"/>
+        </layer>
+        <layer id="fx02" texture="effects">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" x="-1"/>
+        </layer>
+        <layer id="fx03" texture="effects">
+          <view angle="45" col="2" x="-7"/>
+          <view angle="135" col="2" x="-5"/>
+          <view angle="225" col="2" x="-7"/>
+          <view angle="315" col="2" x="-4"/>
+        </layer>
+        <layer id="fx04" texture="effects">
+          <view angle="45" row="1" x="6"/>
+          <view angle="135" row="1" x="7"/>
+          <view angle="225" row="1" x="6"/>
+          <view angle="315" row="1" x="7"/>
+        </layer>
+        <layer id="fx05" texture="effects">
+          <view angle="45" col="1" row="1" x="-2"/>
+          <view angle="135" col="1" row="1" x="-1"/>
+          <view angle="225" col="1" row="1" x="-1"/>
+          <view angle="315" col="1" row="1" x="-1"/>
+        </layer>
+        <layer id="fx06" texture="effects">
+          <view angle="45" col="2" row="1" x="-6"/>
+          <view angle="135" col="2" row="1" x="-5"/>
+          <view angle="225" col="2" row="1" x="-7"/>
+          <view angle="315" col="2" row="1" x="-5"/>
+        </layer>
+        <layer id="fx07" texture="effects">
+          <view angle="45" row="2" x="4" y="2"/>
+          <view angle="135" row="2" x="6"/>
+          <view angle="225" row="2" x="4"/>
+          <view angle="315" row="2" x="5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="fx01"/>
+          <layerref id="Coffin" y="2"/>
+          <layerref id="Shadow"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="fx02"/>
+          <layerref id="Coffin" y="1"/>
+          <layerref id="Shadow"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="fx03"/>
+          <layerref id="Coffin"/>
+          <layerref id="Shadow"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="fx04"/>
+          <layerref id="Coffin" y="1"/>
+          <layerref id="Shadow"/>
+        </frame>
+        <frame id="Frame_05">
+          <layerref id="fx05"/>
+          <layerref id="Coffin" y="2"/>
+          <layerref id="Shadow"/>
+        </frame>
+        <frame id="Frame_06">
+          <layerref id="fx06"/>
+          <layerref id="Coffin" y="3"/>
+          <layerref id="Shadow"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+          <frameref id="Frame_05"/>
+          <frameref id="Frame_06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="rainbow" texture="glow">
+          <view angle="45" x="1" y="-7"/>
+          <view angle="135" x="1" y="-7" hm="true"/>
+          <view angle="225" x="1" y="-7"/>
+          <view angle="315" x="1" y="-7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="rainbow" y="2"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="rainbow" y="1"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="rainbow"/>
+        </frame>
+        <frame id="On04">
+          <layerref id="rainbow" y="1"/>
+        </frame>
+        <frame id="On05">
+          <layerref id="rainbow" y="2"/>
+        </frame>
+        <frame id="On06">
+          <layerref id="rainbow" y="3"/>
+        </frame>
+        <frame id="On07">
+          <layerref id="rainbow" y="4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+          <frameref id="On05"/>
+          <frameref id="On06"/>
+          <frameref id="On07"/>
+          <frameref id="On06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-10"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On_01">
+          <layerref id="Light" color="0x80c1ee" a="0.7"/>
+        </frame>
+        <frame id="On_02">
+          <layerref id="Light" color="0x80c1ee" a="0.5"/>
+        </frame>
+        <frame id="On_03">
+          <layerref id="Light" color="0x80c1ee" a="0.3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="3">
+          <frameref id="On_01"/>
+          <frameref id="On_02"/>
+          <frameref id="On_03" duration="2"/>
+          <frameref id="On_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

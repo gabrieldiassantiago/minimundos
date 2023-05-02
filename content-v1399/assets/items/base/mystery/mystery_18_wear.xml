@@ -1,0 +1,148 @@
+<item.SpriteItem id="0" name="Monarch Butterfly Wings" desc="A pair of butterfly wings" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="wings_color" source="items/base/mystery/mystery_18_wear_color.png" cols="2" rows="5"/>
+    <texture id="wings_green" source="items/base/mystery/mystery_18_wear_green.png" cols="2" rows="5"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="wings" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="color_down" texture="wings_color">
+          <view angle="0" row="2" x="-5" y="60"/>
+          <view angle="45" y="60"/>
+          <view angle="90" row="1" y="65"/>
+          <view angle="135" y="60" hm="true"/>
+          <view angle="180" row="2" x="5" y="60" hm="true"/>
+          <view angle="225" row="3" x="-3" y="60" hm="true"/>
+          <view angle="270" row="4" y="55"/>
+          <view angle="315" row="3" x="3" y="60"/>
+        </layer>
+        <layer id="color_up" texture="wings_color">
+          <view angle="0" col="1" row="2" x="-5" y="60"/>
+          <view angle="45" col="1" y="60"/>
+          <view angle="90" col="1" row="1" y="65"/>
+          <view angle="135" col="1" y="60" hm="true"/>
+          <view angle="180" col="1" row="2" x="5" y="60" hm="true"/>
+          <view angle="225" col="1" row="3" x="-3" y="60" hm="true"/>
+          <view angle="270" col="1" row="4" y="55"/>
+          <view angle="315" col="1" row="3" x="3" y="60"/>
+        </layer>
+        <layer id="green_down" texture="wings_green">
+          <view angle="0" row="2" x="-5" y="60"/>
+          <view angle="45" y="60"/>
+          <view angle="90" row="1" y="65"/>
+          <view angle="135" y="60" hm="true"/>
+          <view angle="180" row="2" x="5" y="60" hm="true"/>
+          <view angle="225" row="3" x="-3" y="60" hm="true"/>
+          <view angle="270" row="4" y="55"/>
+          <view angle="315" row="3" x="3" y="60"/>
+        </layer>
+        <layer id="green_up" texture="wings_green">
+          <view angle="0" col="1" row="2" x="-5" y="60"/>
+          <view angle="45" col="1" y="60"/>
+          <view angle="90" col="1" row="1" y="65"/>
+          <view angle="135" col="1" y="60" hm="true"/>
+          <view angle="180" col="1" row="2" x="5" y="60" hm="true"/>
+          <view angle="225" col="1" row="3" x="-3" y="60" hm="true"/>
+          <view angle="270" col="1" row="4" y="55"/>
+          <view angle="315" col="1" row="3" x="3" y="60"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="green_down">
+          <layerref id="green_down"/>
+        </frame>
+        <frame id="green_up">
+          <layerref id="green_up"/>
+        </frame>
+        <frame id="color_down">
+          <layerref id="color_down"/>
+        </frame>
+        <frame id="color_up">
+          <layerref id="color_up"/>
+        </frame>
+        <frame id="mix_01">
+          <layerref id="green_up"/>
+          <layerref id="color_up" a="0.2"/>
+        </frame>
+        <frame id="mix_02">
+          <layerref id="green_down"/>
+          <layerref id="color_down" a="0.4"/>
+        </frame>
+        <frame id="mix_03">
+          <layerref id="green_up"/>
+          <layerref id="color_up" a="0.6"/>
+        </frame>
+        <frame id="mix_04">
+          <layerref id="green_down"/>
+          <layerref id="color_down" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="green_down">
+            <sample id="flap" loops="-1"/>
+          </frameref>
+          <frameref id="green_up"/>
+          <frameref id="green_down"/>
+          <frameref id="green_up"/>
+          <frameref id="green_down"/>
+          <frameref id="green_up"/>
+          <frameref id="green_down"/>
+          <frameref id="green_up"/>
+          <frameref id="green_down"/>
+          <frameref id="green_up"/>
+          <frameref id="green_down"/>
+          <frameref id="green_up"/>
+          <frameref id="green_down"/>
+          <frameref id="green_up"/>
+          <frameref id="green_down"/>
+          <frameref id="green_up"/>
+          <frameref id="green_down"/>
+          <frameref id="mix_01"/>
+          <frameref id="mix_02"/>
+          <frameref id="mix_03"/>
+          <frameref id="mix_04"/>
+          <frameref id="color_up"/>
+          <frameref id="color_down"/>
+          <frameref id="color_up"/>
+          <frameref id="color_down"/>
+          <frameref id="color_up"/>
+          <frameref id="color_down"/>
+          <frameref id="color_up"/>
+          <frameref id="color_down"/>
+          <frameref id="color_up"/>
+          <frameref id="mix_04"/>
+          <frameref id="mix_03"/>
+          <frameref id="mix_02"/>
+          <frameref id="mix_01"/>
+        </animation>
+        <animation id="Sit" framerate="8">
+          <frameref id="green_down" duration="16"/>
+          <frameref id="mix_02" duration="2"/>
+          <frameref id="mix_04" duration="2"/>
+          <frameref id="color_down" duration="8"/>
+          <frameref id="mix_04" duration="2"/>
+          <frameref id="mix_02" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

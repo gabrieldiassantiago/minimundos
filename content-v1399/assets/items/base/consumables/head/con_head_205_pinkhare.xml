@@ -1,0 +1,137 @@
+<item.SpriteItem id="0" name="Pink Hare" desc="A Bunny head" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bunny" source="items/base/consumables/head/con_head_205_pinkhare.png" cols="5" rows="1"/>
+    <texture id="ears" source="items/base/consumables/head/con_head_205_pinkhare_ears.png" cols="5" rows="4"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_205_pinkhare_eyes.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="bunny" texture="bunny">
+          <view angle="0" col="2" x="1" y="12"/>
+          <view angle="45" x="-1" y="8"/>
+          <view angle="90" col="1" y="6"/>
+          <view angle="135" x="-1" y="8" hm="true"/>
+          <view angle="180" col="2" x="-2" y="12" hm="true"/>
+          <view angle="225" col="3" x="1" y="14" hm="true"/>
+          <view angle="270" col="4" y="16"/>
+          <view angle="315" col="3" x="-2" y="14"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="6" y="5"/>
+          <view angle="45" x="1"/>
+          <view angle="90" col="1"/>
+          <view angle="135" x="-2" hm="true"/>
+          <view angle="180" col="2" x="-6" y="5" hm="true"/>
+          <view angle="225" col="3" x="-15" hm="true"/>
+          <view angle="270" col="4" y="-5"/>
+          <view angle="315" col="3" x="15"/>
+        </layer>
+        <layer id="ears_01" texture="ears">
+          <view angle="0" col="2" x="6" y="15"/>
+          <view angle="45" x="1" y="17"/>
+          <view angle="90" col="1" y="22"/>
+          <view angle="135" x="-3" y="17" hm="true"/>
+          <view angle="180" col="2" x="-7" y="15" hm="true"/>
+          <view angle="225" col="3" x="-2" y="14" hm="true"/>
+          <view angle="270" col="4" y="16"/>
+          <view angle="315" col="3" x="1" y="14"/>
+        </layer>
+        <layer id="ears_02" texture="ears">
+          <view angle="0" col="2" row="1" x="6" y="15"/>
+          <view angle="45" row="1" x="1" y="17"/>
+          <view angle="90" col="1" row="1" y="22"/>
+          <view angle="135" row="1" x="-3" y="17" hm="true"/>
+          <view angle="180" col="2" row="1" x="-7" y="15" hm="true"/>
+          <view angle="225" col="3" row="1" x="-2" y="14" hm="true"/>
+          <view angle="270" col="4" row="1" y="16"/>
+          <view angle="315" col="3" row="1" x="1" y="14"/>
+        </layer>
+        <layer id="ears_03" texture="ears">
+          <view angle="0" col="2" row="2" x="6" y="15"/>
+          <view angle="45" row="2" x="1" y="17"/>
+          <view angle="90" col="1" row="2" y="22"/>
+          <view angle="135" row="2" x="-3" y="17" hm="true"/>
+          <view angle="180" col="2" row="2" x="-7" y="15" hm="true"/>
+          <view angle="225" col="3" row="2" x="-2" y="14" hm="true"/>
+          <view angle="270" col="4" row="2" y="16"/>
+          <view angle="315" col="3" row="2" x="1" y="14"/>
+        </layer>
+        <layer id="ears_04" texture="ears">
+          <view angle="0" col="2" row="3" x="6" y="15"/>
+          <view angle="45" row="3" x="1" y="17"/>
+          <view angle="90" col="1" row="3" y="22"/>
+          <view angle="135" row="3" x="-3" y="17" hm="true"/>
+          <view angle="180" col="2" row="3" x="-7" y="15" hm="true"/>
+          <view angle="225" col="3" row="3" x="-2" y="14" hm="true"/>
+          <view angle="270" col="4" row="3" y="16"/>
+          <view angle="315" col="3" row="3" x="1" y="14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="blink">
+          <layerref id="bunny"/>
+          <layerref id="ears_01"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="open">
+          <layerref id="bunny"/>
+          <layerref id="ears_01"/>
+        </frame>
+        <frame id="01">
+          <layerref id="bunny"/>
+          <layerref id="ears_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="bunny"/>
+          <layerref id="ears_02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="bunny"/>
+          <layerref id="ears_03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="bunny"/>
+          <layerref id="ears_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="6">
+          <frameref id="open" duration="8"/>
+          <frameref id="blink"/>
+          <frameref id="open" duration="10"/>
+          <frameref id="blink"/>
+          <frameref id="open"/>
+          <frameref id="blink"/>
+          <frameref id="open" duration="6"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="01" duration="4"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="blink"/>
+          <frameref id="open" duration="4"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

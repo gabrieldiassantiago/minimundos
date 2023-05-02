@@ -1,0 +1,87 @@
+<item.SpriteItem id="0" name="Phoenix" desc="Painter special wings and tail" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Dahlia" source="items/base/consumables/clothing/suits/suit_112_dahlia_back.png" cols="5" rows="4"/>
+  </textures>
+  <nodes>
+    <node id="Node" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="frame1" texture="Dahlia">
+          <view angle="0" col="2" x="-110" y="210"/>
+          <view angle="45" x="-85" y="200"/>
+          <view angle="90" col="1" x="-5" y="175"/>
+          <view angle="135" x="85" y="200" hm="true"/>
+          <view angle="180" col="2" x="110" y="210" hm="true"/>
+          <view angle="225" col="3" x="100" y="250" hm="true"/>
+          <view angle="270" col="4" x="3" y="250"/>
+          <view angle="315" col="3" x="-100" y="250"/>
+        </layer>
+        <layer id="frame2" texture="Dahlia">
+          <view angle="0" col="2" row="1" x="-110" y="210"/>
+          <view angle="45" row="1" x="-85" y="200"/>
+          <view angle="90" col="1" row="1" x="-5" y="175"/>
+          <view angle="135" row="1" x="85" y="200" hm="true"/>
+          <view angle="180" col="2" row="1" x="110" y="210" hm="true"/>
+          <view angle="225" col="3" row="1" x="100" y="250" hm="true"/>
+          <view angle="270" col="4" row="1" x="3" y="250"/>
+          <view angle="315" col="3" row="1" x="-100" y="250"/>
+        </layer>
+        <layer id="frame3" texture="Dahlia">
+          <view angle="0" col="2" row="2" x="-110" y="210"/>
+          <view angle="45" row="2" x="-85" y="200"/>
+          <view angle="90" col="1" row="2" x="-5" y="175"/>
+          <view angle="135" row="2" x="85" y="200" hm="true"/>
+          <view angle="180" col="2" row="2" x="110" y="210" hm="true"/>
+          <view angle="225" col="3" row="2" x="100" y="250" hm="true"/>
+          <view angle="270" col="4" row="2" x="3" y="250"/>
+          <view angle="315" col="3" row="2" x="-100" y="250"/>
+        </layer>
+        <layer id="frame4" texture="Dahlia">
+          <view angle="0" col="2" row="3" x="-110" y="210"/>
+          <view angle="45" row="3" x="-85" y="200"/>
+          <view angle="90" col="1" row="3" x="-5" y="175"/>
+          <view angle="135" row="3" x="85" y="200" hm="true"/>
+          <view angle="180" col="2" row="3" x="110" y="210" hm="true"/>
+          <view angle="225" col="3" row="3" x="100" y="250" hm="true"/>
+          <view angle="270" col="4" row="3" x="3" y="250"/>
+          <view angle="315" col="3" row="3" x="-100" y="250"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="frame1"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="frame2"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="frame3"/>
+        </frame>
+        <frame id="Frame_04">
+          <layerref id="frame4"/>
+        </frame>
+        <frame id="Sit">
+          <layerref id="frame1" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_04"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

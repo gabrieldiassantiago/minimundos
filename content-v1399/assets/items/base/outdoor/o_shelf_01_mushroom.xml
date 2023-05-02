@@ -1,0 +1,27 @@
+<item.SpriteItem name="Prateleira de Cogumelo Fantasia Eco" desc="Um cogumelo em sua parede" tags="wall,shelf" icon="items/base/outdoor/icon_o_shelf_01_mushroom.png" minLevel="1" minLevelType="2" minCPLevel="1" gridActive="false" dropTargetType="table" dropTargetList="wall,avatar" dropTargetClamp="none" id="4592" price="40" tokens="800">
+  <volume>
+    <box min="0,0,-0.63" max="0.55,0.225,0.63"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <textures>
+    <texture id="Shelf" source="items/base/outdoor/o_shelf_01_mushroom.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Shelf">
+      <box min="0,0,-0.63" max="0.55,0.225,0.63"/>
+      <layers>
+        <layer id="Layer" texture="Shelf" align="middle">
+          <view angle="45" x="13" y="-19"/>
+          <view angle="135" x="-13" y="-19" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,507 @@
+<item.SpriteItem id="0" name="Zebra Tail" desc="A zebra tail" tags="consumable, wearable, actionbar" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.24,0.04,-0.24" max="0.24,0.64,0.24"/>
+  </volume>
+  <textures>
+    <texture id="tail" source="items/base/consumables/back/con_bak_245_fcat.png" cols="5" rows="4"/>
+    <texture id="glows" source="items/base/shared/s_fx_flare_mini.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" y="0.04">
+      <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+      <layers>
+        <layer id="tail_01" texture="tail" y="60">
+          <view angle="0" col="2" x="-40" y="15"/>
+          <view angle="45" x="-28" y="5"/>
+          <view angle="90" col="1" x="-2" y="10"/>
+          <view angle="135" x="28" y="5" hm="true"/>
+          <view angle="180" col="2" x="40" y="15" hm="true"/>
+          <view angle="225" col="3" x="30" y="30" hm="true"/>
+          <view angle="270" col="4" y="35"/>
+          <view angle="315" col="3" x="-30" y="30"/>
+        </layer>
+        <layer id="tail_02" texture="tail" y="60">
+          <view angle="0" col="2" row="1" x="-40" y="25"/>
+          <view angle="45" row="1" x="-28" y="5"/>
+          <view angle="90" col="1" row="1" x="-2" y="10"/>
+          <view angle="135" row="1" x="28" y="5" hm="true"/>
+          <view angle="180" col="2" row="1" x="40" y="25" hm="true"/>
+          <view angle="225" col="3" row="1" x="30" y="30" hm="true"/>
+          <view angle="270" col="4" row="1" y="35"/>
+          <view angle="315" col="3" row="1" x="-30" y="30"/>
+        </layer>
+        <layer id="tail_03" texture="tail" y="60">
+          <view angle="0" col="2" row="2" x="-40" y="15"/>
+          <view angle="45" row="2" x="-28" y="5"/>
+          <view angle="90" col="1" row="2" x="-2" y="10"/>
+          <view angle="135" row="2" x="28" y="5" hm="true"/>
+          <view angle="180" col="2" row="2" x="40" y="15" hm="true"/>
+          <view angle="225" col="3" row="2" x="30" y="30" hm="true"/>
+          <view angle="270" col="4" row="2" y="35"/>
+          <view angle="315" col="3" row="2" x="-30" y="30"/>
+        </layer>
+        <layer id="tail_04" texture="tail" y="60">
+          <view angle="0" col="2" row="3" x="-40"/>
+          <view angle="45" row="3" x="-28" y="5"/>
+          <view angle="90" col="1" row="3" x="-2" y="10"/>
+          <view angle="135" row="3" x="28" y="5" hm="true"/>
+          <view angle="180" col="2" row="3" x="40" hm="true"/>
+          <view angle="225" col="3" row="3" x="30" y="30" hm="true"/>
+          <view angle="270" col="4" row="3" y="35"/>
+          <view angle="315" col="3" row="3" x="-30" y="30"/>
+        </layer>
+        <layer id="A_glow_01" texture="glows">
+          <view angle="0" x="-55" y="71" hm="true"/>
+          <view angle="45" x="-38"/>
+          <view angle="90" x="-19" y="38"/>
+          <view angle="135" x="38" hm="true"/>
+          <view angle="180" x="55" y="71"/>
+          <view angle="225" x="7" y="64"/>
+          <view angle="270" x="-21" y="59"/>
+          <view angle="315" x="-7" y="64" hm="true"/>
+        </layer>
+        <layer id="A_glow_02" texture="glows">
+          <view angle="0" x="-70" y="13" hm="true"/>
+          <view angle="45" x="-55" y="18"/>
+          <view angle="90" x="26" y="57"/>
+          <view angle="135" x="55" y="18" hm="true"/>
+          <view angle="180" x="70" y="13"/>
+          <view angle="225" x="21" y="32"/>
+          <view angle="270" x="9" y="80"/>
+          <view angle="315" x="-21" y="32" hm="true"/>
+        </layer>
+        <layer id="A_glow_03" texture="glows">
+          <view angle="0" x="-79" y="33" hm="true"/>
+          <view angle="45" x="-47" y="29"/>
+          <view angle="90" x="37" y="30"/>
+          <view angle="135" x="47" y="29" hm="true"/>
+          <view angle="180" x="79" y="33"/>
+          <view angle="225" x="47" y="71"/>
+          <view angle="270" x="23" y="42"/>
+          <view angle="315" x="-47" y="71" hm="true"/>
+        </layer>
+        <layer id="A_glow_04" texture="glows">
+          <view angle="0" x="-40" y="40" hm="true"/>
+          <view angle="45" x="-31" y="56"/>
+          <view angle="90" x="-4" y="7"/>
+          <view angle="135" x="31" y="56" hm="true"/>
+          <view angle="180" x="40" y="40"/>
+          <view angle="225" x="-7" y="37"/>
+          <view angle="270" x="-2" y="94"/>
+          <view angle="315" x="7" y="37" hm="true"/>
+        </layer>
+        <layer id="B_glow_01" texture="glows">
+          <view angle="0" x="-49" y="75" hm="true"/>
+          <view angle="45" x="-30" y="7"/>
+          <view angle="90" x="-33" y="46"/>
+          <view angle="135" x="30" y="7" hm="true"/>
+          <view angle="180" x="49" y="75"/>
+          <view angle="225" x="3" y="73"/>
+          <view angle="270" x="-17" y="54"/>
+          <view angle="315" x="-3" y="73" hm="true"/>
+        </layer>
+        <layer id="B_glow_02" texture="glows">
+          <view angle="0" x="-58" y="9" hm="true"/>
+          <view angle="45" x="-59" y="12"/>
+          <view angle="90" x="16" y="54"/>
+          <view angle="135" x="59" y="12" hm="true"/>
+          <view angle="180" x="58" y="9"/>
+          <view angle="225" x="26" y="26"/>
+          <view angle="270" x="2" y="84"/>
+          <view angle="315" x="-26" y="26" hm="true"/>
+        </layer>
+        <layer id="B_glow_03" texture="glows">
+          <view angle="0" x="-69" y="44" hm="true"/>
+          <view angle="45" x="-41" y="30"/>
+          <view angle="90" x="25" y="26"/>
+          <view angle="135" x="41" y="30" hm="true"/>
+          <view angle="180" x="69" y="44"/>
+          <view angle="225" x="52" y="75"/>
+          <view angle="270" x="21" y="36"/>
+          <view angle="315" x="-52" y="75" hm="true"/>
+        </layer>
+        <layer id="B_glow_04" texture="glows">
+          <view angle="0" x="-33" y="33" hm="true"/>
+          <view angle="45" x="-37" y="60"/>
+          <view angle="90" x="-16" y="14"/>
+          <view angle="135" x="37" y="60" hm="true"/>
+          <view angle="180" x="33" y="33"/>
+          <view angle="225" y="40"/>
+          <view angle="270" x="22" y="91"/>
+          <view angle="315" y="40" hm="true"/>
+        </layer>
+        <layer id="C_glow_01" texture="glows">
+          <view angle="0" x="-42" y="69" hm="true"/>
+          <view angle="45" x="-25" y="-1"/>
+          <view angle="90" x="-34" y="38"/>
+          <view angle="135" x="25" y="-1" hm="true"/>
+          <view angle="180" x="42" y="69"/>
+          <view angle="225" x="9" y="67"/>
+          <view angle="270" x="-20" y="46"/>
+          <view angle="315" x="-9" y="67" hm="true"/>
+        </layer>
+        <layer id="C_glow_02" texture="glows">
+          <view angle="0" x="-59" y="3" hm="true"/>
+          <view angle="45" x="-64" y="16"/>
+          <view angle="90" x="8" y="56"/>
+          <view angle="135" x="64" y="16" hm="true"/>
+          <view angle="180" x="59" y="3"/>
+          <view angle="225" x="21" y="16"/>
+          <view angle="270" x="-2" y="81"/>
+          <view angle="315" x="-21" y="16" hm="true"/>
+        </layer>
+        <layer id="C_glow_03" texture="glows">
+          <view angle="0" x="-72" y="40" hm="true"/>
+          <view angle="45" x="-35" y="38"/>
+          <view angle="90" x="17" y="24"/>
+          <view angle="135" x="35" y="38" hm="true"/>
+          <view angle="180" x="72" y="40"/>
+          <view angle="225" x="46" y="81"/>
+          <view angle="270" x="32" y="38"/>
+          <view angle="315" x="-46" y="81" hm="true"/>
+        </layer>
+        <layer id="C_glow_04" texture="glows">
+          <view angle="0" x="-27" y="25" hm="true"/>
+          <view angle="45" x="-46" y="53"/>
+          <view angle="90" x="-28" y="6"/>
+          <view angle="135" x="46" y="53" hm="true"/>
+          <view angle="180" x="27" y="25"/>
+          <view angle="225" x="-7" y="42"/>
+          <view angle="270" x="24" y="75"/>
+          <view angle="315" x="7" y="42" hm="true"/>
+        </layer>
+        <layer id="D_glow_01" texture="glows">
+          <view angle="0" x="-36" y="49" hm="true"/>
+          <view angle="45" y="-14"/>
+          <view angle="90" x="-21" y="31"/>
+          <view angle="135" y="-14" hm="true"/>
+          <view angle="180" x="36" y="49"/>
+          <view angle="225" x="6" y="80"/>
+          <view angle="270" x="-33" y="36"/>
+          <view angle="315" x="-6" y="80" hm="true"/>
+        </layer>
+        <layer id="D_glow_02" texture="glows">
+          <view angle="0" x="-53" y="-9" hm="true"/>
+          <view angle="45" x="-55" y="-1"/>
+          <view angle="90" x="38" y="38"/>
+          <view angle="135" x="55" y="-1" hm="true"/>
+          <view angle="180" x="53" y="-9"/>
+          <view angle="225" x="35" y="28"/>
+          <view angle="270" x="-17" y="76"/>
+          <view angle="315" x="-35" y="28" hm="true"/>
+        </layer>
+        <layer id="D_glow_03" texture="glows">
+          <view angle="0" x="-62" y="45" hm="true"/>
+          <view angle="45" x="-34" y="40"/>
+          <view angle="90" x="24" y="11"/>
+          <view angle="135" x="34" y="40" hm="true"/>
+          <view angle="180" x="62" y="45"/>
+          <view angle="225" x="46" y="67"/>
+          <view angle="270" x="4" y="23"/>
+          <view angle="315" x="-46" y="67" hm="true"/>
+        </layer>
+        <layer id="D_glow_04" texture="glows">
+          <view angle="0" x="-27" y="16" hm="true"/>
+          <view angle="45" x="-62" y="27"/>
+          <view angle="90" x="-24" y="3"/>
+          <view angle="135" x="27" y="16" hm="true"/>
+          <view angle="180" x="27" y="25"/>
+          <view angle="225" x="5" y="52"/>
+          <view angle="270" x="8" y="64"/>
+          <view angle="315" x="-5" y="52" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="tail_01"/>
+          <layerref id="A_glow_01" color="0xbdf4f4" a="0.25"/>
+          <layerref id="A_glow_02" color="0xbdf4f4" a="0.25"/>
+          <layerref id="A_glow_03" color="0xbdf4f4" a="0.35"/>
+          <layerref id="A_glow_04" color="0xbdf4f4" a="0.5"/>
+        </frame>
+        <frame id="02">
+          <layerref id="tail_02"/>
+          <layerref id="B_glow_01" color="0xbdf4f4" a="0.35"/>
+          <layerref id="B_glow_02" color="0xbdf4f4" a="0.25"/>
+          <layerref id="B_glow_03" color="0xbdf4f4" a="0.5"/>
+          <layerref id="B_glow_04" color="0xbdf4f4" a="0.25"/>
+        </frame>
+        <frame id="03">
+          <layerref id="tail_03"/>
+          <layerref id="C_glow_01" color="0xbdf4f4" a="0.5"/>
+          <layerref id="C_glow_02" color="0xbdf4f4" a="0.35"/>
+          <layerref id="C_glow_03" color="0xbdf4f4" a="0.25"/>
+          <layerref id="C_glow_04" color="0xbdf4f4" a="0.25"/>
+        </frame>
+        <frame id="04">
+          <layerref id="tail_04"/>
+          <layerref id="D_glow_01" color="0xbdf4f4" a="0.25"/>
+          <layerref id="D_glow_02" color="0xbdf4f4" a="0.5"/>
+          <layerref id="D_glow_03" color="0xbdf4f4" a="0.35"/>
+          <layerref id="D_glow_04" color="0xbdf4f4" a="0.25"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="tail_01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="tail_01" texture="tail" y="60">
+          <view angle="0" col="2" x="-40" y="15"/>
+          <view angle="45" x="-28" y="5"/>
+          <view angle="90" col="1" x="-2" y="10"/>
+          <view angle="135" x="28" y="5" hm="true"/>
+          <view angle="180" col="2" x="40" y="15" hm="true"/>
+          <view angle="225" col="3" x="30" y="30" hm="true"/>
+          <view angle="270" col="4" y="35"/>
+          <view angle="315" col="3" x="-30" y="30"/>
+        </layer>
+        <layer id="tail_02" texture="tail" y="60">
+          <view angle="0" col="2" row="1" x="-40" y="25"/>
+          <view angle="45" row="1" x="-28" y="5"/>
+          <view angle="90" col="1" row="1" x="-2" y="10"/>
+          <view angle="135" row="1" x="28" y="5" hm="true"/>
+          <view angle="180" col="2" row="1" x="40" y="25" hm="true"/>
+          <view angle="225" col="3" row="1" x="30" y="30" hm="true"/>
+          <view angle="270" col="4" row="1" y="35"/>
+          <view angle="315" col="3" row="1" x="-30" y="30"/>
+        </layer>
+        <layer id="tail_03" texture="tail" y="60">
+          <view angle="0" col="2" row="2" x="-40" y="15"/>
+          <view angle="45" row="2" x="-28" y="5"/>
+          <view angle="90" col="1" row="2" x="-2" y="10"/>
+          <view angle="135" row="2" x="28" y="5" hm="true"/>
+          <view angle="180" col="2" row="2" x="40" y="15" hm="true"/>
+          <view angle="225" col="3" row="2" x="30" y="30" hm="true"/>
+          <view angle="270" col="4" row="2" y="35"/>
+          <view angle="315" col="3" row="2" x="-30" y="30"/>
+        </layer>
+        <layer id="tail_04" texture="tail" y="60">
+          <view angle="0" col="2" row="3" x="-40"/>
+          <view angle="45" row="3" x="-28" y="5"/>
+          <view angle="90" col="1" row="3" x="-2" y="10"/>
+          <view angle="135" row="3" x="28" y="5" hm="true"/>
+          <view angle="180" col="2" row="3" x="40" hm="true"/>
+          <view angle="225" col="3" row="3" x="30" y="30" hm="true"/>
+          <view angle="270" col="4" row="3" y="35"/>
+          <view angle="315" col="3" row="3" x="-30" y="30"/>
+        </layer>
+        <layer id="A_glow_01" texture="glows">
+          <view angle="0" x="-55" y="71" hm="true"/>
+          <view angle="45" x="-38"/>
+          <view angle="90" x="-19" y="38"/>
+          <view angle="135" x="38" hm="true"/>
+          <view angle="180" x="55" y="71"/>
+          <view angle="225" x="7" y="64"/>
+          <view angle="270" x="-21" y="59"/>
+          <view angle="315" x="-7" y="64" hm="true"/>
+        </layer>
+        <layer id="A_glow_02" texture="glows">
+          <view angle="0" x="-70" y="13" hm="true"/>
+          <view angle="45" x="-55" y="18"/>
+          <view angle="90" x="26" y="57"/>
+          <view angle="135" x="55" y="18" hm="true"/>
+          <view angle="180" x="70" y="13"/>
+          <view angle="225" x="21" y="32"/>
+          <view angle="270" x="9" y="80"/>
+          <view angle="315" x="-21" y="32" hm="true"/>
+        </layer>
+        <layer id="A_glow_03" texture="glows">
+          <view angle="0" x="-79" y="33" hm="true"/>
+          <view angle="45" x="-47" y="29"/>
+          <view angle="90" x="37" y="30"/>
+          <view angle="135" x="47" y="29" hm="true"/>
+          <view angle="180" x="79" y="33"/>
+          <view angle="225" x="47" y="71"/>
+          <view angle="270" x="23" y="42"/>
+          <view angle="315" x="-47" y="71" hm="true"/>
+        </layer>
+        <layer id="A_glow_04" texture="glows">
+          <view angle="0" x="-40" y="40" hm="true"/>
+          <view angle="45" x="-31" y="56"/>
+          <view angle="90" x="-4" y="7"/>
+          <view angle="135" x="31" y="56" hm="true"/>
+          <view angle="180" x="40" y="40"/>
+          <view angle="225" x="-7" y="37"/>
+          <view angle="270" x="-2" y="94"/>
+          <view angle="315" x="7" y="37" hm="true"/>
+        </layer>
+        <layer id="B_glow_01" texture="glows">
+          <view angle="0" x="-49" y="75" hm="true"/>
+          <view angle="45" x="-30" y="7"/>
+          <view angle="90" x="-33" y="46"/>
+          <view angle="135" x="30" y="7" hm="true"/>
+          <view angle="180" x="49" y="75"/>
+          <view angle="225" x="3" y="73"/>
+          <view angle="270" x="-17" y="54"/>
+          <view angle="315" x="-3" y="73" hm="true"/>
+        </layer>
+        <layer id="B_glow_02" texture="glows">
+          <view angle="0" x="-58" y="9" hm="true"/>
+          <view angle="45" x="-59" y="12"/>
+          <view angle="90" x="16" y="54"/>
+          <view angle="135" x="59" y="12" hm="true"/>
+          <view angle="180" x="58" y="9"/>
+          <view angle="225" x="26" y="26"/>
+          <view angle="270" x="2" y="84"/>
+          <view angle="315" x="-26" y="26" hm="true"/>
+        </layer>
+        <layer id="B_glow_03" texture="glows">
+          <view angle="0" x="-69" y="44" hm="true"/>
+          <view angle="45" x="-41" y="30"/>
+          <view angle="90" x="25" y="26"/>
+          <view angle="135" x="41" y="30" hm="true"/>
+          <view angle="180" x="69" y="44"/>
+          <view angle="225" x="52" y="75"/>
+          <view angle="270" x="21" y="36"/>
+          <view angle="315" x="-52" y="75" hm="true"/>
+        </layer>
+        <layer id="B_glow_04" texture="glows">
+          <view angle="0" x="-33" y="33" hm="true"/>
+          <view angle="45" x="-37" y="60"/>
+          <view angle="90" x="-16" y="14"/>
+          <view angle="135" x="37" y="60" hm="true"/>
+          <view angle="180" x="33" y="33"/>
+          <view angle="225" y="40"/>
+          <view angle="270" x="22" y="91"/>
+          <view angle="315" y="40" hm="true"/>
+        </layer>
+        <layer id="C_glow_01" texture="glows">
+          <view angle="0" x="-42" y="69" hm="true"/>
+          <view angle="45" x="-25" y="-1"/>
+          <view angle="90" x="-34" y="38"/>
+          <view angle="135" x="25" y="-1" hm="true"/>
+          <view angle="180" x="42" y="69"/>
+          <view angle="225" x="9" y="67"/>
+          <view angle="270" x="-20" y="46"/>
+          <view angle="315" x="-9" y="67" hm="true"/>
+        </layer>
+        <layer id="C_glow_02" texture="glows">
+          <view angle="0" x="-59" y="3" hm="true"/>
+          <view angle="45" x="-64" y="16"/>
+          <view angle="90" x="8" y="56"/>
+          <view angle="135" x="64" y="16" hm="true"/>
+          <view angle="180" x="59" y="3"/>
+          <view angle="225" x="21" y="16"/>
+          <view angle="270" x="-2" y="81"/>
+          <view angle="315" x="-21" y="16" hm="true"/>
+        </layer>
+        <layer id="C_glow_03" texture="glows">
+          <view angle="0" x="-72" y="40" hm="true"/>
+          <view angle="45" x="-35" y="38"/>
+          <view angle="90" x="17" y="24"/>
+          <view angle="135" x="35" y="38" hm="true"/>
+          <view angle="180" x="72" y="40"/>
+          <view angle="225" x="46" y="81"/>
+          <view angle="270" x="32" y="38"/>
+          <view angle="315" x="-46" y="81" hm="true"/>
+        </layer>
+        <layer id="C_glow_04" texture="glows">
+          <view angle="0" x="-27" y="25" hm="true"/>
+          <view angle="45" x="-46" y="53"/>
+          <view angle="90" x="-28" y="6"/>
+          <view angle="135" x="46" y="53" hm="true"/>
+          <view angle="180" x="27" y="25"/>
+          <view angle="225" x="-7" y="42"/>
+          <view angle="270" x="24" y="75"/>
+          <view angle="315" x="7" y="42" hm="true"/>
+        </layer>
+        <layer id="D_glow_01" texture="glows">
+          <view angle="0" x="-36" y="49" hm="true"/>
+          <view angle="45" y="-14"/>
+          <view angle="90" x="-21" y="31"/>
+          <view angle="135" y="-14" hm="true"/>
+          <view angle="180" x="36" y="49"/>
+          <view angle="225" x="6" y="80"/>
+          <view angle="270" x="-33" y="36"/>
+          <view angle="315" x="-6" y="80" hm="true"/>
+        </layer>
+        <layer id="D_glow_02" texture="glows">
+          <view angle="0" x="-53" y="-9" hm="true"/>
+          <view angle="45" x="-55" y="-1"/>
+          <view angle="90" x="38" y="38"/>
+          <view angle="135" x="55" y="-1" hm="true"/>
+          <view angle="180" x="53" y="-9"/>
+          <view angle="225" x="35" y="28"/>
+          <view angle="270" x="-17" y="76"/>
+          <view angle="315" x="-35" y="28" hm="true"/>
+        </layer>
+        <layer id="D_glow_03" texture="glows">
+          <view angle="0" x="-62" y="45" hm="true"/>
+          <view angle="45" x="-34" y="40"/>
+          <view angle="90" x="24" y="11"/>
+          <view angle="135" x="34" y="40" hm="true"/>
+          <view angle="180" x="62" y="45"/>
+          <view angle="225" x="46" y="67"/>
+          <view angle="270" x="4" y="23"/>
+          <view angle="315" x="-46" y="67" hm="true"/>
+        </layer>
+        <layer id="D_glow_04" texture="glows">
+          <view angle="0" x="-27" y="16" hm="true"/>
+          <view angle="45" x="-62" y="27"/>
+          <view angle="90" x="-24" y="3"/>
+          <view angle="135" x="27" y="16" hm="true"/>
+          <view angle="180" x="27" y="25"/>
+          <view angle="225" x="5" y="52"/>
+          <view angle="270" x="8" y="64"/>
+          <view angle="315" x="-5" y="52" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On1">
+          <layerref id="tail_01"/>
+          <layerref id="A_glow_01" a="0.25"/>
+          <layerref id="A_glow_02" a="0.25"/>
+          <layerref id="A_glow_03" a="0.35"/>
+          <layerref id="A_glow_04" a="0.5"/>
+        </frame>
+        <frame id="On2">
+          <layerref id="tail_02"/>
+          <layerref id="B_glow_01" a="0.35"/>
+          <layerref id="B_glow_02" a="0.35"/>
+          <layerref id="B_glow_03" a="0.5"/>
+          <layerref id="B_glow_04" a="0.25"/>
+        </frame>
+        <frame id="On3">
+          <layerref id="tail_03"/>
+          <layerref id="C_glow_01" a="0.5"/>
+          <layerref id="C_glow_02" a="0.35"/>
+          <layerref id="C_glow_03" a="0.2"/>
+          <layerref id="C_glow_04" a="0.2"/>
+        </frame>
+        <frame id="On4">
+          <layerref id="tail_04"/>
+          <layerref id="D_glow_01" a="0.25"/>
+          <layerref id="D_glow_02" a="0.5"/>
+          <layerref id="D_glow_03" a="0.35"/>
+          <layerref id="D_glow_04" a="0.25"/>
+        </frame>
+        <frame id="Off"/>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="On1"/>
+          <frameref id="On2"/>
+          <frameref id="On3"/>
+          <frameref id="On4"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,248 @@
+<item.SpriteItem id="0" name="Brain" desc="brain in a bubble" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_bulb.png" cols="1" rows="1"/>
+    <texture id="Glass" source="items/base/consumables/head/con_head_265_brain_glass.png" cols="5" rows="1"/>
+    <texture id="Brain" source="items/base/consumables/head/con_head_265_brain_brain.png" cols="5" rows="1"/>
+    <texture id="Base" source="items/base/consumables/head/con_head_265_brain_base.png" cols="5" rows="1"/>
+    <texture id="Eyes" source="items/base/consumables/head/con_head_265_brain_eyes.png" cols="4" rows="1"/>
+    <texture id="Bubble" source="items/base/consumables/magic/con_item_08_bubble.png" cols="1" rows="1"/>
+    <texture id="Diffuse02" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="Base" texture="Base">
+          <view angle="0" x="2" y="18"/>
+          <view angle="45" col="1" x="3" y="20"/>
+          <view angle="90" col="2" x="1" y="19"/>
+          <view angle="135" col="1" x="-3" y="20" hm="true"/>
+          <view angle="180" x="-2" y="18" hm="true"/>
+          <view angle="225" col="4" x="-1" y="18" hm="true"/>
+          <view angle="270" col="3" y="16"/>
+          <view angle="315" col="4" x="1" y="18"/>
+        </layer>
+        <layer id="Glass" texture="Glass">
+          <view angle="0" x="2" y="9"/>
+          <view angle="45" col="1" x="3" y="11"/>
+          <view angle="90" col="2" y="8"/>
+          <view angle="135" col="1" x="-2" y="11" hm="true"/>
+          <view angle="180" x="-2" y="9" hm="true"/>
+          <view angle="225" col="4" x="-1" y="9" hm="true"/>
+          <view angle="270" col="3" y="7"/>
+          <view angle="315" col="4" x="1" y="9"/>
+        </layer>
+        <layer id="Brain" texture="Brain">
+          <view angle="0" x="-1" y="-1"/>
+          <view angle="45" col="1" x="2" y="2"/>
+          <view angle="90" col="2" x="1" y="1"/>
+          <view angle="135" col="1" x="-2" y="2" hm="true"/>
+          <view angle="180" x="1" y="-1" hm="true"/>
+          <view angle="225" col="4" x="5" hm="true"/>
+          <view angle="270" col="3" y="-1"/>
+          <view angle="315" col="4" x="-5"/>
+        </layer>
+        <layer id="Eyes_F" texture="Eyes">
+          <view angle="0" x="14" y="3"/>
+          <view angle="45" col="1" x="11" y="10"/>
+          <view angle="90" col="2" x="-1" y="9"/>
+          <view angle="135" col="1" x="-11" y="10" hm="true"/>
+          <view angle="180" x="-14" y="3" hm="true"/>
+          <view angle="225" col="3" x="-13" y="-1" alpha="0" hm="true"/>
+          <view angle="270" col="4" y="19" alpha="0"/>
+          <view angle="315" col="3" x="13" y="-1" alpha="0"/>
+        </layer>
+        <layer id="Bubble01" texture="Bubble">
+          <view angle="0" x="7" y="-1" hm="true"/>
+          <view angle="45" x="-7" y="1"/>
+          <view angle="90" x="-17" y="-9"/>
+          <view angle="135" x="7" y="1" hm="true"/>
+          <view angle="180" x="-7" y="-1"/>
+          <view angle="225" x="-10" y="-1"/>
+          <view angle="270" x="10" y="-4"/>
+          <view angle="315" x="10" y="-1" hm="true"/>
+        </layer>
+        <layer id="Bubble02" texture="Bubble">
+          <view angle="0" x="-10" y="-10" hm="true"/>
+          <view angle="45" x="18" y="-9"/>
+          <view angle="90" x="14" y="-1"/>
+          <view angle="135" x="-21" y="-12" hm="true"/>
+          <view angle="180" x="14" y="-9"/>
+          <view angle="225" x="17" y="-9"/>
+          <view angle="270" x="-13" y="-13"/>
+          <view angle="315" x="-19" y="-13" hm="true"/>
+        </layer>
+        <layer id="Bubble03" texture="Bubble">
+          <view angle="0" x="-5" y="-1" hm="true"/>
+          <view angle="45" x="13" y="3"/>
+          <view angle="90" x="-2" y="5"/>
+          <view angle="135" x="-13" y="3" hm="true"/>
+          <view angle="180" x="5" y="-1"/>
+          <view angle="225" x="2"/>
+          <view angle="270" x="-5" y="-3"/>
+          <view angle="315" x="-2" hm="true"/>
+        </layer>
+        <layer id="Eyes_B" texture="Eyes">
+          <view angle="0" x="14" y="3" alpha="0"/>
+          <view angle="45" col="1" x="11" y="10" alpha="0"/>
+          <view angle="90" col="2" x="-1" y="9" alpha="0"/>
+          <view angle="135" col="1" x="-11" y="10" alpha="0" hm="true"/>
+          <view angle="180" x="-14" y="3" hm="true"/>
+          <view angle="225" col="3" x="-13" y="-1" hm="true"/>
+          <view angle="270" col="4" y="19" alpha="0"/>
+          <view angle="315" col="3" x="13" y="-1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Base"/>
+          <layerref id="Bubble02"/>
+          <layerref id="Eyes_B"/>
+          <layerref id="Brain"/>
+          <layerref id="Bubble01"/>
+          <layerref id="Eyes_F" y="2"/>
+          <layerref id="Bubble03" y="-10" a="0.2"/>
+          <layerref id="Glass"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Base"/>
+          <layerref id="Bubble02" y="-2"/>
+          <layerref id="Eyes_B"/>
+          <layerref id="Brain" y="-1"/>
+          <layerref id="Bubble01" y="-2" a="0.9"/>
+          <layerref id="Eyes_F"/>
+          <layerref id="Glass"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Base"/>
+          <layerref id="Bubble02" y="-4" a="0.8"/>
+          <layerref id="Eyes_B"/>
+          <layerref id="Brain" y="-2"/>
+          <layerref id="Bubble01" y="-4" a="0.7"/>
+          <layerref id="Eyes_F" y="-1.5"/>
+          <layerref id="Glass"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Base"/>
+          <layerref id="Bubble02" y="-6" a="0.6"/>
+          <layerref id="Eyes_B"/>
+          <layerref id="Brain" y="-1"/>
+          <layerref id="Bubble01" y="-6" a="0.5"/>
+          <layerref id="Eyes_F" y="-2"/>
+          <layerref id="Glass"/>
+          <layerref id="Bubble03"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Base"/>
+          <layerref id="Bubble02" y="-8" a="0.4"/>
+          <layerref id="Eyes_B"/>
+          <layerref id="Brain"/>
+          <layerref id="Bubble01" y="-8" a="0.25"/>
+          <layerref id="Eyes_F" y="-3"/>
+          <layerref id="Bubble03" y="-2"/>
+          <layerref id="Glass"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Base"/>
+          <layerref id="Bubble02" y="-10" a="0.2"/>
+          <layerref id="Eyes_B"/>
+          <layerref id="Brain" y="1"/>
+          <layerref id="Eyes_F" y="-2"/>
+          <layerref id="Bubble03" y="-4" a="0.8"/>
+          <layerref id="Glass"/>
+        </frame>
+        <frame id="07">
+          <layerref id="Base"/>
+          <layerref id="Eyes_B"/>
+          <layerref id="Brain" y="2"/>
+          <layerref id="Eyes_F" y="-1"/>
+          <layerref id="Bubble03" y="-6" a="0.6"/>
+          <layerref id="Glass"/>
+        </frame>
+        <frame id="08">
+          <layerref id="Base"/>
+          <layerref id="Eyes_B"/>
+          <layerref id="Brain" y="1"/>
+          <layerref id="Eyes_F"/>
+          <layerref id="Bubble03" y="-8" a="0.4"/>
+          <layerref id="Glass"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="8" y="-12"/>
+          <view angle="135" x="-8" y="-12"/>
+          <view angle="225" x="-17" y="-21"/>
+          <view angle="315" x="17" y="-21"/>
+          <view angle="90" y="-13"/>
+          <view angle="180" x="-16" y="-17"/>
+          <view angle="270" alpha="0"/>
+          <view angle="0" x="17" y="-17"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x3dd8d9"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" s="1.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Diffuse02" align="middle">
+          <view angle="0" x="5" y="-19" hm="true"/>
+          <view angle="45" x="1" y="-15"/>
+          <view angle="90" y="-20"/>
+          <view angle="135" x="-3" y="-17" hm="true"/>
+          <view angle="180" x="-2" y="-16"/>
+          <view angle="225" x="1" y="-16"/>
+          <view angle="270" x="1" y="-20"/>
+          <view angle="315" y="-17" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xdeed98" a="0.5"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

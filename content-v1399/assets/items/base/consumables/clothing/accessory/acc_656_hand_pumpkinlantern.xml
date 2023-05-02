@@ -1,0 +1,119 @@
+<item.SpriteItem id="0" name="Laptop" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="lantern" source="items/base/consumables/clothing/accessory/acc_656_hand_pumpkinlantern.png" cols="5" rows="1"/>
+    <texture id="Intense" source="items/base/consumables/clothing/accessory/acc_656_hand_pumpkin_glow.png" cols="5" rows="1"/>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_656_hand_pumpkinlanternhandle.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Lantern" texture="lantern">
+          <view angle="0" x="3" y="11"/>
+          <view angle="45" col="1" x="9" y="13"/>
+          <view angle="90" col="2" x="-1" y="12"/>
+          <view angle="135" col="1" x="-2" y="16" hm="true"/>
+          <view angle="180" x="-3" y="11" hm="true"/>
+          <view angle="225" col="3" x="-4" y="16"/>
+          <view angle="270" x="9" y="18" alpha="0.75" hm="true"/>
+          <view angle="315" col="3" x="4" y="17" hm="true"/>
+        </layer>
+        <layer id="Lantern01" texture="Texture">
+          <view angle="0" col="2" x="-1" y="23"/>
+          <view angle="45" x="4" y="21"/>
+          <view angle="90" col="1" x="-1" y="20"/>
+          <view angle="135" x="-2" y="26" hm="true"/>
+          <view angle="180" col="2" x="-1" y="24" hm="true"/>
+          <view angle="225" x="-10" y="27"/>
+          <view angle="270" col="1" x="9" y="28" alpha="0.5" hm="true"/>
+          <view angle="315" x="4" y="29" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Lantern" y="51"/>
+          <layerref id="Lantern01" y="-3"/>
+        </frame>
+        <frame id="off">
+          <layerref id="Lantern"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="Frame" duration="3"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="Light">
+          <view angle="0" x="4" y="27"/>
+          <view angle="45" x="11" y="33"/>
+          <view angle="90" x="1" y="27"/>
+          <view angle="135" x="-3" y="31" hm="true"/>
+          <view angle="180" x="-4" y="28" hm="true"/>
+          <view angle="225" x="-6" y="32"/>
+          <view angle="270" y="31"/>
+          <view angle="315" x="6" y="30" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Layer" y="27" color="0xe6c756"/>
+        </frame>
+        <frame id="Off"/>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="0" x="8" y="-9"/>
+          <view angle="45" col="1" x="9" y="-8"/>
+          <view angle="90" col="2" x="1" y="-8"/>
+          <view angle="135" col="1" x="-2" y="-7" hm="true"/>
+          <view angle="180" x="-6" y="-9" hm="true"/>
+          <view angle="225" col="3" x="-2" y="-6"/>
+          <view angle="270" col="4" y="-10"/>
+          <view angle="315" col="3" x="2" y="-5" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" y="26" color="0xe78f42"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

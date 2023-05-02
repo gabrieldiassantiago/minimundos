@@ -1,0 +1,201 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,2.14,0" max="0,2.14,0"/>
+  </volume>
+  <textures>
+    <texture id="t_mouth" source="items/base/consumables/emotes/emote_24_devil_use1.png" cols="3" rows="1"/>
+    <texture id="t_base" source="items/base/consumables/emotes/emote_24_devil_use.png" cols="1" rows="1"/>
+    <texture id="t_eye" source="items/base/consumables/emotes/emote_24_devil_useeye.png" cols="1" rows="3"/>
+    <texture id="t_brow" source="items/base/consumables/emotes/emote_24_devil_usebrow2.png" cols="1" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/consumables/emotes/emote_24_devil_sound.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront" y="2.14">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Emote" texture="t_base">
+          <view angle="0"/>
+        </layer>
+        <layer id="mouth1" texture="t_mouth">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="mouth2" texture="t_mouth">
+          <view angle="45" col="1"/>
+          <view angle="90" col="1"/>
+          <view angle="135" col="1"/>
+          <view angle="180" col="1"/>
+          <view angle="225" col="1"/>
+          <view angle="270" col="1"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="mouth3" texture="t_mouth">
+          <view angle="0" col="2"/>
+          <view angle="45" col="2"/>
+          <view angle="90" col="2"/>
+          <view angle="135" col="2"/>
+          <view angle="180" col="2"/>
+          <view angle="225" col="2"/>
+          <view angle="270" col="2"/>
+          <view angle="315" col="2"/>
+        </layer>
+        <layer id="eye1" texture="t_eye">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="eye2" texture="t_eye">
+          <view angle="0" row="1"/>
+          <view angle="45" row="1"/>
+          <view angle="90" row="1"/>
+          <view angle="135" row="1"/>
+          <view angle="180" row="1"/>
+          <view angle="225" row="1"/>
+          <view angle="270" row="1"/>
+          <view angle="315" row="1"/>
+        </layer>
+        <layer id="eye3" texture="t_eye">
+          <view angle="0" row="2"/>
+          <view angle="45" row="2"/>
+          <view angle="90" row="2"/>
+          <view angle="135" row="2"/>
+          <view angle="180" row="2"/>
+          <view angle="225" row="2"/>
+          <view angle="270" row="2"/>
+          <view angle="315" row="2"/>
+        </layer>
+        <layer id="brow1" texture="t_brow">
+          <view angle="0"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="brow2" texture="t_brow">
+          <view angle="0" row="1"/>
+          <view angle="45" row="1"/>
+          <view angle="90" row="1"/>
+          <view angle="135" row="1"/>
+          <view angle="180" row="1"/>
+          <view angle="225" row="1"/>
+          <view angle="270" row="1"/>
+          <view angle="315" row="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="f1blink">
+          <layerref id="Emote"/>
+          <layerref id="mouth1" x="1" y="-4"/>
+          <layerref id="eye2" y="-22"/>
+          <layerref id="brow1" y="-28"/>
+        </frame>
+        <frame id="f1">
+          <layerref id="Emote"/>
+          <layerref id="mouth1" x="1" y="-4"/>
+          <layerref id="eye1" y="-22"/>
+          <layerref id="brow1" y="-28"/>
+        </frame>
+        <frame id="f2">
+          <layerref id="Emote"/>
+          <layerref id="mouth2" x="1" y="-4"/>
+          <layerref id="eye1" y="-22"/>
+          <layerref id="brow1" y="-29"/>
+        </frame>
+        <frame id="f3">
+          <layerref id="Emote"/>
+          <layerref id="mouth3" x="1" y="-4"/>
+          <layerref id="eye3" y="-22"/>
+          <layerref id="brow1" y="-30"/>
+        </frame>
+        <frame id="blink">
+          <layerref id="Emote"/>
+          <layerref id="eye2" y="-22"/>
+          <layerref id="mouth3" x="1" y="-4"/>
+          <layerref id="brow1" y="-30"/>
+        </frame>
+        <frame id="f3brow1">
+          <layerref id="Emote"/>
+          <layerref id="mouth3" x="1" y="-4"/>
+          <layerref id="eye3" y="-22"/>
+          <layerref id="brow1" y="-32"/>
+        </frame>
+        <frame id="f3brow2">
+          <layerref id="Emote"/>
+          <layerref id="mouth3" x="1" y="-4"/>
+          <layerref id="eye3" y="-22"/>
+          <layerref id="brow2" y="-31"/>
+        </frame>
+        <frame id="f101">
+          <layerref id="Emote" a="0.2"/>
+          <layerref id="mouth1" x="1" y="-4" a="0"/>
+          <layerref id="eye1" y="-22" a="0"/>
+          <layerref id="brow1" y="-28" a="0"/>
+        </frame>
+        <frame id="f102">
+          <layerref id="Emote" a="0.6"/>
+          <layerref id="mouth1" x="1" y="-4" a="0"/>
+          <layerref id="eye1" y="-22" a="0"/>
+          <layerref id="brow1" y="-28" a="0"/>
+        </frame>
+        <frame id="f103">
+          <layerref id="Emote" a="0.8"/>
+          <layerref id="mouth1" x="1" y="-4" a="0.3"/>
+          <layerref id="eye1" y="-22" a="0.3"/>
+          <layerref id="brow1" y="-28" a="0.3"/>
+        </frame>
+        <frame id="f104">
+          <layerref id="Emote"/>
+          <layerref id="mouth1" x="1" y="-4" a="0.6"/>
+          <layerref id="eye1" y="-22" a="0.6"/>
+          <layerref id="brow1" y="-28" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="8" loop="false">
+          <frameref id="f101"/>
+          <frameref id="f102"/>
+          <frameref id="f103"/>
+          <frameref id="f104"/>
+        </animation>
+        <animation id="Loop" framerate="8" loop="false">
+          <frameref id="f1" duration="4"/>
+          <frameref id="f2">
+            <sample id="Sound"/>
+          </frameref>
+          <frameref id="f3" duration="6"/>
+          <frameref id="blink"/>
+          <frameref id="f3" duration="3"/>
+          <frameref id="f3brow2"/>
+          <frameref id="f3" duration="2"/>
+          <frameref id="f3brow2"/>
+          <frameref id="f3" duration="8"/>
+          <frameref id="f1" duration="4"/>
+          <frameref id="f1blink"/>
+          <frameref id="f1"/>
+        </animation>
+        <animation id="Out" framerate="10" loop="false">
+          <frameref id="f104"/>
+          <frameref id="f103"/>
+          <frameref id="f102"/>
+          <frameref id="f101"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

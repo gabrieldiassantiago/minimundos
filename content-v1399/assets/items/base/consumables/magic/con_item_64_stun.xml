@@ -1,0 +1,45 @@
+<item.SpriteItem id="1733" name="Mágica do Choque" desc="Muito usada para imobilizar os inimigos" tags="consumable,actionbar,group_fire,scifi,gun,bad,reusable,usable,action_consumable_target" icon="items/base/consumables/magic/icon_con_item_64_stun.png" price="800" tokens="8000" minLevel="1" minLevelType="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.08" max="0.3,0.1,0.08"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="8"/>
+    <entry key="action_attributes" value="fire-10"/>
+    <entry key="action_attributes_secondary" value="health-25"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_shoot.png"/>
+  </data>
+  <textures>
+    <texture id="weapon" source="items/base/consumables/magic/con_item_64_stun.png" cols="5" rows="1"/>
+    <texture id="shad" source="items/base/consumables/magic/con_item_64_stun_shad.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.08" max="0.3,0.1,0.08"/>
+      <layers>
+        <layer id="shad" texture="shad" y="10">
+          <view angle="45" y="4"/>
+          <view angle="135" y="4" hm="true"/>
+          <view angle="225" x="1" y="3"/>
+          <view angle="315" x="-1" y="3" hm="true"/>
+        </layer>
+        <layer id="weapon" texture="weapon" y="10">
+          <view angle="45" x="1" y="5"/>
+          <view angle="135" x="-1" y="5" hm="true"/>
+          <view angle="225" col="3" x="-1" y="3" hm="true"/>
+          <view angle="315" col="3" x="1" y="3"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

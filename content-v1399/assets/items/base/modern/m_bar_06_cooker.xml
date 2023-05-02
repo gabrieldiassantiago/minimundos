@@ -1,0 +1,48 @@
+<item.SpriteItem id="2543" name="Fogão de Cozinha Marfim" desc="Um fogão de cozinha da coleção Marfim." tags="table" icon="items/base/modern/icon_m_bar_06_cooker.png" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" minLevel="1" minCPLevel="1" price="70" minLevelType="2">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,1.21,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="base" source="items/base/modern/m_kitchen_06_gascooker.png" cols="2" rows="1"/>
+    <texture id="buttons" source="items/base/modern/m_kitchen_06_gascooker_buttons.png" cols="2" rows="1"/>
+    <texture id="top" source="items/base/modern/m_kitchen_05_vip_gascooker.png" cols="5" rows="1"/>
+    <texture id="Texture" source="items/base/modern/m_bar_06_unit.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.49" max="0.4,1.21,0.49"/>
+      <layers>
+        <layer id="Layer01" texture="Texture" y="-2">
+          <view angle="45" y="36"/>
+          <view angle="135" y="36" hm="true"/>
+          <view angle="225" y="36"/>
+          <view angle="315" y="36" hm="true"/>
+        </layer>
+        <layer id="base" texture="base">
+          <view angle="45" y="-64"/>
+          <view angle="135" col="1" x="-1" y="-63"/>
+          <view angle="225" col="1" y="-63" hm="true"/>
+          <view angle="315" x="-1" y="-64" hm="true"/>
+        </layer>
+        <layer id="base02" texture="top">
+          <view angle="45" col="3" x="-3" y="-57" hm="true"/>
+          <view angle="135" col="2" x="-6" y="-61" hm="true"/>
+          <view angle="225" col="3" x="5" y="-61" hm="true"/>
+          <view angle="315" col="2" x="3" y="-57" hm="true"/>
+        </layer>
+        <layer id="buttons" texture="buttons">
+          <view angle="45" x="26" y="-95"/>
+          <view angle="135" x="27" y="-70" hm="true"/>
+          <view angle="225" col="1" x="-26" y="-69"/>
+          <view angle="315" col="1" x="-25" y="-95" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

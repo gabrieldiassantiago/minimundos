@@ -1,0 +1,55 @@
+<f id="PinkDress" parentId="Suits">
+  <g id="PinkDress">
+    <b id="PinkTorso" min="2" max="2" sel="PinkTorsoColour,PinkTorsoBase">
+      <s id="PinkTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_36_torso.png" pri="1"/>
+      <c id="PinkTorsoColour" sId="PinkTorsoBase" c="16723627" a="0.81" b="39.9" ct="0.95" lId="PinkTorsoBase"/>
+    </b>
+    <b id="PinkLegs" min="2" max="2" sel="PinkBottomBase">
+      <g id="PinkBottomBase" icon="$bu/icon_legs_trouser.png">
+        <s id="PinkPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_21_leg_idle.png" pri="3"/>
+        <s id="PinkPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_21_leg_walk1.png" pri="3"/>
+        <s id="PinkPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_21_leg_walk2.png" pri="3"/>
+        <s id="PinkPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_21_leg_walk3.png" pri="3"/>
+        <s id="PinkPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_21_leg_walk4.png" pri="3"/>
+        <s id="PinkSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_21_leg_sit_upper.png" pri="3"/>
+        <s id="PinkSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_21_leg_sit_lower.png" pri="3"/>
+        <c id="ColorIdle" sId="PinkPantIdleBase" c="16729514" a="0.70" b="12.7" ct="1.47" lId="PinkPantIdleBase"/>
+        <c id="ColorIdle" sId="PinkPantWalk1Base" c="16729514" a="0.70" b="12.7" ct="1.47" lId="PinkPantWalk1Base"/>
+        <c id="ColorIdle" sId="PinkPantWalk2Base" c="16729514" a="0.70" b="12.7" ct="1.47" lId="PinkPantWalk2Base"/>
+        <c id="ColorIdle" sId="PinkPantWalk3Base" c="16729514" a="0.70" b="12.7" ct="1.47" lId="PinkPantWalk3Base"/>
+        <c id="ColorIdle" sId="PinkPantWalk4Base" c="16729514" a="0.70" b="12.7" ct="1.47" lId="PinkPantWalk4Base"/>
+        <c id="ColorIdle" sId="PinkSitUpperBase" c="16729514" a="0.70" b="12.7" ct="1.47" lId="PinkSitUpperBase"/>
+        <c id="ColorIdle" sId="PinkSitLowerBase" c="16729514" a="0.70" b="12.7" ct="1.47" lId="PinkSitLowerBase"/>
+      </g>
+    </b>
+    <b id="PinkArms" min="2" max="2" sel="PinkArmsBase">
+      <g id="PinkArmsBase" icon="$bm/icon_m_retro.png">
+        <s id="PinkArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_36_arm_idle.png" pri="1"/>
+        <s id="PinkArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_36_arm_walk1.png" pri="1"/>
+        <s id="PinkArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_36_arm_walk2.png" pri="1"/>
+        <s id="PinkArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_36_arm_walk3.png" pri="1"/>
+        <s id="PinkArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_36_arm_sit.png" pri="1"/>
+        <s id="PinkArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_36_arm_throw.png" pri="1"/>
+        <s id="PinkArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_36_arm_raise.png" pri="1"/>
+        <c id="ColorIdle" sId="PinkArmIdleBase" c="16729514" a="0.46" b="22.3" ct="1.47" lId="PinkArmIdleBase"/>
+        <c id="ColorIdle" sId="PinkArmWalk1Base" c="16729514" a="0.46" b="22.3" ct="1.47" lId="PinkArmWalk1Base"/>
+        <c id="ColorIdle" sId="PinkArmWalk2Base" c="16729514" a="0.46" b="22.3" ct="1.47" lId="PinkArmWalk2Base"/>
+        <c id="ColorIdle" sId="PinkArmWalk3Base" c="16729514" a="0.46" b="22.3" ct="1.47" lId="PinkArmWalk3Base"/>
+        <c id="ColorIdle" sId="PinkArmSitBase" c="16729514" a="0.46" b="22.3" ct="1.47" lId="PinkArmSitBase"/>
+        <c id="ColorIdle" sId="PinkArmThrowBase" c="16729514" a="0.46" b="22.3" ct="1.47" lId="PinkArmThrowBase"/>
+        <c id="ColorIdle" sId="PinkArmRaiseBase" c="16729514" a="0.46" b="22.3" ct="1.47" lId="PinkArmRaiseBase"/>
+      </g>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot01"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top06"/>
+</f>

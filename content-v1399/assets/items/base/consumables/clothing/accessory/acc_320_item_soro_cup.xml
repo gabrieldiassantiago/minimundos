@@ -1,0 +1,35 @@
+<item.SpriteItem id="4999" name="Copo Vermelho" desc="Um copo de refrigerante para festas" tags="consumable,drink,actionbar,group_edible,edible,stackable,action_drinkable" icon="items/base/consumables/clothing/accessory/acc_320_icon_soro_cup.png" price="3" tokens="30" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.2231,0.1"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_drinkable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_drinkable.as"/>
+    <event id="action" script="scripts/item/action_drinkable.as"/>
+    <event id="select" script="scripts/item/select_drinkable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+    <entry key="aiUseInWorldEffects" value="drink-100"/>
+  </data>
+  <textures>
+    <texture id="Flag" source="items/base/consumables/clothing/accessory/acc_320_item_soro_cup.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.1,0,-0.1" max="0.1,0.2231,0.1"/>
+      <layers>
+        <layer id="Flag" texture="Flag">
+          <view angle="45" y="17"/>
+          <view angle="135" y="17" hm="true"/>
+          <view angle="225" y="17"/>
+          <view angle="315" y="17" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,27 @@
+<item.SpriteItem desc="Super hero Miss Teak" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" entity="false" name="Miss Teak" id="0">
+  <volume>
+    <box min="-0.5,0,-0.3" max="0.5,0.5,0.3"/>
+  </volume>
+  <textures>
+    <texture id="Miss Teak" source="items/base/consumables/head/con_head_83_mystique.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.5,0,-0.3" max="0.5,0.5,0.3"/>
+      <layers>
+        <layer id="Miss Teak" texture="Miss Teak">
+          <view angle="0" col="2" x="-1" y="52" hm="true"/>
+          <view angle="45" y="51"/>
+          <view angle="90" col="1" x="2" y="50"/>
+          <view angle="135" y="51" hm="true"/>
+          <view angle="180" col="2" x="1" y="52"/>
+          <view angle="225" col="3" x="3" y="50"/>
+          <view angle="270" col="4" x="2" y="50"/>
+          <view angle="315" col="3" x="-3" y="50" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

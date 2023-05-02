@@ -1,0 +1,101 @@
+<item.SpriteItem id="0" name="Raccoon" desc="Collectible (April 2014)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="redpanda" source="items/base/consumables/head/con_head_229_redfox_a.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_229_redfox_a_blink.png" cols="3" rows="1"/>
+    <texture id="tongue" source="items/base/consumables/head/con_head_229_redfox_a_tongue.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="redpanda" texture="redpanda">
+          <view angle="0" col="2" x="1" y="21" hm="true"/>
+          <view angle="45" x="-2" y="20"/>
+          <view angle="90" col="1" y="23"/>
+          <view angle="135" x="1" y="20" hm="true"/>
+          <view angle="180" col="2" x="-2" y="21"/>
+          <view angle="225" col="3" x="-1" y="19"/>
+          <view angle="270" col="4" x="1" y="20"/>
+          <view angle="315" col="3" x="1" y="19" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="17" hm="true"/>
+          <view angle="45" x="9" y="1"/>
+          <view angle="90" col="1" y="3"/>
+          <view angle="135" x="-10" y="1" hm="true"/>
+          <view angle="180" col="2" x="-18"/>
+          <view angle="225" col="3" y="14" alpha="0"/>
+          <view angle="270" col="4" y="18" alpha="0"/>
+          <view angle="315" col="3" x="-1" y="14" alpha="0" hm="true"/>
+        </layer>
+        <layer id="tongue" texture="tongue">
+          <view angle="0" col="2" x="24" y="11" hm="true"/>
+          <view angle="45" x="13" y="18"/>
+          <view angle="90" col="1" x="-1" y="19"/>
+          <view angle="135" x="-14" y="18" hm="true"/>
+          <view angle="180" col="2" x="-26" y="11"/>
+          <view angle="225" col="3" y="14" alpha="0"/>
+          <view angle="270" col="4" y="18" alpha="0"/>
+          <view angle="315" col="3" x="-1" y="14" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Blink">
+          <layerref id="redpanda"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="Normal">
+          <layerref id="redpanda"/>
+        </frame>
+        <frame id="tongue_01">
+          <layerref id="redpanda"/>
+          <layerref id="tongue"/>
+        </frame>
+        <frame id="tongue_02">
+          <layerref id="redpanda" y="1"/>
+          <layerref id="tongue" y="1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="Normal" duration="36"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal" duration="12"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal" duration="24"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal" duration="8"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal"/>
+          <frameref id="Blink"/>
+          <frameref id="Normal" duration="18"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+          <frameref id="tongue_01"/>
+          <frameref id="tongue_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

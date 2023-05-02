@@ -1,0 +1,73 @@
+<item.SpriteItem desc="Para ativar outros itens." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/antique/icon_a_switch_01_lever.png" id="1076" name="Alavanca de Madeira" tags="switch" price="35" tokens="350" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.49,0.52,0.3" min="-0.49,0,-0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action event="toggle" id="Toggle" trigger="false"/>
+    <action event="animate(On)" id="On" state="true"/>
+    <action event="animate(Off)" id="Off" state="true"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture cols="2" id="Switch" rows="1" source="items/base/antique/a_switch_01_lever.png"/>
+    <texture cols="2" id="light" rows="1" source="items/base/antique/a_switch_01_lever_light.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.49,0.52,0.3" min="-0.49,0,-0.3"/>
+      <layers>
+        <layer id="Switch On" texture="Switch" y="32">
+          <view angle="45" col="1" x="3" y="-4"/>
+          <view angle="135" col="1" hm="true" x="-2" y="-4"/>
+          <view angle="225" x="-2" y="-4"/>
+          <view angle="315" hm="true" x="3" y="-4"/>
+        </layer>
+        <layer id="Sign On" texture="light" y="32">
+          <view alpha="0" angle="45"/>
+          <view alpha="0" angle="135"/>
+          <view angle="225" x="5" y="-59"/>
+          <view angle="315" hm="true" x="-5" y="-59"/>
+        </layer>
+        <layer id="Switch Off" texture="Switch" y="32">
+          <view angle="45" x="-3" y="-4"/>
+          <view angle="135" hm="true" x="4" y="-4"/>
+          <view angle="225" col="1" x="4" y="-4"/>
+          <view angle="315" col="1" hm="true" x="-3" y="-4"/>
+        </layer>
+        <layer id="Sign Off" texture="light" y="32">
+          <view alpha="0" angle="45" x="7" y="-55"/>
+          <view alpha="0" angle="135"/>
+          <view angle="225" col="1" x="-5" y="-64"/>
+          <view angle="315" col="1" hm="true" x="5" y="-65"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Switch On"/>
+          <layerref id="Sign On"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Switch Off"/>
+          <layerref id="Sign Off"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="1" id="On" loop="false">
+          <frameref id="On"/>
+        </animation>
+        <animation framerate="1" id="Off" loop="false">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,136 @@
+<item.WidgetItem id="2322" name="Bandeira Flickr" desc="Personalizável com imagens do Flickr" tags="widget,user_content" icon="items/base/modern/icon_m_flagpole_01_standard.png" price="175" minLevel="1" minLevelType="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_flickr.swf">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,3.1,0.25"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="First" trigger="false" event="widget_action(FIRST)"/>
+    <action id="Last" trigger="false" event="widget_action(LAST)"/>
+    <action id="Next" trigger="false" event="widget_action(NEXT)"/>
+    <action id="Previous" trigger="false" event="widget_action(PREVIOUS)"/>
+    <action id="Show Specific Image" trigger="false" event="widget_action(SHOWIMAGE)">
+      <params>
+        <param type="string" id="Image Title" label="Enter image title"/>
+      </params>
+    </action>
+    <action id="Image Change">
+      <eval>
+        <func type="relational" id="Image Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+    <action id="Enlarge Image">
+      <eval>
+        <func type="relational" id="Image Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate sitRange="4.00" standRange="3.00" targetRange="1.00" usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="frame" value="wooden"/>
+    <entry key="aspect" value="mural"/>
+    <entry key="renderWidth" value="640"/>
+    <entry key="renderHeight" value="480"/>
+    <entry key="scale" value="0.7"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+  </data>
+  <textures>
+    <texture id="Pole" source="items/base/modern/m_flagpole_01_base.png" cols="2" rows="1"/>
+    <texture id="flag" source="items/base/modern/m_flagpole_01_flag.png" cols="2" rows="1"/>
+    <texture id="Background" source="items/base/modern/m_flagpole_01_background.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Flagpole1" depthBias="-1">
+      <box min="-0.25,0,-0.25" max="0.25,3.1,0.25"/>
+      <layers>
+        <layer id="Pole" texture="Pole" align="middle">
+          <view angle="45" x="-2" y="-140" hm="true"/>
+          <view angle="135" col="1" x="1" y="-140"/>
+          <view angle="225" col="1" x="-1" y="-140" hm="true"/>
+          <view angle="315" x="2" y="-140"/>
+        </layer>
+        <layer id="Background" texture="Background" align="middle">
+          <view angle="45" col="1" x="60" y="-263" hm="true"/>
+          <view angle="135" x="61" y="-203"/>
+          <view angle="225" col="1" x="-41" y="-230" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-41" y="-270" alpha="0"/>
+        </layer>
+        <layer id="Widget" type="panel" texture="Texture" w="1.68" h="1.03">
+          <view angle="45" x="63" y="-266"/>
+          <view angle="135" col="1" x="63" y="-200"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="3"/>
+        </layer>
+        <layer id="Flag" texture="flag" align="middle">
+          <view angle="45" col="1" x="60" y="-263" hm="true"/>
+          <view angle="135" col="1" x="66" y="-197"/>
+          <view angle="225" x="-58" y="-203" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-61" y="-264" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Pole"/>
+          <layerref id="Background"/>
+          <layerref id="Widget"/>
+          <layerref id="Flag" blend="multiply"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Flagpole2" depthBias="-1">
+      <box min="-0.25,0,-0.25" max="0.25,3.1,0.25"/>
+      <layers>
+        <layer id="Background" texture="Background">
+          <view angle="45" x="-62" y="-132" hm="true"/>
+          <view angle="135" col="1" x="-60" y="-192"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="Widget" type="panel" texture="Texture" w="1.68" h="1.03">
+          <view angle="45" x="-63" y="-199"/>
+          <view angle="135" col="1" x="-63" y="-266"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="3"/>
+        </layer>
+        <layer id="Flag" texture="flag">
+          <view angle="45" x="-61" y="-132" hm="true"/>
+          <view angle="135" col="1" x="-60" y="-193"/>
+          <view angle="225" x="-62" y="-208" alpha="0" hm="true"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Background"/>
+          <layerref id="Widget"/>
+          <layerref id="Flag" blend="multiply"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="Animation">
+      <frame id="Flagpole">
+        <noderef id="Flagpole1"/>
+        <noderef id="Flagpole2" a="180" frame="Frame"/>
+      </frame>
+    </animation>
+  </animations>
+</item.WidgetItem>

@@ -1,0 +1,34 @@
+<item.SpriteItem id="6147" name="Bolsa Alça Longa Chic's" desc="Uma bolsa de altíssima classe" tags="rare,consumable,actionbar,wear,hand,action_holdable_toggle,clothing" icon="items/base/consumables/clothing/accessory/acc_639_chainbag_icon.png" price="2350" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2231,0,-0.23" max="0.2231,0.32,0.1"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="handbag" source="items/base/consumables/clothing/accessory/acc_639_chainbag_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="handbag">
+      <box min="-0.2231,0,-0.23" max="0.2231,0.32,0.1"/>
+      <layers>
+        <layer id="handbag" texture="handbag">
+          <view angle="45" x="5" y="18" hm="true"/>
+          <view angle="135" x="-5" y="18"/>
+          <view angle="225" col="1" x="-5" y="20" hm="true"/>
+          <view angle="315" col="1" x="5" y="20"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

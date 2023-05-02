@@ -1,0 +1,85 @@
+<item.SpriteItem id="3145" name="Relógio Clássico" desc="Um relógio antigo com ponteiros de ouro e madeira de lei." tags="rare,misc,kudos,craftable_kudos,market" icon="items/base/antique/icon_a_clock_01_grandfather.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="150" minLevelType="4">
+  <volume>
+    <box min="-0.48,0,-0.45" max="0.27,2.9,0.45"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="clock" source="items/base/antique/a_clock_01_grandfather.png" cols="2" rows="1"/>
+    <texture id="decal" source="items/base/antique/a_clock_01_grandfather_decal.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="clock">
+      <box min="-0.48,0,-0.45" max="0.27,2.9,0.45"/>
+      <layers>
+        <layer id="decal_01" texture="decal">
+          <view angle="45" x="7" y="-32"/>
+          <view angle="135" x="-7" y="-32" hm="true"/>
+          <view angle="225" y="-91" alpha="0"/>
+          <view angle="315" y="-91" alpha="0"/>
+        </layer>
+        <layer id="decal_02" texture="decal">
+          <view angle="45" col="1" x="7" y="-32"/>
+          <view angle="135" col="1" x="-7" y="-32" hm="true"/>
+          <view angle="225" col="1" y="-91" alpha="0"/>
+          <view angle="315" col="1" y="-91" alpha="0"/>
+        </layer>
+        <layer id="decal_03" texture="decal">
+          <view angle="45" col="2" x="7" y="-32"/>
+          <view angle="135" col="2" x="-7" y="-32" hm="true"/>
+          <view angle="225" col="2" y="-91" alpha="0"/>
+          <view angle="315" col="2" y="-91" alpha="0"/>
+        </layer>
+        <layer id="clock" texture="clock">
+          <view angle="45" x="-8" y="34"/>
+          <view angle="135" x="8" y="34" hm="true"/>
+          <view angle="225" col="1" x="8" y="42"/>
+          <view angle="315" col="1" x="-8" y="42" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame00">
+          <layerref id="clock"/>
+          <layerref id="decal_02"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="clock"/>
+          <layerref id="decal_01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="clock"/>
+          <layerref id="decal_02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="clock"/>
+          <layerref id="decal_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="Frame00"/>
+        </animation>
+        <animation id="On" framerate="2">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

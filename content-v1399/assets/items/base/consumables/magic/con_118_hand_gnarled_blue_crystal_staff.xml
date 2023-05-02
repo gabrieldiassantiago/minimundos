@@ -1,0 +1,149 @@
+<item.SpriteItem id="0" name="Gnarled Blue Crystal Staff" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/magic/con_118_hand_gnarled_blue_crystal_staff.png" cols="8" rows="1"/>
+    <texture id="Texture01" source="items/base/consumables/magic/proj_generic_shockball.png" cols="1" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="Glow_Small" source="items/base/consumables/magic/con_118_hand_gnarled_blue_crystal_staff_glow_small.png" cols="1" rows="1"/>
+    <texture id="Glow01" source="items/base/consumables/magic/con_118_hand_gnarled_blue_crystal_staff_glow01.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="staff" texture="Texture">
+          <view angle="0" x="6" y="100"/>
+          <view angle="45" col="1" x="7" y="100"/>
+          <view angle="90" col="2" x="3" y="111"/>
+          <view angle="135" col="3" x="-5" y="96"/>
+          <view angle="180" col="4" x="-2" y="99"/>
+          <view angle="225" col="5" x="-5" y="94"/>
+          <view angle="270" col="6" x="-5" y="95"/>
+          <view angle="315" col="7" x="3" y="92"/>
+        </layer>
+        <layer id="glow01" texture="Glow01">
+          <view angle="0" x="17" y="12"/>
+          <view angle="45" x="17" y="17"/>
+          <view angle="90" x="7" y="31"/>
+          <view angle="135" x="-11" y="18"/>
+          <view angle="180" x="-17" y="15"/>
+          <view angle="225" x="-17" y="6"/>
+          <view angle="270" x="-5" y="4"/>
+          <view angle="315" x="12" y="2"/>
+        </layer>
+        <layer id="glow_small" texture="Glow_Small">
+          <view angle="0" x="-12" y="90"/>
+          <view angle="45" x="-6" y="85"/>
+          <view angle="90" x="3" y="92"/>
+          <view angle="135" x="7" y="83"/>
+          <view angle="180" x="11" y="90"/>
+          <view angle="225" x="5" y="91"/>
+          <view angle="270" x="-3" y="92"/>
+          <view angle="315" x="-8" y="90"/>
+        </layer>
+        <layer id="01" texture="Texture01">
+          <view angle="45" x="18" y="-37"/>
+          <view angle="135" x="-12" y="-35"/>
+          <view angle="225" x="-17" y="-49"/>
+          <view angle="315" x="13" y="-52"/>
+          <view angle="0" x="18" y="-41"/>
+          <view angle="90" x="7" y="-25"/>
+          <view angle="180" x="-17" y="-42"/>
+          <view angle="270" x="-5" y="-51"/>
+        </layer>
+        <layer id="02" texture="Texture01">
+          <view angle="45" row="1" x="18" y="-37"/>
+          <view angle="135" row="1" x="-12" y="-35"/>
+          <view angle="225" row="1" x="-17" y="-49"/>
+          <view angle="315" row="1" x="13" y="-52"/>
+          <view angle="0" row="1" x="18" y="-41"/>
+          <view angle="90" row="1" x="7" y="-25"/>
+          <view angle="180" row="1" x="-17" y="-42"/>
+          <view angle="270" row="1" x="-5" y="-51"/>
+        </layer>
+        <layer id="03" texture="Texture01">
+          <view angle="45" row="2" x="18" y="-37"/>
+          <view angle="135" row="2" x="-12" y="-35"/>
+          <view angle="225" row="2" x="-17" y="-49"/>
+          <view angle="315" row="2" x="13" y="-52"/>
+          <view angle="0" row="2" x="18" y="-41"/>
+          <view angle="90" row="2" x="7" y="-25"/>
+          <view angle="180" row="2" x="-17" y="-42"/>
+          <view angle="270" row="2" x="-5" y="-51"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="glow_small" a="0.9"/>
+          <layerref id="staff"/>
+          <layerref id="glow01"/>
+          <layerref id="01" color="0xe7fbfb" a="0.3" blend="add"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="glow_small"/>
+          <layerref id="staff"/>
+          <layerref id="glow01" a="0.95"/>
+          <layerref id="02" color="0xe7fbfb" a="0.3" blend="add"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="glow_small" a="0.9"/>
+          <layerref id="staff"/>
+          <layerref id="glow01" a="0.9"/>
+          <layerref id="03" color="0xe7fbfb" a="0.3" blend="add"/>
+        </frame>
+        <frame id="off">
+          <layerref id="staff"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="0" x="2" y="-10" hm="true"/>
+          <view angle="45" x="2" y="-10"/>
+          <view angle="90" y="-7"/>
+          <view angle="135" x="-1" y="-9" hm="true"/>
+          <view angle="180" x="-3" y="-9"/>
+          <view angle="225" x="-3" y="-11"/>
+          <view angle="270" x="-1" y="-11"/>
+          <view angle="315" x="2" y="-11" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x8cc7f0"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

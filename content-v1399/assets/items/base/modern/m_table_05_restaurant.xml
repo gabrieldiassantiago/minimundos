@@ -1,0 +1,27 @@
+<item.SpriteItem desc="Pode ser usada em casas também." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/modern/icon_m_table_05_restaurant.png" id="2367" name="Mesa de Restaurante" tags="table" minLevel="1" minCPLevel="1" price="70">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.92,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="steeltable" source="items/base/modern/m_table_05_restaurant.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Table">
+      <box min="-0.49,0,-0.49" max="0.49,0.92,0.49"/>
+      <layers>
+        <layer id="table" texture="steeltable" y="30">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

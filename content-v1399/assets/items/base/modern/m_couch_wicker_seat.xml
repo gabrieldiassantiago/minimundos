@@ -1,0 +1,61 @@
+<item.ChairItem desc="Um excelente sofá de vime com acento de algodão" dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/modern/icon_m_wicker_seat.png" id="567" name="Sofá de Vime Tulsa" tags="chair" price="25" tokens="250" minLevel="1" minCPLevel="1">
+  <seats>
+    <seat x="0.16" y="0.41">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box max="0.49,0.89,0.48" min="-0.45,0,-0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture cols="3" id="Texture" rows="1" source="items/base/modern/m_couch_wicker_seat.png"/>
+  </textures>
+  <nodes>
+    <node id="RightArm" x="0" y="0" z="0">
+      <box max="0.49,0.89,0.48" min="-0.45,0,-0.48"/>
+      <layers>
+        <layer align="middle" id="Layer" texture="Texture">
+          <view alpha="0" angle="45" col="0" row="0" x="-2" y="-32"/>
+          <view angle="135" col="0" mirror="true" row="0" x="-9" y="-31"/>
+          <view angle="225" col="1" mirror="true" row="0" x="-9" y="-35"/>
+          <view angle="315" col="2" row="0" x="8" y="-35"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="LeftArm" x="0" y="0" z="0">
+      <box max="0.49,0.89,0.48" min="-0.45,0,-0.48"/>
+      <layers>
+        <layer align="middle" id="Layer" texture="Texture">
+          <view angle="45" col="0" row="0" x="9" y="-31"/>
+          <view alpha="0" angle="135" col="0" mirror="true" row="0" x="2" y="-33"/>
+          <view angle="225" col="2" mirror="true" row="0" x="-7" y="-34"/>
+          <view angle="315" col="1" row="0" x="9" y="-35"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

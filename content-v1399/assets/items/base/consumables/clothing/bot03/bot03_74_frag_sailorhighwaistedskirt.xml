@@ -1,0 +1,74 @@
+<f id="Bot03_74SailorHighWaistedSkirt" parentId="Bot03">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="HWskirt_73_TorsoM" cId="Torso" s="items/base/consumables/clothing/bot03/bot03_74_torso_m.png" pri="3"/>
+      <c sId="HWskirt_73_TorsoM" c="2833517" a="0.74" b="28.5" ct="1.53" lId="Bot03_74Color" lw="N"/>
+      <s id="HWskirt_73_TorsoM_decal" cId="Torso" s="items/base/consumables/clothing/bot03/bot03_74_torso_decal_m.png" pri="3.1"/>
+    </g>
+    <g id="Female">
+      <s id="HWskirt_73_TorsoF" cId="Torso" s="items/base/consumables/clothing/bot03/bot03_74_torso_f.png" pri="3"/>
+      <c sId="HWskirt_73_TorsoF" c="16221202" a="1.00" b="55.5" ct="2.00" lId="Bot03_74Color" lw="N"/>
+      <s id="HWskirt_73_TorsoF_decal" cId="Torso" s="items/base/consumables/clothing/bot03/bot03_74_torso_decal_f.png" pri="3.1"/>
+    </g>
+  </b>
+  <g id="Floral" name="Base" icon="$bm/iconm_legs_shorts.png">
+    <s id="HWskirt_73_Idle" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_74_idle_base.png" pri="4.2"/>
+    <s id="HWskirt_73_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_74_walk1_base.png" pri="4.2"/>
+    <s id="HWskirt_73_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_74_walk2_base.png" pri="4.2"/>
+    <s id="HWskirt_73_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_74_walk3_base.png" pri="4.2"/>
+    <s id="HWskirt_73_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_74_walk4_base.png" pri="4.2"/>
+    <s id="HWskirt_73_Sit" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_74_sit_base.png" pri="4.2"/>
+    <c sId="HWskirt_73_Idle" c="2833517" a="0.74" b="28.5" ct="1.53" lId="Bot03_74Color" lw="N"/>
+    <c sId="HWskirt_73_Walk1" c="2833517" a="0.74" b="28.5" ct="1.53" lId="Bot03_74Color" lw="N"/>
+    <c sId="HWskirt_73_Walk2" c="2833517" a="0.74" b="28.5" ct="1.53" lId="Bot03_74Color" lw="N"/>
+    <c sId="HWskirt_73_Walk3" c="2833517" a="0.74" b="28.5" ct="1.53" lId="Bot03_74Color" lw="N"/>
+    <c sId="HWskirt_73_Walk4" c="2833517" a="0.74" b="28.5" ct="1.53" lId="Bot03_74Color" lw="N"/>
+    <c sId="HWskirt_73_Sit" c="2833517" a="0.74" b="28.5" ct="1.53" lId="Bot03_74Color" lw="N"/>
+  </g>
+  <g id="Decal" icon="$bm/iconm_legs_shorts.png">
+    <s id="HWskirt_73_Idle_decal" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_74_idle_decal.png" pri="4.3"/>
+    <s id="HWskirt_73_Walk1_decal" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_74_walk1_decal.png" pri="4.3"/>
+    <s id="HWskirt_73_Walk2_decal" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_74_walk2_decal.png" pri="4.3"/>
+    <s id="HWskirt_73_Walk3_decal" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_74_walk3_decal.png" pri="4.3"/>
+    <s id="HWskirt_73_Walk4_decal" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_74_walk4_decal.png" pri="4.3"/>
+    <s id="HWskirt_73_Sit_decal" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_74_sit_decal.png" pri="4.3"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop03_74" icon="items/base/consumables/clothing/bot03/bot03_74_icon_sailorhighwaistedskirt_a.png" w="48" h="48"/>
+    <s id="IconTop03_74Base" cId="IconTop03_74" s="items/base/consumables/clothing/bot03/bot03_74_icon_sailorhighwaistedskirt_1.png"/>
+    <c sId="IconTop03_74Base" c="2833517" a="0.74" b="28.5" ct="1.53" lId="Bot03_74Color" lw="N"/>
+    <s id="IconTop03_74decal" cId="IconTop03_74" s="items/base/consumables/clothing/bot03/bot03_74_icon_sailorhighwaistedskirt_2.png"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot03_74Color" name="Color" desc="Choose a color" sel="NavyBlue" seld="Faded blue">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.78" b="79.1" ct="0.89" lId="Bot03_74Color"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="0.99" b="66.4" ct="1.12" lId="Bot03_74Color"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.86" b="36.6" ct="0.98" lId="Bot03_74Color"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16228533" a="0.77" b="52.8" ct="1.35" lId="Bot03_74Color"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="0.71" b="54.0" ct="1.52" lId="Bot03_74Color"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.85" b="65.4" ct="1.47" lId="Bot03_74Color"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="55.5" ct="1.23" lId="Bot03_74Color"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="1.00" b="44.6" ct="1.05" lId="Bot03_74Color"/>
+      <c id="Green" icon="$bu/icon_green.png" c="879638" a="0.88" b="71.8" ct="2.00" lId="Bot03_74Color"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="65.4" ct="2.00" lId="Bot03_74Color"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="1.00" b="30.2" ct="0.88" lId="Bot03_74Color"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="60.5" ct="1.42" lId="Bot03_74Color"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="7773908" a="0.72" b="44.2" ct="1.56" lId="Bot03_74Color"/>
+      <c id="FadedBlue" name="Faded blue" icon="$bu/icon_fadedblue.png" c="3751832" a="0.77" b="51.2" ct="1.37" lId="Bot03_74Color"/>
+      <c id="MedBlue" name="Jean blue" icon="$bu/icon_medblue.png" c="3297909" a="0.95" b="65.8" ct="2.00" lId="Bot03_74Color"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="3766168" a="0.81" b="52.8" ct="2.00" lId="Bot03_74Color"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="2833517" a="0.74" b="28.5" ct="1.53" lId="Bot03_74Color"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="8007863" a="0.84" b="41.5" ct="1.06" lId="Bot03_74Color"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.90" b="32.1" ct="1.33" lId="Bot03_74Color"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.93" b="56.8" ct="1.43" lId="Bot03_74Color"/>
+      <c id="Olive" icon="$bu/icon_olive.png" c="5195281" a="0.94" b="72.2" ct="2.00" lId="Bot03_74Color"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.88" b="60.5" ct="1.67" lId="Bot03_74Color"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5701632" a="0.87" b="70.5" ct="2.00" lId="Bot03_74Color"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="0.93" b="38.3" ct="1.52" lId="Bot03_74Color"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot03_74Color"/>
+    </wizbox>
+  </g>
+  <ds id="JSBottom"/>
+</f>

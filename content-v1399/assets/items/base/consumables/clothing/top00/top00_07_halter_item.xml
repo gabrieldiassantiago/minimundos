@@ -1,0 +1,41 @@
+<item.SpriteItem id="5739" name="Maiô Corda Coast" desc="Uma maiô peça única de banho" tags="consumable,clothing,actionbar,wear,top00,action_wearable_toggle" icon="items/base/consumables/clothing/top00/top00_07_halter_icon_a.png" price="1180" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,0,-0.2" max="0.35,0.05,0.2"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top00/top00_07_frag_halter.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="yellow" source="items/base/consumables/clothing/top00/top00_07_halter_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.2" max="0.35,0.05,0.2"/>
+      <layers>
+        <layer id="00" texture="yellow">
+          <view angle="45" col="1" x="5" y="27"/>
+          <view angle="135" col="1" x="-5" y="27" hm="true"/>
+          <view angle="225" x="3" y="28"/>
+          <view angle="315" x="-3" y="28" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="00"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

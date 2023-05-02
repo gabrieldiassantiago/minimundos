@@ -1,0 +1,83 @@
+<item.SpriteItem id="2818" name="Cesto de Roupa Suja de Luxo" desc="Em vime, trançado à mão e com excelente acabamento." tags="misc,table" icon="items/base/modern/icon_m_bathroom_27_laundryhamper.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="45">
+  <volume>
+    <box min="-0.26,0,-0.4" max="0.24,0.95,0.4"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="body" source="items/base/modern/m_bathroom_27_laundryhamper_body.png" cols="1" rows="1"/>
+    <texture id="top" source="items/base/modern/m_bathroom_27_laundryhamper_top.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" x="-0.01">
+      <box min="-0.25,0,-0.4" max="0.25,0.95,0.4"/>
+      <layers>
+        <layer id="body" texture="body">
+          <view angle="45" y="25" hm="true"/>
+          <view angle="135" y="25"/>
+          <view angle="225" y="25" hm="true"/>
+          <view angle="315" y="25"/>
+        </layer>
+        <layer id="door closed" texture="top">
+          <view angle="45" y="-38" hm="true"/>
+          <view angle="135" y="-38"/>
+          <view angle="225" y="-38" hm="true"/>
+          <view angle="315" y="-38"/>
+        </layer>
+        <layer id="door opened" texture="top">
+          <view angle="45" col="1" x="-24" y="-64" hm="true"/>
+          <view angle="135" col="1" x="24" y="-64"/>
+          <view angle="225" col="2" x="24" y="-40"/>
+          <view angle="315" col="2" x="-24" y="-40" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="body"/>
+          <layerref id="door closed"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="body"/>
+          <layerref id="door opened"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" loop="false">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open">
+          <frameref id="Open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.4" y="0.65" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers/>
+      <frames>
+        <frame id="Off"/>
+        <frame id="On"/>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

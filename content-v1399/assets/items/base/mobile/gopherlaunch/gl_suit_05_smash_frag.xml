@@ -1,0 +1,129 @@
+<f id="GopherSmash" parentId="Suits">
+  <g id="Torso">
+    <s id="GoSmashTorsoBase" cId="Torso" s="items/base/mobile/gopherlaunch/gl_suit_05_smash_torso.png" pri="1"/>
+  </g>
+  <g id="TopTshirtLogo" name="Arms">
+    <s id="GoSmashArmIdle" cId="ArmIdle" s="items/base/mobile/gopherlaunch/gl_suit_05_smash_arm_idle.png" pri="1"/>
+    <s id="GoSmashArmWalk1" cId="ArmWalk1" s="items/base/mobile/gopherlaunch/gl_suit_05_smash_arm_walk1.png" pri="1"/>
+    <s id="GoSmashArmWalk2" cId="ArmWalk2" s="items/base/mobile/gopherlaunch/gl_suit_05_smash_arm_walk2.png" pri="1"/>
+    <s id="GoSmashArmWalk3" cId="ArmWalk3" s="items/base/mobile/gopherlaunch/gl_suit_05_smash_arm_walk3.png" pri="1"/>
+    <s id="GoSmashArmSit" cId="ArmSit" s="items/base/mobile/gopherlaunch/gl_suit_05_smash_arm_sit.png" pri="1"/>
+    <s id="GoSmashArmThrow" cId="ArmThrow" s="items/base/mobile/gopherlaunch/gl_suit_05_smash_arm_throw.png" pri="1"/>
+    <s id="GoSmashArmRaise" cId="ArmRaise" s="items/base/mobile/gopherlaunch/gl_suit_05_smash_arm_raise.png" pri="1"/>
+  </g>
+  <g id="Hands" icon="$bm/icon_m_longsleeve.png">
+    <s id="GloveArmIdleBase" cId="ArmIdle" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_idle.png"/>
+    <s id="GloveArmWalk1Base" cId="ArmWalk1" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_walk1.png"/>
+    <s id="GloveArmWalk2Base" cId="ArmWalk2" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_walk2.png"/>
+    <s id="GloveArmWalk3Base" cId="ArmWalk3" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_walk3.png"/>
+    <s id="UnderArmorArmSitBase" cId="ArmSit" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_sit.png"/>
+    <c sId="GloveArmIdleBase" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GloveArmWalk1Base" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GloveArmWalk2Base" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GloveArmWalk3Base" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="UnderArmorArmSitBase" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <s id="GloveArmThrowBase" cId="ArmRaiseWave1" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_raise_wave1.png"/>
+    <s id="GloveArmRaiseBase" cId="ArmRaiseWave2" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_raise_wave2.png"/>
+    <c sId="GloveArmThrowBase" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GloveArmRaiseBase" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <s id="GloveArmThrowHold" cId="ArmThrowHold" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_throw_hold.png"/>
+    <s id="GloveArmThrowOpen" cId="ArmThrowOpen" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_throw_open.png"/>
+    <s id="GloveArmThrowPoint" cId="ArmThrowPoint" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_throw_point.png"/>
+    <s id="GloveArmThrowStop" cId="ArmThrowStop" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_throw_stop.png"/>
+    <s id="GloveArmThrowThrow" cId="ArmThrowThrow" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_throw_throw.png"/>
+    <s id="GloveArmThrowThumb" cId="ArmThrowThumb" s="items/base/mobile/gopherlaunch/gl_suit_00_hand_throw_thumbs.png"/>
+    <c sId="GloveArmThrowHold" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GloveArmThrowOpen" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GloveArmThrowPoint" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GloveArmThrowStop" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GloveArmThrowThrow" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GloveArmThrowThumb" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+  </g>
+  <g id="SkinnyChexBase" name="LegsDecal" icon="$bu/icon_legs_trouser.png">
+    <s id="GoSmash_LegIdledecal" cId="LegIdle" s="items/base/mobile/gopherlaunch/gl_suit_00_leg_idle.png" pri="2"/>
+    <s id="GoSmash_LegWalk1decal" cId="LegWalk1" s="items/base/mobile/gopherlaunch/gl_suit_00_leg_walk1.png" pri="2"/>
+    <s id="GoSmash_LegWalk2decal" cId="LegWalk2" s="items/base/mobile/gopherlaunch/gl_suit_00_leg_walk2.png" pri="2"/>
+    <s id="GoSmash_LegWalk3decal" cId="LegWalk3" s="items/base/mobile/gopherlaunch/gl_suit_00_leg_walk3.png" pri="2"/>
+    <s id="GoSmash_LegWalk4decal" cId="LegWalk4" s="items/base/mobile/gopherlaunch/gl_suit_00_leg_walk4.png" pri="2"/>
+    <s id="GoSmash_LegSitUpperdecal" cId="LegSitUpper" s="items/base/mobile/gopherlaunch/gl_suit_00_sit_upper.png" pri="2"/>
+    <s id="GoSmash_LegSitLowerdecal" cId="LegSitLower" s="items/base/mobile/gopherlaunch/gl_suit_00_sit_lower.png" pri="2"/>
+    <c sId="GoSmash_LegIdledecal" c="4210235" a="0.59" b="-0.2" ct="0.17" lId="GoSmash_Color2" lw="N"/>
+    <c sId="GoSmash_LegWalk1decal" c="4210235" a="0.59" b="-0.2" ct="0.17" lId="GoSmash_Color2" lw="N"/>
+    <c sId="GoSmash_LegWalk2decal" c="4210235" a="0.59" b="-0.2" ct="0.17" lId="GoSmash_Color2" lw="N"/>
+    <c sId="GoSmash_LegWalk3decal" c="4210235" a="0.59" b="-0.2" ct="0.17" lId="GoSmash_Color2" lw="N"/>
+    <c sId="GoSmash_LegWalk4decal" c="4210235" a="0.59" b="-0.2" ct="0.17" lId="GoSmash_Color2" lw="N"/>
+    <c sId="GoSmash_LegSitUpperdecal" c="4210235" a="0.59" b="-0.2" ct="0.17" lId="GoSmash_Color2" lw="N"/>
+    <c sId="GoSmash_LegSitLowerdecal" c="4210235" a="0.59" b="-0.2" ct="0.17" lId="GoSmash_Color2" lw="N"/>
+  </g>
+  <g id="SkinnyChexBase" name="Legs" icon="$bu/icon_legs_trouser.png">
+    <s id="FurrLegIdle" cId="LegIdle" s="$bu/skinny_leg_idle.png" pri="1"/>
+    <s id="FurrLegWalk1" cId="LegWalk1" s="$bu/skinny_leg_walk1.png" pri="1"/>
+    <s id="FurrLegWalk2" cId="LegWalk2" s="$bu/skinny_leg_walk2.png" pri="1"/>
+    <s id="FurrLegWalk3" cId="LegWalk3" s="$bu/skinny_leg_walk3.png" pri="1"/>
+    <s id="FurrLegWalk4" cId="LegWalk4" s="$bu/skinny_leg_walk4.png" pri="1"/>
+    <s id="FurrLegSitUpper" cId="LegSitUpper" s="$bu/skinny_sit_upper.png" pri="1"/>
+    <s id="FurrLegSitLower" cId="LegSitLower" s="$bu/skinny_sit_lower.png" pri="1"/>
+    <c sId="FurrLegIdle" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="FurrLegWalk1" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="FurrLegWalk2" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="FurrLegWalk3" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="FurrLegWalk4" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="FurrLegSitUpper" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="FurrLegSitLower" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+  </g>
+  <g id="Feet" name="Feet" icon="$bu/icon_shoe_skate.png">
+    <s id="GoSmash_FeetIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_01_idle.png" pri="2"/>
+    <s id="GoSmash_FeetWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_01_walk1.png" pri="2"/>
+    <s id="GoSmash_FeetWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_01_walk2.png" pri="2"/>
+    <s id="GoSmash_FeetWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_01_walk3.png" pri="2"/>
+    <s id="GoSmash_FeetWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_01_walk4.png" pri="2"/>
+    <s id="GoSmash_FeetSitBase" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_01_sit.png" pri="2"/>
+    <c sId="GoSmash_FeetIdleBase" c="4210236" a="1.00" b="43.1" ct="0.61" lId="GoSmash_Color3" lw="N"/>
+    <c sId="GoSmash_FeetWalk1Base" c="4210236" a="1.00" b="43.1" ct="0.61" lId="GoSmash_Color3" lw="N"/>
+    <c sId="GoSmash_FeetWalk2Base" c="4210236" a="1.00" b="43.1" ct="0.61" lId="GoSmash_Color3" lw="N"/>
+    <c sId="GoSmash_FeetWalk3Base" c="4210236" a="1.00" b="43.1" ct="0.61" lId="GoSmash_Color3" lw="N"/>
+    <c sId="GoSmash_FeetWalk4Base" c="4210236" a="1.00" b="43.1" ct="0.61" lId="GoSmash_Color3" lw="N"/>
+    <c sId="GoSmash_FeetSitBase" c="4210236" a="1.00" b="43.1" ct="0.61" lId="GoSmash_Color3" lw="N"/>
+    <s id="GoSmash_FeetSitDecal" cId="LegSitLower" s="items/base/mobile/gopherlaunch/gl_suit_00_feet_sit.png" pri="2"/>
+    <s id="GoSmash_FeetWalk4Decal" cId="LegWalk4" s="items/base/mobile/gopherlaunch/gl_suit_00_feet_walk4.png" pri="2"/>
+    <s id="GoSmash_FeetWalk3Decal" cId="LegWalk3" s="items/base/mobile/gopherlaunch/gl_suit_00_feet_walk3.png" pri="2"/>
+    <s id="GoSmash_FeetWalk2Decal" cId="LegWalk2" s="items/base/mobile/gopherlaunch/gl_suit_00_feet_walk2.png" pri="2"/>
+    <s id="GoSmash_FeetWalk1Decal" cId="LegWalk1" s="items/base/mobile/gopherlaunch/gl_suit_00_feet_walk1.png" pri="2"/>
+    <s id="GoSmash_FeetIdleDecal" cId="LegIdle" s="items/base/mobile/gopherlaunch/gl_suit_00_feet_idle.png" pri="2"/>
+    <c sId="GoSmash_FeetSitDecal" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GoSmash_FeetWalk4Decal" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GoSmash_FeetWalk3Decal" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GoSmash_FeetWalk2Decal" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GoSmash_FeetWalk1Decal" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+    <c sId="GoSmash_FeetIdleDecal" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="GoSmash" icon="items/base/mobile/gopherlaunch/gl_suit_05_smash_icon.png" w="48" h="48"/>
+    <s id="GoSmash_Icon" cId="GoSmash" s="items/base/mobile/gopherlaunch/gl_suit_05_smash_icon.png"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="GoSmash_Color1" name="Color" desc="Choose a color" sel="red" seld="White">
+      <c id="red" icon="$bu/icon_burgandy.png" c="7803914" a="0.62" b="-12.8" ct="0.44" lId="GoSmash_Color1"/>
+    </b>
+    <b id="GoSmash_Color2" name="Color" desc="Choose a color" sel="grey" seld="White">
+      <c id="grey" icon="$bu/icon_grey.png" c="4210235" a="0.59" b="-0.2" ct="0.17" lId="GoSmash_Color2"/>
+    </b>
+    <b id="GoSmash_Color3" name="Color" desc="Choose a color" sel="red" seld="White">
+      <c id="red" icon="$bu/icon_burgandy.png" c="4210236" a="1.00" b="43.1" ct="0.61" lId="GoSmash_Color3"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot01"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="JSFeet"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+</f>

@@ -1,0 +1,107 @@
+<item.ChairItem id="2349" name="Sofá para Dois Ellen" desc="Roxo é harmonia para o ambiente, sofá é descanso para o corpo." tags="chair" icon="items/base/modern/icon_m_couch_10_purple_double.png" minLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" minCPLevel="1" price="88" tokens="888">
+  <seats>
+    <seat x="0.18" y="0.38">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+    <seat x="0.18" y="0.36" z="0.85">
+      <ap x="1" z="1"/>
+      <ap x="1"/>
+      <ap x="1" z="2"/>
+      <ap z="2"/>
+      <ap x="-1" z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="2"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.5,0,-0.49" max="0.3,0.63,1.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="arm" source="items/base/modern/m_couch_10_purple_arm.png" cols="2" rows="2"/>
+    <texture id="seats" source="items/base/modern/m_couch_10_purple.png" cols="3" rows="1"/>
+    <texture id="cushions" source="items/base/modern/m_couch_10_purple_cushion_brown.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-0.49,0,-0.49" max="0.3,0.63,1.49"/>
+      <layers>
+        <layer id="seat01" texture="seats" align="middle">
+          <view angle="45" x="-1" y="-26" alpha="0"/>
+          <view angle="135" y="-26" hm="true"/>
+          <view angle="225" col="1" y="-29" hm="true"/>
+          <view angle="315" col="2" x="-64" y="-60"/>
+        </layer>
+        <layer id="seat02" texture="seats" align="middle">
+          <view angle="45" x="-1" y="-26" alpha="0"/>
+          <view angle="135" x="60" y="4" hm="true"/>
+          <view angle="225" col="1" x="-62" y="2" hm="true"/>
+          <view angle="315" col="2" x="-2" y="-29"/>
+        </layer>
+        <layer id="arm" texture="arm">
+          <view angle="45" x="-22" y="33"/>
+          <view angle="135" col="1" x="-42" y="7" hm="true"/>
+          <view angle="225" col="1" row="1" x="28" y="7"/>
+          <view angle="315" row="1" x="32" y="32" hm="true"/>
+        </layer>
+        <layer id="cushion" texture="cushions">
+          <view angle="45" x="-13" y="-8"/>
+          <view angle="135" col="2" x="-33" y="-19" hm="true"/>
+          <view angle="225" x="-3" y="-30" hm="true"/>
+          <view angle="315" x="24" y="-11" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="LeftArm">
+      <box min="-0.5,0,-0.49" max="0.3,0.63,1.5"/>
+      <layers>
+        <layer id="seat01" texture="seats" align="middle">
+          <view angle="45" x="60" y="-56"/>
+          <view angle="135" x="1" y="-26" alpha="0" hm="true"/>
+          <view angle="225" col="2" y="-29" hm="true"/>
+          <view angle="315" col="1" x="-64" y="-60"/>
+        </layer>
+        <layer id="seat02" texture="seats" align="middle">
+          <view angle="45" y="-26"/>
+          <view angle="135" x="1" y="-26" alpha="0" hm="true"/>
+          <view angle="225" col="2" x="-62" y="2" hm="true"/>
+          <view angle="315" col="1" x="-2" y="-29"/>
+        </layer>
+        <layer id="arm" texture="arm">
+          <view angle="45" col="1" x="102" y="-24"/>
+          <view angle="135" x="82" y="62" hm="true"/>
+          <view angle="225" row="1" x="-95" y="63"/>
+          <view angle="315" col="1" row="1" x="-93" y="-25" hm="true"/>
+        </layer>
+        <layer id="cushion" texture="cushions">
+          <view angle="45" col="2" x="92" y="-49"/>
+          <view angle="135" x="71" y="21" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" x="24" y="-5" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

@@ -1,0 +1,27 @@
+<item.SpriteItem id="1536" name="Mesa de Vidro" desc="Inquebrável!" tags="table" icon="items/base/modern/icon_m_table_01_60s.png" price="55" minLevel="1" minLevelType="2" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.54,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="steeltable" source="items/base/modern/m_table_01_60s.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Table">
+      <box min="-0.49,0,-0.49" max="0.49,0.54,0.49"/>
+      <layers>
+        <layer id="table" texture="steeltable">
+          <view angle="45" y="29"/>
+          <view angle="135" y="29" hm="true"/>
+          <view angle="225" y="29"/>
+          <view angle="315" y="29" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

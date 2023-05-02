@@ -1,0 +1,149 @@
+<item.WidgetItem id="3982" name="Cofre de Alta Segurança" desc="Segurança máxima para sua fotuna" tags="rare,misc,wall" icon="items/base/modern/m_wall_bankvault_icon.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" widget="widgets/widget_portal.swf">
+  <volume>
+    <box min="-0.51,0,-0.99" max="0.48,2.1,2"/>
+  </volume>
+  <events>
+    <event id="close" script="scripts/item/close_gate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+  </events>
+  <actions>
+    <action id="Open" state="true" event="open"/>
+    <action id="Close" state="true" event="close"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Open" source="items/base/modern/m_wall_bankvault_open.png" cols="2" rows="1"/>
+    <texture id="Closed" source="items/base/modern/m_wall_bankvault_closed.png" cols="2" rows="1"/>
+    <texture id="Base" source="items/base/modern/m_wall_bankvault_base.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/modern/m_wall_bankvault_glow.png" cols="2" rows="1"/>
+    <texture id="Coins" source="items/base/modern/m_wall_bankvault_coins.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/consumables/magic/sndfx_transform.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" depthBias="-2">
+      <box min="-0.51,0,-0.99" max="0.48,2.1,2"/>
+      <layers>
+        <layer id="Base" texture="Base" x="40" y="90">
+          <view angle="45" x="-38" y="-70"/>
+          <view angle="135" x="25" y="-37" hm="true"/>
+          <view angle="225" col="1" x="-85" y="-15" alpha="0"/>
+          <view angle="315" col="1" x="-58" y="-47" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Open" texture="Open">
+          <view angle="45" col="1" x="75" y="-1"/>
+          <view angle="135" x="32" y="59"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="Closed" texture="Closed">
+          <view angle="45" col="1" x="21" y="-20"/>
+          <view angle="135" x="56" y="22"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="Coins01" texture="Coins">
+          <view angle="45" x="-21" y="-97"/>
+          <view angle="135" col="1" alpha="0"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="Coins02" texture="Coins">
+          <view angle="45" col="1" x="-21" y="-97"/>
+          <view angle="135" col="1" alpha="0"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="Coins03" texture="Coins">
+          <view angle="45" col="2" x="-21" y="-97"/>
+          <view angle="135" col="1" alpha="0"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Base"/>
+          <layerref id="Closed"/>
+        </frame>
+        <frame id="Open01">
+          <layerref id="Base"/>
+          <layerref id="Open"/>
+        </frame>
+        <frame id="Open02">
+          <layerref id="Base"/>
+          <layerref id="Open"/>
+          <layerref id="Coins01" a="0.8"/>
+        </frame>
+        <frame id="Open03">
+          <layerref id="Base"/>
+          <layerref id="Open"/>
+          <layerref id="Coins02" a="0.6"/>
+        </frame>
+        <frame id="Open04">
+          <layerref id="Base"/>
+          <layerref id="Open"/>
+          <layerref id="Coins03" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open">
+          <frameref id="Open01" duration="10"/>
+          <frameref id="Open02"/>
+          <frameref id="Open03"/>
+          <frameref id="Open04"/>
+          <frameref id="Open01" duration="12"/>
+          <frameref id="Open02"/>
+          <frameref id="Open03"/>
+          <frameref id="Open04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="Light" align="middle">
+          <view angle="45" x="10" y="-26"/>
+          <view angle="135" col="1" x="8" y="-18"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Light01" a="0"/>
+        </frame>
+        <frame id="Open01">
+          <layerref id="Light01" color="0xeae67b"/>
+        </frame>
+        <frame id="Open02">
+          <layerref id="Light01" color="0xeae67b" a="0.95"/>
+        </frame>
+        <frame id="Open03">
+          <layerref id="Light01" color="0xeae67b" a="0.9"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="Open01"/>
+          <frameref id="Open02"/>
+          <frameref id="Open03"/>
+          <frameref id="Open02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

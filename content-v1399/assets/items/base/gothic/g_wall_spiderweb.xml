@@ -1,0 +1,36 @@
+<item.SpriteItem id="2774" name="Teia de Aranha" desc="Que medo." tags="wall" icon="items/base/gothic/icon_g_wall_spiderweb.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="20" tokens="200">
+  <volume>
+    <box min="0,-0.32,-1.1" max="0.1,2.1,1.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="sconce" source="items/base/gothic/g_wall_spiderweb.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Sconce" depthBias="-1">
+      <box min="0,-0.32,-1.1" max="0.1,2.1,1.1"/>
+      <layers>
+        <layer id="sconce" texture="sconce">
+          <view angle="45" y="62"/>
+          <view angle="135" y="62" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

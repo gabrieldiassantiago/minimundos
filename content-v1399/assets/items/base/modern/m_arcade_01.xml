@@ -1,0 +1,145 @@
+<item.WidgetItem id="370" name="Máquina Arcade" desc="Para jogar os clássicos jogos Arcade." tags="appliance,widget" icon="items/base/modern/icon_m_arcade_01.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_arcade.swf" price="220" tokens="2200" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.5,0,-0.5" max="1.35,2.62,0.5"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Complete">
+      <eval>
+        <func type="range" id="Score" input="score"/>
+        <func type="relational" id="Game Name" input="name" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+    <action id="Ranking">
+      <eval>
+        <func type="range" id="Rank" input="rank"/>
+        <func type="relational" id="Game Name" input="name" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="control_xml_path" value="widgets/assets/arcade/control.mxml"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="arcade_art" value="oldArcade"/>
+    <entry key="arcade_mode" value="singleGame"/>
+    <entry key="widget_background_override" value="widget/GrafittiBG.jpg"/>
+    <entry key="show_advert" value="false"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="iframeWidget" value="true"/>
+  </data>
+  <navigate position="infront" sitRange="2.00" standRange="2.00" targetRange="2.00"/>
+  <textures>
+    <texture id="cabinet" source="items/base/modern/m_arcade_01.png" cols="2" rows="1"/>
+    <texture id="screen" source="items/base/modern/m_arcade_01_screen.png" cols="3" rows="1"/>
+    <texture id="panel" source="items/base/modern/m_arcade_panel.png" cols="2" rows="1"/>
+    <texture id="text" source="items/base/modern/m_arcade_text.png" cols="2" rows="1"/>
+    <texture id="backpanel" source="items/base/modern/m_arcade_panel_02.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_arcade_old.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Arcade" x="0.3">
+      <box min="-0.8,0,-0.5" max="1.05,2.62,0.5"/>
+      <layers>
+        <layer id="cabinet" texture="cabinet">
+          <view angle="45" x="16" y="46"/>
+          <view angle="135" x="-17" y="46" hm="true"/>
+          <view angle="225" col="1" x="-17" y="31"/>
+          <view angle="315" col="1" x="16" y="31" hm="true"/>
+        </layer>
+        <layer id="screen01" texture="screen">
+          <view angle="45" x="30" y="-62"/>
+          <view angle="135" x="-31" y="-62" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen02" texture="screen">
+          <view angle="45" col="1" x="30" y="-62"/>
+          <view angle="135" col="1" x="-31" y="-62" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="screen03" texture="screen">
+          <view angle="45" col="2" x="30" y="-62"/>
+          <view angle="135" col="2" x="-31" y="-62" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+        <layer id="panel" texture="panel">
+          <view angle="45" x="49" y="-37"/>
+          <view angle="135" col="1" x="-50" y="-37"/>
+          <view angle="225" row="1" x="-49" y="-91" alpha="0"/>
+          <view angle="315" col="1" row="1" x="48" y="-91" alpha="0"/>
+        </layer>
+        <layer id="text" texture="text">
+          <view angle="45" x="45" y="-144"/>
+          <view angle="135" col="1" x="-46" y="-144"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="Layer" texture="backpanel">
+          <view angle="45" alpha="0"/>
+          <view angle="135" col="1" alpha="0"/>
+          <view angle="225" x="-73" y="-91"/>
+          <view angle="315" col="1" x="74" y="-91"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="cabinet"/>
+          <layerref id="screen01"/>
+          <layerref id="panel"/>
+          <layerref id="text"/>
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="cabinet"/>
+          <layerref id="screen02"/>
+          <layerref id="panel"/>
+          <layerref id="text"/>
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="cabinet"/>
+          <layerref id="screen03"/>
+          <layerref id="panel"/>
+          <layerref id="text"/>
+          <layerref id="Layer"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="1">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.05" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="11"/>
+          <view angle="135" x="-10" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light" color="0xffccff"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,409 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/clothing/accessory/acc_661_ufo.png" cols="3" rows="2"/>
+    <texture id="sparkle" source="items/base/consumables/clothing/accessory/acc_661_ufo_halo_decal.png" cols="3" rows="2"/>
+    <texture id="halo" source="items/base/consumables/clothing/accessory/acc_661_ufo_halo.png" cols="1" rows="1"/>
+    <texture id="window_light" source="items/base/consumables/clothing/accessory/acc_661_ufo_lights.png" cols="3" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="ufo_01" texture="base">
+          <view angle="0" x="14" y="-94"/>
+          <view angle="45" x="10" y="-89"/>
+          <view angle="90" y="-87"/>
+          <view angle="135" x="-10" y="-89"/>
+          <view angle="180" x="-14" y="-94"/>
+          <view angle="225" x="-10" y="-99"/>
+          <view angle="270" y="-101"/>
+          <view angle="315" x="10" y="-99"/>
+        </layer>
+        <layer id="ufo_02" texture="base">
+          <view angle="0" col="1" x="14" y="-94"/>
+          <view angle="45" col="1" x="10" y="-89"/>
+          <view angle="90" col="1" y="-87"/>
+          <view angle="135" col="1" x="-10" y="-89"/>
+          <view angle="180" col="1" x="-14" y="-94"/>
+          <view angle="225" col="1" x="-10" y="-99"/>
+          <view angle="270" col="1" y="-101"/>
+          <view angle="315" col="1" x="10" y="-99"/>
+        </layer>
+        <layer id="ufo_03" texture="base">
+          <view angle="0" col="2" x="14" y="-94"/>
+          <view angle="45" col="2" x="10" y="-89"/>
+          <view angle="90" col="2" y="-87"/>
+          <view angle="135" col="2" x="-10" y="-89"/>
+          <view angle="180" col="2" x="-14" y="-94"/>
+          <view angle="225" col="2" x="-10" y="-99"/>
+          <view angle="270" col="2" y="-101"/>
+          <view angle="315" col="2" x="10" y="-99"/>
+        </layer>
+        <layer id="ufo_04" texture="base">
+          <view angle="0" row="1" x="14" y="-94"/>
+          <view angle="45" row="1" x="10" y="-89"/>
+          <view angle="90" row="1" y="-87"/>
+          <view angle="135" row="1" x="-10" y="-89"/>
+          <view angle="180" row="1" x="-14" y="-94"/>
+          <view angle="225" row="1" x="-10" y="-99"/>
+          <view angle="270" row="1" y="-101"/>
+          <view angle="315" row="1" x="10" y="-99"/>
+        </layer>
+        <layer id="ufo_05" texture="base">
+          <view angle="0" col="1" row="1" x="14" y="-94"/>
+          <view angle="45" col="1" row="1" x="10" y="-89"/>
+          <view angle="90" col="1" row="1" y="-87"/>
+          <view angle="135" col="1" row="1" x="-10" y="-89"/>
+          <view angle="180" col="1" row="1" x="-14" y="-94"/>
+          <view angle="225" col="1" row="1" x="-10" y="-99"/>
+          <view angle="270" col="1" row="1" y="-101"/>
+          <view angle="315" col="1" row="1" x="10" y="-99"/>
+        </layer>
+        <layer id="ufo_06" texture="base">
+          <view angle="0" col="2" row="1" x="14" y="-94"/>
+          <view angle="45" col="2" row="1" x="10" y="-89"/>
+          <view angle="90" col="2" row="1" y="-87"/>
+          <view angle="135" col="2" row="1" x="-10" y="-89"/>
+          <view angle="180" col="2" row="1" x="-14" y="-94"/>
+          <view angle="225" col="2" row="1" x="-10" y="-99"/>
+          <view angle="270" col="2" row="1" y="-101"/>
+          <view angle="315" col="2" row="1" x="10" y="-99"/>
+        </layer>
+        <layer id="halo" texture="halo">
+          <view angle="0" x="14" y="113"/>
+          <view angle="45" x="10" y="118"/>
+          <view angle="90" y="118"/>
+          <view angle="135" x="-10" y="118"/>
+          <view angle="180" x="-14" y="113"/>
+          <view angle="225" x="-10" y="108"/>
+          <view angle="270" y="106"/>
+          <view angle="315" x="10" y="108"/>
+        </layer>
+        <layer id="halo_decal_01" texture="sparkle">
+          <view angle="0" x="18" y="-39"/>
+          <view angle="45" x="14" y="-34"/>
+          <view angle="90" x="4" y="-32"/>
+          <view angle="135" x="-5" y="-34"/>
+          <view angle="180" x="-10" y="-39"/>
+          <view angle="225" x="-5" y="-42"/>
+          <view angle="270" x="4" y="-46"/>
+          <view angle="315" x="14" y="-42"/>
+        </layer>
+        <layer id="halo_decal_02" texture="sparkle">
+          <view angle="0" col="1" x="18" y="-39"/>
+          <view angle="45" col="1" x="14" y="-34"/>
+          <view angle="90" col="1" x="4" y="-32"/>
+          <view angle="135" col="1" x="-5" y="-34"/>
+          <view angle="180" col="1" x="-10" y="-39"/>
+          <view angle="225" col="1" x="-5" y="-42"/>
+          <view angle="270" col="1" x="4" y="-46"/>
+          <view angle="315" col="1" x="14" y="-42"/>
+        </layer>
+        <layer id="halo_decal_03" texture="sparkle">
+          <view angle="0" col="2" x="18" y="-39"/>
+          <view angle="45" col="2" x="14" y="-34"/>
+          <view angle="90" col="2" x="4" y="-32"/>
+          <view angle="135" col="2" x="-5" y="-34"/>
+          <view angle="180" col="2" x="-10" y="-39"/>
+          <view angle="225" col="2" x="-5" y="-42"/>
+          <view angle="270" col="2" x="4" y="-46"/>
+          <view angle="315" col="2" x="14" y="-42"/>
+        </layer>
+        <layer id="halo_decal_04" texture="sparkle">
+          <view angle="0" row="1" x="18" y="-39"/>
+          <view angle="45" row="1" x="14" y="-34"/>
+          <view angle="90" row="1" x="4" y="-32"/>
+          <view angle="135" row="1" x="-5" y="-34"/>
+          <view angle="180" row="1" x="-10" y="-39"/>
+          <view angle="225" row="1" x="-5" y="-42"/>
+          <view angle="270" row="1" x="4" y="-46"/>
+          <view angle="315" row="1" x="14" y="-42"/>
+        </layer>
+        <layer id="halo_decal_05" texture="sparkle">
+          <view angle="0" col="1" row="1" x="18" y="-39"/>
+          <view angle="45" col="1" row="1" x="14" y="-34"/>
+          <view angle="90" col="1" row="1" x="4" y="-32"/>
+          <view angle="135" col="1" row="1" x="-5" y="-34"/>
+          <view angle="180" col="1" row="1" x="-10" y="-39"/>
+          <view angle="225" col="1" row="1" x="-5" y="-42"/>
+          <view angle="270" col="1" row="1" x="4" y="-46"/>
+          <view angle="315" col="1" row="1" x="14" y="-42"/>
+        </layer>
+        <layer id="halo_decal_06" texture="sparkle">
+          <view angle="0" col="2" row="1" x="18" y="-39"/>
+          <view angle="45" col="2" row="1" x="14" y="-34"/>
+          <view angle="90" col="2" row="1" x="4" y="-32"/>
+          <view angle="135" col="2" row="1" x="-5" y="-34"/>
+          <view angle="180" col="2" row="1" x="-10" y="-39"/>
+          <view angle="225" col="2" row="1" x="-5" y="-42"/>
+          <view angle="270" col="2" row="1" x="4" y="-46"/>
+          <view angle="315" col="2" row="1" x="14" y="-42"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle01">
+          <layerref id="halo"/>
+          <layerref id="ufo_01"/>
+          <layerref id="halo_decal_01"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="halo"/>
+          <layerref id="ufo_02"/>
+          <layerref id="halo_decal_01"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="halo"/>
+          <layerref id="ufo_03"/>
+          <layerref id="halo_decal_02"/>
+        </frame>
+        <frame id="Idle04">
+          <layerref id="halo"/>
+          <layerref id="ufo_04"/>
+          <layerref id="halo_decal_02"/>
+        </frame>
+        <frame id="Idle05">
+          <layerref id="halo"/>
+          <layerref id="ufo_05"/>
+          <layerref id="halo_decal_03"/>
+        </frame>
+        <frame id="Idle06">
+          <layerref id="halo"/>
+          <layerref id="ufo_06"/>
+          <layerref id="halo_decal_03"/>
+        </frame>
+        <frame id="Idle07">
+          <layerref id="halo"/>
+          <layerref id="ufo_01"/>
+          <layerref id="halo_decal_04"/>
+        </frame>
+        <frame id="Idle08">
+          <layerref id="halo"/>
+          <layerref id="ufo_02"/>
+          <layerref id="halo_decal_04"/>
+        </frame>
+        <frame id="Idle09">
+          <layerref id="halo"/>
+          <layerref id="ufo_03"/>
+          <layerref id="halo_decal_05"/>
+        </frame>
+        <frame id="Idle10">
+          <layerref id="halo"/>
+          <layerref id="ufo_04"/>
+          <layerref id="halo_decal_05"/>
+        </frame>
+        <frame id="Idle11">
+          <layerref id="halo"/>
+          <layerref id="ufo_05"/>
+          <layerref id="halo_decal_06"/>
+        </frame>
+        <frame id="Idle12">
+          <layerref id="halo"/>
+          <layerref id="ufo_06"/>
+          <layerref id="halo_decal_06"/>
+        </frame>
+        <frame id="sit01">
+          <layerref id="ufo_01"/>
+        </frame>
+        <frame id="sit02">
+          <layerref id="ufo_02"/>
+        </frame>
+        <frame id="sit03">
+          <layerref id="ufo_03"/>
+        </frame>
+        <frame id="sit04">
+          <layerref id="ufo_04"/>
+        </frame>
+        <frame id="sit05">
+          <layerref id="ufo_05"/>
+        </frame>
+        <frame id="sit06">
+          <layerref id="ufo_06"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle05"/>
+          <frameref id="Idle06"/>
+          <frameref id="Idle07"/>
+          <frameref id="Idle08"/>
+          <frameref id="Idle09"/>
+          <frameref id="Idle10"/>
+          <frameref id="Idle11"/>
+          <frameref id="Idle12"/>
+        </animation>
+        <animation id="Walk" framerate="16">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle05"/>
+          <frameref id="Idle06"/>
+          <frameref id="Idle07"/>
+          <frameref id="Idle08"/>
+          <frameref id="Idle09"/>
+          <frameref id="Idle10"/>
+          <frameref id="Idle11"/>
+          <frameref id="Idle12"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit01"/>
+          <frameref id="sit02"/>
+          <frameref id="sit03"/>
+          <frameref id="sit04"/>
+          <frameref id="sit05"/>
+          <frameref id="sit06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="window_light" align="middle">
+          <view angle="0" x="17" y="-124"/>
+          <view angle="45" x="11" y="-119"/>
+          <view angle="90" x="3" y="-116"/>
+          <view angle="135" x="-9" y="-119"/>
+          <view angle="180" x="-12" y="-127"/>
+          <view angle="225" x="-6" y="-131"/>
+          <view angle="270" x="4" y="-132"/>
+          <view angle="315" x="11" y="-130"/>
+        </layer>
+        <layer id="Light02" texture="window_light" align="middle">
+          <view angle="0" col="1" x="17" y="-124"/>
+          <view angle="45" col="1" x="11" y="-119"/>
+          <view angle="90" col="1" x="3" y="-116"/>
+          <view angle="135" col="1" x="-9" y="-119"/>
+          <view angle="180" col="1" x="-12" y="-127"/>
+          <view angle="225" col="1" x="-6" y="-131"/>
+          <view angle="270" col="1" x="4" y="-132"/>
+          <view angle="315" col="1" x="11" y="-130"/>
+        </layer>
+        <layer id="Light03" texture="window_light" align="middle">
+          <view angle="0" col="2" x="17" y="-124"/>
+          <view angle="45" col="2" x="11" y="-119"/>
+          <view angle="90" col="2" x="3" y="-116"/>
+          <view angle="135" col="2" x="-9" y="-119"/>
+          <view angle="180" col="2" x="-12" y="-127"/>
+          <view angle="225" col="2" x="-6" y="-131"/>
+          <view angle="270" col="2" x="4" y="-132"/>
+          <view angle="315" col="2" x="11" y="-130"/>
+        </layer>
+        <layer id="Light04" texture="window_light" align="middle">
+          <view angle="0" row="1" x="17" y="-124"/>
+          <view angle="45" row="1" x="11" y="-119"/>
+          <view angle="90" row="1" x="3" y="-116"/>
+          <view angle="135" row="1" x="-9" y="-119"/>
+          <view angle="180" row="1" x="-12" y="-127"/>
+          <view angle="225" row="1" x="-6" y="-131"/>
+          <view angle="270" row="1" x="4" y="-132"/>
+          <view angle="315" row="1" x="11" y="-130"/>
+        </layer>
+        <layer id="Light05" texture="window_light" align="middle">
+          <view angle="0" col="1" row="1" x="17" y="-124"/>
+          <view angle="45" col="1" row="1" x="11" y="-119"/>
+          <view angle="90" col="1" row="1" x="3" y="-116"/>
+          <view angle="135" col="1" row="1" x="-9" y="-119"/>
+          <view angle="180" col="1" row="1" x="-12" y="-127"/>
+          <view angle="225" col="1" row="1" x="-6" y="-131"/>
+          <view angle="270" col="1" row="1" x="4" y="-132"/>
+          <view angle="315" col="1" row="1" x="11" y="-130"/>
+        </layer>
+        <layer id="Light06" texture="window_light" align="middle">
+          <view angle="0" col="2" row="1" x="17" y="-124"/>
+          <view angle="45" col="2" row="1" x="11" y="-119"/>
+          <view angle="90" col="2" row="1" x="3" y="-116"/>
+          <view angle="135" col="2" row="1" x="-9" y="-119"/>
+          <view angle="180" col="2" row="1" x="-12" y="-127"/>
+          <view angle="225" col="2" row="1" x="-6" y="-131"/>
+          <view angle="270" col="2" row="1" x="4" y="-132"/>
+          <view angle="315" col="2" row="1" x="11" y="-130"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light01" color="0xcff7f7"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light02" color="0xcff7f7"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Light03" color="0xcff7f7"/>
+        </frame>
+        <frame id="On04">
+          <layerref id="Light04" color="0xcff7f7"/>
+        </frame>
+        <frame id="On05">
+          <layerref id="Light05" color="0xcff7f7"/>
+        </frame>
+        <frame id="On06">
+          <layerref id="Light06" color="0xcff7f7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+          <frameref id="On05"/>
+          <frameref id="On06"/>
+        </animation>
+        <animation id="Walk" framerate="16">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+          <frameref id="On05"/>
+          <frameref id="On06"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+          <frameref id="On05"/>
+          <frameref id="On06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="3" y="-13" hm="true"/>
+          <view angle="45" x="3" y="-12"/>
+          <view angle="90" y="-12"/>
+          <view angle="135" x="-1" y="-12"/>
+          <view angle="180" x="-3" y="-13"/>
+          <view angle="225" x="-1" y="-13"/>
+          <view angle="270" y="-15"/>
+          <view angle="315" x="3" y="-13" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xcff7f7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Walk" framerate="16">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

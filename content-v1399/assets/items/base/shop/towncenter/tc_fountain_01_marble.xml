@@ -1,0 +1,100 @@
+<item.SpriteItem id="3162" name="Fonte de Mármore Praça Central" desc="Uma verdadeira fonte grega." tags="admin" icon="items/base/shop/towncenter/icon_a_fountain_01_marble.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,water,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="1.49,1.8,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="water" source="items/base/shop/towncenter/tc_fountain_01_marble_water.png" cols="3" rows="1"/>
+    <texture id="fountain" source="items/base/shop/towncenter/tc_fountain_01_marble.png" cols="1" rows="1"/>
+    <texture id="water_decal" source="items/base/shop/towncenter/tc_fountain_01_marble_decal.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" x="0.5" z="0.5">
+      <box min="-0.99,0,-0.99" max="0.99,1.8,0.99"/>
+      <layers>
+        <layer id="fountain" texture="fountain" y="15">
+          <view angle="45" y="37"/>
+          <view angle="135" y="37" hm="true"/>
+          <view angle="225" y="37"/>
+          <view angle="315" y="37" hm="true"/>
+        </layer>
+        <layer id="water01" texture="water" y="15">
+          <view angle="45" y="37"/>
+          <view angle="135" y="37" hm="true"/>
+          <view angle="225" y="37"/>
+          <view angle="315" y="37" hm="true"/>
+        </layer>
+        <layer id="water02" texture="water" y="15">
+          <view angle="45" col="1" y="37"/>
+          <view angle="135" col="1" y="37" hm="true"/>
+          <view angle="225" col="1" y="37"/>
+          <view angle="315" col="1" y="37" hm="true"/>
+        </layer>
+        <layer id="water03" texture="water" y="15">
+          <view angle="45" col="2" y="37"/>
+          <view angle="135" col="2" y="37" hm="true"/>
+          <view angle="225" col="2" y="37"/>
+          <view angle="315" col="2" y="37" hm="true"/>
+        </layer>
+        <layer id="water_decal_01" texture="water_decal" y="15">
+          <view angle="45" y="37"/>
+          <view angle="135" y="37" hm="true"/>
+          <view angle="225" y="37"/>
+          <view angle="315" y="37" hm="true"/>
+        </layer>
+        <layer id="water_decal_02" texture="water_decal" y="15">
+          <view angle="45" col="1" y="37"/>
+          <view angle="135" col="1" y="37" hm="true"/>
+          <view angle="225" col="1" y="37"/>
+          <view angle="315" col="1" y="37" hm="true"/>
+        </layer>
+        <layer id="water_decal_03" texture="water_decal" y="15">
+          <view angle="45" col="2" y="37"/>
+          <view angle="135" col="2" y="37" hm="true"/>
+          <view angle="225" col="2" y="37"/>
+          <view angle="315" col="2" y="37" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="on01">
+          <layerref id="fountain"/>
+          <layerref id="water01"/>
+          <layerref id="water_decal_01"/>
+        </frame>
+        <frame id="on02">
+          <layerref id="fountain"/>
+          <layerref id="water02"/>
+          <layerref id="water_decal_02"/>
+        </frame>
+        <frame id="on03">
+          <layerref id="fountain"/>
+          <layerref id="water03"/>
+          <layerref id="water_decal_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="2">
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on03"/>
+          <frameref id="on02"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on03"/>
+          <frameref id="on02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,146 @@
+<item.SpriteItem id="0" name="Whirlwind Staff Projectile" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="proj_generic" source="items/base/consumables/magic/proj_54_wstaff.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_halo_spread.png" cols="1" rows="1"/>
+    <texture id="leaves" source="items/base/consumables/magic/proj_54_wstaff_leaves.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="laser" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+      <layers>
+        <layer id="Trail 01" texture="proj_generic" y="80">
+          <view/>
+          <view angle="315" hm="true"/>
+          <view angle="0" hm="true"/>
+          <view angle="45" hm="true"/>
+        </layer>
+        <layer id="Trail 02" texture="proj_generic" y="80">
+          <view col="1"/>
+          <view angle="315" col="1" hm="true"/>
+          <view angle="0" col="1" hm="true"/>
+          <view angle="45" col="1" hm="true"/>
+        </layer>
+        <layer id="Trail 03" texture="proj_generic" y="80">
+          <view col="2"/>
+          <view angle="315" col="2" hm="true"/>
+          <view angle="0" col="2" hm="true"/>
+          <view angle="45" col="2" hm="true"/>
+        </layer>
+        <layer id="Trail 01_m" texture="proj_generic" y="80">
+          <view/>
+          <view angle="315" hm="true"/>
+          <view angle="0" hm="true"/>
+          <view angle="45" hm="true"/>
+        </layer>
+        <layer id="Trail 02_m" texture="proj_generic" y="80">
+          <view col="1"/>
+          <view angle="315" col="1" hm="true"/>
+          <view angle="0" col="1" hm="true"/>
+          <view angle="45" col="1" hm="true"/>
+        </layer>
+        <layer id="Trail 03_m" texture="proj_generic" y="80">
+          <view col="2"/>
+          <view angle="315" col="2" hm="true"/>
+          <view angle="0" col="2" hm="true"/>
+          <view angle="45" col="2" hm="true"/>
+        </layer>
+        <layer id="Leaves 01" texture="leaves" y="80">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Trail 01" color="0xb7ffff"/>
+          <layerref id="Leaves 01" x="-30" y="-40"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Trail 02" color="0xb7ffff"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Trail 03" color="0xb7ffff"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Trail 01" color="0xb7ffff"/>
+          <layerref id="Leaves 01" x="36" y="-70"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Trail 02" color="0xb7ffff"/>
+          <layerref id="Leaves 01" x="-40" y="-65"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Trail 03" color="0xb7ffff"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="01">
+            <sample id="laser"/>
+          </frameref>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="-0.05" s="2.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x5beaff"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x5beaff" a="0.95"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="-0.2" s="1.6" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x47e4a1" a="0.25"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

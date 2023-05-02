@@ -1,0 +1,112 @@
+<item.SpriteItem id="6713" name="Telefone de Gatinho Fofo" desc="Um smartphone com capa de gatinho" tags="rare,hand,nopvp,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_786_icon_catphone.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.27,0,-0.27" max="0.27,0.51,0.27"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+15,health+15"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Phone" source="items/base/consumables/clothing/accessory/acc_786_item_catphone.png" cols="4" rows="1"/>
+    <texture id="Stand" source="items/base/consumables/clothing/accessory/acc_460_item_phone_stand.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="FruitPhoneGen1">
+      <box min="-0.27,0,-0.27" max="0.27,0.51,0.27"/>
+      <layers>
+        <layer id="Phone" texture="Phone">
+          <view angle="45" col="1" y="9"/>
+          <view angle="135" col="1" y="9" hm="true"/>
+          <view angle="225" y="9"/>
+          <view angle="315" y="9" hm="true"/>
+        </layer>
+        <layer id="Screen02" texture="Phone">
+          <view angle="45" col="2" y="9"/>
+          <view angle="135" col="2" y="9" hm="true"/>
+          <view angle="225" col="1" x="-5" y="6" alpha="0"/>
+          <view angle="315" col="1" x="5" y="6" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Screen03" texture="Phone">
+          <view angle="45" col="3" y="9"/>
+          <view angle="135" col="3" y="9" hm="true"/>
+          <view angle="225" col="1" x="-5" y="6" alpha="0"/>
+          <view angle="315" col="1" x="5" y="6" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Stand" texture="Stand">
+          <view angle="45" y="11"/>
+          <view angle="135" y="11" hm="true"/>
+          <view angle="225" col="1" y="11"/>
+          <view angle="315" col="1" y="11" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Phone Off">
+          <layerref id="Stand"/>
+          <layerref id="Phone"/>
+          <layerref id="Screen02"/>
+        </frame>
+        <frame id="Phone 01">
+          <layerref id="Stand"/>
+          <layerref id="Phone"/>
+        </frame>
+        <frame id="Phone 02">
+          <layerref id="Stand"/>
+          <layerref id="Phone"/>
+          <layerref id="Screen02"/>
+        </frame>
+        <frame id="Phone 03">
+          <layerref id="Stand"/>
+          <layerref id="Phone"/>
+          <layerref id="Screen03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1">
+          <frameref id="Phone 01" duration="10"/>
+          <frameref id="Phone 02" duration="10"/>
+          <frameref id="Phone 03" duration="10"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light On" texture="Light" align="middle">
+          <view angle="45" x="12" y="-19"/>
+          <view angle="135" x="-10" y="-14"/>
+          <view angle="225" x="-9" y="-25"/>
+          <view angle="315" x="9" y="-25"/>
+        </layer>
+        <layer id="Light Off" texture="Light" align="middle">
+          <view angle="45" x="12" y="-19"/>
+          <view angle="135" x="-10" y="-14"/>
+          <view angle="225" x="-9" y="-25"/>
+          <view angle="315" x="9" y="-25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Light Off" color="0x80f177"/>
+        </frame>
+        <frame id="On">
+          <layerref id="Light On" color="0x57e3e4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1">
+          <frameref id="Off" duration="10"/>
+          <frameref id="On" duration="10"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

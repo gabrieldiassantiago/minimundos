@@ -1,0 +1,30 @@
+<item.SpriteItem name="Black Stage" desc="A brown colored rug" tags="admin,floor" icon="items/base/urban/icon_u_blackstage.png" price="45" tokens="450" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" id="4318">
+  <volume>
+    <box min="-0.96,-0.001,-0.96" max="0.96,0,0.96"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="rug" source="items/base/urban/u_blackstage.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="rug" layer="surface">
+      <box min="-0.96,-0.001,-0.96" max="0.96,0,0.96"/>
+      <layers>
+        <layer id="rug" texture="rug">
+          <view angle="45" y="66"/>
+          <view angle="135" y="66" hm="true"/>
+          <view angle="225" y="66"/>
+          <view angle="315" y="66" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

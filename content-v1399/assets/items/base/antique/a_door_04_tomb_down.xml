@@ -1,0 +1,100 @@
+<item.WidgetItem desc="Uma entrada para a tumba" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/antique/icon_a_door_04_tomb_down.png" id="1024" name="Entrada da Tumba" tags="door,widget" widget="widgets/widget_portal.swf" price="130" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="1.49,0.5,1.49" min="-0.49,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+  </events>
+  <actions>
+    <action event="navigate" id="Navigate" trigger="false"/>
+    <action event="animate(Open)" id="Open" state="true"/>
+    <action event="animate(Closed)" id="Close" state="true"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="portalType" value="door"/>
+    <entry key="maxLinkedSpaces" value="1"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <navigate sitRange="1.00" standRange="1.00" targetRange="1.00"/>
+  <textures>
+    <texture cols="1" id="Tomb Entrance" rows="1" source="items/base/antique/a_door_04_tomb_down.png"/>
+    <texture cols="3" id="Texture" rows="1" source="items/base/antique/a_door_04_tomb_down_2.png"/>
+    <texture cols="2" id="Texture01" rows="1" source="items/base/antique/a_door_04_tomb_down_3.png"/>
+  </textures>
+  <nodes>
+    <node id="door" x="0.5" z="0.5">
+      <box max="0.99,0.5,0.99" min="-0.99,0,-0.99"/>
+      <layers>
+        <layer id="Lid Front" texture="Texture">
+          <view angle="45" col="2" x="-36" y="18"/>
+          <view angle="135" col="2" hm="true" x="35" y="19"/>
+          <view alpha="0" angle="225" col="2" y="60"/>
+          <view alpha="0" angle="315" col="2" hm="true" y="60"/>
+        </layer>
+        <layer id="Open Front" texture="Tomb Entrance">
+          <view angle="45" x="-2" y="60"/>
+          <view angle="135" hm="true" y="61"/>
+          <view angle="225" x="-1" y="60"/>
+          <view angle="315" hm="true" x="1" y="60"/>
+        </layer>
+        <layer id="Open Back" texture="Texture01">
+          <view alpha="0" angle="45" y="60"/>
+          <view alpha="0" angle="135" hm="true" y="60"/>
+          <view angle="225" x="-19" y="7"/>
+          <view angle="315" hm="true" x="21" y="6"/>
+        </layer>
+        <layer id="Closed Front" texture="Texture">
+          <view angle="45" y="43"/>
+          <view angle="135" hm="true" y="44"/>
+          <view angle="225" x="1" y="43"/>
+          <view angle="315" hm="true" y="43"/>
+        </layer>
+        <layer id="Closed Back" texture="Texture01">
+          <view alpha="0" angle="45" col="1" y="60"/>
+          <view alpha="0" angle="135" col="1" hm="true" y="60"/>
+          <view angle="225" col="1" x="33" y="30"/>
+          <view angle="315" col="1" hm="true" x="-31" y="31"/>
+        </layer>
+        <layer id="Lid Back" texture="Texture">
+          <view alpha="0" angle="45" col="2" y="60"/>
+          <view alpha="0" angle="135" col="2" hm="true" y="60"/>
+          <view angle="225" col="1" x="35" y="54"/>
+          <view angle="315" col="1" hm="true" x="-33" y="53"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Open">
+          <layerref id="Lid Front"/>
+          <layerref id="Open Front"/>
+          <layerref id="Open Back"/>
+          <layerref id="Lid Back"/>
+        </frame>
+        <frame id="Closed">
+          <layerref id="Open Front"/>
+          <layerref id="Open Back"/>
+          <layerref id="Closed Front"/>
+          <layerref id="Closed Back"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="1" id="Open" loop="false">
+          <frameref id="Open"/>
+        </animation>
+        <animation framerate="1" id="Closed" loop="false">
+          <frameref id="Closed"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

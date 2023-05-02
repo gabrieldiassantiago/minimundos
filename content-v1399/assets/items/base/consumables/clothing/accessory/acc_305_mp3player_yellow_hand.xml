@@ -1,0 +1,126 @@
+<item.SpriteItem id="0" name="Mp3 Player" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="MP3" source="items/base/consumables/clothing/accessory/acc_305_mp3player_yellow_hand.png" cols="4" rows="2"/>
+    <texture id="screens" source="items/base/consumables/clothing/accessory/acc_13_hand_screen.png" cols="3" rows="3"/>
+    <texture id="Cord" source="items/base/consumables/clothing/accessory/acc_13_hand_cord.png" cols="7" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="MP3" texture="MP3">
+          <view angle="0" col="2" row="1" x="-40" y="50"/>
+          <view angle="45" col="3" row="1" x="-31" y="40"/>
+          <view angle="90" x="-7" y="31"/>
+          <view angle="135" col="1" x="24" y="35"/>
+          <view angle="180" col="2" x="42" y="49"/>
+          <view angle="225" col="3" x="31" y="64"/>
+          <view angle="270" row="1" x="6" y="66"/>
+          <view angle="315" col="1" row="1" x="-25" y="66"/>
+        </layer>
+        <layer id="screen1" texture="screens">
+          <view angle="0" col="2" y="9" alpha="0" hm="true"/>
+          <view angle="45" col="1" x="1" y="10" alpha="0" hm="true"/>
+          <view angle="90" x="1" y="11" alpha="0"/>
+          <view angle="135" row="2" x="22" y="32"/>
+          <view angle="180" x="40" y="47"/>
+          <view angle="225" row="1" x="30" y="61"/>
+          <view angle="270" col="4" x="3" y="-8" alpha="0" hm="true"/>
+          <view angle="315" col="3" x="4" y="7" alpha="0" hm="true"/>
+        </layer>
+        <layer id="screen2" texture="screens">
+          <view angle="0" col="2" y="9" alpha="0" hm="true"/>
+          <view angle="45" col="1" x="1" y="10" alpha="0" hm="true"/>
+          <view angle="90" x="1" y="11" alpha="0"/>
+          <view angle="135" col="1" row="2" x="22" y="32"/>
+          <view angle="180" col="1" x="40" y="47"/>
+          <view angle="225" col="1" row="1" x="30" y="61"/>
+          <view angle="270" col="4" x="3" y="-8" alpha="0" hm="true"/>
+          <view angle="315" col="3" x="4" y="7" alpha="0" hm="true"/>
+        </layer>
+        <layer id="screen3" texture="screens">
+          <view angle="0" col="2" y="9" alpha="0" hm="true"/>
+          <view angle="45" col="1" x="1" y="10" alpha="0" hm="true"/>
+          <view angle="90" x="1" y="11" alpha="0"/>
+          <view angle="135" col="2" row="2" x="22" y="32"/>
+          <view angle="180" col="2" x="40" y="47"/>
+          <view angle="225" col="2" row="1" x="30" y="61"/>
+          <view angle="270" col="4" x="3" y="-8" alpha="0" hm="true"/>
+          <view angle="315" col="3" x="4" y="7" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Cord" texture="Cord">
+          <view angle="0" x="-30" y="46"/>
+          <view angle="45" col="1" x="-17" y="34"/>
+          <view angle="90" col="2" x="5" y="29"/>
+          <view angle="135" col="3" x="24" y="38"/>
+          <view angle="180" col="4" x="35" y="56"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="5" x="-3" y="69"/>
+          <view angle="315" col="6" x="-14" y="67"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Screen1">
+          <layerref id="MP3"/>
+          <layerref id="screen1"/>
+          <layerref id="Cord"/>
+        </frame>
+        <frame id="Screen2">
+          <layerref id="MP3"/>
+          <layerref id="screen2"/>
+          <layerref id="Cord"/>
+        </frame>
+        <frame id="Screen3">
+          <layerref id="MP3"/>
+          <layerref id="screen3"/>
+          <layerref id="Cord"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Screen3"/>
+          <frameref id="Screen1"/>
+          <frameref id="Screen3"/>
+          <frameref id="Screen2"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="0.4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="Light">
+          <view angle="0" x="-100" y="150" hm="true"/>
+          <view angle="45" x="-61" y="106"/>
+          <view angle="90" y="90"/>
+          <view angle="135" x="54" y="95" hm="true"/>
+          <view angle="180" x="120" y="140"/>
+          <view angle="225" x="82" y="166"/>
+          <view angle="270" x="10" y="166"/>
+          <view angle="315" x="-57" y="176" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Off"/>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

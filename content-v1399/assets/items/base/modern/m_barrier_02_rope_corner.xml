@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="1428" name="Curva de Cordão para Organizar Filas" desc="As filas fazem curvas." tags="misc" icon="items/base/modern/icon_m_barrier_02_rope_corner.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="30" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.1,1.68,0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="rope" source="items/base/modern/m_barrier_02_rope.png" cols="2" rows="1"/>
+    <texture id="pole" source="items/base/modern/m_barrier_02_rope_pole.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="barrier">
+      <box min="-0.5,0,-0.5" max="0.1,1.68,0.1"/>
+      <layers>
+        <layer id="pole in front (or -x)" texture="pole">
+          <view angle="45" x="-32" y="-9" hm="true"/>
+          <view angle="135" x="31" y="-9" hm="true"/>
+          <view angle="225" x="32" y="-9"/>
+          <view angle="315" x="-32" y="23"/>
+        </layer>
+        <layer id="pole corner" texture="pole">
+          <view angle="45" y="8" hm="true"/>
+          <view angle="135" y="8" hm="true"/>
+          <view angle="225" y="8"/>
+          <view angle="315" y="8"/>
+        </layer>
+        <layer id="pole behind (or -z)" texture="pole">
+          <view angle="45" x="-33" y="23" hm="true"/>
+          <view angle="135" x="-32" y="-9" hm="true"/>
+          <view angle="225" x="33" y="23"/>
+          <view angle="315" x="33" y="23"/>
+        </layer>
+        <layer id="rope z" texture="rope">
+          <view angle="45" col="1" x="-16" y="14" hm="true"/>
+          <view angle="135" col="1" x="16" y="14"/>
+          <view angle="225" col="1" x="16" y="30" hm="true"/>
+          <view angle="315" col="1" x="-16" y="30"/>
+        </layer>
+        <layer id="rope x" texture="rope">
+          <view angle="45" col="1" x="-14" y="30"/>
+          <view angle="135" col="1" x="-16" y="14" hm="true"/>
+          <view angle="225" col="1" x="16" y="14"/>
+          <view angle="315" col="1" x="16" y="30" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

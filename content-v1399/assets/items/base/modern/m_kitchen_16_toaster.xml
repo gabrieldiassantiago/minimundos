@@ -1,0 +1,203 @@
+<item.SpriteItem id="1586" name="Torradeira de Inox" desc="Torradas fresquinhas." tags="misc" icon="items/base/modern/icon_m_kitchen_16_toaster.png" tokens="300" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none" price="30" minLevel="1" minLevelType="1" minCPLevel="1">
+  <volume>
+    <box min="-0.22,0,-0.22" max="0.22,0.4,0.22"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="lamp_standard" source="items/base/modern/m_kitchen_16_toaster_main.png" cols="4" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/modern/m_kitchen_16_toaster_intense.png" cols="1" rows="1"/>
+    <texture id="pusher" source="items/base/modern/m_kitchen_16_toaster_push.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.22,0,-0.22" max="0.22,0.4,0.22"/>
+      <layers>
+        <layer id="main" texture="lamp_standard">
+          <view angle="45" x="-1" y="22"/>
+          <view angle="135" y="22" hm="true"/>
+          <view angle="225" x="-1" y="22"/>
+          <view angle="315" y="22" hm="true"/>
+        </layer>
+        <layer id="fresh" texture="lamp_standard">
+          <view angle="45" col="1" x="1" y="6"/>
+          <view angle="135" col="1" x="-2" y="6" hm="true"/>
+          <view angle="225" col="1" x="1" y="6"/>
+          <view angle="315" col="1" x="-2" y="6" hm="true"/>
+        </layer>
+        <layer id="cooking" texture="lamp_standard">
+          <view angle="45" col="2" x="-1" y="6"/>
+          <view angle="135" col="2" y="6" hm="true"/>
+          <view angle="225" col="2" x="-1" y="6"/>
+          <view angle="315" col="2" y="6" hm="true"/>
+        </layer>
+        <layer id="cooked" texture="lamp_standard">
+          <view angle="45" col="3" y="6"/>
+          <view angle="135" col="3" x="-1" y="6" hm="true"/>
+          <view angle="225" col="3" y="6"/>
+          <view angle="315" col="3" x="-1" y="6" hm="true"/>
+        </layer>
+        <layer id="Flare diffuse" texture="Flare Diffuse">
+          <view y="15"/>
+        </layer>
+        <layer id="push_up" texture="pusher">
+          <view angle="45" x="14" y="6"/>
+          <view angle="135" x="-15" y="6" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="push_down" texture="pusher">
+          <view angle="45" col="1" x="14" y="6"/>
+          <view angle="135" col="1" x="-15" y="6" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="main"/>
+          <layerref id="push_up"/>
+        </frame>
+        <frame id="Fresh">
+          <layerref id="main"/>
+          <layerref id="fresh"/>
+          <layerref id="push_up"/>
+        </frame>
+        <frame id="Fresh50">
+          <layerref id="main"/>
+          <layerref id="fresh" a="0.5"/>
+          <layerref id="cooking" a="0.5"/>
+          <layerref id="push_up"/>
+        </frame>
+        <frame id="Cooking">
+          <layerref id="main"/>
+          <layerref id="cooking"/>
+          <layerref id="push_down"/>
+          <layerref id="Flare diffuse" color="0xeb7f4d" a="0.4" blend="lighten"/>
+        </frame>
+        <frame id="Cooking50">
+          <layerref id="main"/>
+          <layerref id="cooking" a="0.5"/>
+          <layerref id="cooked" a="0.5"/>
+          <layerref id="push_down"/>
+          <layerref id="Flare diffuse" color="0xeb7f4d" a="0.2" blend="lighten"/>
+        </frame>
+        <frame id="Cooked">
+          <layerref id="main"/>
+          <layerref id="cooked"/>
+          <layerref id="push_up"/>
+        </frame>
+        <frame id="Cooked75">
+          <layerref id="main"/>
+          <layerref id="cooked" a="0.75"/>
+          <layerref id="push_up"/>
+        </frame>
+        <frame id="Cooked50">
+          <layerref id="main"/>
+          <layerref id="cooked" a="0.5"/>
+          <layerref id="push_up"/>
+        </frame>
+        <frame id="Cooked25">
+          <layerref id="main"/>
+          <layerref id="cooked" a="0.25"/>
+          <layerref id="push_up"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On" framerate="2">
+          <frameref id="Off" duration="2"/>
+          <frameref id="Fresh" duration="4"/>
+          <frameref id="Fresh50"/>
+          <frameref id="Cooking" duration="12"/>
+          <frameref id="Cooking50"/>
+          <frameref id="Cooked" duration="8"/>
+          <frameref id="Cooked75"/>
+          <frameref id="Cooked50"/>
+          <frameref id="Cooked25"/>
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.0313" s="1.3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xe5a843" a="0.4"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+        <frame id="On66">
+          <layerref id="Light" color="0xe5a843" a="0.3"/>
+        </frame>
+        <frame id="On33">
+          <layerref id="Light" color="0xe5a843" a="0.15"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="Off" duration="5"/>
+          <frameref id="On33"/>
+          <frameref id="On66"/>
+          <frameref id="On" duration="11"/>
+          <frameref id="On66"/>
+          <frameref id="On33"/>
+          <frameref id="Off" duration="12"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.2" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="45" x="2" y="4"/>
+          <view angle="135" y="4" hm="true"/>
+          <view angle="225" x="1" y="3"/>
+          <view angle="315" y="4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" y="-3" color="0xd17e36"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="Off" duration="6"/>
+          <frameref id="On" duration="13"/>
+          <frameref id="Off" duration="13"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,87 @@
+<item.SpriteItem id="0" name="Bird of Paradise" desc="Painter special wings and tail" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Bird of paradise wings" source="items/base/consumables/back/con_bak_80_birdofparadise_wings.png" cols="5" rows="2"/>
+    <texture id="Bird of paradise tail" source="items/base/consumables/back/con_bak_80_birdofparadise_tail.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="Tail" texture="Bird of paradise tail" align="middle">
+          <view angle="0" col="3" x="-26" y="56" hm="true"/>
+          <view angle="45" x="-27" y="45"/>
+          <view angle="90" col="4" x="2" y="58"/>
+          <view angle="135" x="27" y="45" hm="true"/>
+          <view angle="180" col="3" x="26" y="56"/>
+          <view angle="225" col="2" x="27" y="58"/>
+          <view angle="270" col="1" x="2" y="68"/>
+          <view angle="315" col="2" x="-27" y="58" hm="true"/>
+        </layer>
+        <layer id="Tail01" texture="Bird of paradise tail" align="middle">
+          <view angle="0" col="3" x="-26" y="58" hm="true"/>
+          <view angle="45" x="-27" y="47"/>
+          <view angle="90" col="4" x="2" y="60"/>
+          <view angle="135" x="27" y="47" hm="true"/>
+          <view angle="180" col="3" x="26" y="58"/>
+          <view angle="225" col="2" x="27" y="60"/>
+          <view angle="270" col="1" x="2" y="70"/>
+          <view angle="315" col="2" x="-27" y="60" hm="true"/>
+        </layer>
+        <layer id="frame1" texture="Bird of paradise wings">
+          <view angle="0" col="3" x="-4" y="60" hm="true"/>
+          <view angle="45" x="-3" y="58"/>
+          <view angle="90" col="4" y="63"/>
+          <view angle="135" x="3" y="58" hm="true"/>
+          <view angle="180" col="3" x="4" y="60"/>
+          <view angle="225" col="2" x="1" y="62"/>
+          <view angle="270" col="1" y="70"/>
+          <view angle="315" col="2" x="-1" y="62" hm="true"/>
+        </layer>
+        <layer id="frame2" texture="Bird of paradise wings">
+          <view angle="0" col="3" row="1" x="-4" y="60" hm="true"/>
+          <view angle="45" row="1" x="-3" y="59"/>
+          <view angle="90" col="4" row="1" y="65"/>
+          <view angle="135" row="1" x="3" y="59" hm="true"/>
+          <view angle="180" col="3" row="1" x="4" y="60"/>
+          <view angle="225" col="2" row="1" x="2" y="63"/>
+          <view angle="270" col="1" row="1" x="1" y="70"/>
+          <view angle="315" col="2" row="1" x="-2" y="63" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="Tail01"/>
+          <layerref id="frame1"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="Tail"/>
+          <layerref id="frame2"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="frame2" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Frame_01">
+            <sample id="flap" loops="-1"/>
+          </frameref>
+          <frameref id="Frame_02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,30 @@
+<item.SpriteItem id="4796" name="Almofada para Arranhar Marron" desc="Uma almofada para seu pet" tags="misc,seasonal" icon="items/base/pet/pet_008_catscratch_tan_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="10">
+  <volume>
+    <box min="-0.3,0,-0.4" max="0.3,1,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/pet/pet_008_catscratch_tan_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.4" max="0.3,1,0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="21">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1" hm="true"/>
+          <view angle="315" col="1"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

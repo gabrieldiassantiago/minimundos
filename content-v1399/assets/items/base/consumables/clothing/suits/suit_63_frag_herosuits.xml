@@ -1,0 +1,63 @@
+<f id="HeroSuits" parentId="Suits">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="HeroSuitMTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_63_herosuits_torso_m.png" pri="1"/>
+    </g>
+    <g id="Female">
+      <s id="HeroSuitFTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_63_herosuits_torso_f.png" pri="1"/>
+    </g>
+  </b>
+  <g id="HeroSuits">
+    <b id="HeroSuits_Legs" min="2" max="2" sel="Legs">
+      <g id="Legs" icon="$bu/icon_legs_trouser.png">
+        <s id="HeroSuits_Leg_Idle" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_63_herosuits_leg_idle_base.png" pri="3"/>
+        <s id="HeroSuits_Leg_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_63_herosuits_leg_walk1_base.png" pri="3"/>
+        <s id="HeroSuits_Leg_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_63_herosuits_leg_walk2_base.png" pri="3"/>
+        <s id="HeroSuits_Leg_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_63_herosuits_leg_walk3_base.png" pri="3"/>
+        <s id="HeroSuits_Leg_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_63_herosuits_leg_walk4_base.png" pri="3"/>
+        <s id="HeroSuits_Leg_Sit" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_63_herosuits_leg_sit_base.png" pri="3"/>
+      </g>
+    </b>
+    <b id="HeroSuits_Arms" min="2" max="2" sel="ArmHands">
+      <g id="ArmHands" icon="$bm/icon_m_retro.png">
+        <s id="HeroSuits_Arm_Idle" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_63_herosuits_arm_idle.png" pri="1"/>
+        <s id="HeroSuits_Arm_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_63_herosuits_arm_walk1.png" pri="1"/>
+        <s id="HeroSuits_Arm_Walk2" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_63_herosuits_arm_walk2.png" pri="1"/>
+        <s id="HeroSuits_Arm_Walk3" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_63_herosuits_arm_walk3.png" pri="1"/>
+        <s id="HeroSuits_Arm_Sit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_63_herosuits_arm_sit.png" pri="1"/>
+        <s id="HeroSuits_Arm_Throw" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_63_herosuits_arm_throw.png" pri="1"/>
+        <s id="HeroSuits_Arm_Raise" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_63_herosuits_arm_raise.png" pri="1"/>
+        <s id="HeroSuits_Hand_Idle" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_idle.png" pri="2"/>
+        <s id="HeroSuits_Hand_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_walk1.png" pri="2"/>
+        <s id="HeroSuits_Hand_Walk2" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_walk2.png" pri="2"/>
+        <s id="HeroSuits_Hand_Walk3" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_walk3.png" pri="2"/>
+        <s id="HeroSuits_Hand_Sit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_sit.png" pri="2"/>
+        <s id="HeroSuits_Hand_Wave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_wave1.png" pri="2"/>
+        <s id="HeroSuits_Hand_Wave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_wave2.png" pri="2"/>
+        <s id="HeroSuits_Hand_Hold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_hold.png" pri="2"/>
+        <s id="HeroSuits_Hand_Open" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_open.png" pri="2"/>
+        <s id="HeroSuits_Hand_Point" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_point.png" pri="2"/>
+        <s id="HeroSuits_Hand_Stop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_stop.png" pri="2"/>
+        <s id="HeroSuits_Hand_Throw" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_throw.png" pri="2"/>
+        <s id="HeroSuits_Hand_Thumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_63_herosuits_hand_thumbs.png" pri="2"/>
+      </g>
+    </b>
+  </g>
+  <g id="Icon">
+    <t id="Icon_HeroSuits" icon="items/base/consumables/clothing/suits/suit_63_icon_herosuits.png" w="48" h="48"/>
+    <s id="Icon_Hero_suit" cId="Icon_HeroSuits" s="items/base/consumables/clothing/suits/suit_63_icon_herosuits.png"/>
+  </g>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="JSTop"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+</f>

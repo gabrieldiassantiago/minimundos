@@ -1,0 +1,45 @@
+<item.SpriteItem id="369" name="Janela Arqueada Gótica" desc="Um toque de beleza para sua sala." tags="window,wall" icon="items/base/gothic/icon_g_window_arc.png" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="75" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="0,-1.03,-0.7" max="0.001,1.3,0.7"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/gothic/g_window_arc.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_window_arch.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Window">
+      <box min="0,-1.03,-0.7" max="0.001,1.3,0.7"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle">
+          <view angle="45" x="2"/>
+          <view angle="135" x="-2" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" x="0.125" y="-0.05" s="7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" x="-1" y="-1">
+          <view angle="45" x="2"/>
+          <view angle="135" x="1" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light" color="0xfcdada" a="0.6"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

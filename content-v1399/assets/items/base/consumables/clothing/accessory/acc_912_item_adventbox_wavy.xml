@@ -1,0 +1,42 @@
+<item.SpriteItem id="7361" name="Estátua de Rena" desc="Uma estátua em formato de rena prateada [23 de 25]" tags="decoration,rare" icon="items/base/consumables/clothing/accessory/acc_912_icon_adventbox_wavy.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.67,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_912_item_adventbox_wavy.png" cols="1" rows="1"/>
+    <texture id="Deer" source="items/base/consumables/clothing/accessory/acc_912_item_adventbox_wavy_figure.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="moai">
+      <box min="-0.49,0,-0.49" max="0.49,2.67,0.49"/>
+      <layers>
+        <layer id="moai" texture="Texture">
+          <view angle="45" y="31" hm="true"/>
+          <view angle="135" y="31"/>
+          <view angle="225" y="31" hm="true"/>
+          <view angle="315" y="31"/>
+        </layer>
+        <layer id="moai01" texture="Deer">
+          <view angle="45" x="-14" y="-11"/>
+          <view angle="135" x="14" y="-11" hm="true"/>
+          <view angle="225" col="1" x="18" y="-6"/>
+          <view angle="315" col="1" x="-14" y="-6" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

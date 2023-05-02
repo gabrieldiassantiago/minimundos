@@ -1,0 +1,87 @@
+<f id="RedNinjaSuit" parentId="Suits">
+  <g id="RedNinjaSuit">
+    <c id="RedNinjaBase" sId="RedNinjaTorsoBase" c="9240576" a="0.65" b="-51.3" ct="0.65" lId="KimonoTorsoBase"/>
+    <b id="NinjaChest" min="2" max="2" sel="RedNinjaTorsoBase,RedTorsoArmour">
+      <s id="RedNinjaTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_24_torso_base.png" pri="1"/>
+      <s id="RedTorsoArmour" cId="Torso" s="items/base/consumables/clothing/suits/suit_24_torso_armour.png" pri="1.1"/>
+    </b>
+    <b id="NinjaLegs" min="2" max="2" sel="NinjaBottomArmour,NinjaBottomBase">
+      <g id="NinjaBottomBase" icon="$bu/icon_legs_trouser.png">
+        <s id="RedNinjaPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_24_leg_idle.png" pri="3"/>
+        <s id="RedNinjaPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_24_leg_walk1.png" pri="3"/>
+        <s id="RedNinjaPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_24_leg_walk2.png" pri="3"/>
+        <s id="RedNinjaPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_24_leg_walk3.png" pri="3"/>
+        <s id="RedNinjaPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_24_leg_walk4.png" pri="3"/>
+        <s id="RedNinjaSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_24_leg_sit_upper.png" pri="3"/>
+        <s id="RedNinjaSitLowerBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_24_leg_sit_lower.png" pri="3"/>
+        <c sId="RedNinjaPantIdleBase" c="9240576" a="0.65" b="-51.3" ct="0.65" lId="RedNinjaPantIdleBase"/>
+        <c sId="RedNinjaPantWalk1Base" c="9240576" a="0.65" b="-51.6" ct="0.65" lId="RedNinjaPantIdleBase"/>
+        <c sId="RedNinjaPantWalk2Base" c="9240576" a="0.65" b="-51.6" ct="0.65" lId="RedNinjaPantIdleBase"/>
+        <c sId="RedNinjaPantWalk3Base" c="9240576" a="0.65" b="-51.6" ct="0.65" lId="RedNinjaPantIdleBase"/>
+        <c sId="RedNinjaPantWalk4Base" c="9240576" a="0.65" b="-51.6" ct="0.65" lId="RedNinjaPantIdleBase"/>
+        <c sId="RedNinjaSitUpperBase" c="9240576" a="0.65" b="-50.1" ct="0.65" lId="RedNinjaPantIdleBase"/>
+        <c sId="RedNinjaSitLowerBase" c="9240576" a="0.65" b="-51.6" ct="0.65" lId="RedNinjaPantIdleBase"/>
+      </g>
+      <g id="NinjaBottomArmour" icon="$bu/icon_legs_trouser.png">
+        <s id="RedNinjaPantIdleArmour" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_24_leg_armour_idle.png" pri="3.1"/>
+        <s id="RedNinjaPantWalk1Armour" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_24_leg_armour_walk1.png" pri="3.1"/>
+        <s id="RedNinjaPantWalk2Armour" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_24_leg_armour_walk2.png" pri="3.1"/>
+        <s id="RedNinjaPantWalk3Armour" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_24_leg_armour_walk3.png" pri="3.1"/>
+        <s id="RedNinjaPantWalk4Armour" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_24_leg_armour_walk4.png" pri="3.1"/>
+        <s id="RedNinjaSitUpperArmour" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_24_leg_sit_upper_armour.png" pri="3.1"/>
+        <s id="RedNinjaSitLowerArmour" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_24_leg_sit_lower_armour.png" pri="3.1"/>
+      </g>
+    </b>
+    <b id="NinjaArms" min="2" max="2" sel="NinjaArmsArmour,NinjaArmsBase">
+      <g id="NinjaArmsBase" icon="$bm/icon_m_retro.png">
+        <s id="RedNinjaArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_24_arm_base_idle.png" pri="1"/>
+        <s id="RedNinjaArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_24_arm_base_walk1.png" pri="1"/>
+        <s id="RedNinjaArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_24_arm_base_walk2.png" pri="1"/>
+        <s id="RedNinjaArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_24_arm_base_walk3.png" pri="1"/>
+        <s id="RedNinjaArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_24_arm_base_sit.png" pri="1"/>
+        <s id="RedNinjaArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_24_arm_base_throw.png" pri="1"/>
+        <s id="RedNinjaArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_24_arm_base_raise.png" pri="1"/>
+        <c sId="RedNinjaArmIdleBase" c="9240576" a="0.65" b="-51.3" ct="0.65" lId="RedNinjaArmsBase"/>
+        <c sId="RedNinjaArmWalk1Base" c="9240576" a="0.65" b="-51.3" ct="0.65" lId="RedNinjaArmsBase"/>
+        <c sId="RedNinjaArmWalk2Base" c="9240576" a="0.65" b="-51.6" ct="0.65" lId="RedNinjaArmsBase"/>
+        <c sId="RedNinjaArmWalk3Base" c="9240576" a="0.65" b="-51.7" ct="0.65" lId="RedNinjaArmsBase"/>
+        <c sId="RedNinjaArmSitBase" c="9240576" a="0.65" b="-51.6" ct="0.65" lId="RedNinjaArmsBase"/>
+        <c sId="RedNinjaArmThrowBase" c="9240576" a="0.65" b="-51.6" ct="0.65" lId="RedNinjaArmsBase"/>
+        <c sId="RedNinjaArmRaiseBase" c="9240576" a="0.65" b="-51.6" ct="0.65" lId="RedNinjaArmsBase"/>
+      </g>
+      <g id="NinjaArmsArmour" icon="$bm/icon_m_retro.png">
+        <s id="RedNinjaArmIdleArmour" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_24_arm_armour_idle.png" pri="2"/>
+        <s id="RedNinjaWalk1Armour" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_24_arm_armour_walk1.png" pri="2"/>
+        <s id="RedNinjaArmWalk2Armour" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_24_arm_armour_walk2.png" pri="2"/>
+        <s id="RedNinjaArmWalk3Armour" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_24_arm_armour_walk3.png" pri="2"/>
+        <s id="RedNinjaArmSitArmour" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_24_arm_armour_sit.png" pri="2"/>
+        <s id="RedNinjaArmThrowArmour" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_24_arm_armour_throw.png" pri="2"/>
+        <s id="RedNinjaArmRaiseArmour" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_24_arm_armour_raise.png" pri="2"/>
+      </g>
+    </b>
+    <b id="NinjaShoes" min="2" max="2" sel="NinjaShoes">
+      <g id="NinjaShoes" icon="$bu/icon_shoe_chuck.png">
+        <s id="RedNinjaShoeIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_24_shoe_idle.png" pri="2"/>
+        <s id="RedNinjaShoeWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_24_shoe_walk1.png" pri="2"/>
+        <s id="RedNinjaShoeWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_24_shoe_walk2.png" pri="2"/>
+        <s id="RedNinjaShoeWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_24_shoe_walk3.png" pri="2"/>
+        <s id="RedNinjaShoeWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_24_shoe_walk4.png" pri="2"/>
+        <s id="RedNinjaShoeSit" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_24_shoe_lower.png" pri="2"/>
+        <c name="shoe" sId="Bot02_06IdleBase" c="12092186" a="0.99" b="35.0" ct="1.38" lId="Bot02_Color1" lw="N"/>
+      </g>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top06"/>
+</f>

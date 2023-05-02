@@ -1,0 +1,47 @@
+<f id="Top01_31TiedTop" parentId="Top01">
+  <g id="TopTshirtLogo" name="Tshirt">
+    <s id="Top01_32TorsoBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_31_torso_tietop.png" pri="1"/>
+    <s id="Top01_32ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/tiny_arm_idle.png" pri="1"/>
+    <s id="Top01_32ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/tiny_arm_walk1.png" pri="1"/>
+    <s id="Top01_32ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/tiny_arm_walk2.png" pri="1"/>
+    <s id="Top01_32ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/tiny_arm_walk3.png" pri="1"/>
+    <s id="Top01_32ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/tiny_arm_sit.png" pri="1"/>
+    <c sId="Top01_32TorsoBase" c="13178431" a="0.77" b="36.2" ct="1.09" lId="Top01_32Color1" lw="N"/>
+    <c sId="Top01_32ArmIdleBase" c="13178431" a="0.77" b="36.2" ct="1.09" lId="Top01_32Color1" lw="N"/>
+    <c sId="Top01_32ArmWalk1Base" c="13178431" a="0.77" b="36.2" ct="1.09" lId="Top01_32Color1" lw="N"/>
+    <c sId="Top01_32ArmWalk2Base" c="13178431" a="0.77" b="36.2" ct="1.09" lId="Top01_32Color1" lw="N"/>
+    <c sId="Top01_32ArmWalk3Base" c="13178431" a="0.77" b="36.2" ct="1.09" lId="Top01_32Color1" lw="N"/>
+    <c sId="Top01_32ArmSitBase" c="13178431" a="0.77" b="36.2" ct="1.09" lId="Top01_32Color1" lw="N"/>
+    <s id="Top01_32ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/tiny_arm_throw.png" pri="1"/>
+    <s id="Top01_32ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/tiny_arm_raise.png" pri="1"/>
+    <c sId="Top01_32ArmThrowBase" c="13178431" a="0.77" b="36.2" ct="1.09" lId="Top01_32Color1" lw="N"/>
+    <c sId="Top01_32ArmRaiseBase" c="13178431" a="0.77" b="36.2" ct="1.09" lId="Top01_32Color1" lw="N"/>
+    <s id="Top01_32Skin" cId="Torso" s="items/base/consumables/clothing/top01/top01_13_bikini_skin.png" pri="0.9"/>
+    <c sId="Top01_32Skin" c="13405800" a="0.44" b="12.0" ct="0.26" lId="SkinColor" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop32" icon="items/base/consumables/clothing/top01/top01_31_icon_tietop_a.png" w="48" h="48"/>
+    <s id="Icon_32Base" cId="IconTop32" s="items/base/consumables/clothing/top01/top01_31_icon_tietop_1.png"/>
+    <c sId="Icon_32Base" c="13178431" a="0.77" b="36.2" ct="1.09" lId="Top01_32Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_32Color1" name="Color" desc="Choose a color" sel="Cherry" seld="Red">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_32Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="56.4" ct="1.90" lId="Top01_32Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="46.3" ct="1.14" lId="Top01_32Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="1.00" b="48.8" ct="1.46" lId="Top01_32Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.90" b="54.0" ct="1.05" lId="Top01_32Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="53.9" ct="1.95" lId="Top01_32Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top01_32Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_32Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Top01_32Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9515132" a="1.00" b="58.9" ct="1.17" lId="Top01_32Color1"/>
+      <c id="Cherry" icon="$bu/icon_cherry.png" c="13178431" a="0.77" b="36.2" ct="1.09" lId="Top01_32Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="1.00" b="19.5" ct="0.47" lId="Top01_32Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top01_32Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

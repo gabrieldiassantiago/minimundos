@@ -1,0 +1,31 @@
+<item.SpriteItem id="0" name="Black Top Hat" desc="bunny top hat" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/clothing/accessory/acc_858_bunnyear_white_wear.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="0" x="-1" y="9"/>
+          <view angle="45" col="1" x="-1" y="15"/>
+          <view angle="90" col="2" y="18"/>
+          <view angle="135" col="1" y="15" hm="true"/>
+          <view angle="180" x="1" y="9" hm="true"/>
+          <view angle="225" col="4" x="-1" y="10" hm="true"/>
+          <view angle="270" col="3" y="15"/>
+          <view angle="315" col="4" y="10"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,150 @@
+<item.SpriteItem id="6505" name="Swoscar Winners" desc="Winners List" tags="admin,wall" icon="items/base/urban/icon_u_swoscarwinners_2017.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="action" source="items/base/urban/action.png" cols="1" rows="1"/>
+    <texture id="adventure" source="items/base/urban/adventure.png" cols="1" rows="1"/>
+    <texture id="comedy" source="items/base/urban/comedy.png" cols="1" rows="1"/>
+    <texture id="drama" source="items/base/urban/drama.png" cols="1" rows="1"/>
+    <texture id="fantasy" source="items/base/urban/fantasy.png" cols="1" rows="1"/>
+    <texture id="horror" source="items/base/urban/horror.png" cols="1" rows="1"/>
+    <texture id="romance" source="items/base/urban/romance.png" cols="1" rows="1"/>
+    <texture id="base" source="items/base/urban/base.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_tv_steampunk.png" cols="1" rows="1"/>
+    <texture id="extras" source="items/base/urban/extra.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="wall" depthBias="-2">
+      <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+      <layers>
+        <layer id="action" texture="action" align="middle">
+          <view angle="45" y="-260"/>
+          <view angle="135" y="-2" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="adventure" texture="adventure" align="middle">
+          <view angle="45" y="-260"/>
+          <view angle="135" y="-2" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="comedy" texture="comedy" align="middle">
+          <view angle="45" y="-260"/>
+          <view angle="135" y="-2" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="drama" texture="drama" align="middle">
+          <view angle="45" y="-260"/>
+          <view angle="135" y="-2" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="fantasy" texture="fantasy" align="middle">
+          <view angle="45" y="-260"/>
+          <view angle="135" y="-2" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="horror" texture="horror" align="middle">
+          <view angle="45" y="-260"/>
+          <view angle="135" y="-2" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="romance" texture="romance" align="middle">
+          <view angle="45" y="-260"/>
+          <view angle="135" y="-2" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="base" texture="base" align="middle">
+          <view angle="45" y="-260"/>
+          <view angle="135" y="-2" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="extras" texture="extras" align="middle">
+          <view angle="45" y="-260"/>
+          <view angle="135" y="-2" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="action"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="adventure"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="comedy"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="drama"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="fantasy"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="horror"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="romance"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="extras"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="base"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="1">
+          <frameref id="Frame01" duration="10"/>
+          <frameref id="Frame02" duration="10"/>
+          <frameref id="Frame03" duration="10"/>
+          <frameref id="Frame04" duration="10"/>
+          <frameref id="Frame05" duration="10"/>
+          <frameref id="Frame06" duration="10"/>
+          <frameref id="Frame07" duration="10"/>
+          <frameref id="Frame08"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="25" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-10"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,60 @@
+<item.SpriteItem id="0" name="Black Game Controller" desc="A black game controller" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.2" max="0.15,0.55,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_23_gamecontroller_black.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.2" max="0.15,0.55,0.2"/>
+      <layers>
+        <layer id="game controller" texture="Texture">
+          <view angle="0" x="-8" y="12"/>
+          <view angle="45" col="3" x="-3" y="11"/>
+          <view angle="90" col="4" y="12"/>
+          <view angle="135" col="3" x="3" y="11" hm="true"/>
+          <view angle="180" x="6" y="12" hm="true"/>
+          <view angle="225" col="2" x="1" y="13"/>
+          <view angle="270" col="1" y="12"/>
+          <view angle="315" col="2" x="-4" y="13" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="game controller"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="game controller"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="game controller"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="game controller"/>
+        </frame>
+        <frame id="off">
+          <layerref id="game controller"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

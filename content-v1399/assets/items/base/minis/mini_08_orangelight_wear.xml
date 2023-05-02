@@ -1,0 +1,39 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,2.14,0" max="0,2.14,0"/>
+  </volume>
+  <textures>
+    <texture id="Emote" source="items/base/minis/mini_08_orangelight_wear.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/consumables/emotes/emote_21_love_sound.mp3"/>
+    <sound id="Sound01" source="sounds/teleport/teleport_arrive.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront" y="2.14">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="heart01" texture="Emote">
+          <view angle="0" x="1" y="-10" alpha="0.6"/>
+          <view angle="45" x="1" y="-10" alpha="0.9"/>
+          <view angle="90" x="1" y="-10"/>
+          <view angle="135" x="1" y="-10" alpha="0.9"/>
+          <view angle="180" x="1" y="-10" alpha="0.6"/>
+          <view angle="225" x="1" y="-10" alpha="0.4"/>
+          <view angle="270" x="1" y="-10" alpha="0.2"/>
+          <view angle="315" x="1" y="-10" alpha="0.4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="heart01" a="0.85"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="2" loop="false">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

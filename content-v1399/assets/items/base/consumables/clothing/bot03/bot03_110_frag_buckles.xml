@@ -1,0 +1,88 @@
+<f id="Bot03_110BucklessSkirt" parentId="Bot03">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="skirt_110_TorsoM" cId="Torso" s="items/base/consumables/clothing/bot03/bot03_110_torso_m.png" pri="3"/>
+      <c sId="skirt_110_TorsoM" c="5570560" a="0.77" b="40.9" ct="1.12" lId="Bot03_110Color" lw="N"/>
+      <s id="skirt_110_Torso_decal" cId="Torso" s="items/base/consumables/clothing/bot03/bot03_110_torso_decal.png" pri="3.1"/>
+    </g>
+    <g id="Female">
+      <s id="skirt_110_TorsoF" cId="Torso" s="items/base/consumables/clothing/bot03/bot03_110_torso_f.png" pri="3"/>
+      <c sId="skirt_110_TorsoF" c="5395026" a="1.00" b="60.9" ct="2.00" lId="Bot03_110Color" lw="N"/>
+      <s id="skirt_110_Torso_decal" cId="Torso" s="items/base/consumables/clothing/bot03/bot03_110_torso_decal.png" pri="3.1"/>
+    </g>
+  </b>
+  <g id="Floral" name="Base" icon="$bm/iconm_legs_shorts.png">
+    <s id="skirt_110_Idle" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_110_idle.png" pri="3"/>
+    <s id="skirt_110_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_110_walk1.png" pri="3"/>
+    <s id="skirt_110_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_110_walk2.png" pri="3"/>
+    <s id="skirt_110_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_110_walk3.png" pri="3"/>
+    <s id="skirt_110_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_110_walk4.png" pri="3"/>
+    <s id="skirt_110_Sit" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_110_sit.png" pri="3"/>
+    <c sId="skirt_110_Idle" c="5395026" a="1.00" b="60.9" ct="2.00" lId="Bot03_110Color" lw="N"/>
+    <c sId="skirt_110_Walk1" c="5395026" a="1.00" b="60.9" ct="2.00" lId="Bot03_110Color" lw="N"/>
+    <c sId="skirt_110_Walk2" c="5395026" a="1.00" b="60.9" ct="2.00" lId="Bot03_110Color" lw="N"/>
+    <c sId="skirt_110_Walk3" c="5395026" a="1.00" b="60.9" ct="2.00" lId="Bot03_110Color" lw="N"/>
+    <c sId="skirt_110_Walk4" c="5395026" a="1.00" b="60.9" ct="2.00" lId="Bot03_110Color" lw="N"/>
+    <c sId="skirt_110_Sit" c="5395026" a="1.00" b="60.9" ct="2.00" lId="Bot03_110Color" lw="N"/>
+  </g>
+  <g id="Decal" name="Decal" icon="$bm/iconm_legs_shorts.png">
+    <s id="skirt_110_Idle_decal" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_110_idle_decal.png" pri="3.1"/>
+    <s id="skirt_110_Walk1_decal" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_110_walk1_decal.png" pri="3.1"/>
+    <s id="skirt_110_Walk2_decal" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_110_walk2_decal.png" pri="3.1"/>
+    <s id="skirt_110_Walk3_decal" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_110_walk3_decal.png" pri="3.1"/>
+    <s id="skirt_110_Walk4_decal" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_110_walk4_decal.png" pri="3.1"/>
+    <s id="skirt_110_Sit_decal" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_110_sit_decal.png" pri="3.1"/>
+  </g>
+  <g id="Leg_SKin" name="Leg_Skin" icon="$bm/iconm_legs_shorts.png">
+    <s id="Butt_Idle_Skin" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_leg_idle_skin.png" pri="0.5"/>
+    <s id="Butt_Walk1_Skin" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_leg_walk1_skin.png" pri="0.5"/>
+    <s id="Butt_Walk2_Skin" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_leg_walk2_skin.png" pri="0.5"/>
+    <s id="Butt_Walk3_Skin" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_leg_walk3_skin.png" pri="0.5"/>
+    <s id="Butt_Walk4_Skin" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_leg_walk4_skin.png" pri="0.5"/>
+    <s id="Butt_Sit_Upper_Skin" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_leg_sit_upper_skin.png" pri="0.5"/>
+    <s id="Butt_Sit_Lower_Skin" cId="LegSitLower" s="items/base/consumables/clothing/bot03/bot03_leg_sit_lower_skin.png" pri="0.5"/>
+    <c sId="Butt_Idle_Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="Butt_Walk1_Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="Butt_Walk2_Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="Butt_Walk3_Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="Butt_Walk4_Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="Butt_Sit_Upper_Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    <c sId="Butt_Sit_Lower_Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot03_110" icon="items/base/consumables/clothing/bot03/bot03_110_buckles_icon_a.png" w="48" h="48"/>
+    <s id="IconTop03_110BodySize" cId="IconBot03_110" s="items/base/consumables/clothing/bot03/icon_bigbutt.png"/>
+    <s id="IconBot03_110Base" cId="IconBot03_110" s="items/base/consumables/clothing/bot03/bot03_110_buckles_icon_1.png"/>
+    <c sId="IconBot03_110Base" c="5395026" a="1.00" b="60.9" ct="2.00" lId="Bot03_110Color" lw="N"/>
+    <s id="IconBot03_110Decal" cId="IconBot03_110" s="items/base/consumables/clothing/bot03/bot03_110_buckles_icon_2.png"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot03_110Color" name="Color" desc="Choose a color" sel="Black" seld="Black">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.84" b="73.8" ct="1.08" lId="Bot03_110Color"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="57.7" ct="1.43" lId="Bot03_110Color"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="14523375" a="1.00" b="41.5" ct="1.19" lId="Bot03_110Color"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16231623" a="1.00" b="39.9" ct="1.19" lId="Bot03_110Color"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="0.80" b="35.8" ct="1.09" lId="Bot03_110Color"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="1.00" b="49.2" ct="2.00" lId="Bot03_110Color"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="0.80" b="31.3" ct="1.30" lId="Bot03_110Color"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.94" b="37.8" ct="0.89" lId="Bot03_110Color"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="21.9" ct="1.18" lId="Bot03_110Color"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="878364" a="1.00" b="57.7" ct="2.00" lId="Bot03_110Color"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="1.00" b="32.1" ct="1.41" lId="Bot03_110Color"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="1.00" b="55.9" ct="2.00" lId="Bot03_110Color"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Bot03_110Color"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="2858731" a="0.90" b="-5.2" ct="0.68" lId="Bot03_110Color"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9056193" a="1.00" b="42.7" ct="1.71" lId="Bot03_110Color"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="14260780" a="0.65" b="25.7" ct="1.28" lId="Bot03_110Color"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.78" b="37.8" ct="1.38" lId="Bot03_110Color"/>
+      <c id="Olive" icon="$bu/icon_olive.png" c="5195281" a="0.92" b="70.2" ct="2.00" lId="Bot03_110Color"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.93" b="68.6" ct="2.00" lId="Bot03_110Color"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.77" b="40.9" ct="1.12" lId="Bot03_110Color"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="1.00" b="60.9" ct="2.00" lId="Bot03_110Color"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=325; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot03_110Color"/>
+    </wizbox>
+  </g>
+  <ds id="JSBottom"/>
+</f>

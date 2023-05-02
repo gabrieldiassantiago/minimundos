@@ -1,0 +1,48 @@
+<item.ChairItem id="1486" name="Banqueta Master" desc="Uma banqueta elegante." tags="chair" icon="items/base/vip/icon_vip_couch_01_black_single.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="90" minLevel="1" minLevelType="2" minCPLevel="1">
+  <seats>
+    <seat y="0.42">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,0.43,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/vip/vip_couch_01_black_single.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Seat">
+      <box min="-0.4,0,-0.4" max="0.4,0.43,0.4"/>
+      <layers>
+        <layer id="seat" texture="Texture" align="middle">
+          <view angle="45" y="-10"/>
+          <view angle="135" y="-10" hm="true"/>
+          <view angle="225" y="-10"/>
+          <view angle="315" y="-10"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

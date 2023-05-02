@@ -1,0 +1,35 @@
+<item.SpriteItem desc="Um toque de tranquilidade e agilidade." dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" icon="items/base/consumables/back/icon_con_bak_item_03_bwings_l1.png" id="1088" name="Asas da Fada da Paz" tags="consumable,actionbar,wear,back,action_wearable_toggle" price="2700" minLevel="30" minLevelType="4" minCPLevel="1">
+  <volume>
+    <box max="0.25,0.1,0.25" min="-0.25,0,-0.25"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+10,health+30"/>
+  </data>
+  <textures>
+    <texture cols="2" id="bf_01" rows="1" source="items/base/consumables/back/con_bak_item_02_bwings_l1.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.25,0.1,0.25" min="-0.25,0,-0.25"/>
+      <layers>
+        <layer id="bg_01" texture="bf_01">
+          <view angle="45" y="19"/>
+          <view angle="135" hm="true" x="1" y="19"/>
+          <view angle="225" col="1" hm="true" x="11" y="26"/>
+          <view angle="315" col="1" x="-10" y="26"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

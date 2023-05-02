@@ -1,0 +1,27 @@
+<item.SpriteItem desc="Um balcão de bar para organizar sua louça." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/modern/icon_m_bar_counter_cupboard.png" id="375" name="Balcão com Portas Moderno" tags="table" price="25" tokens="250" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.4,1.2,0.49" min="-0.4,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="2" id="Counter" rows="1" source="items/base/modern/m_bar_counter.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.4,1.2,0.49" min="-0.4,0,-0.49"/>
+      <layers>
+        <layer id="Layer" texture="Counter">
+          <view angle="45" x="-1" y="37"/>
+          <view angle="135" hm="true" x="1" y="37"/>
+          <view angle="225" col="1" y="37"/>
+          <view angle="315" col="1" hm="true" y="37"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

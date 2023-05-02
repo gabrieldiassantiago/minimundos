@@ -1,0 +1,63 @@
+<item.SpriteItem id="0" name="Tribal Warstaff" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bear" source="items/base/consumables/clothing/accessory/acc_832_hand_egg_dragon.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/consumables/clothing/accessory/acc_832_hand_egg_light.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Gardening Fork">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="bear" texture="bear" align="middle">
+          <view angle="0" x="3"/>
+          <view angle="45" x="17" y="-2"/>
+          <view angle="90" x="12"/>
+          <view angle="135" x="-3" y="4" hm="true"/>
+          <view angle="180" x="-3" y="10" hm="true"/>
+          <view angle="225" x="-5" y="8" hm="true"/>
+          <view angle="270" x="-10" y="-3"/>
+          <view angle="315" x="-10"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="1.45" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="3" y="1" hm="true"/>
+          <view angle="45" x="13" y="1"/>
+          <view angle="90" x="10" y="3"/>
+          <view angle="135" x="-2" y="3" hm="true"/>
+          <view angle="180" y="7"/>
+          <view angle="225" x="-3" y="7"/>
+          <view angle="270" x="-5"/>
+          <view angle="315" x="-6" y="2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf69797"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

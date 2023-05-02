@@ -1,0 +1,65 @@
+<item.WidgetItem desc="Indestrutível." dropTargetClamp="floor" dropTargetList="wall,avatar" dropTargetType="none" gridActive="false" icon="items/base/gothic/icon_g_door_02_dungeon.png" id="352" name="Porta Masmorra" tags="door,widget" widget="widgets/widget_portal.swf" price="110" tokens="1100" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.1,1.75,1.15" min="0,-1.3,-1.15"/>
+  </volume>
+  <events>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+  </events>
+  <actions>
+    <action event="navigate" id="Navigate" trigger="false"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="portalType" value="door"/>
+    <entry key="maxLinkedSpaces" value="1"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <navigate sitRange="1.00" standRange="1.00"/>
+  <textures>
+    <texture cols="1" id="Door" rows="1" source="items/base/gothic/g_door_02_dungeon.png"/>
+    <texture cols="2" id="handle" rows="1" source="items/base/gothic/g_door_02_dungeon_handle.png"/>
+    <texture cols="2" id="hinge" rows="1" source="items/base/gothic/g_door_02_dungeon_hinge.png"/>
+  </textures>
+  <nodes>
+    <node id="Door">
+      <box max="0.1,1.75,1.15" min="0,-1.3,-1.15"/>
+      <layers>
+        <layer align="middle" id="Dungeon Door" texture="Door">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view alpha="0.55" angle="225" x="-20" y="-9"/>
+          <view alpha="0.55" angle="315" hm="true" x="18" y="-10"/>
+        </layer>
+        <layer id="handle" texture="handle">
+          <view angle="45" x="28" y="17"/>
+          <view angle="135" col="1" x="11" y="35"/>
+          <view alpha="0.25" angle="225" col="1" hm="true" x="-30" y="23"/>
+          <view alpha="0.25" angle="315" hm="true" x="-9" y="6"/>
+        </layer>
+        <layer id="hinge_top" texture="hinge">
+          <view angle="45" col="1" y="40"/>
+          <view angle="135" x="-19" y="15"/>
+          <view alpha="0.25" angle="225" hm="true" x="-1" y="2"/>
+          <view alpha="0.25" angle="315" col="1" hm="true" x="18" y="29"/>
+        </layer>
+        <layer id="hinge_bottom" texture="hinge">
+          <view angle="45" col="1" y="115"/>
+          <view angle="135" x="-19" y="85"/>
+          <view alpha="0.25" angle="225" hm="true" y="75"/>
+          <view alpha="0.25" angle="315" col="1" hm="true" x="19" y="103"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

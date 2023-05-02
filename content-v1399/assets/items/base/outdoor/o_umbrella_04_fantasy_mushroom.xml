@@ -1,0 +1,59 @@
+<item.SpriteItem id="4630" name="Guarda-Sol Fantasia Eco" desc="Um lindo guarda-sol de cogumelo " tags="misc" icon="items/base/outdoor/icon_o_umbrella_04_fantasy_mushroom.png" price="110" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.7,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="00" value="Opaque"/>
+    <entry key="01" value="50%"/>
+    <entry key="count" value="2"/>
+  </data>
+  <textures>
+    <texture id="cap" source="items/base/outdoor/o_umbrella_04_fantasy_mushroom.png" cols="1" rows="1"/>
+    <texture id="stalk" source="items/base/outdoor/o_umbrella_04_fantasy_mushroomstalk.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Umbrella">
+      <box min="-0.49,0,-0.49" max="0.49,2.7,0.49"/>
+      <layers>
+        <layer id="table" texture="stalk">
+          <view angle="45" x="-2" y="10"/>
+          <view angle="135" x="2" y="10" hm="true"/>
+          <view angle="225" x="-2" y="10"/>
+          <view angle="315" x="2" y="10" hm="true"/>
+        </layer>
+        <layer id="umbrella" texture="cap">
+          <view angle="45" x="-1" y="-130"/>
+          <view angle="135" x="1" y="-130" hm="true"/>
+          <view angle="225" x="-1" y="-130"/>
+          <view angle="315" x="1" y="-130" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="table"/>
+          <layerref id="umbrella"/>
+        </frame>
+        <frame id="01">
+          <layerref id="table"/>
+          <layerref id="umbrella" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

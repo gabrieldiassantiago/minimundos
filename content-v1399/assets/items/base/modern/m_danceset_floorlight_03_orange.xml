@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="3069" name="Luz de Piso Laranja" desc="Uma luz colorida de piso." tags="light,slave_catalog_colorize,unsearchable" icon="items/base/modern/m_danceset_floorlight_03_orange.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="15" tokens="150">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0,0.2"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/floorlights.xml"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_groundlight.png" cols="1" rows="1"/>
+    <texture id="floor light" source="items/base/modern/m_danceset_floorlight_03_orange.png" cols="1" rows="1"/>
+    <texture id="bulb" source="items/base/shared/s_fx_flare_bulb.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Floor Light" layer="floor">
+      <box min="-0.2,0,-0.2" max="0.2,0,0.2"/>
+      <layers>
+        <layer id="floor light" texture="floor light">
+          <view y="24"/>
+        </layer>
+        <layer id="bulb" texture="bulb">
+          <view y="31"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="floor light"/>
+          <layerref id="bulb" color="0xe8cb62" a="0.5" blend="screen"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="floor light"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4" loop="false">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="1" y="-25"/>
+          <view angle="135" x="1" y="-25" hm="true"/>
+          <view angle="225" x="1" y="-25"/>
+          <view angle="315" x="1" y="-25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xe8cb62"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

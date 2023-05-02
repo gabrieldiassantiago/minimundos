@@ -1,0 +1,39 @@
+<item.SpriteItem id="0" name="Rune Staff" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="shadows" source="items/base/consumables/clothing/suits/suit_83_spy_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="shadow" texture="shadows" x="12" y="-1">
+          <view x="-62" y="91"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="shadow" a="0.16"/>
+        </frame>
+        <frame id="walk">
+          <layerref id="shadow" y="0.3" a="0.14"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="idle"/>
+          <frameref id="walk"/>
+        </animation>
+        <animation id="Walk">
+          <frameref id="idle"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

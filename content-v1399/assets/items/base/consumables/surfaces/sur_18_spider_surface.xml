@@ -1,0 +1,184 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="Cloud" source="items/base/shared/s_fx_flare_circle_floor.png" cols="1" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_circle_floor.png" cols="1" rows="1"/>
+    <texture id="spider" source="items/base/consumables/surfaces/sur_18_spider_surface.png" cols="5" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Diffuse" x="-0.245" y="-0.0312" s="1.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="light" texture="light">
+          <view angle="0" x="25" y="45" hm="true"/>
+          <view angle="45" x="16" y="50"/>
+          <view angle="90" y="53"/>
+          <view angle="135" x="-16" y="50" hm="true"/>
+          <view angle="180" x="-19" y="45"/>
+          <view angle="225" x="-16" y="37"/>
+          <view angle="270" y="34"/>
+          <view angle="315" x="16" y="37" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="light" color="0xfac8c8"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="red" texture="Cloud">
+          <view x="-2" y="47"/>
+        </layer>
+        <layer id="spider_01" texture="spider">
+          <view y="35"/>
+        </layer>
+        <layer id="spider_02" texture="spider">
+          <view col="1" y="35"/>
+        </layer>
+        <layer id="spider_03" texture="spider">
+          <view col="2" y="35"/>
+        </layer>
+        <layer id="spider_04" texture="spider">
+          <view col="3" y="35"/>
+        </layer>
+        <layer id="spider_05" texture="spider">
+          <view col="4" y="35"/>
+        </layer>
+        <layer id="spider_06" texture="spider">
+          <view row="1" y="35"/>
+        </layer>
+        <layer id="spider_07" texture="spider">
+          <view col="1" row="1" y="35"/>
+        </layer>
+        <layer id="spider_08" texture="spider">
+          <view col="2" row="1" y="35"/>
+        </layer>
+        <layer id="spider_09" texture="spider">
+          <view col="3" row="1" y="35"/>
+        </layer>
+        <layer id="spider_10" texture="spider">
+          <view col="4" row="1" y="35"/>
+        </layer>
+        <layer id="spider_11" texture="spider">
+          <view row="2" y="35"/>
+        </layer>
+        <layer id="spider_12" texture="spider">
+          <view col="1" row="2" y="35"/>
+        </layer>
+        <layer id="spider_13" texture="spider">
+          <view col="2" row="2" y="35"/>
+        </layer>
+        <layer id="spider_14" texture="spider">
+          <view col="3" row="2" y="35"/>
+        </layer>
+        <layer id="spider_15" texture="spider">
+          <view col="4" row="2" y="35"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="spider_01">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_01"/>
+        </frame>
+        <frame id="spider_02">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_02"/>
+        </frame>
+        <frame id="spider_03">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_03"/>
+        </frame>
+        <frame id="spider_04">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_04"/>
+        </frame>
+        <frame id="spider_05">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_05"/>
+        </frame>
+        <frame id="spider_06">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_06"/>
+        </frame>
+        <frame id="spider_07">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_07"/>
+        </frame>
+        <frame id="spider_08">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_08"/>
+        </frame>
+        <frame id="spider_09">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_09"/>
+        </frame>
+        <frame id="spider_10">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_10"/>
+        </frame>
+        <frame id="spider_11">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_11"/>
+        </frame>
+        <frame id="spider_12">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_12"/>
+        </frame>
+        <frame id="spider_13">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_13"/>
+        </frame>
+        <frame id="spider_14">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_14"/>
+        </frame>
+        <frame id="spider_15">
+          <layerref id="red" color="0xab2b2b" a="0.13"/>
+          <layerref id="spider_15"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="spider_01"/>
+          <frameref id="spider_02"/>
+          <frameref id="spider_03"/>
+          <frameref id="spider_04"/>
+          <frameref id="spider_05"/>
+          <frameref id="spider_06"/>
+          <frameref id="spider_07"/>
+          <frameref id="spider_08"/>
+          <frameref id="spider_09"/>
+          <frameref id="spider_10"/>
+          <frameref id="spider_11"/>
+          <frameref id="spider_12"/>
+          <frameref id="spider_13"/>
+          <frameref id="spider_14"/>
+          <frameref id="spider_15"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="spider_01"/>
+          <frameref id="spider_02"/>
+          <frameref id="spider_03"/>
+          <frameref id="spider_04"/>
+          <frameref id="spider_05"/>
+          <frameref id="spider_06"/>
+          <frameref id="spider_07"/>
+          <frameref id="spider_08"/>
+          <frameref id="spider_09"/>
+          <frameref id="spider_10"/>
+          <frameref id="spider_11"/>
+          <frameref id="spider_12"/>
+          <frameref id="spider_13"/>
+          <frameref id="spider_14"/>
+          <frameref id="spider_15"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

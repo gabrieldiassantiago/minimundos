@@ -1,0 +1,33 @@
+<item.SpriteItem id="2469" name="Ursinho da Sorte" desc="Um ursinho irlandês da sorte" tags="rare,misc,stpattricks" icon="items/base/modern/icon_m_toy_03_clover.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" minLevel="1" minCPLevel="1" price="90">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.85,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bear" source="items/base/modern/m_toy_03_clover.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.85,0.3"/>
+      <layers>
+        <layer id="bear" texture="bear">
+          <view angle="45" x="2" y="22"/>
+          <view angle="135" x="-2" y="22" hm="true"/>
+          <view angle="225" col="1" x="-3" y="29" hm="true"/>
+          <view angle="315" col="1" x="3" y="29"/>
+        </layer>
+        <layer id="text" texture="text">
+          <view angle="45" x="15" y="-5"/>
+          <view angle="135" col="1" x="-15" y="-5"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,50 @@
+<item.SpriteItem id="0" name="Flag_UN" desc="An item" icon="items/base/consumables/clothing/accessory/acc_327_icon_flag_un.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="pole" source="items/base/consumables/clothing/accessory/acc_327_hand_flag.png" cols="4" rows="1"/>
+    <texture id="flag" source="items/base/consumables/clothing/accessory/acc_327_hand_flag_un.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Sparkler">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="pole" texture="pole">
+          <view angle="0" col="2" y="25" hm="true"/>
+          <view angle="45" x="1" y="25"/>
+          <view angle="90" col="1" x="-1" y="25"/>
+          <view angle="135" x="-1" y="25" hm="true"/>
+          <view angle="180" col="2" x="-1" y="25"/>
+          <view angle="225" col="3" x="-10" y="25" hm="true"/>
+          <view angle="270" col="1" x="4" y="25" hm="true"/>
+          <view angle="315" col="3" x="8" y="25"/>
+        </layer>
+        <layer id="flag" texture="flag">
+          <view angle="0" col="2" x="36"/>
+          <view angle="45" x="26" y="8"/>
+          <view angle="90" col="1" x="-4" y="10"/>
+          <view angle="135" x="-26" y="8" hm="true"/>
+          <view angle="180" col="2" x="-36" hm="true"/>
+          <view angle="225" col="3" x="-29" y="-10" hm="true"/>
+          <view angle="270" col="1" x="7" y="11" hm="true"/>
+          <view angle="315" col="3" x="27" y="-10"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="pole"/>
+          <layerref id="flag"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

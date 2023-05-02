@@ -1,0 +1,47 @@
+<item.WidgetItem desc="Faça um novo registro." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/modern/icon_m_guest_book.png" id="393" name="Livro de Visitas Lembranças" tags="widget" viewDirection="vertical" widget="widgets/widget_guestbook.swf" price="110" tokens="1100" minLevel="1" minLevelType="4" minCPLevel="1">
+  <volume>
+    <box max="0.35,0.07,0.35" min="-0.35,0,-0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+  </events>
+  <data>
+    <entry key="frame" value="modern"/>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_xml_path" value="widgets/assets/guestbook/control-ui.mxml"/>
+    <entry key="config_xml_path" value="widgets/assets/guestbook/config-ui.mxml"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate sitRange="2.00" standRange="2.00" targetRange="1.00"/>
+  <textures>
+    <texture cols="1" id="book" rows="1" source="items/base/modern/m_guest_book.png"/>
+    <texture cols="4" id="pen" rows="1" source="items/base/modern/m_guest_pen.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.35,0.07,0.35" min="-0.35,0,-0.35"/>
+      <layers>
+        <layer id="book" texture="book">
+          <view angle="45" y="22"/>
+          <view angle="135" hm="true" y="22"/>
+          <view angle="225" y="22"/>
+          <view angle="315" hm="true" x="1" y="22"/>
+        </layer>
+        <layer id="pen" texture="pen">
+          <view angle="45" x="-8" y="10"/>
+          <view angle="135" col="1" x="-14"/>
+          <view angle="225" col="2" x="7" y="-3"/>
+          <view angle="315" col="3" x="15" y="9"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

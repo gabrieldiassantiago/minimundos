@@ -1,0 +1,84 @@
+<item.SpriteItem id="0" name="Mega Stink Projectile" desc="Mega stink projectile" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,-0.1,-0.1" max="0.1,0.1,0.1"/>
+  </volume>
+  <textures>
+    <texture id="le stink" source="items/base/consumables/magic/icon_con_item_71_megastink.png" cols="1" rows="1"/>
+    <texture id="stink trail" source="items/base/consumables/magic/proj_04_stink_trail.png" cols="3" rows="2"/>
+    <texture id="stink cloud" source="items/base/consumables/magic/proj_71_megastink.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Mega Stink">
+      <box min="-0.1,-0.1,-0.1" max="0.1,0.1,0.1"/>
+      <layers>
+        <layer id="stink trail 01" texture="stink trail" y="42">
+          <view angle="0" col="2" x="-16" y="-20" hm="true"/>
+          <view angle="45" x="-1" y="-21"/>
+          <view angle="90" col="1" x="2" y="-20"/>
+          <view angle="135" x="1" y="-21" hm="true"/>
+          <view angle="180" col="2" x="15" y="-20"/>
+          <view angle="225" x="1" y="-12" hm="true" vm="true"/>
+          <view angle="270" col="1" x="2" y="-12" vm="true"/>
+          <view angle="315" x="-1" y="-12" vm="true"/>
+        </layer>
+        <layer id="stink trail 02" texture="stink trail" y="42">
+          <view angle="0" col="2" row="1" x="-17" y="-21" hm="true"/>
+          <view angle="45" row="1" x="-5" y="-26"/>
+          <view angle="90" col="1" row="1" x="7" y="-26"/>
+          <view angle="135" row="1" x="5" y="-26" hm="true"/>
+          <view angle="180" col="2" row="1" x="16" y="-21"/>
+          <view angle="225" row="1" x="5" y="-7" hm="true" vm="true"/>
+          <view angle="270" col="1" row="1" x="7" y="-6" vm="true"/>
+          <view angle="315" row="1" x="-5" y="-7" vm="true"/>
+        </layer>
+        <layer id="stink cloud 01" texture="stink cloud" y="42">
+          <view angle="0" y="-16"/>
+          <view angle="45" y="-18"/>
+          <view angle="90" y="-12"/>
+          <view angle="135" y="-18"/>
+          <view angle="180" y="-16"/>
+          <view angle="225" y="-14"/>
+          <view angle="270" y="-14"/>
+          <view angle="315" y="-14"/>
+        </layer>
+        <layer id="stink cloud 02" texture="stink cloud" y="42">
+          <view angle="0" y="-16" hm="true" vm="true"/>
+          <view angle="45" y="-18" hm="true" vm="true"/>
+          <view angle="90" y="-12" hm="true" vm="true"/>
+          <view angle="135" y="-18" hm="true" vm="true"/>
+          <view angle="180" y="-16" hm="true" vm="true"/>
+          <view angle="225" y="-14" hm="true" vm="true"/>
+          <view angle="270" y="-14" hm="true" vm="true"/>
+          <view angle="315" y="-14" hm="true" vm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="stink cloud 01" a="0"/>
+        </frame>
+        <frame id="projectile 01">
+          <layerref id="stink trail 01"/>
+          <layerref id="stink cloud 01"/>
+        </frame>
+        <frame id="projectile 02">
+          <layerref id="stink trail 02"/>
+          <layerref id="stink cloud 02" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="idle"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="projectile 01">
+            <sample id="woosh"/>
+          </frameref>
+          <frameref id="projectile 02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

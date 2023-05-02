@@ -1,0 +1,160 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_172_atv_angled.png" cols="2" rows="1"/>
+    <texture id="front_back" source="items/base/consumables/feet/con_feet_172_atv_frontback.png" cols="2" rows="1"/>
+    <texture id="feet" source="items/base/consumables/feet/con_feet_172_atv_legs.png" cols="2" rows="1"/>
+    <texture id="beam_light" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="gifts" source="items/base/consumables/feet/con_feet_172_atv_gifts.png" cols="4" rows="2"/>
+    <texture id="bulb" source="items/base/shared/s_fx_flare_bulb.png" cols="1" rows="1"/>
+    <texture id="wheels" source="items/base/consumables/feet/con_feet_172_atv_tyres.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="base" texture="base" y="45">
+          <view angle="0" col="2" alpha="0"/>
+          <view angle="45" x="6" y="-2"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" x="-6" y="-2" hm="true"/>
+          <view angle="180" col="2" alpha="0" hm="true"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="front_back" texture="front_back" y="45">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" x="-2" y="-4"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="feet" texture="feet">
+          <view angle="0" alpha="0" hm="true"/>
+          <view angle="45" x="-2" y="-1"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" x="2" y="-1" hm="true"/>
+          <view angle="180" alpha="0"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="270" col="1" alpha="0"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="gifts" texture="gifts">
+          <view angle="0" col="3" row="1" x="-47" y="-35" hm="true"/>
+          <view angle="45" x="-29" y="-48"/>
+          <view angle="90" col="1" x="2" y="-56"/>
+          <view angle="135" col="2" x="28" y="-45"/>
+          <view angle="180" col="3" x="45" y="-32"/>
+          <view angle="225" row="1" x="19" y="-21" alpha="0"/>
+          <view angle="270" col="1" row="1" y="-12" alpha="0"/>
+          <view angle="315" col="2" row="1" y="-14" alpha="0"/>
+        </layer>
+        <layer id="wheels" texture="wheels">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="8" y="34"/>
+          <view angle="90" col="1" x="3" y="33"/>
+          <view angle="135" x="-7" y="34" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="base"/>
+          <layerref id="front_back"/>
+          <layerref id="gifts"/>
+          <layerref id="feet"/>
+        </frame>
+        <frame id="Sit"/>
+        <frame id="Walk">
+          <layerref id="base"/>
+          <layerref id="front_back"/>
+          <layerref id="gifts"/>
+          <layerref id="feet"/>
+          <layerref id="wheels"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Walk"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="beam_light" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="14" y="-8"/>
+          <view angle="90" y="-5" alpha="0"/>
+          <view angle="135" x="-14" y="-8" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf9f8db" a="0.8" blend="add"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Walk" framerate="6">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="bulb" align="middle">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="40" y="-25"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" x="-40" y="-25" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,120 @@
+<item.SpriteItem id="2773" name="Geladeira Chef Master" desc="Para cozinhar como um Mestre." tags="misc,table" icon="items/base/modern/icon_m_kitchen_23_dbdfridge.png" price="320" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-1.4" max="0.48,2.35,0.42"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="body" source="items/base/modern/m_kitchen_23_dbdfridge_body.png" cols="2" rows="1"/>
+    <texture id="door closed" source="items/base/modern/m_kitchen_23_dbdfridge_door_closed.png" cols="2" rows="1"/>
+    <texture id="door opened" source="items/base/modern/m_kitchen_23_dbdfridge_door_opened.png" cols="2" rows="1"/>
+    <texture id="ice maker" source="items/base/modern/m_kitchen_23_dbdfridge_icemaker.png" cols="4" rows="1"/>
+    <texture id="glow" source="items/base/modern/m_kitchen_23_dbdfridge_glow.png" cols="1" rows="1"/>
+    <texture id="glow back" source="items/base/modern/m_kitchen_23_dbdfridge_glow_back.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" x="-0.01">
+      <box min="-0.48,0,-1.4" max="0.49,2.35,0.42"/>
+      <layers>
+        <layer id="body" texture="body">
+          <view angle="45" x="-30" y="61"/>
+          <view angle="135" x="-33" y="29" hm="true"/>
+          <view angle="225" col="1" x="33" y="31"/>
+          <view angle="315" col="1" x="30" y="63" hm="true"/>
+        </layer>
+        <layer id="door closed" texture="door closed">
+          <view angle="45" x="-5" y="6"/>
+          <view angle="135" x="-57" y="-26" hm="true"/>
+          <view angle="225" col="1" x="10" y="-48"/>
+          <view angle="315" col="1" x="54" y="-16" hm="true"/>
+        </layer>
+        <layer id="door opened" texture="door opened">
+          <view angle="45" x="12" y="26"/>
+          <view angle="135" x="-74" y="-6" hm="true"/>
+          <view angle="225" col="1" x="-7" y="-50"/>
+          <view angle="315" col="1" x="70" y="-18" hm="true"/>
+        </layer>
+        <layer id="ice maker closed" texture="ice maker">
+          <view angle="45" x="34" y="-67"/>
+          <view angle="135" col="1" x="-48" y="-73"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="ice maker opened" texture="ice maker">
+          <view angle="45" x="34" y="-67" alpha="0"/>
+          <view angle="135" col="2" x="-38" y="-50"/>
+          <view angle="225" col="3" x="-65" y="-111"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="body"/>
+          <layerref id="door closed"/>
+          <layerref id="ice maker closed"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="body"/>
+          <layerref id="door opened"/>
+          <layerref id="ice maker opened"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" loop="false">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open">
+          <frameref id="Open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.4" y="0.65" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="glow" align="middle">
+          <view angle="45" x="-4" y="-10"/>
+          <view angle="135" x="-11" y="-18" hm="true"/>
+          <view angle="225" x="-7" y="-11" alpha="0"/>
+          <view angle="315" x="9" y="-7" alpha="0"/>
+        </layer>
+        <layer id="Light back" texture="glow back" align="middle">
+          <view angle="45" x="-4" y="-10" alpha="0"/>
+          <view angle="135" x="-11" y="-18" alpha="0"/>
+          <view angle="225" x="6" y="-39"/>
+          <view angle="315" x="10" y="-31" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+          <layerref id="Light back" a="0"/>
+        </frame>
+        <frame id="On">
+          <layerref id="Light" color="0xfffeed"/>
+          <layerref id="Light back"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

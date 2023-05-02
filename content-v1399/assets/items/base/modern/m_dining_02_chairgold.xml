@@ -1,0 +1,68 @@
+<item.ChairItem id="5704" name="Cadeira de Jantar Master Deluxe" desc="Uma moderna e luxuosa cadeira de jantar" tags="rare,chair" icon="items/base/modern/icon_m_dining_02_chairgold.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <seats>
+    <seat y="0.4">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.4,0,-0.3" max="0.32,1.24,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="chair a" source="items/base/modern/m_dining_02_chairgold.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Back" x="0.05">
+      <box min="-0.45,0,-0.3" max="0.27,1.24,0.3"/>
+      <layers>
+        <layer id="chair" texture="chair a">
+          <view angle="45" x="-4" y="23"/>
+          <view angle="135" x="3" y="23" hm="true"/>
+          <view angle="225" col="2" x="5" y="25" hm="true"/>
+          <view angle="315" col="2" x="-5" y="25"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Seat" x="0.05">
+      <box min="-0.45,0,-0.3" max="0.27,1.24,0.3"/>
+      <layers>
+        <layer id="chair back" texture="chair a">
+          <view angle="45" y="15" alpha="0"/>
+          <view angle="135" y="15" alpha="0" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="1" alpha="0" hm="true"/>
+        </layer>
+        <layer id="chair back base" texture="chair a">
+          <view angle="45" alpha="0"/>
+          <view angle="135" y="-1" alpha="0"/>
+          <view angle="225" col="1" x="5" y="25" hm="true"/>
+          <view angle="315" col="1" x="-5" y="25"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

@@ -1,0 +1,204 @@
+<item.SpriteItem id="7165" name="Lanterna de Halloween Roxa" desc="Um item temporário do Halloween 2017" tags="rare,craftable_craftoween,misc,craftable4" icon="items/base/outdoor/icon_o_halloweenpumpkin_purple.png" price="1" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.6,0.3"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Off" state="true" event="animate(00)"/>
+    <action id="On" state="true" event="animate(01)"/>
+    <action id="No Face Off" state="true" event="animate(02)"/>
+    <action id="No Face On" state="true" event="animate(03)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="4"/>
+    <entry key="00" value="One"/>
+    <entry key="01" value="Two"/>
+    <entry key="02" value="Three"/>
+    <entry key="03" value="Four"/>
+    <entry key="ingredient_1" value="7241"/>
+    <entry key="ingredient_2" value="2246"/>
+    <entry key="ingredient_quantity_1" value="1"/>
+    <entry key="ingredient_quantity_2" value="1"/>
+    <entry key="product_quantity" value="1"/>
+    <entry key="xp_level_required" value="0"/>
+    <entry key="xp_rewarded" value="500"/>
+  </data>
+  <textures>
+    <texture id="pumpkin" source="items/base/outdoor/o_halloweenpumpkin_pumpkin_purple.png" cols="1" rows="1"/>
+    <texture id="cover" source="items/base/outdoor/o_halloweenpumpkin_cover_purple.png" cols="1" rows="1"/>
+    <texture id="LightEyes" source="items/base/outdoor/o_halloweenpumpkin_eyes_purple.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="pumpkin">
+      <box min="-0.3,0,-0.3" max="0.3,0.6,0.3"/>
+      <layers>
+        <layer id="pumpkin" texture="pumpkin" y="30">
+          <view angle="45" x="2" y="-9"/>
+          <view angle="135" x="-2" y="-9" hm="true"/>
+          <view angle="225" x="2" y="-9"/>
+          <view angle="315" x="-2" y="-9" hm="true"/>
+        </layer>
+        <layer id="cover" texture="cover" y="30">
+          <view angle="45" x="11" y="-20" alpha="0"/>
+          <view angle="135" x="-2" y="-9" alpha="0" hm="true"/>
+          <view angle="225" x="11" y="-20"/>
+          <view angle="315" x="-11" y="-20" hm="true"/>
+        </layer>
+        <layer id="covereverything" texture="cover" y="30">
+          <view angle="45" x="11" y="-20"/>
+          <view angle="135" x="-11" y="-20" hm="true"/>
+          <view angle="225" x="11" y="-20"/>
+          <view angle="315" x="-11" y="-20" hm="true"/>
+        </layer>
+        <layer id="Lights" texture="LightEyes">
+          <view angle="45" x="9" y="10"/>
+          <view angle="135" x="-9" y="10" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Normal">
+          <layerref id="pumpkin"/>
+          <layerref id="cover"/>
+        </frame>
+        <frame id="NormalLights">
+          <layerref id="pumpkin"/>
+          <layerref id="cover"/>
+          <layerref id="Lights" blend="hardlight"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="pumpkin"/>
+          <layerref id="covereverything"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="Normal"/>
+        </animation>
+        <animation id="01" framerate="4">
+          <frameref id="NormalLights"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="03" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.15" s="1.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-1">
+          <view angle="45" x="2"/>
+          <view angle="135" x="2"/>
+          <view angle="225" x="2" alpha="0.7"/>
+          <view angle="315" x="2" alpha="0.7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xe357e4"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xe357e4" a="0.95"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xe357e4" a="0.85"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Light" color="0xe357e4" a="0.8"/>
+        </frame>
+        <frame id="off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="01" framerate="4" syncOffsets="0,1">
+          <frameref id="Frame04" duration="2"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03" duration="2"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="03" framerate="4" syncOffsets="0,1">
+          <frameref id="Frame04" duration="2"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.15" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-1">
+          <view angle="45" x="2" alpha="0.4"/>
+          <view angle="135" x="2" alpha="0.4"/>
+          <view angle="225" x="2" alpha="0.3"/>
+          <view angle="315" x="2" alpha="0.3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xe357e4"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xe357e4" a="0.95"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xe357e4" a="0.86"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Light" color="0xe357e4" a="0.8"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="01" framerate="4" syncOffsets="0,1">
+          <frameref id="Frame04" duration="2"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03" duration="2"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="03" framerate="4" syncOffsets="0,1">
+          <frameref id="Frame04" duration="2"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

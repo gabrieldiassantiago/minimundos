@@ -1,0 +1,55 @@
+<item.SpriteItem id="7336" name="Árvore de Natal Arco-Íris" desc="Uma árvore brilhante e colorida [2 de 25]" tags="rare,misc" icon="items/base/consumables/clothing/accessory/acc_891_icon_adventbox_mistletoe.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.28,0,-0.28" max="0.28,0.5,0.28"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/accessory/acc_891_item_adventbox_mistletoe_base.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/consumables/clothing/accessory/acc_891_icon_adventbox_mistletoe.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node01">
+      <box min="-0.28,0,-0.28" max="0.28,0.5,0.28"/>
+      <layers>
+        <layer id="Base" texture="Base" y="16">
+          <view angle="45" y="19"/>
+          <view angle="135" y="19" hm="true"/>
+          <view angle="225" y="19"/>
+          <view angle="315" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-18">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,58 @@
+<item.ChairItem id="3073" name="Cadeira de Salão Luxe" desc="Uma cadeira de salão profissional." tags="chair" icon="items/base/modern/icon_m_chair_05_salon.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <seats>
+    <seat x="0.1" y="0.65">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_chair_05_salon.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Chair_Support" texture="Texture" y="25">
+          <view angle="45" col="2" alpha="0"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="2" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="LeftArm">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Chair_Base/Main" texture="Texture" y="25">
+          <view angle="45"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

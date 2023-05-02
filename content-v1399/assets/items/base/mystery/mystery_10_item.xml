@@ -1,0 +1,41 @@
+<item.SpriteItem id="5060" name="Capacete com Hélice Sr. Charada" desc="Uma excêntrica invenção do Sr. Charada" tags="rare,usable,wear,action_wearable_toggle,hat" icon="items/base/mystery/mystery_10_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" minLevelType="2" price="999">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.38,0.2"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+  </events>
+  <textures>
+    <texture id="hat" source="items/base/mystery/mystery_10_item.png" cols="2" rows="1"/>
+    <texture id="head" source="items/base/consumables/head/con_head_generic_dropshadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Mystery Box">
+      <box min="-0.2,0,-0.2" max="0.2,0.38,0.2"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" x="-2" y="18"/>
+          <view angle="315" x="2" y="18" hm="true"/>
+        </layer>
+        <layer id="hat" texture="hat">
+          <view angle="45" x="-10" y="15"/>
+          <view angle="135" x="10" y="15" hm="true"/>
+          <view angle="225" col="1" x="-10" y="15" hm="true"/>
+          <view angle="315" col="1" x="10" y="15"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+20"/>
+  </data>
+</item.SpriteItem>

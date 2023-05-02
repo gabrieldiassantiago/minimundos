@@ -1,0 +1,30 @@
+<item.SpriteItem name="Tapete Decorado Vermelho Elegance" desc="Um tapete elegante e decorado" tags="floor" icon="items/base/antique/icon_a_rug_02_patterned_red.png" price="45" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" id="6627">
+  <volume>
+    <box min="-1.48,-0.001,-1.01" max="1.48,0,1.01"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/antique/a_rug_02_patterned_red.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Rug" layer="surface">
+      <box min="-1.48,-0.001,-1.01" max="1.48,0,1.01"/>
+      <layers>
+        <layer id="Rug" texture="Texture" align="middle">
+          <view angle="45" x="-2" y="-1"/>
+          <view angle="135" x="2" y="-1" hm="true"/>
+          <view angle="225" x="-2" y="-1"/>
+          <view angle="315" x="2" y="-1" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

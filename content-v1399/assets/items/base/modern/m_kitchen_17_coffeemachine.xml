@@ -1,0 +1,48 @@
+<item.SpriteItem id="1614" name="Cafeteira" desc="Para todas as manhãs e depois do almoço" tags="misc" icon="items/base/modern/icon_m_kitchen_17_coffeemachine.png" minLevel="1" dropTargetType="none" dropTargetList="floor, table, avatar,avatar" dropTargetClamp="none" price="30" minCPLevel="1">
+  <volume>
+    <box min="-0.29,0,-0.24" max="0.29,0.63,0.24"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture01" source="items/base/modern/m_kitchen_17_coffeemachine.png" cols="1" rows="2"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_mini.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.29,0,-0.24" max="0.29,0.63,0.24"/>
+      <layers>
+        <layer id="Layer" texture="Texture01">
+          <view angle="45" row="1" x="-2" y="19" hm="true"/>
+          <view angle="135" row="1" x="2" y="19"/>
+          <view angle="225" y="21" hm="true"/>
+          <view angle="315" x="-1" y="21"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse01" x="0.22" y="0.5" z="0.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="45" x="-30" y="55"/>
+          <view angle="135" x="-30" y="20" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light" color="0xef4343"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Playing" framerate="4"/>
+        <animation id="Stopped" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

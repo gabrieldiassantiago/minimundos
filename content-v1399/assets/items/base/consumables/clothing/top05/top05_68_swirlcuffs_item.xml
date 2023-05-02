@@ -1,0 +1,34 @@
+<item.SpriteItem id="7341" name="Bracelete Egípcio Elegance" desc="Um lindo bracelete para o braço" tags="consumable,clothing,actionbar,wear,top05,wrist,action_wearable_toggle" icon="items/base/consumables/clothing/top05/top05_68_swirlcuffs_icon_a.png" price="295" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.7,0.1"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top05/top05_68_frag_swirlcuffs.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="life" source="items/base/consumables/clothing/top05/top05_68_swirlcuffs_item.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.7,0.1"/>
+      <layers>
+        <layer id="Layer" texture="life">
+          <view y="8"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

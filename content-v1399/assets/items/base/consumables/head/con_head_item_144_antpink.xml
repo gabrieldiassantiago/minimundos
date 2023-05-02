@@ -1,0 +1,39 @@
+<item.SpriteItem id="3716" name="Sandy, a Formiga Rainha" desc="Colecionável (Janeiro 2013)" tags="head,consumable,animal,costume,collectible,wear,actionbar,rare,action_wearable_toggle" icon="items/base/consumables/head/icon_con_head_item_144_antpink.png" price="2000" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.8,0.3"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+10"/>
+    <entry key="action_attributes_secondary" value="speed+10,health+30"/>
+  </data>
+  <textures>
+    <texture id="head" source="items/base/consumables/head/con_head_144_antpink.png" cols="5" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/head/con_head_generic_dropshadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.8,0.3"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view y="21"/>
+        </layer>
+        <layer id="head" texture="head">
+          <view angle="45" x="9" y="10"/>
+          <view angle="135" x="-9" y="10" hm="true"/>
+          <view angle="225" col="3" x="-8" y="10" hm="true"/>
+          <view angle="315" col="3" x="8"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

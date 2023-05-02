@@ -1,0 +1,151 @@
+<item.SpriteItem id="7548" name="Cajado 2018 Deluxe Play" desc="Feliz Ano Novo de toda equipe MiniMundos" tags="rare,consumable,actionbar,wear,hand,usable,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_979_nye_icon.png" price="900" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.18,0,-0.18" max="0.18,2.1,0.18"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+18,speed+20"/>
+  </data>
+  <textures>
+    <texture id="Staff" source="items/base/consumables/clothing/accessory/acc_979_nye_item.png" cols="1" rows="1"/>
+    <texture id="DiscoBall" source="items/base/consumables/clothing/accessory/acc_979_nye_ball.png" cols="4" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Staff">
+      <box min="-0.18,0,-0.18" max="0.18,2.1,0.18"/>
+      <layers>
+        <layer id="Staff" texture="Staff" y="-30">
+          <view angle="45" x="1" y="48"/>
+          <view angle="135" x="1" y="48" hm="true"/>
+          <view angle="225" x="1" y="48"/>
+          <view angle="315" x="1" y="48" hm="true"/>
+        </layer>
+        <layer id="Disco_01" texture="DiscoBall" y="-110">
+          <view x="1" y="21"/>
+        </layer>
+        <layer id="Disco_02" texture="DiscoBall" y="-110">
+          <view col="1" x="2" y="21"/>
+        </layer>
+        <layer id="Disco_03" texture="DiscoBall" y="-110">
+          <view col="2" x="3" y="21"/>
+        </layer>
+        <layer id="Disco_04" texture="DiscoBall" y="-110">
+          <view col="3" x="3" y="21"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="snow_01">
+          <layerref id="Staff"/>
+          <layerref id="Disco_01"/>
+        </frame>
+        <frame id="snow_02">
+          <layerref id="Staff"/>
+          <layerref id="Disco_02"/>
+        </frame>
+        <frame id="snow_03">
+          <layerref id="Staff"/>
+          <layerref id="Disco_03"/>
+        </frame>
+        <frame id="snow_04">
+          <layerref id="Staff"/>
+          <layerref id="Disco_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Snow" framerate="3">
+          <frameref id="snow_01"/>
+          <frameref id="snow_02"/>
+          <frameref id="snow_03"/>
+          <frameref id="snow_04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view x="3" y="-46"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light" color="0xa4b5f6" a="0.8"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light" color="0xcea0f2" a="0.75"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Light" color="0x9edff1" a="0.7"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On02"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Effect01" texture="DiscoBall" align="middle" x="-2" y="25">
+          <view x="3" y="-143"/>
+        </layer>
+        <layer id="Effect02" texture="DiscoBall" align="middle" x="-2" y="25">
+          <view col="1" x="7" y="-143"/>
+        </layer>
+        <layer id="Effect03" texture="DiscoBall" align="middle" x="-2" y="25">
+          <view col="2" x="3" y="-143"/>
+        </layer>
+        <layer id="Effect04" texture="DiscoBall" align="middle" x="-2" y="25">
+          <view col="3" x="7" y="-143"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Effect01"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Effect02"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Effect03"/>
+        </frame>
+        <frame id="On04">
+          <layerref id="Effect04"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Effect01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,144 @@
+<item.SpriteItem id="4682" name="Esfera Misteriosa do Sr. Charada" desc="Pode ser a resposta para todas as questões da vida" tags="rare,misc,hand,usable,wear,action_holdable_toggle" icon="items/base/mystery/mystery_07_icon.png" price="999" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.46,0.25"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+10,health+10"/>
+  </data>
+  <textures>
+    <texture id="lamp" source="items/base/modern/m_light_13_orb.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="spark" source="items/base/mystery/mystery_07_item.png" cols="3" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Candle">
+      <box min="-0.25,0,-0.25" max="0.25,0.46,0.25"/>
+      <layers>
+        <layer id="shadow" texture="lamp">
+          <view angle="45" col="1" y="15"/>
+          <view angle="135" col="1" y="15" hm="true"/>
+          <view angle="225" col="1" y="15"/>
+          <view angle="315" col="1" y="15" hm="true"/>
+        </layer>
+        <layer id="spark_01" texture="spark">
+          <view angle="45" y="55"/>
+          <view angle="135" y="55"/>
+          <view angle="225" y="55"/>
+          <view angle="315" y="55"/>
+        </layer>
+        <layer id="spark_02" texture="spark">
+          <view angle="45" col="1" y="55"/>
+          <view angle="135" col="1" y="55"/>
+          <view angle="225" col="1" y="55"/>
+          <view angle="315" col="1" y="55"/>
+        </layer>
+        <layer id="spark_03" texture="spark">
+          <view angle="45" col="2" y="55"/>
+          <view angle="135" col="2" y="55"/>
+          <view angle="225" col="2" y="55"/>
+          <view angle="315" col="2" y="55"/>
+        </layer>
+        <layer id="spark_04" texture="spark">
+          <view angle="45" row="1" y="55"/>
+          <view angle="135" row="1" y="55"/>
+          <view angle="225" row="1" y="55"/>
+          <view angle="315" row="1" y="55"/>
+        </layer>
+        <layer id="spark_05" texture="spark">
+          <view angle="45" col="1" row="1" y="55"/>
+          <view angle="135" col="1" row="1" y="55"/>
+          <view angle="225" col="1" row="1" y="55"/>
+          <view angle="315" col="1" row="1" y="55"/>
+        </layer>
+        <layer id="spark_06" texture="spark">
+          <view angle="45" col="2" row="1" y="55"/>
+          <view angle="135" col="2" row="1" y="55"/>
+          <view angle="225" col="2" row="1" y="55"/>
+          <view angle="315" col="2" row="1" y="55"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off"/>
+        <frame id="on_01">
+          <layerref id="shadow"/>
+          <layerref id="spark_01"/>
+        </frame>
+        <frame id="on_02">
+          <layerref id="shadow"/>
+          <layerref id="spark_02"/>
+        </frame>
+        <frame id="on_03">
+          <layerref id="shadow"/>
+          <layerref id="spark_03"/>
+        </frame>
+        <frame id="on_04">
+          <layerref id="shadow"/>
+          <layerref id="spark_04"/>
+        </frame>
+        <frame id="on_05">
+          <layerref id="shadow"/>
+          <layerref id="spark_05"/>
+        </frame>
+        <frame id="on_06">
+          <layerref id="shadow"/>
+          <layerref id="spark_06"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="on_01"/>
+          <frameref id="on_02"/>
+          <frameref id="on_03"/>
+          <frameref id="on_04"/>
+          <frameref id="on_05"/>
+          <frameref id="on_06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xb3f6bc" a="0.95"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.2" s="1.2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view x="2" y="-3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xcaf8d0" a="0.16"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

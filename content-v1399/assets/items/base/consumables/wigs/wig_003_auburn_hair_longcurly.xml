@@ -1,0 +1,31 @@
+<item.SpriteItem id="0" name="bavarianhat" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/wigs/wig_003_auburn_hair_longcurly.png" cols="4" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="0" col="2" row="1" x="2" y="60"/>
+          <view angle="45" col="3" row="1" x="1" y="58"/>
+          <view angle="90" y="61"/>
+          <view angle="135" col="1" x="-5" y="62"/>
+          <view angle="180" col="2" x="-2" y="64"/>
+          <view angle="225" col="3" x="-5" y="60"/>
+          <view angle="270" row="1" y="60"/>
+          <view angle="315" col="1" row="1" x="5" y="60"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,48 @@
+<item.SpriteItem id="6527" name="Moto de Tachyon Zoom" desc="Uma moto sub-atômica" tags="rare,consumable,actionbar,wear,feet,action_driveable_toggle,nopvp" icon="items/base/consumables/feet/icon_con_feet_178_tachyonbike.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.44,0,-0.18" max="1.44,1.15,0.18"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="select" script="scripts/item/select_drive.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+75,health+50"/>
+    <entry key="action_attributes" value="fire+50"/>
+  </data>
+  <textures>
+    <texture id="Bike" source="items/base/consumables/feet/con_feet_178_tachyonbike_angled.png" cols="2" rows="1"/>
+    <texture id="Handle" source="items/base/consumables/feet/con_feet_178_tachyonbike_decal.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.44,0,-0.18" max="1.44,1.15,0.18"/>
+      <layers>
+        <layer id="Bike" texture="Bike">
+          <view angle="45" x="30" y="65"/>
+          <view angle="135" x="-29" y="64" hm="true"/>
+          <view angle="225" col="1" x="-28" y="34"/>
+          <view angle="315" col="1" x="28" y="34" hm="true"/>
+        </layer>
+        <layer id="handle" texture="Handle">
+          <view angle="45" x="30" y="65" alpha="0"/>
+          <view angle="135" x="-29" y="64" alpha="0" hm="true"/>
+          <view angle="225" x="-30" y="-97"/>
+          <view angle="315" x="30" y="-97" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Bike"/>
+          <layerref id="handle"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,315 @@
+<item.SpriteItem id="0" name="Kite" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/accessory/acc_152_head_kite_base.png" cols="5" rows="3"/>
+    <texture id="Tail" source="items/base/consumables/clothing/accessory/acc_152_head_kite_tail.png" cols="5" rows="3"/>
+    <texture id="Handle" source="items/base/consumables/clothing/accessory/acc_148_hand_kite_handle.png" cols="2" rows="1"/>
+    <texture id="String" source="items/base/consumables/clothing/accessory/acc_148_head_kite_string.png" cols="5" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Handle" texture="Handle"/>
+        <layer id="Base01" texture="Base">
+          <view angle="0" x="-81" y="-93"/>
+          <view angle="45" col="1" x="-74" y="-123"/>
+          <view angle="90" col="2" x="-30" y="-130"/>
+          <view angle="135" col="1" x="25" y="-122" hm="true"/>
+          <view angle="180" x="59" y="-103" hm="true"/>
+          <view angle="225" col="3" x="54" y="-65"/>
+          <view angle="270" col="4" x="28" y="-56"/>
+          <view angle="315" col="3" x="-53" y="-72" hm="true"/>
+        </layer>
+        <layer id="Base02" texture="Base">
+          <view angle="0" row="1" x="-83" y="-95"/>
+          <view angle="45" col="1" row="1" x="-76" y="-124"/>
+          <view angle="90" col="2" row="1" x="-32" y="-132"/>
+          <view angle="135" col="1" row="2" x="25" y="-128" hm="true"/>
+          <view angle="180" row="1" x="61" y="-105" hm="true"/>
+          <view angle="225" col="3" row="2" x="59" y="-68"/>
+          <view angle="270" col="4" row="2" x="30" y="-58"/>
+          <view angle="315" col="3" row="1" x="-51" y="-74" hm="true"/>
+        </layer>
+        <layer id="Base03" texture="Base">
+          <view angle="0" row="1" x="-85" y="-97"/>
+          <view angle="45" col="1" row="1" x="-78" y="-126"/>
+          <view angle="90" col="2" row="1" x="-34" y="-134"/>
+          <view angle="135" col="1" row="2" x="23" y="-130" hm="true"/>
+          <view angle="180" row="1" x="63" y="-107" hm="true"/>
+          <view angle="225" col="3" row="2" x="62" y="-69"/>
+          <view angle="270" col="4" row="2" x="32" y="-60"/>
+          <view angle="315" col="3" row="1" x="-49" y="-74" hm="true"/>
+        </layer>
+        <layer id="Base04" texture="Base">
+          <view angle="0" x="-84" y="-99"/>
+          <view angle="45" col="1" x="-77" y="-129"/>
+          <view angle="90" col="2" x="-32" y="-137"/>
+          <view angle="135" col="1" x="23" y="-127" hm="true"/>
+          <view angle="180" x="64" y="-108" hm="true"/>
+          <view angle="225" col="3" x="57" y="-70"/>
+          <view angle="270" col="4" x="31" y="-61"/>
+          <view angle="315" col="3" x="-50" y="-77" hm="true"/>
+        </layer>
+        <layer id="Base05" texture="Base">
+          <view angle="0" row="2" x="-82" y="-98"/>
+          <view angle="45" col="1" row="2" x="-73" y="-133"/>
+          <view angle="90" col="2" row="2" x="-30" y="-136"/>
+          <view angle="135" col="1" row="1" x="24" y="-127" hm="true"/>
+          <view angle="180" row="2" x="65" y="-107" hm="true"/>
+          <view angle="225" col="3" row="1" x="54" y="-70"/>
+          <view angle="270" col="4" row="1" x="29" y="-60"/>
+          <view angle="315" col="3" row="2" x="-58" y="-81" hm="true"/>
+        </layer>
+        <layer id="Base06" texture="Base">
+          <view angle="0" row="2" x="-80" y="-96"/>
+          <view angle="45" col="1" row="2" x="-69" y="-133"/>
+          <view angle="90" col="2" row="2" x="-29" y="-134"/>
+          <view angle="135" col="1" row="1" x="26" y="-126" hm="true"/>
+          <view angle="180" row="2" x="66" y="-105" hm="true"/>
+          <view angle="225" col="3" row="1" x="51" y="-66"/>
+          <view angle="270" col="4" row="1" x="27" y="-59"/>
+          <view angle="315" col="3" row="2" x="-60" y="-79" hm="true"/>
+        </layer>
+        <layer id="Base07" texture="Base">
+          <view angle="0" x="-78" y="-94"/>
+          <view angle="45" col="1" x="-69" y="-128"/>
+          <view angle="90" col="2" x="-28" y="-132"/>
+          <view angle="135" col="1" x="27" y="-122" hm="true"/>
+          <view angle="180" x="65" y="-103" hm="true"/>
+          <view angle="225" col="3" x="49" y="-66"/>
+          <view angle="270" col="4" x="25" y="-57"/>
+          <view angle="315" col="3" x="-61" y="-73" hm="true"/>
+        </layer>
+        <layer id="Base08" texture="Base">
+          <view angle="0" x="-80" y="-92"/>
+          <view angle="45" col="1" x="-72" y="-125"/>
+          <view angle="90" col="2" x="-29" y="-130"/>
+          <view angle="135" col="1" x="26" y="-121" hm="true"/>
+          <view angle="180" x="63" y="-102" hm="true"/>
+          <view angle="225" col="3" x="53" y="-63"/>
+          <view angle="270" col="4" x="27" y="-56"/>
+          <view angle="315" col="3" x="-58" y="-72" hm="true"/>
+        </layer>
+        <layer id="Tail01" texture="Tail">
+          <view angle="0" x="-131" y="-80"/>
+          <view angle="45" col="1" x="-117" y="-128"/>
+          <view angle="90" col="2" x="-35" y="-120"/>
+          <view angle="135" col="1" x="68" y="-127" hm="true"/>
+          <view angle="180" x="109" y="-89" hm="true"/>
+          <view angle="225" col="3" x="86" y="-34"/>
+          <view angle="270" col="4" x="31" y="-22"/>
+          <view angle="315" col="3" x="-86" y="-41" hm="true"/>
+        </layer>
+        <layer id="Tail02" texture="Tail">
+          <view angle="0" row="1" x="-133" y="-86"/>
+          <view angle="45" col="1" row="1" x="-114" y="-128"/>
+          <view angle="90" col="2" row="1" x="-33" y="-122"/>
+          <view angle="135" col="1" row="1" x="61" y="-129" hm="true"/>
+          <view angle="180" row="1" x="110" y="-95" hm="true"/>
+          <view angle="225" col="3" row="1" x="83" y="-36"/>
+          <view angle="270" col="4" row="1" x="28" y="-25"/>
+          <view angle="315" col="3" row="1" x="-80" y="-42" hm="true"/>
+        </layer>
+        <layer id="Tail03" texture="Tail">
+          <view angle="0" row="2" x="-136" y="-85"/>
+          <view angle="45" col="1" row="2" x="-117" y="-130"/>
+          <view angle="90" col="2" row="2" x="-38" y="-122"/>
+          <view angle="135" col="1" row="2" x="60" y="-131" hm="true"/>
+          <view angle="180" row="2" x="112" y="-94" hm="true"/>
+          <view angle="225" col="3" row="2" x="86" y="-37"/>
+          <view angle="270" col="4" row="2" x="28" y="-26" hm="true"/>
+          <view angle="315" col="3" row="2" x="-79" y="-45" hm="true"/>
+        </layer>
+        <layer id="Tail04" texture="Tail">
+          <view angle="0" x="-135" y="-85"/>
+          <view angle="45" col="1" x="-119" y="-134"/>
+          <view angle="90" col="2" x="-38" y="-126"/>
+          <view angle="135" col="1" x="64" y="-131" hm="true"/>
+          <view angle="180" x="112" y="-94" hm="true"/>
+          <view angle="225" col="3" x="89" y="-40"/>
+          <view angle="270" col="4" x="28" y="-27" hm="true"/>
+          <view angle="315" col="3" x="-83" y="-46" hm="true"/>
+        </layer>
+        <layer id="Tail05" texture="Tail">
+          <view angle="0" row="1" x="-133" y="-85"/>
+          <view angle="45" col="1" row="1" x="-111" y="-135"/>
+          <view angle="90" col="2" row="1" x="-31" y="-126"/>
+          <view angle="135" col="1" row="1" x="62" y="-131" hm="true"/>
+          <view angle="180" row="1" x="113" y="-94" hm="true"/>
+          <view angle="225" col="3" row="1" x="83" y="-40"/>
+          <view angle="270" col="4" row="1" x="31" y="-27" hm="true"/>
+          <view angle="315" col="3" row="1" x="-83" y="-47" hm="true"/>
+        </layer>
+        <layer id="Tail06" texture="Tail">
+          <view angle="0" row="2" x="-130" y="-80"/>
+          <view angle="45" col="1" row="2" x="-108" y="-135"/>
+          <view angle="90" col="2" row="2" x="-31" y="-126"/>
+          <view angle="135" col="1" row="2" x="63" y="-129" hm="true"/>
+          <view angle="180" row="2" x="115" y="-90" hm="true"/>
+          <view angle="225" col="3" row="2" x="80" y="-37"/>
+          <view angle="270" col="4" row="2" x="30" y="-24"/>
+          <view angle="315" col="3" row="2" x="-86" y="-46" hm="true"/>
+        </layer>
+        <layer id="Tail07" texture="Tail">
+          <view angle="0" x="-129" y="-79"/>
+          <view angle="45" col="1" x="-111" y="-135"/>
+          <view angle="90" col="2" x="-36" y="-126"/>
+          <view angle="135" col="1" x="67" y="-129" hm="true"/>
+          <view angle="180" x="114" y="-88" hm="true"/>
+          <view angle="225" col="3" x="81" y="-35"/>
+          <view angle="270" col="4" x="27" y="-23"/>
+          <view angle="315" col="3" x="-95" y="-42" hm="true"/>
+        </layer>
+        <layer id="Tail08" texture="Tail">
+          <view angle="0" row="1" x="-131" y="-79"/>
+          <view angle="45" col="1" row="1" x="-111" y="-131"/>
+          <view angle="90" col="2" row="1" x="-34" y="-126"/>
+          <view angle="135" col="1" row="1" x="64" y="-125" hm="true"/>
+          <view angle="180" row="1" x="112" y="-89" hm="true"/>
+          <view angle="225" col="3" row="1" x="80" y="-31"/>
+          <view angle="270" col="4" row="1" x="25" y="-23"/>
+          <view angle="315" col="3" row="1" x="-87" y="-40" hm="true"/>
+        </layer>
+        <layer id="String01" texture="String">
+          <view angle="0" x="-32" y="-16"/>
+          <view angle="45" col="1" x="-31" y="-14"/>
+          <view angle="90" col="2" row="1" x="-13" y="-14"/>
+          <view angle="135" col="2" y="-14" hm="true"/>
+          <view angle="180" row="1" x="33" y="-15" hm="true"/>
+          <view angle="225" col="3" row="1" x="26" y="-8" hm="true"/>
+          <view angle="270" col="4" x="18"/>
+          <view angle="315" col="3" x="-24" y="-11"/>
+        </layer>
+        <layer id="String02" texture="String">
+          <view angle="0" x="-34" y="-17"/>
+          <view angle="45" col="1" x="-32" y="-14"/>
+          <view angle="90" col="2" x="-9" y="-21"/>
+          <view angle="135" col="2" row="1" x="10" y="-13" hm="true"/>
+          <view angle="180" row="1" x="32" y="-17" hm="true"/>
+          <view angle="225" col="3" x="24" y="-14" hm="true"/>
+          <view angle="270" col="4" x="20"/>
+          <view angle="315" col="3" x="-22" y="-12"/>
+        </layer>
+        <layer id="String03" texture="String">
+          <view angle="0" x="-37" y="-16"/>
+          <view angle="45" col="1" x="-32" y="-16"/>
+          <view angle="90" col="2" x="-8" y="-22"/>
+          <view angle="135" col="2" x="1" y="-17" hm="true"/>
+          <view angle="180" row="1" x="34" y="-20" hm="true"/>
+          <view angle="225" col="3" x="26" y="-12" hm="true"/>
+          <view angle="270" col="4" x="23" y="2"/>
+          <view angle="315" col="3" x="-23" y="-14"/>
+        </layer>
+        <layer id="String04" texture="String">
+          <view angle="0" row="1" x="-39" y="-16"/>
+          <view angle="45" col="1" x="-29" y="-16"/>
+          <view angle="90" col="2" row="1" x="-14" y="-17"/>
+          <view angle="135" col="2" x="1" y="-14" hm="true"/>
+          <view angle="180" row="1" x="33" y="-22" hm="true"/>
+          <view angle="225" col="3" x="23" y="-17" hm="true"/>
+          <view angle="270" col="4" row="1" x="16" y="9"/>
+          <view angle="315" col="3" x="-25" y="-14"/>
+        </layer>
+        <layer id="String05" texture="String">
+          <view angle="0" row="1" x="-38" y="-13"/>
+          <view angle="45" col="1" x="-26" y="-16"/>
+          <view angle="90" col="2" row="1" x="-15" y="-18"/>
+          <view angle="135" col="2" row="1" x="10" y="-12" hm="true"/>
+          <view angle="180" row="1" x="34" y="-21" hm="true"/>
+          <view angle="225" col="3" row="1" x="19" y="-9" hm="true"/>
+          <view angle="270" col="4" row="1" x="16" y="9"/>
+          <view angle="315" col="3" x="-27" y="-13"/>
+        </layer>
+        <layer id="String06" texture="String">
+          <view angle="0" row="1" x="-37" y="-11"/>
+          <view angle="45" col="1" x="-25" y="-15"/>
+          <view angle="90" col="2" row="1" x="-14" y="-15"/>
+          <view angle="135" col="2" row="1" x="12" y="-9" hm="true"/>
+          <view angle="180" row="1" x="35" y="-14" hm="true"/>
+          <view angle="225" col="3" row="1" x="19" y="-11" hm="true"/>
+          <view angle="270" col="4" row="1" x="13" y="7"/>
+          <view angle="315" col="3" x="-30" y="-13"/>
+        </layer>
+        <layer id="String07" texture="String">
+          <view angle="0" row="1" x="-39" y="-10"/>
+          <view angle="45" col="1" x="-29" y="-13"/>
+          <view angle="90" col="2" row="1" x="-13" y="-13"/>
+          <view angle="135" col="2" row="1" x="11" y="-11" hm="true"/>
+          <view angle="180" row="1" x="35" y="-13" hm="true"/>
+          <view angle="225" col="3" row="1" x="21" y="-5" hm="true"/>
+          <view angle="270" col="4" row="1" x="13" y="7"/>
+          <view angle="315" col="3" x="-29" y="-11"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="String01"/>
+          <layerref id="Tail01"/>
+          <layerref id="Base01"/>
+          <layerref id="Handle"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="String02"/>
+          <layerref id="Tail02"/>
+          <layerref id="Base02"/>
+          <layerref id="Handle"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="String03"/>
+          <layerref id="Tail03"/>
+          <layerref id="Base03"/>
+          <layerref id="Handle"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="String03"/>
+          <layerref id="Tail04"/>
+          <layerref id="Base04"/>
+          <layerref id="Handle"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="String04"/>
+          <layerref id="Tail05"/>
+          <layerref id="Base05"/>
+          <layerref id="Handle"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="String05"/>
+          <layerref id="Tail06"/>
+          <layerref id="Base06"/>
+          <layerref id="Handle"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="String06"/>
+          <layerref id="Tail07"/>
+          <layerref id="Base07"/>
+          <layerref id="Handle"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="String07"/>
+          <layerref id="Tail08"/>
+          <layerref id="Base08"/>
+          <layerref id="Handle"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

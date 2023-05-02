@@ -1,0 +1,126 @@
+<f id="NutcrackerRed" parentId="Suits">
+  <g id="Torso">
+    <s id="NutcrackerTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_40_nutcracker_torso.png" pri="1.1"/>
+    <c sId="NutcrackerTorsoBase" c="10551296" a="1.00" b="52.4" ct="0.49" lId="Suits_Color1" lw="N"/>
+    <s id="NutcrackerTorsoDecal" cId="Torso" s="items/base/consumables/clothing/suits/suit_40_nutcracker_torsodecal.png" pri="1.1"/>
+  </g>
+  <g id="TopTshirtLogo" name="Arms">
+    <s id="NutcrackerArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_idle.png" pri="1"/>
+    <c sId="NutcrackerArmIdleBase" c="10551296" a="1.00" b="52.4" ct="0.49" lId="Suits_Color1" lw="N"/>
+    <s id="NutcrackerArmDecal" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_idle_decal.png" pri="1.1"/>
+    <c sId="NutcrackerArmDecal" c="16764931" a="1.00" b="13.2" ct="0.49" lId="Suits_Color4" lw="N"/>
+    <s id="NutcrackerArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_walk1.png" pri="1"/>
+    <c sId="NutcrackerArmWalk1Base" c="10551296" a="1.00" b="52.4" ct="0.49" lId="Suits_Color1" lw="N"/>
+    <s id="NutcrackerArmWalk1Decal" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_walk1_decal.png" pri="1"/>
+    <c sId="NutcrackerArmWalk1Decal" c="16764931" a="1.00" b="13.2" ct="0.49" lId="Suits_Color4" lw="N"/>
+    <s id="NutcrackerArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_walk2.png" pri="1"/>
+    <c sId="NutcrackerArmWalk2Base" c="10551296" a="1.00" b="52.4" ct="0.49" lId="Suits_Color1" lw="N"/>
+    <s id="NutcrackerArmWalk2Decal" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_walk2_decal.png" pri="1"/>
+    <c sId="NutcrackerArmWalk2Decal" c="16764931" a="1.00" b="13.2" ct="0.49" lId="Suits_Color4" lw="N"/>
+    <s id="NutcrackerArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_walk3.png" pri="1"/>
+    <c sId="NutcrackerArmWalk3Base" c="10551296" a="1.00" b="52.4" ct="0.49" lId="Suits_Color1" lw="N"/>
+    <s id="NutcrackerArmWalk3Decal" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_walk3_decal.png" pri="1"/>
+    <c sId="NutcrackerArmWalk3Decal" c="16764931" a="1.00" b="13.2" ct="0.49" lId="Suits_Color4" lw="N"/>
+    <s id="NutcrackerArmWalk4Base" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_sit.png" pri="1"/>
+    <c sId="NutcrackerArmWalk4Base" c="10551296" a="1.00" b="52.4" ct="0.49" lId="Suits_Color1" lw="N"/>
+    <s id="NutcrackerArmWalk4Decal" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_sit_decal.png" pri="1"/>
+    <c sId="NutcrackerArmWalk4Decal" c="16764931" a="1.00" b="13.2" ct="0.49" lId="Suits_Color4" lw="N"/>
+    <s id="NutcrackerArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_throw.png" pri="1"/>
+    <c sId="NutcrackerArmThrowBase" c="10551296" a="1.00" b="52.4" ct="0.49" lId="Suits_Color1" lw="N"/>
+    <s id="NutcrackerArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_raise.png" pri="1"/>
+    <c sId="NutcrackerArmRaiseBase" c="10551296" a="1.00" b="52.4" ct="0.49" lId="Suits_Color1" lw="N"/>
+    <s id="NutcrackerArmThrowDecal" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_throw_decal.png" pri="1"/>
+    <c sId="NutcrackerArmThrowDecal" c="16764931" a="1.00" b="13.2" ct="0.49" lId="Suits_Color4" lw="N"/>
+    <s id="NutcrackerArmRaiseDecal" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_40_nutcracker_arm_raise_decal.png" pri="1"/>
+    <c sId="NutcrackerArmRaiseDecal" c="16764931" a="1.00" b="13.2" ct="0.49" lId="Suits_Color4" lw="N"/>
+  </g>
+  <g id="Hands" icon="$bm/icon_m_longsleeve.png">
+    <s id="GloveArmIdleBase" cId="ArmIdle" s="$bu/hand_arm_idle.png"/>
+    <s id="GloveArmWalk1Base" cId="ArmWalk1" s="$bu/arm_walk1.png"/>
+    <s id="GloveArmWalk2Base" cId="ArmWalk2" s="$bu/arm_walk2.png"/>
+    <s id="GloveArmWalk3Base" cId="ArmWalk3" s="$bu/arm_walk3.png"/>
+    <s id="UnderArmorArmSitBase" cId="ArmSit" s="$bu/hand_arm_sit.png"/>
+    <c sId="GloveArmIdleBase" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="GloveArmWalk1Base" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="GloveArmWalk2Base" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="GloveArmWalk3Base" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="UnderArmorArmSitBase" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <s id="GloveArmThrowBase" cId="ArmRaiseWave1" s="$bu/raise_wave1.png"/>
+    <s id="GloveArmRaiseBase" cId="ArmRaiseWave2" s="$bu/raise_wave2.png"/>
+    <c sId="GloveArmThrowBase" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="GloveArmRaiseBase" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <s id="GloveArmThrowHold" cId="ArmThrowHold" s="$bu/throw_hold.png"/>
+    <s id="GloveArmThrowOpen" cId="ArmThrowOpen" s="$bu/throw_open.png"/>
+    <s id="GloveArmThrowPoint" cId="ArmThrowPoint" s="$bu/throw_point.png"/>
+    <s id="GloveArmThrowStop" cId="ArmThrowStop" s="$bu/throw_stop.png"/>
+    <s id="GloveArmThrowThrow" cId="ArmThrowThrow" s="$bu/throw_throw.png"/>
+    <s id="GloveArmThrowThumb" cId="ArmThrowThumb" s="$bu/throw_thumbs.png"/>
+    <c sId="GloveArmThrowHold" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="GloveArmThrowOpen" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="GloveArmThrowPoint" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="GloveArmThrowStop" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="GloveArmThrowThrow" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="GloveArmThrowThumb" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+  </g>
+  <g id="SkinnyChexBase" name="Legs" icon="$bu/icon_legs_trouser.png">
+    <s id="NutcrackerLegIdle" cId="LegIdle" s="$bu/skinny_leg_idle.png" pri="1"/>
+    <s id="NutcrackerLegWalk1" cId="LegWalk1" s="$bu/skinny_leg_walk1.png" pri="1"/>
+    <s id="NutcrackerLegWalk2" cId="LegWalk2" s="$bu/skinny_leg_walk2.png" pri="1"/>
+    <s id="NutcrackerLegWalk3" cId="LegWalk3" s="$bu/skinny_leg_walk3.png" pri="1"/>
+    <s id="NutcrackerLegWalk4" cId="LegWalk4" s="$bu/skinny_leg_walk4.png" pri="1"/>
+    <s id="NutcrackerLegSitUpper" cId="LegSitUpper" s="$bu/skinny_sit_upper.png" pri="1"/>
+    <s id="NutcrackerLegSitLower" cId="LegSitLower" s="$bu/skinny_sit_lower.png" pri="1"/>
+    <c sId="NutcrackerLegIdle" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="NutcrackerLegWalk1" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="NutcrackerLegWalk2" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="NutcrackerLegWalk3" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="NutcrackerLegWalk4" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="NutcrackerLegSitUpper" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+    <c sId="NutcrackerLegSitLower" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2" lw="N"/>
+  </g>
+  <g id="StandardShoe" name="Feet" icon="$bm/icon_shoe_standard.png">
+    <s id="NutcrackerFeetIdle" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_12_idle.png" pri="2"/>
+    <s id="NutcrackerFeetWalk1" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_12_walk1.png" pri="2"/>
+    <s id="NutcrackerFeetWalk2" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_12_walk2.png" pri="2"/>
+    <s id="NutcrackerFeetWalk3" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_12_walk3.png" pri="2"/>
+    <s id="NutcrackerFeetWalk4" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_12_walk4.png" pri="2"/>
+    <s id="NutcrackerFeetSit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_12_sit.png" pri="2"/>
+    <c sId="NutcrackerFeetIdle" a="0.65" b="13.2" ct="0.49" lId="Suits_Color3" lw="N"/>
+    <c sId="NutcrackerFeetWalk1" a="0.65" b="13.2" ct="0.49" lId="Suits_Color3" lw="N"/>
+    <c sId="NutcrackerFeetWalk2" a="0.65" b="13.2" ct="0.49" lId="Suits_Color3" lw="N"/>
+    <c sId="NutcrackerFeetWalk3" a="0.65" b="13.2" ct="0.49" lId="Suits_Color3" lw="N"/>
+    <c sId="NutcrackerFeetWalk4" a="0.65" b="13.2" ct="0.49" lId="Suits_Color3" lw="N"/>
+    <c sId="NutcrackerFeetSit" a="0.65" b="13.2" ct="0.49" lId="Suits_Color3" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconSuit_Nutcracker" icon="items/base/consumables/clothing/suits/suit_40_icon_nutcrackerred.png" w="48" h="48"/>
+    <s id="IconSuit_Nutcracker" cId="IconSuit_Nutcracker" s="items/base/consumables/clothing/suits/suit_40_icon_nutcrackerred.png"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Suits_Color1" name="Color" desc="Choose a color" sel="Red" seld="White">
+      <c id="Red" icon="$bu/icon_red.png" c="10551296" a="1.00" b="52.4" ct="0.49" lId="Suits_Color1"/>
+    </b>
+    <b id="Suits_Color2" name="Color" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="16777215" a="0.84" b="51.0" ct="0.49" lId="Suits_Color2"/>
+    </b>
+    <b id="Suits_Color3" name="Color" desc="Choose a color" sel="Black" seld="White">
+      <c id="Black" icon="$bu/icon_black.png" a="0.65" b="13.2" ct="0.49" lId="Suits_Color3"/>
+    </b>
+    <b id="Suits_Color3" name="Color" desc="Choose a color" sel="Yellow" seld="White">
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16764931" a="1.00" b="13.2" ct="0.49" lId="Suits_Color4"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot01"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="JSFeet"/>
+</f>

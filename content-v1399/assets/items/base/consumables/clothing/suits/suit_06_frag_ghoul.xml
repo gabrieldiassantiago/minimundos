@@ -1,0 +1,133 @@
+<f id="GhoulSuit" parentId="Suits">
+  <b id="Gender" sel="Female">
+    <g id="Female">
+      <g id="ZombieTop" name="ZombieTop" icon="$bf/icon_f_retro.png" xp="N">
+        <s id="ZomBallTorsoBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_09_femsinglet.png" pri="1"/>
+        <s id="ZomJacketTorsoBase" cId="Torso" s="items/base/consumables/clothing/top04/top04_05_femshirt.png" pri="2"/>
+        <s id="ZomTshirtArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_short_arm_idle.png" pri="2"/>
+        <s id="ZomTshirtArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_short_arm_walk1.png" pri="2"/>
+        <s id="ZomTshirtArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_short_arm_walk2.png" pri="2"/>
+        <s id="ZomTshirtArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_short_arm_walk3.png" pri="2"/>
+        <s id="ZomTshirtArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_short_arm_sit.png" pri="2"/>
+        <c sId="ZomBallTorsoBase" c="12763852" a="1.00" b="53.6" ct="2.00" lId="ZomTopColor"/>
+        <c sId="ZomTshirtArmIdleBase" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <c sId="ZomTshirtArmWalk1Base" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <c sId="ZomTshirtArmWalk2Base" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <c sId="ZomTshirtArmWalk3Base" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <c sId="ZomTshirtArmSitBase" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <s id="ZomTshirtArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_long_arm_throw.png" pri="2"/>
+        <s id="ZomTshirtArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_long_arm_raise.png" pri="2"/>
+        <c sId="ZomTshirtArmThrowBase" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <c sId="ZomTshirtArmRaiseBase" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <c sId="ZomJacketTorsoBase" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor"/>
+      </g>
+      <g id="ZombieShoe" name="Zombie Shoe" icon="$bu/icon_shoe_foot.png">
+        <s id="ZomChuckIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_03_idle.png" pri="2"/>
+        <s id="ZomChuckWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_03_walk1.png" pri="2"/>
+        <s id="ZomChuckWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_03_walk2.png" pri="2"/>
+        <s id="ZomChuckWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_03_walk3.png" pri="2"/>
+        <s id="ZomChuckWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_03_walk4.png" pri="2"/>
+        <s id="ZomChuckSit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_03_sit.png" pri="2"/>
+        <c sId="ZomChuckIdleBase" c="16777215" a="0.51" b="-97.8" ct="0.12" lId="ShoeColour"/>
+        <c sId="ZomChuckWalk1Base" c="16777215" a="0.51" b="-97.8" ct="0.12" lId="ShoeColour" lw="N"/>
+        <c sId="ZomChuckWalk2Base" c="16777215" a="0.51" b="-97.8" ct="0.12" lId="ShoeColour" lw="N"/>
+        <c sId="ZomChuckWalk3Base" c="16777215" a="0.51" b="-97.8" ct="0.12" lId="ShoeColour" lw="N"/>
+        <c sId="ZomChuckWalk4Base" c="16777215" a="0.51" b="-97.8" ct="0.12" lId="ShoeColour" lw="N"/>
+        <c sId="ZomChuckSit" c="16777215" a="0.51" b="-97.8" ct="0.12" lId="ShoeColour" lw="N"/>
+      </g>
+      <g id="ZombiePants" name="Zombie Pants" icon="$bu/icon_legs_trouser.png">
+        <s id="ZomPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_05_idle.png" pri="3"/>
+        <s id="ZomPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_05_walk1.png" pri="3"/>
+        <s id="ZomPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_05_walk2.png" pri="3"/>
+        <s id="ZomPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_05_walk3.png" pri="3"/>
+        <s id="ZomPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_05_walk4.png" pri="3"/>
+        <s id="ZomSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_05_sit.png" pri="3"/>
+        <s id="ZomSitLowerBase" cId="LegSitLower" s="$bf/longskirt_sit.png" pri="3"/>
+        <c sId="ZomPantIdleBase" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor"/>
+        <c sId="ZomPantWalk1Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="ZomPantWalk2Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="ZomPantWalk3Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="ZomPantWalk4Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="ZomSitUpperBase" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="ZomSitLowerBase" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+      </g>
+    </g>
+    <g id="Male">
+      <g id="ZombieTop" name="ZombieTop" icon="$bf/icon_f_retro.png" xp="N">
+        <s id="ZomBallTorsoBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_01_vest.png" pri="1"/>
+        <s id="ZomJacketTorsoBase" cId="Torso" s="items/base/consumables/clothing/top04/top04_01_shirttorso.png" pri="2"/>
+        <s id="ZomTshirtArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_short_arm_idle.png" pri="2"/>
+        <s id="ZomTshirtArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_short_arm_walk1.png" pri="2"/>
+        <s id="ZomTshirtArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_short_arm_walk2.png" pri="2"/>
+        <s id="ZomTshirtArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_short_arm_walk3.png" pri="2"/>
+        <s id="ZomTshirtArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_short_arm_sit.png" pri="2"/>
+        <c sId="ZomBallTorsoBase" c="12763852" a="1.00" b="53.6" ct="2.00" lId="ZomTopColor"/>
+        <c sId="ZomTshirtArmIdleBase" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <c sId="ZomTshirtArmWalk1Base" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <c sId="ZomTshirtArmWalk2Base" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <c sId="ZomTshirtArmWalk3Base" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <c sId="ZomTshirtArmSitBase" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <s id="ZomTshirtArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_long_arm_throw.png" pri="2"/>
+        <s id="ZomTshirtArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_long_arm_raise.png" pri="2"/>
+        <c sId="ZomTshirtArmThrowBase" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <c sId="ZomTshirtArmRaiseBase" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor" lw="N"/>
+        <c sId="ZomJacketTorsoBase" c="10994395" a="0.92" b="43.0" ct="0.50" lId="ZomJacketColor"/>
+      </g>
+      <g id="ZombiePants" name="Zombie Pants" icon="$bu/icon_legs_trouser.png">
+        <s id="ZomPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_01_idle.png" pri="3"/>
+        <s id="ZomPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_01_walk1.png" pri="3"/>
+        <s id="ZomPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_01_walk2.png" pri="3"/>
+        <s id="ZomPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_01_walk3.png" pri="3"/>
+        <s id="ZomPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_01_walk4.png" pri="3"/>
+        <s id="ZomSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_01_sit_upper.png" pri="3"/>
+        <s id="ZomSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/bot03/bot03_01_lower.png" pri="3"/>
+        <c sId="ZomPantWalk1Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="ZomPantWalk2Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="ZomPantWalk3Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="ZomPantWalk4Base" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="ZomSitUpperBase" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="ZomSitLowerBase" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor" lw="N"/>
+        <c sId="ZomPantIdleBase" c="8687513" a="1.00" b="32.0" ct="1.94" lId="PandaPantsColor"/>
+      </g>
+      <g id="ChuckTaylor" name="Chuck Taylors" icon="$bu/icon_shoe_chuck.png">
+        <s id="ZomChuckIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_01_idle.png" pri="2"/>
+        <s id="ZomChuckWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_01_walk1.png" pri="2"/>
+        <s id="ZomChuckWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_01_walk2.png" pri="2"/>
+        <s id="ZomChuckWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_01_walk3.png" pri="2"/>
+        <s id="ZomChuckWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_01_walk4.png" pri="2"/>
+        <s id="ZomChuckSit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_01_sit.png" pri="2"/>
+        <c name="shoe" sId="ZomChuckIdleBase" a="0.99" b="73.9" ct="0.56" lId="ChuckColor"/>
+        <c name="shoe" sId="ZomChuckWalk1Base" a="0.99" b="73.9" ct="0.56" lId="ChuckColor" lw="N"/>
+        <c name="shoe" sId="ZomChuckWalk2Base" a="0.99" b="73.9" ct="0.56" lId="ChuckColor" lw="N"/>
+        <c name="shoe" sId="ZomChuckWalk3Base" a="0.99" b="73.9" ct="0.56" lId="ChuckColor" lw="N"/>
+        <c name="shoe" sId="ZomChuckWalk4Base" a="0.99" b="73.9" ct="0.56" lId="ChuckColor" lw="N"/>
+        <c name="shoe" sId="ZomChuckSit" a="0.99" b="73.9" ct="0.56" lId="ChuckColor" lw="N"/>
+        <s id="ZomLacesChuckSit" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_06_chuck_sit.png" pri="3"/>
+        <s id="ZomLacesChuckWalk4" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_06_chuck_walk4.png" pri="3"/>
+        <s id="ZomLacesChuckWalk3" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_06_chuck_walk3.png" pri="3"/>
+        <s id="ZomLacesChuckWalk2" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_06_chuck_walk2.png" pri="3"/>
+        <s id="ZomLacesChuckWalk1" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_06_chuck_walk1.png" pri="3"/>
+        <s id="ZomLacesChuckIdle" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_06_chuck_idle.png" pri="3"/>
+        <c name="shoe" sId="LacesChuckSit" c="10420224" b="1.4" lId="ChuckLacesColor"/>
+        <c name="shoe" sId="LacesChuckWalk4" c="10420224" b="1.4" lId="ChuckLacesColor" lw="N"/>
+        <c name="shoe" sId="LacesChuckWalk3" c="10420224" b="1.4" lId="ChuckLacesColor" lw="N"/>
+        <c name="shoe" sId="LacesChuckWalk2" c="10420224" b="1.4" lId="ChuckLacesColor" lw="N"/>
+        <c name="shoe" sId="LacesChuckWalk1" c="10420224" b="1.4" lId="ChuckLacesColor" lw="N"/>
+        <c name="shoe" sId="LacesChuckIdle" c="10420224" b="1.4" lId="ChuckLacesColor" lw="N"/>
+      </g>
+    </g>
+  </b>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="JSTop"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+</f>

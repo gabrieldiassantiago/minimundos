@@ -1,0 +1,268 @@
+<item.SpriteItem id="0" name="Freeze Halo" desc="A freeze halo" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0.66,-0.28" max="0.28,0.74,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="texture01" source="items/base/consumables/magic/con_123_toiletgun_halo.png" cols="2" rows="3"/>
+  </textures>
+  <sounds>
+    <sound id="sound"/>
+  </sounds>
+  <nodes>
+    <node id="Behind" y="0.68">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="purple" texture="texture01">
+          <view col="1" row="2" x="-5" y="10"/>
+        </layer>
+        <layer id="green" texture="texture01">
+          <view col="1" row="1" x="-2" y="13"/>
+        </layer>
+        <layer id="red" texture="texture01">
+          <view angle="0" col="1" hm="true"/>
+          <view angle="45" col="1"/>
+          <view angle="90" col="1" hm="true"/>
+          <view angle="135" col="1"/>
+          <view angle="180" col="1" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="270" col="1" hm="true"/>
+          <view angle="315" col="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In 01">
+          <layerref id="purple" y="-27" a="0.2"/>
+          <layerref id="green" y="-17" a="0"/>
+          <layerref id="red" y="-20" a="0.2"/>
+        </frame>
+        <frame id="In 02">
+          <layerref id="purple" y="-24" a="0.5"/>
+          <layerref id="green" y="-15" a="0.2"/>
+          <layerref id="red" y="-17" a="0.5"/>
+        </frame>
+        <frame id="In 03">
+          <layerref id="purple" y="-22" a="0.8"/>
+          <layerref id="green" y="-12" a="0.5"/>
+          <layerref id="red" y="-15" a="0.8"/>
+        </frame>
+        <frame id="In 04">
+          <layerref id="purple" y="-19" a="0.8"/>
+          <layerref id="green" y="-10" a="0.8"/>
+          <layerref id="red" y="-12"/>
+        </frame>
+        <frame id="In 05">
+          <layerref id="purple" y="-14"/>
+          <layerref id="green" y="-6"/>
+          <layerref id="red" y="-7"/>
+        </frame>
+        <frame id="In 06">
+          <layerref id="purple" y="-10"/>
+          <layerref id="green" y="-4"/>
+          <layerref id="red" y="-5"/>
+        </frame>
+        <frame id="In 07">
+          <layerref id="purple" y="-6"/>
+          <layerref id="green" y="-2"/>
+          <layerref id="red" y="-2"/>
+        </frame>
+        <frame id="In 08">
+          <layerref id="purple" y="-3"/>
+          <layerref id="green" y="-1"/>
+          <layerref id="red"/>
+        </frame>
+        <frame id="In 09">
+          <layerref id="purple"/>
+          <layerref id="green"/>
+          <layerref id="red"/>
+        </frame>
+        <frame id="Loop 01">
+          <layerref id="purple"/>
+          <layerref id="green"/>
+          <layerref id="red"/>
+        </frame>
+        <frame id="Out 01">
+          <layerref id="purple" y="10"/>
+          <layerref id="green" y="5"/>
+          <layerref id="red" y="6"/>
+        </frame>
+        <frame id="Out 02">
+          <layerref id="purple" y="20" a="0.9"/>
+          <layerref id="green" y="10"/>
+          <layerref id="red" y="12" a="0.9"/>
+        </frame>
+        <frame id="Out 03">
+          <layerref id="purple" y="30" a="0.6"/>
+          <layerref id="green" y="15" a="0.9"/>
+          <layerref id="red" y="20" a="0.6"/>
+        </frame>
+        <frame id="Out 04">
+          <layerref id="purple" y="45" a="0.3"/>
+          <layerref id="green" y="20" a="0.6"/>
+          <layerref id="red" y="30" a="0.3"/>
+        </frame>
+        <frame id="Out 05">
+          <layerref id="purple" y="60" a="0.1"/>
+          <layerref id="green" y="25" a="0.3"/>
+          <layerref id="red" y="40" a="0.1"/>
+        </frame>
+        <frame id="Out 06">
+          <layerref id="purple" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+          <frameref id="In 04"/>
+          <frameref id="In 05"/>
+          <frameref id="In 06"/>
+          <frameref id="In 07"/>
+          <frameref id="In 08"/>
+          <frameref id="In 09"/>
+        </animation>
+        <animation id="Loop" framerate="2">
+          <frameref id="Loop 01" duration="3"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="Out 01"/>
+          <frameref id="Out 02"/>
+          <frameref id="Out 03"/>
+          <frameref id="Out 04"/>
+          <frameref id="Out 05"/>
+          <frameref id="Out 06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront" y="0.66" depthBias="-1">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="purple" texture="texture01">
+          <view row="2" x="-5" y="10"/>
+        </layer>
+        <layer id="green" texture="texture01">
+          <view row="1" x="-2" y="13"/>
+        </layer>
+        <layer id="red" texture="texture01">
+          <view angle="0" hm="true"/>
+          <view angle="45"/>
+          <view angle="90" hm="true"/>
+          <view angle="135"/>
+          <view angle="180" hm="true"/>
+          <view angle="225"/>
+          <view angle="270" hm="true"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In 01">
+          <layerref id="purple" y="-27" a="0.2"/>
+          <layerref id="green" y="-17" a="0"/>
+          <layerref id="red" y="-20" a="0.2"/>
+        </frame>
+        <frame id="In 02">
+          <layerref id="purple" y="-24" a="0.5"/>
+          <layerref id="green" y="-15" a="0.2"/>
+          <layerref id="red" y="-17" a="0.5"/>
+        </frame>
+        <frame id="In 03">
+          <layerref id="purple" y="-22" a="0.8"/>
+          <layerref id="green" y="-12" a="0.5"/>
+          <layerref id="red" y="-15" a="0.8"/>
+        </frame>
+        <frame id="In 04">
+          <layerref id="purple" y="-19" a="0.8"/>
+          <layerref id="green" y="-10" a="0.8"/>
+          <layerref id="red" y="-12"/>
+        </frame>
+        <frame id="In 05">
+          <layerref id="purple" y="-14"/>
+          <layerref id="green" y="-6"/>
+          <layerref id="red" y="-7"/>
+        </frame>
+        <frame id="In 06">
+          <layerref id="purple" y="-10"/>
+          <layerref id="green" y="-4"/>
+          <layerref id="red" y="-5"/>
+        </frame>
+        <frame id="In 07">
+          <layerref id="purple" y="-6"/>
+          <layerref id="green" y="-2"/>
+          <layerref id="red" y="-2"/>
+        </frame>
+        <frame id="In 08">
+          <layerref id="purple" y="-3"/>
+          <layerref id="green" y="-1"/>
+          <layerref id="red"/>
+        </frame>
+        <frame id="In 09">
+          <layerref id="purple"/>
+          <layerref id="green"/>
+          <layerref id="red"/>
+        </frame>
+        <frame id="Loop 01">
+          <layerref id="purple"/>
+          <layerref id="green"/>
+          <layerref id="red"/>
+        </frame>
+        <frame id="Loop 03">
+          <layerref id="purple"/>
+          <layerref id="green"/>
+          <layerref id="red"/>
+        </frame>
+        <frame id="Out 01">
+          <layerref id="purple" y="10"/>
+          <layerref id="green" y="5"/>
+          <layerref id="red" y="6"/>
+        </frame>
+        <frame id="Out 02">
+          <layerref id="purple" y="20" a="0.9"/>
+          <layerref id="green" y="10"/>
+          <layerref id="red" y="12" a="0.9"/>
+        </frame>
+        <frame id="Out 03">
+          <layerref id="purple" y="30" a="0.6"/>
+          <layerref id="green" y="15" a="0.9"/>
+          <layerref id="red" y="20" a="0.6"/>
+        </frame>
+        <frame id="Out 04">
+          <layerref id="purple" y="45" a="0.3"/>
+          <layerref id="green" y="20" a="0.6"/>
+          <layerref id="red" y="30" a="0.3"/>
+        </frame>
+        <frame id="Out 05">
+          <layerref id="purple" y="60" a="0.1"/>
+          <layerref id="green" y="25" a="0.3"/>
+          <layerref id="red" y="40" a="0.1"/>
+        </frame>
+        <frame id="Out 06">
+          <layerref id="purple" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+          <frameref id="In 04"/>
+          <frameref id="In 05"/>
+          <frameref id="In 06"/>
+          <frameref id="In 07"/>
+          <frameref id="In 08"/>
+          <frameref id="In 09"/>
+        </animation>
+        <animation id="Loop" framerate="2">
+          <frameref id="Loop 01" duration="3"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="Out 01"/>
+          <frameref id="Out 02"/>
+          <frameref id="Out 03"/>
+          <frameref id="Out 04"/>
+          <frameref id="Out 05"/>
+          <frameref id="Out 06"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

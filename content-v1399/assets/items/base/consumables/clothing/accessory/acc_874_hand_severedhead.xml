@@ -1,0 +1,102 @@
+<item.SpriteItem id="0" name="DanHead" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/clothing/accessory/acc_874_hand_severedhead.png" cols="5" rows="1"/>
+    <texture id="BloodDrip" source="items/base/consumables/clothing/accessory/acc_654_hand_drips.png" cols="4" rows="4"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Head" texture="head">
+          <view angle="0" col="2" y="71" hm="true"/>
+          <view angle="45" col="1" x="-2" y="72" hm="true"/>
+          <view angle="90" x="3" y="70"/>
+          <view angle="135" col="1" x="1" y="72"/>
+          <view angle="180" col="2" y="71"/>
+          <view angle="225" col="3" x="2" y="75"/>
+          <view angle="270" col="4" x="-1" y="73"/>
+          <view angle="315" col="3" x="-3" y="75" hm="true"/>
+        </layer>
+        <layer id="Drips01" texture="BloodDrip">
+          <view angle="0" x="-2" y="36"/>
+          <view angle="45" col="1" x="-8" y="29"/>
+          <view angle="90" col="3" x="7" y="33"/>
+          <view angle="135" col="1" x="9" y="29" hm="true"/>
+          <view angle="180" x="4" y="37" hm="true"/>
+          <view angle="225" col="2" x="7" y="37"/>
+          <view angle="270" col="3" y="36" alpha="0"/>
+          <view angle="315" col="2" x="-5" y="37" hm="true"/>
+        </layer>
+        <layer id="Drips02" texture="BloodDrip">
+          <view angle="0" row="1" x="-4" y="46" alpha="0.8"/>
+          <view angle="45" col="1" row="1" x="-8" y="44" alpha="0.8"/>
+          <view angle="90" col="3" row="1" x="7" y="47" alpha="0.8"/>
+          <view angle="135" col="1" row="1" x="10" y="43" alpha="0.8" hm="true"/>
+          <view angle="180" row="1" x="5" y="49" alpha="0.8" hm="true"/>
+          <view angle="225" col="2" row="1" x="6" y="53" alpha="0.8"/>
+          <view angle="270" col="3" row="1" y="50" alpha="0"/>
+          <view angle="315" col="2" row="1" x="-5" y="53" alpha="0.8" hm="true"/>
+        </layer>
+        <layer id="Drips03" texture="BloodDrip">
+          <view angle="0" row="2" x="-6" y="64" alpha="0.65"/>
+          <view angle="45" col="1" row="2" x="-10" y="55" alpha="0.65"/>
+          <view angle="90" col="3" row="2" x="9" y="57" alpha="0.65"/>
+          <view angle="135" col="1" row="2" x="12" y="61" alpha="0.65" hm="true"/>
+          <view angle="180" row="2" x="7" y="63" alpha="0.65" hm="true"/>
+          <view angle="225" col="2" row="2" x="8" y="68" alpha="0.65"/>
+          <view angle="270" col="3" row="2" y="62" alpha="0"/>
+          <view angle="315" col="2" row="2" x="-2" y="71" alpha="0.65"/>
+        </layer>
+        <layer id="Drips04" texture="BloodDrip">
+          <view angle="0" row="3" x="5" y="93" alpha="0.5"/>
+          <view angle="45" col="1" row="3" x="-3" y="88" alpha="0.5"/>
+          <view angle="90" col="3" row="3" x="8" y="81" alpha="0.5"/>
+          <view angle="135" col="1" row="3" x="3" y="87" alpha="0.5" hm="true"/>
+          <view angle="180" row="3" x="4" y="90" alpha="0.5"/>
+          <view angle="225" col="2" row="3" x="8" y="80" alpha="0.5" hm="true"/>
+          <view angle="270" col="3" row="3" x="1" y="86" alpha="0"/>
+          <view angle="315" col="2" row="3" x="-5" y="86" alpha="0.5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Head"/>
+          <layerref id="Drips01" y="51"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Head"/>
+          <layerref id="Drips02" y="51"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Head"/>
+          <layerref id="Drips03" y="51" a="0.75"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Head"/>
+          <layerref id="Drips04" y="51" a="0.5"/>
+        </frame>
+        <frame id="off">
+          <layerref id="Head"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

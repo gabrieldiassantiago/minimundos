@@ -1,0 +1,75 @@
+<item.SpriteItem id="5465" name="Asas de Borboleta do Sr. Charada" desc="Juntos nós conseguimos!" tags="rare,consumable,actionbar,wear,back,action_wearable_toggle" icon="items/base/mystery/mystery_18_icon.png" price="99" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.42,0,-0.42" max="0.42,0.4,0.42"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="nature+10"/>
+    <entry key="action_attributes_secondary" value="health+10,speed+10"/>
+  </data>
+  <textures>
+    <texture id="color" source="items/base/mystery/mystery_18_item_color.png" cols="2" rows="1"/>
+    <texture id="green" source="items/base/mystery/mystery_18_item_green.png" cols="2" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/edible/con_eat_38_pumpkinpie_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.42,0,-0.42" max="0.42,0.4,0.42"/>
+      <layers>
+        <layer id="color" texture="color">
+          <view angle="45" x="1" y="36"/>
+          <view angle="135" x="-1" y="36" hm="true"/>
+          <view angle="225" col="1" x="6" y="37"/>
+          <view angle="315" col="1" x="-6" y="37" hm="true"/>
+        </layer>
+        <layer id="green" texture="green">
+          <view angle="45" x="1" y="36"/>
+          <view angle="135" x="-1" y="36" hm="true"/>
+          <view angle="225" col="1" x="6" y="37"/>
+          <view angle="315" col="1" x="-6" y="37" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view y="25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="color">
+          <layerref id="shadow" a="0.5"/>
+          <layerref id="color"/>
+        </frame>
+        <frame id="mix_01">
+          <layerref id="shadow" a="0.5"/>
+          <layerref id="green"/>
+          <layerref id="color" a="0.66"/>
+        </frame>
+        <frame id="mix_02">
+          <layerref id="shadow" a="0.5"/>
+          <layerref id="green"/>
+          <layerref id="color" a="0.33"/>
+        </frame>
+        <frame id="green">
+          <layerref id="shadow" a="0.5"/>
+          <layerref id="green"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="blend" framerate="8">
+          <frameref id="green" duration="16"/>
+          <frameref id="mix_02" duration="2"/>
+          <frameref id="mix_01" duration="2"/>
+          <frameref id="color" duration="8"/>
+          <frameref id="mix_01" duration="2"/>
+          <frameref id="mix_02" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

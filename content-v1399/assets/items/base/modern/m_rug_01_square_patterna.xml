@@ -1,0 +1,49 @@
+<item.SpriteItem desc="Saia do comum e inove no piso com este carpete divertido!" dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" gridActive="false" icon="items/base/modern/icon_m_rug_01_square_patterna.png" id="409" name="Carpete com Circulos" tags="floor" price="40" tokens="400" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="1,0,1" min="-1,-0.001,-1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture cols="1" id="base" rows="1" source="items/base/modern/m_rug_01_square.png"/>
+    <texture cols="2" id="design" rows="2" source="items/base/modern/m_rug_01_square_patterna.png"/>
+  </textures>
+  <nodes>
+    <node id="rug_square" layer="surface">
+      <box max="1,0,1" min="-1,-0.001,-1"/>
+      <layers>
+        <layer id="left" texture="base">
+          <view angle="45" x="-64" y="65"/>
+          <view angle="135" x="-64" y="65"/>
+          <view angle="225" x="-64" y="65"/>
+          <view angle="315" x="-64" y="65"/>
+        </layer>
+        <layer id="right" texture="base">
+          <view angle="45" mirror="true" x="65" y="65"/>
+          <view angle="135" mirror="true" x="65" y="65"/>
+          <view angle="225" mirror="true" x="65" y="65"/>
+          <view angle="315" mirror="true" x="65" y="65"/>
+        </layer>
+        <layer id="design" texture="design">
+          <view alpha="0.6" angle="45" y="65"/>
+          <view alpha="0.6" angle="135" col="1" y="65"/>
+          <view alpha="0.6" angle="225" row="1" y="65"/>
+          <view alpha="0.6" angle="315" col="1" row="1" y="65"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref color="0xffab8b79" id="left"/>
+          <layerref color="0xffab8b79" id="right"/>
+          <layerref id="design"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

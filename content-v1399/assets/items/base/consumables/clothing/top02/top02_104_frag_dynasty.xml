@@ -1,0 +1,37 @@
+<f id="Top02_104DynastyDress" parentId="Top02">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top02_104TorsoMale" cId="Torso" s="items/base/consumables/clothing/top02/top02_104_torso_m.png" pri="2"/>
+    </g>
+    <g id="Female">
+      <s id="Top02_104TorsoFemale" cId="Torso" s="items/base/consumables/clothing/top02/top02_104_torso_f.png" pri="2"/>
+      <s id="Top02_104Skin" cId="Torso" s="items/base/consumables/clothing/top01/top01_18_corset_skin.png" pri="0.5"/>
+      <c sId="Top02_104Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+    </g>
+  </b>
+  <g id="Leg" icon="$bu/icon_skinny_trouser.png">
+    <s id="Top02_104IdleBase" cId="LegIdle" s="items/base/consumables/clothing/top02/top02_104_leg_idle.png" pri="4"/>
+    <s id="Top02_104Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/top02/top02_104_leg_walk1.png" pri="4"/>
+    <s id="Top02_104Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/top02/top02_104_leg_walk2.png" pri="4"/>
+    <s id="Top02_104Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/top02/top02_104_leg_walk3.png" pri="4"/>
+    <s id="Top02_104Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/top02/top02_104_leg_walk4.png" pri="4"/>
+    <s id="Top02_104SitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_104_leg_sit_upper.png" pri="4"/>
+    <s id="Top02_104SitLowerBase" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_104_leg_sit_lower.png" pri="4"/>
+  </g>
+  <g id="Arm" name="Arm" icon="$bm/icon_m_tshirt.png">
+    <s id="Top02_104ArmIdleStripe" cId="ArmIdle" s="items/base/consumables/clothing/top02/top02_104_arm_idle.png" ty="-3" pri="4.1"/>
+    <s id="Top02_104ArmWalk1Stripe" cId="ArmWalk1" s="items/base/consumables/clothing/top02/top02_104_arm_walk1.png" ty="-3" pri="4.1"/>
+    <s id="Top02_104ArmWalk2Stripe" cId="ArmWalk2" s="items/base/consumables/clothing/top02/top02_104_arm_walk2.png" ty="-3" pri="4.1"/>
+    <s id="Top02_104ArmWalk3Stripe" cId="ArmWalk3" s="items/base/consumables/clothing/top02/top02_104_arm_walk3.png" ty="-3" pri="4.1"/>
+    <s id="Top02_104ArmThrowStripe" cId="ArmThrow" s="items/base/consumables/clothing/top02/top02_104_arm_throw.png" pri="4.1"/>
+    <s id="Top02_104ArmSitStripe" cId="ArmSit" s="items/base/consumables/clothing/top02/top02_104_arm_sit.png" ty="-3" pri="4.1"/>
+    <s id="Top02_104ArmRaiseStripe" cId="ArmRaise" s="items/base/consumables/clothing/top02/top02_104_arm_raise.png" pri="4.1"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop02_104" icon="items/base/consumables/clothing/top02/top02_104_dynasty_icon_a.png" w="48" h="48"/>
+    <s id="IconTop02_104Base" cId="IconTop02_104" s="items/base/consumables/clothing/top02/top02_104_dynasty_icon_a.png"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+</f>

@@ -1,0 +1,103 @@
+<item.SpriteItem id="0" name="Paper Windmill" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Wand" source="items/base/consumables/clothing/accessory/acc_307_hand_bubblegun.png" cols="5" rows="1"/>
+    <texture id="Bubble" source="items/base/consumables/clothing/accessory/acc_306_hand_bubble.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Sparkles">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="Wand" texture="Wand">
+          <view angle="0" col="2" x="3" y="12" hm="true"/>
+          <view angle="45" y="15"/>
+          <view angle="90" col="1" y="15"/>
+          <view angle="135" x="-3" y="15" hm="true"/>
+          <view angle="180" col="2" x="-2" y="15"/>
+          <view angle="225" col="3" x="-3" y="15"/>
+          <view angle="270" col="4" y="15"/>
+          <view angle="315" col="3" x="3" y="10" hm="true"/>
+        </layer>
+        <layer id="Bubbles_01" texture="Bubble">
+          <view angle="0" x="40" hm="true"/>
+          <view angle="45" x="37" y="15"/>
+          <view angle="90" y="15"/>
+          <view angle="135" x="-37" y="15" hm="true"/>
+          <view angle="180" x="-40"/>
+          <view angle="225" x="-37"/>
+          <view angle="270" y="-15"/>
+          <view angle="315" x="37" hm="true"/>
+        </layer>
+        <layer id="Bubbles_02" texture="Bubble">
+          <view angle="0" col="1" x="40" hm="true"/>
+          <view angle="45" col="1" x="37" y="15"/>
+          <view angle="90" col="1" y="15"/>
+          <view angle="135" col="1" x="-37" y="15" hm="true"/>
+          <view angle="180" col="1" x="-40"/>
+          <view angle="225" col="1" x="-37"/>
+          <view angle="270" col="1" y="-15"/>
+          <view angle="315" col="1" x="37" hm="true"/>
+        </layer>
+        <layer id="Bubbles_03" texture="Bubble">
+          <view angle="0" col="2" x="40" y="-10" hm="true"/>
+          <view angle="45" col="2" x="37" y="5"/>
+          <view angle="90" col="2" y="5"/>
+          <view angle="135" col="2" x="-37" y="5" hm="true"/>
+          <view angle="180" col="2" x="-40" y="-10"/>
+          <view angle="225" col="2" x="-37" y="-10"/>
+          <view angle="270" col="2" y="-27"/>
+          <view angle="315" col="2" x="37" y="-10" hm="true"/>
+        </layer>
+        <layer id="Bubbles_04" texture="Bubble">
+          <view angle="0" col="3" x="40" hm="true"/>
+          <view angle="45" col="3" x="37" y="12"/>
+          <view angle="90" col="3" y="15"/>
+          <view angle="135" col="3" x="-37" y="12" hm="true"/>
+          <view angle="180" col="3" x="-40"/>
+          <view angle="225" col="3" x="-37" y="-2"/>
+          <view angle="270" col="3" y="-15"/>
+          <view angle="315" col="3" x="37" y="-2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Wand"/>
+          <layerref id="Bubbles_01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Wand"/>
+          <layerref id="Bubbles_02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Wand"/>
+          <layerref id="Bubbles_03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Wand"/>
+          <layerref id="Bubbles_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="3">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

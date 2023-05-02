@@ -1,0 +1,68 @@
+<f id="Top06_19_WinterCoat" parentId="Top06">
+  <g id="SportJacketTorso" name="LeatherJacket" icon="$bm/icon_m_retro.png">
+    <s id="Top06_19TorsoBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_23_wintercoat_f.png" pri="6"/>
+    <c sId="Top06_19TorsoBase" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+    <s id="Top06_19ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/arm_jacket_idle.png" pri="6"/>
+    <s id="Top06_19ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/arm_jacket_walk1.png" pri="6"/>
+    <s id="Top06_19ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/arm_jacket_walk2.png" pri="6"/>
+    <s id="Top06_19ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/arm_jacket_walk3.png" pri="6"/>
+    <s id="Top06_19ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/arm_jacket_sit.png" pri="6"/>
+    <c sId="Top06_19ArmIdleBase" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+    <c sId="Top06_19ArmWalk1Base" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+    <c sId="Top06_19ArmWalk2Base" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+    <c sId="Top06_19ArmWalk3Base" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+    <c sId="Top06_19ArmSitBase" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+    <s id="Top06_19ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/arm_jacket_throw.png" pri="6"/>
+    <c sId="Top06_19ArmThrowBase" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+    <s id="Top06_19ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/arm_jacket_raise.png" pri="6"/>
+    <c sId="Top06_19ArmRaiseBase" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_19" icon="items/base/consumables/clothing/top06/top06_23_icon_wintercoat_f_b.png" w="48" h="48"/>
+    <s id="IconTop06_19Base" cId="IconTop06_19" s="items/base/consumables/clothing/top06/top06_23_icon_wintercoat_f_a.png" pri="1"/>
+    <c sId="IconTop06_19Base" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top06_19Color1"/>
+    </wizbox>
+    <b id="Top06_19Color1" name="Color" desc="Choose a color" sel="Purple" seld="Purple">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="1.00" b="68.5" ct="1.65" lId="Top06_19Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="8817807" a="1.00" b="55.6" ct="1.90" lId="Top06_19Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.78" b="24.0" ct="1.31" lId="Top06_19Color1"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16102338" a="0.85" b="34.9" ct="1.48" lId="Top06_19Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="0.80" b="33.8" ct="1.40" lId="Top06_19Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="13369344" a="0.90" b="29.3" ct="1.09" lId="Top06_19Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="12871936" a="0.80" b="35.8" ct="1.68" lId="Top06_19Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="15919618" a="1.00" b="35.3" ct="1.03" lId="Top06_19Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908131" a="0.56" b="4.2" ct="1.19" lId="Top06_19Color1"/>
+      <c id="GreenDark" icon="$bu/icon_greendark.png" c="575778" a="0.52" b="-1.8" ct="1.17" lId="Top06_19Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.82" b="31.7" ct="1.64" lId="Top06_19Color1"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.86" b="47.9" ct="2.00" lId="Top06_19Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.75" b="32.1" ct="1.50" lId="Top06_19Color1"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="614886" a="0.37" b="-9.6" ct="1.46" lId="Top06_19Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.89" b="34.6" ct="1.46" lId="Top06_19Color1"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.75" b="32.9" ct="1.51" lId="Top06_19Color1"/>
+      <c id="Olive" icon="$bu/icon_olive.png" c="8549908" a="0.87" b="41.5" ct="1.89" lId="Top06_19Color1"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="9714951" a="0.34" b="-15.2" ct="0.92" lId="Top06_19Color1"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="6489109" a="0.61" b="28.9" ct="1.68" lId="Top06_19Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="8224125" b="-104.6" ct="-0.07" lId="Top06_19Color1"/>
+    </b>
+  </g>
+  <g id="LongSkirt" name="Long skirt" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_19BottomIdle" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_26_coatbot_idle.png" pri="6"/>
+    <s id="Top06_19BottomWalk1" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_26_coatbot_walk1.png" pri="6"/>
+    <s id="Top06_19BottomWalk2" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_26_coatbot_walk2.png" pri="6"/>
+    <s id="Top06_19BottomWalk3" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_26_coatbot_walk3.png" pri="6"/>
+    <s id="Top06_19BottomWalk4" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_26_coatbot_walk4.png" pri="6"/>
+    <s id="Top06_19BottomSitUpper" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_26_coatbot_sit.png" pri="6"/>
+    <c sId="Top06_19BottomIdle" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+    <c sId="Top06_19BottomWalk1" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+    <c sId="Top06_19BottomWalk2" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+    <c sId="Top06_19BottomWalk3" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+    <c sId="Top06_19BottomWalk4" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+    <c sId="Top06_19BottomSitUpper" c="8269969" a="0.71" b="36.5" ct="1.41" lId="Top06_19Color1" lw="N"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

@@ -1,0 +1,48 @@
+<item.SpriteItem id="3309" name="Arbusto Selvagem Gigante" desc="Um arbusto gigante da Nova Zelândia" tags="rare,misc" icon="items/base/outdoor/icon_o_collect_02_fern.png" price="150" minLevel="1" minLevelType="4" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.22,0,-0.22" max="0.22,1.4,0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/outdoor/o_collect_02_fern.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.22,0,-0.22" max="0.22,1.4,0.22"/>
+      <layers>
+        <layer id="base" texture="base" y="15">
+          <view angle="45"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="1" hm="true"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="2.7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="1" y="-21"/>
+          <view angle="135" x="1" y="-21"/>
+          <view angle="225" x="1" y="-21"/>
+          <view angle="315" x="1" y="-21"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xbaf7b5" a="0.5"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

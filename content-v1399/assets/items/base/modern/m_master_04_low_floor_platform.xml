@@ -1,0 +1,27 @@
+<item.SpriteItem id="3452" name="Plataforma Baixa de Piso Nordic" desc="Uma plataforma para exibir itens." tags="table" icon="items/base/modern/icon_m_master_04_low_floor_platform.png" price="55" tokens="550" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.28,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_master_04_low_floor_platform.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Table">
+      <box min="-0.49,0,-0.49" max="0.49,0.28,0.49"/>
+      <layers>
+        <layer id="table" texture="Texture" y="37">
+          <view angle="45" y="3"/>
+          <view angle="135" x="-1" y="3" hm="true"/>
+          <view angle="225" y="3"/>
+          <view angle="315" x="-1" y="3" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

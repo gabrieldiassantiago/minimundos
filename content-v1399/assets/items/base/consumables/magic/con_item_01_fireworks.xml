@@ -1,0 +1,118 @@
+<item.SpriteItem desc="Uma caixa de fogos artificiais para comemorar e fazer a festa." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/magic/icon_con_item_01_fireworks.png" id="890" name="Fogos de Artifício" tags="consumable,real,usable,stackable,craftable1,market" price="13" tokens="130" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.25,0.8,0.25" min="-0.25,0,-0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="ingredient_1" value="1971"/>
+    <entry key="ingredient_2" value="894"/>
+    <entry key="ingredient_quantity_1" value="1"/>
+    <entry key="ingredient_quantity_2" value="2"/>
+    <entry key="product_quantity" value="2"/>
+    <entry key="xp_level_required" value="25"/>
+    <entry key="xp_rewarded" value="250"/>
+  </data>
+  <textures>
+    <texture cols="5" id="fireworks" rows="1" source="items/base/consumables/magic/con_item_01_fireworks.png"/>
+    <texture cols="1" id="box" rows="1" source="items/base/consumables/magic/con_item_01_fireworksbox.png"/>
+  </textures>
+  <nodes>
+    <node id="fireworks">
+      <box max="0.25,0.8,0.25" min="-0.25,0,-0.25"/>
+      <layers>
+        <layer id="box" texture="box">
+          <view angle="45" y="28"/>
+          <view angle="135" hm="true" y="28"/>
+          <view angle="225" y="28"/>
+          <view angle="315" hm="true" y="28"/>
+        </layer>
+        <layer id="fire01" texture="fireworks">
+          <view angle="45" x="2" y="-24"/>
+          <view angle="135" hm="true" x="-2" y="-24"/>
+          <view angle="225" x="2" y="-24"/>
+          <view angle="315" hm="true" x="-2" y="-24"/>
+        </layer>
+        <layer id="fire02" texture="fireworks">
+          <view angle="45" col="1" x="2" y="-24"/>
+          <view angle="135" col="1" hm="true" x="-2" y="-24"/>
+          <view angle="225" col="1" x="2" y="-24"/>
+          <view angle="315" col="1" hm="true" x="-2" y="-24"/>
+        </layer>
+        <layer id="fire03" texture="fireworks">
+          <view angle="45" col="2" x="2" y="-24"/>
+          <view angle="135" col="2" hm="true" x="-2" y="-24"/>
+          <view angle="225" col="2" x="2" y="-24"/>
+          <view angle="315" col="2" hm="true" x="-2" y="-24"/>
+        </layer>
+        <layer id="fire04" texture="fireworks">
+          <view angle="45" col="3" x="2" y="-24"/>
+          <view angle="135" col="3" hm="true" x="-2" y="-24"/>
+          <view angle="225" col="3" x="2" y="-24"/>
+          <view angle="315" col="3" hm="true" x="-2" y="-24"/>
+        </layer>
+        <layer id="fire05" texture="fireworks">
+          <view angle="45" col="4" x="2" y="-24"/>
+          <view angle="135" col="4" hm="true" x="-2" y="-24"/>
+          <view angle="225" col="4" x="2" y="-24"/>
+          <view angle="315" col="4" hm="true" x="-2" y="-24"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="box"/>
+          <layerref id="fire01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="box"/>
+          <layerref id="fire02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="box"/>
+          <layerref id="fire03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="box"/>
+          <layerref id="fire04"/>
+        </frame>
+        <frame id="05">
+          <layerref id="box"/>
+          <layerref id="fire05"/>
+        </frame>
+        <frame id="06">
+          <layerref id="box"/>
+        </frame>
+        <frame id="box_01">
+          <layerref id="box"/>
+        </frame>
+        <frame id="box_02">
+          <layerref a="0.66" id="box"/>
+        </frame>
+        <frame id="box_03">
+          <layerref a="0.33" id="box"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="In" loop="false">
+          <frameref id="01"/>
+        </animation>
+        <animation framerate="2" id="Loop" loop="false" syncFrames="false">
+          <frameref duration="6" id="02"/>
+          <frameref duration="4" id="03"/>
+          <frameref duration="11" id="04"/>
+          <frameref duration="12" id="05"/>
+          <frameref duration="21" id="06"/>
+        </animation>
+        <animation framerate="4" id="Out" loop="false" syncFrames="false">
+          <frameref id="box_01"/>
+          <frameref id="box_02"/>
+          <frameref id="box_03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

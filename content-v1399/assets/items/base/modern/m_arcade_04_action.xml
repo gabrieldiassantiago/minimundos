@@ -1,0 +1,176 @@
+<item.WidgetItem id="1043" name="Jogo Ação Arcade" desc="Uma máquina arcade com jogo de ação." tags="widget,misc" icon="items/base/modern/icon_m_arcade_04_action.png" price="350" tokens="3500" minLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_arcade.swf" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.3,0.49"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <actions>
+    <action id="Complete">
+      <eval>
+        <func type="range" id="Score" input="score"/>
+        <func type="relational" id="Game Name" input="name" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+    <action id="Ranking">
+      <eval>
+        <func type="range" id="Rank" input="rank"/>
+        <func type="relational" id="Game Name" input="name" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_xml_path" value="widgets/assets/arcade/control.mxml"/>
+    <entry key="arcade_genre" value="action"/>
+    <entry key="arcade_art" value="generic"/>
+    <entry key="widget_background_override" value="widget/GrafittiBG.jpg"/>
+    <entry key="show_advert" value="false"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="iframeWidget" value="true"/>
+  </data>
+  <navigate position="infront" sitRange="1.00" standRange="1.00" targetRange="1.00" usableRange="-1.00"/>
+  <textures>
+    <texture id="joystick" source="items/base/modern/m_arcade_03_joystick.png" cols="2" rows="3"/>
+    <texture id="logo" source="items/base/modern/m_arcade_04_actionlogo.png" cols="2" rows="1"/>
+    <texture id="screen" source="items/base/modern/m_arcade_04_actionscreen.png" cols="1" rows="1"/>
+    <texture id="base" source="items/base/modern/m_arcade_03_generic.png" cols="2" rows="1"/>
+    <texture id="puzzle" source="items/base/modern/m_arcade_04_action.png" cols="2" rows="1"/>
+    <texture id="puzzle_control" source="items/base/modern/m_arcade_03_puzzlecontrol.png" cols="2" rows="1"/>
+    <texture id="animation" source="items/base/modern/m_arcade_04_actionanim.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_arcade.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Arcade" x="-0.2">
+      <box min="-0.29,0,-0.49" max="0.69,2.3,0.49"/>
+      <layers>
+        <layer id="base_02" texture="base">
+          <view angle="45" x="10" y="40"/>
+          <view angle="135" x="-10" y="40" hm="true"/>
+          <view angle="225" col="1" x="-10" y="34" hm="true"/>
+          <view angle="315" col="1" x="10" y="34"/>
+        </layer>
+        <layer id="screen" texture="screen">
+          <view angle="45" x="16" y="-60"/>
+          <view angle="135" x="-16" y="-60" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen01" texture="animation">
+          <view angle="45" x="16" y="-60"/>
+          <view angle="135" x="-16" y="-60" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen02" texture="animation">
+          <view angle="45" col="1" x="16" y="-60"/>
+          <view angle="135" col="1" x="-16" y="-60" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="screen03" texture="animation">
+          <view angle="45" col="2" x="16" y="-60"/>
+          <view angle="135" col="2" x="-16" y="-60" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+        <layer id="puzzle texture" texture="puzzle">
+          <view angle="45" x="-7" y="26"/>
+          <view angle="135" x="8" y="26" hm="true"/>
+          <view angle="225" col="1" x="-44" y="20" hm="true"/>
+          <view angle="315" col="1" x="45" y="20"/>
+        </layer>
+        <layer id="logo" texture="logo">
+          <view angle="45" col="1" y="-134"/>
+          <view angle="135" x="1" y="-135"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="joystick_red" texture="joystick">
+          <view angle="45" col="1" x="28" y="-38"/>
+          <view angle="135" x="-55" y="-58"/>
+          <view angle="225" x="-71" y="-93" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="56" y="-80" hm="true"/>
+        </layer>
+        <layer id="joystick_blue" texture="joystick">
+          <view angle="45" col="1" row="1" x="56" y="-51"/>
+          <view angle="135" row="1" x="-27" y="-45"/>
+          <view angle="225" row="1" x="-58" y="-85" hm="true"/>
+          <view angle="315" col="1" row="1" x="72" y="-85" alpha="0" hm="true"/>
+        </layer>
+        <layer id="puzzle_control texture" texture="puzzle_control">
+          <view angle="45" x="40" y="-39"/>
+          <view angle="135" x="-40" y="-39" hm="true"/>
+          <view angle="225" col="1" x="-48" y="-74" hm="true"/>
+          <view angle="315" col="1" x="48" y="-74"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="base_02"/>
+          <layerref id="screen"/>
+          <layerref id="logo"/>
+          <layerref id="puzzle_control texture"/>
+          <layerref id="joystick_red"/>
+          <layerref id="joystick_blue"/>
+          <layerref id="puzzle texture"/>
+          <layerref id="screen01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="base_02"/>
+          <layerref id="screen"/>
+          <layerref id="logo"/>
+          <layerref id="puzzle_control texture"/>
+          <layerref id="joystick_red"/>
+          <layerref id="joystick_blue"/>
+          <layerref id="puzzle texture"/>
+          <layerref id="screen02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="base_02"/>
+          <layerref id="screen"/>
+          <layerref id="logo"/>
+          <layerref id="puzzle_control texture"/>
+          <layerref id="joystick_red"/>
+          <layerref id="joystick_blue"/>
+          <layerref id="puzzle texture"/>
+          <layerref id="screen03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="1">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.5" s="5.1" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="3"/>
+          <view angle="135" x="-2" hm="true"/>
+          <view angle="225" col="1" x="-7" y="2"/>
+          <view angle="315" col="1" x="9" y="2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,30 @@
+<item.SpriteItem id="7442" name="Meia de Natal Amarela" desc="Uma recompensa de natal (2 de 3)" tags="rare,wall,misc,xmas" icon="items/base/modern/icon_m_stocking_xmas_05.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="1">
+  <volume>
+    <box min="0,-0.44,-0.25" max="0,0.44,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="stocking" source="items/base/modern/m_stocking_xmas_05.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="stocking">
+      <box min="0,-0.44,-0.25" max="0,0.44,0.25"/>
+      <layers>
+        <layer id="stocking" texture="stocking" align="middle">
+          <view angle="45"/>
+          <view angle="135" col="1"/>
+          <view angle="225" alpha="0" hm="true"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

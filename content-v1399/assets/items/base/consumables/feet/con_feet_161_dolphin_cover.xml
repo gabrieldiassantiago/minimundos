@@ -1,0 +1,259 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="bubble" source="items/base/consumables/feet/con_feet_107_mermaid_bubbles.png" cols="1" rows="3"/>
+    <texture id="head" source="items/base/consumables/feet/con_feet_161_dolphin_head.png" cols="5" rows="1"/>
+    <texture id="sonar" source="items/base/consumables/feet/con_feet_161_dolphin_sonar.png" cols="3" rows="1"/>
+    <texture id="mouth" source="items/base/consumables/feet/con_feet_161_dolphin_mouth.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/feet/con_feet_161_dolphin_blink.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="bubble01" texture="bubble">
+          <view angle="0" x="63" y="-41" alpha="0"/>
+          <view angle="45" x="33" y="-96" alpha="0"/>
+          <view angle="90" x="-1" y="-36"/>
+          <view angle="135" x="-35" y="-96" alpha="0" hm="true"/>
+          <view angle="180" x="-34" y="2" alpha="0" hm="true"/>
+          <view angle="225" x="-17" y="-17" alpha="0"/>
+          <view angle="270" x="-2" y="-19" alpha="0"/>
+          <view angle="315" x="17" y="-17" alpha="0" hm="true"/>
+        </layer>
+        <layer id="bubble02" texture="bubble">
+          <view angle="0" row="1" x="63" y="-41" alpha="0"/>
+          <view angle="45" row="1" x="33" y="-96" alpha="0"/>
+          <view angle="90" row="1" x="-1" y="-36"/>
+          <view angle="135" row="1" x="-35" y="-96" alpha="0" hm="true"/>
+          <view angle="180" row="1" x="-34" y="2" alpha="0" hm="true"/>
+          <view angle="225" row="1" x="-17" y="-17" alpha="0"/>
+          <view angle="270" row="1" x="-2" y="-19" alpha="0"/>
+          <view angle="315" row="1" x="17" y="-17" alpha="0" hm="true"/>
+        </layer>
+        <layer id="bubble03" texture="bubble">
+          <view angle="0" row="2" x="63" y="-41" alpha="0"/>
+          <view angle="45" row="2" x="33" y="-96" alpha="0"/>
+          <view angle="90" row="2" x="-1" y="-36"/>
+          <view angle="135" row="2" x="-35" y="-96" alpha="0" hm="true"/>
+          <view angle="180" row="2" x="-34" y="2" alpha="0" hm="true"/>
+          <view angle="225" row="2" x="-17" y="-17" alpha="0"/>
+          <view angle="270" row="2" x="-2" y="-19" alpha="0"/>
+          <view angle="315" row="2" x="17" y="-17" alpha="0" hm="true"/>
+        </layer>
+        <layer id="head" texture="head">
+          <view angle="0" x="13" y="5" alpha="0"/>
+          <view angle="45" x="18" alpha="0"/>
+          <view angle="90" col="1" x="1" y="20"/>
+          <view angle="135" x="-20" alpha="0" hm="true"/>
+          <view angle="180" col="2" x="-34" y="2" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="-17" y="-17" alpha="0"/>
+          <view angle="270" col="4" x="-2" y="-19" alpha="0"/>
+          <view angle="315" col="3" x="17" y="-17" alpha="0" hm="true"/>
+        </layer>
+        <layer id="sonar_01" texture="sonar">
+          <view angle="0" x="13" y="5" alpha="0"/>
+          <view angle="45" x="18" alpha="0"/>
+          <view angle="90" y="3"/>
+          <view angle="135" x="-20" alpha="0" hm="true"/>
+          <view angle="180" x="-34" y="2" alpha="0" hm="true"/>
+          <view angle="225" x="-17" y="-17" alpha="0"/>
+          <view angle="270" x="-2" y="-19" alpha="0"/>
+          <view angle="315" x="17" y="-17" alpha="0" hm="true"/>
+        </layer>
+        <layer id="sonar_02" texture="sonar">
+          <view angle="0" col="1" x="13" y="5" alpha="0"/>
+          <view angle="45" col="1" x="18" alpha="0"/>
+          <view angle="90" col="1" y="3"/>
+          <view angle="135" col="1" x="-20" alpha="0" hm="true"/>
+          <view angle="180" col="1" x="-34" y="2" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-17" y="-17" alpha="0"/>
+          <view angle="270" col="1" x="-2" y="-19" alpha="0"/>
+          <view angle="315" col="1" x="17" y="-17" alpha="0" hm="true"/>
+        </layer>
+        <layer id="sonar_03" texture="sonar">
+          <view angle="0" col="2" x="13" y="5" alpha="0"/>
+          <view angle="45" col="2" x="18" alpha="0"/>
+          <view angle="90" col="2" y="3"/>
+          <view angle="135" col="2" x="-20" alpha="0" hm="true"/>
+          <view angle="180" col="2" x="-34" y="2" alpha="0" hm="true"/>
+          <view angle="225" col="2" x="-17" y="-17" alpha="0"/>
+          <view angle="270" col="2" x="-2" y="-19" alpha="0"/>
+          <view angle="315" col="2" x="17" y="-17" alpha="0" hm="true"/>
+        </layer>
+        <layer id="mouth" texture="mouth">
+          <view angle="0" x="13" y="5" alpha="0"/>
+          <view angle="45" x="18" alpha="0"/>
+          <view angle="90" col="1" x="1" y="20"/>
+          <view angle="135" x="-20" alpha="0" hm="true"/>
+          <view angle="180" col="2" x="-34" y="2" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="-17" y="-17" alpha="0"/>
+          <view angle="270" col="4" x="-2" y="-19" alpha="0"/>
+          <view angle="315" col="3" x="17" y="-17" alpha="0" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" x="13" y="5" alpha="0"/>
+          <view angle="45" x="18" alpha="0"/>
+          <view angle="90" col="1" y="-19"/>
+          <view angle="135" x="-20" alpha="0" hm="true"/>
+          <view angle="180" col="2" x="-34" y="2" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="-17" y="-17" alpha="0"/>
+          <view angle="270" col="4" x="-2" y="-19" alpha="0"/>
+          <view angle="315" col="3" x="17" y="-17" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="sit">
+          <layerref id="head" a="0"/>
+        </frame>
+        <frame id="walk01">
+          <layerref id="aura_01" a="0.75"/>
+          <layerref id="head"/>
+          <layerref id="bubble01"/>
+        </frame>
+        <frame id="walk02">
+          <layerref id="aura_01" a="0.5"/>
+          <layerref id="aura_02" a="0.5"/>
+          <layerref id="head" y="1"/>
+          <layerref id="bubble01"/>
+        </frame>
+        <frame id="walk03">
+          <layerref id="aura_02" a="0.75"/>
+          <layerref id="head" y="2"/>
+          <layerref id="bubble02"/>
+        </frame>
+        <frame id="walk04">
+          <layerref id="aura_02" a="0.5"/>
+          <layerref id="aura_03" a="0.5"/>
+          <layerref id="head" y="3"/>
+          <layerref id="bubble02"/>
+        </frame>
+        <frame id="walk05">
+          <layerref id="aura_03" a="0.75"/>
+          <layerref id="head" y="2"/>
+          <layerref id="bubble03"/>
+        </frame>
+        <frame id="walk06">
+          <layerref id="aura_03" a="0.5"/>
+          <layerref id="aura_01" a="0.5"/>
+          <layerref id="head" y="1"/>
+          <layerref id="bubble03"/>
+        </frame>
+        <frame id="walk01_mouth">
+          <layerref id="aura_01" a="0.75"/>
+          <layerref id="mouth"/>
+          <layerref id="bubble01"/>
+        </frame>
+        <frame id="walk02_mouth">
+          <layerref id="aura_01" a="0.5"/>
+          <layerref id="aura_02" a="0.5"/>
+          <layerref id="mouth" y="1"/>
+          <layerref id="bubble01"/>
+        </frame>
+        <frame id="walk03_mouth">
+          <layerref id="aura_02" a="0.75"/>
+          <layerref id="mouth" y="2"/>
+          <layerref id="bubble02"/>
+        </frame>
+        <frame id="walk04_sonar">
+          <layerref id="aura_02" a="0.5"/>
+          <layerref id="aura_03" a="0.5"/>
+          <layerref id="head" y="3"/>
+          <layerref id="bubble02"/>
+          <layerref id="sonar_01" a="0.25"/>
+        </frame>
+        <frame id="walk05_sonar">
+          <layerref id="aura_03" a="0.75"/>
+          <layerref id="head" y="2"/>
+          <layerref id="bubble03"/>
+          <layerref id="sonar_02" a="0.25"/>
+        </frame>
+        <frame id="walk06_sonar">
+          <layerref id="aura_03" a="0.5"/>
+          <layerref id="aura_01" a="0.5"/>
+          <layerref id="head" y="1"/>
+          <layerref id="bubble03"/>
+          <layerref id="sonar_03" a="0.25"/>
+        </frame>
+        <frame id="walk06_blink">
+          <layerref id="aura_03" a="0.5"/>
+          <layerref id="aura_01" a="0.5"/>
+          <layerref id="head" y="1"/>
+          <layerref id="bubble03"/>
+          <layerref id="blink"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="6">
+          <frameref id="walk01"/>
+          <frameref id="walk02"/>
+          <frameref id="walk03"/>
+          <frameref id="walk04"/>
+          <frameref id="walk05"/>
+          <frameref id="walk06"/>
+          <frameref id="walk01"/>
+          <frameref id="walk02"/>
+          <frameref id="walk03"/>
+          <frameref id="walk04"/>
+          <frameref id="walk05"/>
+          <frameref id="walk06_blink"/>
+          <frameref id="walk01_mouth"/>
+          <frameref id="walk02_mouth"/>
+          <frameref id="walk03"/>
+          <frameref id="walk04_sonar"/>
+          <frameref id="walk05_sonar"/>
+          <frameref id="walk06_sonar"/>
+          <frameref id="walk01"/>
+          <frameref id="walk02"/>
+          <frameref id="walk03"/>
+          <frameref id="walk04_sonar"/>
+          <frameref id="walk05_sonar"/>
+          <frameref id="walk06_sonar"/>
+          <frameref id="walk01"/>
+          <frameref id="walk02_mouth"/>
+          <frameref id="walk03_mouth"/>
+          <frameref id="walk04"/>
+          <frameref id="walk05"/>
+          <frameref id="walk06_blink"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="10">
+          <frameref id="walk01"/>
+          <frameref id="walk02"/>
+          <frameref id="walk03"/>
+          <frameref id="walk04"/>
+          <frameref id="walk05"/>
+          <frameref id="walk06"/>
+          <frameref id="walk01"/>
+          <frameref id="walk02"/>
+          <frameref id="walk03"/>
+          <frameref id="walk04"/>
+          <frameref id="walk05"/>
+          <frameref id="walk06_blink"/>
+          <frameref id="walk01_mouth"/>
+          <frameref id="walk02_mouth"/>
+          <frameref id="walk03"/>
+          <frameref id="walk04_sonar"/>
+          <frameref id="walk05_sonar"/>
+          <frameref id="walk06_sonar"/>
+          <frameref id="walk01"/>
+          <frameref id="walk02"/>
+          <frameref id="walk03"/>
+          <frameref id="walk04_sonar"/>
+          <frameref id="walk05_sonar"/>
+          <frameref id="walk06_sonar"/>
+          <frameref id="walk01"/>
+          <frameref id="walk02_mouth"/>
+          <frameref id="walk03_mouth"/>
+          <frameref id="walk04"/>
+          <frameref id="walk05"/>
+          <frameref id="walk06_blink"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

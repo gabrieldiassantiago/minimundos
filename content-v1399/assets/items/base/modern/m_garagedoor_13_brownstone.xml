@@ -1,0 +1,155 @@
+<item.SpriteItem id="7087" name="Porta de Garagem Pedras Tan Tulsa" desc="Uma porta de garagem larga e segura" tags="misc,master_catalog_colorize" icon="items/base/modern/m_garagedoor_13_brownstone_icon.png" price="290" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-1.49" max="0.49,3,2.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="close" script="scripts/item/close_gate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+    <event id="action" script="scripts/item/action_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+  </events>
+  <actions>
+    <action id="Open" state="true" event="open"/>
+    <action id="Close" state="true" event="close"/>
+  </actions>
+  <navigate targetRange="5.00" usableRange="5.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/garagedoors.xml"/>
+  </data>
+  <textures>
+    <texture id="misc" source="items/base/modern/m_garagedoor_13_brownstone.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="closed" z="1">
+      <box min="-0.49,0,-1.99" max="0.49,3,0.99"/>
+      <layers>
+        <layer id="closed left" texture="misc" y="58">
+          <view angle="45" x="-50" y="14"/>
+          <view angle="135" x="-15" y="-18" hm="true"/>
+          <view angle="225" x="52" y="18"/>
+          <view angle="315" x="10" y="50" hm="true"/>
+        </layer>
+        <layer id="closed right" texture="misc" y="58">
+          <view angle="45" col="2" x="-50" y="14"/>
+          <view angle="135" col="2" x="-15" y="-18" hm="true"/>
+          <view angle="225" col="2" x="52" y="18"/>
+          <view angle="315" col="2" x="10" y="50" hm="true"/>
+        </layer>
+        <layer id="closed middle" texture="misc" y="58">
+          <view angle="45" col="1" x="-50" y="14"/>
+          <view angle="135" col="1" x="-15" y="-18" hm="true"/>
+          <view angle="225" col="1" x="52" y="18"/>
+          <view angle="315" col="1" x="10" y="50" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="closed">
+          <layerref id="closed right"/>
+          <layerref id="closed middle"/>
+          <layerref id="closed left"/>
+        </frame>
+        <frame id="closed_hidden">
+          <layerref id="closed right" a="0"/>
+          <layerref id="closed middle" a="0"/>
+          <layerref id="closed left" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="closed_hidden"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open right" z="1">
+      <box min="-0.49,0,1.3" max="0.49,3,1.5"/>
+      <layers>
+        <layer id="closed middle" texture="misc" y="58">
+          <view angle="45" col="1" x="-50" y="14"/>
+          <view angle="135" col="1" x="-15" y="-18" hm="true"/>
+          <view angle="225" col="1" x="50" y="18"/>
+          <view angle="315" col="1" x="10" y="50" hm="true"/>
+        </layer>
+        <layer id="closed right" texture="misc" y="58">
+          <view angle="45" col="2" x="-50" y="14"/>
+          <view angle="135" col="2" x="-15" y="-18" hm="true"/>
+          <view angle="225" col="2" x="50" y="18"/>
+          <view angle="315" col="2" x="10" y="50" hm="true"/>
+        </layer>
+        <layer id="closed left" texture="misc" y="58">
+          <view angle="45" x="-50" y="14"/>
+          <view angle="135" x="-15" y="-18" hm="true"/>
+          <view angle="225" x="50" y="18"/>
+          <view angle="315" x="10" y="50" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="closed right"/>
+          <layerref id="closed middle" a="0"/>
+          <layerref id="closed left"/>
+        </frame>
+        <frame id="hidden">
+          <layerref id="closed right" a="0"/>
+          <layerref id="closed middle"/>
+          <layerref id="closed left"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="hidden"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open left" z="1">
+      <box min="-0.49,0,-2.49" max="0.49,3,-2.3"/>
+      <layers>
+        <layer id="closed middle" texture="misc" y="58">
+          <view angle="45" col="1" x="-50" y="14"/>
+          <view angle="135" col="1" x="-15" y="-18" hm="true"/>
+          <view angle="225" col="1" x="50" y="18"/>
+          <view angle="315" col="1" x="10" y="50" hm="true"/>
+        </layer>
+        <layer id="closed right" texture="misc" y="58">
+          <view angle="45" col="2" x="-50" y="14"/>
+          <view angle="135" col="2" x="-15" y="-18" hm="true"/>
+          <view angle="225" col="2" x="50" y="18"/>
+          <view angle="315" col="2" x="10" y="50" hm="true"/>
+        </layer>
+        <layer id="closed left" texture="misc" y="58">
+          <view angle="45" x="-50" y="14"/>
+          <view angle="135" x="-15" y="-18" hm="true"/>
+          <view angle="225" x="50" y="18"/>
+          <view angle="315" x="10" y="50" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="closed right"/>
+          <layerref id="closed middle" a="0"/>
+          <layerref id="closed left"/>
+        </frame>
+        <frame id="hidden">
+          <layerref id="closed right"/>
+          <layerref id="closed middle"/>
+          <layerref id="closed left"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="hidden"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

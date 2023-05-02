@@ -1,0 +1,59 @@
+<item.SpriteItem id="5271" name="Barco Cisne Zoom" desc="Um barco de cisne para usar com seus amigos!" tags="rare,consumable,actionbar,wear,feet,nopvp,action_ridable_toggle" icon="items/base/consumables/feet/con_feet_116_swanboat_icon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,1.4,0.48"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_rideable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="nature+25"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+25"/>
+  </data>
+  <textures>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_62_cloud_shadow.png" cols="1" rows="1"/>
+    <texture id="base" source="items/base/consumables/feet/con_feet_116_swanboat_base.png" cols="5" rows="1"/>
+    <texture id="cover" source="items/base/consumables/feet/con_feet_116_swanboat_cover.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.48,0,-0.48" max="0.48,1.4,0.48"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" x="-4" y="56"/>
+          <view angle="135" x="4" y="56" hm="true"/>
+          <view angle="225" col="3" x="-2" y="46" hm="true"/>
+          <view angle="315" col="3" x="2" y="46"/>
+        </layer>
+        <layer id="cover" texture="cover">
+          <view angle="45" x="-4" y="56"/>
+          <view angle="135" x="4" y="56" hm="true"/>
+          <view angle="225" col="3" x="-2" y="46" hm="true"/>
+          <view angle="315" col="3" x="2" y="46"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" x="-3" y="46"/>
+          <view angle="135" x="3" y="46" hm="true"/>
+          <view angle="225" x="-3" y="46"/>
+          <view angle="315" x="3" y="46" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="shadow"/>
+          <layerref id="base"/>
+          <layerref id="cover"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

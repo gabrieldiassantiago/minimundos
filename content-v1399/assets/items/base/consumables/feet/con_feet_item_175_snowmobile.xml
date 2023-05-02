@@ -1,0 +1,43 @@
+<item.SpriteItem id="6414" name="Snowmobile Deluxe Zoom" desc="Pegue o meu gelo!" tags="rare,consumable,actionbar,wear,feet,action_driveable_toggle" icon="items/base/consumables/feet/icon_con_feet_item_175_snowmobile.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1.48,0,-0.48" max="0.48,0.85,0.48"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="select" script="scripts/item/select_drive.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+50,speed+50"/>
+    <entry key="action_attributes" value="frost+50"/>
+  </data>
+  <textures>
+    <texture id="mobile" source="items/base/consumables/feet/con_feet_item_175_snowmobile.png" cols="2" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_175_snowmobile_shadow.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-1.48,0,-0.48" max="0.48,0.85,0.48"/>
+      <layers>
+        <layer id="mobile" texture="mobile">
+          <view angle="45" x="-27" y="22"/>
+          <view angle="135" x="28" y="21" hm="true"/>
+          <view angle="225" col="1" x="34" y="47" hm="true"/>
+          <view angle="315" col="1" x="-32" y="47"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" x="-29" y="46"/>
+          <view angle="135" x="26" y="45" hm="true"/>
+          <view angle="225" x="26" y="71"/>
+          <view angle="315" x="-26" y="72" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

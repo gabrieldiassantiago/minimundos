@@ -1,0 +1,137 @@
+<item.SpriteItem id="0" name="Magic Carpet" desc="Reach the sky on a Magic Carpet" tokens="0" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.7,0,-0.45" max="0.7,0.1,0.45"/>
+  </volume>
+  <textures>
+    <texture id="middle" source="items/base/consumables/feet/con_feet_38_mcarpet_middle.png" cols="3" rows="1"/>
+    <texture id="ends" source="items/base/consumables/feet/con_feet_38_mcarpet_ends.png" cols="3" rows="5"/>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_17_mcarpet_shadow.png" cols="1" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.7,0,-0.45" max="0.7,0.1,0.45"/>
+      <layers>
+        <layer id="middle" texture="middle">
+          <view angle="0" col="2" x="1" y="34"/>
+          <view angle="45" y="30"/>
+          <view angle="90" col="1" x="2" y="35"/>
+          <view angle="135" y="30" hm="true"/>
+          <view angle="180" col="2" x="1" y="34"/>
+          <view angle="225" y="30"/>
+          <view angle="270" col="1" x="2" y="35"/>
+          <view angle="315" y="30" hm="true"/>
+        </layer>
+        <layer id="front01" texture="ends">
+          <view angle="0" row="4" x="51" y="30"/>
+          <view angle="45" row="1" x="38" y="45"/>
+          <view angle="90" row="2" x="2" y="49"/>
+          <view angle="135" row="1" x="-39" y="45" hm="true"/>
+          <view angle="180" row="4" x="51" y="30"/>
+          <view angle="225" row="1" x="38" y="45"/>
+          <view angle="270" row="2" x="2" y="52"/>
+          <view angle="315" row="1" x="-39" y="45" hm="true"/>
+        </layer>
+        <layer id="front02" texture="ends">
+          <view angle="0" col="1" row="4" x="51" y="30"/>
+          <view angle="45" col="1" row="1" x="37" y="46"/>
+          <view angle="90" col="1" row="2" x="1" y="50"/>
+          <view angle="135" col="1" row="1" x="-38" y="46" hm="true"/>
+          <view angle="180" col="1" row="4" x="51" y="30"/>
+          <view angle="225" col="1" row="1" x="37" y="46"/>
+          <view angle="270" col="1" row="2" x="1" y="53"/>
+          <view angle="315" col="1" row="1" x="-38" y="46" hm="true"/>
+        </layer>
+        <layer id="front03" texture="ends">
+          <view angle="0" col="2" row="4" x="54" y="27"/>
+          <view angle="45" col="2" row="1" x="38" y="44"/>
+          <view angle="90" col="2" row="2" x="2" y="46"/>
+          <view angle="135" col="2" row="1" x="-39" y="44" hm="true"/>
+          <view angle="180" col="2" row="4" x="54" y="27"/>
+          <view angle="225" col="2" row="1" x="38" y="44"/>
+          <view angle="270" col="2" row="2" x="2" y="49"/>
+          <view angle="315" col="2" row="1" x="-39" y="44" hm="true"/>
+        </layer>
+        <layer id="back01" texture="ends">
+          <view angle="0" row="4" x="-46" y="30" hm="true"/>
+          <view angle="45" x="-34" y="10"/>
+          <view angle="90" row="3" x="3" y="4"/>
+          <view angle="135" x="33" y="10" hm="true"/>
+          <view angle="180" row="4" x="-46" y="30" hm="true"/>
+          <view angle="225" x="-34" y="10"/>
+          <view angle="270" row="3" x="3" y="4"/>
+          <view angle="315" x="33" y="10" hm="true"/>
+        </layer>
+        <layer id="back02" texture="ends">
+          <view angle="0" col="1" row="4" x="-46" y="29" hm="true"/>
+          <view angle="45" col="1" x="-38" y="9"/>
+          <view angle="90" col="1" row="3" x="2" y="3"/>
+          <view angle="135" col="1" x="37" y="9" hm="true"/>
+          <view angle="180" col="1" row="4" x="-46" y="29" hm="true"/>
+          <view angle="225" col="1" x="-38" y="9"/>
+          <view angle="270" col="1" row="3" x="2" y="3"/>
+          <view angle="315" col="1" x="37" y="9" hm="true"/>
+        </layer>
+        <layer id="back03" texture="ends">
+          <view angle="0" col="2" row="4" x="-49" y="26" hm="true"/>
+          <view angle="45" col="2" x="-36" y="7"/>
+          <view angle="90" col="2" row="3" x="1" y="1"/>
+          <view angle="135" col="2" x="35" y="7" hm="true"/>
+          <view angle="180" col="2" row="4" x="-49" y="26" hm="true"/>
+          <view angle="225" col="2" x="-36" y="7"/>
+          <view angle="270" col="2" row="3" x="1" y="1"/>
+          <view angle="315" col="2" x="35" y="7" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow" y="70">
+          <view angle="45" alpha="0.3"/>
+          <view angle="135" alpha="0.3" hm="true"/>
+          <view angle="225" alpha="0.3"/>
+          <view angle="315" alpha="0.3" hm="true"/>
+          <view angle="0" row="1" alpha="0.3"/>
+          <view angle="90" row="2" alpha="0.3"/>
+          <view angle="180" row="1" alpha="0.3"/>
+          <view angle="270" row="2" alpha="0.3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="f1">
+          <layerref id="shadow"/>
+          <layerref id="middle"/>
+          <layerref id="front01"/>
+          <layerref id="back03"/>
+        </frame>
+        <frame id="f2">
+          <layerref id="shadow"/>
+          <layerref id="middle"/>
+          <layerref id="front02"/>
+          <layerref id="back02"/>
+        </frame>
+        <frame id="f3">
+          <layerref id="shadow"/>
+          <layerref id="middle"/>
+          <layerref id="front03"/>
+          <layerref id="back01"/>
+        </frame>
+        <frame id="Frame">
+          <layerref id="middle" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="f1"/>
+          <frameref id="f2"/>
+          <frameref id="f3"/>
+          <frameref id="f2"/>
+        </animation>
+        <animation id="Sit" framerate="2">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="f1"/>
+          <frameref id="f2"/>
+          <frameref id="f3"/>
+          <frameref id="f2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

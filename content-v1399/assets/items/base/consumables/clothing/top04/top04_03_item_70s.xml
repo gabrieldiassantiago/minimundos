@@ -1,0 +1,37 @@
+<item.SpriteItem id="1844" name="Camisa Anos 70" desc="Com gola de época." tags="consumable,clothing,clothing_basic,actionbar,wear,top04,action_wearable_toggle" icon="items/base/consumables/clothing/top04/top04_03_icon_70s_a.png" price="550" tokens="5500" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" premium="Y">
+  <volume>
+    <box min="-0.38,0,-0.4" max="0.38,0.02,0.4"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top04/top04_03_frag_70s.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="clothes" source="items/base/consumables/clothing/top04/top04_03_item_70s.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.38,0,-0.4" max="0.38,0.02,0.4"/>
+      <layers>
+        <layer id="Layer" texture="clothes">
+          <view angle="45" x="3" y="26"/>
+          <view angle="135" x="-3" y="26" hm="true"/>
+          <view angle="225" col="1" x="-2" y="22"/>
+          <view angle="315" col="1" x="2" y="22" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,100 @@
+<item.SpriteItem id="4190" name="Bastão do Elfo Mágico" desc="Uma luz que brilha com o poder que está com você." tags="consumable,actionbar,wear,hand,real,usable,action_holdable_toggle" icon="items/base/consumables/magic/con_120_icon_gnarled_yellow_staff.png" minLevel="30" minLevelType="7" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="3775">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,2.25,0.2"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="staff" source="items/base/consumables/magic/con_120_item_gnarled_yellow_staff.png" cols="2" rows="1"/>
+    <texture id="stand" source="items/base/consumables/magic/con_120_item_gnarled_yellow_staff_stand.png" cols="1" rows="1"/>
+    <texture id="glow01" source="items/base/consumables/magic/con_120_hand_gnarled_yellow_staff_glow01.png" cols="1" rows="1"/>
+    <texture id="glow02" source="items/base/consumables/magic/con_120_hand_gnarled_yellow_staff_glow02.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,2.25,0.2"/>
+      <layers>
+        <layer id="Staff" texture="staff">
+          <view angle="45" x="1" y="6"/>
+          <view angle="135" x="-1" y="6" hm="true"/>
+          <view angle="225" col="1" y="8"/>
+          <view angle="315" col="1" y="8" hm="true"/>
+        </layer>
+        <layer id="Staff01" texture="staff" y="1">
+          <view angle="45" x="1" y="6"/>
+          <view angle="135" x="-1" y="6" hm="true"/>
+          <view angle="225" col="1" y="8"/>
+          <view angle="315" col="1" y="8" hm="true"/>
+        </layer>
+        <layer id="Staff02" texture="staff" y="2">
+          <view angle="45" x="1" y="6"/>
+          <view angle="135" x="-1" y="6" hm="true"/>
+          <view angle="225" col="1" y="8"/>
+          <view angle="315" col="1" y="8" hm="true"/>
+        </layer>
+        <layer id="Stand" texture="stand">
+          <view angle="45" y="18"/>
+          <view angle="135" y="18" hm="true"/>
+          <view angle="225" y="18"/>
+          <view angle="315" y="18" hm="true"/>
+        </layer>
+        <layer id="Glow01" texture="glow01">
+          <view angle="45" y="-75"/>
+          <view angle="135" y="-75"/>
+          <view angle="225" y="-75"/>
+          <view angle="315" y="-75"/>
+        </layer>
+        <layer id="Glow02" texture="glow02">
+          <view angle="45" y="-76"/>
+          <view angle="135" y="-76"/>
+          <view angle="225" y="-76"/>
+          <view angle="315" y="-76"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Staff"/>
+          <layerref id="Stand"/>
+          <layerref id="Glow01" a="0.7"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Staff01"/>
+          <layerref id="Stand"/>
+          <layerref id="Glow02" a="0.8"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Staff02"/>
+          <layerref id="Stand"/>
+          <layerref id="Glow01" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="3">
+          <frameref id="Frame"/>
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

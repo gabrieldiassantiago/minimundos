@@ -1,0 +1,41 @@
+<item.SpriteItem id="1420" name="Pia de Cozinha Básica" desc="Essa não pode faltar." tags="table" icon="items/base/modern/icon_m_kitchen_04_ksink.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="60" tokens="600" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,1.9,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Counter" source="items/base/modern/m_bar_counter.png" cols="2" rows="1"/>
+    <texture id="sink" source="items/base/modern/m_kitchen_04_ksink_sink.png" cols="1" rows="1"/>
+    <texture id="taps" source="items/base/modern/m_kitchen_04_ksink_tap.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.49" max="0.4,1.9,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Counter">
+          <view angle="45" x="-1" y="37"/>
+          <view angle="135" x="1" y="37" hm="true"/>
+          <view angle="225" x="-1" y="37"/>
+          <view angle="315" x="1" y="37" hm="true"/>
+        </layer>
+        <layer id="sink" texture="sink">
+          <view angle="45" x="2" y="-71"/>
+          <view angle="135" x="-2" y="-71" hm="true"/>
+          <view angle="225" y="-72"/>
+          <view angle="315" y="-72" hm="true"/>
+        </layer>
+        <layer id="taps" texture="taps">
+          <view angle="45" x="-6" y="-91"/>
+          <view angle="135" col="1" x="12" y="-91"/>
+          <view angle="225" col="2" x="12" y="-76"/>
+          <view angle="315" col="3" x="-15" y="-76"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

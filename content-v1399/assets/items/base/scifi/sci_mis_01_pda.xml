@@ -1,0 +1,234 @@
+<item.SpriteItem id="1905" name="Dispositivo Eletrônico" desc="Dispositivo de alta tecnologia." tags="misc,pickup" icon="items/base/scifi/icon_sci_mis_01_pda.png" price="30" tokens="300" minLevel="1" minLevelType="2" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.18" max="0.2,0.02,0.18"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_pick_up.as"/>
+    <event id="action" script="scripts/item/action_pick_up.as"/>
+  </events>
+  <actions>
+    <action id="Pick Up"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="PDA" source="items/base/scifi/sci_mis_01_pda.png" cols="4" rows="1"/>
+    <texture id="detail" source="items/base/scifi/sci_mis_01_pda_detail.png" cols="4" rows="1"/>
+    <texture id="diffuse" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="intense" source="items/base/shared/s_fx_flare_pda.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="PDA" layer="floor">
+      <box min="-0.2,0,-0.18" max="0.2,0.02,0.18"/>
+      <layers>
+        <layer id="PDA" texture="PDA">
+          <view angle="45" y="12"/>
+          <view angle="135" col="1" y="13"/>
+          <view angle="225" col="2" y="13"/>
+          <view angle="315" col="3" x="-1" y="14"/>
+        </layer>
+        <layer id="one" texture="detail">
+          <view angle="45" x="6" y="4"/>
+          <view angle="135" x="-7" y="6"/>
+          <view angle="225" x="-8"/>
+          <view angle="315" x="4" y="-1"/>
+        </layer>
+        <layer id="two" texture="detail">
+          <view angle="45" col="1" x="6" y="4"/>
+          <view angle="135" col="1" x="-7" y="6"/>
+          <view angle="225" col="1" x="-8"/>
+          <view angle="315" col="1" x="4" y="-1"/>
+        </layer>
+        <layer id="three" texture="detail">
+          <view angle="45" col="2" x="6" y="4"/>
+          <view angle="135" col="2" x="-7" y="6"/>
+          <view angle="225" col="2" x="-8"/>
+          <view angle="315" col="2" x="4" y="-1"/>
+        </layer>
+        <layer id="four" texture="detail">
+          <view angle="45" col="3" x="6" y="4"/>
+          <view angle="135" col="3" x="-7" y="6"/>
+          <view angle="225" col="3" x="-8"/>
+          <view angle="315" col="3" x="4" y="-1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="visible">
+          <layerref id="PDA"/>
+        </frame>
+        <frame id="visible01">
+          <layerref id="PDA"/>
+          <layerref id="one"/>
+        </frame>
+        <frame id="visible02">
+          <layerref id="PDA"/>
+          <layerref id="two"/>
+        </frame>
+        <frame id="visible03">
+          <layerref id="PDA"/>
+          <layerref id="three"/>
+        </frame>
+        <frame id="visible04">
+          <layerref id="PDA"/>
+          <layerref id="four"/>
+        </frame>
+        <frame id="visible05">
+          <layerref id="PDA"/>
+          <layerref id="four" a="0.5"/>
+        </frame>
+        <frame id="80%">
+          <layerref id="PDA" a="0.8"/>
+        </frame>
+        <frame id="60%">
+          <layerref id="PDA" a="0.6"/>
+        </frame>
+        <frame id="40%">
+          <layerref id="PDA" a="0.4"/>
+        </frame>
+        <frame id="20%">
+          <layerref id="PDA" a="0.2"/>
+        </frame>
+        <frame id="invisible">
+          <layerref id="PDA" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Visible" framerate="2">
+          <frameref id="visible" duration="4"/>
+          <frameref id="visible01"/>
+          <frameref id="visible02"/>
+          <frameref id="visible03"/>
+          <frameref id="visible04"/>
+        </animation>
+        <animation id="Invisible" framerate="2">
+          <frameref id="invisible"/>
+        </animation>
+        <animation id="Show" framerate="8" loop="false">
+          <frameref id="invisible"/>
+          <frameref id="20%"/>
+          <frameref id="40%"/>
+          <frameref id="60%"/>
+          <frameref id="80%"/>
+          <frameref id="visible"/>
+        </animation>
+        <animation id="Hide" framerate="8" loop="false">
+          <frameref id="visible"/>
+          <frameref id="80%"/>
+          <frameref id="60%"/>
+          <frameref id="40%"/>
+          <frameref id="20%"/>
+          <frameref id="invisible"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="diffuse" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="visible">
+          <layerref id="Light" color="0xd2e3ff" a="0.1"/>
+        </frame>
+        <frame id="80%">
+          <layerref id="Light" color="0xd2e3ff" a="0.08"/>
+        </frame>
+        <frame id="60%">
+          <layerref id="Light" color="0xd2e3ff" a="0.06"/>
+        </frame>
+        <frame id="40%">
+          <layerref id="Light" color="0xd2e3ff" a="0.04"/>
+        </frame>
+        <frame id="20%">
+          <layerref id="Light" color="0xd2e3ff" a="0.02"/>
+        </frame>
+        <frame id="invisible">
+          <layerref id="Light" color="0xd2e3ff" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Visible" framerate="2">
+          <frameref id="visible"/>
+        </animation>
+        <animation id="Invisible" framerate="2">
+          <frameref id="invisible"/>
+        </animation>
+        <animation id="Show" framerate="8" loop="false">
+          <frameref id="invisible"/>
+          <frameref id="20%"/>
+          <frameref id="40%"/>
+          <frameref id="60%"/>
+          <frameref id="80%"/>
+          <frameref id="visible"/>
+        </animation>
+        <animation id="Hide" framerate="8" loop="false">
+          <frameref id="visible"/>
+          <frameref id="80%"/>
+          <frameref id="60%"/>
+          <frameref id="40%"/>
+          <frameref id="20%"/>
+          <frameref id="invisible"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="1.2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="visible" texture="intense" align="middle">
+          <view angle="45" x="2" y="2"/>
+          <view angle="135" col="1" x="3" y="2"/>
+          <view angle="225" col="2" x="1" y="2"/>
+          <view angle="315" col="3" x="2" y="3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="visible">
+          <layerref id="visible" color="0xbbd5ff" a="0.3"/>
+        </frame>
+        <frame id="80%">
+          <layerref id="visible" color="0xbbd5ff" a="0.24"/>
+        </frame>
+        <frame id="60%">
+          <layerref id="visible" color="0xbbd5ff" a="0.18"/>
+        </frame>
+        <frame id="40%">
+          <layerref id="visible" color="0xbbd5ff" a="0.12"/>
+        </frame>
+        <frame id="20%">
+          <layerref id="visible" color="0xbbd5ff" a="0.06"/>
+        </frame>
+        <frame id="invisible">
+          <layerref id="visible" color="0xbbd5ff" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Visible" framerate="2">
+          <frameref id="visible"/>
+        </animation>
+        <animation id="Invisible" framerate="2">
+          <frameref id="invisible"/>
+        </animation>
+        <animation id="Show" framerate="8" loop="false">
+          <frameref id="invisible"/>
+          <frameref id="20%"/>
+          <frameref id="40%"/>
+          <frameref id="60%"/>
+          <frameref id="80%"/>
+          <frameref id="visible"/>
+        </animation>
+        <animation id="Hide" framerate="8" loop="false">
+          <frameref id="visible"/>
+          <frameref id="80%"/>
+          <frameref id="60%"/>
+          <frameref id="40%"/>
+          <frameref id="20%"/>
+          <frameref id="invisible"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

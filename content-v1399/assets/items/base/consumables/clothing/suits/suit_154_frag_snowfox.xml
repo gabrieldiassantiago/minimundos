@@ -1,0 +1,43 @@
+<f id="SnowFox" parentId="Suits">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="suit_154TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_154_torso_m.png" pri="7"/>
+    </g>
+    <g id="Female">
+      <s id="suit_154TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_154_torso_m.png" pri="7"/>
+    </g>
+  </b>
+  <g id="Arm" name="Arm" icon="$bm/icon_m_tshirt.png">
+    <s id="suit_154ArmIdleStripe" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_154_arm_idle.png" pri="7"/>
+    <s id="suit_154ArmWalk1Stripe" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_154_arm_walk1.png" pri="7"/>
+    <s id="suit_154ArmWalk2Stripe" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_154_arm_walk2.png" pri="7"/>
+    <s id="suit_154ArmWalk3Stripe" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_154_arm_walk3.png" pri="7"/>
+    <s id="suit_154ArmThrowStripe" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_154_arm_throw.png" pri="7"/>
+    <s id="suit_154ArmSitStripe" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_154_arm_sit.png" pri="7"/>
+    <s id="suit_154ArmRaiseStripe" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_154_arm_raise.png" pri="7"/>
+    <s id="snowfox_Hand_Thumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_154_snowfox_hand_thumbs.png" pri="7"/>
+    <s id="snowfox_Hand_Throw" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_154_snowfox_hand_throw.png" pri="7"/>
+    <s id="snowfox_Hand_Stop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_154_snowfox_hand_stop.png" pri="7"/>
+    <s id="snowfox_Hand_Point" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_154_snowfox_hand_point.png" pri="7"/>
+    <s id="snowfox_Hand_Open" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_154_snowfox_hand_open.png" pri="7"/>
+    <s id="snowfox_Hand_Hold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_154_snowfox_hand_hold.png" pri="7"/>
+    <s id="snowfox_Hand_Wave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_154_snowfox_hand_wave2.png" pri="7"/>
+    <s id="snowfox_Hand_Wave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_154_snowfox_hand_wave1.png" pri="7"/>
+  </g>
+  <g id="Legs" icon="items/base/consumables/clothing/suits/suit_24_icon_piratedress.png">
+    <s id="suit_154_leg_Idle" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_154_leg_idle.png" pri="7"/>
+    <s id="suit_154_leg_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_154_leg_walk1.png" pri="7"/>
+    <s id="suit_154_leg_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_154_leg_walk2.png" pri="7"/>
+    <s id="suit_154_leg_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_154_leg_walk3.png" pri="7"/>
+    <s id="suit_154_leg_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_154_leg_walk4.png" pri="7"/>
+    <s id="suit_154_leg_Sit_upper" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_154_leg_sit.png" pri="7"/>
+    <s id="suit_154_leg_Sit_lower" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_154_leg_sit.png" pri="7"/>
+  </g>
+  <g id="Icon">
+    <t id="Iconsuit_154" icon="items/base/consumables/clothing/suits/suit_154_snowfox_icon.png" w="48" h="48"/>
+    <s id="Iconsuit_154base" cId="Iconsuit_154" s="items/base/consumables/clothing/suits/suit_154_snowfox_icon.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+</f>

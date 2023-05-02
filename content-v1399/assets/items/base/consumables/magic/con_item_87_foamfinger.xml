@@ -1,0 +1,33 @@
+<item.SpriteItem desc="Para torcidas e shows" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/magic/icon_con_item_87_foamfinger.png" id="2354" name="Mão de Espuma" tags="rare,consumable,actionbar,wear,hand,usable,action_holdable_toggle" minLevel="1" minCPLevel="1" price="1000" minLevelType="2">
+  <volume>
+    <box min="-0.42,0,-0.25" max="0.42,0.1,0.25"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="scroll" source="items/base/consumables/magic/con_item_87_foamfinger.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="scroll">
+      <box min="-0.42,0,-0.25" max="0.42,0.1,0.25"/>
+      <layers>
+        <layer id="scroll" texture="scroll">
+          <view angle="45" x="7" y="24"/>
+          <view angle="135" col="1" x="1" y="27"/>
+          <view angle="225" col="2" x="-4" y="27"/>
+          <view angle="315" col="3" y="21"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

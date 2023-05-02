@@ -1,0 +1,30 @@
+<item.SpriteItem name="Cortina Gótica Master Preta" desc="Uma longa cortina" tags="misc,slave_catalog_colorize,unsearchable" icon="items/base/gothic/icon_g_blackwallpaper.png" price="13" tokens="130" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" id="7268">
+  <volume>
+    <box min="-0.49,0,-0.5" max="-0.05,1,0.5"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/gothiccurtain.xml"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/gothic/g_blackwallpaper.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.5" max="-0.05,1,0.5"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-24" y="5" hm="true"/>
+          <view angle="135" x="24" y="4"/>
+          <view angle="225" x="32" y="33" hm="true"/>
+          <view angle="315" x="-31" y="33"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

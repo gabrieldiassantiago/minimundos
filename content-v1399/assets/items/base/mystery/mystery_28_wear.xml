@@ -1,0 +1,282 @@
+<item.SpriteItem id="0" name="Puzzleworth Cape" desc="A cape" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="cape_decal" source="items/base/mystery/mystery_28_wear_decal.png" cols="5" rows="4"/>
+    <texture id="cape_base" source="items/base/mystery/mystery_28_wear_base.png" cols="5" rows="4"/>
+    <texture id="sit_base" source="items/base/mystery/mystery_28_sit_base.png" cols="2" rows="1"/>
+    <texture id="sit_decal" source="items/base/mystery/mystery_28_sit_decal.png" cols="2" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="cape" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="Base_01" texture="cape_base">
+          <view angle="0" col="2" x="-18" y="71"/>
+          <view angle="45" x="-10" y="68"/>
+          <view angle="90" col="1" y="70"/>
+          <view angle="135" x="10" y="68" hm="true"/>
+          <view angle="180" col="2" x="18" y="71" hm="true"/>
+          <view angle="225" col="3" x="11" y="73" hm="true"/>
+          <view angle="270" col="4" y="72"/>
+          <view angle="315" col="3" x="-11" y="73"/>
+        </layer>
+        <layer id="Decal_01" texture="cape_decal">
+          <view angle="0" col="2" x="-18" y="71"/>
+          <view angle="45" x="-10" y="68"/>
+          <view angle="90" col="1" y="70"/>
+          <view angle="135" x="10" y="68" hm="true"/>
+          <view angle="180" col="2" x="18" y="71" hm="true"/>
+          <view angle="225" col="3" x="11" y="73" hm="true"/>
+          <view angle="270" col="4" y="72"/>
+          <view angle="315" col="3" x="-11" y="73"/>
+        </layer>
+        <layer id="Base_02" texture="cape_base">
+          <view angle="0" col="2" row="1" x="-18" y="71"/>
+          <view angle="45" row="1" x="-10" y="68"/>
+          <view angle="90" col="1" row="1" y="70"/>
+          <view angle="135" row="1" x="10" y="68" hm="true"/>
+          <view angle="180" col="2" row="1" x="18" y="71" hm="true"/>
+          <view angle="225" col="3" row="1" x="11" y="73" hm="true"/>
+          <view angle="270" col="4" row="1" y="72"/>
+          <view angle="315" col="3" row="1" x="-11" y="73"/>
+        </layer>
+        <layer id="Decal_02" texture="cape_decal">
+          <view angle="0" col="2" row="1" x="-18" y="71"/>
+          <view angle="45" row="1" x="-10" y="68"/>
+          <view angle="90" col="1" row="1" y="70"/>
+          <view angle="135" row="1" x="10" y="68" hm="true"/>
+          <view angle="180" col="2" row="1" x="18" y="71" hm="true"/>
+          <view angle="225" col="3" row="1" x="11" y="73" hm="true"/>
+          <view angle="270" col="4" row="1" y="72"/>
+          <view angle="315" col="3" row="1" x="-11" y="73"/>
+        </layer>
+        <layer id="Base_03" texture="cape_base">
+          <view angle="0" col="2" row="2" x="-18" y="71"/>
+          <view angle="45" row="2" x="-10" y="68"/>
+          <view angle="90" col="1" row="2" y="70"/>
+          <view angle="135" row="2" x="10" y="68" hm="true"/>
+          <view angle="180" col="2" row="2" x="18" y="71" hm="true"/>
+          <view angle="225" col="3" row="2" x="11" y="73" hm="true"/>
+          <view angle="270" col="4" row="2" y="72"/>
+          <view angle="315" col="3" row="2" x="-11" y="73"/>
+        </layer>
+        <layer id="Decal_03" texture="cape_decal">
+          <view angle="0" col="2" row="2" x="-18" y="71"/>
+          <view angle="45" row="2" x="-10" y="68"/>
+          <view angle="90" col="1" row="2" y="70"/>
+          <view angle="135" row="2" x="10" y="68" hm="true"/>
+          <view angle="180" col="2" row="2" x="18" y="71" hm="true"/>
+          <view angle="225" col="3" row="2" x="11" y="73" hm="true"/>
+          <view angle="270" col="4" row="2" y="72"/>
+          <view angle="315" col="3" row="2" x="-11" y="73"/>
+        </layer>
+        <layer id="Base_04" texture="cape_base">
+          <view angle="0" col="2" row="3" x="-18" y="71"/>
+          <view angle="45" row="3" x="-10" y="68"/>
+          <view angle="90" col="1" row="3" y="70"/>
+          <view angle="135" row="3" x="10" y="68" hm="true"/>
+          <view angle="180" col="2" row="3" x="18" y="71" hm="true"/>
+          <view angle="225" col="3" row="3" x="11" y="73" hm="true"/>
+          <view angle="270" col="4" row="3" y="72"/>
+          <view angle="315" col="3" row="3" x="-11" y="73"/>
+        </layer>
+        <layer id="Decal_04" texture="cape_decal">
+          <view angle="0" col="2" row="3" x="-18" y="71"/>
+          <view angle="45" row="3" x="-10" y="68"/>
+          <view angle="90" col="1" row="3" y="70"/>
+          <view angle="135" row="3" x="10" y="68" hm="true"/>
+          <view angle="180" col="2" row="3" x="18" y="71" hm="true"/>
+          <view angle="225" col="3" row="3" x="11" y="73" hm="true"/>
+          <view angle="270" col="4" row="3" y="72"/>
+          <view angle="315" col="3" row="3" x="-11" y="73"/>
+        </layer>
+        <layer id="sit_base" texture="sit_base">
+          <view angle="45" x="5" y="55"/>
+          <view angle="135" x="-5" y="55" hm="true"/>
+          <view angle="225" col="1" x="-4" y="45" hm="true"/>
+          <view angle="315" col="1" x="4" y="45"/>
+        </layer>
+        <layer id="sit_decal" texture="sit_decal">
+          <view angle="45" x="5" y="55"/>
+          <view angle="135" x="-5" y="55" hm="true"/>
+          <view angle="225" col="1" x="-4" y="45" hm="true"/>
+          <view angle="315" col="1" x="4" y="45"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="green_01">
+          <layerref id="Base_01" color="0x2e9a26"/>
+          <layerref id="Decal_01"/>
+        </frame>
+        <frame id="green_02">
+          <layerref id="Base_02" color="0x2e9a26"/>
+          <layerref id="Decal_02"/>
+        </frame>
+        <frame id="green_03">
+          <layerref id="Base_03" color="0x2e9a26"/>
+          <layerref id="Decal_03"/>
+        </frame>
+        <frame id="green_04">
+          <layerref id="Base_04" color="0x2e9a26"/>
+          <layerref id="Decal_04"/>
+        </frame>
+        <frame id="red_01">
+          <layerref id="Base_01" color="0xe73b3b"/>
+          <layerref id="Decal_01"/>
+        </frame>
+        <frame id="red_02">
+          <layerref id="Base_02" color="0xe73b3b"/>
+          <layerref id="Decal_02"/>
+        </frame>
+        <frame id="red_03">
+          <layerref id="Base_03" color="0xe73b3b"/>
+          <layerref id="Decal_03"/>
+        </frame>
+        <frame id="red_04">
+          <layerref id="Base_04" color="0xe73b3b"/>
+          <layerref id="Decal_04"/>
+        </frame>
+        <frame id="orange_01">
+          <layerref id="Base_01" color="0xeb7f4d"/>
+          <layerref id="Decal_01"/>
+        </frame>
+        <frame id="orange_02">
+          <layerref id="Base_02" color="0xeb7f4d"/>
+          <layerref id="Decal_02"/>
+        </frame>
+        <frame id="orange_03">
+          <layerref id="Base_03" color="0xeb7f4d"/>
+          <layerref id="Decal_03"/>
+        </frame>
+        <frame id="orange_04">
+          <layerref id="Base_04" color="0xeb7f4d"/>
+          <layerref id="Decal_04"/>
+        </frame>
+        <frame id="pink_01">
+          <layerref id="Base_01" color="0xe357e4"/>
+          <layerref id="Decal_01"/>
+        </frame>
+        <frame id="pink_02">
+          <layerref id="Base_02" color="0xe357e4"/>
+          <layerref id="Decal_02"/>
+        </frame>
+        <frame id="pink_03">
+          <layerref id="Base_03" color="0xe357e4"/>
+          <layerref id="Decal_03"/>
+        </frame>
+        <frame id="pink_04">
+          <layerref id="Base_04" color="0xe357e4"/>
+          <layerref id="Decal_04"/>
+        </frame>
+        <frame id="blue_01">
+          <layerref id="Base_01" color="0x3282ba"/>
+          <layerref id="Decal_01"/>
+        </frame>
+        <frame id="blue_02">
+          <layerref id="Base_02" color="0x3282ba"/>
+          <layerref id="Decal_02"/>
+        </frame>
+        <frame id="blue_03">
+          <layerref id="Base_03" color="0x3282ba"/>
+          <layerref id="Decal_03"/>
+        </frame>
+        <frame id="blue_04">
+          <layerref id="Base_04" color="0x3282ba"/>
+          <layerref id="Decal_04"/>
+        </frame>
+        <frame id="purple_01">
+          <layerref id="Base_01" color="0x753dda"/>
+          <layerref id="Decal_01"/>
+        </frame>
+        <frame id="purple_02">
+          <layerref id="Base_02" color="0x753dda"/>
+          <layerref id="Decal_02"/>
+        </frame>
+        <frame id="purple_03">
+          <layerref id="Base_03" color="0x753dda"/>
+          <layerref id="Decal_03"/>
+        </frame>
+        <frame id="purple_04">
+          <layerref id="Base_04" color="0x753dda"/>
+          <layerref id="Decal_04"/>
+        </frame>
+        <frame id="sit_green">
+          <layerref id="sit_base" color="0x2e9a26"/>
+          <layerref id="sit_decal"/>
+        </frame>
+        <frame id="sit_blue">
+          <layerref id="sit_base" color="0x3282ba"/>
+          <layerref id="sit_decal"/>
+        </frame>
+        <frame id="sit_purple">
+          <layerref id="sit_base" color="0x753dda"/>
+          <layerref id="sit_decal"/>
+        </frame>
+        <frame id="sit_pink">
+          <layerref id="sit_base" color="0xe357e4"/>
+          <layerref id="sit_decal"/>
+        </frame>
+        <frame id="sit_red">
+          <layerref id="sit_base" color="0xe73b3b"/>
+          <layerref id="sit_decal"/>
+        </frame>
+        <frame id="sit_orange">
+          <layerref id="sit_base" color="0xeb7f4d"/>
+          <layerref id="sit_decal"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="green_01"/>
+          <frameref id="green_02"/>
+          <frameref id="green_03"/>
+          <frameref id="green_04"/>
+          <frameref id="green_01"/>
+          <frameref id="green_02"/>
+          <frameref id="green_03"/>
+          <frameref id="green_04"/>
+          <frameref id="blue_01"/>
+          <frameref id="blue_02"/>
+          <frameref id="purple_03"/>
+          <frameref id="purple_04"/>
+          <frameref id="pink_01"/>
+          <frameref id="pink_02"/>
+          <frameref id="red_03"/>
+          <frameref id="red_04"/>
+          <frameref id="orange_01"/>
+          <frameref id="orange_02"/>
+          <frameref id="green_03"/>
+          <frameref id="green_04"/>
+          <frameref id="green_01"/>
+          <frameref id="green_02"/>
+          <frameref id="green_03"/>
+          <frameref id="green_04"/>
+        </animation>
+        <animation id="Sit" framerate="8">
+          <frameref id="sit_green" duration="15"/>
+          <frameref id="sit_blue" duration="2"/>
+          <frameref id="sit_purple" duration="2"/>
+          <frameref id="sit_pink" duration="2"/>
+          <frameref id="sit_red" duration="2"/>
+          <frameref id="sit_orange" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

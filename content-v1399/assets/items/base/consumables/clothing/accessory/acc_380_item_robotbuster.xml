@@ -1,0 +1,35 @@
+<item.SpriteItem name="Bazuca Blaster Super Herói Glória" desc="Extermine os inimigos com esta bazuca poderosa" tags="rare,actionbar,consumable,hand,usable,wear,kudos,nopvp,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_380_icon_robotbuster.png" price="2" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="5086">
+  <volume>
+    <box min="-0.1385,0,-0.1051" max="0.1,0.55,0.1564"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+10,health+10"/>
+  </data>
+  <textures>
+    <texture id="Robot Buster" source="items/base/consumables/clothing/accessory/acc_380_item_robotbuster.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Robot Buster">
+      <box min="-0.1385,0,-0.1051" max="0.1,0.55,0.1564"/>
+      <layers>
+        <layer id="Robot Buster" texture="Robot Buster">
+          <view angle="45" y="17"/>
+          <view angle="135" x="3" y="19" hm="true"/>
+          <view angle="225" col="1" x="3" y="19"/>
+          <view angle="315" col="1" x="-6" y="17" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

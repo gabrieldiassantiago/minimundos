@@ -1,0 +1,27 @@
+<item.SpriteItem id="1463" name="Wok" desc="Cozinhar com excelência." tags="misc" icon="items/base/modern/icon_m_kitchen_13_wok.png" dropTargetType="none" dropTargetList="floor, table, avatar" dropTargetClamp="none" price="25" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.43,0,-0.24" max="0.48,0.12,0.24"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture01" source="items/base/modern/m_kitchen_13_wok.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.43,0,-0.24" max="0.48,0.12,0.24"/>
+      <layers>
+        <layer id="Layer" texture="Texture01">
+          <view angle="45" x="2" y="23"/>
+          <view angle="135" x="1" y="25" hm="true"/>
+          <view angle="225" col="1" x="7" y="32"/>
+          <view angle="315" col="1" x="-4" y="32" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

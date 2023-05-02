@@ -1,0 +1,49 @@
+<item.SpriteItem desc="Uma magia que faz o Mini dançar como se fosse número de um show!" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/magic/icon_con_item_10_dancing.png" id="899" name="Dança Enlounquecida" tags="consumable,actionbar,group_arcane,magic,bad,usable,stackable,craftable1,action_consumable_target,market" price="4" tokens="40" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.25,0.65,0.25" min="-0.25,0,-0.25"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="10"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="ingredient_1" value="2025"/>
+    <entry key="ingredient_quantity_1" value="3"/>
+    <entry key="product_quantity" value="3"/>
+    <entry key="xp_level_required" value="5"/>
+    <entry key="xp_rewarded" value="20"/>
+    <entry key="action_attributes" value="arcane-10"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_cast.png"/>
+  </data>
+  <textures>
+    <texture cols="1" id="candle" rows="1" source="items/base/consumables/magic/con_item_10_dancing.png"/>
+    <texture cols="1" id="glasscase" rows="1" source="items/base/consumables/magic/con_item_10_glasscase.png"/>
+  </textures>
+  <nodes>
+    <node id="Candle">
+      <box max="0.25,0.65,0.25" min="-0.25,0,-0.25"/>
+      <layers>
+        <layer id="candle01" texture="glasscase">
+          <view angle="45" y="24"/>
+          <view angle="135" hm="true" y="24"/>
+          <view angle="225" y="24"/>
+          <view angle="315" hm="true" y="24"/>
+        </layer>
+        <layer id="candle" texture="candle">
+          <view angle="45" y="-3"/>
+          <view angle="135" hm="true" x="-1" y="-3"/>
+          <view angle="225" y="-3"/>
+          <view angle="315" hm="true" x="-1" y="-3"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

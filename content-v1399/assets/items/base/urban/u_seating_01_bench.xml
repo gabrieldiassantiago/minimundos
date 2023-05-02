@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.ChairItem desc="Um banco de praça de madeira." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/urban/icon_u_seating_01_bench.png" id="867" name="Banco de Praça" tags="chair" price="40" tokens="400" minLevel="1" minCPLevel="1">
+  <seats>
+    <seat x="0.05" y="0.4" z="0.05">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+    <seat x="0.05" y="0.4" z="0.95">
+      <ap x="1" z="1"/>
+      <ap x="1"/>
+      <ap x="1" z="2"/>
+      <ap z="2"/>
+      <ap x="-1" z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="2"/>
+    </seat>
+  </seats>
+  <volume>
+    <box max="0.39,0.84,1.49" min="-0.31,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/urban/u_seating_01_bench.png"/>
+    <texture cols="1" id="Texture01" rows="2" source="items/base/urban/u_seating_01_bench_02.png"/>
+  </textures>
+  <nodes>
+    <node id="Back" x="-0.15" z="0.5">
+      <box max="0.54,0.84,0.99" min="-0.16,0,-0.99"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="15" y="55"/>
+          <view angle="135" hm="true" x="-14" y="56"/>
+          <view alpha="0" angle="225" hm="true" x="-14" y="60"/>
+          <view alpha="0" angle="315" x="14" y="60"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view alpha="0" angle="45"/>
+          <view alpha="0" angle="135"/>
+          <view angle="225" hm="true" x="-14" y="29"/>
+          <view angle="315" x="14" y="29"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Seat" x="-0.15" z="0.5">
+      <box max="0.54,0.84,0.99" min="-0.16,0,-0.99"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view alpha="0" angle="45" y="15"/>
+          <view alpha="0" angle="135" hm="true" y="15"/>
+          <view alpha="0" angle="225" hm="true" x="-14" y="60"/>
+          <view alpha="0" angle="315" x="14" y="60"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view alpha="0" angle="45"/>
+          <view alpha="0" angle="135"/>
+          <view angle="225" hm="true" row="1" x="-14" y="42"/>
+          <view angle="315" row="1" x="14" y="42"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

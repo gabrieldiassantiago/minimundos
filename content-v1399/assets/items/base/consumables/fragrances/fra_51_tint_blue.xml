@@ -1,0 +1,39 @@
+<item.SpriteItem id="5978" name="Corpo Colorido Azul Play" desc="Isso pinta o seu corpo por inteiro" tags="tint,consumable,actionbar,action_wearable_toggle,wear,usable" icon="items/base/consumables/fragrances/fra_51_tint_blue_icon.png" price="800" minLevel="5" minLevelType="8" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" premium="Y">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.49,0.1"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_perfume.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+10"/>
+  </data>
+  <textures>
+    <texture id="texture" source="items/base/consumables/fragrances/fra_51_tint_blue.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.49,0.1"/>
+      <layers>
+        <layer id="glass" texture="texture" y="6">
+          <view angle="45" x="-1" y="-1"/>
+          <view angle="135" y="-1" hm="true"/>
+          <view angle="225" x="-1" y="-1"/>
+          <view angle="315" y="-1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="glass"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

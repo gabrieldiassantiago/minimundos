@@ -1,0 +1,38 @@
+<item.SpriteItem id="5121" name="Vareta Arco-Íris Brilhante Play" desc="Um arco-íris brilhante a luz da noite" tags="consumable,light,actionbar,hand,usable,stackable,action_holdable_toggle" icon="items/base/consumables/magic/icon_con_hand_44_glowstick_rainbow.png" price="15" tokens="150" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,0,-0.1" max="0.25,0.1,0.1"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="10"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemConsume" value="Hold"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_hold.png"/>
+  </data>
+  <textures>
+    <texture id="tube" source="items/base/consumables/magic/con_item_44_glowstick_rainbow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Bomb">
+      <box min="-0.25,0,-0.1" max="0.25,0.1,0.1"/>
+      <layers>
+        <layer id="Bomb01" texture="tube" y="-24">
+          <view angle="45" x="1" y="47"/>
+          <view angle="135" x="-2" y="48" hm="true"/>
+          <view angle="225" x="1" y="47"/>
+          <view angle="315" x="-2" y="48" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

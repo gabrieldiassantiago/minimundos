@@ -1,0 +1,44 @@
+<item.SpriteItem id="4110" name="Dan SmallWorlds Sculpture" desc="A marble sculpture of Dan SmallWorlds" tags="rare,misc" icon="items/base/antique/icon_a_statue_01_dansw.png" price="50" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,1,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="trophy" source="items/base/antique/a_statue_01_dansw.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="trophy">
+      <box min="-0.2,0,-0.2" max="0.2,1,0.2"/>
+      <layers>
+        <layer id="trophy" texture="trophy">
+          <view angle="45" x="-2" y="15"/>
+          <view angle="135" x="1" y="15" hm="true"/>
+          <view angle="225" col="1" x="2" y="16" hm="true"/>
+          <view angle="315" col="1" x="-3" y="16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_00">
+          <layerref id="trophy"/>
+        </frame>
+        <frame id="Frame_01">
+          <layerref id="trophy"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="Frame_00"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="Frame_01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

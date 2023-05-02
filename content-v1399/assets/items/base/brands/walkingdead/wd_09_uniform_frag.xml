@@ -1,0 +1,24 @@
+<f id="Top04_17_WD_Unoform" parentId="Top04">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Top04_17TorsoBaseM" cId="Torso" s="items/base/brands/walkingdead/wd_09_uniform_torso_M.png" pri="4.1"/>
+    </g>
+    <g id="Female">
+      <s id="Top04_17TorsoBaseF" cId="Torso" s="items/base/brands/walkingdead/wd_09_uniform_torso_F.png" pri="4.1"/>
+    </g>
+  </b>
+  <g id="SportJacketTorso" name="LeatherJacket" icon="$bm/icon_m_retro.png">
+    <s id="Top04_17ArmIdleBase" cId="ArmIdle" s="items/base/brands/walkingdead/wd_09_uniform_arm_idle.png" pri="4.1"/>
+    <s id="Top04_17ArmWalk1Base" cId="ArmWalk1" s="items/base/brands/walkingdead/wd_09_uniform_arm_walk1.png" pri="4.1"/>
+    <s id="Top04_17ArmWalk2Base" cId="ArmWalk2" s="items/base/brands/walkingdead/wd_09_uniform_arm_walk2.png" pri="4.1"/>
+    <s id="Top04_17ArmWalk3Base" cId="ArmWalk3" s="items/base/brands/walkingdead/wd_09_uniform_arm_walk3.png" pri="4.1"/>
+    <s id="Top04_17ArmSitBase" cId="ArmSit" s="items/base/brands/walkingdead/wd_09_uniform_arm_sit.png" pri="4.1"/>
+    <s id="Top04_17ArmThrowBase" cId="ArmThrow" s="items/base/brands/walkingdead/wd_09_uniform_arm_throw.png" pri="4.1"/>
+    <s id="Top04_17ArmRaiseBase" cId="ArmRaise" s="items/base/brands/walkingdead/wd_09_uniform_arm_raise.png" pri="4.1"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop04_17" icon="items/base/brands/walkingdead/wd_09_uniform_icon.png" w="48" h="48"/>
+    <s id="IconTop04_17Base" cId="IconTop04_17" s="items/base/brands/walkingdead/wd_09_uniform_icon.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

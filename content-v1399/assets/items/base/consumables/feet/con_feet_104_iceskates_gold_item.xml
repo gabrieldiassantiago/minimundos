@@ -1,0 +1,135 @@
+<item.SpriteItem id="4946" name="Patins de Gelo Deluxe Zoom" desc="Um rápido e afiado patins de gelo dourado" tags="rare,consumable,actionbar,wear,feet,action_wearable_toggle" icon="items/base/consumables/feet/con_feet_104_iceskates_gold_icon.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.22,0,-0.22" max="0.22,0.35,0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+75"/>
+    <entry key="action_attributes" value="frost+25"/>
+  </data>
+  <textures>
+    <texture id="boots" source="items/base/consumables/feet/con_feet_104_iceskates_gold_item.png" cols="2" rows="1"/>
+    <texture id="Texture" source="items/base/consumables/feet/con_feet_104_iceskates_gold_top.png" cols="2" rows="1"/>
+    <texture id="sparkle" source="items/base/consumables/magic/con_sparkle.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.22,0,-0.22" max="0.22,0.35,0.22"/>
+      <layers>
+        <layer id="boots" texture="boots">
+          <view angle="45" x="-2" y="22"/>
+          <view angle="135" x="1" y="23" hm="true"/>
+          <view angle="225" col="1" x="-1" y="27"/>
+          <view angle="315" col="1" x="4" y="27" hm="true"/>
+        </layer>
+        <layer id="boots01" texture="Texture">
+          <view angle="45" x="-2" y="-6"/>
+          <view angle="135" x="1" y="-5" hm="true"/>
+          <view angle="225" col="1" x="-1" y="-1"/>
+          <view angle="315" col="1" x="4" y="-1" hm="true"/>
+        </layer>
+        <layer id="sparkle01" texture="sparkle">
+          <view x="8" y="20"/>
+        </layer>
+        <layer id="sparkle02" texture="sparkle">
+          <view col="1" x="8" y="20"/>
+        </layer>
+        <layer id="sparkle03" texture="sparkle">
+          <view col="2" x="8" y="20"/>
+        </layer>
+        <layer id="sparkle04" texture="sparkle">
+          <view/>
+        </layer>
+        <layer id="sparkle05" texture="sparkle">
+          <view col="1"/>
+        </layer>
+        <layer id="sparkle06" texture="sparkle">
+          <view col="2"/>
+        </layer>
+        <layer id="sparkle07" texture="sparkle">
+          <view x="-7" y="19"/>
+        </layer>
+        <layer id="sparkle08" texture="sparkle">
+          <view col="1" x="-7" y="19"/>
+        </layer>
+        <layer id="sparkle09" texture="sparkle">
+          <view col="2" x="-7" y="19"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="boots01"/>
+          <layerref id="boots"/>
+          <layerref id="sparkle01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="boots01"/>
+          <layerref id="boots"/>
+          <layerref id="sparkle02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="boots01"/>
+          <layerref id="boots"/>
+          <layerref id="sparkle03"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="boots01"/>
+          <layerref id="boots"/>
+          <layerref id="sparkle04"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="boots01"/>
+          <layerref id="boots"/>
+          <layerref id="sparkle05"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="boots01"/>
+          <layerref id="boots"/>
+          <layerref id="sparkle06"/>
+        </frame>
+        <frame id="Frameoff">
+          <layerref id="boots01"/>
+          <layerref id="boots"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="boots01"/>
+          <layerref id="boots"/>
+          <layerref id="sparkle07"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="boots01"/>
+          <layerref id="boots"/>
+          <layerref id="sparkle08"/>
+        </frame>
+        <frame id="Frame09">
+          <layerref id="boots01"/>
+          <layerref id="boots"/>
+          <layerref id="sparkle09"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frameoff" duration="5"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frameoff" duration="8"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame09"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,64 @@
+<item.SpriteItem name="Rifle de Plasma Herói Deluxe" desc="Proteja-se!" tags="rare,consumable,usable,hand,wear,actionbar,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_741_icon_grenadelauncher.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="6535">
+  <volume>
+    <box min="-0.15,0,-0.3" max="0.15,1.25,0.3"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+25"/>
+    <entry key="action_attributes_secondary" value="speed+10,health+25"/>
+  </data>
+  <textures>
+    <texture id="bow" source="items/base/consumables/clothing/accessory/acc_741_item_grenadelauncher.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.3" max="0.15,1.25,0.3"/>
+      <layers>
+        <layer id="bow" texture="bow">
+          <view angle="45" x="3" y="31"/>
+          <view angle="135" col="1" x="2" y="30" hm="true"/>
+          <view angle="225" col="1" y="31"/>
+          <view angle="315" x="-4" y="30" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-10"/>
+          <view angle="135" y="-10"/>
+          <view angle="225" y="-10"/>
+          <view angle="315" y="-10"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x5de4e5"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

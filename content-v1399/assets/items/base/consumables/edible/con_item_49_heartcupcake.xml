@@ -1,0 +1,35 @@
+<item.SpriteItem id="3015" name="Arranjo de Cup Cakes" desc="Ideal para os amantes de doces e festas." tags="rare,consumable,food,actionbar,group_edible,edible,stackable,action_edible" icon="items/base/consumables/edible/icon_con_eat_49_heartcupcake.png" price="30" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.32,0,-0.32" max="0.32,0.6,0.32"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_edible.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_edible.as"/>
+    <event id="action" script="scripts/item/action_edible.as"/>
+    <event id="select" script="scripts/item/select_edible.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="food-100"/>
+    <entry key="action_attributes_secondary" value="health+5"/>
+  </data>
+  <textures>
+    <texture id="cake" source="items/base/consumables/edible/con_item_49_heartcupcake.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.32,0,-0.32" max="0.32,0.6,0.32"/>
+      <layers>
+        <layer id="cupcake" texture="cake">
+          <view angle="45" y="25"/>
+          <view angle="135" x="-1" y="25" hm="true"/>
+          <view angle="225" y="25"/>
+          <view angle="315" x="-1" y="25" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,79 @@
+<item.SpriteItem id="0" name="Plasma Gun" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="gun" source="items/base/urban/u_adminspell_weapon_wear.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="gun" texture="gun">
+          <view angle="0" x="-3" y="81"/>
+          <view angle="45" col="1" x="-1" y="82"/>
+          <view angle="90" col="2" x="-3" y="73"/>
+          <view angle="135" col="1" y="79" hm="true"/>
+          <view angle="180" x="3" y="81" hm="true"/>
+          <view angle="225" col="4" x="3" y="86" hm="true"/>
+          <view angle="270" col="3" x="-1" y="85"/>
+          <view angle="315" col="4" x="-6" y="86"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="gun"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Layer" texture="Light">
+          <view angle="0" y="84" hm="true"/>
+          <view angle="45" y="84"/>
+          <view angle="90" y="74"/>
+          <view angle="135" y="84" hm="true"/>
+          <view angle="180" y="84"/>
+          <view angle="225" y="84"/>
+          <view angle="270" x="5" y="84"/>
+          <view angle="315" y="84" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Layer" color="0xc85de7"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Layer" color="0xc85de7" a="0.8"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Layer" color="0xc85de7" a="0.6"/>
+        </frame>
+        <frame id="Off"/>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On02"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

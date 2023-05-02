@@ -1,0 +1,27 @@
+<item.SpriteItem desc="Para organizar-se." dropTargetClamp="none" dropTargetList="wall,avatar" dropTargetType="table" gridActive="false" icon="items/base/antique/icon_a_shelf_01_wooden.png" id="1033" name="Prateleira de Parede de Madeira" tags="wall,shelf" price="20" tokens="200" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.55,0.225,0.63" min="0,-0.225,-0.63"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Shelf" rows="1" source="items/base/antique/a_shelf_01_wooden.png"/>
+  </textures>
+  <nodes>
+    <node id="Shelf">
+      <box max="0.55,0.225,0.63" min="0,-0.225,-0.63"/>
+      <layers>
+        <layer align="middle" id="Layer" texture="Shelf">
+          <view angle="45" x="13" y="4"/>
+          <view angle="135" hm="true" x="-13" y="4"/>
+          <view alpha="0" angle="225"/>
+          <view alpha="0" angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

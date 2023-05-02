@@ -1,0 +1,82 @@
+<item.WidgetItem id="1363" name="Máquina de Super Recompensas" desc="Consiga ouro com super recompensas." tags="admin,widget" icon="items/base/modern/icon_m_superrew_01_a.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_url_iframe.swf" price="175" tokens="1750" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.6,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+  </events>
+  <data>
+    <entry key="frame" value="modern"/>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="widget_iframe_file" value="store/offers/networks?widget=true"/>
+    <entry key="widget_iframe_bg" value="urliframe/factory_generic_background.jpg"/>
+    <entry key="control_xml_path" value="widgets/assets/superRewards/control-ui.mxml"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="iframeWidget" value="true"/>
+  </data>
+  <navigate position="infront" sitRange="2.00" standRange="2.00" targetRange="2.00"/>
+  <textures>
+    <texture id="top" source="items/base/modern/m_superrew_01_top.png" cols="2" rows="1"/>
+    <texture id="rubbish" source="items/base/modern/m_superrew_01_side.png" cols="2" rows="1"/>
+    <texture id="text" source="items/base/modern/m_superrew_01_text.png" cols="1" rows="1"/>
+    <texture id="Base" source="items/base/modern/m_superrew_01_a.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_atm.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,2.6,0.49"/>
+      <layers>
+        <layer id="Base" texture="Base" y="39">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+        <layer id="Top" texture="top" y="-172">
+          <view angle="45" alpha="0"/>
+          <view angle="135"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="Text" texture="text" x="-28" y="-137">
+          <view angle="45" alpha="0"/>
+          <view angle="135"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="Rubish" texture="rubbish" x="50">
+          <view angle="45" x="-3" y="-15"/>
+          <view angle="135" col="1" x="-60"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" x="0.5156" y="1.3" s="2.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" x="4" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

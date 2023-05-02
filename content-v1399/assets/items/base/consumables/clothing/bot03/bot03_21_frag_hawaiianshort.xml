@@ -1,0 +1,33 @@
+<f id="Bot03_19HawaiianShorts" parentId="Bot03">
+  <g id="ShortPants" name="Shorts" icon="$bm/iconm_legs_shorts.png">
+    <s id="ShortPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_21_idle.png" pri="3"/>
+    <s id="ShortPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_21_walk1.png" pri="3"/>
+    <s id="ShortPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_21_walk2.png" pri="3"/>
+    <s id="ShortPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_21_walk3.png" pri="3"/>
+    <s id="ShortPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_21_walk4.png" pri="3"/>
+    <s id="ShortSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_21_upper.png" pri="3"/>
+    <c sId="ShortPantIdleBase" c="3831790" a="0.65" b="24.9" ct="2.00" lId="Bot03_19Color1" lw="N"/>
+    <c sId="ShortPantWalk1Base" c="3831790" a="0.65" b="24.9" ct="2.00" lId="Bot03_19Color1" lw="N"/>
+    <c sId="ShortPantWalk2Base" c="3831790" a="0.65" b="24.9" ct="2.00" lId="Bot03_19Color1" lw="N"/>
+    <c sId="ShortPantWalk3Base" c="3831790" a="0.65" b="24.9" ct="2.00" lId="Bot03_19Color1" lw="N"/>
+    <c sId="ShortPantWalk4Base" c="3831790" a="0.65" b="24.9" ct="2.00" lId="Bot03_19Color1" lw="N"/>
+    <c sId="ShortSitUpperBase" c="3831790" a="0.65" b="24.9" ct="2.00" lId="Bot03_19Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot03_19" icon="items/base/consumables/clothing/bot03/bot03_21_icon_hawaiianshort.png" w="48" h="48"/>
+    <s id="IconBot03_19Base" cId="IconBot03_19" s="items/base/consumables/clothing/bot03/bot03_21_icon_hawaiianshort_1.png" pri="1"/>
+    <c sId="IconBot03_19Base" c="3831790" a="0.65" b="24.9" ct="2.00" lId="Bot03_19Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot03_19Color1" name="Color 1" desc="Choose a color" sel="Red" seld="Red">
+      <c id="Pink" icon="$bu/icon_pink.png" c="16209550" a="0.70" b="38.2" ct="1.98" lId="Bot03_19Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="16711680" a="0.48" b="30.5" ct="2.00" lId="Bot03_19Color1"/>
+      <c id="Indigo" name="Indigo" icon="$bu/icon_medblue.png" c="2222" a="0.35" b="7.9" ct="2.00" lId="Bot03_19Color1"/>
+      <c id="Blue" icon="$bu/icon_lightblue.png" c="3831790" a="0.65" b="24.9" ct="2.00" lId="Bot03_19Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot03_19Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSBottom"/>
+</f>

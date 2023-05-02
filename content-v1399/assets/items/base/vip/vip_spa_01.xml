@@ -1,0 +1,218 @@
+<item.ChairItem id="1472" name="Jacúzi 6000 da MiniBalada" desc="Um jacúzi de luxo" tags="chair" icon="items/base/vip/icon_vip_spa_01.png" price="735" minLevel="1" minLevelType="2" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" chairType="pool" minCPLevel="1">
+  <seats>
+    <seat x="-1">
+      <ap x="-2"/>
+      <ap x="-2" z="-1"/>
+      <ap x="-2" z="1"/>
+      <ap x="-2" z="-2"/>
+      <ap x="-2" z="2"/>
+      <ap x="-1" z="-2"/>
+      <ap x="-1" z="2"/>
+    </seat>
+    <seat z="1" a="90">
+      <ap z="2"/>
+      <ap x="-1" z="2"/>
+      <ap x="1" z="2"/>
+      <ap x="-2" z="2"/>
+      <ap x="2" z="2"/>
+      <ap x="-2" z="1"/>
+      <ap x="2" z="1"/>
+    </seat>
+    <seat x="0.95" a="180">
+      <ap x="2"/>
+      <ap x="2" z="1"/>
+      <ap x="2" z="-1"/>
+      <ap x="2" z="2"/>
+      <ap x="2" z="-2"/>
+      <ap x="1" z="2"/>
+      <ap x="1" z="-2"/>
+    </seat>
+    <seat z="-0.95" a="270">
+      <ap z="-2"/>
+      <ap x="1" z="-2"/>
+      <ap x="-1" z="-2"/>
+      <ap x="2" z="-2"/>
+      <ap x="-2" z="-2"/>
+      <ap x="2" z="-1"/>
+      <ap x="-2" z="-1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-1.45,0,-1.45" max="1.45,1.1,1.45"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="hygiene-3"/>
+  </data>
+  <textures>
+    <texture id="spa" source="items/base/vip/vip_spa_01.png" cols="3" rows="1"/>
+    <texture id="detail" source="items/base/vip/vip_spa_01_detail.png" cols="3" rows="1"/>
+    <texture id="water" source="items/base/modern/m_spa_water.png" cols="1" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_square.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="-1.45,0,-1.45" max="1.45,0.75,1.45"/>
+      <layers>
+        <layer id="base right" texture="spa">
+          <view angle="45" col="2" x="82" y="98" hm="true"/>
+          <view angle="135" col="2" x="82" y="98" hm="true"/>
+          <view angle="225" col="2" x="82" y="98" hm="true"/>
+          <view angle="315" col="2" x="82" y="98" hm="true"/>
+        </layer>
+        <layer id="base left" texture="spa">
+          <view angle="45" col="2" x="-83" y="98"/>
+          <view angle="135" col="2" x="-83" y="98"/>
+          <view angle="225" col="2" x="-83" y="98"/>
+          <view angle="315" col="2" x="-83" y="98"/>
+        </layer>
+        <layer id="controls" texture="detail">
+          <view angle="45" col="1" x="-148" y="-39" hm="true"/>
+          <view angle="135" y="-110"/>
+          <view angle="225" col="1" x="148" y="-39"/>
+          <view angle="315" col="2" y="34"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Water">
+      <box min="-1.4,0.65,-1.4" max="1.4,0.66,1.4"/>
+      <layers>
+        <layer id="water 01" texture="water">
+          <view angle="45" x="1" y="20"/>
+          <view angle="135" x="-1" y="20" hm="true"/>
+          <view angle="225" x="1" y="20"/>
+          <view angle="315" x="-1" y="20" hm="true"/>
+        </layer>
+        <layer id="water 02" texture="water">
+          <view angle="45" row="1" x="1" y="20"/>
+          <view angle="135" row="1" x="-1" y="20" hm="true"/>
+          <view angle="225" row="1" x="1" y="20"/>
+          <view angle="315" row="1" x="-1" y="20" hm="true"/>
+        </layer>
+        <layer id="water 03" texture="water">
+          <view angle="45" row="2" x="1" y="20"/>
+          <view angle="135" row="2" x="-1" y="20" hm="true"/>
+          <view angle="225" row="2" x="1" y="20"/>
+          <view angle="315" row="2" x="-1" y="20" hm="true"/>
+        </layer>
+        <layer id="rim right" texture="spa">
+          <view angle="45" col="1" x="82" y="13" hm="true"/>
+          <view angle="135" col="1" x="82" y="13" hm="true"/>
+          <view angle="225" col="1" x="82" y="13" hm="true"/>
+          <view angle="315" col="1" x="82" y="13" hm="true"/>
+        </layer>
+        <layer id="rim left" texture="spa">
+          <view angle="45" col="1" x="-83" y="13"/>
+          <view angle="135" col="1" x="-83" y="13"/>
+          <view angle="225" col="1" x="-83" y="13"/>
+          <view angle="315" col="1" x="-83" y="13"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="water 01">
+          <layerref id="water 01"/>
+          <layerref id="rim right"/>
+          <layerref id="rim left"/>
+        </frame>
+        <frame id="water 02">
+          <layerref id="water 02"/>
+          <layerref id="rim right"/>
+          <layerref id="rim left"/>
+        </frame>
+        <frame id="water 03">
+          <layerref id="water 03"/>
+          <layerref id="rim right"/>
+          <layerref id="rim left"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="water animation" framerate="4">
+          <frameref id="water 01"/>
+          <frameref id="water 02"/>
+          <frameref id="water 03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Behind">
+      <box min="-1.45,0,-1.45" max="1.45,1.1,1.45"/>
+      <layers>
+        <layer id="right" texture="spa">
+          <view angle="45" x="82" y="45" hm="true"/>
+          <view angle="135" x="82" y="45" hm="true"/>
+          <view angle="225" x="82" y="45" hm="true"/>
+          <view angle="315" x="82" y="45" hm="true"/>
+        </layer>
+        <layer id="left" texture="spa">
+          <view angle="45" x="-83" y="45"/>
+          <view angle="135" x="-83" y="45"/>
+          <view angle="225" x="-83" y="45"/>
+          <view angle="315" x="-83" y="45"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="0.065" s="5.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-5"/>
+          <view angle="135" y="-5"/>
+          <view angle="225" y="-5"/>
+          <view angle="315" y="-5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x69d0ec"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.4" s="2.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view x="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x63e5e6" a="0.3"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

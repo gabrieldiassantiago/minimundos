@@ -1,0 +1,71 @@
+<item.SpriteItem desc="Balcão luminoso da MiniBalada" dropTargetList="floor,avatar" dropTargetType="table" gridActive="true" icon="items/base/modern/icon_m_bar_05_club_section.png" id="2485" name="Balcão da Balada" tags="rare,table" minLevel="1" minCPLevel="1" dropTargetClamp="none" price="125">
+  <volume>
+    <box min="-0.2718,0,-0.4773" max="0.3745,1.1743,0.4901"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="Counter" source="items/base/modern/m_bar_05_club_section.png" cols="2" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_screen_tv_steampunk.png" cols="1" rows="1"/>
+    <texture id="light2" source="items/base/shared/s_fx_flare_sci_cnr.png" cols="1" rows="1"/>
+    <texture id="round" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2718,0,-0.4773" max="0.3745,1.1743,0.4901"/>
+      <layers>
+        <layer id="Layer" texture="Counter">
+          <view angle="45" x="4" y="34"/>
+          <view angle="135" x="-4" y="33" hm="true"/>
+          <view angle="225" col="1" x="-4" y="35"/>
+          <view angle="315" col="1" x="4" y="35" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="6" y="-12"/>
+          <view angle="135" x="-6" y="-12" hm="true"/>
+          <view angle="225" x="6" y="-12" alpha="0"/>
+          <view angle="315" x="-6" y="-12" alpha="0"/>
+        </layer>
+        <layer id="Light01" texture="light2" align="middle">
+          <view angle="45" x="6" y="-12" alpha="0"/>
+          <view angle="135" x="-6" y="-12" alpha="0" hm="true"/>
+          <view angle="225" x="-16" y="-10" alpha="0.25"/>
+          <view angle="315" x="16" y="-10" alpha="0.25"/>
+        </layer>
+        <layer id="Light02" texture="round" align="middle">
+          <view angle="45" x="6" y="-12"/>
+          <view angle="135" x="-6" y="-12" hm="true"/>
+          <view angle="225" x="-7" y="-19"/>
+          <view angle="315" x="7" y="-19"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xccff"/>
+          <layerref id="Light01" color="0xccff"/>
+          <layerref id="Light02" color="0xccff" a="0.3"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

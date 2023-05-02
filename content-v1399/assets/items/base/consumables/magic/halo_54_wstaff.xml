@@ -1,0 +1,112 @@
+<item.SpriteItem id="0" name="Whirlwind Halo" desc="A whirlwind halo" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+  </volume>
+  <textures>
+    <texture id="proj_generic" source="items/base/consumables/magic/halo_54_wstaff.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_halo_spread.png" cols="1" rows="1"/>
+    <texture id="leaves" source="items/base/consumables/magic/proj_54_wstaff_leaves.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/consumables/magic/sndfx_electric.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+      <layers>
+        <layer id="Trail 01" texture="proj_generic" x="5" y="15">
+          <view/>
+        </layer>
+        <layer id="Trail 02" texture="proj_generic" x="5" y="15">
+          <view col="1"/>
+        </layer>
+        <layer id="Trail 03" texture="proj_generic" x="5" y="15">
+          <view col="2"/>
+        </layer>
+        <layer id="Leaves 01" texture="leaves" x="5" y="15">
+          <view/>
+        </layer>
+        <layer id="Trail 01_m" texture="proj_generic" x="5" y="15">
+          <view/>
+        </layer>
+        <layer id="Trail 02_m" texture="proj_generic" x="5" y="15">
+          <view col="1"/>
+        </layer>
+        <layer id="Trail 03_m" texture="proj_generic" x="5" y="15">
+          <view col="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Trail 01" color="0xb7ffff" a="0.5"/>
+          <layerref id="Leaves 01" x="-40" y="-40"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Trail 02" color="0xb7ffff" a="0.5"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Trail 03" color="0xb7ffff" a="0.5"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Trail 01" color="0xb7ffff" a="0.5"/>
+          <layerref id="Leaves 01" x="40" y="-70"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Trail 02" color="0xb7ffff" a="0.5"/>
+          <layerref id="Leaves 01" x="-45" y="-65"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Trail 03" color="0xb7ffff" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="06"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="01">
+            <sample id="Sound" vol="0.06"/>
+          </frameref>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04">
+            <sample id="Sound" vol="0.08"/>
+          </frameref>
+          <frameref id="05"/>
+          <frameref id="06"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.9" s="2.4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x5beaff"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x5beaff" a="0.95"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+        <animation id="Out" loop="false">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

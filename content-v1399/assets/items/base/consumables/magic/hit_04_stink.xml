@@ -1,0 +1,57 @@
+<item.SpriteItem desc="A stink bomb hit effect." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" entity="false" name="Stink bomb hit">
+  <volume>
+    <box max="0.28,0.06,-0.22" min="0.22,0,-0.28"/>
+  </volume>
+  <textures>
+    <texture cols="2" id="hit_04_stink" rows="1" source="items/base/consumables/magic/hit_04_stink.png"/>
+  </textures>
+  <sounds>
+    <sound id="soft_impact" source="items/base/consumables/magic/sndfx_hitsoft.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box max="0.28,0.06,-0.22" min="0.22,0,-0.28"/>
+      <layers>
+        <layer id="Stink" type="group">
+          <layer id="Hit 01" texture="hit_04_stink">
+            <view y="-40"/>
+          </layer>
+          <layer id="Hit 02" texture="hit_04_stink">
+            <view col="1" x="-4" y="-38"/>
+          </layer>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Stink" type="group">
+          <frame id="Hit 03">
+            <layerref a="0.75" blend="screen" id="Hit 02"/>
+          </frame>
+          <frame id="Hit 04">
+            <layerref a="0.5" blend="screen" id="Hit 02"/>
+          </frame>
+          <frame id="Hit 05">
+            <layerref a="0.25" blend="screen" id="Hit 02"/>
+          </frame>
+          <frame id="Hit 01">
+            <layerref blend="screen" id="Hit 01"/>
+          </frame>
+          <frame id="Hit 02">
+            <layerref blend="screen" id="Hit 02"/>
+            <layerref a="0.5" blend="screen" id="Hit 01"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Hit" loop="false">
+          <frameref id="Hit 01">
+            <sample id="soft_impact"/>
+          </frameref>
+          <frameref id="Hit 02"/>
+          <frameref id="Hit 03"/>
+          <frameref id="Hit 04"/>
+          <frameref id="Hit 05"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

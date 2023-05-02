@@ -1,0 +1,136 @@
+<item.SpriteItem id="2836" name="Espelho Hollywood de Luxo" desc="Para se maquiar com estilo." tags="misc,wall" icon="items/base/modern/icon_m_bathroom_36_hollywoodmirror.png" price="2000" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,-0.6,-0.8" max="0,1.2,0.8"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="light" source="items/base/modern/m_bathroom_36_hollywoodmirror_light.png" cols="1" rows="1"/>
+    <texture id="mirror" source="items/base/modern/m_bathroom_36_hollywoodmirror.png" cols="2" rows="1"/>
+    <texture id="sheen" source="items/base/modern/m_arcade_06_highlight.png" cols="6" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="nodes">
+      <box min="0,-0.6,-0.8" max="0,1.2,0.8"/>
+      <layers>
+        <layer id="mlight_off_00" texture="mirror" y="100">
+          <view angle="45" x="13" y="-22"/>
+          <view angle="135" x="-12" y="-22" hm="true"/>
+          <view angle="225" y="-26" alpha="0"/>
+          <view angle="315" y="-26" alpha="0"/>
+        </layer>
+        <layer id="mlight_on_00" texture="mirror" y="100">
+          <view angle="45" col="1" x="12" y="-22"/>
+          <view angle="135" col="1" x="-11" y="-22" hm="true"/>
+          <view angle="225" y="-26" alpha="0"/>
+          <view angle="315" y="-26" alpha="0"/>
+        </layer>
+        <layer id="sheen00" texture="sheen">
+          <view angle="45" col="5" x="17" y="19"/>
+          <view angle="135" col="5" x="14" y="20"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="sheen01" texture="sheen">
+          <view angle="45" col="2" x="11" y="3"/>
+          <view angle="135" x="-6"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="sheen02" texture="sheen">
+          <view angle="45" col="2" x="1" y="-3"/>
+          <view angle="135" col="5" x="-13" y="-13"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" x="-3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Of00">
+          <layerref id="mlight_off_00"/>
+        </frame>
+        <frame id="Of01">
+          <layerref id="mlight_off_00"/>
+          <layerref id="sheen00"/>
+        </frame>
+        <frame id="Of02">
+          <layerref id="mlight_off_00"/>
+          <layerref id="sheen01"/>
+        </frame>
+        <frame id="Of03">
+          <layerref id="mlight_off_00"/>
+          <layerref id="sheen02"/>
+        </frame>
+        <frame id="On00">
+          <layerref id="mlight_on_00"/>
+        </frame>
+        <frame id="On01">
+          <layerref id="mlight_on_00"/>
+          <layerref id="sheen00"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="mlight_on_00"/>
+          <layerref id="sheen01"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="mlight_on_00"/>
+          <layerref id="sheen02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="On00" duration="65"/>
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+        </animation>
+        <animation id="Off" framerate="8">
+          <frameref id="Of00" duration="65"/>
+          <frameref id="Of01"/>
+          <frameref id="Of02"/>
+          <frameref id="Of03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="1" y="-3"/>
+          <view angle="135" x="-1" y="-3" hm="true"/>
+          <view angle="225" y="-1" alpha="0"/>
+          <view angle="315" y="-1" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

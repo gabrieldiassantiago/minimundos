@@ -1,0 +1,92 @@
+<item.WidgetItem id="3097" name="Escultura Grande2" desc="Uma escultura grande." tags="widget,sculpture,allow_excess,admin" icon="items/base/sculpture/icon_sculpture_large_2.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none" widget="widgets/widget_sculpture.swf" price="2400" tokens="24000" minLevelType="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.47,0.49"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select_sculpture.as"/>
+  </events>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="cachedBitmapVisibleAnimation" value="SculptureVisible"/>
+    <entry key="cachedBitmapInvisibleAnimation" value="SculptureInvisible"/>
+    <entry key="control_xml_path" value="widgets/assets/sculpture/control_ui.mxml"/>
+    <entry key="hasEditSecurity" value="true"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="rootLevel" value="0"/>
+    <entry key="stackHeight" value="2"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_sculpt.png"/>
+    <entry key="iconOverlay" value="items/base/sculpture/icon_overlay_uncopyable.png"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/sculpture/sculpture_base_large.png" cols="1" rows="1"/>
+    <texture id="Sculpture" cols="4" rows="1"/>
+    <texture id="Default" source="items/base/sculpture/sculpture_large_2.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Sculpture">
+      <box min="-0.49,0,-0.49" max="0.49,2.47,0.49"/>
+      <layers>
+        <layer id="Base" texture="Base" align="middle" y="-1">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Sculpture" texture="Sculpture" y="36">
+          <view angle="45"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="3"/>
+        </layer>
+        <layer id="SculptureEdit" texture="Sculpture" y="64">
+          <view angle="45"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="3"/>
+        </layer>
+        <layer id="Default" texture="Default" y="36">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Default">
+          <layerref id="Default"/>
+        </frame>
+        <frame id="SculptureVisible">
+          <layerref id="Sculpture"/>
+        </frame>
+        <frame id="SculptureInvisible">
+          <layerref id="Base"/>
+          <layerref id="Sculpture"/>
+        </frame>
+        <frame id="SculptureEdit">
+          <layerref id="SculptureEdit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Default">
+          <frameref id="Default"/>
+        </animation>
+        <animation id="SculptureVisible">
+          <frameref id="SculptureVisible"/>
+        </animation>
+        <animation id="SculptureInvisible">
+          <frameref id="SculptureInvisible"/>
+        </animation>
+        <animation id="SculptureEdit">
+          <frameref id="SculptureEdit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

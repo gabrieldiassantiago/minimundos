@@ -1,0 +1,152 @@
+<item.WidgetItem id="1637" name="Quiosque de Informação" desc="Pergunte aos assit6entes aqui." tags="admin,entrance" icon="items/base/entrance/icon_e_kiosk.png" minLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_flv_tv.swf" minCPLevel="1">
+  <volume>
+    <box min="-0.6,0,-0.3" max="0.3,1.35,0.3"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+  </events>
+  <actions>
+    <action id="Play" trigger="false" event="widget_action(PLAY)"/>
+    <action id="PlaySpecial" trigger="false" event="widget_action(PLAY_SPECIAL_VIDEO)">
+      <params>
+        <param type="string" id="Video URL" label="Video URL" maxChars="100"/>
+      </params>
+    </action>
+    <action id="PlaySpecial2" trigger="false" event="widget_action(PLAY_SPECIAL_VIDEO2)">
+      <params>
+        <param type="string" id="Video URL" label="Video URL" maxChars="100"/>
+      </params>
+    </action>
+    <action id="PlaySpecial3" trigger="false" event="widget_action(PLAY_SPECIAL_VIDEO3)">
+      <params>
+        <param type="string" id="Video URL" label="Video URL" maxChars="100"/>
+      </params>
+    </action>
+    <action id="Stop" trigger="false" event="widget_action(STOP)"/>
+    <action id="Pause" trigger="false" event="widget_action(PAUSE)"/>
+    <action event="show" id="Show" trigger="false"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+  </data>
+  <navigate position="infront" sitRange="8.00" standRange="5.00" targetRange="2.00" accessibleRange="2.00"/>
+  <textures>
+    <texture id="screen" source="items/base/entrance/e_kiosk_screen.png" cols="2" rows="1"/>
+    <texture id="straw" source="items/base/entrance/e_kiosk_straw.png" cols="1" rows="1"/>
+    <texture id="base" source="items/base/entrance/e_kiosk_base.png" cols="1" rows="1"/>
+    <texture id="screen_anim" source="items/base/entrance/e_kiosk_screen_anim.png" cols="2" rows="1"/>
+    <texture id="glow" source="items/base/entrance/e_kiosk_glow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node01">
+      <box min="-0.6,0,-0.3" max="0.3,1.35,0.3"/>
+      <layers>
+        <layer id="screen" texture="screen" y="-60">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1" hm="true"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="screen01" texture="screen" y="-60">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1" hm="true"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="screen_anim" texture="screen_anim" y="-83">
+          <view angle="45"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="screen_anim01" texture="screen_anim" y="-83">
+          <view angle="45"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="glow" texture="glow" y="-58">
+          <view angle="45" hm="true"/>
+          <view angle="135"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="glow01" texture="glow" y="-58">
+          <view angle="45" hm="true"/>
+          <view angle="135"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="blue_01">
+          <layerref id="glow" color="0xa4faff"/>
+          <layerref id="screen"/>
+          <layerref id="screen01" color="0x4385e9" a="0.3" blend="add"/>
+          <layerref id="screen_anim" color="0x43c8ff" blend="lighten"/>
+          <layerref id="screen_anim01" color="0x1762d3" a="0.85" blend="add"/>
+        </frame>
+        <frame id="blue_02">
+          <layerref id="glow" color="0xa4faff" a="0.8"/>
+          <layerref id="screen"/>
+          <layerref id="screen01" color="0x496ced" a="0.2" blend="add"/>
+          <layerref id="screen_anim" color="0x43c8ff" a="0.7" blend="lighten"/>
+          <layerref id="screen_anim01" color="0x1762d3" a="0.5" blend="add"/>
+        </frame>
+        <frame id="blue_03">
+          <layerref id="glow" color="0xa4faff" a="0.5"/>
+          <layerref id="screen"/>
+          <layerref id="screen01" color="0x5b7bee" a="0.15" blend="add"/>
+          <layerref id="screen_anim" color="0x43c8ff" a="0.5" blend="lighten"/>
+          <layerref id="screen_anim01" color="0x1762d3" a="0.3" blend="add"/>
+        </frame>
+        <frame id="blue_off">
+          <layerref id="screen"/>
+          <layerref id="screen_anim" color="0x43c8ff" blend="lighten"/>
+          <layerref id="screen_anim01" color="0x1762d3" a="0.5" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="blue_off"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="blue_01"/>
+          <frameref id="blue_02"/>
+          <frameref id="blue_03"/>
+          <frameref id="blue_02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Node" depthBias="1">
+      <box min="-0.6,0,-0.3" max="0.3,1.35,0.3"/>
+      <layers>
+        <layer id="straw" texture="straw">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" hm="true"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="base" texture="base" y="16">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="blue_off">
+          <layerref id="straw"/>
+          <layerref id="base"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,39 @@
+<item.SpriteItem desc="Um drink de cereja espumante sem álcool." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/consumables/edible/icon_con_eat_50_pinkchampagne.png" id="3077" name="Bebida de Cereja" tags="rare,consumable,drink,actionbar,group_edible,edible,stackable,action_drinkable" minLevel="1" minCPLevel="1" price="30">
+  <volume>
+    <box max="0.15,0.4,0.15" min="-0.15,0,-0.15"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_drinkable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_drinkable.as"/>
+    <event id="action" script="scripts/item/action_drinkable.as"/>
+    <event id="select" script="scripts/item/select_drinkable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="drink-100"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture cols="1" id="champagne" rows="1" source="items/base/consumables/edible/con_eat_50_pinkchampagne.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.15,0.4,0.15" min="-0.15,0,-0.15"/>
+      <layers>
+        <layer id="drink" texture="champagne">
+          <view angle="45" y="10"/>
+          <view angle="135" y="10"/>
+          <view angle="225" y="10"/>
+          <view angle="315" y="10"/>
+          <view angle="90" hm="true" x="1" y="10"/>
+          <view angle="180" hm="true" x="1" y="10"/>
+          <view angle="270" hm="true" x="1" y="10"/>
+          <view angle="0" hm="true" x="1" y="10"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

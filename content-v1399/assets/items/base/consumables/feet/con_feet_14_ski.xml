@@ -1,0 +1,157 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_14_ski_boards.png" cols="5" rows="1"/>
+    <texture id="boots" source="items/base/consumables/feet/con_feet_14_ski_boots.png" cols="5" rows="1"/>
+    <texture id="sit" source="items/base/consumables/feet/con_feet_14_ski_boots_sit.png" cols="1" rows="1"/>
+    <texture id="snowpuff" source="items/base/shared/s_snowpuff.png" cols="2" rows="1"/>
+    <texture id="snowpuff_length" source="items/base/shared/s_snowpuff_length.png" cols="1" rows="1"/>
+    <texture id="snowpuff_diagonal" source="items/base/shared/s_snowpuff_diagonal.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="board" texture="base">
+          <view angle="0" col="2" x="10" y="35" hm="true"/>
+          <view angle="45" x="7" y="37"/>
+          <view angle="90" col="1" x="-4" y="41"/>
+          <view angle="135" x="-8" y="35" hm="true"/>
+          <view angle="180" col="2" x="-9" y="33"/>
+          <view angle="225" col="3" x="-4" y="32"/>
+          <view angle="270" col="4" x="-3" y="27"/>
+          <view angle="315" col="3" x="5" y="30" hm="true"/>
+        </layer>
+        <layer id="boots" texture="boots">
+          <view angle="0" col="2" x="6" y="24" hm="true"/>
+          <view angle="45" y="24"/>
+          <view angle="90" col="1" x="-2" y="25"/>
+          <view angle="135" y="21" hm="true"/>
+          <view angle="180" col="2" x="-6" y="22"/>
+          <view angle="225" col="3" x="3" y="22"/>
+          <view angle="270" col="4" y="24"/>
+          <view angle="315" col="3" x="-2" y="20" hm="true"/>
+        </layer>
+        <layer id="sit" texture="boots">
+          <view angle="45" x="-2" y="22"/>
+          <view angle="135" x="1" y="22" hm="true"/>
+          <view angle="225" col="3" x="2" y="22" alpha="0"/>
+          <view angle="315" col="3" x="-1" y="22" alpha="0" hm="true"/>
+        </layer>
+        <layer id="sit01" texture="sit">
+          <view angle="45" x="-2" y="21" alpha="0"/>
+          <view angle="135" y="21" alpha="0" hm="true"/>
+          <view angle="225" y="32"/>
+          <view angle="315" y="34" hm="true"/>
+        </layer>
+        <layer id="puffA" texture="snowpuff">
+          <view angle="0" x="-40" y="22" alpha="0.8" hm="true"/>
+          <view angle="45" x="-32" y="6" alpha="0.7" hm="true" vm="true"/>
+          <view angle="90" y="14" alpha="0.6"/>
+          <view angle="135" x="31" y="5" alpha="0.7" vm="true"/>
+          <view angle="180" x="41" y="20" alpha="0.8"/>
+          <view angle="225" x="32" y="33"/>
+          <view angle="270" x="2" y="38" alpha="0.6"/>
+          <view angle="315" x="-32" y="31" hm="true"/>
+        </layer>
+        <layer id="puffB" texture="snowpuff">
+          <view angle="0" col="1" x="-40" y="22" alpha="0.8" hm="true"/>
+          <view angle="45" col="1" x="-32" y="6" alpha="0.7" hm="true" vm="true"/>
+          <view angle="90" col="1" y="14" alpha="0.6"/>
+          <view angle="135" col="1" x="31" y="5" alpha="0.7" vm="true"/>
+          <view angle="180" col="1" x="41" y="20" alpha="0.8"/>
+          <view angle="225" col="1" x="32" y="33"/>
+          <view angle="270" col="1" x="2" y="38" alpha="0.6"/>
+          <view angle="315" col="1" x="-32" y="31" hm="true"/>
+        </layer>
+        <layer id="puffA02" texture="snowpuff">
+          <view angle="0" x="-39" y="12" alpha="0.5" hm="true"/>
+          <view angle="45" x="-27" alpha="0.5"/>
+          <view angle="90" x="1" y="14" alpha="0.6" hm="true"/>
+          <view angle="135" x="24" alpha="0.5" hm="true"/>
+          <view angle="180" x="40" y="11" alpha="0.5"/>
+          <view angle="225" x="32" y="33" alpha="0"/>
+          <view angle="270" x="1" y="38" alpha="0.6" hm="true"/>
+          <view angle="315" x="-32" y="31" alpha="0" hm="true"/>
+        </layer>
+        <layer id="puffB02" texture="snowpuff">
+          <view angle="0" col="1" x="-39" y="12" alpha="0.5" hm="true"/>
+          <view angle="45" col="1" x="-27" alpha="0.5"/>
+          <view angle="90" col="1" x="1" y="14" alpha="0.6" hm="true"/>
+          <view angle="135" col="1" x="24" alpha="0.5" hm="true"/>
+          <view angle="180" col="1" x="40" y="11" alpha="0.5"/>
+          <view angle="225" col="1" x="32" y="33" alpha="0"/>
+          <view angle="270" col="1" x="1" y="38" alpha="0.6" hm="true"/>
+          <view angle="315" col="1" x="-32" y="31" alpha="0" hm="true"/>
+        </layer>
+        <layer id="puff_lengthA" texture="snowpuff_length">
+          <view alpha="0"/>
+          <view angle="0" x="16" y="22" alpha="0.8" hm="true"/>
+          <view angle="180" x="-10" y="22"/>
+        </layer>
+        <layer id="puff_lengthB" texture="snowpuff_length">
+          <view alpha="0"/>
+          <view angle="0" x="18" y="22" alpha="0.8"/>
+          <view angle="180" x="-12" y="22" hm="true"/>
+        </layer>
+        <layer id="puff_diagonalA" texture="snowpuff_diagonal">
+          <view alpha="0"/>
+          <view angle="45" x="1" y="38" alpha="0.7"/>
+          <view angle="135" x="-3" y="38" alpha="0.7" hm="true"/>
+          <view angle="225" x="1" y="37" hm="true" vm="true"/>
+          <view angle="315" x="-1" y="35" vm="true"/>
+        </layer>
+        <layer id="puff_diagonalB" texture="snowpuff_diagonal">
+          <view alpha="0"/>
+          <view angle="45" x="1" y="38" alpha="0.7" hm="true" vm="true"/>
+          <view angle="135" x="-3" y="38" alpha="0.7" vm="true"/>
+          <view angle="225" x="1" y="37"/>
+          <view angle="315" x="-1" y="35" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="board"/>
+          <layerref id="boots"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit"/>
+          <layerref id="sit01"/>
+        </frame>
+        <frame id="Walk01">
+          <layerref id="board"/>
+          <layerref id="boots"/>
+          <layerref id="puffA"/>
+          <layerref id="puffB02"/>
+          <layerref id="puff_lengthA"/>
+          <layerref id="puff_diagonalA"/>
+        </frame>
+        <frame id="Walk02">
+          <layerref id="board"/>
+          <layerref id="boots"/>
+          <layerref id="puffB"/>
+          <layerref id="puffA02"/>
+          <layerref id="puff_lengthB"/>
+          <layerref id="puff_diagonalB"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Walk01"/>
+          <frameref id="Walk02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,30 @@
+<item.SpriteItem name="Escalada para Gatos Marron Play" desc="Uma grande escalada de carpete" tags="misc,seasonal" icon="items/base/pet/pet_036_catclimb_icon.png" dropTargetType="none" dropTargetList="floor" dropTargetClamp="none" id="4821" minLevel="1" minCPLevel="1" price="10">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccecssSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/pet/pet_036_catclimb_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,2,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" x="-2" y="31">
+          <view angle="45"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="1" hm="true"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

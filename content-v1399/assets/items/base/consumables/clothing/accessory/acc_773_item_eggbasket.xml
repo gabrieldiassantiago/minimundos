@@ -1,0 +1,48 @@
+<item.SpriteItem id="6614" name="Cesta de Ovos Deluxe" desc="Uma deliciosa cesta de chocolates" tags="rare,actionbar,wear,hand,real,usable,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_773_icon_eggbasket.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.18,0,-0.18" max="0.18,0.42,0.18"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="nature+25"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+25"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_773_item_eggbasket.png" cols="2" rows="1"/>
+    <texture id="Texture01" source="items/base/antique/a_pot_05_gold_glow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="basket">
+      <box min="-0.18,0,-0.18" max="0.18,0.42,0.18"/>
+      <layers>
+        <layer id="basket" texture="Texture" y="-24">
+          <view angle="45" y="41" hm="true"/>
+          <view angle="135" y="41"/>
+          <view angle="225" col="1" y="41"/>
+          <view angle="315" col="1" y="41" hm="true"/>
+        </layer>
+        <layer id="basket01" texture="Texture01" y="-24">
+          <view angle="45" x="-2" y="7" hm="true"/>
+          <view angle="135" x="2" y="7"/>
+          <view angle="225" x="-2" y="7" hm="true"/>
+          <view angle="315" y="7" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="basket"/>
+          <layerref id="basket01" blend="overlay"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

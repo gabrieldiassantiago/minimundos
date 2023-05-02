@@ -1,0 +1,116 @@
+<item.SpriteItem name="O que são Swuffys?" desc="Saiba mais." tags="admin,misc" icon="items/base/shop/towncenter/tc_whatis_swuffys_icon.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" id="3170">
+  <volume>
+    <box min="-0.4,1,-0.1" max="0.1,2.2,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="animate" script="scripts/item/animate_local.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="mouseOver" script="scripts/item/mouse_over_image.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="mouseOverImageSource" value="items/base/shop/towncenter/tc_whatis_swuffys_info.png"/>
+    <entry key="mouseOverImageWidth" value="250"/>
+    <entry key="mouseOverImageHeight" value="295"/>
+    <entry key="mouseOverAnimations" value="On"/>
+    <entry key="selectable" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/shop/towncenter/tc_whatis_swuffys.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,1,-0.1" max="0.1,2.2,0.4"/>
+      <layers>
+        <layer id="Layer01" texture="base" y="-60">
+          <view x="-7" y="-26"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Layer01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Layer01" y="1"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Layer01" y="2"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Layer01" a="0"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Layer01" y="1" a="0"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="Layer01" y="2" a="0"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="1.1" s="2.6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view x="2" y="-4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light" y="-15"/>
+        </frame>
+        <frame id="off">
+          <layerref id="Light" y="-15" a="0"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="On" framerate="2">
+      <frame id="Frame">
+        <noderef id="Node" frame="Frame01"/>
+        <noderef id="Diffuse" frame="Frame"/>
+      </frame>
+      <frame id="Frame01">
+        <noderef id="Node" frame="Frame02"/>
+        <noderef id="Diffuse" frame="Frame"/>
+      </frame>
+      <frame id="Frame02">
+        <noderef id="Node" frame="Frame03"/>
+        <noderef id="Diffuse" frame="Frame"/>
+      </frame>
+      <frame id="Frame03">
+        <noderef id="Node" frame="Frame02"/>
+        <noderef id="Diffuse" frame="Frame"/>
+      </frame>
+    </animation>
+    <animation id="Off" framerate="2">
+      <frame id="Frame">
+        <noderef id="Node" frame="Frame04"/>
+        <noderef id="Diffuse" frame="Frame"/>
+      </frame>
+      <frame id="Frame01">
+        <noderef id="Node" frame="Frame05"/>
+        <noderef id="Diffuse" frame="Frame"/>
+      </frame>
+      <frame id="Frame02">
+        <noderef id="Node" frame="Frame06"/>
+        <noderef id="Diffuse" frame="Frame"/>
+      </frame>
+      <frame id="Frame03">
+        <noderef id="Node" frame="Frame05"/>
+        <noderef id="Diffuse" frame="Frame"/>
+      </frame>
+    </animation>
+  </animations>
+</item.SpriteItem>

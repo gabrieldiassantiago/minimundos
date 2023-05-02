@@ -1,0 +1,62 @@
+<item.ChairItem desc="O clássico do conforto." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/antique/icon_a_chair_06_rocking.png" id="2627" name="Cadeira de Balanço" tags="chair" minLevel="1" minCPLevel="1" price="60">
+  <seats>
+    <seat y="0.43">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.3,1.34,0.4"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/antique/a_chair_06_rocking.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-0.4,0,-0.4" max="0.3,1.34,0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" col="1" x="2" y="31"/>
+          <view angle="135" x="-3" y="31" hm="true"/>
+          <view angle="225" row="1" x="-2" y="33" hm="true"/>
+          <view angle="315" col="1" row="1" y="33"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="LeftArm">
+      <box min="-0.4,0,-0.4" max="0.3,1.34,0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="2" y="31"/>
+          <view angle="135" col="1" x="-3" y="31" hm="true"/>
+          <view angle="225" col="1" row="1" x="-2" y="33" hm="true"/>
+          <view angle="315" row="1" x="1" y="33"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

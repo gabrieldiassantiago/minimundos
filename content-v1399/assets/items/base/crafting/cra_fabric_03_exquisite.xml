@@ -1,0 +1,36 @@
+<item.SpriteItem desc="Importado das índias." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/crafting/icon_cra_fabric_03_exquisite.png" id="2476" name="Rolo de Tecido Exótico" tags="misc,stackable,craftable4,craftable_sewing,materials,market" minLevel="1" minCPLevel="1" price="30">
+  <volume>
+    <box min="-0.1,0,-0.3436" max="0.2154,0.1718,0.3436"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="ingredient_1" value="2380"/>
+    <entry key="ingredient_2" value="2029"/>
+    <entry key="ingredient_quantity_1" value="2"/>
+    <entry key="ingredient_quantity_2" value="5"/>
+    <entry key="product_quantity" value="3"/>
+    <entry key="xp_level_required" value="90"/>
+    <entry key="xp_rewarded" value="900"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/crafting/cra_fabric_03_exquisite.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.3436" max="0.2154,0.1718,0.3436"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="13">
+          <view angle="45" x="4" y="9"/>
+          <view angle="135" x="-4" y="9" hm="true"/>
+          <view angle="225" col="1" x="-4" y="9"/>
+          <view angle="315" col="1" x="4" y="9" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

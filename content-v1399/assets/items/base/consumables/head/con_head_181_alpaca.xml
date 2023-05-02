@@ -1,0 +1,127 @@
+<item.SpriteItem id="0" name="Abbie" desc="Collectible" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="redpanda" source="items/base/consumables/head/con_head_181_alpaca.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_181_alpaca_blink.png" cols="4" rows="1"/>
+    <texture id="mouth" source="items/base/consumables/head/con_head_181_alpaca_mouth.png" cols="3" rows="4"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="redpanda" texture="redpanda">
+          <view angle="0" col="2" x="2" y="13" hm="true"/>
+          <view angle="45" x="3" y="15"/>
+          <view angle="90" col="1" x="1" y="13"/>
+          <view angle="135" x="-4" y="15" hm="true"/>
+          <view angle="180" col="2" x="-2" y="13"/>
+          <view angle="225" col="3" x="3" y="15"/>
+          <view angle="270" col="4" y="15"/>
+          <view angle="315" col="3" x="-3" y="15" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="10" y="-9" hm="true"/>
+          <view angle="45" y="-5"/>
+          <view angle="90" col="1" y="-11"/>
+          <view angle="135" x="-1" y="-5" hm="true"/>
+          <view angle="180" col="2" x="-10" y="-9"/>
+          <view angle="225" col="3" x="-19" y="-14"/>
+          <view angle="270" col="4" y="18" alpha="0"/>
+          <view angle="315" col="3" x="19" y="-14" hm="true"/>
+        </layer>
+        <layer id="mouth_01" texture="mouth">
+          <view angle="0" row="2" x="28" y="1" hm="true"/>
+          <view angle="45" x="19" y="11"/>
+          <view angle="90" col="2" row="1" x="1" y="13" alpha="0"/>
+          <view angle="135" x="-21" y="11" hm="true"/>
+          <view angle="180" row="2" x="-29" y="1"/>
+          <view angle="225" row="3" x="-27" y="-8"/>
+          <view angle="270" col="2" row="1" x="1" y="13"/>
+          <view angle="315" row="3" x="26" y="-8" hm="true"/>
+        </layer>
+        <layer id="mouth_02" texture="mouth">
+          <view angle="0" col="1" row="2" x="28" y="1" hm="true"/>
+          <view angle="45" col="1" x="19" y="11"/>
+          <view angle="90" row="1" x="-3" y="13"/>
+          <view angle="135" col="1" x="-21" y="11" hm="true"/>
+          <view angle="180" col="1" row="2" x="-29" y="1"/>
+          <view angle="225" col="1" row="3" x="-27" y="-8"/>
+          <view angle="270" col="2" row="1" x="1" y="13"/>
+          <view angle="315" col="1" row="3" x="26" y="-8" hm="true"/>
+        </layer>
+        <layer id="mouth_03" texture="mouth">
+          <view angle="0" col="2" row="2" x="28" y="1" hm="true"/>
+          <view angle="45" col="2" x="19" y="11"/>
+          <view angle="90" col="1" row="1" x="-3" y="13"/>
+          <view angle="135" col="2" x="-21" y="11" hm="true"/>
+          <view angle="180" col="2" row="2" x="-29" y="1"/>
+          <view angle="225" col="2" row="3" x="-27" y="-8"/>
+          <view angle="270" col="2" row="1" x="1" y="13"/>
+          <view angle="315" col="2" row="3" x="26" y="-8" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="redpanda"/>
+          <layerref id="mouth_03"/>
+        </frame>
+        <frame id="02">
+          <layerref id="redpanda"/>
+          <layerref id="mouth_02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="redpanda"/>
+          <layerref id="mouth_01"/>
+        </frame>
+        <frame id="01blink">
+          <layerref id="redpanda"/>
+          <layerref id="mouth_03"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="02blink">
+          <layerref id="redpanda"/>
+          <layerref id="mouth_02"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="03blink">
+          <layerref id="redpanda"/>
+          <layerref id="mouth_01"/>
+          <layerref id="blink"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="01blink"/>
+          <frameref id="02"/>
+          <frameref id="03blink"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03" duration="2"/>
+          <frameref id="03blink"/>
+          <frameref id="03"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

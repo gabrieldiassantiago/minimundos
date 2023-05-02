@@ -1,0 +1,111 @@
+<item.SpriteItem id="1580" name="Veneno de Cobra" desc="Coletado com muito cuidado" tags="rare,misc" icon="items/base/gothic/icon_g_collect_01_vial_snake.png" price="150" minLevel="1" minLevelType="4" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" minCPLevel="1">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,1.4,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/gothic/g_collect_01_vial_snake.png" cols="2" rows="1"/>
+    <texture id="Glow" source="items/base/modern/m_collect_01_degg_glow.png" cols="1" rows="1"/>
+    <texture id="Flame" source="items/base/gothic/g_collect_01_vial_snake_effect.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,1.4,0.25"/>
+      <layers>
+        <layer id="jar" texture="Texture" y="15">
+          <view angle="45" col="1" y="4"/>
+          <view angle="135" col="1" y="4" hm="true"/>
+          <view angle="225" y="4" hm="true"/>
+          <view angle="315" y="4"/>
+        </layer>
+        <layer id="Glow" texture="Glow" x="-1" y="-43">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="Flame1" texture="Flame" y="13">
+          <view angle="45" y="13"/>
+          <view angle="135" y="13" hm="true"/>
+          <view angle="225" x="-1" y="13"/>
+          <view angle="315" y="13"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="jar"/>
+          <layerref id="Flame1" color="0x40e03" blend="add"/>
+        </frame>
+        <frame id="02">
+          <layerref id="jar"/>
+          <layerref id="Flame1" color="0x1c5e24" a="0.5" blend="add"/>
+        </frame>
+        <frame id="03">
+          <layerref id="jar"/>
+          <layerref id="Flame1" color="0x227765" a="0.5" blend="add"/>
+        </frame>
+        <frame id="04">
+          <layerref id="jar"/>
+          <layerref id="Flame1" color="0x3bce8f" a="0.45" blend="add"/>
+        </frame>
+        <frame id="05">
+          <layerref id="jar"/>
+          <layerref id="Flame1" color="0x8eeec5" a="0.5" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="3.7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xcaf7da" a="0.5"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xcaf7da" a="0.55"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xcaf7da" a="0.57"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xcaf7da" a="0.59"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Light" color="0xd0f8de" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

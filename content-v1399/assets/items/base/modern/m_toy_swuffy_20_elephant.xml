@@ -1,0 +1,60 @@
+<item.SpriteItem id="0" name="Swuffy Elephant" desc="A cute elephant soft toy" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.2" max="0.15,0.55,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_toy_swuffy_20_elephant.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.2" max="0.15,0.55,0.2"/>
+      <layers>
+        <layer id="elephant" texture="Texture">
+          <view angle="0" col="2" y="19" hm="true"/>
+          <view angle="45" x="-3" y="18"/>
+          <view angle="90" col="1" y="19"/>
+          <view angle="135" x="3" y="18" hm="true"/>
+          <view angle="180" col="2" y="19"/>
+          <view angle="225" col="3" x="6" y="21"/>
+          <view angle="270" col="4" y="19"/>
+          <view angle="315" col="3" x="-6" y="18" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="elephant"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="elephant"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="elephant"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="elephant"/>
+        </frame>
+        <frame id="off">
+          <layerref id="elephant"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

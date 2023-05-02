@@ -1,0 +1,156 @@
+<item.ChairItem id="2132" name="Cabine de Votação" desc="Vote no miniMundos." tags="admin,seats" icon="items/base/modern/icon_m_booth_01_votebooth.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="88" tokens="888">
+  <seats>
+    <seat y="0.5" z="1.11" a="90">
+      <ap x="-1" z="1"/>
+      <ap x="1" z="1"/>
+    </seat>
+    <seat y="0.5" z="-0.12" a="270">
+      <ap x="1"/>
+      <ap x="-1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.5,2.6,1.5"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate usableRange="-1.00"/>
+  <textures>
+    <texture id="booth" source="items/base/modern/m_booth_01_votebooth.png" cols="2" rows="1"/>
+    <texture id="curtain open" source="items/base/modern/m_booth_01_curtain_open.png" cols="2" rows="1"/>
+    <texture id="curtain close" source="items/base/modern/m_booth_01_curtain_close.png" cols="1" rows="1"/>
+    <texture id="text" source="items/base/modern/m_booth_01_text.png" cols="2" rows="1"/>
+    <texture id="window" source="items/base/modern/m_booth_01_glass.png" cols="1" rows="1"/>
+    <texture id="vote" source="items/base/modern/m_booth_01_textvote.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="-0.5,0,-0.5" max="0.5,2.6,1.5"/>
+      <layers>
+        <layer id="booth" texture="booth">
+          <view angle="45" x="31" y="38"/>
+          <view angle="135" x="33" y="69" hm="true"/>
+          <view angle="225" x="-32" y="69"/>
+          <view angle="315" x="-32" y="37" hm="true"/>
+        </layer>
+        <layer id="curtain open" texture="curtain open">
+          <view angle="45" x="103" y="-53"/>
+          <view angle="135" col="1" x="44" y="18"/>
+          <view angle="225" x="39" y="-22"/>
+          <view angle="315" col="1" x="-22" y="-14"/>
+        </layer>
+        <layer id="curtain close" texture="curtain close">
+          <view angle="45" x="63" y="-15"/>
+          <view angle="135" x="3" y="17" hm="true"/>
+          <view angle="225" y="17"/>
+          <view angle="315" x="-63" y="-15" hm="true"/>
+        </layer>
+        <layer id="text" texture="text">
+          <view angle="45" col="1" x="-32" y="-58" hm="true"/>
+          <view angle="135" col="1" x="96" y="-27"/>
+          <view angle="225" x="-94" y="-29"/>
+          <view angle="315" col="1" x="30" y="-59"/>
+        </layer>
+        <layer id="window" texture="window">
+          <view angle="45" x="-31" y="-73"/>
+          <view angle="135" x="95" y="-42" hm="true"/>
+          <view angle="225" x="-94" y="-42"/>
+          <view angle="315" x="30" y="-74" hm="true"/>
+        </layer>
+        <layer id="vote" texture="vote" x="40" y="-180">
+          <view angle="45" x="-19" y="-15"/>
+          <view angle="135" x="4" y="16" hm="true"/>
+          <view angle="225" x="-82" y="16"/>
+          <view angle="315" x="-61" y="-16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="booth"/>
+          <layerref id="text"/>
+          <layerref id="curtain open"/>
+          <layerref id="window" a="0.2"/>
+          <layerref id="vote"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="booth"/>
+          <layerref id="text"/>
+          <layerref id="curtain close"/>
+          <layerref id="window" a="0.6"/>
+          <layerref id="vote"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="open">
+          <frameref id="open"/>
+        </animation>
+        <animation id="closed">
+          <frameref id="closed"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Behind">
+      <box min="-0.5,0,-0.5" max="0.5,2.6,1.5"/>
+      <layers>
+        <layer id="booth" texture="booth">
+          <view angle="45" col="1" x="30" y="38"/>
+          <view angle="135" col="1" x="34" y="69" hm="true"/>
+          <view angle="225" col="1" x="-33" y="69"/>
+          <view angle="315" col="1" x="-31" y="37" hm="true"/>
+        </layer>
+        <layer id="curtain open" texture="curtain open">
+          <view angle="45" x="-37" y="-9"/>
+          <view angle="135" col="1" x="23" y="-42"/>
+          <view angle="225" x="-99" y="-29" hm="true"/>
+          <view angle="315" x="-39" y="-74" hm="true"/>
+        </layer>
+        <layer id="curtain close" texture="curtain close">
+          <view angle="45" y="-33"/>
+          <view angle="135" x="66" y="-1" hm="true"/>
+          <view angle="225" x="-64" y="-1"/>
+          <view angle="315" y="-33" hm="true"/>
+        </layer>
+        <layer id="window" texture="window">
+          <view angle="45" x="93" y="-134"/>
+          <view angle="135" x="-27" y="-104" hm="true"/>
+          <view angle="225" x="29" y="-103"/>
+          <view angle="315" x="-91" y="-136" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="window" a="0.2"/>
+          <layerref id="curtain open"/>
+          <layerref id="booth"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="window" a="0.6"/>
+          <layerref id="curtain close"/>
+          <layerref id="booth"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="open">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="closed">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

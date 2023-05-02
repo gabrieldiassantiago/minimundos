@@ -1,0 +1,75 @@
+<item.SpriteItem id="0" name="Fireball hit" desc="A fireball hit effect." dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="hit_02_fireball" source="items/base/consumables/magic/hit_02_fireball.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="soft_impact" source="items/base/consumables/magic/sndfx_hitsoft.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="Hit" texture="hit_02_fireball">
+          <view y="-47"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Hit 01">
+          <layerref id="Hit" blend="add"/>
+        </frame>
+        <frame id="Hit 02">
+          <layerref id="Hit" a="0.2" blend="add"/>
+        </frame>
+        <frame id="Hit 03">
+          <layerref id="Hit" a="0" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="8" loop="false" syncOffsets="0,1">
+          <frameref id="Hit 03">
+            <sample id="soft_impact"/>
+          </frameref>
+          <frameref id="Hit 02"/>
+          <frameref id="Hit 01" duration="2"/>
+          <frameref id="Hit 02"/>
+          <frameref id="Hit 03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xfffbf1"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xfffbf1" a="0.6"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xfffbf1" a="0.2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="8" loop="false" syncOffsets="0,1">
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,475 @@
+<item.SpriteItem id="0" name="Xmas Cracker Effect" desc="Xmas cracker effect" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.28,0,-0.28" max="0.28,0.06,0.28"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="Popper Confetti" source="items/base/consumables/magic/effect_25_popper_confetti.png" cols="5" rows="3"/>
+    <texture id="Popper Ribbon" source="items/base/consumables/magic/con_hand_effect_95_xmascracker_01.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="explosion" source="items/base/consumables/magic/sndfx_explosion.mp3"/>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Behind">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="Popper" type="group">
+          <layer id="Popper Confetti 01a" texture="Popper Confetti" y="-20">
+            <view angle="0" col="2" alpha="0"/>
+            <view angle="45" alpha="0"/>
+            <view angle="90" col="1" alpha="0"/>
+            <view angle="135" alpha="0" hm="true"/>
+            <view angle="180" col="2" alpha="0" hm="true"/>
+            <view angle="225" col="3" x="-70" y="60" hm="true"/>
+            <view angle="270" col="4" x="-2" y="50"/>
+            <view angle="315" col="3" x="70" y="60"/>
+          </layer>
+          <layer id="Popper Confetti 02a" texture="Popper Confetti" y="-20">
+            <view angle="0" col="2" row="1" x="40" y="-40" alpha="0"/>
+            <view angle="45" row="1" x="40" y="-20" alpha="0"/>
+            <view angle="90" col="1" row="1" y="-40" alpha="0"/>
+            <view angle="135" row="1" x="-40" y="-20" alpha="0" hm="true"/>
+            <view angle="180" col="2" row="1" x="-40" y="-40" alpha="0" hm="true"/>
+            <view angle="225" col="3" row="1" x="-100" y="-17" hm="true"/>
+            <view angle="270" col="4" row="1" x="-2" y="-37"/>
+            <view angle="315" col="3" row="1" x="100" y="-17"/>
+          </layer>
+          <layer id="Popper Confetti 03a" texture="Popper Confetti" y="-20">
+            <view angle="0" col="2" row="2" x="60" y="-60" alpha="0"/>
+            <view angle="45" row="2" x="60" y="-30" alpha="0"/>
+            <view angle="90" col="1" row="2" y="-60" alpha="0"/>
+            <view angle="135" row="2" x="-60" y="-30" alpha="0" hm="true"/>
+            <view angle="180" col="2" row="2" x="-60" y="-60" alpha="0" hm="true"/>
+            <view angle="225" col="3" row="2" x="-120" y="-37" hm="true"/>
+            <view angle="270" col="4" row="2" x="-2" y="-67"/>
+            <view angle="315" col="3" row="2" x="120" y="-37"/>
+          </layer>
+          <layer id="Popper Confetti 04a" texture="Popper Confetti" y="-20">
+            <view angle="0" col="2" row="2" x="70" y="-70" alpha="0"/>
+            <view angle="45" row="2" x="70" y="-35" alpha="0"/>
+            <view angle="90" col="1" row="2" y="-70" alpha="0"/>
+            <view angle="135" row="2" x="-70" y="-35" alpha="0" hm="true"/>
+            <view angle="180" col="2" row="2" x="-70" y="-70" alpha="0" hm="true"/>
+            <view angle="225" col="3" row="2" x="-130" y="-42" hm="true"/>
+            <view angle="270" col="4" row="2" x="-2" y="-77"/>
+            <view angle="315" col="3" row="2" x="130" y="-42"/>
+          </layer>
+          <layer id="Popper Confetti 05a" texture="Popper Confetti" y="-20">
+            <view angle="0" col="2" row="2" x="80" y="-50" alpha="0"/>
+            <view angle="45" row="2" x="80" y="-25" alpha="0"/>
+            <view angle="90" col="1" row="2" y="-50" alpha="0"/>
+            <view angle="135" row="2" x="-80" y="-25" alpha="0" hm="true"/>
+            <view angle="180" col="2" row="2" x="-80" y="-50" alpha="0" hm="true"/>
+            <view angle="225" col="3" row="2" x="-140" y="-32" hm="true"/>
+            <view angle="270" col="4" row="2" x="-2" y="-57"/>
+            <view angle="315" col="3" row="2" x="140" y="-32"/>
+          </layer>
+          <layer id="Popper Confetti 06a" texture="Popper Confetti" y="-20">
+            <view angle="0" col="2" row="2" x="85" y="-30" alpha="0"/>
+            <view angle="45" row="2" x="85" y="-20" alpha="0"/>
+            <view angle="90" col="1" row="2" y="-30" alpha="0"/>
+            <view angle="135" row="2" x="-85" y="-20" alpha="0" hm="true"/>
+            <view angle="180" col="2" row="2" x="-85" y="-30" alpha="0" hm="true"/>
+            <view angle="225" col="3" row="2" x="-145" y="-27" hm="true"/>
+            <view angle="270" col="4" row="2" x="-2" y="-37"/>
+            <view angle="315" col="3" row="2" x="145" y="-27"/>
+          </layer>
+          <layer id="Popper Ribbon 01" texture="Popper Ribbon" y="-20">
+            <view angle="0" col="2" x="60" y="-60" alpha="0"/>
+            <view angle="45" x="60" y="-30" alpha="0"/>
+            <view angle="90" col="1" y="-60" alpha="0"/>
+            <view angle="135" x="-60" y="-30" alpha="0" hm="true"/>
+            <view angle="180" col="2" x="-60" y="-60" alpha="0" hm="true"/>
+            <view angle="225" col="3" x="-90" y="-41" hm="true"/>
+            <view angle="270" col="4" x="-15" y="-71"/>
+            <view angle="315" col="3" x="89" y="-41"/>
+          </layer>
+          <layer id="Popper Ribbon 02" texture="Popper Ribbon" y="-20">
+            <view angle="0" col="2" x="70" y="-70" alpha="0"/>
+            <view angle="45" x="70" y="-35" alpha="0"/>
+            <view angle="90" col="1" y="-70" alpha="0"/>
+            <view angle="135" x="-70" y="-35" alpha="0" hm="true"/>
+            <view angle="180" col="2" x="-70" y="-70" alpha="0" hm="true"/>
+            <view angle="225" col="3" x="-100" y="-46" hm="true"/>
+            <view angle="270" col="4" x="-15" y="-81"/>
+            <view angle="315" col="3" x="99" y="-46"/>
+          </layer>
+          <layer id="Popper Ribbon 03" texture="Popper Ribbon" y="-20">
+            <view angle="0" col="2" x="80" y="-50" alpha="0"/>
+            <view angle="45" x="80" y="-25" alpha="0"/>
+            <view angle="90" col="1" y="-50" alpha="0"/>
+            <view angle="135" x="-80" y="-25" alpha="0" hm="true"/>
+            <view angle="180" col="2" x="-80" y="-50" alpha="0" hm="true"/>
+            <view angle="225" col="3" x="-110" y="-36" hm="true"/>
+            <view angle="270" col="4" x="-15" y="-61"/>
+            <view angle="315" col="3" x="109" y="-36"/>
+          </layer>
+          <layer id="Popper Ribbon 04" texture="Popper Ribbon" y="-20">
+            <view angle="0" col="2" x="85" y="-30" alpha="0"/>
+            <view angle="45" x="85" y="-20" alpha="0"/>
+            <view angle="90" col="1" y="-30" alpha="0"/>
+            <view angle="135" x="-85" y="-20" alpha="0" hm="true"/>
+            <view angle="180" col="2" x="-85" y="-30" alpha="0" hm="true"/>
+            <view angle="225" col="3" x="-115" y="-31" hm="true"/>
+            <view angle="270" col="4" x="-15" y="-41"/>
+            <view angle="315" col="3" x="114" y="-31"/>
+          </layer>
+          <layer id="Popper Confetti 01b" texture="Popper Confetti" y="-20">
+            <view angle="0" col="3" y="6" alpha="0"/>
+            <view angle="45" col="2" y="3" alpha="0"/>
+            <view angle="90" col="1" y="6" alpha="0" hm="true"/>
+            <view angle="135" col="2" y="3" alpha="0" hm="true"/>
+            <view angle="180" col="3" y="6" alpha="0" hm="true"/>
+            <view angle="225" col="2" x="-69" y="63" hm="true"/>
+            <view angle="270" col="4" x="2" y="56" hm="true"/>
+            <view angle="315" col="2" x="68" y="63"/>
+          </layer>
+          <layer id="Popper Confetti 02b" texture="Popper Confetti" y="-20">
+            <view angle="0" col="3" row="1" x="40" y="-34" alpha="0"/>
+            <view angle="45" col="2" row="1" x="40" y="-17" alpha="0"/>
+            <view angle="90" col="1" row="1" y="-34" alpha="0" hm="true"/>
+            <view angle="135" col="2" row="1" x="-40" y="-17" alpha="0" hm="true"/>
+            <view angle="180" col="3" row="1" x="-40" y="-34" alpha="0" hm="true"/>
+            <view angle="225" col="2" row="1" x="-98" y="-14" hm="true"/>
+            <view angle="270" col="4" row="1" x="2" y="-31" hm="true"/>
+            <view angle="315" col="2" row="1" x="98" y="-14"/>
+          </layer>
+          <layer id="Popper Confetti 03b" texture="Popper Confetti" y="-20">
+            <view angle="0" col="3" row="2" x="60" y="-54" alpha="0"/>
+            <view angle="45" col="2" row="2" x="60" y="-27" alpha="0"/>
+            <view angle="90" col="1" row="2" y="-54" alpha="0" hm="true"/>
+            <view angle="135" col="2" row="2" x="-60" y="-27" alpha="0" hm="true"/>
+            <view angle="180" col="3" row="2" x="-60" y="-54" alpha="0" hm="true"/>
+            <view angle="225" col="2" row="2" x="-118" y="-34" hm="true"/>
+            <view angle="270" col="4" row="2" x="2" y="-61" hm="true"/>
+            <view angle="315" col="2" row="2" x="118" y="-34"/>
+          </layer>
+          <layer id="Popper Confetti 04b" texture="Popper Confetti" y="-20">
+            <view angle="0" col="3" row="2" x="70" y="-64" alpha="0"/>
+            <view angle="45" col="2" row="2" x="70" y="-32" alpha="0"/>
+            <view angle="90" col="1" row="2" y="-64" alpha="0" hm="true"/>
+            <view angle="135" col="2" row="2" x="-70" y="-32" alpha="0" hm="true"/>
+            <view angle="180" col="3" row="2" x="-70" y="-64" alpha="0" hm="true"/>
+            <view angle="225" col="2" row="2" x="-128" y="-39" hm="true"/>
+            <view angle="270" col="4" row="2" x="2" y="-71" hm="true"/>
+            <view angle="315" col="2" row="2" x="128" y="-39"/>
+          </layer>
+          <layer id="Popper Confetti 05b" texture="Popper Confetti" y="-20">
+            <view angle="0" col="3" row="2" x="80" y="-44" alpha="0"/>
+            <view angle="45" col="2" row="2" x="80" y="-22" alpha="0"/>
+            <view angle="90" col="1" row="2" y="-44" alpha="0" hm="true"/>
+            <view angle="135" col="2" row="2" x="-80" y="-22" alpha="0" hm="true"/>
+            <view angle="180" col="3" row="2" x="-80" y="-44" alpha="0" hm="true"/>
+            <view angle="225" col="2" row="2" x="-138" y="-29" hm="true"/>
+            <view angle="270" col="4" row="2" x="2" y="-51" hm="true"/>
+            <view angle="315" col="2" row="2" x="138" y="-29"/>
+          </layer>
+          <layer id="Popper Confetti 06b" texture="Popper Confetti" y="-20">
+            <view angle="0" col="3" row="2" x="85" y="-24" alpha="0"/>
+            <view angle="45" col="2" row="2" x="85" y="-17" alpha="0"/>
+            <view angle="90" col="1" row="2" y="-24" alpha="0" hm="true"/>
+            <view angle="135" col="2" row="2" x="-85" y="-17" alpha="0" hm="true"/>
+            <view angle="180" col="3" row="2" x="-85" y="-24" alpha="0" hm="true"/>
+            <view angle="225" col="2" row="2" x="-143" y="-24" hm="true"/>
+            <view angle="270" col="4" row="2" x="2" y="-31" hm="true"/>
+            <view angle="315" col="2" row="2" x="143" y="-24"/>
+          </layer>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Popper 01">
+          <layerref id="Popper Confetti 01b" color="0x3bc730"/>
+          <layerref id="Popper Confetti 01a" color="0xb1412b"/>
+        </frame>
+        <frame id="Popper 02">
+          <layerref id="Popper Confetti 02b" color="0x3bc730"/>
+          <layerref id="Popper Confetti 02a" color="0xb1412b"/>
+        </frame>
+        <frame id="Popper 03">
+          <layerref id="Popper Confetti 03b" color="0x3bc730"/>
+          <layerref id="Popper Ribbon 01"/>
+          <layerref id="Popper Confetti 03a" color="0xb1412b"/>
+        </frame>
+        <frame id="Popper 04">
+          <layerref id="Popper Confetti 04b" color="0x3bc730"/>
+          <layerref id="Popper Ribbon 02"/>
+          <layerref id="Popper Confetti 04a" color="0xb1412b"/>
+        </frame>
+        <frame id="Popper 05">
+          <layerref id="Popper Confetti 05b" color="0x3bc730"/>
+          <layerref id="Popper Ribbon 03" a="0.66"/>
+          <layerref id="Popper Confetti 05a" color="0x6dcff6"/>
+        </frame>
+        <frame id="Popper 06">
+          <layerref id="Popper Confetti 06b" color="0x3bc730" a="0.66"/>
+          <layerref id="Popper Ribbon 04" a="0.33"/>
+          <layerref id="Popper Confetti 06a" color="0xb1412b" a="0.66"/>
+        </frame>
+        <frame id="Popper 07">
+          <layerref id="Popper Confetti 06b" y="20" color="0x3bc730" a="0.33"/>
+          <layerref id="Popper Confetti 06a" y="20" color="0xb1412b" a="0.33"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Popper" framerate="4" loop="false">
+          <frameref id="Popper 01"/>
+          <frameref id="Popper 02"/>
+          <frameref id="Popper 03"/>
+          <frameref id="Popper 04"/>
+          <frameref id="Popper 05"/>
+          <frameref id="Popper 06"/>
+          <frameref id="Popper 07"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="Popper" type="group">
+          <layer id="Popper Confetti 01a" texture="Popper Confetti" y="-20">
+            <view angle="0" col="2" x="68" y="60"/>
+            <view angle="45" x="76" y="60"/>
+            <view angle="90" col="1" x="8" y="70"/>
+            <view angle="135" x="-76" y="60" hm="true"/>
+            <view angle="180" col="2" x="-69" y="60" hm="true"/>
+            <view angle="225" col="3" alpha="0" hm="true"/>
+            <view angle="270" col="4" alpha="0"/>
+            <view angle="315" col="3" alpha="0"/>
+          </layer>
+          <layer id="Popper Confetti 02a" texture="Popper Confetti" y="-20">
+            <view angle="0" col="2" row="1" x="98" y="-37"/>
+            <view angle="45" row="1" x="106" y="-17"/>
+            <view angle="90" col="1" row="1" x="8" y="-37"/>
+            <view angle="135" row="1" x="-106" y="-17" hm="true"/>
+            <view angle="180" col="2" row="1" x="-98" y="-37" hm="true"/>
+            <view angle="225" col="3" row="1" x="-40" y="-20" alpha="0" hm="true"/>
+            <view angle="270" col="4" row="1" y="-40" alpha="0"/>
+            <view angle="315" col="3" row="1" x="40" y="-20" alpha="0"/>
+          </layer>
+          <layer id="Popper Confetti 03a" texture="Popper Confetti" y="-20">
+            <view angle="0" col="2" row="2" x="118" y="-67"/>
+            <view angle="45" row="2" x="126" y="-37"/>
+            <view angle="90" col="1" row="2" x="8" y="-67"/>
+            <view angle="135" row="2" x="-126" y="-37" hm="true"/>
+            <view angle="180" col="2" row="2" x="-118" y="-67" hm="true"/>
+            <view angle="225" col="3" row="2" x="-60" y="-30" alpha="0" hm="true"/>
+            <view angle="270" col="4" row="2" y="-60" alpha="0"/>
+            <view angle="315" col="3" row="2" x="60" y="-30" alpha="0"/>
+          </layer>
+          <layer id="Popper Confetti 04a" texture="Popper Confetti" y="-20">
+            <view angle="0" col="2" row="2" x="128" y="-77"/>
+            <view angle="45" row="2" x="136" y="-42"/>
+            <view angle="90" col="1" row="2" x="8" y="-77"/>
+            <view angle="135" row="2" x="-136" y="-42" hm="true"/>
+            <view angle="180" col="2" row="2" x="-128" y="-77" hm="true"/>
+            <view angle="225" col="3" row="2" x="-70" y="-35" alpha="0" hm="true"/>
+            <view angle="270" col="4" row="2" y="-70" alpha="0"/>
+            <view angle="315" col="3" row="2" x="70" y="-35" alpha="0"/>
+          </layer>
+          <layer id="Popper Confetti 05a" texture="Popper Confetti" y="-20">
+            <view angle="0" col="2" row="2" x="138" y="-57"/>
+            <view angle="45" row="2" x="146" y="-32"/>
+            <view angle="90" col="1" row="2" x="8" y="-57"/>
+            <view angle="135" row="2" x="-146" y="-32" hm="true"/>
+            <view angle="180" col="2" row="2" x="-138" y="-57" hm="true"/>
+            <view angle="225" col="3" row="2" x="-80" y="-25" alpha="0" hm="true"/>
+            <view angle="270" col="4" row="2" y="-50" alpha="0"/>
+            <view angle="315" col="3" row="2" x="80" y="-25" alpha="0"/>
+          </layer>
+          <layer id="Popper Confetti 06a" texture="Popper Confetti" y="-20">
+            <view angle="0" col="2" row="2" x="143" y="-37"/>
+            <view angle="45" row="2" x="151" y="-27"/>
+            <view angle="90" col="1" row="2" x="8" y="-37"/>
+            <view angle="135" row="2" x="-151" y="-27" hm="true"/>
+            <view angle="180" col="2" row="2" x="-143" y="-37" hm="true"/>
+            <view angle="225" col="3" row="2" x="-85" y="-20" alpha="0" hm="true"/>
+            <view angle="270" col="4" row="2" y="-30" alpha="0"/>
+            <view angle="315" col="3" row="2" x="85" y="-20" alpha="0"/>
+          </layer>
+          <layer id="Popper Ribbon 01" texture="Popper Ribbon" y="-20">
+            <view angle="0" col="2" x="106" y="-71"/>
+            <view angle="45" x="111" y="-41"/>
+            <view angle="90" col="1" x="11" y="-71"/>
+            <view angle="135" x="-112" y="-41" hm="true"/>
+            <view angle="180" col="2" x="-107" y="-71" hm="true"/>
+            <view angle="225" col="3" x="-60" y="-30" alpha="0" hm="true"/>
+            <view angle="270" col="4" y="-60" alpha="0"/>
+            <view angle="315" col="3" x="60" y="-30" alpha="0"/>
+          </layer>
+          <layer id="Popper Ribbon 02" texture="Popper Ribbon" y="-20">
+            <view angle="0" col="2" x="116" y="-81"/>
+            <view angle="45" x="121" y="-46"/>
+            <view angle="90" col="1" x="11" y="-81"/>
+            <view angle="135" x="-122" y="-46" hm="true"/>
+            <view angle="180" col="2" x="-117" y="-81" hm="true"/>
+            <view angle="225" col="3" x="-70" y="-35" alpha="0" hm="true"/>
+            <view angle="270" col="4" y="-70" alpha="0"/>
+            <view angle="315" col="3" x="70" y="-35" alpha="0"/>
+          </layer>
+          <layer id="Popper Ribbon 03" texture="Popper Ribbon" y="-20">
+            <view angle="0" col="2" x="126" y="-61"/>
+            <view angle="45" x="131" y="-36"/>
+            <view angle="90" col="1" x="11" y="-61"/>
+            <view angle="135" x="-132" y="-36" hm="true"/>
+            <view angle="180" col="2" x="-127" y="-61" hm="true"/>
+            <view angle="225" col="3" x="-80" y="-25" alpha="0" hm="true"/>
+            <view angle="270" col="4" y="-50" alpha="0"/>
+            <view angle="315" col="3" x="80" y="-25" alpha="0"/>
+          </layer>
+          <layer id="Popper Ribbon 04" texture="Popper Ribbon" y="-20">
+            <view angle="0" col="2" x="131" y="-41"/>
+            <view angle="45" x="136" y="-31"/>
+            <view angle="90" col="1" x="10" y="-39"/>
+            <view angle="135" x="-137" y="-31" hm="true"/>
+            <view angle="180" col="2" x="-132" y="-41" hm="true"/>
+            <view angle="225" col="3" x="-85" y="-20" alpha="0" hm="true"/>
+            <view angle="270" col="4" y="-30" alpha="0"/>
+            <view angle="315" col="3" x="85" y="-20" alpha="0"/>
+          </layer>
+          <layer id="Popper Confetti 01b" texture="Popper Confetti" y="-20">
+            <view angle="0" col="3" x="70" y="66"/>
+            <view angle="45" col="2" x="68" y="63"/>
+            <view angle="90" col="1" x="-8" y="72" hm="true"/>
+            <view angle="135" col="2" x="-68" y="63" hm="true"/>
+            <view angle="180" col="3" x="-70" y="66" hm="true"/>
+            <view angle="225" col="2" y="3" alpha="0" hm="true"/>
+            <view angle="270" col="4" y="6" alpha="0" hm="true"/>
+            <view angle="315" col="2" y="5" alpha="0"/>
+          </layer>
+          <layer id="Popper Confetti 02b" texture="Popper Confetti" y="-20">
+            <view angle="0" col="3" row="1" x="100" y="-31"/>
+            <view angle="45" col="2" row="1" x="98" y="-14"/>
+            <view angle="90" col="1" row="1" x="-8" y="-31" hm="true"/>
+            <view angle="135" col="2" row="1" x="-98" y="-14" hm="true"/>
+            <view angle="180" col="3" row="1" x="-100" y="-31" hm="true"/>
+            <view angle="225" col="2" row="1" x="-40" y="-17" alpha="0" hm="true"/>
+            <view angle="270" col="4" row="1" y="-34" alpha="0" hm="true"/>
+            <view angle="315" col="2" row="1" x="40" y="-17" alpha="0"/>
+          </layer>
+          <layer id="Popper Confetti 03b" texture="Popper Confetti" y="-20">
+            <view angle="0" col="3" row="2" x="120" y="-61"/>
+            <view angle="45" col="2" row="2" x="118" y="-34"/>
+            <view angle="90" col="1" row="2" x="-8" y="-61" hm="true"/>
+            <view angle="135" col="2" row="2" x="-118" y="-34" hm="true"/>
+            <view angle="180" col="3" row="2" x="-120" y="-61" hm="true"/>
+            <view angle="225" col="2" row="2" x="-60" y="-27" alpha="0" hm="true"/>
+            <view angle="270" col="4" row="2" y="-54" alpha="0" hm="true"/>
+            <view angle="315" col="2" row="2" x="60" y="-27" alpha="0"/>
+          </layer>
+          <layer id="Popper Confetti 04b" texture="Popper Confetti" y="-20">
+            <view angle="0" col="3" row="2" x="130" y="-71"/>
+            <view angle="45" col="2" row="2" x="128" y="-39"/>
+            <view angle="90" col="1" row="2" x="-8" y="-71" hm="true"/>
+            <view angle="135" col="2" row="2" x="-128" y="-39" hm="true"/>
+            <view angle="180" col="3" row="2" x="-130" y="-71" hm="true"/>
+            <view angle="225" col="2" row="2" x="-70" y="-32" alpha="0" hm="true"/>
+            <view angle="270" col="4" row="2" y="-64" alpha="0" hm="true"/>
+            <view angle="315" col="2" row="2" x="70" y="-32" alpha="0"/>
+          </layer>
+          <layer id="Popper Confetti 05b" texture="Popper Confetti" y="-20">
+            <view angle="0" col="3" row="2" x="140" y="-51"/>
+            <view angle="45" col="2" row="2" x="138" y="-29"/>
+            <view angle="90" col="1" row="2" x="-8" y="-51" hm="true"/>
+            <view angle="135" col="2" row="2" x="-138" y="-29" hm="true"/>
+            <view angle="180" col="3" row="2" x="-140" y="-51" hm="true"/>
+            <view angle="225" col="2" row="2" x="-80" y="-22" alpha="0" hm="true"/>
+            <view angle="270" col="4" row="2" y="-44" alpha="0" hm="true"/>
+            <view angle="315" col="2" row="2" x="80" y="-22" alpha="0"/>
+          </layer>
+          <layer id="Popper Confetti 06b" texture="Popper Confetti" y="-20">
+            <view angle="0" col="3" row="2" x="145" y="-31"/>
+            <view angle="45" col="2" row="2" x="143" y="-24"/>
+            <view angle="90" col="1" row="2" x="-8" y="-31" hm="true"/>
+            <view angle="135" col="2" row="2" x="-143" y="-24" hm="true"/>
+            <view angle="180" col="3" row="2" x="-145" y="-31" hm="true"/>
+            <view angle="225" col="2" row="2" x="-85" y="-17" alpha="0" hm="true"/>
+            <view angle="270" col="4" row="2" y="-24" alpha="0" hm="true"/>
+            <view angle="315" col="2" row="2" x="85" y="-17" alpha="0"/>
+          </layer>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Popper 01">
+          <layerref id="Popper Confetti 01b" color="0x3bc730"/>
+          <layerref id="Popper Confetti 01a" color="0xb1412b"/>
+        </frame>
+        <frame id="Popper 02">
+          <layerref id="Popper Confetti 02b" color="0x3bc730"/>
+          <layerref id="Popper Confetti 02a" color="0xb1412b"/>
+        </frame>
+        <frame id="Popper 03">
+          <layerref id="Popper Confetti 03b" color="0x3bc730"/>
+          <layerref id="Popper Ribbon 01"/>
+          <layerref id="Popper Confetti 03a" color="0xb1412b"/>
+        </frame>
+        <frame id="Popper 04">
+          <layerref id="Popper Confetti 04b" color="0x3bc730"/>
+          <layerref id="Popper Ribbon 02"/>
+          <layerref id="Popper Confetti 04a" color="0xb1412b"/>
+        </frame>
+        <frame id="Popper 05">
+          <layerref id="Popper Confetti 05b" color="0x3bc730"/>
+          <layerref id="Popper Ribbon 03" a="0.66"/>
+          <layerref id="Popper Confetti 05a" color="0xb1412b"/>
+        </frame>
+        <frame id="Popper 06">
+          <layerref id="Popper Confetti 06b" color="0x3bc730" a="0.66"/>
+          <layerref id="Popper Ribbon 04" a="0.33"/>
+          <layerref id="Popper Confetti 06a" color="0xb1412b" a="0.66"/>
+        </frame>
+        <frame id="Popper 07">
+          <layerref id="Popper Confetti 06b" y="20" color="0x3bc730" a="0.33"/>
+          <layerref id="Popper Confetti 06a" y="20" color="0xb1412b" a="0.33"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Popper" framerate="4" loop="false">
+          <frameref id="Popper 01"/>
+          <frameref id="Popper 02">
+            <sample id="explosion"/>
+          </frameref>
+          <frameref id="Popper 03"/>
+          <frameref id="Popper 04"/>
+          <frameref id="Popper 05"/>
+          <frameref id="Popper 06"/>
+          <frameref id="Popper 07"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.15" z="0.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="20"/>
+          <view angle="45" x="7" y="14"/>
+          <view angle="90" x="-15" y="16"/>
+          <view angle="135" x="-25" y="5"/>
+          <view angle="180" x="-17" y="-9"/>
+          <view angle="225" x="-4" y="-10"/>
+          <view angle="270" x="25" y="-18"/>
+          <view angle="315" x="33" y="-3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf8d7c7"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Popper" framerate="4" loop="false">
+          <frameref id="Off"/>
+          <frameref id="On"/>
+          <frameref id="Off" duration="5"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

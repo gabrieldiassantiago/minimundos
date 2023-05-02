@@ -1,0 +1,64 @@
+<item.SpriteItem id="4917" name="Bastão Globo de Árvore Play" desc="Uma luz que guia a partir de uma árvore de natal" tags="rare,actionbar,consumable,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_303_icon_treesnowball.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="10">
+  <volume>
+    <box min="-0.18,0,-0.18" max="0.18,2.1,0.18"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+50"/>
+  </data>
+  <textures>
+    <texture id="Staff" source="items/base/consumables/clothing/accessory/acc_303_item_treesnowball.png" cols="2" rows="1"/>
+    <texture id="Snow" source="items/base/consumables/clothing/accessory/acc_301_snow.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Staff">
+      <box min="-0.18,0,-0.18" max="0.18,2.1,0.18"/>
+      <layers>
+        <layer id="Staff" texture="Staff" y="-30">
+          <view angle="45" x="1" y="42"/>
+          <view angle="135" x="2" y="42" hm="true"/>
+          <view angle="225" col="1" y="42"/>
+          <view angle="315" col="1" x="1" y="42" hm="true"/>
+        </layer>
+        <layer id="Snow_01" texture="Snow" y="-133">
+          <view x="1" y="8"/>
+        </layer>
+        <layer id="Snow_02" texture="Snow" y="-133">
+          <view col="1" x="2" y="7"/>
+        </layer>
+        <layer id="Snow_03" texture="Snow" y="-133">
+          <view col="2" x="2" y="7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="snow_01">
+          <layerref id="Staff"/>
+          <layerref id="Snow_01"/>
+        </frame>
+        <frame id="snow_02">
+          <layerref id="Staff"/>
+          <layerref id="Snow_02"/>
+        </frame>
+        <frame id="snow_03">
+          <layerref id="Staff"/>
+          <layerref id="Snow_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Snow" framerate="3">
+          <frameref id="snow_01"/>
+          <frameref id="snow_02"/>
+          <frameref id="snow_03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

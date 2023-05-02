@@ -1,0 +1,81 @@
+<item.WidgetItem name="TV Blade de Ouro Deluxe" desc="Uma televisão de ouro" tags="rare,appliance,wall,widget" icon="items/base/modern/icon_m_tv_08_lcdwall_gold.png" price="100" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" widget="widgets/widget_youtube.swf" id="6349">
+  <volume>
+    <box min="0,-0.74,-1.4" max="0.001,0.74,1.4"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="Start" trigger="false" event="widget_action(START)"/>
+    <action id="Stop" trigger="false" event="widget_action(STOP)"/>
+    <action id="Next" trigger="false" event="widget_action(NEXT)"/>
+    <action id="Play Specific Video" trigger="false" event="widget_action(PLAYVIDEO)">
+      <params>
+        <param type="string" id="Video Title" label="Publisher - Video Title"/>
+      </params>
+    </action>
+    <action id="Video Change">
+      <eval>
+        <func type="relational" id="Video Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <navigate position="infront" sitRange="8.00" standRange="5.00" targetRange="2.00" usableRange="-1.00" accessibleRange="2.00"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+    <entry key="itemUseWidget" value="Watch"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_watch.png"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_tv_08_lcdwall_gold.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_tv_wide.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tv">
+      <box min="0,-0.74,-1.4" max="0.001,0.74,1.4"/>
+      <layers>
+        <layer id="base" texture="Texture" align="middle">
+          <view angle="45" x="1" y="8"/>
+          <view angle="135" x="-2" y="8" hm="true"/>
+          <view angle="225" col="1" x="6" y="53"/>
+          <view angle="315" col="1" x="-7" y="53" hm="true"/>
+        </layer>
+        <layer id="WidgetLayer" type="panel" texture="Texture" w="2.52" h="1.45">
+          <view angle="45" x="5" y="2"/>
+          <view angle="135" col="1" x="-5" y="2"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="-0.15" s="7.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="1" y="-1"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light" color="0xb6e7f4"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,47 @@
+<item.SpriteItem id="0" name="footballhelmet" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0.05,-0.3" max="0.3,0.66,0.3"/>
+  </volume>
+  <textures>
+    <texture id="level3" source="items/base/consumables/head/con_head_64_footballhelmet.png" cols="5" rows="1"/>
+    <texture id="Bare" source="items/base/consumables/head/con_head_64_footballhelmet_skin.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" y="0.05">
+      <box min="-0.3,0,-0.3" max="0.3,0.61,0.3"/>
+      <layers>
+        <layer id="helmet" texture="level3" y="16">
+          <view angle="0" x="2" y="16" hm="true"/>
+          <view angle="45" col="1" y="15"/>
+          <view angle="90" col="2" x="-1" y="18"/>
+          <view angle="135" col="1" y="15" hm="true"/>
+          <view angle="180" x="-2" y="16"/>
+          <view angle="225" col="3" y="16"/>
+          <view angle="270" col="4" x="-3" y="15"/>
+          <view angle="315" col="3" y="16" hm="true"/>
+        </layer>
+        <layer id="Bare" texture="Bare" y="16">
+          <view angle="0" x="2" y="16" hm="true"/>
+          <view angle="45" col="1" y="15"/>
+          <view angle="90" col="2" x="-1" y="18"/>
+          <view angle="135" col="1" y="15" hm="true"/>
+          <view angle="180" x="-2" y="16"/>
+          <view angle="225" col="3" y="16"/>
+          <view angle="270" col="4" x="-3" y="15"/>
+          <view angle="315" col="3" y="16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Bare"/>
+          <layerref id="helmet"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

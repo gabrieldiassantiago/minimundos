@@ -1,0 +1,27 @@
+<item.SpriteItem id="4171" name="Nordic Office Bin" desc="A home for rubbish" tags="misc" icon="items/base/modern/m_office_bin_icon.png" price="27" tokens="270" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.45,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="base" source="items/base/modern/m_office_bin.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.45,0.15"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" y="18"/>
+          <view angle="135" y="18" hm="true"/>
+          <view angle="225" y="18"/>
+          <view angle="315" y="18" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,77 @@
+<item.SpriteItem desc="A snowball projectile effect." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" entity="false" name="Snowball Projectile">
+  <volume>
+    <box max="0.08,0.08,0.08" min="-0.08,-0.08,-0.08"/>
+  </volume>
+  <textures>
+    <texture cols="3" id="proj_03_snowball" rows="2" source="items/base/consumables/throwables/thr_01_snowmound_proj.png"/>
+    <texture cols="1" id="item_03_snowball" rows="1" source="items/base/consumables/throwables/thr_01_snowmound_snowball.png"/>
+  </textures>
+  <sounds>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Snowball">
+      <box max="0.08,0.08,0.08" min="-0.08,-0.08,-0.08"/>
+      <layers>
+        <layer id="Proj Snowball" type="group">
+          <layer id="Snowball" texture="item_03_snowball" y="8">
+            <view angle="0"/>
+            <view angle="45"/>
+            <view angle="90"/>
+            <view angle="135"/>
+            <view angle="180"/>
+            <view angle="225"/>
+            <view angle="270"/>
+            <view angle="315"/>
+          </layer>
+          <layer id="Trail 01" texture="proj_03_snowball" y="60">
+            <view angle="0" col="2" hm="true" x="-26" y="-44"/>
+            <view angle="45" x="-11" y="-43"/>
+            <view angle="90" col="1" x="6" y="-47"/>
+            <view angle="135" hm="true" x="12" y="-43"/>
+            <view angle="180" col="2" x="25" y="-44"/>
+            <view angle="225" hm="true" vm="true" x="12" y="-20"/>
+            <view angle="270" col="1" vm="true" x="6" y="-18"/>
+            <view angle="315" vm="true" x="-12" y="-20"/>
+          </layer>
+          <layer id="Trail 02" texture="proj_03_snowball" y="60">
+            <view angle="0" col="2" hm="true" row="1" x="-26" y="-47"/>
+            <view angle="45" row="1" x="-11" y="-46"/>
+            <view angle="90" col="1" row="1" x="7" y="-49"/>
+            <view angle="135" hm="true" row="1" x="12" y="-47"/>
+            <view angle="180" col="2" row="1" x="25" y="-47"/>
+            <view angle="225" hm="true" row="1" vm="true" x="12" y="-16"/>
+            <view angle="270" col="1" row="1" vm="true" x="7" y="-15"/>
+            <view angle="315" row="1" vm="true" x="-12" y="-17"/>
+          </layer>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Proj Snowball" type="group">
+          <frame id="Snowball 01">
+            <layerref blend="screen" id="Trail 02"/>
+            <layerref id="Snowball"/>
+          </frame>
+          <frame id="Snowball 02">
+            <layerref blend="screen" id="Trail 01"/>
+            <layerref id="Snowball"/>
+          </frame>
+          <frame id="Snowball Idle">
+            <layerref id="Snowball"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Idle">
+          <frameref id="Snowball Idle"/>
+        </animation>
+        <animation framerate="4" id="Projectile">
+          <frameref id="Snowball 01">
+            <sample id="woosh"/>
+          </frameref>
+          <frameref id="Snowball 02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

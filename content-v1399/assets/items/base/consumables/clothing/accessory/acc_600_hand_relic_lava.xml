@@ -1,0 +1,232 @@
+<item.SpriteItem id="0" name="Duster" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Relic" source="items/base/consumables/clothing/accessory/acc_600_hand_relic_lava.png" cols="4" rows="1"/>
+    <texture id="Smoke" source="items/base/consumables/clothing/accessory/acc_600_hand_relic_smoke.png" cols="3" rows="2"/>
+    <texture id="Wipe" source="items/base/consumables/clothing/accessory/acc_600_hand_relic_wipe.png" cols="3" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Smoke">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Smoke01" texture="Smoke">
+          <view angle="0" x="4" y="19" hm="true"/>
+          <view angle="45" x="11" y="26"/>
+          <view angle="90" x="11" y="22"/>
+          <view angle="135" x="4" y="29" hm="true"/>
+          <view angle="180" x="-4" y="19"/>
+          <view angle="225" x="-14" y="23"/>
+          <view angle="270" x="-11" y="20"/>
+          <view angle="315" x="-3" y="21" hm="true"/>
+        </layer>
+        <layer id="Smoke02" texture="Smoke">
+          <view angle="0" col="1" x="4" y="19" hm="true"/>
+          <view angle="45" col="1" x="11" y="26"/>
+          <view angle="90" col="1" x="11" y="22"/>
+          <view angle="135" col="1" x="4" y="29" hm="true"/>
+          <view angle="180" col="1" x="-4" y="19"/>
+          <view angle="225" col="1" x="-14" y="23"/>
+          <view angle="270" col="1" x="-11" y="20"/>
+          <view angle="315" col="1" x="-3" y="21" hm="true"/>
+        </layer>
+        <layer id="Smoke03" texture="Smoke">
+          <view angle="0" col="2" x="4" y="19" hm="true"/>
+          <view angle="45" col="2" x="11" y="26"/>
+          <view angle="90" col="2" x="11" y="22"/>
+          <view angle="135" col="2" x="4" y="29" hm="true"/>
+          <view angle="180" col="2" x="-4" y="19"/>
+          <view angle="225" col="2" x="-14" y="23"/>
+          <view angle="270" col="2" x="-11" y="20"/>
+          <view angle="315" col="2" x="-3" y="21" hm="true"/>
+        </layer>
+        <layer id="Smoke04" texture="Smoke">
+          <view angle="0" row="1" x="4" y="19" hm="true"/>
+          <view angle="45" row="1" x="11" y="26"/>
+          <view angle="90" row="1" x="11" y="22"/>
+          <view angle="135" row="1" x="4" y="29" hm="true"/>
+          <view angle="180" row="1" x="-4" y="19"/>
+          <view angle="225" row="1" x="-14" y="23"/>
+          <view angle="270" row="1" x="-11" y="20"/>
+          <view angle="315" row="1" x="-3" y="21" hm="true"/>
+        </layer>
+        <layer id="Smoke05" texture="Smoke">
+          <view angle="0" col="1" row="1" x="4" y="19" hm="true"/>
+          <view angle="45" col="1" row="1" x="11" y="26"/>
+          <view angle="90" col="1" row="1" x="11" y="22"/>
+          <view angle="135" col="1" row="1" x="4" y="29" hm="true"/>
+          <view angle="180" col="1" row="1" x="-4" y="19"/>
+          <view angle="225" col="1" row="1" x="-14" y="23"/>
+          <view angle="270" col="1" row="1" x="-11" y="20"/>
+          <view angle="315" col="1" row="1" x="-3" y="21" hm="true"/>
+        </layer>
+        <layer id="Smoke06" texture="Smoke">
+          <view angle="0" col="2" row="1" x="4" y="19" hm="true"/>
+          <view angle="45" col="2" row="1" x="11" y="26"/>
+          <view angle="90" col="2" row="1" x="11" y="22"/>
+          <view angle="135" col="2" row="1" x="4" y="29" hm="true"/>
+          <view angle="180" col="2" row="1" x="-4" y="19"/>
+          <view angle="225" col="2" row="1" x="-14" y="23"/>
+          <view angle="270" col="2" row="1" x="-11" y="20"/>
+          <view angle="315" col="2" row="1" x="-3" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Smoke01" color="0xcf9637" a="0.5" blend="add"/>
+          <layerref id="Smoke06" color="0xeae67b" a="0.15"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Smoke02" color="0xcf9637" a="0.5" blend="add"/>
+          <layerref id="Smoke05" color="0xeae67b" a="0.15"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Smoke03" color="0xcf9637" a="0.5" blend="add"/>
+          <layerref id="Smoke04" color="0xeae67b" a="0.15"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Smoke04" color="0xcf9637" a="0.5" blend="add"/>
+          <layerref id="Smoke03" color="0xeae67b" a="0.1"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Smoke05" color="0xcf9637" a="0.5" blend="add"/>
+          <layerref id="Smoke02" color="0xeae67b" a="0.15"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="Smoke06" color="0xcf9637" a="0.5" blend="add"/>
+          <layerref id="Smoke01" color="0xeae67b" a="0.15"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+        </animation>
+        <animation id="Off"/>
+      </animations>
+    </node>
+    <node id="Diffuse" s="1.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="2" y="-4" hm="true"/>
+          <view angle="45" x="8" y="-2"/>
+          <view angle="90" x="11" y="-3"/>
+          <view angle="135" hm="true"/>
+          <view angle="180" x="-2" y="-2"/>
+          <view angle="225" x="-8" y="-3"/>
+          <view angle="270" x="-8" y="-4"/>
+          <view angle="315" x="-1" y="-3" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xeab967"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Relic">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Relic" texture="Relic">
+          <view angle="0" x="3" y="9"/>
+          <view angle="45" col="1" x="11" y="10"/>
+          <view angle="90" col="2" x="12" y="7"/>
+          <view angle="135" col="3" x="4" y="14"/>
+          <view angle="180" x="-4" y="9" hm="true"/>
+          <view angle="225" col="3" x="-12" y="9" hm="true"/>
+          <view angle="270" col="2" x="-11" y="4" hm="true"/>
+          <view angle="315" col="1" x="-3" y="9" hm="true"/>
+        </layer>
+        <layer id="Wipe01" texture="Wipe">
+          <view angle="0" x="3" y="9" alpha="0"/>
+          <view angle="45" x="13" y="12"/>
+          <view angle="90" col="1" x="11" y="8"/>
+          <view angle="135" col="2" x="4" y="14"/>
+          <view angle="180" x="-4" y="9" alpha="0" hm="true"/>
+          <view angle="225" col="2" x="-12" y="9" hm="true"/>
+          <view angle="270" col="1" x="-11" y="4" hm="true"/>
+          <view angle="315" x="-3" y="8" hm="true"/>
+        </layer>
+        <layer id="Wipe02" texture="Wipe">
+          <view angle="0" x="3" y="9" alpha="0"/>
+          <view angle="45" row="1" x="12" y="10"/>
+          <view angle="90" col="1" row="1" x="12" y="7"/>
+          <view angle="135" col="2" row="1" x="4" y="13"/>
+          <view angle="180" x="-4" y="9" alpha="0" hm="true"/>
+          <view angle="225" col="2" row="1" x="-12" y="8" hm="true"/>
+          <view angle="270" col="1" row="1" x="-11" y="4" hm="true"/>
+          <view angle="315" row="1" x="-3" y="8" hm="true"/>
+        </layer>
+        <layer id="Wipe03" texture="Wipe">
+          <view angle="0" x="3" y="9" alpha="0"/>
+          <view angle="45" row="2" x="11" y="10"/>
+          <view angle="90" col="1" row="1" x="12" y="7"/>
+          <view angle="135" col="2" row="2" x="4" y="14"/>
+          <view angle="180" x="-4" y="9" alpha="0" hm="true"/>
+          <view angle="225" col="2" row="2" x="-12" y="9" hm="true"/>
+          <view angle="270" col="1" row="1" x="-11" y="4" hm="true"/>
+          <view angle="315" row="2" x="-3" y="9" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Relic"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Relic"/>
+          <layerref id="Wipe01"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Relic"/>
+          <layerref id="Wipe02"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Relic"/>
+          <layerref id="Wipe03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6">
+          <frameref id="Frame01"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Off"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

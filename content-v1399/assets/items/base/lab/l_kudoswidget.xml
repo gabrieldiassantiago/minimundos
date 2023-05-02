@@ -1,0 +1,324 @@
+<item.WidgetItem id="4025" name="Máquina de Fabricar Glória" desc="Fabrique sua recompensa de Glória!" tags="kudos,widget" icon="items/base/lab/icon_l_kudoswidget.png" price="10" tokens="100" minLevel="1" minLevelType="7" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_itemcrafter.swf">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.92,0.3"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select_crafting_table.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="widget_min_load_wait" value="30000"/>
+    <entry key="widget_max_load_wait" value="31000"/>
+    <entry key="hasEditSecurity" value="true"/>
+    <entry key="craft_tag" value="craftable_kudos"/>
+  </data>
+  <textures>
+    <texture id="Kudos Widget" source="items/base/lab/l_kudoswidget.png" cols="1" rows="1"/>
+    <texture id="Kudos Widget Orb" source="items/base/lab/l_kudoswidget_orb.png" cols="1" rows="1"/>
+    <texture id="Glow 2" source="items/base/lab/l_kudoswidget_glow2.png" cols="5" rows="1"/>
+    <texture id="Glow 1" source="items/base/lab/l_kudoswidget_glow1.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="flare" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Kudos Widget">
+      <box min="-0.3,0,-0.3" max="0.3,0.92,0.3"/>
+      <layers>
+        <layer id="Kudos Widget" texture="Kudos Widget">
+          <view angle="45" y="32"/>
+          <view angle="135" y="32" hm="true"/>
+          <view angle="225" y="32"/>
+          <view angle="315" y="32" hm="true"/>
+        </layer>
+        <layer id="Kudos Widget Orb" texture="Kudos Widget Orb">
+          <view angle="45" y="-73"/>
+          <view angle="135" x="-1" y="-73" hm="true"/>
+          <view angle="225" y="-73"/>
+          <view angle="315" x="-1" y="-73" hm="true"/>
+        </layer>
+        <layer id="Kudos Widget Orb Animation" texture="Kudos Widget Orb">
+          <view angle="45" y="-73"/>
+          <view angle="135" x="-1" y="-73" hm="true"/>
+          <view angle="225" y="-73"/>
+          <view angle="315" x="-1" y="-73" hm="true"/>
+        </layer>
+        <layer id="Glow 1a" texture="Glow 1">
+          <view angle="45" x="-33" y="-20"/>
+          <view angle="135" x="-33" y="-20" hm="true"/>
+          <view angle="225" x="-33" y="-20"/>
+          <view angle="315" x="-33" y="-20" hm="true"/>
+        </layer>
+        <layer id="Glow 1b" texture="Glow 1">
+          <view angle="45" col="1" x="-33" y="-20"/>
+          <view angle="135" col="1" x="-33" y="-20" hm="true"/>
+          <view angle="225" col="1" x="-33" y="-20"/>
+          <view angle="315" col="1" x="-33" y="-20" hm="true"/>
+        </layer>
+        <layer id="Glow 1c" texture="Glow 1">
+          <view angle="45" col="2" x="-33" y="-20"/>
+          <view angle="135" col="2" x="-33" y="-20" hm="true"/>
+          <view angle="225" col="2" x="-33" y="-20"/>
+          <view angle="315" col="2" x="-33" y="-20" hm="true"/>
+        </layer>
+        <layer id="Glow 1d" texture="Glow 1">
+          <view angle="45" col="3" x="-33" y="-20"/>
+          <view angle="135" col="3" x="-33" y="-20" hm="true"/>
+          <view angle="225" col="3" x="-33" y="-20"/>
+          <view angle="315" col="3" x="-33" y="-20" hm="true"/>
+        </layer>
+        <layer id="Glow 1e" texture="Glow 1">
+          <view angle="45" col="4" x="-33" y="-20"/>
+          <view angle="135" col="4" x="-33" y="-20" hm="true"/>
+          <view angle="225" col="4" x="-33" y="-20"/>
+          <view angle="315" col="4" x="-33" y="-20" hm="true"/>
+        </layer>
+        <layer id="Glow 2a" texture="Glow 2">
+          <view angle="45" x="-33" y="-20"/>
+          <view angle="135" x="-33" y="-20" hm="true"/>
+          <view angle="225" x="-33" y="-20"/>
+          <view angle="315" x="-33" y="-20" hm="true"/>
+        </layer>
+        <layer id="Glow 2b" texture="Glow 2">
+          <view angle="45" col="1" x="-33" y="-20"/>
+          <view angle="135" col="1" x="-33" y="-20" hm="true"/>
+          <view angle="225" col="1" x="-33" y="-20"/>
+          <view angle="315" col="1" x="-33" y="-20" hm="true"/>
+        </layer>
+        <layer id="Glow 2c" texture="Glow 2">
+          <view angle="45" col="2" x="-33" y="-20"/>
+          <view angle="135" col="2" x="-33" y="-20" hm="true"/>
+          <view angle="225" col="2" x="-33" y="-20"/>
+          <view angle="315" col="2" x="-33" y="-20" hm="true"/>
+        </layer>
+        <layer id="Glow 2d" texture="Glow 2">
+          <view angle="45" col="3" x="-33" y="-20"/>
+          <view angle="135" col="3" x="-33" y="-20" hm="true"/>
+          <view angle="225" col="3" x="-33" y="-20"/>
+          <view angle="315" col="3" x="-33" y="-20" hm="true"/>
+        </layer>
+        <layer id="Glow 2e" texture="Glow 2">
+          <view angle="45" col="4" x="-33" y="-20"/>
+          <view angle="135" col="4" x="-33" y="-20" hm="true"/>
+          <view angle="225" col="4" x="-33" y="-20"/>
+          <view angle="315" col="4" x="-33" y="-20" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame00">
+          <layerref id="Kudos Widget"/>
+          <layerref id="Kudos Widget Orb" a="0.9"/>
+          <layerref id="Kudos Widget Orb Animation" a="0" blend="overlay"/>
+          <layerref id="Glow 2a"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Kudos Widget"/>
+          <layerref id="Kudos Widget Orb" a="0.9"/>
+          <layerref id="Kudos Widget Orb Animation" a="0.1" blend="overlay"/>
+          <layerref id="Glow 1a"/>
+          <layerref id="Glow 2b" a="0.75"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Kudos Widget"/>
+          <layerref id="Kudos Widget Orb" a="0.9"/>
+          <layerref id="Kudos Widget Orb Animation" a="0.3" blend="overlay"/>
+          <layerref id="Glow 1a"/>
+          <layerref id="Glow 2b"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Kudos Widget"/>
+          <layerref id="Kudos Widget Orb" a="0.9"/>
+          <layerref id="Kudos Widget Orb Animation" a="0.4" blend="overlay"/>
+          <layerref id="Glow 1a"/>
+          <layerref id="Glow 1b"/>
+          <layerref id="Glow 2c" a="0.75"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Kudos Widget"/>
+          <layerref id="Kudos Widget Orb" a="0.9"/>
+          <layerref id="Kudos Widget Orb Animation" a="0.3" blend="overlay"/>
+          <layerref id="Glow 1a"/>
+          <layerref id="Glow 1b"/>
+          <layerref id="Glow 2c"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Kudos Widget"/>
+          <layerref id="Kudos Widget Orb" a="0.9"/>
+          <layerref id="Kudos Widget Orb Animation" a="0.1" blend="overlay"/>
+          <layerref id="Glow 1a"/>
+          <layerref id="Glow 1b"/>
+          <layerref id="Glow 1c"/>
+          <layerref id="Glow 2d" a="0.75"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="Kudos Widget"/>
+          <layerref id="Kudos Widget Orb" a="0.9"/>
+          <layerref id="Kudos Widget Orb Animation" a="0" blend="overlay"/>
+          <layerref id="Glow 1a"/>
+          <layerref id="Glow 1b"/>
+          <layerref id="Glow 1c"/>
+          <layerref id="Glow 2d"/>
+        </frame>
+        <frame id="Frame07">
+          <layerref id="Kudos Widget"/>
+          <layerref id="Kudos Widget Orb" a="0.9"/>
+          <layerref id="Kudos Widget Orb Animation" a="0.1" blend="overlay"/>
+          <layerref id="Glow 1a"/>
+          <layerref id="Glow 1b"/>
+          <layerref id="Glow 1c"/>
+          <layerref id="Glow 1d"/>
+          <layerref id="Glow 2e" a="0.75"/>
+        </frame>
+        <frame id="Frame08">
+          <layerref id="Kudos Widget"/>
+          <layerref id="Kudos Widget Orb" a="0.9"/>
+          <layerref id="Kudos Widget Orb Animation" a="0.3" blend="overlay"/>
+          <layerref id="Glow 1a"/>
+          <layerref id="Glow 1b"/>
+          <layerref id="Glow 1c"/>
+          <layerref id="Glow 1d"/>
+          <layerref id="Glow 2e"/>
+        </frame>
+        <frame id="Frame09">
+          <layerref id="Kudos Widget"/>
+          <layerref id="Kudos Widget Orb" a="0.9"/>
+          <layerref id="Kudos Widget Orb Animation" a="0.4" blend="overlay"/>
+          <layerref id="Glow 1a"/>
+          <layerref id="Glow 1b"/>
+          <layerref id="Glow 1c"/>
+          <layerref id="Glow 1d"/>
+          <layerref id="Glow 1e"/>
+        </frame>
+        <frame id="Frame10">
+          <layerref id="Kudos Widget"/>
+          <layerref id="Kudos Widget Orb" a="0.9"/>
+          <layerref id="Kudos Widget Orb Animation" a="0.3" blend="overlay"/>
+          <layerref id="Glow 1a" a="0.75"/>
+          <layerref id="Glow 1b" a="0.75"/>
+          <layerref id="Glow 1c" a="0.75"/>
+          <layerref id="Glow 1d" a="0.75"/>
+          <layerref id="Glow 1e" a="0.75"/>
+        </frame>
+        <frame id="Frame11">
+          <layerref id="Kudos Widget"/>
+          <layerref id="Kudos Widget Orb" a="0.9"/>
+          <layerref id="Kudos Widget Orb Animation" a="0.1" blend="overlay"/>
+          <layerref id="Glow 2a" a="0.65"/>
+          <layerref id="Glow 1b" a="0.5"/>
+          <layerref id="Glow 1c" a="0.5"/>
+          <layerref id="Glow 1d" a="0.5"/>
+          <layerref id="Glow 1e" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="Frame00"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame07"/>
+          <frameref id="Frame08"/>
+          <frameref id="Frame09"/>
+          <frameref id="Frame10"/>
+          <frameref id="Frame11"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.4" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x9cf7ff"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse01" y="0.55" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="flare" align="middle">
+          <view angle="45" x="-24"/>
+          <view angle="135" x="24"/>
+          <view angle="225" x="-24"/>
+          <view angle="315" x="24"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xc9f6f6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="1.4" s="1.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x5b95ec" a="0.3"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x5b95ec" a="0.35"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0x5b95ec" a="0.4"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0x5b95ec" a="0.45"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Light" color="0x5b95ec" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="3">
+          <frameref id="01" duration="4"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05" duration="2"/>
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

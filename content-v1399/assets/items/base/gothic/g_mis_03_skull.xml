@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="Um crânio para decoração" dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" icon="items/base/gothic/icon_g_mis_03_skull.png" id="1183" name="Crânio" tags="misc,pickup" price="35" tokens="350" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.31,0.341,0.22" min="-0.31,0,-0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_pick_up.as"/>
+    <event id="action" script="scripts/item/action_pick_up.as"/>
+  </events>
+  <actions>
+    <action id="Pick Up"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate usableRange="3.00"/>
+  <textures>
+    <texture cols="2" id="Skull" rows="1" source="items/base/gothic/g_mis_03_skull.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.31,0.341,0.22" min="-0.31,0,-0.22"/>
+      <layers>
+        <layer id="Skull" texture="Skull" y="27">
+          <view angle="45" y="-9"/>
+          <view angle="135" hm="true" x="1" y="-9"/>
+          <view angle="225" col="1" y="-9"/>
+          <view angle="315" col="1" hm="true" x="1" y="-9"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Skull"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref a="0.8" id="Skull"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref a="0.5" id="Skull"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref a="0.2" id="Skull"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref a="0" id="Skull"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Visible" syncFrames="false">
+          <frameref id="Frame"/>
+        </animation>
+        <animation framerate="4" id="Invisible" syncFrames="false">
+          <frameref id="Frame04"/>
+        </animation>
+        <animation framerate="8" id="Show" loop="false" syncFrames="false">
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame"/>
+        </animation>
+        <animation framerate="8" id="Hide" loop="false" syncFrames="false">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

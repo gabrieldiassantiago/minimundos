@@ -1,0 +1,110 @@
+<item.SpriteItem id="2792" name="Pia Dupla Chef Master" desc="Para cozinhar como um Mestre." tags="table" icon="items/base/modern/icon_m_kitchen_35_sink.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="65">
+  <volume>
+    <box min="-0.49,0,-1.49" max="0.49,1.22,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(Open)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Cabinet" source="items/base/modern/m_kitchen_32_closed.png" cols="2" rows="1"/>
+    <texture id="sink" source="items/base/modern/m_kitchen_35_sink.png" cols="1" rows="1"/>
+    <texture id="tap" source="items/base/modern/m_kitchen_35_tap.png" cols="2" rows="2"/>
+    <texture id="water" source="items/base/modern/m_kitchen_35_water.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-1.49" max="0.49,1.22,0.49"/>
+      <layers>
+        <layer id="Cabinet" texture="Cabinet">
+          <view angle="45" x="-30" y="68"/>
+          <view angle="135" x="-32" y="36" hm="true"/>
+          <view angle="225" col="1" x="33" y="37"/>
+          <view angle="315" col="1" x="33" y="68" hm="true"/>
+        </layer>
+        <layer id="sink" texture="sink">
+          <view angle="45" x="-30" y="-37"/>
+          <view angle="135" x="-32" y="-69" hm="true"/>
+          <view angle="225" x="33" y="-68"/>
+          <view angle="315" x="33" y="-37" hm="true"/>
+        </layer>
+        <layer id="tap_01" texture="tap">
+          <view angle="45" x="-45" y="-80"/>
+          <view angle="135" x="-18" y="-112" hm="true"/>
+          <view angle="225" col="1" x="46" y="-94"/>
+          <view angle="315" col="1" x="19" y="-63" hm="true"/>
+        </layer>
+        <layer id="tap_02" texture="tap">
+          <view angle="45" row="1" x="-45" y="-80"/>
+          <view angle="135" row="1" x="-18" y="-112" hm="true"/>
+          <view angle="225" col="1" row="1" x="46" y="-94"/>
+          <view angle="315" col="1" row="1" x="19" y="-63" hm="true"/>
+        </layer>
+        <layer id="water_01" texture="water">
+          <view angle="45" x="-27" y="-68"/>
+          <view angle="135" x="-36" y="-100" hm="true"/>
+          <view angle="225" x="29" y="-101"/>
+          <view angle="315" x="36" y="-70" hm="true"/>
+        </layer>
+        <layer id="water_02" texture="water">
+          <view angle="45" col="1" x="-27" y="-68"/>
+          <view angle="135" col="1" x="-36" y="-100" hm="true"/>
+          <view angle="225" col="1" x="29" y="-101"/>
+          <view angle="315" col="1" x="36" y="-70" hm="true"/>
+        </layer>
+        <layer id="water_03" texture="water">
+          <view angle="45" col="2" x="-27" y="-68"/>
+          <view angle="135" col="2" x="-36" y="-100" hm="true"/>
+          <view angle="225" col="2" x="29" y="-101"/>
+          <view angle="315" col="2" x="36" y="-70" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Cabinet"/>
+          <layerref id="sink"/>
+          <layerref id="tap_01"/>
+        </frame>
+        <frame id="On01">
+          <layerref id="Cabinet"/>
+          <layerref id="sink"/>
+          <layerref id="tap_01"/>
+          <layerref id="water_01"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Cabinet"/>
+          <layerref id="sink"/>
+          <layerref id="tap_01"/>
+          <layerref id="water_02"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Cabinet"/>
+          <layerref id="sink"/>
+          <layerref id="tap_01"/>
+          <layerref id="water_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="0">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On" framerate="8">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

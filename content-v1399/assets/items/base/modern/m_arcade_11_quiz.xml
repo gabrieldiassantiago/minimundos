@@ -1,0 +1,132 @@
+<item.WidgetItem id="1370" name="Máquina de Teste" desc="Faça um teste! Você sabe a resposta?" tags="admin,widget" icon="items/base/modern/icon_m_arcade_11_quiz.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_quiz.swf" price="220" tokens="2200" minLevel="1" minLevelType="4" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.3308,0.49"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <actions>
+    <action id="Complete">
+      <eval>
+        <func type="range" id="Score" input="score"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="frame" value="modern"/>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+  </data>
+  <navigate position="infront" sitRange="2.00" standRange="2.00" targetRange="2.00"/>
+  <textures>
+    <texture id="Base" source="items/base/modern/m_arcade_11_quiz_base.png" cols="2" rows="1"/>
+    <texture id="Sides" source="items/base/modern/m_arcade_11_quiz_sides.png" cols="4" rows="1"/>
+    <texture id="Top" source="items/base/modern/m_arcade_11_quiz_top.png" cols="1" rows="1"/>
+    <texture id="misc" source="items/base/modern/m_arcade_11_quiz_misc.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_arcade_quiz.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,2.3308,0.49"/>
+      <layers>
+        <layer id="Base" texture="Base" x="4" y="36">
+          <view angle="45" y="1"/>
+          <view angle="135" x="-7" y="1" hm="true"/>
+          <view angle="225" col="1" x="-8" y="11" hm="true"/>
+          <view angle="315" col="1" x="2" y="10"/>
+        </layer>
+        <layer id="Text" texture="Sides" x="-28">
+          <view angle="45" x="1" y="-3"/>
+          <view angle="135" col="1" x="54"/>
+          <view angle="225" col="3" x="-2" y="-2"/>
+          <view angle="315" col="2" x="60"/>
+        </layer>
+        <layer id="Top" texture="Top" y="-160">
+          <view angle="45" alpha="0"/>
+          <view angle="135" x="19" y="-1"/>
+          <view angle="225" col="1" hm="true"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="screen1" texture="misc" x="6" y="-70">
+          <view angle="45" x="1" y="-15"/>
+          <view angle="135" x="-13" y="-14" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="screen2" texture="misc" x="6" y="-70">
+          <view angle="45" col="1" x="1" y="-15"/>
+          <view angle="135" col="1" x="-13" y="-14" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="screen3" texture="misc" x="6" y="-70">
+          <view angle="45" col="2" x="1" y="-15"/>
+          <view angle="135" col="2" x="-13" y="-14" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame1">
+          <layerref id="Base"/>
+          <layerref id="screen1"/>
+          <layerref id="Text"/>
+          <layerref id="Top"/>
+        </frame>
+        <frame id="Frame2">
+          <layerref id="Base"/>
+          <layerref id="Text"/>
+          <layerref id="Top"/>
+          <layerref id="screen2"/>
+        </frame>
+        <frame id="Frame3">
+          <layerref id="Base"/>
+          <layerref id="Text"/>
+          <layerref id="Top"/>
+          <layerref id="screen3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="1">
+          <frameref id="Frame1"/>
+          <frameref id="Frame2"/>
+          <frameref id="Frame3"/>
+          <frameref id="Frame2"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.3188" s="4.8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="3" y="-4"/>
+          <view angle="135" x="-1" y="-4" hm="true"/>
+          <view angle="225" col="1" x="-6" y="-2"/>
+          <view angle="315" col="1" x="6" y="-3" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

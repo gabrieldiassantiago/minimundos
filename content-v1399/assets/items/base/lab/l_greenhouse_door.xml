@@ -1,0 +1,158 @@
+<item.SpriteItem id="2147" name="Porta da Estufa" desc="Para suas plantações." tags="admin,misc" icon="items/base/lab/icon_l_greenhouse_door.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.5,0,-0.5" max="-0.4,3.4,1.5"/>
+  </volume>
+  <events>
+    <event id="close" script="scripts/item/close_gate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+    <event id="action" script="scripts/item/action_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="Open" state="true" event="open"/>
+    <action id="Close" state="true" event="close"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="frame 01" source="items/base/lab/l_greenhouse_door_front.png" cols="1" rows="1"/>
+    <texture id="frame 02" source="items/base/lab/l_greenhouse_door_back.png" cols="1" rows="1"/>
+    <texture id="vines" source="items/base/lab/l_greenhouse_door_vines.png" cols="1" rows="1"/>
+    <texture id="glass" source="items/base/lab/l_greenhouse_door_front_glass.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="closed" z="0.5">
+      <box min="-0.5,0,-1" max="-0.4,3.4,1"/>
+      <layers>
+        <layer id="closed left" texture="frame 01">
+          <view angle="45" x="-29" y="20"/>
+          <view angle="135" x="29" y="20" hm="true"/>
+          <view angle="225" x="27" y="49"/>
+          <view angle="315" x="-27" y="49" hm="true"/>
+        </layer>
+        <layer id="closed left glass" texture="glass" y="-213">
+          <view angle="45" x="-29" y="20"/>
+          <view angle="135" x="29" y="20" hm="true"/>
+          <view angle="225" x="27" y="49"/>
+          <view angle="315" x="-27" y="49" hm="true"/>
+        </layer>
+        <layer id="closed right" texture="frame 02">
+          <view angle="45" x="34" y="-43"/>
+          <view angle="135" x="-34" y="-43" hm="true"/>
+          <view angle="225" x="90" y="-14"/>
+          <view angle="315" x="-90" y="-14" hm="true"/>
+        </layer>
+        <layer id="vines" texture="vines" y="58">
+          <view angle="45" x="-30" y="-38"/>
+          <view angle="135" x="30" y="-38" hm="true"/>
+          <view angle="225" x="27" y="-9"/>
+          <view angle="315" x="-27" y="-9" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="closed">
+          <layerref id="closed left"/>
+          <layerref id="closed left glass" a="0.25"/>
+          <layerref id="closed right"/>
+          <layerref id="vines"/>
+        </frame>
+        <frame id="closed_hidden">
+          <layerref id="closed left" a="0"/>
+          <layerref id="closed right" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="closed_hidden"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open right" z="0.5">
+      <box min="-0.5,0,0.9" max="-0.4,2.75,1"/>
+      <layers>
+        <layer id="behind" texture="frame 02">
+          <view angle="45" x="34" y="-43"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" x="-90" y="-14" hm="true"/>
+        </layer>
+        <layer id="front" texture="frame 01">
+          <view angle="45" alpha="0"/>
+          <view angle="135" x="29" y="20" hm="true"/>
+          <view angle="225" x="27" y="49"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="front glass" texture="glass" y="-213">
+          <view angle="45" alpha="0"/>
+          <view angle="135" x="29" y="20" hm="true"/>
+          <view angle="225" x="27" y="49"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="behind"/>
+          <layerref id="front"/>
+          <layerref id="front glass" a="0.25"/>
+        </frame>
+        <frame id="hidden">
+          <layerref id="front" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="hidden"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open left" z="0.5">
+      <box min="-0.5,0,-1" max="-0.4,2.75,-0.9"/>
+      <layers>
+        <layer id="behind" texture="frame 02">
+          <view angle="45" alpha="0"/>
+          <view angle="135" x="-34" y="-43" hm="true"/>
+          <view angle="225" x="90" y="-14"/>
+          <view angle="315" alpha="0" hm="true"/>
+        </layer>
+        <layer id="front" texture="frame 01">
+          <view angle="45" x="-29" y="20"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" x="-27" y="49" hm="true"/>
+        </layer>
+        <layer id="front glass" texture="glass" y="-213">
+          <view angle="45" x="-29" y="20"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" x="-27" y="49" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="behind"/>
+          <layerref id="front"/>
+          <layerref id="front glass" a="0.25"/>
+        </frame>
+        <frame id="hidden">
+          <layerref id="front" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="hidden"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,30 @@
+<item.SpriteItem name="Caminha para Pet Marron Play" desc="Uma confortável caminha para seu pet" tags="misc,seasonal" icon="items/base/pet/pet_039_petbed_tan_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="4826" price="10">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.75,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/pet/pet_039_petbed_tan_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0.75,1.49"/>
+      <layers>
+        <layer id="Layer" texture="Texture" align="middle" y="-25">
+          <view angle="45" x="23" y="-19"/>
+          <view angle="135" x="42" y="14" hm="true"/>
+          <view angle="225" col="1" x="-23" y="28"/>
+          <view angle="315" col="1" x="-45" y="-6" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,61 @@
+<item.SpriteItem id="0" name="Skull" desc="A skull head" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/head/con_head_215_skull_open_red.png" cols="5" rows="1"/>
+    <texture id="close" source="items/base/consumables/head/con_head_215_skull_close_red.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="0" col="2" x="1" y="23" hm="true"/>
+          <view angle="45" y="24"/>
+          <view angle="90" col="1" x="-1" y="25"/>
+          <view angle="135" x="-1" y="24" hm="true"/>
+          <view angle="180" col="2" x="-2" y="23"/>
+          <view angle="225" col="3" x="2" y="24"/>
+          <view angle="270" col="4" y="22"/>
+          <view angle="315" col="3" x="-2" y="24" hm="true"/>
+        </layer>
+        <layer id="close" texture="close">
+          <view angle="0" col="2" x="1" y="23" hm="true"/>
+          <view angle="45" y="24"/>
+          <view angle="90" col="1" x="-1" y="25"/>
+          <view angle="135" x="-1" y="24" hm="true"/>
+          <view angle="180" col="2" x="-2" y="23"/>
+          <view angle="225" col="3" x="2" y="24"/>
+          <view angle="270" col="4" y="22"/>
+          <view angle="315" col="3" x="-2" y="24" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Open">
+          <layerref id="head"/>
+        </frame>
+        <frame id="Close">
+          <layerref id="close"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="15">
+          <frameref id="Open" duration="100"/>
+          <frameref id="Close"/>
+          <frameref id="Open"/>
+          <frameref id="Close"/>
+          <frameref id="Open" duration="5"/>
+          <frameref id="Close"/>
+          <frameref id="Open"/>
+          <frameref id="Close"/>
+          <frameref id="Open" duration="100"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,36 @@
+<item.SpriteItem desc="Magia, velocidade e poder em formato delicado." dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" icon="items/base/consumables/back/icon_con_bak_item_07_vip_bwings_lv3.png" id="1264" name="Asa da Rainha das Flores" tags="consumable,actionbar,wear,back,girl,action_wearable_toggle" price="21800" minLevel="70" minLevelType="4" premium="Y" minCPLevel="1">
+  <volume>
+    <box max="0.3,0.4,0.3" min="-0.3,0,-0.3"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="arcane+20,nature+30"/>
+    <entry key="action_attributes_secondary" value="speed+70,health+70"/>
+  </data>
+  <textures>
+    <texture cols="2" id="vip_bwings_level3" rows="1" source="items/base/consumables/back/con_bak_item_07_vip_bwings_lv3.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.3,0.4,0.3" min="-0.3,0,-0.3"/>
+      <layers>
+        <layer id="bwings_level3" texture="vip_bwings_level3">
+          <view angle="45" x="-3" y="24"/>
+          <view angle="135" hm="true" x="6" y="23"/>
+          <view angle="225" col="1" x="6" y="30"/>
+          <view angle="315" col="1" hm="true" x="-5" y="29"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

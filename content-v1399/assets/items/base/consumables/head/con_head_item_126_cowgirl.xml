@@ -1,0 +1,39 @@
+<item.SpriteItem id="3131" name="Jane Texana" desc="Colecionável e raro." tags="rare,consumable,actionbar,wear,head,costume,collectible,action_wearable_toggle" icon="items/base/consumables/head/icon_con_head_item_126_cowgirl.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="2000" minLevelType="2">
+  <volume>
+    <box min="-0.35,0,-0.3" max="0.35,0.45,0.3"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="fire+10"/>
+    <entry key="action_attributes_secondary" value="speed+30,health+10"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/consumables/head/con_head_item_126_cowgirl.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.3" max="0.35,0.45,0.3"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" x="3" y="26"/>
+          <view angle="135" x="-3" y="26" hm="true"/>
+          <view angle="225" col="1" x="-1" y="25" hm="true"/>
+          <view angle="315" col="1" x="1" y="25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="head">
+          <layerref id="base"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

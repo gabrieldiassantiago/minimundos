@@ -1,0 +1,35 @@
+<item.SpriteItem id="1451" name="Chopp Escuro sem Álcool" desc="Doce." tags="consumable,drink,actionbar,group_edible,edible,stackable,action_drinkable,market" icon="items/base/consumables/edible/icon_con_eat_26_darkrootbeer.png" price="3" tokens="30" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.08,0,-0.08" max="0.08,0.31,0.08"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_drinkable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_drinkable.as"/>
+    <event id="action" script="scripts/item/action_drinkable.as"/>
+    <event id="select" script="scripts/item/select_drinkable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="drink-100"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture id="beerpint" source="items/base/consumables/edible/con_eat_26_darkrootbeer.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.08,0,-0.08" max="0.08,0.31,0.08"/>
+      <layers>
+        <layer id="pint" texture="beerpint">
+          <view angle="45" x="-1" y="13" hm="true"/>
+          <view angle="135" x="1" y="13"/>
+          <view angle="225" x="-1" y="13" hm="true"/>
+          <view angle="315" x="1" y="13"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

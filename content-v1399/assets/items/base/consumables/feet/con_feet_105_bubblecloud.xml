@@ -1,0 +1,268 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="Cloud" source="items/base/consumables/feet/con_feet_105_bubblecloud.png" cols="4" rows="2"/>
+    <texture id="trail" source="items/base/consumables/feet/con_feet_62_cloud_tail.png" cols="5" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_ring_b.png" cols="1" rows="1"/>
+    <texture id="trail_heart" source="items/base/consumables/feet/con_feet_105_bubblecloud_tail_decal.png" cols="3" rows="3"/>
+    <texture id="Bubbles_float" source="items/base/consumables/feet/con_feet_105_bubblecloud_detail.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="cloud" texture="Cloud">
+          <view angle="0" col="2" x="-16" y="57"/>
+          <view angle="45" x="-9" y="55"/>
+          <view angle="90" col="1" y="41"/>
+          <view angle="135" x="12" y="58" hm="true"/>
+          <view angle="180" col="2" x="16" y="57" hm="true"/>
+          <view angle="225" col="3" x="9" y="61" hm="true"/>
+          <view angle="270" col="1" x="-6" y="54" vm="true"/>
+          <view angle="315" col="3" x="-10" y="58"/>
+        </layer>
+        <layer id="cloud_02" texture="Cloud">
+          <view angle="0" col="2" row="1" x="-16" y="57"/>
+          <view angle="45" row="1" x="-9" y="55"/>
+          <view angle="90" col="1" row="1" y="41"/>
+          <view angle="135" row="1" x="12" y="58" hm="true"/>
+          <view angle="180" col="2" row="1" x="16" y="57" hm="true"/>
+          <view angle="225" col="3" row="1" x="9" y="61" hm="true"/>
+          <view angle="270" col="1" row="1" x="-6" y="54" vm="true"/>
+          <view angle="315" col="3" row="1" x="-10" y="58"/>
+        </layer>
+        <layer id="sit" texture="base">
+          <view angle="45" x="4" y="26" alpha="0" hm="true"/>
+          <view angle="135" x="-5" y="33" alpha="0"/>
+          <view angle="225" x="-5" y="23" alpha="0" hm="true"/>
+          <view angle="315" x="15" y="19" alpha="0"/>
+        </layer>
+        <layer id="trail_01" texture="trail">
+          <view angle="0" col="3" x="-88" y="42"/>
+          <view angle="45" x="-51" y="8"/>
+          <view angle="90" col="1" x="-2" y="-18"/>
+          <view angle="135" x="54" y="13" hm="true"/>
+          <view angle="180" col="3" x="94" y="41" hm="true"/>
+          <view angle="225" col="4" x="72" y="70" hm="true"/>
+          <view angle="270" col="2" x="5" y="91" hm="true"/>
+          <view angle="315" col="4" x="-72" y="68"/>
+        </layer>
+        <layer id="rainbow_f" texture="rainbow">
+          <view angle="0" col="2" x="-11" y="32" alpha="0"/>
+          <view angle="45" x="14" y="30"/>
+          <view angle="90" col="1" x="23" y="41"/>
+          <view angle="135" x="-10" y="30" hm="true"/>
+          <view angle="180" col="2" x="11" y="32" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="13" y="43" alpha="0" hm="true"/>
+          <view angle="270" col="1" x="18" y="49"/>
+          <view angle="315" col="3" x="-13" y="43" alpha="0"/>
+        </layer>
+        <layer id="rainbow_b" texture="rainbow">
+          <view angle="0" col="2" x="-11" y="32"/>
+          <view angle="45" x="14" y="30" alpha="0"/>
+          <view angle="90" col="1" x="23" y="41" alpha="0"/>
+          <view angle="135" x="-10" y="30" alpha="0" hm="true"/>
+          <view angle="180" col="2" x="11" y="32" hm="true"/>
+          <view angle="225" col="3" x="13" y="43" hm="true"/>
+          <view angle="270" col="1" x="18" y="53" alpha="0" vm="true"/>
+          <view angle="315" col="3" x="-13" y="43"/>
+        </layer>
+        <layer id="trail_heart_01" texture="trail_heart">
+          <view angle="0" col="2" x="-89" y="38" hm="true"/>
+          <view angle="45" x="-60" y="6"/>
+          <view angle="90" col="1" y="-22"/>
+          <view angle="135" x="60" y="7" hm="true"/>
+          <view angle="180" col="2" x="89" y="38"/>
+          <view angle="225" x="71" y="62" hm="true" vm="true"/>
+          <view angle="270" col="1" x="3" y="94" hm="true" vm="true"/>
+          <view angle="315" x="-71" y="62" vm="true"/>
+        </layer>
+        <layer id="trail_heart_02" texture="trail_heart">
+          <view angle="0" col="2" row="1" x="-89" y="38" hm="true"/>
+          <view angle="45" row="1" x="-60" y="6"/>
+          <view angle="90" col="1" row="1" y="-22"/>
+          <view angle="135" row="1" x="60" y="7" hm="true"/>
+          <view angle="180" col="2" row="1" x="89" y="38"/>
+          <view angle="225" row="1" x="71" y="62" hm="true" vm="true"/>
+          <view angle="270" col="1" row="1" x="3" y="94" hm="true" vm="true"/>
+          <view angle="315" row="1" x="-71" y="62" vm="true"/>
+        </layer>
+        <layer id="trail_heart_03" texture="trail_heart">
+          <view angle="0" col="2" row="2" x="-89" y="38" hm="true"/>
+          <view angle="45" row="2" x="-60" y="7"/>
+          <view angle="90" col="1" row="2" x="9" y="-22"/>
+          <view angle="135" row="2" x="60" y="7" hm="true"/>
+          <view angle="180" col="2" row="2" x="89" y="38"/>
+          <view angle="225" row="2" x="71" y="62" hm="true" vm="true"/>
+          <view angle="270" col="1" row="2" x="-6" y="94" hm="true" vm="true"/>
+          <view angle="315" row="2" x="-71" y="62" vm="true"/>
+        </layer>
+        <layer id="b_float_01" texture="Bubbles_float">
+          <view angle="0" col="2" x="40" y="-6" hm="true"/>
+          <view angle="45" x="31" y="-11"/>
+          <view angle="90" col="2" x="22" y="-39"/>
+          <view angle="135" col="1" x="26" y="-25" hm="true"/>
+          <view angle="180" col="1" x="-40" y="-6"/>
+          <view angle="225" col="2" x="64" y="27"/>
+          <view angle="270" col="1" x="41" y="-6"/>
+          <view angle="315" col="1" x="40" y="-17" hm="true"/>
+        </layer>
+        <layer id="b_float_02" texture="Bubbles_float">
+          <view angle="0" x="-18" y="51" hm="true"/>
+          <view angle="45" col="1" x="-27" y="46"/>
+          <view angle="90" col="1" x="-17" y="43"/>
+          <view angle="135" x="-28" y="53" hm="true"/>
+          <view angle="180" x="-24" y="43"/>
+          <view angle="225" x="-46" y="18"/>
+          <view angle="270" x="-11" y="56"/>
+          <view angle="315" x="20" y="45" hm="true"/>
+        </layer>
+        <layer id="b_float_03" texture="Bubbles_float">
+          <view angle="0" col="1" x="-62" y="4" hm="true"/>
+          <view angle="45" col="2" x="-34" y="-28"/>
+          <view angle="90" x="-31" y="-7"/>
+          <view angle="135" col="2" x="-48" y="14" hm="true"/>
+          <view angle="180" x="62" y="4"/>
+          <view angle="225" col="1" x="-24" y="-13"/>
+          <view angle="270" col="2" x="-35" y="-10"/>
+          <view angle="315" col="2" x="-41" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle01">
+          <layerref id="b_float_01" a="0.8"/>
+          <layerref id="b_float_02" x="-4" y="8" a="0.55"/>
+          <layerref id="b_float_03" x="-2" y="-22" a="0.3"/>
+          <layerref id="cloud" a="0.3"/>
+          <layerref id="cloud"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="b_float_01" x="3" y="-4" a="0.875"/>
+          <layerref id="b_float_02" x="-6" y="10" a="0.4"/>
+          <layerref id="b_float_03" x="-6" y="-26" a="0.2"/>
+          <layerref id="cloud_02"/>
+          <layerref id="cloud" a="0.9"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="b_float_01" x="5" y="-8" a="0.75"/>
+          <layerref id="b_float_02" x="-4" y="14" a="0.3"/>
+          <layerref id="b_float_03" x="-5" y="-30" a="0.08"/>
+          <layerref id="cloud_02" a="0.3"/>
+          <layerref id="cloud_02"/>
+        </frame>
+        <frame id="Idle04_02">
+          <layerref id="b_float_01" x="3" y="-12" a="0.625"/>
+          <layerref id="b_float_02" x="-7" y="16" a="0.2"/>
+          <layerref id="b_float_03" a="0"/>
+          <layerref id="cloud_02"/>
+          <layerref id="cloud" a="0.9"/>
+        </frame>
+        <frame id="Idle05_01">
+          <layerref id="b_float_01" x="4" y="-16" a="0.5"/>
+          <layerref id="b_float_02" x="-9" y="18" a="0.1"/>
+          <layerref id="b_float_03" x="-3" y="-3" a="0.8"/>
+          <layerref id="cloud" a="0.3"/>
+          <layerref id="cloud"/>
+        </frame>
+        <frame id="Idle06_02">
+          <layerref id="b_float_01" x="5" y="-20" a="0.375"/>
+          <layerref id="b_float_02" a="0"/>
+          <layerref id="b_float_03" x="-5" y="-8" a="0.65"/>
+          <layerref id="cloud_02"/>
+          <layerref id="cloud" a="0.9"/>
+        </frame>
+        <frame id="Idle07_03">
+          <layerref id="b_float_01" x="3" y="-24" a="0.25"/>
+          <layerref id="b_float_02" a="0.8"/>
+          <layerref id="b_float_03" x="-7" y="-12" a="0.55"/>
+          <layerref id="cloud_02" a="0.3"/>
+          <layerref id="cloud_02"/>
+        </frame>
+        <frame id="Idle08_02">
+          <layerref id="b_float_01" x="2" y="-28" a="0.1"/>
+          <layerref id="b_float_02" x="-2" y="4" a="0.65"/>
+          <layerref id="b_float_03" x="-4" y="-17" a="0.4"/>
+          <layerref id="cloud_02"/>
+          <layerref id="cloud" a="0.9"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="trail_01"/>
+          <layerref id="cloud" a="0.3"/>
+          <layerref id="cloud"/>
+          <layerref id="trail_heart_01" a="0.55"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="trail_01"/>
+          <layerref id="cloud_02"/>
+          <layerref id="cloud"/>
+          <layerref id="trail_heart_02" a="0.7"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="trail_01"/>
+          <layerref id="cloud_02" a="0.3"/>
+          <layerref id="cloud_02"/>
+          <layerref id="trail_heart_03" a="0.6"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="Idle01" duration="2"/>
+          <frameref id="Idle02" duration="2"/>
+          <frameref id="Idle03" duration="2"/>
+          <frameref id="Idle04_02" duration="2"/>
+          <frameref id="Idle05_01" duration="2"/>
+          <frameref id="Idle06_02" duration="2"/>
+          <frameref id="Idle07_03" duration="2"/>
+          <frameref id="Idle08_02" duration="2"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="-0.245" y="-0.0312" s="7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="3" y="-1"/>
+          <view angle="135" x="-2"/>
+          <view angle="225" x="-1" y="-2"/>
+          <view angle="315" x="1" y="-3"/>
+          <view angle="0" x="1" y="-1"/>
+          <view angle="90"/>
+          <view angle="180" x="-2" y="-2"/>
+          <view angle="270" y="-2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf5c3f5" a="0.3"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="01" duration="2"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="01" duration="5"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

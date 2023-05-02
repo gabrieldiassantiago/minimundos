@@ -1,0 +1,92 @@
+<item.WidgetItem id="888" name="Torre de Defesa Alienígena" desc="Jogo de estratégia defensiva." tags="table,widget" icon="items/base/scifi/icon_sci_tower_defense.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" viewDirection="vertical" widget="widgets/widget_tower_defence.swf" price="390" tokens="3900" minLevel="1" minLevelType="3" minCPLevel="1">
+  <volume>
+    <box min="-0.49,0,-0.2" max="0.49,0.52,1.2"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Win">
+      <eval>
+        <func type="relational" id="Opponent Name" input="opponent" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+    <action id="Complete">
+      <eval>
+        <func type="relational" id="Opponent Name" input="opponent" operator="equal" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="control_xml_path" value="widgets/assets/external/swtd/control.mxml"/>
+    <entry key="config_xml_path" value="widgets/assets/external/swtd/config.mxml"/>
+    <entry key="game_id" value="13"/>
+    <entry key="game_url" value="swtd/swtd.swf"/>
+    <entry key="game_min_players" value="1"/>
+    <entry key="game_max_players" value="5"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+  </data>
+  <navigate sitRange="3.00" standRange="3.00" targetRange="1.00"/>
+  <textures>
+    <texture id="Texture" source="items/base/scifi/sci_towerdefense.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_square_disco.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.2" max="0.49,0.52,1.2"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="31" y="26"/>
+          <view angle="135" col="1" x="32" y="58"/>
+          <view angle="225" col="1" x="-33" y="59" hm="true"/>
+          <view angle="315" x="-33" y="26" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="0.76" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="20"/>
+          <view angle="135" x="16" y="16"/>
+          <view angle="225" x="-16" y="17"/>
+          <view angle="315" x="-14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x66ffff" a="0.94"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Intense" y="0.76" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="20"/>
+          <view angle="135" x="16" y="16"/>
+          <view angle="225" x="-16" y="17"/>
+          <view angle="315" x="-14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x3399ff" a="0.3"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

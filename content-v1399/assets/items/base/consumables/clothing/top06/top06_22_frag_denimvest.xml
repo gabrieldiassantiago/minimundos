@@ -1,0 +1,36 @@
+<f id="Top06_16_DenimVest" parentId="Top06">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Top06_16TorsoM" cId="Torso" s="items/base/consumables/clothing/top06/top06_22_denimvest_m.png" pri="4.2"/>
+      <c sId="Top06_16TorsoM" c="3247349" a="0.44" b="28.4" ct="0.72" lId="Top06_16Color1" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="Top06_16TorsoF" cId="Torso" s="items/base/consumables/clothing/top06/top06_22_denimvest_f.png" pri="4.2"/>
+      <c sId="Top06_16TorsoF" c="3247349" a="0.44" b="28.4" ct="0.72" lId="Top06_16Color1" lw="N"/>
+    </g>
+  </b>
+  <g id="Icon">
+    <t id="IconTop06_016" icon="items/base/consumables/clothing/top06/top06_22_icon_denimvest_a.png" w="48" h="48"/>
+    <s id="IconTop06_16VIP" cId="IconTop06_016" s="items/base/shared/s_vipbadge.png"/>
+    <s id="IconTop06_16Base" cId="IconTop06_016" s="items/base/consumables/clothing/top06/top06_22_icon_denimvest_a.png"/>
+    <c sId="IconTop06_16Base" c="3247349" a="0.44" b="28.4" ct="0.72" lId="Top06_16Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top06_16Color1" name="Color" desc="Choose a color" sel="Blue" seld="Blue">
+      <c id="White" icon="$bu/icon_white.png" c="16777215" a="0.52" b="68.6" ct="0.12" lId="Top06_16Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="9740966" a="0.73" b="55.7" ct="0.54" lId="Top06_16Color1"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16216734" a="0.79" b="61.7" ct="0.85" lId="Top06_16Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="13043720" a="0.68" b="36.5" ct="0.69" lId="Top06_16Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.99" b="70.6" ct="0.20" lId="Top06_16Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561793" a="0.71" b="55.6" ct="0.45" lId="Top06_16Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="3247349" a="0.44" b="28.4" ct="0.72" lId="Top06_16Color1"/>
+      <c id="FadedDenim" icon="$bu/icon_faded_denim.png" c="8438770" a="0.67" b="43.9" ct="0.60" lId="Top06_16Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="7352444" a="0.94" b="69.4" ct="1.46" lId="Top06_16Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="0.68" b="35.0" ct="1.29" lId="Top06_16Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top06_16Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

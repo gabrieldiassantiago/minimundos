@@ -1,0 +1,34 @@
+<item.SpriteItem name="Caixa de Presente Aberta Esmeralda" desc="Uma caixa de presentes vazia do Natal de 2017 [16 of 25]" tags="rare,misc" icon="items/base/presents/acc_016_icon_adventbox_emerald.png" price="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="7503">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.3,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Base" source="items/base/presents/acc_016_item_adventbox_emerald.png" cols="1" rows="1"/>
+    <texture id="Bow" source="items/base/presents/acc_002_item_adventbox_mistletoe_bow.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node01">
+      <box min="-0.3,0,-0.3" max="0.3,0.3,0.3"/>
+      <layers>
+        <layer id="Base" texture="Base" y="16">
+          <view angle="45" x="-2" y="2"/>
+          <view angle="135" x="-1" y="2" hm="true"/>
+          <view angle="225" x="-1" y="2"/>
+          <view angle="315" y="2" hm="true"/>
+        </layer>
+        <layer id="Bow" texture="Bow" y="16">
+          <view angle="45" x="-1" y="-15"/>
+          <view angle="135" x="-1" y="-14" hm="true"/>
+          <view angle="225" col="1" x="1" y="-13"/>
+          <view angle="315" col="1" x="-1" y="-14" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,36 @@
+<item.SpriteItem id="3771" name="Katana Michonne" desc="A katana oficial da Michonne de The Walking Dead." tags="actionbar,wear,back,walkingdead,rare,action_wearable_toggle" icon="items/base/brands/walkingdead/wd_02_katana_icon.png" price="2550" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.1,0,-0.27" max="0.1,0.1,1.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/brands/walkingdead/wd_02_katana_item.png" cols="2" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.27" max="0.1,0.1,1.25"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" x="31" y="14"/>
+          <view angle="135" col="1" x="32" y="46"/>
+          <view angle="225" row="1" x="-32" y="47"/>
+          <view angle="315" col="1" row="1" x="-33" y="16"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

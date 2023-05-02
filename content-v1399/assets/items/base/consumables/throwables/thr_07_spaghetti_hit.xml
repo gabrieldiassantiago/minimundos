@@ -1,0 +1,54 @@
+<item.SpriteItem id="0" name="spaghetti hit" desc="A spaghetti hit effect." dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="hit_03_snowball" source="items/base/consumables/throwables/thr_07_spaghetti_hit.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="splat" source="items/base/consumables/magic/sndfx_splat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="Hit 01" texture="hit_03_snowball">
+          <view y="-55"/>
+        </layer>
+        <layer id="Hit 02" texture="hit_03_snowball">
+          <view col="1" y="-41"/>
+        </layer>
+        <layer id="Hit 03" texture="hit_03_snowball">
+          <view col="2" y="-24"/>
+        </layer>
+        <layer id="Hit 04" texture="hit_03_snowball">
+          <view col="3" x="1" y="-22"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Hit 01">
+          <layerref id="Hit 01"/>
+        </frame>
+        <frame id="Hit 02">
+          <layerref id="Hit 02"/>
+        </frame>
+        <frame id="Hit 03">
+          <layerref id="Hit 03"/>
+        </frame>
+        <frame id="Hit 04">
+          <layerref id="Hit 04" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="4" loop="false">
+          <frameref id="Hit 01">
+            <sample id="splat"/>
+          </frameref>
+          <frameref id="Hit 02"/>
+          <frameref id="Hit 03"/>
+          <frameref id="Hit 04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

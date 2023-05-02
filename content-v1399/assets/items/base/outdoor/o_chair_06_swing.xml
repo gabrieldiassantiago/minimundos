@@ -1,0 +1,156 @@
+<item.ChairItem id="3139" name="Balanço de Jardim Eco" desc="Uma cadeira de balanço ecológica, para dois." tags="chair" icon="items/base/outdoor/icon_o_chair_06_swing.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="430">
+  <seats>
+    <seat x="0.2" y="0.5" z="0.15">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap z="-1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+    </seat>
+    <seat x="0.2" y="0.5" z="0.85">
+      <ap x="1" z="1"/>
+      <ap x="1" z="2"/>
+      <ap z="2"/>
+      <ap x="-1" z="2"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.45,0,-0.45" max="0.45,1.75,1.45"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="frame" source="items/base/outdoor/o_chair_06_swing_frame.png" cols="2" rows="1"/>
+    <texture id="roof" source="items/base/outdoor/o_chair_06_swing_roof.png" cols="2" rows="1"/>
+    <texture id="seat" source="items/base/outdoor/o_chair_06_swing_seat.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="RightArm">
+      <box min="-0.45,0,-0.45" max="0.45,1.75,1.45"/>
+      <layers>
+        <layer id="seat01" texture="seat">
+          <view angle="45" col="1" x="39" y="-9"/>
+          <view angle="135" x="25" y="23" alpha="0" hm="true"/>
+          <view angle="225" row="1" x="-39" y="14" alpha="0"/>
+          <view angle="315" col="1" row="1" x="-24" y="-18" hm="true"/>
+        </layer>
+        <layer id="frame" texture="frame">
+          <view angle="45" col="1" x="30" y="41"/>
+          <view angle="135" x="33" y="73" hm="true"/>
+          <view angle="225" x="-33" y="74"/>
+          <view angle="315" col="1" x="-31" y="41" hm="true"/>
+        </layer>
+        <layer id="seat" texture="seat">
+          <view angle="45" col="1" x="39" y="-9" alpha="0"/>
+          <view angle="135" x="25" y="23" hm="true"/>
+          <view angle="225" row="1" x="-39" y="14"/>
+          <view angle="315" col="1" row="1" x="-24" y="-18" alpha="0" hm="true"/>
+        </layer>
+        <layer id="roof" texture="roof">
+          <view angle="45" x="32" y="-71"/>
+          <view angle="135" x="33" y="73" alpha="0" hm="true"/>
+          <view angle="225" x="-33" y="74" alpha="0"/>
+          <view angle="315" col="1" x="-32" y="-71" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="seat01"/>
+          <layerref id="frame"/>
+          <layerref id="seat"/>
+          <layerref id="roof"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="seat01" x="1"/>
+          <layerref id="frame"/>
+          <layerref id="seat" x="1"/>
+          <layerref id="roof"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="seat01" x="-1"/>
+          <layerref id="frame"/>
+          <layerref id="seat" x="-1"/>
+          <layerref id="roof"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="LeftArm">
+      <box min="-0.45,0,-0.45" max="0.45,1.75,1.45"/>
+      <layers>
+        <layer id="seat01" texture="seat">
+          <view angle="45" x="39" y="-9" alpha="0"/>
+          <view angle="135" col="1" x="25" y="23" hm="true"/>
+          <view angle="225" col="1" row="1" x="-40" y="14"/>
+          <view angle="315" row="1" x="-25" y="-18" alpha="0" hm="true"/>
+        </layer>
+        <layer id="frame" texture="frame">
+          <view angle="45" x="30" y="41"/>
+          <view angle="135" col="1" x="33" y="72" hm="true"/>
+          <view angle="225" col="1" x="-34" y="74"/>
+          <view angle="315" x="-32" y="41" hm="true"/>
+        </layer>
+        <layer id="seat" texture="seat">
+          <view angle="45" x="39" y="-9"/>
+          <view angle="135" col="1" x="25" y="23" alpha="0" hm="true"/>
+          <view angle="225" col="1" row="1" x="-40" y="14" alpha="0"/>
+          <view angle="315" row="1" x="-25" y="-18" hm="true"/>
+        </layer>
+        <layer id="roof" texture="roof">
+          <view angle="45" x="30" y="41" alpha="0"/>
+          <view angle="135" x="32" y="-40" hm="true"/>
+          <view angle="225" col="1" x="-32" y="-38"/>
+          <view angle="315" x="-32" y="41" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="seat01"/>
+          <layerref id="frame"/>
+          <layerref id="seat"/>
+          <layerref id="roof"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="seat01" x="1"/>
+          <layerref id="frame"/>
+          <layerref id="seat" x="1"/>
+          <layerref id="roof"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="seat01" x="-1"/>
+          <layerref id="frame"/>
+          <layerref id="seat" x="-1"/>
+          <layerref id="roof"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

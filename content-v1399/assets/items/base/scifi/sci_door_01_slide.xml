@@ -1,0 +1,52 @@
+<item.WidgetItem desc="Automática." dropTargetClamp="floor" dropTargetList="wall,avatar" dropTargetType="none" gridActive="false" icon="items/base/scifi/icon_sci_door_01_slide.png" id="861" name="Porta Espacial" tags="door,widget" widget="widgets/widget_portal.swf" price="110" tokens="1100" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.1,1.52,0.96" min="0,-1.52,-0.96"/>
+  </volume>
+  <events>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+    <event id="navigate" script="scripts/widget/navigate.as"/>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+  </events>
+  <actions>
+    <action event="navigate" id="Navigate" trigger="false"/>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="4000"/>
+    <entry key="widget_max_load_wait" value="6000"/>
+    <entry key="portalType" value="door"/>
+    <entry key="maxLinkedSpaces" value="1"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemUseWidgetIcon" value="context/item/action/icon_door_enter.png"/>
+  </data>
+  <navigate sitRange="1.00" standRange="1.00"/>
+  <textures>
+    <texture cols="1" id="panel" rows="1" source="items/base/scifi/sci_door_01_slide_panel.png"/>
+    <texture cols="1" id="Texture" rows="1" source="items/base/scifi/sci_door_01_slide.png"/>
+  </textures>
+  <nodes>
+    <node id="Door">
+      <box max="0.1,1.52,0.96" min="0,-1.52,-0.96"/>
+      <layers>
+        <layer align="middle" id="Door" texture="Texture">
+          <view angle="45" y="12"/>
+          <view angle="135" hm="true" y="12"/>
+          <view alpha="0.55" angle="225" x="-6" y="10"/>
+          <view alpha="0.55" angle="315" hm="true" x="6" y="10"/>
+        </layer>
+        <layer id="panel" texture="panel">
+          <view angle="45" x="59" y="10"/>
+          <view angle="135" hm="true" x="48" y="64"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="3"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

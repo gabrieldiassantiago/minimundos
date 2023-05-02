@@ -1,0 +1,118 @@
+<item.SpriteItem id="0" name="Shockball Projectile" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="proj_generic" source="items/base/consumables/magic/proj_86_healaura.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_proj_ring.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Shockball">
+      <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+      <layers>
+        <layer id="Proj Fireball" type="group">
+          <layer id="Fireball01" texture="proj_generic" y="48">
+            <view angle="0" x="1"/>
+            <view angle="45" x="2" y="-1"/>
+            <view angle="90" x="2" y="-3"/>
+            <view angle="135" x="1" y="1"/>
+            <view angle="180" x="1" y="1"/>
+            <view angle="225" x="1" y="-2"/>
+            <view angle="270" y="-2"/>
+            <view angle="315" x="2"/>
+          </layer>
+          <layer id="Fireball02" texture="proj_generic" y="48">
+            <view angle="0" col="1" x="1"/>
+            <view angle="45" col="1" x="2" y="-1"/>
+            <view angle="90" col="1" x="2" y="-3"/>
+            <view angle="135" col="1" x="1" y="1"/>
+            <view angle="180" col="1" x="1" y="1"/>
+            <view angle="225" col="1" x="1" y="-2"/>
+            <view angle="270" col="1" y="-2"/>
+            <view angle="315" col="1" x="2"/>
+          </layer>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Proj Fireball" type="group">
+          <frame id="Fireball 01">
+            <layerref id="Fireball01" blend="screen"/>
+          </frame>
+          <frame id="Fireball 02">
+            <layerref id="Fireball02" blend="screen"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="Fireball 01"/>
+        </animation>
+        <animation id="Projectile" framerate="8">
+          <frameref id="Fireball 01">
+            <sample id="woosh"/>
+          </frameref>
+          <frameref id="Fireball 02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xabf1f1"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xabf1f1" a="0.95"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.1" s="4" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xabf1f1" a="0.3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

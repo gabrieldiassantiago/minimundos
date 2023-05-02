@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="6784" name="Pirâmide Egípcia Deluxe" desc="Uma antiga pirâmide de pedras [8 de 8]" tags="rare,decoration" icon="items/base/antique/icon_a_pyramid_dynasty.png" price="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-3,0,-3" max="3,3,3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="pyramid" source="items/base/antique/a_pyramid_dynasty.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="column">
+      <box min="-3,0,-3" max="3,3,3"/>
+      <layers>
+        <layer id="pyramid" texture="pyramid">
+          <view angle="45" y="220"/>
+          <view angle="135" y="220" hm="true"/>
+          <view angle="225" y="220"/>
+          <view angle="315" y="220" hm="true"/>
+        </layer>
+        <layer id="pyramid01" texture="pyramid">
+          <view angle="45" y="220"/>
+          <view angle="135" y="220" hm="true"/>
+          <view angle="225" y="220"/>
+          <view angle="315" y="220" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="pyramid" color="0xf3c1b6"/>
+          <layerref id="pyramid01" color="0xffff99" a="0.7" blend="overlay"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

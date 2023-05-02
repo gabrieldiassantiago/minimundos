@@ -1,0 +1,147 @@
+<item.SpriteItem desc="Balcão luminoso da MiniBalada" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/modern/icon_m_bar_05_club_hatch.png" id="2491" name="Entrada do Balcão da Balada" tags="rare,table" price="100" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,2.1116,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="close" script="scripts/item/close_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+    <event id="action" script="scripts/item/action_gate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+  </events>
+  <actions>
+    <action id="Open" state="true" event="open"/>
+    <action id="Close" state="true" event="close"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Counter" source="items/base/modern/m_bar_counter.png" cols="2" rows="1"/>
+    <texture id="Texture" source="items/base/modern/m_bar_05_club_hatch.png" cols="4" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="leg_left">
+      <box min="-0.2974,0,-0.49" max="0.3359,1.2,-0.432"/>
+      <layers>
+        <layer id="leg" texture="Texture">
+          <view angle="45" col="3" x="-26" y="38"/>
+          <view angle="135" col="3" x="-33" y="7" hm="true"/>
+          <view angle="225" col="3" x="30" y="7"/>
+          <view angle="315" col="3" x="29" y="36" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="leg_right">
+      <box min="-0.3103,0,0.432" max="0.3359,1.2,0.49"/>
+      <layers>
+        <layer id="leg" texture="Texture">
+          <view angle="45" col="3" x="32" y="9"/>
+          <view angle="135" col="3" x="27" y="37" hm="true"/>
+          <view angle="225" col="3" x="-30" y="36"/>
+          <view angle="315" col="3" x="-30" y="7" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="hatch_open">
+      <box min="-0.4,0,0.2603" max="0.4,2.1116,0.42"/>
+      <layers>
+        <layer id="closed" texture="Texture">
+          <view angle="45" x="-1" y="37"/>
+          <view angle="135" x="1" y="37" hm="true"/>
+          <view angle="225" x="-1" y="37"/>
+          <view angle="315" x="1" y="37" hm="true"/>
+        </layer>
+        <layer id="open" texture="Texture">
+          <view angle="45" col="1" x="30" y="-56"/>
+          <view angle="135" col="2" x="30" y="-31"/>
+          <view angle="225" col="2" x="-30" y="-31" hm="true"/>
+          <view angle="315" col="1" x="-30" y="-56" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="open"/>
+          <layerref id="closed" a="0"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="closed" a="0"/>
+          <layerref id="open" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="hatch_closed">
+      <box min="-0.2974,0,-0.42" max="0.3359,1.2,0.42"/>
+      <layers>
+        <layer id="closed" texture="Texture">
+          <view angle="45" x="-7" y="35"/>
+          <view angle="135" x="7" y="33" hm="true"/>
+          <view angle="225" x="-10" y="33"/>
+          <view angle="315" x="10" y="33" hm="true"/>
+        </layer>
+        <layer id="open" texture="Texture">
+          <view angle="45" col="1" x="30" y="-56"/>
+          <view angle="135" col="2" x="30" y="-31"/>
+          <view angle="225" col="2" x="-30" y="-31" hm="true"/>
+          <view angle="315" col="1" x="-30" y="-56" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="open" a="0"/>
+          <layerref id="closed" a="0"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="closed"/>
+          <layerref id="open" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light02" texture="light" align="middle">
+          <view angle="45" x="-1" y="-12"/>
+          <view angle="135" x="-6" y="-12" hm="true"/>
+          <view angle="225" x="-2" y="-19"/>
+          <view angle="315" x="7" y="-19"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light02" color="0xccff" a="0.3"/>
+        </frame>
+        <frame id="Off"/>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

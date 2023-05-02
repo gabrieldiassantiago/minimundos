@@ -1,0 +1,125 @@
+<item.SpriteItem id="3004" name="Móvel para Televisor Master" desc="Um móvel para acomodar seu televisor e acessórios da maneira mais elegante podssível." tags="table" icon="items/base/modern/icon_cabinet_03_tv_d3.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="840">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.7564,3.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/modern/m_cabinet_03_tv_d3.png" cols="2" rows="1"/>
+    <texture id="Glass" source="items/base/modern/m_cabinet_03_glass.png" cols="1" rows="1"/>
+    <texture id="Back" source="items/base/modern/m_cabinet_03_tv_back.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/modern/m_cabinet_03_light.png" cols="1" rows="1"/>
+    <texture id="Diff" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0.7564,3.48"/>
+      <layers>
+        <layer id="Base" texture="Base">
+          <view angle="45" x="98" y="40"/>
+          <view angle="135" x="93" y="134" hm="true"/>
+          <view angle="225" col="1" x="-98" y="133" alpha="0"/>
+          <view angle="315" col="1" x="-93" y="35" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Glass" texture="Glass">
+          <view angle="45" x="134" y="-22"/>
+          <view angle="135" x="56" y="73" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="back" texture="Back">
+          <view angle="45" x="72" y="-2"/>
+          <view angle="135" x="119" y="92" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="back"/>
+          <layerref id="Base"/>
+          <layerref id="Glass"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Node01">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="back" texture="Back">
+          <view angle="45" x="65" y="-4" alpha="0"/>
+          <view angle="135" x="126" y="92" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-70" y="125"/>
+          <view angle="315" col="1" x="-121" y="27" hm="true"/>
+        </layer>
+        <layer id="Layer" texture="Base">
+          <view angle="45" x="98" y="40" alpha="0"/>
+          <view angle="135" x="93" y="134" alpha="0"/>
+          <view angle="225" col="1" x="-98" y="133"/>
+          <view angle="315" col="1" x="-93" y="35" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer"/>
+          <layerref id="back"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Diff" align="middle">
+          <view angle="45" x="19" y="-25"/>
+          <view angle="135" x="20" y="-6"/>
+          <view angle="225" x="-32" y="-9"/>
+          <view angle="315" x="-6" y="-33"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xced0fb"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,39 @@
+<item.SpriteItem id="925" name="CupCake" desc="Bolinho de baunilha com cobertura de morango." tags="consumable,food,actionbar,group_edible,edible,stackable,action_edible,market" icon="items/base/consumables/edible/icon_con_eat_10_cupcake.png" price="3" tokens="30" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.08,0,-0.08" max="0.08,0.1,0.08"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_edible.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_edible.as"/>
+    <event id="action" script="scripts/item/action_edible.as"/>
+    <event id="select" script="scripts/item/select_edible.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="food-100"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture id="cake" source="items/base/consumables/edible/icon_con_eat_10_cupcake.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.08,0,-0.08" max="0.08,0.1,0.08"/>
+      <layers>
+        <layer id="cupcake" texture="cake">
+          <view angle="45" y="22"/>
+          <view angle="135" y="22"/>
+          <view angle="225" y="22"/>
+          <view angle="315" y="22"/>
+          <view angle="90" x="-1" y="22" hm="true"/>
+          <view angle="180" x="-1" y="22" hm="true"/>
+          <view angle="270" x="-1" y="22" hm="true"/>
+          <view angle="0" x="-1" y="22" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

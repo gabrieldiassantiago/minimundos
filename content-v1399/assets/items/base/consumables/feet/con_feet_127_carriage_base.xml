@@ -1,0 +1,472 @@
+<item.SpriteItem id="0" name="carriage" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0.35,0" max="0,0.35,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_127_carriage_base.png" cols="5" rows="1"/>
+    <texture id="Wheels_Idle" source="items/base/consumables/feet/con_feet_127_carriage_wheels.png" cols="5" rows="1"/>
+    <texture id="wheels_01" source="items/base/consumables/feet/con_feet_127_carriage_wheels1.png" cols="5" rows="1"/>
+    <texture id="wheels_02" source="items/base/consumables/feet/con_feet_127_carriage_wheels2.png" cols="5" rows="1"/>
+    <texture id="legs" source="items/base/consumables/feet/con_feet_127_carriage_legs.png" cols="5" rows="1"/>
+    <texture id="reigns" source="items/base/consumables/feet/con_feet_127_carriage_reigns.png" cols="5" rows="1"/>
+    <texture id="horse_body" source="items/base/consumables/feet/con_feet_127_carriage_horse.png" cols="5" rows="1"/>
+    <texture id="horse_feet" source="items/base/consumables/feet/con_feet_127_carriage_horse_feet.png" cols="5" rows="5"/>
+    <texture id="tail" source="items/base/consumables/feet/con_feet_127_carriage_horse_tail.png" cols="4" rows="4"/>
+    <texture id="rope" source="items/base/consumables/feet/con_feet_127_carriage_rope.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/feet/con_feet_127_carriage_horse_blink.png" cols="2" rows="1"/>
+    <texture id="shadow_carriage" source="items/base/consumables/feet/con_feet_108_ufo_shadow.png" cols="1" rows="1"/>
+    <texture id="shadow_horse" source="items/base/consumables/feet/con_feet_30_pony_shadow.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" y="0.35">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="0" col="2" y="49"/>
+          <view angle="45" col="1" x="-7" y="48"/>
+          <view angle="90" x="1" y="50"/>
+          <view angle="135" col="1" x="6" y="48" hm="true"/>
+          <view angle="180" col="2" y="49" hm="true"/>
+          <view angle="225" col="3" x="4" y="47" hm="true"/>
+          <view angle="270" col="4" x="1" y="50"/>
+          <view angle="315" col="3" x="-3" y="47"/>
+        </layer>
+        <layer id="wheels_idle" texture="Wheels_Idle">
+          <view angle="0" col="1" x="-22" y="68"/>
+          <view angle="45" x="-15" y="68"/>
+          <view angle="90" col="3" x="1" y="70"/>
+          <view angle="135" x="14" y="68" hm="true"/>
+          <view angle="180" col="1" x="22" y="68" hm="true"/>
+          <view angle="225" col="2" x="22" y="68" hm="true"/>
+          <view angle="270" col="4" x="-2" y="70"/>
+          <view angle="315" col="2" x="-21" y="68"/>
+        </layer>
+        <layer id="legs" texture="legs">
+          <view angle="0" col="2" x="5" y="20"/>
+          <view angle="45" x="6" y="24"/>
+          <view angle="90" col="1" y="25"/>
+          <view angle="135" x="-7" y="24" hm="true"/>
+          <view angle="180" col="2" x="-5" y="20" hm="true"/>
+          <view angle="225" col="3" y="24" hm="true"/>
+          <view angle="270" col="4" y="25"/>
+          <view angle="315" col="3" y="24"/>
+        </layer>
+        <layer id="wheels_01" texture="wheels_01">
+          <view angle="0" col="1" x="-22" y="68"/>
+          <view angle="45" x="-15" y="68"/>
+          <view angle="90" col="3" x="1" y="70"/>
+          <view angle="135" x="14" y="68" hm="true"/>
+          <view angle="180" col="1" x="22" y="68" hm="true"/>
+          <view angle="225" col="2" x="22" y="68" hm="true"/>
+          <view angle="270" col="4" x="-2" y="70"/>
+          <view angle="315" col="2" x="-21" y="68"/>
+        </layer>
+        <layer id="wheels_02" texture="wheels_02">
+          <view angle="0" col="1" x="-22" y="68"/>
+          <view angle="45" x="-15" y="68"/>
+          <view angle="90" col="3" x="1" y="70"/>
+          <view angle="135" x="14" y="68" hm="true"/>
+          <view angle="180" col="1" x="22" y="68" hm="true"/>
+          <view angle="225" col="2" x="22" y="68" hm="true"/>
+          <view angle="270" col="4" x="-2" y="70"/>
+          <view angle="315" col="2" x="-21" y="68"/>
+        </layer>
+        <layer id="reigns" texture="reigns">
+          <view angle="0" col="2" x="87" y="27"/>
+          <view angle="45" x="64" y="62"/>
+          <view angle="90" col="1" x="2" y="77"/>
+          <view angle="135" x="-65" y="62" hm="true"/>
+          <view angle="180" col="2" x="-87" y="27" hm="true"/>
+          <view angle="225" col="3" x="-61" y="-2" hm="true"/>
+          <view angle="270" col="4" x="1" y="-24"/>
+          <view angle="315" col="3" x="62" y="-2"/>
+        </layer>
+        <layer id="horse_body_top" texture="horse_body">
+          <view angle="0" col="2" x="114" y="37"/>
+          <view angle="45" x="78" y="77"/>
+          <view angle="90" col="1" x="-1" y="96"/>
+          <view angle="135" x="-79" y="77" hm="true"/>
+          <view angle="180" col="2" x="-114" y="37" hm="true"/>
+          <view angle="225" col="3" x="-69" y="-7" alpha="0"/>
+          <view angle="270" col="4" x="-2" y="-19" alpha="0"/>
+          <view angle="315" col="3" x="70" y="-7" alpha="0" hm="true"/>
+        </layer>
+        <layer id="horse_body_bottom" texture="horse_body">
+          <view angle="0" col="2" x="114" y="37" alpha="0"/>
+          <view angle="45" x="78" y="77" alpha="0"/>
+          <view angle="90" col="1" x="-1" y="96" alpha="0"/>
+          <view angle="135" x="-79" y="77" alpha="0" hm="true"/>
+          <view angle="180" col="2" x="-114" y="37" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="-69" y="-7"/>
+          <view angle="270" col="4" x="-2" y="-19"/>
+          <view angle="315" col="3" x="70" y="-7" hm="true"/>
+        </layer>
+        <layer id="horse_feet_idle" texture="horse_feet">
+          <view angle="0" col="2" x="94" y="55"/>
+          <view angle="45" x="67" y="95"/>
+          <view angle="90" col="1" x="-2" y="117"/>
+          <view angle="135" x="-67" y="95" hm="true"/>
+          <view angle="180" col="2" x="-94" y="55" hm="true"/>
+          <view angle="225" col="3" x="-60" y="27"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" x="60" y="27" hm="true"/>
+        </layer>
+        <layer id="horse_feet_walk1" texture="horse_feet">
+          <view angle="0" col="2" row="1" x="94" y="55"/>
+          <view angle="45" row="1" x="67" y="95"/>
+          <view angle="90" col="1" row="1" x="-2" y="117"/>
+          <view angle="135" row="1" x="-67" y="95" hm="true"/>
+          <view angle="180" col="2" row="1" x="-94" y="55" hm="true"/>
+          <view angle="225" col="3" row="1" x="-60" y="27"/>
+          <view angle="270" col="4" row="1" alpha="0"/>
+          <view angle="315" col="3" row="1" x="60" y="27" hm="true"/>
+        </layer>
+        <layer id="horse_feet_walk2" texture="horse_feet">
+          <view angle="0" col="2" row="2" x="94" y="55"/>
+          <view angle="45" row="2" x="67" y="95"/>
+          <view angle="90" col="1" row="2" x="-2" y="117"/>
+          <view angle="135" row="2" x="-67" y="95" hm="true"/>
+          <view angle="180" col="2" row="2" x="-94" y="55" hm="true"/>
+          <view angle="225" col="3" row="2" x="-60" y="27"/>
+          <view angle="270" col="4" row="2" alpha="0"/>
+          <view angle="315" col="3" row="2" x="60" y="27" hm="true"/>
+        </layer>
+        <layer id="horse_feet_walk3" texture="horse_feet">
+          <view angle="0" col="2" row="3" x="94" y="55"/>
+          <view angle="45" row="3" x="67" y="95"/>
+          <view angle="90" col="1" row="3" x="-2" y="117"/>
+          <view angle="135" row="3" x="-67" y="95" hm="true"/>
+          <view angle="180" col="2" row="3" x="-94" y="55" hm="true"/>
+          <view angle="225" col="3" row="3" x="-60" y="27"/>
+          <view angle="270" col="4" row="3" alpha="0"/>
+          <view angle="315" col="3" row="3" x="60" y="27" hm="true"/>
+        </layer>
+        <layer id="horse_feet_walk4" texture="horse_feet">
+          <view angle="0" col="2" row="4" x="94" y="55"/>
+          <view angle="45" row="4" x="67" y="95"/>
+          <view angle="90" col="1" row="4" x="-2" y="117"/>
+          <view angle="135" row="4" x="-67" y="95" hm="true"/>
+          <view angle="180" col="2" row="4" x="-94" y="55" hm="true"/>
+          <view angle="225" col="3" row="4" x="-60" y="27"/>
+          <view angle="270" col="4" row="4" alpha="0"/>
+          <view angle="315" col="3" row="4" x="60" y="27" hm="true"/>
+        </layer>
+        <layer id="tail_top01" texture="tail">
+          <view angle="0" col="1" x="47" y="29" alpha="0"/>
+          <view angle="45" x="26" y="53"/>
+          <view angle="90" col="3" y="63"/>
+          <view angle="135" x="-26" y="53" hm="true"/>
+          <view angle="180" col="1" x="-47" y="29" alpha="0" hm="true"/>
+          <view angle="225" col="2" x="-22" y="18" alpha="0"/>
+          <view angle="270" col="3" y="13" alpha="0"/>
+          <view angle="315" col="2" x="22" y="18" alpha="0" hm="true"/>
+        </layer>
+        <layer id="tail_bot01" texture="tail">
+          <view angle="0" col="1" x="47" y="29"/>
+          <view angle="45" x="26" y="53" alpha="0"/>
+          <view angle="90" col="3" y="63" alpha="0"/>
+          <view angle="135" x="-26" y="53" alpha="0" hm="true"/>
+          <view angle="180" col="1" x="-47" y="29" hm="true"/>
+          <view angle="225" col="2" x="-22" y="18"/>
+          <view angle="270" col="3" y="13"/>
+          <view angle="315" col="2" x="22" y="18" hm="true"/>
+        </layer>
+        <layer id="tail_top02" texture="tail">
+          <view angle="0" col="1" row="1" x="47" y="29" alpha="0"/>
+          <view angle="45" row="1" x="26" y="53"/>
+          <view angle="90" col="3" row="1" y="63"/>
+          <view angle="135" row="1" x="-26" y="53" hm="true"/>
+          <view angle="180" col="1" row="1" x="-47" y="29" alpha="0" hm="true"/>
+          <view angle="225" col="2" row="1" x="-22" y="18" alpha="0"/>
+          <view angle="270" col="3" row="1" y="13" alpha="0"/>
+          <view angle="315" col="2" row="1" x="22" y="18" alpha="0" hm="true"/>
+        </layer>
+        <layer id="tail_bot02" texture="tail">
+          <view angle="0" col="1" row="1" x="47" y="29"/>
+          <view angle="45" row="1" x="26" y="53" alpha="0"/>
+          <view angle="90" col="3" row="1" y="63" alpha="0"/>
+          <view angle="135" row="1" x="-26" y="53" alpha="0" hm="true"/>
+          <view angle="180" col="1" row="1" x="-47" y="29" hm="true"/>
+          <view angle="225" col="2" row="1" x="-22" y="18"/>
+          <view angle="270" col="3" row="1" y="13"/>
+          <view angle="315" col="2" row="1" x="22" y="18" hm="true"/>
+        </layer>
+        <layer id="tail_top03" texture="tail">
+          <view angle="0" col="1" row="2" x="47" y="29" alpha="0"/>
+          <view angle="45" row="2" x="26" y="53"/>
+          <view angle="90" col="3" row="2" y="63"/>
+          <view angle="135" row="2" x="-26" y="53" hm="true"/>
+          <view angle="180" col="1" row="2" x="-47" y="29" alpha="0" hm="true"/>
+          <view angle="225" col="2" row="2" x="-22" y="18" alpha="0"/>
+          <view angle="270" col="3" row="2" y="13" alpha="0"/>
+          <view angle="315" col="2" row="2" x="22" y="18" alpha="0" hm="true"/>
+        </layer>
+        <layer id="tail_bot03" texture="tail">
+          <view angle="0" col="1" row="2" x="47" y="29"/>
+          <view angle="45" row="2" x="26" y="53" alpha="0"/>
+          <view angle="90" col="3" row="2" y="63" alpha="0"/>
+          <view angle="135" row="2" x="-26" y="53" alpha="0" hm="true"/>
+          <view angle="180" col="1" row="2" x="-47" y="29" hm="true"/>
+          <view angle="225" col="2" row="2" x="-22" y="18"/>
+          <view angle="270" col="3" row="2" y="13"/>
+          <view angle="315" col="2" row="2" x="22" y="18" hm="true"/>
+        </layer>
+        <layer id="tail_top04" texture="tail">
+          <view angle="0" col="1" row="3" x="47" y="29" alpha="0"/>
+          <view angle="45" row="3" x="26" y="53"/>
+          <view angle="90" col="3" row="3" y="63"/>
+          <view angle="135" row="3" x="-26" y="53" hm="true"/>
+          <view angle="180" col="1" row="3" x="-47" y="29" alpha="0" hm="true"/>
+          <view angle="225" col="2" row="3" x="-22" y="18" alpha="0"/>
+          <view angle="270" col="3" row="3" y="13" alpha="0"/>
+          <view angle="315" col="2" row="3" x="22" y="18" alpha="0" hm="true"/>
+        </layer>
+        <layer id="tail_bot04" texture="tail">
+          <view angle="0" col="1" row="3" x="47" y="29"/>
+          <view angle="45" row="3" x="26" y="53" alpha="0"/>
+          <view angle="90" col="3" row="3" y="63" alpha="0"/>
+          <view angle="135" row="3" x="-26" y="53" alpha="0" hm="true"/>
+          <view angle="180" col="1" row="3" x="-47" y="29" hm="true"/>
+          <view angle="225" col="2" row="3" x="-22" y="18"/>
+          <view angle="270" col="3" row="3" y="13"/>
+          <view angle="315" col="2" row="3" x="22" y="18" hm="true"/>
+        </layer>
+        <layer id="rope" texture="rope">
+          <view angle="0" col="2" x="92" y="19"/>
+          <view angle="45" x="60" y="54"/>
+          <view angle="90" col="1" x="2" y="66"/>
+          <view angle="135" x="-60" y="54" hm="true"/>
+          <view angle="180" col="2" x="-92" y="19" hm="true"/>
+          <view angle="225" col="3" x="-58" y="-20" hm="true"/>
+          <view angle="270" col="4" y="-37"/>
+          <view angle="315" col="3" x="58" y="-20"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="1" x="161" y="-44" hm="true"/>
+          <view angle="45" x="114" y="12"/>
+          <view angle="90" col="1" x="9" y="36" hm="true"/>
+          <view angle="135" x="-116" y="12" hm="true"/>
+          <view angle="180" col="1" x="-162" y="-44"/>
+          <view angle="225" col="1" x="-115" y="-102"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="1" x="115" y="-102" hm="true"/>
+        </layer>
+        <layer id="blink_front" texture="blink">
+          <view angle="0" col="1" x="161" y="-44" alpha="0" hm="true"/>
+          <view angle="45" x="114" y="12" alpha="0"/>
+          <view angle="90" col="1" x="-7" y="36"/>
+          <view angle="135" x="-116" y="12" alpha="0" hm="true"/>
+          <view angle="180" col="1" x="-162" y="-44" alpha="0"/>
+          <view angle="225" col="1" x="-115" y="-102" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="1" x="115" y="-102" alpha="0" hm="true"/>
+        </layer>
+        <layer id="shadow_carriage" texture="shadow_carriage">
+          <view angle="0" y="95" hm="true"/>
+          <view angle="45" x="5" y="90"/>
+          <view angle="90" x="7" y="90"/>
+          <view angle="135" x="-5" y="90" hm="true"/>
+          <view angle="180" y="95"/>
+          <view angle="225" x="10" y="90"/>
+          <view angle="270" x="5" y="90"/>
+          <view angle="315" x="-10" y="90" hm="true"/>
+        </layer>
+        <layer id="shadow_horse" texture="shadow_horse">
+          <view angle="0" col="2" x="90" y="60" hm="true"/>
+          <view angle="45" x="65" y="95"/>
+          <view angle="90" col="1" y="110"/>
+          <view angle="135" x="-65" y="95" hm="true"/>
+          <view angle="180" col="2" x="-90" y="60"/>
+          <view angle="225" x="-65" y="25"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" x="65" y="25" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle01">
+          <layerref id="shadow_horse" a="0.4"/>
+          <layerref id="shadow_carriage"/>
+          <layerref id="horse_feet_idle"/>
+          <layerref id="horse_body_bottom"/>
+          <layerref id="tail_bot01"/>
+          <layerref id="base"/>
+          <layerref id="wheels_idle"/>
+          <layerref id="legs"/>
+          <layerref id="tail_top01"/>
+          <layerref id="horse_body_top"/>
+          <layerref id="reigns"/>
+          <layerref id="rope"/>
+        </frame>
+        <frame id="idle02">
+          <layerref id="shadow_horse" a="0.4"/>
+          <layerref id="shadow_carriage"/>
+          <layerref id="horse_feet_idle"/>
+          <layerref id="horse_body_bottom"/>
+          <layerref id="tail_bot02"/>
+          <layerref id="base"/>
+          <layerref id="wheels_idle"/>
+          <layerref id="legs"/>
+          <layerref id="tail_top02"/>
+          <layerref id="horse_body_top"/>
+          <layerref id="reigns"/>
+          <layerref id="rope"/>
+        </frame>
+        <frame id="idle03">
+          <layerref id="shadow_horse" a="0.4"/>
+          <layerref id="shadow_carriage"/>
+          <layerref id="horse_feet_idle"/>
+          <layerref id="horse_body_bottom"/>
+          <layerref id="tail_bot03"/>
+          <layerref id="base"/>
+          <layerref id="wheels_idle"/>
+          <layerref id="legs"/>
+          <layerref id="tail_top03"/>
+          <layerref id="horse_body_top"/>
+          <layerref id="reigns"/>
+          <layerref id="rope"/>
+        </frame>
+        <frame id="idle04">
+          <layerref id="shadow_horse" a="0.4"/>
+          <layerref id="shadow_carriage"/>
+          <layerref id="horse_feet_idle"/>
+          <layerref id="horse_body_bottom"/>
+          <layerref id="tail_bot04"/>
+          <layerref id="base"/>
+          <layerref id="wheels_idle"/>
+          <layerref id="legs"/>
+          <layerref id="tail_top04"/>
+          <layerref id="horse_body_top"/>
+          <layerref id="reigns"/>
+          <layerref id="rope"/>
+        </frame>
+        <frame id="idle05_blink">
+          <layerref id="shadow_horse" a="0.4"/>
+          <layerref id="shadow_carriage"/>
+          <layerref id="horse_feet_idle"/>
+          <layerref id="horse_body_bottom"/>
+          <layerref id="tail_bot03"/>
+          <layerref id="base"/>
+          <layerref id="wheels_idle"/>
+          <layerref id="legs"/>
+          <layerref id="tail_top03"/>
+          <layerref id="horse_body_top"/>
+          <layerref id="reigns"/>
+          <layerref id="rope"/>
+          <layerref id="blink"/>
+          <layerref id="blink_front"/>
+        </frame>
+        <frame id="Sit"/>
+        <frame id="walk01">
+          <layerref id="shadow_horse" a="0.4"/>
+          <layerref id="shadow_carriage"/>
+          <layerref id="horse_feet_walk1"/>
+          <layerref id="horse_body_bottom"/>
+          <layerref id="tail_bot01"/>
+          <layerref id="base"/>
+          <layerref id="wheels_01"/>
+          <layerref id="legs"/>
+          <layerref id="tail_top01"/>
+          <layerref id="horse_body_top"/>
+          <layerref id="reigns"/>
+          <layerref id="rope"/>
+        </frame>
+        <frame id="walk02">
+          <layerref id="shadow_horse" a="0.4"/>
+          <layerref id="shadow_carriage"/>
+          <layerref id="horse_feet_walk2"/>
+          <layerref id="horse_body_bottom"/>
+          <layerref id="tail_bot02"/>
+          <layerref id="base"/>
+          <layerref id="wheels_02"/>
+          <layerref id="legs"/>
+          <layerref id="tail_top02"/>
+          <layerref id="horse_body_top"/>
+          <layerref id="reigns"/>
+          <layerref id="rope"/>
+        </frame>
+        <frame id="walk03">
+          <layerref id="shadow_horse" a="0.4"/>
+          <layerref id="shadow_carriage"/>
+          <layerref id="horse_feet_walk3"/>
+          <layerref id="horse_body_bottom"/>
+          <layerref id="tail_bot03"/>
+          <layerref id="base"/>
+          <layerref id="wheels_01"/>
+          <layerref id="legs"/>
+          <layerref id="tail_top03"/>
+          <layerref id="horse_body_top"/>
+          <layerref id="reigns"/>
+          <layerref id="rope"/>
+        </frame>
+        <frame id="walk04">
+          <layerref id="shadow_horse" a="0.4"/>
+          <layerref id="shadow_carriage"/>
+          <layerref id="horse_feet_walk4"/>
+          <layerref id="horse_body_bottom"/>
+          <layerref id="tail_bot04"/>
+          <layerref id="base"/>
+          <layerref id="wheels_02"/>
+          <layerref id="legs"/>
+          <layerref id="tail_top04"/>
+          <layerref id="horse_body_top"/>
+          <layerref id="reigns"/>
+          <layerref id="rope"/>
+        </frame>
+        <frame id="walk05_blink">
+          <layerref id="shadow_carriage"/>
+          <layerref id="shadow_horse" a="0.4"/>
+          <layerref id="horse_feet_walk4"/>
+          <layerref id="horse_body_bottom"/>
+          <layerref id="tail_bot04"/>
+          <layerref id="base"/>
+          <layerref id="wheels_02"/>
+          <layerref id="legs"/>
+          <layerref id="tail_top04"/>
+          <layerref id="horse_body_top"/>
+          <layerref id="reigns"/>
+          <layerref id="rope"/>
+          <layerref id="blink"/>
+          <layerref id="blink_front"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="idle01"/>
+          <frameref id="idle02"/>
+          <frameref id="idle03"/>
+          <frameref id="idle04"/>
+          <frameref id="idle01"/>
+          <frameref id="idle02"/>
+          <frameref id="idle03"/>
+          <frameref id="idle04"/>
+          <frameref id="idle01"/>
+          <frameref id="idle02"/>
+          <frameref id="idle03"/>
+          <frameref id="idle04"/>
+          <frameref id="idle05_blink"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Walk" framerate="7">
+          <frameref id="walk01"/>
+          <frameref id="walk02"/>
+          <frameref id="walk03"/>
+          <frameref id="walk04"/>
+          <frameref id="walk01"/>
+          <frameref id="walk02"/>
+          <frameref id="walk03"/>
+          <frameref id="walk04"/>
+          <frameref id="walk01"/>
+          <frameref id="walk02"/>
+          <frameref id="walk03"/>
+          <frameref id="walk04"/>
+          <frameref id="walk01"/>
+          <frameref id="walk02"/>
+          <frameref id="walk03"/>
+          <frameref id="walk05_blink"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

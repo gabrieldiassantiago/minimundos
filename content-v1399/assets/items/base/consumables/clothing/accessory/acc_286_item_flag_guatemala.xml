@@ -1,0 +1,40 @@
+<item.SpriteItem id="4771" name="Bandeira da Guatemala" desc="Uma bandeira de mão da Guatemala" tags="consumable,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_286_icon_flag_guatemala.png" minLevel="1" minLevelType="4" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="25" tokens="250">
+  <volume>
+    <box min="-0.13,0,-0.13" max="0.13,0.8,0.13"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Pole" source="items/base/consumables/clothing/accessory/acc_112_item_flag_Pole.png" cols="1" rows="1"/>
+    <texture id="Flag" source="items/base/consumables/clothing/accessory/acc_286_item_flag_guatemala.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.13,0,-0.13" max="0.13,0.8,0.13"/>
+      <layers>
+        <layer id="Flag" texture="Flag">
+          <view angle="45" x="12" y="-13"/>
+          <view angle="135" x="-12" y="-13" hm="true"/>
+          <view angle="225" col="1" x="-11" y="-14"/>
+          <view angle="315" col="1" x="11" y="-14" hm="true"/>
+        </layer>
+        <layer id="Pole" texture="Pole">
+          <view angle="45" x="-2" y="11"/>
+          <view angle="135" x="2" y="11" hm="true"/>
+          <view angle="225" x="-2" y="11"/>
+          <view angle="315" x="2" y="11"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

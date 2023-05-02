@@ -1,0 +1,142 @@
+<item.SpriteItem id="0" name="Dance Halo" desc="A dance halo" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="glow" source="items/base/consumables/magic/halo_85_crazydance.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="beat" source="items/base/consumables/magic/sndfx_irish.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Behind">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="GlowA" texture="glow">
+          <view y="56"/>
+        </layer>
+        <layer id="GlowB" texture="glow">
+          <view x="-50" y="30"/>
+        </layer>
+        <layer id="GlowC" texture="glow">
+          <view x="-26" y="-3"/>
+        </layer>
+        <layer id="GlowD" texture="glow">
+          <view x="26" y="-3"/>
+        </layer>
+        <layer id="GlowE" texture="glow">
+          <view x="50" y="30"/>
+        </layer>
+        <layer id="GlowF" texture="glow">
+          <view y="56"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="GlowA" y="15" color="0xffffc4"/>
+          <layerref id="GlowB" x="-15" color="0x92ffe4"/>
+          <layerref id="GlowC" x="-5" y="-15" color="0xffafc3"/>
+          <layerref id="GlowD" x="5" y="-15" color="0xffe8c5"/>
+          <layerref id="GlowE" x="15" color="0xd8e5ff"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="GlowA" x="-8" color="0xd8e5ff"/>
+          <layerref id="GlowB" x="-8" color="0xffffc4"/>
+          <layerref id="GlowC" x="-8" color="0x92ffe4"/>
+          <layerref id="GlowD" x="-8" color="0xffafc3"/>
+          <layerref id="GlowE" x="-8" color="0xffe8c5"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="GlowA" x="-2" y="-5" color="0xffe8c5"/>
+          <layerref id="GlowB" x="-2" y="-5" color="0xd8e5ff"/>
+          <layerref id="GlowC" x="-2" y="-5" color="0xffffc4"/>
+          <layerref id="GlowD" x="-2" y="-5" color="0x92ffe4"/>
+          <layerref id="GlowE" x="-2" y="-5" color="0xffafc3"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="GlowA" x="2" y="-5" color="0xffafc3"/>
+          <layerref id="GlowB" x="2" y="-5" color="0xffe8c5"/>
+          <layerref id="GlowC" x="2" y="-5" color="0xd8e5ff"/>
+          <layerref id="GlowD" x="2" y="-5" color="0xffffc4"/>
+          <layerref id="GlowE" x="2" y="-5" color="0x92ffe4"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="GlowA" x="8" color="0x92ffe4"/>
+          <layerref id="GlowB" x="8" color="0xffafc3"/>
+          <layerref id="GlowC" x="8" color="0xffe8c5"/>
+          <layerref id="GlowD" x="8" color="0xd8e5ff"/>
+          <layerref id="GlowE" x="8" color="0xffffc4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4" syncOffsets="0">
+          <frameref id="Frame01">
+            <sample id="beat" vol="0.8" loops="-1"/>
+          </frameref>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+        <animation id="In">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Out">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="2.3" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="GlowA" texture="glow">
+          <view y="56"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="GlowA" color="0xe6e163" blend="add"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="GlowA" x="-8" color="0x6699ff" blend="add"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="GlowA" x="-2" y="-5" color="0xff9900" blend="add"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="GlowA" x="2" y="-5" color="0xff3366" blend="add"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="GlowA" x="8" color="0xcc99" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="1" syncOffsets="0">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+        <animation id="In">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Out">
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

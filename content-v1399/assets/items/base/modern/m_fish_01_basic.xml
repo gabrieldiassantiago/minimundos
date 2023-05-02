@@ -1,0 +1,84 @@
+<item.SpriteItem id="2739" name="Aquário" desc="Item de recompensa." tags="unsearchable,misc,destroy" icon="items/base/modern/icon_m_fish_01_basic.png" tokens="888" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="Bowl" source="items/base/modern/m_fish_01_bowl.png" cols="2" rows="1"/>
+    <texture id="Fish" source="items/base/modern/m_fish_01_fish.png" cols="4" rows="1"/>
+    <texture id="Shadow" source="items/base/modern/m_fish_01_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Bowl">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="bowl" texture="Bowl">
+          <view angle="45" y="11"/>
+          <view angle="135" x="1" y="11" hm="true"/>
+          <view angle="225" col="1" y="11"/>
+          <view angle="315" col="1" y="11" hm="true"/>
+        </layer>
+        <layer id="Fish_01" texture="Fish">
+          <view angle="45" x="-4" y="5" alpha="0.75"/>
+          <view angle="135" x="4" y="5" alpha="0.75" hm="true"/>
+          <view angle="225" x="-4" y="5" alpha="0.75"/>
+          <view angle="315" x="4" y="5" alpha="0.75" hm="true"/>
+        </layer>
+        <layer id="Fish_02" texture="Fish">
+          <view angle="45" col="1" x="-4" y="5" alpha="0.75"/>
+          <view angle="135" col="1" x="4" y="5" alpha="0.75" hm="true"/>
+          <view angle="225" col="1" x="-4" y="5" alpha="0.75"/>
+          <view angle="315" col="1" x="-4" y="5" alpha="0.75" hm="true"/>
+        </layer>
+        <layer id="Fish_03" texture="Fish">
+          <view angle="45" col="2" x="-4" y="5" alpha="0.75"/>
+          <view angle="135" col="2" x="4" y="5" alpha="0.75" hm="true"/>
+          <view angle="225" col="2" x="-4" y="5" alpha="0.75"/>
+          <view angle="315" col="2" x="4" y="5" alpha="0.75" hm="true"/>
+        </layer>
+        <layer id="Fish_04" texture="Fish">
+          <view angle="45" col="3" x="-4" y="8" alpha="0.75"/>
+          <view angle="135" col="3" x="4" y="8" alpha="0.75" hm="true"/>
+          <view angle="225" col="3" x="-4" y="8" alpha="0.75"/>
+          <view angle="315" col="3" x="4" alpha="0.75" hm="true"/>
+        </layer>
+        <layer id="Shadow" texture="Shadow">
+          <view x="1" y="19"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Fish 01">
+          <layerref id="Shadow"/>
+          <layerref id="bowl"/>
+          <layerref id="Fish_01"/>
+        </frame>
+        <frame id="Fish 02">
+          <layerref id="Shadow"/>
+          <layerref id="bowl"/>
+          <layerref id="Fish_02"/>
+        </frame>
+        <frame id="Fish 03">
+          <layerref id="Shadow"/>
+          <layerref id="bowl"/>
+          <layerref id="Fish_03"/>
+        </frame>
+        <frame id="Fish 04">
+          <layerref id="Shadow"/>
+          <layerref id="bowl"/>
+          <layerref id="Fish_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="1">
+          <frameref id="Fish 01"/>
+          <frameref id="Fish 02"/>
+          <frameref id="Fish 03"/>
+          <frameref id="Fish 04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

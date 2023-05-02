@@ -1,0 +1,48 @@
+<item.SpriteItem id="6539" name="Painel QG do Herói Deluxe" desc="Um super sistema de segurança" tags="rare,misc,floor" icon="items/base/modern/icon_m_monitors.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.5,0,-0.5" max="0.5,2.1,1.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="monitors" source="items/base/modern/m_monitors.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="monitors">
+      <box min="-0.5,0,-0.5" max="0.5,2.1,1.5"/>
+      <layers>
+        <layer id="monitors" texture="monitors">
+          <view angle="45" x="38" y="45"/>
+          <view angle="135" x="24" y="79" hm="true"/>
+          <view angle="225" col="1" x="-40" y="67" hm="true"/>
+          <view angle="315" col="1" x="-32" y="33"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="10" y="-20"/>
+          <view angle="135" x="4" y="-15"/>
+          <view angle="225" x="-7" y="-18"/>
+          <view angle="315" x="-7" y="-24"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x86c4ef"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

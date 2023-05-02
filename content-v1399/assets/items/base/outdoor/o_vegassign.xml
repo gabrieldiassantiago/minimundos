@@ -1,0 +1,241 @@
+<item.WidgetItem id="2033" name="Placa Eletrônica Brilhante" desc="Mensagem personalizada pelo dono." tags="widget" icon="items/base/outdoor/icon_o_vegassign.png" price="370" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_ticker.swf">
+  <volume>
+    <box min="-0.35,0,-1.49" max="0.35,3.3,1.49"/>
+  </volume>
+  <events>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="Show" trigger="false" event="widget_action(SHOW)"/>
+    <action id="Hide" trigger="false" event="widget_action(HIDE)"/>
+    <action id="Set Text" trigger="false" event="widget_action(SETMESSAGE)">
+      <params>
+        <param type="string" id="Text" label="Set signboard text "/>
+      </params>
+    </action>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="vegas" value="outside"/>
+    <entry key="widget_load_policy" value="view"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="renderWidth" value="500"/>
+    <entry key="renderHeight" value="50"/>
+  </data>
+  <navigate position="infront" sitRange="4.00" standRange="3.00" targetRange="1.00" usableRange="-1.00" accessibleRange="2.00"/>
+  <textures>
+    <texture id="frame" source="items/base/outdoor/o_vegassign_stand.png" cols="1" rows="1"/>
+    <texture id="background" source="items/base/outdoor/o_vegassign_backing.png" cols="1" rows="1"/>
+    <texture id="shadow" source="items/base/outdoor/o_vegassign_shadow.png" cols="1" rows="1"/>
+    <texture id="Sign" source="items/base/outdoor/o_vegassign_sign.png" cols="1" rows="1"/>
+    <texture id="TopSign" source="items/base/outdoor/o_vegassign_lights.png" cols="1" rows="1"/>
+    <texture id="TopSignLit" source="items/base/outdoor/o_vegassign_lights_on.png" cols="1" rows="1"/>
+    <texture id="surroundinglights" source="items/base/outdoor/o_vegassign_lightbllom.png" cols="1" rows="1"/>
+    <texture id="lightfx" source="items/base/outdoor/o_vegassign_lightfx.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Billboard">
+      <box min="-0.35,0,-1.49" max="0.35,3.3,1.49"/>
+      <layers>
+        <layer id="stand" texture="frame" align="middle">
+          <view angle="45" x="-37" y="-106"/>
+          <view angle="135" x="-41" y="-145" hm="true"/>
+          <view angle="225" x="-37" y="-106" alpha="0"/>
+          <view angle="315" x="-41" y="-145" alpha="0" hm="true"/>
+        </layer>
+        <layer id="sign" texture="Sign" align="middle">
+          <view angle="45" x="7" y="-173"/>
+          <view angle="135" x="-4" y="-178" hm="true"/>
+          <view angle="225" x="7" y="-173" alpha="0"/>
+          <view angle="315" x="-4" y="-178" alpha="0" hm="true"/>
+        </layer>
+        <layer id="backing" texture="background" align="middle">
+          <view angle="45" x="12" y="-170"/>
+          <view angle="135" x="-8" y="-175" hm="true"/>
+          <view angle="225" x="12" y="-170" alpha="0"/>
+          <view angle="315" x="-8" y="-175" alpha="0" hm="true"/>
+        </layer>
+        <layer id="WidgetLayer" type="panel" texture="Texture" w="3.1" h="0.35" y="-136">
+          <view angle="45" x="12" y="-34"/>
+          <view angle="135" col="1" x="-7" y="-39"/>
+          <view angle="225" col="2" x="12" y="-54" alpha="0"/>
+          <view angle="315" col="3" x="-7" y="-39" alpha="0"/>
+        </layer>
+        <layer id="topsign" texture="TopSign" align="middle">
+          <view angle="45" x="11" y="-177"/>
+          <view angle="135" x="-7" y="-182" hm="true"/>
+          <view angle="225" x="11" y="-177" alpha="0"/>
+          <view angle="315" x="-7" y="-182" alpha="0" hm="true"/>
+        </layer>
+        <layer id="topsignlit" texture="TopSignLit" align="middle">
+          <view angle="45" x="18" y="-195"/>
+          <view angle="135" x="-15" y="-200" hm="true"/>
+          <view angle="225" x="18" y="-195" alpha="0"/>
+          <view angle="315" x="-15" y="-200" alpha="0" hm="true"/>
+        </layer>
+        <layer id="litlights" texture="surroundinglights">
+          <view angle="45" x="7" y="-89"/>
+          <view angle="135" x="-2" y="-94" hm="true"/>
+          <view angle="225" x="7" y="-89" alpha="0"/>
+          <view angle="315" x="-2" y="-94" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="stand"/>
+          <layerref id="sign"/>
+          <layerref id="backing"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="topsign"/>
+        </frame>
+        <frame id="On">
+          <layerref id="stand"/>
+          <layerref id="sign"/>
+          <layerref id="backing"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="topsign"/>
+          <layerref id="topsignlit"/>
+          <layerref id="litlights"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.125" y="1.8" s="5.25" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="lightfx" align="middle">
+          <view angle="45" x="-1" y="-7"/>
+          <view angle="135" x="2" y="-8" hm="true"/>
+          <view angle="225" x="3" y="-6"/>
+          <view angle="315" x="-1" y="-7" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Billboard01">
+      <box min="-0.35,0,-1.49" max="0.35,3.3,1.49"/>
+      <layers>
+        <layer id="stand" texture="frame" align="middle">
+          <view angle="45" x="38" y="-145"/>
+          <view angle="135" x="40" y="-108" hm="true"/>
+          <view angle="225" x="-36" y="-106" alpha="0"/>
+          <view angle="315" x="-41" y="-145" alpha="0" hm="true"/>
+        </layer>
+        <layer id="sign" texture="Sign" align="middle">
+          <view angle="45" x="7" y="-173"/>
+          <view angle="135" x="-4" y="-178" hm="true"/>
+          <view angle="225" x="7" y="-173" alpha="0"/>
+          <view angle="315" x="-4" y="-178" alpha="0" hm="true"/>
+        </layer>
+        <layer id="backing" texture="background" align="middle">
+          <view angle="45" x="12" y="-170"/>
+          <view angle="135" x="-8" y="-175" hm="true"/>
+          <view angle="225" x="12" y="-170" alpha="0"/>
+          <view angle="315" x="-8" y="-175" alpha="0" hm="true"/>
+        </layer>
+        <layer id="WidgetLayer" type="panel" texture="Texture" w="3.1" h="0.35" y="-136">
+          <view angle="45" x="12" y="-34"/>
+          <view angle="135" col="1" x="-7" y="-39"/>
+          <view angle="225" col="2" x="12" y="-54" alpha="0"/>
+          <view angle="315" col="3" x="-7" y="-39" alpha="0"/>
+        </layer>
+        <layer id="topsign" texture="TopSign" align="middle">
+          <view angle="45" x="11" y="-177"/>
+          <view angle="135" x="-7" y="-182" hm="true"/>
+          <view angle="225" x="11" y="-177" alpha="0"/>
+          <view angle="315" x="-7" y="-182" alpha="0" hm="true"/>
+        </layer>
+        <layer id="topsignlit" texture="TopSignLit" align="middle">
+          <view angle="45" x="18" y="-195"/>
+          <view angle="135" x="-15" y="-200" hm="true"/>
+          <view angle="225" x="18" y="-195" alpha="0"/>
+          <view angle="315" x="-15" y="-200" alpha="0" hm="true"/>
+        </layer>
+        <layer id="litlights" texture="surroundinglights">
+          <view angle="45" x="7" y="-89"/>
+          <view angle="135" x="-2" y="-94" hm="true"/>
+          <view angle="225" x="7" y="-89" alpha="0"/>
+          <view angle="315" x="-2" y="-94" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="stand"/>
+          <layerref id="sign"/>
+          <layerref id="backing"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="topsign"/>
+        </frame>
+        <frame id="On">
+          <layerref id="stand"/>
+          <layerref id="sign"/>
+          <layerref id="backing"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="topsign"/>
+          <layerref id="topsignlit"/>
+          <layerref id="litlights"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Shadow" depthBias="0.1">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Shadow" texture="shadow" y="65">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Shadow">
+          <layerref id="Shadow" a="0.3"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="On">
+      <frame id="Frame">
+        <noderef id="Billboard"/>
+        <noderef id="Billboard01" a="180"/>
+        <noderef id="Diffuse"/>
+        <noderef id="Shadow" frame="Shadow"/>
+      </frame>
+    </animation>
+    <animation id="Off">
+      <frame id="Frame">
+        <noderef id="Billboard"/>
+        <noderef id="Billboard01" a="180"/>
+        <noderef id="Shadow" frame="Shadow"/>
+      </frame>
+    </animation>
+  </animations>
+</item.WidgetItem>

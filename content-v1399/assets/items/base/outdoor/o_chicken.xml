@@ -1,0 +1,27 @@
+<item.SpriteItem id="1984" name="Galinha Fazendeira" desc="Uma galinha de fazenda" icon="items/base/outdoor/icon_o_chicken.png" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" tags="outdoor" price="70">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.6,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture01" source="items/base/outdoor/o_chicken.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,0.6,0.2"/>
+      <layers>
+        <layer id="Layer" texture="Texture01">
+          <view angle="45" y="18"/>
+          <view angle="135" y="18" hm="true"/>
+          <view angle="225" col="1" y="13"/>
+          <view angle="315" col="1" y="13" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

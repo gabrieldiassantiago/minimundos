@@ -1,0 +1,15 @@
+<f id="Bot02_104BoltShoes" parentId="Bot02">
+  <g id="Bolt_Base" name="Bolt_Base" icon="$bm/icon_shoe_standard.png">
+    <s id="Bot02_104Idle" cId="LegIdle" s="items/base/consumables/clothing/bot02/bot02_104_idle.png" pri="2"/>
+    <s id="Bot02_104Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot02/bot02_104_walk1.png" pri="2"/>
+    <s id="Bot02_104Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot02/bot02_104_walk2.png" pri="2"/>
+    <s id="Bot02_104Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot02/bot02_104_walk3.png" pri="2"/>
+    <s id="Bot02_104Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot02/bot02_104_walk4.png" pri="2"/>
+    <s id="Bot02_104SitBase" cId="LegSitLower" s="items/base/consumables/clothing/bot02/bot02_104_sit.png" pri="2"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot02_104" icon="items/base/consumables/clothing/bot02/bot02_104_bolt_icon.png" w="48" h="48"/>
+    <s id="IconBot02_104Base" cId="IconBot02_104" s="items/base/consumables/clothing/bot02/bot02_104_bolt_icon.png"/>
+  </g>
+  <ds id="JSFeet"/>
+</f>

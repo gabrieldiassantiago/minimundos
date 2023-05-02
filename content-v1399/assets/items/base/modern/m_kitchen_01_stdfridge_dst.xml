@@ -1,0 +1,66 @@
+<item.SpriteItem id="2747" name="Frigobar" desc="Para fazer gelo." tags="unsearchable,table,destroy" icon="items/base/modern/icon_m_kitchen_01_stdfridge_dst.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" tokens="650" minLevelType="2">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,1.2,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="base" source="items/base/modern/m_kitchen_01_stdsmall_box.png" cols="1" rows="1"/>
+    <texture id="door" source="items/base/modern/m_kitchen_01_stdsmall_door.png" cols="2" rows="1"/>
+    <texture id="acc" source="items/base/modern/m_kitchen_01_stdsmall_acc.png" cols="5" rows="1"/>
+    <texture id="backend" source="items/base/modern/m_kitchen_01_stdsmall_backend.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.49" max="0.4,1.2,0.49"/>
+      <layers>
+        <layer id="base" texture="base">
+          <view angle="45" x="1" y="41" hm="true"/>
+          <view angle="135" y="41"/>
+          <view angle="225" x="3" y="43" hm="true"/>
+          <view angle="315" x="-3" y="42"/>
+        </layer>
+        <layer id="door" texture="door">
+          <view angle="45" x="25" y="31" hm="true"/>
+          <view angle="135" x="-25" y="31"/>
+          <view angle="225" col="1" x="-23" y="7" hm="true"/>
+          <view angle="315" col="1" x="23" y="6"/>
+        </layer>
+        <layer id="hinge" texture="acc">
+          <view angle="45" x="44" y="-83"/>
+          <view angle="135" x="3" y="-60" hm="true"/>
+          <view angle="225" col="1" x="-41" y="-80"/>
+          <view angle="315" col="1" x="-6" y="-103" hm="true"/>
+        </layer>
+        <layer id="writing" texture="acc">
+          <view angle="45" col="4" x="40" y="-62" hm="true"/>
+          <view angle="135" col="4" x="-17" y="-52"/>
+          <view angle="225" col="4" x="-46" y="-84" alpha="0"/>
+          <view angle="315" col="4" x="-1" y="-107" alpha="0" hm="true"/>
+        </layer>
+        <layer id="handle" texture="acc">
+          <view angle="45" col="3" x="18" y="-25"/>
+          <view angle="135" col="2" x="-44" y="-35"/>
+          <view angle="225" col="4" x="-46" y="-84" alpha="0"/>
+          <view angle="315" col="4" x="-1" y="-107" alpha="0" hm="true"/>
+        </layer>
+        <layer id="backend01" texture="backend">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" col="1" x="28" y="39"/>
+          <view angle="315" col="1" x="-28" y="39" hm="true"/>
+        </layer>
+        <layer id="backend" texture="backend">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" x="27" y="-5"/>
+          <view angle="315" x="-28" y="-5" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

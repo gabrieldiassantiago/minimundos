@@ -1,0 +1,143 @@
+<item.SpriteItem id="0" name="Dragon Staff" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_917_candlestaff_hand.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="candle" source="items/base/shared/s_candle_flame.png" cols="2" rows="2"/>
+    <texture id="snow" source="items/base/consumables/clothing/accessory/acc_917_candlestaff_light.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="wand" texture="Texture">
+          <view angle="0" col="2" y="91" hm="true"/>
+          <view angle="45" x="2" y="88"/>
+          <view angle="90" col="1" y="88"/>
+          <view angle="135" x="-4" y="88" hm="true"/>
+          <view angle="180" col="2" x="-2" y="89"/>
+          <view angle="225" col="3" x="-4" y="91"/>
+          <view angle="270" col="4" y="86"/>
+          <view angle="315" col="3" x="3" y="92" hm="true"/>
+        </layer>
+        <layer id="candle01" texture="candle">
+          <view angle="0" x="11" y="-49" hm="true"/>
+          <view angle="45" x="11" y="-47" hm="true"/>
+          <view angle="90" x="2" y="-40"/>
+          <view angle="135" x="-11" y="-47"/>
+          <view angle="180" x="-11" y="-52"/>
+          <view angle="225" x="-10" y="-56"/>
+          <view angle="270" x="2" y="-65"/>
+          <view angle="315" x="13" y="-56"/>
+        </layer>
+        <layer id="candle02" texture="candle">
+          <view angle="0" col="1" x="11" y="-49" hm="true"/>
+          <view angle="45" col="1" x="11" y="-47" hm="true"/>
+          <view angle="90" col="1" x="2" y="-40"/>
+          <view angle="135" col="1" x="-11" y="-47"/>
+          <view angle="180" col="1" x="-11" y="-52"/>
+          <view angle="225" col="1" x="-10" y="-56"/>
+          <view angle="270" col="1" x="2" y="-65"/>
+          <view angle="315" col="1" x="13" y="-56"/>
+        </layer>
+        <layer id="candle03" texture="candle">
+          <view angle="0" row="1" x="11" y="-49" hm="true"/>
+          <view angle="45" row="1" x="11" y="-47" hm="true"/>
+          <view angle="90" row="1" x="2" y="-40"/>
+          <view angle="135" row="1" x="-11" y="-47"/>
+          <view angle="180" row="1" x="-11" y="-52"/>
+          <view angle="225" row="1" x="-10" y="-56"/>
+          <view angle="270" row="1" x="2" y="-65"/>
+          <view angle="315" row="1" x="13" y="-56"/>
+        </layer>
+        <layer id="candle04" texture="candle">
+          <view angle="0" col="1" row="1" x="11" y="-49" hm="true"/>
+          <view angle="45" col="1" row="1" x="11" y="-47" hm="true"/>
+          <view angle="90" col="1" row="1" x="2" y="-40"/>
+          <view angle="135" col="1" row="1" x="-11" y="-47"/>
+          <view angle="180" col="1" row="1" x="-11" y="-52"/>
+          <view angle="225" col="1" row="1" x="-10" y="-56"/>
+          <view angle="270" col="1" row="1" x="2" y="-65"/>
+          <view angle="315" col="1" row="1" x="13" y="-56"/>
+        </layer>
+        <layer id="snow" texture="snow">
+          <view angle="0" x="12" y="58" hm="true"/>
+          <view angle="45" x="11" y="60"/>
+          <view angle="90" x="2" y="62"/>
+          <view angle="135" x="-12" y="60"/>
+          <view angle="180" x="-13" y="58"/>
+          <view angle="225" x="-11" y="49"/>
+          <view angle="270" y="37"/>
+          <view angle="315" x="11" y="49"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="wand"/>
+          <layerref id="candle01"/>
+          <layerref id="snow" color="0xfbf7e6" a="0.5" blend="multiply"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="wand"/>
+          <layerref id="candle02"/>
+          <layerref id="snow" color="0xfbf7e6" a="0.5" blend="multiply"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="wand"/>
+          <layerref id="candle03"/>
+          <layerref id="snow" color="0xfbf7e6" a="0.5" blend="multiply"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="wand"/>
+          <layerref id="candle04"/>
+          <layerref id="snow" color="0xfbf7e6" a="0.5" blend="multiply"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="2" y="-4" hm="true"/>
+          <view angle="45" x="2" y="-2"/>
+          <view angle="90" y="-1"/>
+          <view angle="135" x="1" y="-2" hm="true"/>
+          <view angle="180" y="-2"/>
+          <view angle="225" y="-4"/>
+          <view angle="270" y="-6"/>
+          <view angle="315" x="1" y="-4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf9f8db"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

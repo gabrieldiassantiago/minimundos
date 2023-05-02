@@ -1,0 +1,78 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="Cloud" source="items/base/consumables/clothing/suits/suit_62_fallen_floor.png" cols="5" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Diffuse" x="-0.245" y="-0.0312" s="7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers/>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="sit" texture="base">
+          <view angle="45" x="4" y="26" alpha="0" hm="true"/>
+          <view angle="135" x="-5" y="33" alpha="0"/>
+          <view angle="225" x="-5" y="23" alpha="0" hm="true"/>
+          <view angle="315" x="15" y="19" alpha="0"/>
+        </layer>
+        <layer id="Idle" texture="Cloud">
+          <view angle="0" col="2" y="33"/>
+          <view angle="45" y="33"/>
+          <view angle="90" col="1" x="1" y="33"/>
+          <view angle="135" y="33" hm="true"/>
+          <view angle="180" col="2" y="33" hm="true"/>
+          <view angle="225" col="3" y="33"/>
+          <view angle="270" col="4" x="3" y="33"/>
+          <view angle="315" col="3" y="33" hm="true"/>
+        </layer>
+        <layer id="Idle01" texture="Cloud">
+          <view angle="0" col="2" row="1" y="33"/>
+          <view angle="45" row="1" y="33"/>
+          <view angle="90" col="1" row="1" x="1" y="33"/>
+          <view angle="135" row="1" y="33" hm="true"/>
+          <view angle="180" col="2" row="1" y="33" hm="true"/>
+          <view angle="225" col="3" row="1" y="33"/>
+          <view angle="270" col="4" row="1" x="3" y="33"/>
+          <view angle="315" col="3" row="1" y="33" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="Idle"/>
+        </frame>
+        <frame id="Idle01">
+          <layerref id="Idle01" y="1" a="0.75"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="Idle01" y="1" a="0.5"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="3">
+          <frameref id="Idle" duration="5"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+        </animation>
+        <animation id="Walk" framerate="3">
+          <frameref id="Idle" duration="5"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+        </animation>
+        <animation id="Sit" framerate="8" loop="false">
+          <frameref id="sit" duration="10"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

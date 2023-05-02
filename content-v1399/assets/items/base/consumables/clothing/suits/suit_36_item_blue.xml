@@ -1,0 +1,132 @@
+<item.SpriteItem id="3572" name="Vestido Princesa Sonhadora Elegance" desc="Um vestido de fada azul para uma verdadeira princesa." tags="consumable,clothing,actionbar,wear,suits,action_wearable_toggle,slave_catalog_colorize,unsearchable" icon="items/base/consumables/clothing/suits/suit_36_icon_blue.png" price="3850" minLevel="1" minCPLevel="1" premium="Y" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,1.65,0.24"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_36_frag_bluedress.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="gender" value="female"/>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/princessdresses.xml"/>
+  </data>
+  <textures>
+    <texture id="clothes" source="items/base/consumables/clothing/suits/suit_36_item_blue.png" cols="2" rows="1"/>
+    <texture id="birds" source="items/base/consumables/clothing/suits/suit_36_item_sparkles.png" cols="3" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,1.65,0.24"/>
+      <layers>
+        <layer id="dress" texture="clothes">
+          <view angle="45" x="1" y="23"/>
+          <view angle="135" x="-1" y="23" hm="true"/>
+          <view angle="225" col="1" x="2" y="18"/>
+          <view angle="315" col="1" y="19" hm="true"/>
+        </layer>
+        <layer id="dress01" texture="clothes">
+          <view angle="45" x="1" y="22"/>
+          <view angle="135" x="-1" y="22" hm="true"/>
+          <view angle="225" col="1" x="2" y="17"/>
+          <view angle="315" col="1" y="18" hm="true"/>
+        </layer>
+        <layer id="dress02" texture="clothes">
+          <view angle="45" x="1" y="21"/>
+          <view angle="135" x="-1" y="21" hm="true"/>
+          <view angle="225" col="1" x="2" y="16"/>
+          <view angle="315" col="1" y="17" hm="true"/>
+        </layer>
+        <layer id="bird 1a" texture="birds">
+          <view angle="45" x="20" y="-98"/>
+          <view angle="135" x="-21" y="-96" hm="true"/>
+          <view angle="225" x="5" y="-109"/>
+          <view angle="315" x="-6" y="-108" hm="true"/>
+        </layer>
+        <layer id="bird02a" texture="birds">
+          <view angle="45" col="1" x="19" y="-98"/>
+          <view angle="135" col="1" x="-20" y="-96" hm="true"/>
+          <view angle="225" col="1" x="5" y="-109"/>
+          <view angle="315" col="1" x="-3" y="-108" hm="true"/>
+        </layer>
+        <layer id="bird03a" texture="birds">
+          <view angle="45" col="2" x="18" y="-97"/>
+          <view angle="135" col="2" x="-19" y="-97" hm="true"/>
+          <view angle="225" col="2" y="-111"/>
+          <view angle="315" col="2" y="-109" hm="true"/>
+        </layer>
+        <layer id="bird 1b" texture="birds">
+          <view angle="45" row="1" x="-4" y="-87"/>
+          <view angle="135" row="1" x="3" y="-86" hm="true"/>
+          <view angle="225" row="1" x="-18" y="-101"/>
+          <view angle="315" row="1" x="18" y="-97" hm="true"/>
+        </layer>
+        <layer id="bird02b" texture="birds">
+          <view angle="45" col="1" row="1" x="-4" y="-87"/>
+          <view angle="135" col="1" row="1" x="4" y="-87" hm="true"/>
+          <view angle="225" col="1" row="1" x="-19" y="-101"/>
+          <view angle="315" col="1" row="1" x="18" y="-98" hm="true"/>
+        </layer>
+        <layer id="bird03b" texture="birds">
+          <view angle="45" col="2" row="1" x="-6" y="-88"/>
+          <view angle="135" col="2" row="1" x="5" y="-88" hm="true"/>
+          <view angle="225" col="2" row="1" x="-21" y="-103"/>
+          <view angle="315" col="2" row="1" x="22" y="-98" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame 1">
+          <layerref id="dress"/>
+          <layerref id="bird 1a"/>
+          <layerref id="bird 1b"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="dress"/>
+          <layerref id="bird02a"/>
+          <layerref id="bird02b"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="dress01"/>
+          <layerref id="bird03a"/>
+          <layerref id="bird03b"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="dress01"/>
+          <layerref id="bird 1a"/>
+          <layerref id="bird 1b"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="dress02"/>
+          <layerref id="bird02a"/>
+          <layerref id="bird02b"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="dress02"/>
+          <layerref id="bird03a"/>
+          <layerref id="bird03b"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="Frame 1"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

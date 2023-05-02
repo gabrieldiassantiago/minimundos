@@ -1,0 +1,94 @@
+<item.SpriteItem id="3822" name="Camiseta Blocos Coast" desc="Uma camiseta de duas cores." tags="consumable,clothing,actionbar,wear,top01,action_wearable_toggle" icon="items/base/consumables/clothing/top01/top01_52_icon_twotoned_a.png" price="210" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,0.05,0.35"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable_cycle.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top01/top01_52_frag_twotoned.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="yellow" source="items/base/consumables/clothing/top01/top01_52_item_twotoned.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,0.05,0.35"/>
+      <layers>
+        <layer id="00" texture="yellow">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+        <layer id="01" texture="blue">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+        <layer id="02" texture="green">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+        <layer id="03" texture="pink">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+        <layer id="04" texture="purple">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="00"/>
+        </frame>
+        <frame id="01">
+          <layerref id="01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="03"/>
+        </frame>
+        <frame id="04">
+          <layerref id="04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="2">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01" framerate="2">
+          <frameref id="01"/>
+        </animation>
+        <animation id="02" framerate="2">
+          <frameref id="02"/>
+        </animation>
+        <animation id="03" framerate="2">
+          <frameref id="03"/>
+        </animation>
+        <animation id="04" framerate="2">
+          <frameref id="04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

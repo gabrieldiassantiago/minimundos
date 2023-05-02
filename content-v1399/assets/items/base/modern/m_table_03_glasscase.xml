@@ -1,0 +1,27 @@
+<item.SpriteItem id="1889" name="Vitrine" tags="admin,table" icon="items/base/modern/icon_m_table_03_glasscase.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" desc="Para exibir objetos importantes.">
+  <volume>
+    <box min="-0.45,0,-0.39" max="0.45,0.86,1.39"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_table_03_glasscase.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" z="0.5">
+      <box min="-0.45,0,-0.89" max="0.45,0.86,0.89"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" y="56"/>
+          <view angle="135" y="56" hm="true"/>
+          <view angle="225" y="56"/>
+          <view angle="315" y="56" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

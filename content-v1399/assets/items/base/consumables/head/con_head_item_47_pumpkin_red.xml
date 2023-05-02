@@ -1,0 +1,188 @@
+<item.SpriteItem id="7161" name="Cabeça de Abóbora Vermelha" desc="Um item temporário do Halloween 2017" tags="rare,consumable,craftable_craftoween,actionbar,wear,head,costume,action_wearable_toggle,craftable4" icon="items/base/consumables/head/icon_con_head_item_47_pumpkin_red.png" price="1" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.6,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="ingredient_1" value="7215"/>
+    <entry key="ingredient_2" value="1212"/>
+    <entry key="ingredient_quantity_1" value="1"/>
+    <entry key="ingredient_quantity_2" value="1"/>
+    <entry key="product_quantity" value="1"/>
+    <entry key="xp_level_required" value="0"/>
+    <entry key="xp_rewarded" value="500"/>
+  </data>
+  <textures>
+    <texture id="head" source="items/base/consumables/head/con_head_47_pumpkin_red.png" cols="5" rows="2"/>
+    <texture id="shad" source="items/base/consumables/head/con_head_generic_dropshadow.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="eat" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,0.6,0.25"/>
+      <layers>
+        <layer id="glow" texture="head" y="23">
+          <view angle="45" col="4" row="1"/>
+          <view angle="135" col="4" row="1"/>
+          <view angle="225" col="4" row="1" x="2" y="-1"/>
+          <view angle="315" col="4" row="1" x="-2" y="-1"/>
+        </layer>
+        <layer id="head" texture="head" y="23">
+          <view angle="45" col="2"/>
+          <view angle="135" col="2" hm="true"/>
+          <view angle="225" col="3"/>
+          <view angle="315" col="3" hm="true"/>
+        </layer>
+        <layer id="eyes" texture="head" y="23">
+          <view angle="45" col="2" row="1"/>
+          <view angle="135" col="2" row="1" hm="true"/>
+          <view angle="225" col="3" row="1"/>
+          <view angle="315" col="3" row="1" hm="true"/>
+        </layer>
+        <layer id="eyes overlay" texture="head" y="23">
+          <view angle="45" col="2" row="1"/>
+          <view angle="135" col="2" row="1" hm="true"/>
+          <view angle="225" col="3" row="1"/>
+          <view angle="315" col="3" row="1" hm="true"/>
+        </layer>
+        <layer id="shad" texture="shad" y="21">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="pumpkin 01">
+          <layerref id="shad"/>
+          <layerref id="head"/>
+          <layerref id="eyes" blend="screen"/>
+          <layerref id="eyes overlay" a="0.55" blend="add"/>
+        </frame>
+        <frame id="pumpkin 02">
+          <layerref id="shad" a="0.95"/>
+          <layerref id="head"/>
+          <layerref id="eyes" blend="screen"/>
+          <layerref id="eyes overlay" a="0.6" blend="add"/>
+        </frame>
+        <frame id="pumpkin 03">
+          <layerref id="shad" a="0.9"/>
+          <layerref id="head"/>
+          <layerref id="eyes" blend="screen"/>
+          <layerref id="eyes overlay" a="0.65" blend="add"/>
+        </frame>
+        <frame id="pumpkin 04">
+          <layerref id="shad" a="0.85"/>
+          <layerref id="head"/>
+          <layerref id="eyes" blend="screen"/>
+          <layerref id="eyes overlay" a="0.75" blend="add"/>
+        </frame>
+        <frame id="pumpkin 05">
+          <layerref id="shad" a="0.8"/>
+          <layerref id="head"/>
+          <layerref id="eyes" blend="screen"/>
+          <layerref id="eyes overlay" blend="add"/>
+        </frame>
+        <frame id="pumpkin off">
+          <layerref id="shad"/>
+          <layerref id="head"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="3" syncOffsets="0,1">
+          <frameref id="pumpkin 01"/>
+          <frameref id="pumpkin 02"/>
+          <frameref id="pumpkin 03"/>
+          <frameref id="pumpkin 04"/>
+          <frameref id="pumpkin 05"/>
+          <frameref id="pumpkin 04"/>
+          <frameref id="pumpkin 03"/>
+          <frameref id="pumpkin 02"/>
+        </animation>
+        <animation id="Off" framerate="1" loop="false">
+          <frameref id="pumpkin off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.15" s="1.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-1">
+          <view angle="45" x="2"/>
+          <view angle="135" x="2"/>
+          <view angle="225" x="2" alpha="0.7"/>
+          <view angle="315" x="2" alpha="0.7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xf47f7f"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xf47f7f" a="0.95"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xf47f7f" a="0.85"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Light" color="0xf47f7f" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="3" syncOffsets="0,1">
+          <frameref id="Frame04" duration="2"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.15" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" y="-1">
+          <view angle="45" x="2" alpha="0.4"/>
+          <view angle="135" x="2" alpha="0.4"/>
+          <view angle="225" x="2" alpha="0.3"/>
+          <view angle="315" x="2" alpha="0.3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xf47f7f"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xf47f7f" a="0.95"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xf47f7f" a="0.85"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Light" color="0xf47f7f" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="3" syncOffsets="0,1">
+          <frameref id="Frame04" duration="2"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

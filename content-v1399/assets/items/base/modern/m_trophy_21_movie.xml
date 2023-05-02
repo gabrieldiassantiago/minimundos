@@ -1,0 +1,46 @@
+<item.SpriteItem id="6911" name="Troféu Trailer MiniMundos" desc="Um prêmio para os merecedores!" tags="rare,wear,usable,action_holdable_toggle,actionbar,hand,misc" icon="items/base/modern/icon_m_trophy_21_movie.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.9,0.2"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="trophy" source="items/base/modern/m_trophy_21_movie_base.png" cols="3" rows="1"/>
+    <texture id="decal" source="items/base/modern/m_trophy_21_movie_decal.png" cols="7" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="trophy">
+      <box min="-0.2,0,-0.2" max="0.2,0.9,0.2"/>
+      <layers>
+        <layer id="trophy" texture="trophy">
+          <view angle="45" y="7"/>
+          <view angle="135" y="7" hm="true"/>
+          <view angle="225" y="7"/>
+          <view angle="315" y="7" hm="true"/>
+        </layer>
+        <layer id="decal" texture="decal">
+          <view angle="45" x="5" y="-27"/>
+          <view angle="135" col="3" x="-4" y="-28"/>
+          <view angle="225" col="6" x="5" y="-31"/>
+          <view angle="315" col="5" x="-1" y="-28"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="trophy"/>
+          <layerref id="decal"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

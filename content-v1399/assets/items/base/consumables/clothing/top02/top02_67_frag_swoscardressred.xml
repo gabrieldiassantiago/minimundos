@@ -1,0 +1,48 @@
+<f id="Top02_67SWOscardressRed" parentId="Top02">
+  <g id="DressSWOscardressRed" icon="$bu/icon_skinny_trouser.png">
+    <s id="Top02_67Torso" cId="Torso" s="items/base/consumables/clothing/top02/top02_67_torso.png" pri="2"/>
+    <s id="Top02_67IdleBase" cId="LegIdle" s="items/base/consumables/clothing/top02/top02_67_idle.png" pri="4.1"/>
+    <s id="Top02_67Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/top02/top02_67_walk1.png" pri="4.1"/>
+    <s id="Top02_67Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/top02/top02_67_walk2.png" pri="4.1"/>
+    <s id="Top02_67Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/top02/top02_67_walk3.png" pri="4.1"/>
+    <s id="Top02_67Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/top02/top02_67_walk4.png" pri="4.1"/>
+    <s id="Top02_67SitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_67_sit.png" pri="4.1"/>
+    <c sId="Top02_67IdleBase" c="11600384" a="1.00" b="60.5" ct="0.77" lId="Top02_Color1" lw="N"/>
+    <c sId="Top02_67Walk1Base" c="11600384" a="1.00" b="60.5" ct="0.77" lId="Top02_Color1" lw="N"/>
+    <c sId="Top02_67Walk2Base" c="11600384" a="1.00" b="60.5" ct="0.77" lId="Top02_Color1" lw="N"/>
+    <c sId="Top02_67Walk3Base" c="11600384" a="1.00" b="60.5" ct="0.77" lId="Top02_Color1" lw="N"/>
+    <c sId="Top02_67Walk4Base" c="11600384" a="1.00" b="60.5" ct="0.77" lId="Top02_Color1" lw="N"/>
+    <c sId="Top02_67SitUpperBase" c="11600384" a="1.00" b="60.5" ct="0.77" lId="Top02_Color1" lw="N"/>
+    <c sId="Top02_67SitLowerBase" c="11600384" a="1.00" b="60.5" ct="0.77" lId="Top02_Color1" lw="N"/>
+    <c sId="Top02_67Torso" c="11600384" a="1.00" b="60.5" ct="0.77" lId="Top02_Color1" lw="N"/>
+    <s id="Top02_65Skin" cId="Torso" s="items/base/consumables/clothing/top02/top02_skin_66.png" pri="0.5"/>
+    <c sId="Top02_65Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop02_67" icon="items/base/consumables/clothing/top02/top02_67_icon_swoscardressred_a.png" w="48" h="48"/>
+    <s id="IconTop02_67Base" cId="IconTop02_67" s="items/base/consumables/clothing/top02/top02_67_icon_swoscardressred_1.png"/>
+    <c sId="IconTop02_67Base" c="11600384" a="1.00" b="60.5" ct="0.77" lId="Top02_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top02_67Color1" name="Color" desc="Choose a color" sel="Red" seld="Pink">
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="0.80" b="43.1" ct="2.00" lId="Top02_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.90" b="32.1" ct="1.33" lId="Top02_Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="0.78" b="52.7" ct="1.44" lId="Top02_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="11600384" a="1.00" b="60.5" ct="0.77" lId="Top02_Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="53.9" ct="0.87" lId="Top02_Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.97" b="25.6" ct="0.72" lId="Top02_Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="14.4" ct="0.84" lId="Top02_Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Top02_Color1"/>
+      <c id="BlueDark" icon="$bu/icon_medblue.png" c="2843342" a="0.59" b="20.7" ct="1.60" lId="Top02_Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9515132" a="0.80" b="43.1" ct="1.33" lId="Top02_Color1"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="12091409" a="0.82" b="40.1" ct="1.60" lId="Top02_Color1"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="7290377" a="0.72" b="45.0" ct="2.00" lId="Top02_Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top02_67Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+</f>

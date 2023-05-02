@@ -1,0 +1,82 @@
+<item.SpriteItem id="0" name="Magnet" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Laptop" source="items/base/consumables/clothing/accessory/acc_211_hand_magnet.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Effect" source="items/base/consumables/magic/effect_generic_wandmagic.png" cols="1" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Star" texture="Laptop">
+          <view angle="0" x="15" y="22"/>
+          <view angle="45" col="1" x="13" y="29"/>
+          <view angle="90" col="2" x="6" y="34"/>
+          <view angle="135" col="1" x="-13" y="35" hm="true"/>
+          <view angle="180" x="-15" y="22" hm="true"/>
+          <view angle="225" col="3" x="-10" y="14"/>
+          <view angle="270" col="4" x="-8" y="18" hm="true"/>
+          <view angle="315" col="3" x="10" y="14" hm="true"/>
+        </layer>
+        <layer id="Effect01" texture="Effect">
+          <view angle="0" x="38" y="52" alpha="0.4" hm="true"/>
+          <view angle="45" x="29" y="65" alpha="0.4"/>
+          <view angle="90" x="5" y="69" alpha="0.4"/>
+          <view angle="135" x="-29" y="70" alpha="0.4" hm="true"/>
+          <view angle="180" x="-38" y="52" alpha="0.4"/>
+          <view angle="225" x="-28" y="38" alpha="0.4"/>
+          <view angle="270" x="2" y="36" alpha="0.4"/>
+          <view angle="315" x="27" y="40" alpha="0.4" hm="true"/>
+        </layer>
+        <layer id="Effect02" texture="Effect">
+          <view angle="0" row="1" x="38" y="52" alpha="0.4" hm="true"/>
+          <view angle="45" row="1" x="29" y="65" alpha="0.4"/>
+          <view angle="90" row="1" x="5" y="69" alpha="0.4"/>
+          <view angle="135" row="1" x="-29" y="70" alpha="0.4" hm="true"/>
+          <view angle="180" row="1" x="-38" y="52" alpha="0.4"/>
+          <view angle="225" row="1" x="-28" y="38" alpha="0.4"/>
+          <view angle="270" row="1" x="2" y="36" alpha="0.4"/>
+          <view angle="315" row="1" x="27" y="40" alpha="0.4" hm="true"/>
+        </layer>
+        <layer id="Effect03" texture="Effect">
+          <view angle="0" row="2" x="38" y="52" alpha="0.4" hm="true"/>
+          <view angle="45" row="2" x="29" y="65" alpha="0.4"/>
+          <view angle="90" row="2" x="5" y="69" alpha="0.4"/>
+          <view angle="135" row="2" x="-29" y="70" alpha="0.4" hm="true"/>
+          <view angle="180" row="2" x="-38" y="52" alpha="0.4"/>
+          <view angle="225" row="2" x="-28" y="38" alpha="0.4"/>
+          <view angle="270" row="2" x="2" y="36" alpha="0.4"/>
+          <view angle="315" row="2" x="27" y="40" alpha="0.4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Star"/>
+          <layerref id="Effect01" color="0xb7f3f3"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Star"/>
+          <layerref id="Effect02" color="0xb7f3f3"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Star"/>
+          <layerref id="Effect03" color="0xb7f3f3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

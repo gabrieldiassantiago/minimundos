@@ -1,0 +1,56 @@
+<item.SpriteItem id="0" name="Aura" desc="Kitty Aura" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+  </volume>
+  <textures>
+    <texture id="halo" source="items/base/consumables/auras/aur_05_star_halo.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/consumables/magic/halo_glow_lighting.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="Halo_01" texture="halo" y="30">
+          <view y="-11"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On 01">
+          <layerref id="Halo_01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4" loop="false">
+          <frameref id="On 01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xe7e269"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

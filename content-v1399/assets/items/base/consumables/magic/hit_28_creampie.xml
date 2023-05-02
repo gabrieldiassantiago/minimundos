@@ -1,0 +1,54 @@
+<item.SpriteItem desc="A cream pie hit effect." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" entity="false" name="Cream pie hit">
+  <volume>
+    <box max="0.28,0.06,-0.22" min="0.22,0,-0.28"/>
+  </volume>
+  <textures>
+    <texture cols="4" id="hit_03_snowball" rows="1" source="items/base/consumables/magic/hit_28_creampie.png"/>
+  </textures>
+  <sounds>
+    <sound id="splat" source="items/base/consumables/magic/sndfx_splat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box max="0.28,0.06,-0.22" min="0.22,0,-0.28"/>
+      <layers>
+        <layer id="Hit 01" texture="hit_03_snowball">
+          <view y="-92"/>
+        </layer>
+        <layer id="Hit 02" texture="hit_03_snowball">
+          <view col="1" y="-70"/>
+        </layer>
+        <layer id="Hit 03" texture="hit_03_snowball">
+          <view col="2" y="-48"/>
+        </layer>
+        <layer id="Hit 04" texture="hit_03_snowball">
+          <view col="3" y="-36"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Hit 01">
+          <layerref id="Hit 01"/>
+        </frame>
+        <frame id="Hit 02">
+          <layerref id="Hit 02"/>
+        </frame>
+        <frame id="Hit 03">
+          <layerref id="Hit 03"/>
+        </frame>
+        <frame id="Hit 04">
+          <layerref a="0.8" id="Hit 04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Hit" loop="false">
+          <frameref duration="2" id="Hit 01">
+            <sample id="splat"/>
+          </frameref>
+          <frameref id="Hit 02"/>
+          <frameref id="Hit 03"/>
+          <frameref id="Hit 04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

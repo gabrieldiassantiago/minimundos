@@ -1,0 +1,170 @@
+<item.ChairItem id="4355" name="Cama de Casal Marrom Master" desc="Uma cama confortável e moderna" tags="chair,misc,slave_catalog_colorize,unsearchable" icon="items/base/modern/icon_m_bedroom_13_double_brown.png" price="440" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" chairType="bed">
+  <seats>
+    <seat x="0.02" y="0.4">
+      <ap z="-1"/>
+      <ap x="1" z="-1"/>
+      <ap x="2" z="-1"/>
+      <ap x="3" z="-1"/>
+      <ap x="3"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1"/>
+    </seat>
+    <seat x="0.02" y="0.4" z="1">
+      <ap z="2"/>
+      <ap x="1" z="2"/>
+      <ap x="2" z="2"/>
+      <ap x="3" z="2"/>
+      <ap x="3" z="1"/>
+      <ap x="-1" z="2"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.48,0,-0.48" max="1.98,0.62,1.48"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="activate" script="scripts/item/activate_chair.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="deactivate" script="scripts/item/deactivate_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+    <entry key="colorOptionsURL" value="items/base/coloroptions/doublebeds.xml"/>
+  </data>
+  <textures>
+    <texture id="pillow" source="items/base/modern/m_bedroom_13_double_pillows.png" cols="1" rows="1"/>
+    <texture id="duvet" source="items/base/modern/m_bedroom_13_double_cover.png" cols="1" rows="1"/>
+    <texture id="base" source="items/base/modern/m_bedroom_13_double_base.png" cols="1" rows="1"/>
+    <texture id="headboard" source="items/base/modern/m_bedroom_13_double_headboard.png" cols="1" rows="1"/>
+    <texture id="footboard" source="items/base/modern/m_bedroom_13_double_footboard.png" cols="2" rows="1"/>
+    <texture id="duvet_pattern" source="items/base/modern/m_bedroom_13_double_pattern_flowers.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind">
+      <box min="-0.48,0,-0.48" max="1.98,0.62,1.48"/>
+      <layers>
+        <layer id="headboard" texture="headboard">
+          <view angle="45" x="3" y="4"/>
+          <view angle="135" x="59" y="35" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="base" texture="base" y="14">
+          <view angle="45" x="19" y="65"/>
+          <view angle="135" x="44" y="97" hm="true"/>
+          <view angle="225" x="-140" y="51"/>
+          <view angle="315" x="77" y="18" hm="true"/>
+        </layer>
+        <layer id="pillow" texture="pillow">
+          <view angle="45" x="27" y="-19"/>
+          <view angle="135" x="35" y="12" hm="true"/>
+          <view angle="225" x="-20" y="27"/>
+          <view angle="315" x="-44" y="-5" hm="true"/>
+        </layer>
+        <layer id="pillow_o" texture="pillow">
+          <view angle="45" x="27" y="-19"/>
+          <view angle="135" x="35" y="12" hm="true"/>
+          <view angle="225" x="-20" y="27"/>
+          <view angle="315" x="-44" y="-5" hm="true"/>
+        </layer>
+        <layer id="duvet" texture="duvet" y="-24">
+          <view angle="45" x="99" y="85"/>
+          <view angle="135" x="-36" y="116" hm="true"/>
+          <view angle="225" x="-92" y="57"/>
+          <view angle="315" x="29" y="24" hm="true"/>
+        </layer>
+        <layer id="duvet_o" texture="duvet" y="-24">
+          <view angle="45" x="99" y="85"/>
+          <view angle="135" x="-36" y="116" hm="true"/>
+          <view angle="225" x="-92" y="57"/>
+          <view angle="315" x="29" y="24" hm="true"/>
+        </layer>
+        <layer id="duvet_pattern" texture="duvet_pattern" y="-45">
+          <view angle="45" x="99" y="85"/>
+          <view angle="135" x="-36" y="116" hm="true"/>
+          <view angle="225" x="-92" y="57"/>
+          <view angle="315" x="29" y="24" hm="true"/>
+        </layer>
+        <layer id="footboard" texture="footboard">
+          <view angle="45" x="161" y="84"/>
+          <view angle="135" x="-98" y="116" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="footboard_behind" texture="footboard">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" col="1" x="-157" y="-8"/>
+          <view angle="315" col="1" x="94" y="-41" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="footboard_behind"/>
+          <layerref id="headboard"/>
+          <layerref id="base"/>
+          <layerref id="duvet" color="0xdcd7c6"/>
+          <layerref id="duvet_o" color="0x331a19" a="0.95" blend="overlay"/>
+          <layerref id="duvet_pattern" a="0.6" blend="overlay"/>
+          <layerref id="pillow" color="0xdcd8c6"/>
+          <layerref id="pillow_o" color="0x331a19" a="0.99" blend="overlay"/>
+          <layerref id="footboard"/>
+        </frame>
+        <frame id="On">
+          <layerref id="footboard_behind"/>
+          <layerref id="headboard"/>
+          <layerref id="base"/>
+          <layerref id="pillow" color="0xdcd8c6"/>
+          <layerref id="pillow_o" color="0x331a19" a="0.99" blend="overlay"/>
+          <layerref id="duvet" color="0xdcd7c6"/>
+          <layerref id="duvet_o" color="0x331a19" a="0.95" blend="overlay"/>
+          <layerref id="duvet_pattern" a="0.6" blend="overlay"/>
+          <layerref id="footboard"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="-0.48,0,-0.48" max="1.98,0.62,0.48"/>
+      <layers>
+        <layer id="headboard" texture="headboard">
+          <view angle="45" alpha="0"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" x="-3" y="66"/>
+          <view angle="315" x="-62" y="33" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="headboard"/>
+        </frame>
+        <frame id="On">
+          <layerref id="headboard"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

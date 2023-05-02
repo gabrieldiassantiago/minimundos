@@ -1,0 +1,77 @@
+<item.SpriteItem id="0" name="Persian Cat" desc="Collectible (April 2013)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="cat" source="items/base/consumables/head/con_head_231_scarysanta_head.png" cols="5" rows="1"/>
+    <texture id="blink" source="items/base/consumables/head/con_head_231_scarysanta_blink.png" cols="3" rows="1"/>
+    <texture id="hat" source="items/base/consumables/head/con_head_231_scarysanta_hat.png" cols="4" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="cat" texture="cat">
+          <view angle="0" col="2" x="2" y="22" hm="true"/>
+          <view angle="45" x="-2" y="27"/>
+          <view angle="90" col="1" y="28"/>
+          <view angle="135" x="1" y="27" hm="true"/>
+          <view angle="180" col="2" x="-3" y="22"/>
+          <view angle="225" col="3" x="1" y="19"/>
+          <view angle="270" col="4" y="23"/>
+          <view angle="315" col="3" x="-2" y="19" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="15" y="-7" hm="true"/>
+          <view angle="45" x="7" y="-4"/>
+          <view angle="90" col="1" y="-4"/>
+          <view angle="135" x="-8" y="-4" hm="true"/>
+          <view angle="180" col="2" x="-16" y="-7"/>
+          <view angle="225" col="3" x="1" y="20" alpha="0" hm="true"/>
+          <view angle="270" col="4" y="22" alpha="0"/>
+          <view angle="315" col="3" x="-2" y="20" alpha="0"/>
+        </layer>
+        <layer id="hat" texture="hat">
+          <view angle="0" col="3" row="1" x="-5" y="-1"/>
+          <view angle="45" x="-10" y="-4"/>
+          <view angle="90" col="1" x="-9" y="-11"/>
+          <view angle="135" col="2" x="1" y="-8"/>
+          <view angle="180" col="3" x="3" y="-8"/>
+          <view angle="225" row="1" x="8" y="-3"/>
+          <view angle="270" col="1" row="1" x="7" y="-1"/>
+          <view angle="315" col="2" row="1" x="-6" y="1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="cat"/>
+          <layerref id="hat"/>
+        </frame>
+        <frame id="blink">
+          <layerref id="cat"/>
+          <layerref id="hat"/>
+          <layerref id="blink"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="idle" duration="42"/>
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="32"/>
+          <frameref id="blink"/>
+          <frameref id="idle" duration="64"/>
+          <frameref id="blink"/>
+          <frameref id="idle"/>
+          <frameref id="blink"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

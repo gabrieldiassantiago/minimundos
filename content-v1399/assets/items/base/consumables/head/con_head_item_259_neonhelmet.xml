@@ -1,0 +1,64 @@
+<item.SpriteItem name="Capacete Galático Blade" desc="Um capacete espacial" tags="rare,consumable,hat,wear,actionbar,action_wearable_toggle" icon="items/base/consumables/head/icon_con_head_259_neonhelmet.png" price="100" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="6873">
+  <volume>
+    <box min="-0.32,0,-0.32" max="0.32,0.8,0.32"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="fire+15"/>
+    <entry key="action_attributes_secondary" value="speed+15,health+25"/>
+  </data>
+  <textures>
+    <texture id="head" source="items/base/consumables/head/con_head_item_259_neonhelmet.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/consumables/head/con_head_259_neonhelmet_glow.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.32,0,-0.32" max="0.32,0.8,0.32"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="45" y="22"/>
+          <view angle="135" y="22" hm="true"/>
+          <view angle="225" col="1" y="22"/>
+          <view angle="315" col="1" y="22" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-16"/>
+          <view angle="135" x="5" y="-16" hm="true"/>
+          <view angle="225" col="3" x="4" y="-16"/>
+          <view angle="315" col="3" y="-16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

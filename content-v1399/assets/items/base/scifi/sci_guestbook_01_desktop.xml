@@ -1,0 +1,274 @@
+<item.WidgetItem id="1205" name="Computador de Mesa" desc="Uma computador com tela plana e teclado branco." tags="widget" icon="items/base/scifi/icon_sci_guestbook_01_desktop.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" widget="widgets/widget_guestbook.swf" price="110" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.25,0,-0.37" max="0.25,0.95,0.37"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <data>
+    <entry key="frame" value="scifi"/>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="100"/>
+    <entry key="widget_max_load_wait" value="200"/>
+    <entry key="control_xml_path" value="widgets/assets/guestbook/control-ui.mxml"/>
+    <entry key="config_xml_path" value="widgets/assets/guestbook/config-ui.mxml"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="keyboard" source="items/base/scifi/sci_guestbook_01_keyboard.png" cols="2" rows="1"/>
+    <texture id="monitor" source="items/base/scifi/sci_guestbook_01_lcd.png" cols="2" rows="1"/>
+    <texture id="screen_b" source="items/base/scifi/sci_guestbook_01_screen_b.png" cols="4" rows="1"/>
+    <texture id="screen_c" source="items/base/scifi/sci_guestbook_01_screen_c.png" cols="1" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_desktoppc.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="kiosk">
+      <box min="-0.25,0,-0.37" max="0.25,0.95,0.37"/>
+      <layers>
+        <layer id="keyboard01" texture="keyboard">
+          <view angle="45" x="10" alpha="0"/>
+          <view angle="135" x="-10" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-9" y="15"/>
+          <view angle="315" col="1" x="9" y="15" hm="true"/>
+        </layer>
+        <layer id="monitor" texture="monitor">
+          <view angle="45" x="-3" y="17"/>
+          <view angle="135" x="3" y="17" hm="true"/>
+          <view angle="225" col="1" x="5" y="24" hm="true"/>
+          <view angle="315" col="1" x="-5" y="24"/>
+        </layer>
+        <layer id="keyboard" texture="keyboard">
+          <view angle="45" x="12" y="25"/>
+          <view angle="135" x="-12" y="25" hm="true"/>
+          <view angle="225" col="1" x="-9" alpha="0"/>
+          <view angle="315" col="1" x="9" alpha="0" hm="true"/>
+        </layer>
+        <layer id="screen_a" texture="screen_c">
+          <view angle="45" x="2" y="-43"/>
+          <view angle="135" x="22" y="-30" hm="true"/>
+          <view angle="225" col="1" x="5" y="24" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-5" y="24" alpha="0"/>
+        </layer>
+        <layer id="screen_b" texture="screen_c">
+          <view angle="45" row="1" x="-2" y="-11"/>
+          <view angle="135" row="1" x="6" y="-10" hm="true"/>
+          <view angle="225" col="1" x="5" y="24" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-5" y="24" alpha="0"/>
+        </layer>
+        <layer id="screen_c" texture="screen_b">
+          <view angle="45" x="-13" y="-18"/>
+          <view angle="135" x="-10" y="-30" hm="true"/>
+          <view angle="225" col="1" x="5" y="24" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-5" y="24" alpha="0"/>
+        </layer>
+        <layer id="screen_d" texture="screen_b">
+          <view angle="45" col="2" x="17" y="-27"/>
+          <view angle="135" col="2" x="20" y="-12" hm="true"/>
+          <view angle="225" col="1" x="5" y="24" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-5" y="24" alpha="0"/>
+        </layer>
+        <layer id="screen_e" texture="screen_b">
+          <view angle="45" col="1" x="8" y="-33"/>
+          <view angle="135" col="1" x="11" y="-25" hm="true"/>
+          <view angle="225" col="1" x="5" y="24" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-5" y="24" alpha="0"/>
+        </layer>
+        <layer id="screen_f" texture="screen_b">
+          <view angle="45" col="3" x="-19" y="-34"/>
+          <view angle="135" col="3" x="-11" y="-47" hm="true"/>
+          <view angle="225" col="1" x="5" y="24" alpha="0" hm="true"/>
+          <view angle="315" col="1" x="-5" y="24" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="base">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+        </frame>
+        <frame id="01">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_a" a="0.4"/>
+        </frame>
+        <frame id="02">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_a" a="0.8"/>
+        </frame>
+        <frame id="03">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_a" a="0.8"/>
+          <layerref id="screen_b" a="0.4"/>
+        </frame>
+        <frame id="04">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_a" a="0.8"/>
+          <layerref id="screen_b" a="0.8"/>
+        </frame>
+        <frame id="05">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_a" a="0.8"/>
+          <layerref id="screen_b" a="0.8"/>
+          <layerref id="screen_c" a="0.4"/>
+        </frame>
+        <frame id="06">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_a" a="0.8"/>
+          <layerref id="screen_b" a="0.8"/>
+          <layerref id="screen_c" a="0.8"/>
+        </frame>
+        <frame id="07">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_a" a="0.8"/>
+          <layerref id="screen_b" a="0.8"/>
+          <layerref id="screen_c" a="0.8"/>
+          <layerref id="screen_d" a="0.4"/>
+        </frame>
+        <frame id="08">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_a" a="0.8"/>
+          <layerref id="screen_b" a="0.8"/>
+          <layerref id="screen_c" a="0.8"/>
+          <layerref id="screen_d" a="0.8"/>
+        </frame>
+        <frame id="09">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_e" a="0.4"/>
+          <layerref id="screen_a" a="0.4"/>
+          <layerref id="screen_b" a="0.8"/>
+          <layerref id="screen_c" a="0.8"/>
+          <layerref id="screen_d" a="0.8"/>
+        </frame>
+        <frame id="10">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_e" a="0.8"/>
+          <layerref id="screen_b" a="0.8"/>
+          <layerref id="screen_c" a="0.8"/>
+          <layerref id="screen_d" a="0.8"/>
+        </frame>
+        <frame id="11">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_f" a="0.4"/>
+          <layerref id="screen_b" a="0.8"/>
+          <layerref id="screen_c" a="0.4"/>
+          <layerref id="screen_d" a="0.8"/>
+          <layerref id="screen_e" a="0.8"/>
+        </frame>
+        <frame id="12">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_f" a="0.8"/>
+          <layerref id="screen_b" a="0.8"/>
+          <layerref id="screen_d" a="0.8"/>
+          <layerref id="screen_e" a="0.8"/>
+        </frame>
+        <frame id="13">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_f" a="0.8"/>
+          <layerref id="screen_b" a="0.4"/>
+          <layerref id="screen_d" a="0.4"/>
+          <layerref id="screen_e" a="0.8"/>
+        </frame>
+        <frame id="14">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_f" a="0.8"/>
+          <layerref id="screen_e" a="0.8"/>
+        </frame>
+        <frame id="15">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_f" a="0.8"/>
+          <layerref id="screen_e" a="0.4"/>
+        </frame>
+        <frame id="16">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_f" a="0.8"/>
+        </frame>
+        <frame id="17">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+          <layerref id="screen_f" a="0.4"/>
+        </frame>
+        <frame id="18">
+          <layerref id="keyboard01"/>
+          <layerref id="monitor"/>
+          <layerref id="keyboard"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="8">
+          <frameref id="base" duration="6"/>
+          <frameref id="01"/>
+          <frameref id="02" duration="4"/>
+          <frameref id="03"/>
+          <frameref id="04" duration="9"/>
+          <frameref id="05"/>
+          <frameref id="06" duration="9"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="09"/>
+          <frameref id="10" duration="10"/>
+          <frameref id="11"/>
+          <frameref id="12"/>
+          <frameref id="13"/>
+          <frameref id="14"/>
+          <frameref id="15"/>
+          <frameref id="16" duration="5"/>
+          <frameref id="17"/>
+          <frameref id="18" duration="10"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.34" s="3.3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="3"/>
+          <view angle="135" x="-1" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

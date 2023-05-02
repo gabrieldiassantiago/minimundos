@@ -1,0 +1,34 @@
+<f id="Top02_79WitchDress" parentId="Top02">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Top02_79TorsoMale" cId="Torso" s="items/base/consumables/clothing/top02/top02_79_torso_m.png" pri="2"/>
+    </g>
+    <g id="Female">
+      <s id="Top02_79TorsoFemale" cId="Torso" s="items/base/consumables/clothing/top02/top02_79_torso_f.png" pri="2"/>
+    </g>
+  </b>
+  <g id="Leg" icon="$bu/icon_skinny_trouser.png">
+    <s id="Top02_79IdleBase" cId="LegIdle" s="items/base/consumables/clothing/top02/top02_79_leg_idle.png" pri="4"/>
+    <s id="Top02_79Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/top02/top02_79_leg_walk1.png" pri="4"/>
+    <s id="Top02_79Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/top02/top02_79_leg_walk2.png" pri="4"/>
+    <s id="Top02_79Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/top02/top02_79_leg_walk3.png" pri="4"/>
+    <s id="Top02_79Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/top02/top02_79_leg_walk4.png" pri="4"/>
+    <s id="Top02_79SitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_79_leg_sit.png" pri="4"/>
+  </g>
+  <g id="Arm" name="Arm" icon="$bm/icon_m_tshirt.png">
+    <s id="Top02_79ArmIdleStripe" cId="ArmIdle" s="items/base/consumables/clothing/top02/top02_79_arm_idle.png" ty="-3" pri="4.1"/>
+    <s id="Top02_79ArmWalk1Stripe" cId="ArmWalk1" s="items/base/consumables/clothing/top02/top02_79_arm_walk1.png" ty="-3" pri="4.1"/>
+    <s id="Top02_79ArmWalk2Stripe" cId="ArmWalk2" s="items/base/consumables/clothing/top02/top02_79_arm_walk2.png" ty="-3" pri="4.1"/>
+    <s id="Top02_79ArmWalk3Stripe" cId="ArmWalk3" s="items/base/consumables/clothing/top02/top02_79_arm_walk3.png" ty="-3" pri="4.1"/>
+    <s id="Top02_79ArmThrowStripe" cId="ArmThrow" s="items/base/consumables/clothing/top02/top02_79_arm_throw.png" pri="4.1"/>
+    <s id="Top02_79ArmSitStripe" cId="ArmSit" s="items/base/consumables/clothing/top02/top02_79_arm_sit.png" ty="-3" pri="4.1"/>
+    <s id="Top02_79ArmRaiseStripe" cId="ArmRaise" s="items/base/consumables/clothing/top02/top02_79_arm_raise.png" pri="4.1"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop02_79" icon="items/base/consumables/clothing/top02/top02_79_witch_icon.png" w="48" h="48"/>
+    <s id="IconTop02_79Base" cId="IconTop02_79" s="items/base/consumables/clothing/top02/top02_79_witch_icon.png"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+</f>

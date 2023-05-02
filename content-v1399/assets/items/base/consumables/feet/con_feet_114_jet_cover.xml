@@ -1,0 +1,163 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0.2,0" max="0,0.2,0"/>
+  </volume>
+  <textures>
+    <texture id="cover" source="items/base/consumables/feet/con_feet_114_jet_cover.png" cols="5" rows="1"/>
+    <texture id="glass" source="items/base/consumables/feet/con_feet_114_jet_glass.png" cols="7" rows="1"/>
+    <texture id="glow" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+    <texture id="angled" source="items/base/consumables/feet/con_feet_114_jet_angled.png" cols="2" rows="1"/>
+    <texture id="frontback" source="items/base/consumables/feet/con_feet_114_jet_frontback.png" cols="2" rows="1"/>
+    <texture id="side" source="items/base/consumables/feet/con_feet_114_jet_side.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.2">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="cover" texture="cover">
+          <view angle="0" col="1" x="9" y="19"/>
+          <view angle="45" x="-12" y="18"/>
+          <view angle="90" col="4" x="-1" y="21"/>
+          <view angle="135" x="12" y="18" hm="true"/>
+          <view angle="180" col="1" x="-10" y="19" hm="true"/>
+          <view angle="225" col="2" x="3" y="15" hm="true"/>
+          <view angle="270" col="3" x="2" y="15"/>
+          <view angle="315" col="2" x="-4" y="15"/>
+        </layer>
+        <layer id="glass" texture="glass">
+          <view angle="0" col="2" x="14" y="-34"/>
+          <view angle="45" col="1" x="8" y="-30"/>
+          <view angle="90" x="-1" y="-28"/>
+          <view angle="135" col="1" x="-8" y="-30" hm="true"/>
+          <view angle="180" col="2" x="-14" y="-34" hm="true"/>
+          <view angle="225" col="3" x="-11" y="-52" hm="true"/>
+          <view angle="270" col="4" x="10" y="-67"/>
+          <view angle="315" col="3" x="11" y="-52"/>
+        </layer>
+        <layer id="angled" texture="angled">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" x="-1" y="6"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" x="1" y="6" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="1" x="-5" y="6"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="1" x="5" y="6" hm="true"/>
+        </layer>
+        <layer id="frontback" texture="frontback">
+          <view angle="0" col="2" alpha="0" hm="true"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" y="11"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" col="2" alpha="0"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="1" y="6"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="side" texture="side">
+          <view angle="0" x="9" y="7"/>
+          <view angle="45" alpha="0"/>
+          <view angle="90" col="1" alpha="0"/>
+          <view angle="135" alpha="0" hm="true"/>
+          <view angle="180" x="-9" y="7" hm="true"/>
+          <view angle="225" col="3" alpha="0"/>
+          <view angle="270" col="4" alpha="0"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+        <layer id="glow_01" texture="glow">
+          <view angle="0" x="-56" y="-73" hm="true"/>
+          <view angle="45" x="-68" y="-71"/>
+          <view angle="90" x="-67" y="-69"/>
+          <view angle="135" x="-42" y="-84" alpha="0.7" hm="true"/>
+          <view angle="180" x="-53" y="-84" alpha="0.7"/>
+          <view angle="225" x="-49" y="-86" alpha="0.7"/>
+          <view angle="270" x="-67" y="-74"/>
+          <view angle="315" x="-60" y="-74" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Sit"/>
+        <frame id="Idle01">
+          <layerref id="cover"/>
+          <layerref id="glass"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="cover" y="1"/>
+          <layerref id="glass" y="1"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="cover" y="2"/>
+          <layerref id="glass" y="2"/>
+        </frame>
+        <frame id="Idle04">
+          <layerref id="cover" y="3"/>
+          <layerref id="glass" y="3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+        <animation id="Walk">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="-0.2812" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers/>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="round" s="1.5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="glow" texture="glow">
+          <view angle="45" x="-33" y="-77"/>
+          <view angle="135" x="33" y="-77"/>
+          <view angle="225" x="32" y="-52"/>
+          <view angle="315" x="-32" y="-52"/>
+          <view angle="0" x="-45" y="-60"/>
+          <view angle="180" x="45" y="-60"/>
+          <view angle="90" y="-95"/>
+          <view angle="270" y="-46"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="glow" color="0xf15555" a="0"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="glow" color="0xf15555"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Sit">
+          <frameref id="off"/>
+        </animation>
+        <animation id="Walk">
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

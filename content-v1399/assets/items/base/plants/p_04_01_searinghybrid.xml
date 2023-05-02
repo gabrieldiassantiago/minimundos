@@ -1,0 +1,192 @@
+<item.SpriteItem id="2029" name="Semente de MarPinkilina" desc="Um saquinho de sementes de  marpinkilina, que simbolizam futuro perfeito." tags="seed,stackable,plant,goldonly,market" icon="items/base/plants/p_04_01_searinghybrid_seed.png" price="12" tokens="120" minLevel="90" minLevelType="6" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="waterHours" value="28"/>
+    <entry key="matureHours" value="40"/>
+    <entry key="matureWaterHours" value="168"/>
+    <entry key="harvestMin" value="1"/>
+    <entry key="harvestMax" value="3"/>
+    <entry key="harvestXPReward" value="222"/>
+  </data>
+  <textures>
+    <texture id="Seed" source="items/base/plants/p_04_01_searinghybrid_seed.png" cols="1" rows="1"/>
+    <texture id="Leaves0" source="items/base/plants/p_sprout_01_leaves0.png" cols="1" rows="1"/>
+    <texture id="Branches0" source="items/base/plants/p_sprout_01_branches0.png" cols="1" rows="1"/>
+    <texture id="Leaves1" source="items/base/plants/p_04_01_searinghybrid_leaves1.png" cols="1" rows="1"/>
+    <texture id="Branches1" source="items/base/plants/p_04_01_searinghybrid_branches1.png" cols="1" rows="1"/>
+    <texture id="Leaves2" source="items/base/plants/p_04_01_searinghybrid_leaves2.png" cols="1" rows="1"/>
+    <texture id="Branches2" source="items/base/plants/p_04_01_searinghybrid_branches2.png" cols="1" rows="1"/>
+    <texture id="Flowers" source="items/base/plants/p_04_01_searinghybrid_flowers.png" cols="1" rows="1"/>
+    <texture id="Diffuse" source="items/base/plants/p_generic_light_blueoval.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/plants/p_04_01_searinghybrid_intense.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Flower">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Seed" type="group">
+          <layer id="Seed1" texture="Seed" align="middle">
+            <view angle="45" y="-14"/>
+            <view angle="135" y="-14" hm="true"/>
+            <view angle="225" y="-14"/>
+            <view angle="315" y="-14" hm="true"/>
+          </layer>
+        </layer>
+        <layer id="Branches" type="group">
+          <layer id="Branches0" texture="Branches0">
+            <view y="1"/>
+          </layer>
+          <layer id="Branches1" texture="Branches1">
+            <view y="4"/>
+          </layer>
+          <layer id="Branches2" texture="Branches2">
+            <view y="15"/>
+          </layer>
+        </layer>
+        <layer id="Leaves" type="group">
+          <layer id="Leaves0" texture="Leaves0">
+            <view/>
+          </layer>
+          <layer id="Leaves1" texture="Leaves1">
+            <view x="3" y="-44"/>
+          </layer>
+          <layer id="Leaves2" texture="Leaves2">
+            <view x="-2" y="-68"/>
+          </layer>
+        </layer>
+        <layer id="Flowers" texture="Flowers">
+          <view y="-29"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Seed">
+          <layerref id="Seed1"/>
+        </frame>
+        <frame id="Plant0">
+          <layerref id="Branches0"/>
+          <layerref id="Leaves0"/>
+        </frame>
+        <frame id="Plant1">
+          <layerref id="Branches1"/>
+          <layerref id="Leaves1"/>
+        </frame>
+        <frame id="Plant2">
+          <layerref id="Branches2"/>
+          <layerref id="Leaves2"/>
+        </frame>
+        <frame id="Flowers">
+          <layerref id="Branches2"/>
+          <layerref id="Leaves2"/>
+          <layerref id="Flowers"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Seed" framerate="2" loop="false">
+          <frameref id="Seed"/>
+        </animation>
+        <animation id="Plant0" framerate="2" loop="false">
+          <frameref id="Plant0"/>
+        </animation>
+        <animation id="Plant1" framerate="2" loop="false">
+          <frameref id="Plant1"/>
+        </animation>
+        <animation id="Plant2" framerate="2" loop="false">
+          <frameref id="Plant2"/>
+        </animation>
+        <animation id="Flowers" framerate="2" loop="false">
+          <frameref id="Flowers"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Diffuse" texture="Diffuse">
+          <view y="9"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Seed">
+          <layerref id="Diffuse" a="0"/>
+        </frame>
+        <frame id="Plant0">
+          <layerref id="Diffuse" a="0"/>
+        </frame>
+        <frame id="Plant1">
+          <layerref id="Diffuse" a="0"/>
+        </frame>
+        <frame id="Plant2">
+          <layerref id="Diffuse" a="0"/>
+        </frame>
+        <frame id="Flowers">
+          <layerref id="Diffuse" color="0xe0e1ff" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Seed" framerate="2" loop="false">
+          <frameref id="Seed"/>
+        </animation>
+        <animation id="Plant0" framerate="2" loop="false">
+          <frameref id="Plant0"/>
+        </animation>
+        <animation id="Plant1" framerate="2" loop="false">
+          <frameref id="Plant1"/>
+        </animation>
+        <animation id="Plant2" framerate="2" loop="false">
+          <frameref id="Plant2"/>
+        </animation>
+        <animation id="Flowers" framerate="2" loop="false">
+          <frameref id="Flowers"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="8" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Intense" texture="Intense">
+          <view y="9"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Seed">
+          <layerref id="Intense" a="0"/>
+        </frame>
+        <frame id="Plant0">
+          <layerref id="Intense" a="0"/>
+        </frame>
+        <frame id="Plant1">
+          <layerref id="Intense" a="0"/>
+        </frame>
+        <frame id="Plant2">
+          <layerref id="Intense" a="0"/>
+        </frame>
+        <frame id="Flowers">
+          <layerref id="Intense" color="0xf4f7ff" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Seed" framerate="2" loop="false">
+          <frameref id="Seed"/>
+        </animation>
+        <animation id="Plant0" framerate="2" loop="false">
+          <frameref id="Plant0"/>
+        </animation>
+        <animation id="Plant1" framerate="2" loop="false">
+          <frameref id="Plant1"/>
+        </animation>
+        <animation id="Plant2" framerate="2" loop="false">
+          <frameref id="Plant2"/>
+        </animation>
+        <animation id="Flowers" framerate="2" loop="false">
+          <frameref id="Flowers"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

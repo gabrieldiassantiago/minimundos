@@ -1,0 +1,27 @@
+<item.SpriteItem name="Conjunto de Facas" desc="Para carne, frango, legumes, queijos etc…" tags="misc" icon="items/base/modern/icon_m_kitchen_15_knifeblock.png" dropTargetType="none" dropTargetList="floor, table, avatar,avatar" dropTargetClamp="none" id="1461" price="28" tokens="280" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.21,0,-0.14" max="0.21,0.55,0.14"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture01" source="items/base/modern/m_kitchen_15_knifeblock.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.21,0,-0.14" max="0.21,0.55,0.14"/>
+      <layers>
+        <layer id="Layer" texture="Texture01">
+          <view angle="45" x="5" y="17"/>
+          <view angle="135" x="-5" y="17" hm="true"/>
+          <view angle="225" col="1" x="-1" y="19"/>
+          <view angle="315" col="1" x="3" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,30 @@
+<item.SpriteItem id="1521" name="Pia de Banheiro Premium" desc="De porcelana legítima." tags="misc" icon="items/base/modern/icon_m_bathroom_03_stdsink.png" price="55" tokens="550" minLevel="1" minLevelType="2" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" minCPLevel="1">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,1.35,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="aiUseInWorldEffects" value="hygiene-3"/>
+  </data>
+  <textures>
+    <texture id="sink" source="items/base/modern/m_bathroom_03_stdsink.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="sink">
+      <box min="-0.48,0,-0.48" max="0.48,1.35,0.48"/>
+      <layers>
+        <layer id="sink" texture="sink">
+          <view angle="45" y="33"/>
+          <view angle="135" x="1" y="33" hm="true"/>
+          <view angle="225" col="1" x="1" y="37"/>
+          <view angle="315" col="1" x="-1" y="37" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

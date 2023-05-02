@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="3219" name="Rocha das Águas" desc="Uma rocha aquática" tags="admin,misc" icon="items/base/outdoor/icon_o_jetskimission_rock.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Rock" source="items/base/outdoor/o_jetskimission_rock.png" cols="1" rows="1"/>
+    <texture id="Rock_Shadow" source="items/base/outdoor/o_jetskimission_rock_shadow.png" cols="1" rows="1"/>
+    <texture id="Ripples" source="items/base/outdoor/o_jetskimission_ripples.png" cols="3" rows="1"/>
+    <texture id="Rock_Mini" source="items/base/outdoor/o_jetskimission_rock_mini.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Shadow" texture="Rock_Shadow">
+          <view y="60"/>
+        </layer>
+        <layer id="Ripples01" texture="Ripples">
+          <view y="43"/>
+        </layer>
+        <layer id="Ripples02" texture="Ripples">
+          <view col="1" y="43"/>
+        </layer>
+        <layer id="Ripples03" texture="Ripples">
+          <view col="2" y="43"/>
+        </layer>
+        <layer id="Rock" texture="Rock">
+          <view x="-1" y="22"/>
+        </layer>
+        <layer id="Rock_Mini01" texture="Rock_Mini">
+          <view angle="45" x="20" y="32"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="Rock_Mini02" texture="Rock_Mini">
+          <view angle="45" col="1" x="7" y="34"/>
+          <view angle="135" alpha="0"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Shadow"/>
+          <layerref id="Ripples01"/>
+          <layerref id="Rock"/>
+          <layerref id="Rock_Mini01"/>
+          <layerref id="Rock_Mini02"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Shadow"/>
+          <layerref id="Ripples02"/>
+          <layerref id="Rock"/>
+          <layerref id="Rock_Mini01"/>
+          <layerref id="Rock_Mini02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Shadow"/>
+          <layerref id="Ripples03"/>
+          <layerref id="Rock"/>
+          <layerref id="Rock_Mini01"/>
+          <layerref id="Rock_Mini02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="01" duration="2"/>
+          <frameref id="02" duration="2"/>
+          <frameref id="03" duration="2"/>
+          <frameref id="02" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,38 @@
+<item.SpriteItem id="1583" name="Disparador de Ervilhas" desc="Sua primeira arma." tags="consumable,actionbar,group_nature,scifi,gun,bad,reusable,usable,action_consumable_target" icon="items/base/consumables/magic/icon_con_item_60_peashooter.png" tokens="1000" minLevel="1" minLevelType="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.212,0,-0.328" max="0.2,0.25,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="6"/>
+    <entry key="action_attributes" value="nature-10"/>
+    <entry key="action_attributes_secondary" value="health-10"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_shoot.png"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/magic/con_item_60_peashooter.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.212,0,-0.328" max="0.2,0.25,0.3"/>
+      <layers>
+        <layer id="Layer01" texture="Texture" y="10">
+          <view angle="45" col="3" x="2" y="12"/>
+          <view angle="135" y="10"/>
+          <view angle="225" col="1" x="1" y="14"/>
+          <view angle="315" col="2" x="-2" y="12"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

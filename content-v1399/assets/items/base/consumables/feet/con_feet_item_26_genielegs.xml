@@ -1,0 +1,72 @@
+<item.SpriteItem id="2982" name="Lâmpada Mágica" desc="Três desejos" tags="clothing,rare,consumable,actionbar,wear,feet,action_wearable_toggle" icon="items/base/consumables/feet/icon_con_feet_item_26_genielegs.png" price="4000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.44,0,-0.28" max="0.44,0.2,0.28"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top07/top07_04_frag_genie.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/feet/con_feet_item_26_genielegs.png" cols="2" rows="1"/>
+    <texture id="Texture01" source="items/base/consumables/feet/con_feet_item_26_genielegs_smoke.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.44,0,-0.28" max="0.44,0.2,0.28"/>
+      <layers>
+        <layer id="base01" texture="Texture">
+          <view angle="45" x="8" y="21"/>
+          <view angle="135" x="-5" y="21" hm="true"/>
+          <view angle="225" col="1" x="-4" y="16"/>
+          <view angle="315" col="1" x="4" y="16" hm="true"/>
+        </layer>
+        <layer id="base02" texture="Texture01">
+          <view angle="45" x="50" y="-2"/>
+          <view angle="135" x="-46" y="-2" hm="true"/>
+          <view angle="225" row="1" x="-46" y="-37"/>
+          <view angle="315" row="1" x="48" y="-38" hm="true"/>
+        </layer>
+        <layer id="base03" texture="Texture01">
+          <view angle="45" col="1" x="53" y="-2"/>
+          <view angle="135" col="1" x="-49" y="-2" hm="true"/>
+          <view angle="225" col="1" row="1" x="-46" y="-37"/>
+          <view angle="315" col="1" row="1" x="48" y="-38" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="base01"/>
+          <layerref id="base02" a="0.2"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="base01"/>
+          <layerref id="base03" a="0.3"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="base01"/>
+          <layerref id="base02" a="0.15"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="base01"/>
+          <layerref id="base03" a="0.1"/>
+          <layerref id="base02" a="0.1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

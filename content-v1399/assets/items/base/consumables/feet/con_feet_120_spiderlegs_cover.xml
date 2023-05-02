@@ -1,0 +1,143 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="front" source="items/base/consumables/feet/con_feet_120_spiderlegs_cover.png" cols="5" rows="5"/>
+    <texture id="idle" source="items/base/consumables/feet/con_feet_120_spiderlegs_idle.png" cols="5" rows="4"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="walk_01_Front" texture="front">
+          <view angle="0" col="2" x="5" y="28"/>
+          <view angle="45" x="2" y="33"/>
+          <view angle="90" col="1" x="2" y="33"/>
+          <view angle="135" x="-2" y="33" hm="true"/>
+          <view angle="180" col="2" x="-5" y="28" hm="true"/>
+          <view angle="225" col="3" x="-3" y="30" hm="true"/>
+          <view angle="270" col="4" x="2" y="28"/>
+          <view angle="315" col="3" x="3" y="28"/>
+        </layer>
+        <layer id="walk_02_Front" texture="front">
+          <view angle="0" col="2" row="1" x="5" y="28"/>
+          <view angle="45" row="1" x="2" y="33"/>
+          <view angle="90" col="1" row="1" x="2" y="33"/>
+          <view angle="135" row="1" x="-2" y="33" hm="true"/>
+          <view angle="180" col="2" row="1" x="-5" y="28" hm="true"/>
+          <view angle="225" col="3" row="1" x="-3" y="27" hm="true"/>
+          <view angle="270" col="4" row="1" x="2" y="28"/>
+          <view angle="315" col="3" row="1" x="3" y="28"/>
+        </layer>
+        <layer id="walk_03_Front" texture="front">
+          <view angle="0" col="2" row="2" x="5" y="28"/>
+          <view angle="45" row="2" x="2" y="33"/>
+          <view angle="90" col="1" row="2" x="2" y="33"/>
+          <view angle="135" row="2" x="-2" y="33" hm="true"/>
+          <view angle="180" col="2" row="2" x="-5" y="28" hm="true"/>
+          <view angle="225" col="3" row="2" x="-3" y="28" hm="true"/>
+          <view angle="270" col="4" row="2" x="2" y="28"/>
+          <view angle="315" col="3" row="2" x="3" y="28"/>
+        </layer>
+        <layer id="walk_04_Front" texture="front">
+          <view angle="0" col="2" row="3" x="5" y="28"/>
+          <view angle="45" row="3" x="2" y="33"/>
+          <view angle="90" col="1" row="3" x="2" y="33"/>
+          <view angle="135" row="3" x="-2" y="33" hm="true"/>
+          <view angle="180" col="2" row="3" x="-5" y="28" hm="true"/>
+          <view angle="225" col="3" row="3" x="-3" y="28" hm="true"/>
+          <view angle="270" col="4" row="3" x="2" y="28"/>
+          <view angle="315" col="3" row="3" x="3" y="28"/>
+        </layer>
+        <layer id="walk_05_Front" texture="front">
+          <view angle="0" col="2" row="4" x="5" y="28"/>
+          <view angle="45" row="4" x="2" y="33"/>
+          <view angle="90" col="1" row="4" x="2" y="33"/>
+          <view angle="135" row="4" x="-2" y="33" hm="true"/>
+          <view angle="180" col="2" row="4" x="-5" y="28" hm="true"/>
+          <view angle="225" col="3" row="4" x="-3" y="28" hm="true"/>
+          <view angle="270" col="4" row="4" x="2" y="28"/>
+          <view angle="315" col="3" row="4" x="3" y="28"/>
+        </layer>
+        <layer id="Idle_01_front" texture="idle">
+          <view angle="0" col="2" x="5" y="28"/>
+          <view angle="45" x="2" y="33"/>
+          <view angle="90" col="1" x="2" y="33"/>
+          <view angle="135" x="-2" y="33" hm="true"/>
+          <view angle="180" col="2" x="-5" y="28" hm="true"/>
+          <view angle="225" col="3" x="-3" y="30" hm="true"/>
+          <view angle="270" col="4" x="2" y="28"/>
+          <view angle="315" col="3" x="3" y="28"/>
+        </layer>
+        <layer id="butt_01_front" texture="idle">
+          <view angle="0" col="2" row="2" x="5" y="28" alpha="0"/>
+          <view angle="45" row="2" x="2" y="33" alpha="0"/>
+          <view angle="90" col="1" row="2" x="2" y="33" alpha="0"/>
+          <view angle="135" row="2" x="-2" y="33" alpha="0" hm="true"/>
+          <view angle="180" col="2" row="2" x="-5" y="28" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="2" x="-3" y="30" hm="true"/>
+          <view angle="270" col="4" row="2" x="2" y="28"/>
+          <view angle="315" col="3" row="2" x="3" y="28"/>
+        </layer>
+        <layer id="butt_02_front" texture="idle">
+          <view angle="0" col="2" row="2" x="5" y="28" alpha="0"/>
+          <view angle="45" row="2" x="2" y="33" alpha="0"/>
+          <view angle="90" col="1" row="2" x="2" y="33" alpha="0"/>
+          <view angle="135" row="2" x="-2" y="33" alpha="0" hm="true"/>
+          <view angle="180" col="2" row="2" x="-5" y="28" alpha="0" hm="true"/>
+          <view angle="225" col="3" row="3" x="-3" y="30" hm="true"/>
+          <view angle="270" col="4" row="3" x="2" y="28"/>
+          <view angle="315" col="3" row="3" x="3" y="28"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="walk_01">
+          <layerref id="walk_01_Front"/>
+        </frame>
+        <frame id="walk_02">
+          <layerref id="walk_02_Front"/>
+        </frame>
+        <frame id="walk_03">
+          <layerref id="walk_03_Front"/>
+        </frame>
+        <frame id="walk_04">
+          <layerref id="walk_04_Front"/>
+        </frame>
+        <frame id="walk_05">
+          <layerref id="walk_05_Front"/>
+        </frame>
+        <frame id="sit"/>
+        <frame id="Idle_01">
+          <layerref id="Idle_01_front"/>
+          <layerref id="butt_01_front"/>
+        </frame>
+        <frame id="Idle_02">
+          <layerref id="Idle_01_front"/>
+          <layerref id="butt_02_front"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="Idle_01" duration="20"/>
+          <frameref id="Idle_02"/>
+          <frameref id="Idle_01"/>
+          <frameref id="Idle_02"/>
+        </animation>
+        <animation id="Walk" framerate="10">
+          <frameref id="walk_01"/>
+          <frameref id="walk_02"/>
+          <frameref id="walk_03"/>
+          <frameref id="walk_04"/>
+          <frameref id="walk_05"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

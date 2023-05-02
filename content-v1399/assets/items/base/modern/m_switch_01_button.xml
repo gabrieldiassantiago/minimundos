@@ -1,0 +1,101 @@
+<item.SpriteItem id="1126" name="Interruptor Eletrônico" desc="O verde significa que está ligado." tags="switch,wall" icon="items/base/modern/icon_m_switch_01_button.png" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="35" tokens="350" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="0,-0.42,-0.2" max="0.1,0.1,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <textures>
+    <texture id="switch" source="items/base/modern/m_switch_01_button.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Switch">
+      <box min="0,-0.42,-0.2" max="0.1,0.1,0.2"/>
+      <layers>
+        <layer id="panel" texture="switch">
+          <view angle="45" y="40"/>
+          <view angle="135" y="40" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="on" texture="switch">
+          <view angle="45" col="1" y="40"/>
+          <view angle="135" col="1" y="40" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="off" texture="switch">
+          <view angle="45" col="2" y="40"/>
+          <view angle="135" col="2" y="40" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="panel"/>
+          <layerref id="on"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="panel"/>
+          <layerref id="off"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="Frame01" duration="3"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="-0.2" s="1.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="on" texture="Light" align="middle">
+          <view angle="45" x="4"/>
+          <view angle="135"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="off" texture="Light" align="middle">
+          <view angle="45" x="4" y="7"/>
+          <view angle="135" y="7"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="on" color="0x93ffa2"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="off" color="0xff6600"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

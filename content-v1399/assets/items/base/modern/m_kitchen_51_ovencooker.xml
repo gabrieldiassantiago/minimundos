@@ -1,0 +1,191 @@
+<item.SpriteItem id="4609" name="Fogão à Gás Vermelho Chef Master" desc="Um fogão à gás vermelho chef master" tags="table,seasonal" icon="items/base/modern/icon_m_kitchen_51_ovencooker.png" price="140" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-1.49" max="0.49,1.22,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(Open)"/>
+    <action id="Off" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Cabinet" source="items/base/modern/m_kitchen_50_closed.png" cols="2" rows="1"/>
+    <texture id="oven" source="items/base/modern/m_kitchen_33_oven.png" cols="3" rows="1"/>
+    <texture id="grill" source="items/base/modern/m_kitchen_05_vip_gascooker.png" cols="5" rows="1"/>
+    <texture id="fire" source="items/base/modern/m_kitchen_05_vip_gascooker_flames.png" cols="4" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_flame_cooker.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-1.49" max="0.49,1.22,0.49"/>
+      <layers>
+        <layer id="Cabinet" texture="Cabinet">
+          <view angle="45" x="-30" y="68"/>
+          <view angle="135" x="-32" y="36" hm="true"/>
+          <view angle="225" col="1" x="33" y="37"/>
+          <view angle="315" col="1" x="33" y="68" hm="true"/>
+        </layer>
+        <layer id="Oven" texture="oven">
+          <view angle="45" x="3" y="37"/>
+          <view angle="135" x="-65" y="5" hm="true"/>
+          <view angle="225" col="1" x="33" y="37" alpha="0"/>
+          <view angle="315" col="1" x="33" y="68" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Oven_inner_a" texture="oven">
+          <view angle="45" col="1" x="3" y="37"/>
+          <view angle="135" col="1" x="-65" y="5" hm="true"/>
+          <view angle="225" col="1" x="33" y="37" alpha="0"/>
+          <view angle="315" col="1" x="33" y="68" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Oven_inner_b" texture="oven">
+          <view angle="45" col="2" x="3" y="37"/>
+          <view angle="135" col="2" x="-65" y="5" hm="true"/>
+          <view angle="225" col="1" x="33" y="37" alpha="0"/>
+          <view angle="315" col="1" x="33" y="68" alpha="0" hm="true"/>
+        </layer>
+        <layer id="base" texture="grill">
+          <view angle="45" x="-63" y="-29"/>
+          <view angle="135" x="-64" y="-93" hm="true"/>
+          <view angle="225" col="1" x="66" y="-92"/>
+          <view angle="315" col="1" x="63" y="-29" hm="true"/>
+        </layer>
+        <layer id="base02" texture="grill">
+          <view angle="45" x="1" y="-61"/>
+          <view angle="135" x="70" y="-60" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="-9" y="-61" alpha="0"/>
+          <view angle="315" col="1" x="-1" y="-61" hm="true"/>
+        </layer>
+        <layer id="base03" texture="grill">
+          <view angle="45" x="66" y="-91" alpha="0"/>
+          <view angle="135" y="-61" hm="true"/>
+          <view angle="225" col="1" x="2" y="-60"/>
+          <view angle="315" col="1" x="-64" y="-93" alpha="0" hm="true"/>
+        </layer>
+        <layer id="frame1_1" texture="fire">
+          <view angle="45" col="2" x="-62" y="-42"/>
+          <view angle="135" x="-64" y="-106"/>
+          <view angle="225" col="2" x="67" y="-106"/>
+          <view angle="315" x="63" y="-43"/>
+        </layer>
+        <layer id="frame1_2" texture="fire">
+          <view angle="45" x="2" y="-74" hm="true"/>
+          <view angle="135" col="2" y="-74" hm="true"/>
+          <view angle="225" x="3" y="-74" hm="true"/>
+          <view angle="315" col="2" x="-1" y="-75" hm="true"/>
+        </layer>
+        <layer id="frame2_1" texture="fire">
+          <view angle="45" col="3" x="-62" y="-42"/>
+          <view angle="135" col="1" x="-65" y="-106"/>
+          <view angle="225" col="3" x="67" y="-106"/>
+          <view angle="315" col="1" x="62" y="-43"/>
+        </layer>
+        <layer id="frame2_2" texture="fire">
+          <view angle="45" col="1" x="3" y="-74" hm="true"/>
+          <view angle="135" col="3" y="-74" hm="true"/>
+          <view angle="225" col="1" x="4" y="-74" hm="true"/>
+          <view angle="315" col="3" x="-1" y="-75" hm="true"/>
+        </layer>
+        <layer id="elements" texture="grill">
+          <view angle="45" col="2" x="-63" y="-30"/>
+          <view angle="135" col="3" x="-64" y="-94"/>
+          <view angle="225" col="2" x="66" y="-94"/>
+          <view angle="315" col="3" x="63" y="-31"/>
+        </layer>
+        <layer id="elements01" texture="grill">
+          <view angle="45" col="3" x="1" y="-62" hm="true"/>
+          <view angle="135" col="2" y="-62" hm="true"/>
+          <view angle="225" col="3" x="2" y="-62" hm="true"/>
+          <view angle="315" col="2" x="-1" y="-63" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Cabinet"/>
+          <layerref id="Oven_inner_a"/>
+          <layerref id="Oven"/>
+          <layerref id="base02"/>
+          <layerref id="base"/>
+          <layerref id="elements"/>
+          <layerref id="base03"/>
+          <layerref id="elements01"/>
+        </frame>
+        <frame id="Flame1">
+          <layerref id="Cabinet"/>
+          <layerref id="Oven_inner_b"/>
+          <layerref id="Oven"/>
+          <layerref id="base02"/>
+          <layerref id="base"/>
+          <layerref id="elements"/>
+          <layerref id="base03"/>
+          <layerref id="elements01"/>
+          <layerref id="frame1_1"/>
+          <layerref id="frame1_2"/>
+        </frame>
+        <frame id="Flame2">
+          <layerref id="Cabinet"/>
+          <layerref id="Oven_inner_b"/>
+          <layerref id="Oven"/>
+          <layerref id="base02"/>
+          <layerref id="base"/>
+          <layerref id="elements"/>
+          <layerref id="base03"/>
+          <layerref id="elements01"/>
+          <layerref id="frame2_1"/>
+          <layerref id="frame2_2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="Flame1"/>
+          <frameref id="Flame2"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.45" s="4.8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="-6" y="7"/>
+          <view angle="135" x="-6" hm="true"/>
+          <view angle="225" x="7"/>
+          <view angle="315" x="7" y="7" hm="true"/>
+        </layer>
+        <layer id="Lightinner" texture="light" align="middle">
+          <view angle="45" col="1" y="19"/>
+          <view angle="135" col="1" x="-12" y="13" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xb6ebff"/>
+          <layerref id="Lightinner"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

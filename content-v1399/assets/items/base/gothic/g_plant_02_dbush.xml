@@ -1,0 +1,34 @@
+<item.SpriteItem desc="Algumas plantas não gostam de água." dropTargetClamp="none" dropTargetList="floor, table" dropTargetType="none" icon="items/base/gothic/icon_g_plant_02_dbush.png" id="357" name="Vaso Gótico" tags="plant" price="13" tokens="130" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.34,1.3179,0.34" min="-0.34,0,-0.34"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture01" rows="1" source="items/base/gothic/g_plant_02.png"/>
+    <texture cols="1" id="Texture" rows="1" source="items/base/gothic/g_pot_02.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.34,1.3179,0.34" min="-0.34,0,-0.34"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" y="12"/>
+          <view angle="135" mirror="true" y="12"/>
+          <view angle="225" y="12"/>
+          <view angle="315" mirror="true" y="12"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view angle="45" x="4" y="-9"/>
+          <view angle="135" mirror="true" x="-6" y="-11"/>
+          <view angle="225" x="4" y="-9"/>
+          <view angle="315" mirror="true" x="-6" y="-11"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,158 @@
+<item.SpriteItem id="1372" name="Lanternas Chinesas" desc="Tradicional iluminação de espaços." tags="light,wall" icon="items/base/antique/icon_a_lamp_05_chi_lantern_doublevip.png" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="20" minLevel="1" minLevelType="4" minCPLevel="1">
+  <volume>
+    <box min="0,-0.3,-0.49" max="0.001,0.3,0.49"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="lantern" source="items/base/antique/a_lamp_05_chi_lantern.png" cols="2" rows="1"/>
+    <texture id="hook_dbl" source="items/base/antique/a_lamp_05_chi_hook_dbl.png" cols="1" rows="1"/>
+    <texture id="board" source="items/base/antique/a_lamp_05_chi_board.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="lights">
+      <box min="0,-0.3,-0.49" max="0.001,0.3,0.49"/>
+      <layers>
+        <layer id="board" texture="board" align="middle">
+          <view angle="45" x="-2" y="-11"/>
+          <view angle="135" col="1" x="2" y="-11"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="hook_dbl" texture="hook_dbl" align="middle" y="-9">
+          <view angle="45" x="12"/>
+          <view angle="135" x="-13" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="board_glow" texture="board" align="middle">
+          <view angle="45" x="-2" y="-11"/>
+          <view angle="135" col="1" x="2" y="-11"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="lantern_1" texture="lantern" align="middle">
+          <view angle="45" x="27" y="6"/>
+          <view angle="135" x="-27" y="6" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="lantern_2" texture="lantern" align="middle">
+          <view angle="45" x="-3" y="21"/>
+          <view angle="135" x="1" y="21" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="lantern_1_glow" texture="lantern" align="middle">
+          <view angle="45" col="1" x="27" y="6"/>
+          <view angle="135" col="1" x="-27" y="6" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="lantern_2_glow" texture="lantern" align="middle">
+          <view angle="45" col="1" x="-3" y="21"/>
+          <view angle="135" col="1" x="1" y="21" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="on">
+          <layerref id="board_glow"/>
+          <layerref id="lantern_1_glow"/>
+          <layerref id="lantern_2_glow"/>
+          <layerref id="hook_dbl"/>
+        </frame>
+        <frame id="off">
+          <layerref id="board" color="0xe5e5e5"/>
+          <layerref id="lantern_1"/>
+          <layerref id="lantern_2"/>
+          <layerref id="hook_dbl"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="on"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.25" y="0.1" s="4.6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-1"/>
+          <view angle="135" x="2"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xf26767" a="0.8"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4" loop="false">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Off" framerate="4" loop="false">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" x="0.25" y="0.1" s="0.8" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-20" y="17"/>
+          <view angle="135" x="-9" y="2"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="Light01" texture="Light" align="middle">
+          <view angle="45" x="17" y="5"/>
+          <view angle="135" x="22" y="22"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xfac8c8" a="0.2"/>
+          <layerref id="Light01" color="0xfce0e0" a="0.2"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

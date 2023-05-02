@@ -1,0 +1,74 @@
+<item.SpriteItem id="0" name="NPC Indicator Effect" desc="Used to differentiate NPCs from avatars" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+  </volume>
+  <textures>
+    <texture id="indicator" source="items/base/consumables/head/con_head_44_npc_indicator.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="arrow" texture="indicator">
+          <view y="-180"/>
+        </layer>
+        <layer id="flare 01" texture="indicator">
+          <view col="1" x="-8" y="-186"/>
+        </layer>
+        <layer id="flare 02" texture="indicator">
+          <view col="1" x="-4" y="-186"/>
+        </layer>
+        <layer id="flare 03" texture="indicator">
+          <view col="1" y="-186"/>
+        </layer>
+        <layer id="flare 04" texture="indicator">
+          <view col="1" x="4" y="-186"/>
+        </layer>
+        <layer id="flare 05" texture="indicator">
+          <view col="1" x="8" y="-186"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Loop 01">
+          <layerref id="arrow"/>
+        </frame>
+        <frame id="Loop 02">
+          <layerref id="arrow"/>
+          <layerref id="flare 01" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Loop 03">
+          <layerref id="arrow"/>
+          <layerref id="flare 02" blend="add"/>
+        </frame>
+        <frame id="Loop 04">
+          <layerref id="arrow"/>
+          <layerref id="flare 03" blend="add"/>
+        </frame>
+        <frame id="Loop 05">
+          <layerref id="arrow"/>
+          <layerref id="flare 04" blend="add"/>
+        </frame>
+        <frame id="Loop 06">
+          <layerref id="arrow"/>
+          <layerref id="flare 05" a="0.5" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4">
+          <frameref id="Loop 01" duration="60"/>
+          <frameref id="Loop 02"/>
+          <frameref id="Loop 03"/>
+          <frameref id="Loop 04"/>
+          <frameref id="Loop 05"/>
+          <frameref id="Loop 06"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers/>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

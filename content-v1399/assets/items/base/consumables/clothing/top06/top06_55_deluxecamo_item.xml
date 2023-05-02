@@ -1,0 +1,38 @@
+<item.SpriteItem id="5652" name="Jaqueta Camuflagem Deluxe" desc="Uma jaqueta camuflagem deluxe" tags="rare,consumable,clothing,actionbar,wear,top06,action_wearable_toggle,nopvp" icon="items/base/consumables/clothing/top06/top06_55_deluxecamo_icon.png" price="3120" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.3528" max="0.4,0.05,0.3785"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top06/top06_55_frag_deluxecamo.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes_secondary" value="health+25"/>
+  </data>
+  <textures>
+    <texture id="clothes" source="items/base/consumables/clothing/top06/top06_55_deluxecamo_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.3528" max="0.4,0.05,0.3785"/>
+      <layers>
+        <layer id="Layer" texture="clothes">
+          <view angle="45" y="36"/>
+          <view angle="135" y="36" hm="true"/>
+          <view angle="225" col="1" y="34"/>
+          <view angle="315" col="1" y="34" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

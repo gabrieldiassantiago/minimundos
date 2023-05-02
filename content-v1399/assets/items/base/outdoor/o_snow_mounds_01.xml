@@ -1,0 +1,30 @@
+<item.SpriteItem id="4170" name="Monte de Neve 3" desc="Um monte de neve." tags="admin,floor" icon="items/base/outdoor/o_snow_mounds_01_icon.png" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.2,-0.001,-0.2" max="0.2,0,0"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/outdoor/o_snow_mounds_01.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="snow mound" layer="surface">
+      <box min="-0.2,-0.001,-0.2" max="0.2,0,0"/>
+      <layers>
+        <layer id="Layer01" texture="Texture">
+          <view angle="45" y="37"/>
+          <view angle="135" y="37" hm="true"/>
+          <view angle="225" y="37"/>
+          <view angle="315" y="37" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

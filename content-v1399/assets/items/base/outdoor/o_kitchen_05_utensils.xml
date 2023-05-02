@@ -1,0 +1,34 @@
+<item.SpriteItem id="3115" name="Móvel de Jardim com Utensílios Eco." desc="Um móvel de jardim ecológico." tags="table" icon="items/base/outdoor/icon_o_kitchen_05_utensils.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="65">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,1.06,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="base" source="items/base/outdoor/o_kitchen_03_standard.png" cols="2" rows="1"/>
+    <texture id="tools" source="items/base/outdoor/o_kitchen_05_tools.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Unit">
+      <box min="-0.48,0,-0.48" max="0.48,1.06,0.48"/>
+      <layers>
+        <layer id="Layer" texture="base">
+          <view angle="45" x="-2" y="37"/>
+          <view angle="135" y="37" hm="true"/>
+          <view angle="225" col="1" x="2" y="43"/>
+          <view angle="315" col="1" x="-4" y="43" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="tools">
+          <view angle="45" x="27" y="13"/>
+          <view angle="135" col="1" x="-27" y="13"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

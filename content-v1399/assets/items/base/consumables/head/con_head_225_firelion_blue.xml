@@ -1,0 +1,93 @@
+<item.SpriteItem id="0" name="Persian Cat" desc="Collectible (April 2013)" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="cat" source="items/base/consumables/head/con_head_225_firelion_blue.png" cols="5" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="01" texture="cat">
+          <view angle="0" col="2" x="-3" y="47"/>
+          <view angle="45" x="-4" y="47"/>
+          <view angle="90" col="1" y="46"/>
+          <view angle="135" x="5" y="47" hm="true"/>
+          <view angle="180" col="2" x="2" y="47" hm="true"/>
+          <view angle="225" col="3" x="6" y="43" hm="true"/>
+          <view angle="270" col="4" y="46"/>
+          <view angle="315" col="3" x="-7" y="43"/>
+        </layer>
+        <layer id="02" texture="cat">
+          <view angle="0" col="2" row="1" x="-3" y="47"/>
+          <view angle="45" row="1" x="-4" y="47"/>
+          <view angle="90" col="1" row="1" y="46"/>
+          <view angle="135" row="1" x="5" y="47" hm="true"/>
+          <view angle="180" col="2" row="1" x="2" y="47" hm="true"/>
+          <view angle="225" col="3" row="1" x="6" y="43" hm="true"/>
+          <view angle="270" col="4" row="1" y="46"/>
+          <view angle="315" col="3" row="1" x="-7" y="43"/>
+        </layer>
+        <layer id="03" texture="cat">
+          <view angle="0" col="2" row="2" x="-3" y="47"/>
+          <view angle="45" row="2" x="-4" y="47"/>
+          <view angle="90" col="1" row="2" y="46"/>
+          <view angle="135" row="2" x="5" y="47" hm="true"/>
+          <view angle="180" col="2" row="2" x="2" y="47" hm="true"/>
+          <view angle="225" col="3" row="2" x="6" y="43" hm="true"/>
+          <view angle="270" col="4" row="2" y="46"/>
+          <view angle="315" col="3" row="2" x="-7" y="43"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="1.75" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" y="-5" hm="true"/>
+          <view angle="45" x="-2" y="-7"/>
+          <view angle="90" x="2" y="-7"/>
+          <view angle="135" x="1" y="-7" hm="true"/>
+          <view angle="180" x="1" y="-6"/>
+          <view angle="225" x="1" y="-7"/>
+          <view angle="270" x="1" y="-7"/>
+          <view angle="315" x="-2" y="-7" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xc8edf7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,60 @@
+<item.SpriteItem id="0" name="Soro Cup" desc="A popular solo cup" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Soro Cup" source="items/base/consumables/edible/con_eat_20_cocktailglass_hand.png" cols="1" rows="1"/>
+    <texture id="decal" source="items/base/consumables/edible/con_eat_20_cocktaildecal_hand.png" cols="4" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="gulp" source="items/base/consumables/edible/sndfx_drink.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Sparkles">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="Soro Cup" texture="Soro Cup">
+          <view angle="0" y="12"/>
+          <view angle="45" x="1" y="11"/>
+          <view angle="90" y="13" hm="true"/>
+          <view angle="135" x="-2" y="12" hm="true"/>
+          <view angle="180" x="-1" y="12"/>
+          <view angle="225" y="11"/>
+          <view angle="270" y="5" hm="true"/>
+          <view angle="315" x="2" y="10" hm="true"/>
+        </layer>
+        <layer id="decal" texture="decal">
+          <view angle="0" col="3" row="1" y="12"/>
+          <view angle="45" x="1" y="11"/>
+          <view angle="90" col="1" y="13"/>
+          <view angle="135" col="2" x="-2" y="12"/>
+          <view angle="180" col="3" x="-1" y="12"/>
+          <view angle="225" row="1" y="11"/>
+          <view angle="270" col="1" row="1" y="5"/>
+          <view angle="315" col="2" row="1" x="2" y="10"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Soro Cup"/>
+          <layerref id="decal"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame01">
+            <sample id="gulp"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,89 @@
+<item.SpriteItem id="5967" name="Decalque Guitarra" desc="Uma guitarra decalque de parede animada" tags="wall" icon="items/base/modern/icon_m_walldecal_37_guitar.png" price="10" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="lights" source="items/base/modern/m_walldecal_37_guitar.png" cols="1" rows="1"/>
+    <texture id="Notes" source="items/base/modern/m_walldecal_37_notes.png" cols="2" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="wall" depthBias="-2">
+      <box min="0,-0.2,-0.2" max="0.001,0.2,0.2"/>
+      <layers>
+        <layer id="light 01" texture="lights" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="NotesL01" texture="Notes">
+          <view angle="45" x="-28" y="127"/>
+          <view angle="135" x="-31" y="107"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="NotesL02" texture="Notes">
+          <view angle="45" row="1" x="-24" y="119"/>
+          <view angle="135" row="1" x="-34" y="111"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="NotesL03" texture="Notes">
+          <view angle="45" row="2" x="-26" y="118"/>
+          <view angle="135" row="2" x="-38" y="114"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="NotesR01" texture="Notes">
+          <view angle="45" col="1" x="25" y="109"/>
+          <view angle="135" col="1" x="15" y="108"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="NotesR02" texture="Notes">
+          <view angle="45" col="1" row="1" x="25" y="109"/>
+          <view angle="135" col="1" row="1" x="15" y="119"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="NotesR03" texture="Notes">
+          <view angle="45" col="1" row="2" x="25" y="109"/>
+          <view angle="135" col="1" row="2" x="15" y="119"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="light 01"/>
+          <layerref id="NotesL01" a="0.75"/>
+          <layerref id="NotesR03" a="0.75"/>
+        </frame>
+        <frame id="02">
+          <layerref id="light 01"/>
+          <layerref id="NotesL02"/>
+          <layerref id="NotesR02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="light 01"/>
+          <layerref id="NotesL03" a="0.5"/>
+          <layerref id="NotesR01" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

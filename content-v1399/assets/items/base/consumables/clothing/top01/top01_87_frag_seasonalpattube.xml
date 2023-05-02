@@ -1,0 +1,23 @@
+<f id="Top01_87_PatternTubeA" parentId="Top01">
+  <g name="Boob" icon="$bm/icon_m_vest.png">
+    <s id="Top01_87Skin" cId="Torso" s="items/base/consumables/clothing/top01/top01_13_bikini_skin.png" pri="0.9"/>
+    <s id="Top01_87TubeBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_16_patbase.png" pri="1"/>
+    <c sId="Top01_87TubeBase" c="16740701" a="0.99" b="58.4" ct="1.57" lId="Bot01_87Color1" lw="N"/>
+    <s id="Top01_87TubePattern" cId="Torso" s="items/base/consumables/clothing/top01/top01_16_pattern.png" pri="1.1"/>
+    <c sId="Top01_87TubePattern" c="16737620" a="0.99" b="6.3" ct="1.57" lId="Bot01_87Color2" lw="N"/>
+    <c sId="Top01_87Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_87" icon="items/base/consumables/clothing/top01/top01_87_icon_seasonalpatttube_a.png" w="48" h="48" exurl="items/base/consumables/clothing/top01/top01_87_icon_seasonalpatttube_a.png"/>
+    <s id="IconTop01_87Base" cId="IconTop01_87" s="items/base/consumables/clothing/top01/top01_87_icon_seasonalpatttube_a.png"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_87Color1" name="Color1" desc="Choose a color" sel="Grey" seld="Grey">
+      <c id="Grey" icon="$bu/icon_grey.png" c="16740701" a="0.99" b="58.4" ct="1.57" lId="Bot01_87Color1"/>
+    </b>
+    <b id="Top01_87Color2" name="Color 2" desc="Choose a color" sel="Grey" seld="Grey">
+      <c id="Grey" icon="$bu/icon_grey.png" c="16737620" a="0.99" b="6.3" ct="1.57" lId="Bot01_87Color2"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

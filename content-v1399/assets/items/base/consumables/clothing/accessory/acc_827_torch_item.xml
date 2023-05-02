@@ -1,0 +1,208 @@
+<item.SpriteItem id="6863" name="Tocha da União Play" desc="Obrigado por jogar MiniMundos" tags="rare,action_holdable_toggle,consumable,light,actionbar,wear,hand,usable,nopvp" icon="items/base/consumables/clothing/accessory/acc_827_torch_icon.png" price="1" tokens="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,1.1,0.3"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="itemTurnOnIcon" value="context/item/action/icon_fire_light.png"/>
+    <entry key="itemTurnOn" value="Light"/>
+    <entry key="itemTurnOffIcon" value="context/item/action/icon_fire_put_out.png"/>
+    <entry key="itemTurnOff" value="Put Out"/>
+    <entry key="action_attributes_secondary" value="health+5,speed+5"/>
+  </data>
+  <textures>
+    <texture id="Flame" source="items/base/consumables/clothing/accessory/acc_827_torch_flame.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="base" source="items/base/consumables/clothing/accessory/acc_827_torch_base_item.png" cols="1" rows="1"/>
+    <texture id="Torch" source="items/base/consumables/clothing/accessory/acc_827_torch_item.png" cols="1" rows="1"/>
+    <texture id="back" source="items/base/consumables/clothing/accessory/acc_827_torch_back_item.png" cols="1" rows="1"/>
+    <texture id="sparks" source="items/base/consumables/clothing/accessory/acc_827_torch_flicker.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Torch">
+      <box min="-0.3,0,-0.3" max="0.3,1.1,0.3"/>
+      <layers>
+        <layer id="Flame01" texture="Flame" x="1" y="-28">
+          <view angle="45" y="-73"/>
+          <view angle="135" y="-73"/>
+          <view angle="225" y="-73"/>
+          <view angle="315" y="-73"/>
+        </layer>
+        <layer id="Flame02" texture="Flame" x="1" y="-28">
+          <view angle="45" col="1" y="-73"/>
+          <view angle="135" col="1" y="-73"/>
+          <view angle="225" col="1" y="-73"/>
+          <view angle="315" col="1" y="-73"/>
+        </layer>
+        <layer id="Flame03" texture="Flame" x="1" y="-28">
+          <view angle="45" col="2" y="-73"/>
+          <view angle="135" col="2" y="-73"/>
+          <view angle="225" col="2" y="-73"/>
+          <view angle="315" col="2" y="-73"/>
+        </layer>
+        <layer id="Flame04" texture="Flame" x="1" y="-28">
+          <view angle="45" y="-73" alpha="0"/>
+          <view angle="135" y="-73" alpha="0"/>
+          <view angle="225" y="-73" alpha="0"/>
+          <view angle="315" y="-73" alpha="0"/>
+        </layer>
+        <layer id="Torch" texture="Torch" y="-5">
+          <view angle="45" x="1" y="8"/>
+          <view angle="135" y="8" hm="true"/>
+          <view angle="225" x="1" y="8"/>
+          <view angle="315" y="8" hm="true"/>
+        </layer>
+        <layer id="Base" texture="base" x="1" y="20">
+          <view angle="45" y="-10"/>
+          <view angle="135" y="-10" hm="true"/>
+          <view angle="225" y="-10"/>
+          <view angle="315" y="-10" hm="true"/>
+        </layer>
+        <layer id="TorchBack" texture="back" y="-5">
+          <view angle="45" y="-100"/>
+          <view angle="135" x="2" y="-100" hm="true"/>
+          <view angle="225" y="-100"/>
+          <view angle="315" x="2" y="-100" hm="true"/>
+        </layer>
+        <layer id="sparks_01" texture="sparks">
+          <view angle="45" x="2" y="-77"/>
+          <view angle="135" x="2" y="-77"/>
+          <view angle="225" x="2" y="-77"/>
+          <view angle="315" x="2" y="-77"/>
+        </layer>
+        <layer id="sparks_02" texture="sparks">
+          <view angle="45" col="1" x="2" y="-77"/>
+          <view angle="135" col="1" x="2" y="-77"/>
+          <view angle="225" col="1" x="2" y="-77"/>
+          <view angle="315" col="1" x="2" y="-77"/>
+        </layer>
+        <layer id="sparks_03" texture="sparks">
+          <view angle="45" col="2" x="2" y="-77"/>
+          <view angle="135" col="2" x="2" y="-77"/>
+          <view angle="225" col="2" x="2" y="-77"/>
+          <view angle="315" col="2" x="2" y="-77"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Base"/>
+          <layerref id="TorchBack"/>
+          <layerref id="Flame01"/>
+          <layerref id="Torch"/>
+          <layerref id="sparks_01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Base"/>
+          <layerref id="TorchBack"/>
+          <layerref id="Flame02"/>
+          <layerref id="Torch"/>
+          <layerref id="sparks_02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Base"/>
+          <layerref id="TorchBack"/>
+          <layerref id="Flame03"/>
+          <layerref id="Torch"/>
+          <layerref id="sparks_03"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Base"/>
+          <layerref id="TorchBack"/>
+          <layerref id="Flame04"/>
+          <layerref id="Torch"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="15">
+          <frameref id="Frame01" duration="3"/>
+          <frameref id="Frame02" duration="3"/>
+          <frameref id="Frame03" duration="3"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Frame05"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.55" y="0.8" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle" x="-6">
+          <view angle="45" y="-14"/>
+          <view angle="135" x="12" y="-14"/>
+          <view angle="225" x="12" y="-9"/>
+          <view angle="315" x="1" y="-9"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0x62b2ea"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0x62b2ea" a="0.94"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0x62b2ea" a="0.9"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame01" duration="2"/>
+          <frameref id="Frame03" duration="2"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" x="0.55" y="0.9" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle" x="-17" y="-18">
+          <view angle="45" y="-21"/>
+          <view angle="135" x="35" y="-20"/>
+          <view angle="225" x="35" y="-3"/>
+          <view angle="315" y="-3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xf2fbfd" a="0.5"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0xa5f0f0" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

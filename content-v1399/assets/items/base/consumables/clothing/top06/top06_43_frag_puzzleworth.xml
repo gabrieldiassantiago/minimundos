@@ -1,0 +1,25 @@
+<f id="Top06_43_puzzleworth" parentId="Top06">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top06_40TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_43_puzzleworth_torso_m.png" pri="6"/>
+    </g>
+    <g id="Female">
+      <s id="Top06_40TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_43_puzzleworth_torso_m.png" pri="6"/>
+    </g>
+  </b>
+  <g id="Arm" name="Arm" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_40ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_43_puzzleworth_arm_idle.png" pri="6"/>
+    <s id="Top06_40ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_43_puzzleworth_arm_walk1.png" pri="6"/>
+    <s id="Top06_40ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_43_puzzleworth_arm_walk2.png" pri="6"/>
+    <s id="Top06_40ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_43_puzzleworth_arm_walk3.png" pri="6"/>
+    <s id="Top06_40ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_43_puzzleworth_arm_sit.png" pri="6"/>
+    <s id="Top06_40ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_43_puzzleworth_arm_throw.png" pri="6"/>
+    <s id="Top06_40ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_43_puzzleworth_arm_raise.png" pri="6"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_40" icon="items/base/consumables/clothing/top06/top06_40_icon_mariachi_a.png" w="48" h="48"/>
+    <s id="IconTop06_40VIP" cId="IconTop06_40" s="items/base/shared/s_vipbadge.png" pri="1" vis="false"/>
+    <s id="IconTop06_40Base" cId="IconTop06_40" s="items/base/consumables/clothing/top06/top06_43_puzzleworth_icon.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

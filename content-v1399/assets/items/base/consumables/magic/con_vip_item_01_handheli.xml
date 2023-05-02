@@ -1,0 +1,34 @@
+<item.SpriteItem id="3141" name="Chapcóptero" desc="Um chapéu-helicóptero para voar com você por onde quiser!" tags="usable,rare,wear,misc,action_driveable_toggle" icon="items/base/consumables/magic/icon_con_vip_item_01_handheli.png" minLevel="1" minCPLevel="10" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="1000" premium="Y">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.69,0.49"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+20"/>
+  </data>
+  <textures>
+    <texture id="Miss Teak" source="items/base/consumables/magic/con_vip_item_01_handheli.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0.69,0.49"/>
+      <layers>
+        <layer id="Miss Teak" texture="Miss Teak">
+          <view angle="45" x="13" y="25"/>
+          <view angle="135" x="-13" y="25" hm="true"/>
+          <view angle="225" col="1" x="-14" y="13"/>
+          <view angle="315" col="1" x="14" y="13" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

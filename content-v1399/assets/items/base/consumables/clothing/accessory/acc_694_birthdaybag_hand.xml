@@ -1,0 +1,83 @@
+<item.SpriteItem id="0" name="Zombie Bag" desc="An item" icon="items/base/consumables/clothing/accessory/acc_694_birthdaybag_icon.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bags" source="items/base/consumables/clothing/accessory/acc_694_birthdaybag_hand.png" cols="4" rows="2"/>
+    <texture id="balloons" source="items/base/consumables/clothing/accessory/acc_694_birthdaybag_balloons.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="handbag01" texture="bags">
+          <view angle="0" col="2" x="-36" y="108"/>
+          <view angle="45" x="-27" y="93"/>
+          <view angle="90" col="1" y="87"/>
+          <view angle="135" col="3" x="27" y="90"/>
+          <view angle="180" col="2" x="45" y="104"/>
+          <view angle="225" x="35" y="115"/>
+          <view angle="270" col="1" x="1" y="120" hm="true"/>
+          <view angle="315" col="3" x="-20" y="118"/>
+        </layer>
+        <layer id="handbag02" texture="bags">
+          <view angle="0" col="2" row="1" x="-37" y="108"/>
+          <view angle="45" row="1" x="-27" y="93"/>
+          <view angle="90" col="1" row="1" y="87"/>
+          <view angle="135" col="3" row="1" x="27" y="90"/>
+          <view angle="180" col="2" row="1" x="45" y="104"/>
+          <view angle="225" row="1" x="35" y="115"/>
+          <view angle="270" col="1" row="1" x="1" y="120" hm="true"/>
+          <view angle="315" col="3" row="1" x="-20" y="118"/>
+        </layer>
+        <layer id="balloons01" texture="balloons">
+          <view angle="0" col="2" x="-26" y="79" hm="true"/>
+          <view angle="45" x="-19" y="68" hm="true"/>
+          <view angle="90" col="4" x="-12" y="60" hm="true"/>
+          <view angle="135" x="10" y="64"/>
+          <view angle="180" col="2" x="25" y="80"/>
+          <view angle="225" col="3" x="22" y="79"/>
+          <view angle="270" col="1" x="11" y="85" hm="true"/>
+          <view angle="315" col="3" x="-16" y="83" hm="true"/>
+        </layer>
+        <layer id="balloons02" texture="balloons">
+          <view angle="0" col="2" x="-29" y="81" hm="true"/>
+          <view angle="45" x="-17" y="66" hm="true"/>
+          <view angle="90" col="4" x="-10" y="62" hm="true"/>
+          <view angle="135" x="13" y="65"/>
+          <view angle="180" col="2" x="30" y="82"/>
+          <view angle="225" col="3" x="24" y="81"/>
+          <view angle="270" col="1" x="12" y="87" hm="true"/>
+          <view angle="315" col="3" x="-14" y="81" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="balloons01"/>
+          <layerref id="handbag01"/>
+        </frame>
+        <frame id="Walk01">
+          <layerref id="balloons01"/>
+          <layerref id="handbag01"/>
+        </frame>
+        <frame id="Walk02">
+          <layerref id="balloons02"/>
+          <layerref id="handbag02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Walk01"/>
+          <frameref id="Walk02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

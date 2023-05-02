@@ -1,0 +1,36 @@
+<f id="Top02_50_Chiffon_Gold" parentId="Top02">
+  <g id="Torso">
+    <s id="Top02_50_base" cId="Torso" s="items/base/consumables/clothing/top02/top02_47_torso_chiffon.png" pri="4.1"/>
+    <c sId="Top02_50_base" c="16762882" a="0.79" b="31.3" ct="1.10" lId="Top02_50Color" lw="N"/>
+    <s id="Top02_50Skin" cId="Torso" s="items/base/consumables/clothing/top01/top01_13_bikini_skin.png" pri="1"/>
+    <c sId="Top02_50Skin" c="16760213" a="0.29" b="11.7" ct="0.33" lId="SkinColor" lw="N"/>
+  </g>
+  <g id="Legs" icon="items/base/consumables/clothing/top02/top02_24_icon_piratedress.png">
+    <s id="Top02_leg50_Idle" cId="LegIdle" s="items/base/consumables/clothing/top02/top02_47_idle.png" pri="4.1"/>
+    <c sId="Top02_leg50_Idle" c="16762882" a="0.79" b="31.3" ct="1.10" lId="Top02_50Color" lw="N"/>
+    <s id="Top02_leg50_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/top02/top02_47_walk1.png" pri="4.1"/>
+    <c sId="Top02_leg50_Walk1" c="16762882" a="0.79" b="31.3" ct="1.10" lId="Top02_50Color" lw="N"/>
+    <s id="Top02_leg50_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/top02/top02_47_walk2.png" pri="4.1"/>
+    <c sId="Top02_leg50_Walk2" c="16762882" a="0.79" b="31.3" ct="1.10" lId="Top02_50Color" lw="N"/>
+    <s id="Top02_leg50_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/top02/top02_47_walk3.png" pri="4.1"/>
+    <c sId="Top02_leg50_Walk3" c="16762882" a="0.79" b="31.3" ct="1.10" lId="Top02_50Color" lw="N"/>
+    <s id="Top02_leg50_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/top02/top02_47_walk4.png" pri="4.1"/>
+    <c sId="Top02_leg50_Walk4" c="16762882" a="0.79" b="31.3" ct="1.10" lId="Top02_50Color" lw="N"/>
+    <s id="Top02_leg50_Sit_upper" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_47_sit_upper.png" pri="4.1"/>
+    <c sId="Top02_leg50_Sit_upper" c="16762882" a="0.79" b="31.3" ct="1.10" lId="Top02_50Color" lw="N"/>
+    <s id="Top02_leg50_Sit_lower" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_47_sit_lower.png" pri="4.1"/>
+    <c sId="Top02_leg50_Sit_lower" c="16762882" a="0.79" b="31.3" ct="1.10" lId="Top02_50Color" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop02_50" icon="items/base/consumables/clothing/top02/top02_50_icon_gold.png" w="48" h="48"/>
+    <s id="IconTop02_50base" cId="IconTop02_50" s="items/base/consumables/clothing/top02/top02_50_icon_gold.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top02_50Color" name="Color" desc="Choose a color" sel="Gold" seld="Lilac">
+      <c id="Gold" icon="$bu/icon_metal_gold.png" c="16762882" a="0.79" b="31.3" ct="1.10" lId="Top02_50Color"/>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+</f>

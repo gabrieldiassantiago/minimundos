@@ -1,0 +1,136 @@
+<item.SpriteItem id="0" name="Gauntlet Of Madness" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_ring_b.png" cols="1" rows="1"/>
+    <texture id="gauntlet" source="items/base/consumables/magic/con_hand_55_gauntlet.png" cols="4" rows="2"/>
+    <texture id="logo" source="items/base/consumables/magic/con_hand_84_skeleton.png" cols="5" rows="1"/>
+    <texture id="Glow" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="transform" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="logo_01" texture="logo">
+          <view angle="0" col="2" y="14" hm="true"/>
+          <view angle="45" x="2" y="16"/>
+          <view angle="90" col="1" y="17"/>
+          <view angle="135" x="-4" y="15" hm="true"/>
+          <view angle="180" col="2" x="-1" y="13"/>
+          <view angle="225" col="3" x="-4" y="12"/>
+          <view angle="270" col="4" x="-2" y="14"/>
+          <view angle="315" col="3" x="2" y="9" hm="true"/>
+        </layer>
+        <layer id="glow" texture="Glow" y="40">
+          <view angle="0" x="-1" y="-13"/>
+          <view angle="45" x="2" y="-9"/>
+          <view angle="90" y="-12"/>
+          <view angle="135" x="-2" y="-11"/>
+          <view angle="180" y="-14"/>
+          <view angle="225" x="-5" y="-15"/>
+          <view angle="270" x="-2" y="-11"/>
+          <view angle="315" x="3" y="-18"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="glow" color="0xb2f39d" blend="multiply"/>
+          <layerref id="logo_01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="glow" color="0xb2f39d" blend="multiply"/>
+          <layerref id="logo_01"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="logo_01"/>
+          <layerref id="glow" color="0x4950f0" blend="screen"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="logo_01"/>
+          <layerref id="glow" color="0x4950f0" a="0.9" blend="screen"/>
+        </frame>
+        <frame id="idle">
+          <layerref id="logo_01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Warmup" framerate="8" loop="false">
+          <frameref id="Frame01">
+            <sample id="transform"/>
+          </frameref>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="idle" duration="6"/>
+        </animation>
+        <animation id="idle" framerate="4">
+          <frameref id="idle"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.25" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" y="30">
+          <view angle="0" y="5" hm="true"/>
+          <view angle="45" y="6"/>
+          <view angle="90" y="6"/>
+          <view angle="135" y="5" hm="true"/>
+          <view angle="180" y="4"/>
+          <view angle="225" x="-2" y="5"/>
+          <view angle="270" x="-1" y="6"/>
+          <view angle="315" x="2" y="2" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xd6fadb" a="0.9"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0xd6fadb" a="0.8"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0xd6fadb" a="0.85"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Light" color="0xd6fadb" a="0.8"/>
+        </frame>
+        <frame id="_BLANK">
+          <layerref id="Light" color="0xd6fadb" a="0"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Light" color="0xd6fadb"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Warmup" framerate="4" loop="false">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="_BLANK"/>
+        </animation>
+        <animation id="idle" framerate="4">
+          <frameref id="_BLANK"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

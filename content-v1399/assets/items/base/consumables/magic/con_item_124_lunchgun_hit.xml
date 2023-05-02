@@ -1,0 +1,124 @@
+<item.SpriteItem id="0" name="Hit" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <textures>
+    <texture id="hit_03_snowball" source="items/base/consumables/throwables/thr_03_burger_hit.png" cols="4" rows="1"/>
+    <texture id="Texture01" source="items/base/consumables/magic/con_item_124_lunchgun_hit.png" cols="2" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="splat" source="items/base/consumables/magic/sndfx_splat.mp3"/>
+    <sound id="soft" source="items/base/consumables/magic/sndfx_hitsoft.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Infront">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="Hit 01" texture="hit_03_snowball">
+          <view y="-66"/>
+        </layer>
+        <layer id="Hit 02" texture="hit_03_snowball">
+          <view col="1" y="-65"/>
+        </layer>
+        <layer id="Hit 03" texture="hit_03_snowball">
+          <view col="2" y="-62"/>
+        </layer>
+        <layer id="Hit 04" texture="hit_03_snowball">
+          <view col="3" y="-66"/>
+        </layer>
+        <layer id="Splat01" texture="Texture01">
+          <view y="-85"/>
+        </layer>
+        <layer id="Splat02" texture="Texture01">
+          <view col="1" y="-85"/>
+        </layer>
+        <layer id="Splat03" texture="Texture01">
+          <view row="1" y="-85"/>
+        </layer>
+        <layer id="Splat04" texture="Texture01">
+          <view col="1" row="1" y="-85"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Hit 01">
+          <layerref id="Hit 01"/>
+          <layerref id="Splat01"/>
+        </frame>
+        <frame id="Hit 02">
+          <layerref id="Hit 02"/>
+          <layerref id="Splat02"/>
+        </frame>
+        <frame id="Hit 03">
+          <layerref id="Hit 03"/>
+          <layerref id="Splat03"/>
+        </frame>
+        <frame id="Hit 04">
+          <layerref id="Hit 04"/>
+          <layerref id="Splat04"/>
+          <layerref id="Hit 01" y="45" a="0.5"/>
+        </frame>
+        <frame id="Hit 05">
+          <layerref id="Splat04" y="10" a="0.8"/>
+          <layerref id="Hit 04" y="10"/>
+          <layerref id="Splat02" y="68"/>
+        </frame>
+        <frame id="Hit 05n">
+          <layerref id="Splat04" y="12" a="0.45"/>
+          <layerref id="Hit 04" y="12" a="0.25"/>
+          <layerref id="Splat01" y="40" a="0.5"/>
+        </frame>
+        <frame id="Hit 06n">
+          <layerref id="Splat03" y="44"/>
+          <layerref id="Splat04" a="0.6"/>
+        </frame>
+        <frame id="Hit 07n">
+          <layerref id="Splat02" y="44" a="0.5"/>
+          <layerref id="Splat03" y="10" a="0.65"/>
+        </frame>
+        <frame id="Hit 08n">
+          <layerref id="Splat04" y="40"/>
+        </frame>
+        <frame id="Hit 09">
+          <layerref id="Splat04" y="40"/>
+        </frame>
+        <frame id="Hit 10">
+          <layerref id="Splat04" y="60" a="0.8"/>
+        </frame>
+        <frame id="Hit 11">
+          <layerref id="Splat03" y="80" a="0.4"/>
+        </frame>
+        <frame id="off">
+          <layerref id="Hit 01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Hit" framerate="8" loop="false">
+          <frameref id="Hit 01">
+            <sample id="soft"/>
+          </frameref>
+          <frameref id="Hit 02">
+            <sample id="splat" vol="0.4"/>
+          </frameref>
+          <frameref id="Hit 03"/>
+          <frameref id="Hit 04"/>
+          <frameref id="Hit 05">
+            <sample id="soft" vol="0.5"/>
+          </frameref>
+          <frameref id="Hit 05n"/>
+          <frameref id="Hit 07n"/>
+          <frameref id="Hit 08n"/>
+          <frameref id="Hit 09"/>
+          <frameref id="Hit 10"/>
+          <frameref id="Hit 11"/>
+          <frameref id="Hit 01"/>
+          <frameref id="Hit 02"/>
+          <frameref id="Hit 03"/>
+          <frameref id="Hit 04"/>
+          <frameref id="Hit 05n"/>
+          <frameref id="Hit 01"/>
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

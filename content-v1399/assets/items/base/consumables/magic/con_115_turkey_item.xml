@@ -1,0 +1,38 @@
+<item.SpriteItem name="Peruzito" desc="Um peru carregável." tags="rare,thanksgiving,consumable,actionbar,usable,wear,hand,action_holdable_toggle" icon="items/base/consumables/magic/con_115_turkey_icon.png" price="75" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="3643">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.25,0.15"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="trophy" source="items/base/consumables/magic/con_115_turkey_item.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="trophy">
+      <box min="-0.15,0,-0.15" max="0.15,0.25,0.15"/>
+      <layers>
+        <layer id="duck" texture="trophy">
+          <view angle="45" y="10"/>
+          <view angle="135" y="10" hm="true"/>
+          <view angle="225" col="2" x="4" y="7" hm="true"/>
+          <view angle="315" col="2" x="-2" y="6"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

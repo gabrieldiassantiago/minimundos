@@ -1,0 +1,63 @@
+<item.SpriteItem id="0" name="Cat Headphones" desc="cat headphones" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="phones" source="items/base/consumables/clothing/accessory/acc_554_head_headphones_cat01.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/consumables/clothing/accessory/acc_554_head_lights_cat01.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="phones" texture="phones">
+          <view angle="0" x="1" y="-2"/>
+          <view angle="45" col="1" y="1"/>
+          <view angle="90" col="2" y="6"/>
+          <view angle="135" col="1" y="1" hm="true"/>
+          <view angle="180" x="1" y="-2" hm="true"/>
+          <view angle="225" col="4" hm="true"/>
+          <view angle="270" col="3" y="1"/>
+          <view angle="315" col="4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="phones"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" x="2" y="-33"/>
+          <view angle="45" col="1" x="-4" y="-31"/>
+          <view angle="90" row="1" x="3" y="-47"/>
+          <view angle="135" col="1" x="1" y="-30" hm="true"/>
+          <view angle="180" y="-33" hm="true"/>
+          <view angle="225" col="1" row="1" x="-21" y="-12" hm="true"/>
+          <view angle="270" alpha="0"/>
+          <view angle="315" col="1" row="1" x="17" y="-11"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

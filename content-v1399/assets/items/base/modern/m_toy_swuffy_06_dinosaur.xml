@@ -1,0 +1,34 @@
+<item.SpriteItem id="0" name="Swuffy T-Rex" desc="A cute T-Rex soft toy" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_toy_swuffy_06_dinosaur.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="deer" texture="Texture">
+          <view angle="0" col="2" x="-13" y="18" hm="true"/>
+          <view angle="45" x="-7" y="16"/>
+          <view angle="90" col="1" x="-1" y="17"/>
+          <view angle="135" x="3" y="18" hm="true"/>
+          <view angle="180" col="2" x="10" y="17"/>
+          <view angle="225" col="3" x="2" y="19"/>
+          <view angle="270" col="4" y="23"/>
+          <view angle="315" col="3" x="-5" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

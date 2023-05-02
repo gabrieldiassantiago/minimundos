@@ -1,0 +1,43 @@
+<item.SpriteItem id="6556" name="Asas Rebelde Deluxe" desc="Um par de asas de Fênix turbinadas" tags="rare,consumable,actionbar,wear,back,action_wearable_toggle" icon="items/base/consumables/back/icon_con_bak_item_299_devilsteampunk.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.449,0,-0.49" max="0.49,1.1,1.49"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="fire+50"/>
+    <entry key="action_attributes_secondary" value="speed+50,health+10"/>
+  </data>
+  <textures>
+    <texture id="Fantasy Wings" source="items/base/consumables/back/con_bak_item_299_devilsteampunk.png" cols="2" rows="1"/>
+    <texture id="Shadow" source="items/base/consumables/feet/con_feet_62_cloud_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.449,0,-0.49" max="0.49,1.1,1.49"/>
+      <layers>
+        <layer id="Shadow" texture="Shadow">
+          <view angle="45" x="28" y="23"/>
+          <view angle="135" x="39" y="51" hm="true"/>
+          <view angle="225" x="-20" y="46"/>
+          <view angle="315" x="-39" y="21" hm="true"/>
+        </layer>
+        <layer id="Fantasy" texture="Fantasy Wings">
+          <view angle="45" x="53" y="31"/>
+          <view angle="135" x="13" y="63" hm="true"/>
+          <view angle="225" col="1" x="-42" y="60"/>
+          <view angle="315" col="1" x="-21" y="31" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

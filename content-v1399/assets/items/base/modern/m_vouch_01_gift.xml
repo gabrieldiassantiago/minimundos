@@ -1,0 +1,59 @@
+<item.SpriteItem id="1870" name="Vale Presente de Roupa" desc="Vale 1 ouro na compra de roupas. Excelente para amigo secreto." tags="rare,misc,voucher_clothing_basic,stackable" icon="items/base/modern/icon_m_vouch_01_gift.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="88" tokens="888">
+  <volume>
+    <box min="-0.17,0,-0.3" max="0.17,0.05,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="defaultAnimation" value="Off"/>
+  </data>
+  <textures>
+    <texture id="globe" source="items/base/modern/m_vouch_01_gift.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="voucher" layer="floor">
+      <box min="-0.17,0,-0.3" max="0.17,0.05,0.3"/>
+      <layers>
+        <layer id="snowglobe" texture="globe">
+          <view angle="45" x="1" y="17"/>
+          <view angle="135" col="1" x="-2" y="17"/>
+          <view angle="225" row="1" x="1" y="16"/>
+          <view angle="315" col="1" row="1" x="-3" y="16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_00">
+          <layerref id="snowglobe"/>
+        </frame>
+        <frame id="Frame_01">
+          <layerref id="snowglobe"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="snowglobe"/>
+        </frame>
+        <frame id="Frame_03">
+          <layerref id="snowglobe"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="2">
+          <frameref id="Frame_00"/>
+        </animation>
+        <animation id="On" framerate="2">
+          <frameref id="Frame_01"/>
+          <frameref id="Frame_02"/>
+          <frameref id="Frame_03"/>
+          <frameref id="Frame_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

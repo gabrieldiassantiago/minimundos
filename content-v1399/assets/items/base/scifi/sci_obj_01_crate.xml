@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="De metal sólido, cheia de parafusos." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/scifi/icon_sci_obj_01_crate.png" id="1208" name="Caixa Espacial" tags="misc" price="20" tokens="200" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.49,1,0.49" min="-0.49,0,-0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action event="toggle" id="Toggle" trigger="false"/>
+    <action event="animate(Open)" id="Open" state="true"/>
+    <action event="animate(Closed)" id="Close" state="true"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture cols="1" id="crate" rows="1" source="items/base/scifi/sci_obj_01_crate.png"/>
+    <texture cols="1" id="Open" rows="1" source="items/base/scifi/sci_obj_01_crateopen.png"/>
+  </textures>
+  <nodes>
+    <node id="Crate">
+      <box max="0.49,1,0.49" min="-0.49,0,-0.49"/>
+      <layers>
+        <layer id="Layer" texture="crate">
+          <view angle="45" y="38"/>
+          <view angle="135" hm="true" y="38"/>
+          <view angle="225" y="38"/>
+          <view angle="315" hm="true" y="38"/>
+        </layer>
+        <layer id="Open" texture="Open">
+          <view angle="45" y="-41"/>
+          <view angle="135" hm="true" y="-41"/>
+          <view angle="225" y="-41"/>
+          <view angle="315" hm="true" y="-41"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Layer"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="Layer"/>
+          <layerref id="Open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Closed">
+          <frameref id="Closed"/>
+        </animation>
+        <animation framerate="4" id="Open">
+          <frameref id="Open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

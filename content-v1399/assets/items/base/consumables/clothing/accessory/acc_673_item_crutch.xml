@@ -1,0 +1,34 @@
+<item.SpriteItem name="Muletas Play" desc="Um par de muletas de aço" tags="consumable,actionbar,wear,body,action_wearable_toggle" icon="items/base/consumables/clothing/accessory/acc_673_icon_crutches.png" price="700" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="6275">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,0.3,0.48"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="board" source="items/base/consumables/clothing/accessory/acc_673_item_crutches.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.48,0,-0.48" max="0.48,0.3,0.48"/>
+      <layers>
+        <layer id="board" texture="board">
+          <view angle="45" x="6" y="33"/>
+          <view angle="135" col="1" x="-1" y="29"/>
+          <view angle="225" row="1" x="10" y="35"/>
+          <view angle="315" col="1" row="1" x="-2" y="34"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

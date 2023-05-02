@@ -1,0 +1,71 @@
+<item.WidgetItem id="864" name="Televisor LCD de Parede" desc="Assista seus videos favoritos neste moderno televisor." tags="appliance,wall,widget" icon="items/base/scifi/icon_sci_tv_01_plasma.png" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" widget="widgets/widget_youtube.swf" price="220" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="0,-0.74,-1.4" max="0.001,0.74,1.4"/>
+  </volume>
+  <events>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="Video Change">
+      <eval>
+        <func type="relational" id="Video Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+  </data>
+  <navigate position="infront" sitRange="8.00" standRange="5.00" targetRange="2.00" accessibleRange="2.00"/>
+  <textures>
+    <texture id="Texture" source="items/base/scifi/sci_tv_01_plasma.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_screen_tv_wide.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tv">
+      <box min="0,-0.74,-1.4" max="0.001,0.74,1.4"/>
+      <layers>
+        <layer id="base" texture="Texture" align="middle">
+          <view angle="45" x="-1" y="4"/>
+          <view angle="135" y="4" hm="true"/>
+          <view angle="225" col="1" x="6" y="53"/>
+          <view angle="315" col="1" x="-7" y="53" hm="true"/>
+        </layer>
+        <layer id="WidgetLayer" type="panel" texture="Texture" w="2.399" h="1.22">
+          <view angle="45" x="5" y="3"/>
+          <view angle="135" col="1" x="-5" y="3"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="-0.15" s="6.6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="1"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Light" color="0xb6e7f4"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.WidgetItem>

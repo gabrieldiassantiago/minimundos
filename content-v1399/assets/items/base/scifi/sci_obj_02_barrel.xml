@@ -1,0 +1,60 @@
+<item.SpriteItem desc="Guarda combustível para a nave. Tome cuidado." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="table" icon="items/base/scifi/icon_sci_obj_02_barrel.png" id="1209" name="Barril Espacial" tags="misc" price="20" tokens="200" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.4,1.1667,0.4" min="-0.4,0,-0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action event="toggle" id="Toggle" trigger="false"/>
+    <action event="animate(Open)" id="Open" state="true"/>
+    <action event="animate(Closed)" id="Close" state="true"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture cols="1" id="Open" rows="1" source="items/base/scifi/sci_obj_02_barrelopen.png"/>
+    <texture cols="1" id="Barrel" rows="1" source="items/base/scifi/sci_obj_02_barrel.png"/>
+  </textures>
+  <nodes>
+    <node id="Crate">
+      <box max="0.4,1.1667,0.4" min="-0.4,0,-0.4"/>
+      <layers>
+        <layer id="Barrel" texture="Barrel">
+          <view angle="45" y="21"/>
+          <view angle="135" hm="true" y="21"/>
+          <view angle="225" y="21"/>
+          <view angle="315" hm="true" y="21"/>
+        </layer>
+        <layer id="Open" texture="Open">
+          <view angle="45" y="-69"/>
+          <view angle="135" hm="true" y="-69"/>
+          <view angle="225" y="-69"/>
+          <view angle="315" hm="true" y="-69"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Barrel"/>
+        </frame>
+        <frame id="Open">
+          <layerref id="Barrel"/>
+          <layerref id="Open"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Closed">
+          <frameref id="Closed"/>
+        </animation>
+        <animation framerate="4" id="Open">
+          <frameref id="Open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

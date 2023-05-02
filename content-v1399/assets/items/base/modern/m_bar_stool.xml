@@ -1,0 +1,48 @@
+<item.ChairItem desc="Uma banqueda moderna de acrílico preto e metal." dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/modern/icon_m_bar_stool.png" id="376" name="Banqueta de Bar Moderna" tags="chair" price="20" tokens="200" minLevel="1" minCPLevel="1">
+  <seats>
+    <seat y="0.73">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box max="0.26,0.81,0.26" min="-0.26,0,-0.26"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture cols="2" id="stool" rows="1" source="items/base/modern/m_bar_stool.png"/>
+  </textures>
+  <nodes>
+    <node id="Seat" x="0" y="0" z="0">
+      <box max="0.26,0.81,0.26" min="-0.26,0,-0.26"/>
+      <layers>
+        <layer id="Layer" texture="stool">
+          <view angle="45" col="0" row="0" y="17"/>
+          <view angle="135" col="0" mirror="true" row="0" y="17"/>
+          <view angle="225" col="1" row="0" y="17"/>
+          <view angle="315" col="1" mirror="true" row="0" y="17"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

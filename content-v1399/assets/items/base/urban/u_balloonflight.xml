@@ -1,0 +1,135 @@
+<item.SpriteItem name="Balões Azuis Flutuantes" desc="Balões para uma ocasião especial" tags="admin,misc" icon="items/base/urban/u_balloonflight_icon.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="4880" price="88">
+  <volume>
+    <box min="-0.48,2.1,-0.48" max="0.48,2.84,0.48"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <textures>
+    <texture id="jar" source="items/base/urban/u_zoo_balloons_item.png" cols="1" rows="1"/>
+    <texture id="Shadow" source="items/base/urban/u_balloonflight_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.48,2.1,-0.48" max="0.48,2.84,0.48"/>
+      <layers>
+        <layer id="jar01" texture="jar" y="15">
+          <view y="-30"/>
+        </layer>
+        <layer id="shadow" texture="Shadow" y="15">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="jar01" y="-12"/>
+          <layerref id="shadow"/>
+        </frame>
+        <frame id="02">
+          <layerref id="jar01" y="-14"/>
+          <layerref id="shadow" a="0.95"/>
+        </frame>
+        <frame id="03">
+          <layerref id="jar01" y="-16"/>
+          <layerref id="shadow" a="0.9"/>
+        </frame>
+        <frame id="04">
+          <layerref id="jar01" y="-19"/>
+          <layerref id="shadow" a="0.85"/>
+        </frame>
+        <frame id="05">
+          <layerref id="jar01" y="-24"/>
+          <layerref id="shadow" a="0.8"/>
+        </frame>
+        <frame id="06">
+          <layerref id="jar01" y="-29"/>
+          <layerref id="shadow" a="0.75"/>
+        </frame>
+        <frame id="07">
+          <layerref id="jar01" y="-35"/>
+          <layerref id="shadow" a="0.7"/>
+        </frame>
+        <frame id="08">
+          <layerref id="jar01" y="-43"/>
+          <layerref id="shadow" a="0.65"/>
+        </frame>
+        <frame id="09">
+          <layerref id="jar01" y="-51"/>
+          <layerref id="shadow" a="0.6"/>
+        </frame>
+        <frame id="10">
+          <layerref id="jar01" y="-60" a="0.95"/>
+          <layerref id="shadow" a="0.55"/>
+        </frame>
+        <frame id="11">
+          <layerref id="jar01" y="-70" a="0.75"/>
+          <layerref id="shadow" a="0.5"/>
+        </frame>
+        <frame id="12">
+          <layerref id="jar01" y="-82" a="0.5"/>
+          <layerref id="shadow" a="0.45"/>
+        </frame>
+        <frame id="13">
+          <layerref id="jar01" y="-96" a="0.4"/>
+          <layerref id="shadow" a="0.4"/>
+        </frame>
+        <frame id="14">
+          <layerref id="jar01" y="-115" a="0.3"/>
+          <layerref id="shadow" a="0.35"/>
+        </frame>
+        <frame id="15">
+          <layerref id="jar01" y="-132" a="0.2"/>
+          <layerref id="shadow" a="0.3"/>
+        </frame>
+        <frame id="16">
+          <layerref id="jar01" y="-150" a="0.1"/>
+          <layerref id="shadow" a="0.25"/>
+        </frame>
+        <frame id="17">
+          <layerref id="jar01" y="-156" a="0"/>
+          <layerref id="shadow" a="0.1"/>
+        </frame>
+        <frame id="01fade">
+          <layerref id="jar01" y="-12" a="0.2"/>
+          <layerref id="shadow" a="0.5"/>
+        </frame>
+        <frame id="02fade">
+          <layerref id="jar01" y="-14" a="0.4"/>
+          <layerref id="shadow" a="0.65"/>
+        </frame>
+        <frame id="03fade">
+          <layerref id="jar01" y="-16" a="0.6"/>
+          <layerref id="shadow" a="0.85"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="01fade"/>
+          <frameref id="02fade"/>
+          <frameref id="03fade"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="09"/>
+          <frameref id="10"/>
+          <frameref id="11"/>
+          <frameref id="12"/>
+          <frameref id="13"/>
+          <frameref id="14"/>
+          <frameref id="15"/>
+          <frameref id="16"/>
+          <frameref id="17" duration="30"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

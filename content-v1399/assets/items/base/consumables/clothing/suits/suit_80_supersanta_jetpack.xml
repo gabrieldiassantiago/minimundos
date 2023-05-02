@@ -1,0 +1,121 @@
+<item.SpriteItem id="0" name="Adamantium Cape" desc="An item" tags="wearable, consumable, actionbar" icon="items/base/consumables/back/icon_con_head_15_level1.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+  </volume>
+  <textures>
+    <texture id="Adamantium" source="items/base/consumables/clothing/suits/suit_80_supersanta_jetpack.png" cols="5" rows="1"/>
+    <texture id="flame" source="items/base/consumables/clothing/suits/suit_80_supersanta_flame.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.0769,-0.3333,-0.1154" max="0.0385,0.2436,0.1923"/>
+      <layers>
+        <layer id="jetpack" texture="Adamantium">
+          <view angle="0" col="2" x="-6" y="40"/>
+          <view angle="45" y="50"/>
+          <view angle="90" col="1" y="40"/>
+          <view angle="135" x="-3" y="50" hm="true"/>
+          <view angle="180" col="2" x="5" y="40" hm="true"/>
+          <view angle="225" col="3" y="40" hm="true"/>
+          <view angle="270" col="4" y="40"/>
+          <view angle="315" col="3" y="40"/>
+        </layer>
+        <layer id="sit" texture="sit">
+          <view angle="45" x="5" y="43"/>
+          <view angle="135" x="-5" y="44" hm="true"/>
+          <view angle="225" col="1" x="-5" y="35" hm="true"/>
+          <view angle="315" col="1" x="5" y="35"/>
+        </layer>
+        <layer id="flame" texture="flame">
+          <view angle="0" x="-7" y="55" hm="true"/>
+          <view angle="45" x="1" y="65"/>
+          <view angle="90" y="55"/>
+          <view angle="135" x="-3" y="65" hm="true"/>
+          <view angle="180" x="6" y="55"/>
+          <view angle="225" x="2" y="55"/>
+          <view angle="270" x="1" y="55"/>
+          <view angle="315" x="-1" y="55" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="jet_01">
+          <layerref id="flame"/>
+          <layerref id="jetpack"/>
+        </frame>
+        <frame id="Sit">
+          <layerref id="jetpack"/>
+        </frame>
+        <frame id="jet_02">
+          <layerref id="flame" y="-1"/>
+          <layerref id="jetpack"/>
+        </frame>
+        <frame id="jet_03">
+          <layerref id="flame" a="0.9"/>
+          <layerref id="jetpack"/>
+        </frame>
+        <frame id="jet_04">
+          <layerref id="flame" y="-1" a="0.9"/>
+          <layerref id="jetpack"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="6">
+          <frameref id="jet_01"/>
+          <frameref id="jet_02"/>
+          <frameref id="jet_03"/>
+          <frameref id="jet_04"/>
+        </animation>
+        <animation id="Walk" framerate="6">
+          <frameref id="jet_01"/>
+          <frameref id="jet_02"/>
+          <frameref id="jet_03"/>
+          <frameref id="jet_04"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="flame" texture="flame">
+          <view angle="0" x="-7" y="55" hm="true"/>
+          <view angle="45" x="1" y="65"/>
+          <view angle="90" y="55"/>
+          <view angle="135" x="-3" y="65" hm="true"/>
+          <view angle="180" x="6" y="55"/>
+          <view angle="225" x="2" y="55"/>
+          <view angle="270" x="1" y="55"/>
+          <view angle="315" x="-1" y="55" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="jet_01">
+          <layerref id="flame"/>
+          <layerref id="jetpack"/>
+        </frame>
+        <frame id="jet_02">
+          <layerref id="flame" y="-1"/>
+          <layerref id="jetpack"/>
+        </frame>
+        <frame id="jet_03">
+          <layerref id="flame" a="0.9"/>
+          <layerref id="jetpack"/>
+        </frame>
+        <frame id="jet_04">
+          <layerref id="flame" y="-1" a="0.9"/>
+          <layerref id="jetpack"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="jet_01"/>
+          <frameref id="jet_02"/>
+          <frameref id="jet_03"/>
+          <frameref id="jet_04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

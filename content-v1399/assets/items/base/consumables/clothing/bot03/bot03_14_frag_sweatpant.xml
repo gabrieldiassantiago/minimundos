@@ -1,0 +1,68 @@
+<f id="Bot03_14Sweatpant" parentId="Bot03">
+  <g id="SweatPants" icon="$bu/icon_skinny_trouser.png">
+    <s id="SweatPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_12_idle.png" pri="4.1"/>
+    <s id="SweatPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_12_walk1.png" pri="4.1"/>
+    <s id="SweatPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_12_walk2.png" pri="4.1"/>
+    <s id="SweatPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_12_walk3.png" pri="4.1"/>
+    <s id="SweatPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_12_walk4.png" pri="4.1"/>
+    <s id="SweatSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_12_sit_upper.png" pri="4.1"/>
+    <s id="SweatSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/bot03/bot03_12_sit_lower.png" pri="4.1"/>
+    <c sId="SweatPantIdleBase" c="7237230" a="1.00" b="71.7" ct="0.68" lId="Bot03_14Color1" lw="N"/>
+    <c sId="SweatPantWalk1Base" c="7237230" a="1.00" b="71.7" ct="0.68" lId="Bot03_14Color1" lw="N"/>
+    <c sId="SweatPantWalk2Base" c="7237230" a="1.00" b="71.7" ct="0.68" lId="Bot03_14Color1" lw="N"/>
+    <c sId="SweatPantWalk3Base" c="7237230" a="1.00" b="71.7" ct="0.68" lId="Bot03_14Color1" lw="N"/>
+    <c sId="SweatPantWalk4Base" c="7237230" a="1.00" b="71.7" ct="0.68" lId="Bot03_14Color1" lw="N"/>
+    <c sId="SweatSitUpperBase" c="7237230" a="1.00" b="71.7" ct="0.68" lId="Bot03_14Color1" lw="N"/>
+    <c sId="SweatSitLowerBase" c="7237230" a="1.00" b="71.7" ct="0.68" lId="Bot03_14Color1" lw="N"/>
+    <s id="SweatPantIdleDecal" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_14_idle.png" pri="4.1"/>
+    <s id="SweatPantWalk1Decal" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_14_walk1.png" pri="4.1"/>
+    <s id="SweatPantWalk2Decal" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_14_walk2.png" pri="4.1"/>
+    <s id="SweatPantWalk3Decal" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_14_walk3.png" pri="4.1"/>
+    <s id="SweatPantWalk4Decal" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_14_walk4.png" pri="4.1"/>
+    <s id="SweatSitUpperDecal" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_14_upper.png" pri="4.1"/>
+    <c sId="SweatPantIdleDecal" c="5570560" a="0.87" b="44.3" ct="0.71" lId="Bot03_14Color2" lw="N"/>
+    <c sId="SweatPantWalk1Decal" c="5570560" a="0.87" b="44.3" ct="0.71" lId="Bot03_14Color2" lw="N"/>
+    <c sId="SweatPantWalk2Decal" c="5570560" a="0.87" b="44.3" ct="0.71" lId="Bot03_14Color2" lw="N"/>
+    <c sId="SweatPantWalk3Decal" c="5570560" a="0.87" b="44.3" ct="0.71" lId="Bot03_14Color2" lw="N"/>
+    <c sId="SweatPantWalk4Decal" c="5570560" a="0.87" b="44.3" ct="0.71" lId="Bot03_14Color2" lw="N"/>
+    <c sId="SweatSitUpperDecal" c="5570560" a="0.87" b="44.3" ct="0.71" lId="Bot03_14Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconBot03_14" icon="items/base/consumables/clothing/bot03/bot03_14_icon_sweatpant.png" w="48" h="48"/>
+    <s id="IconBot03_14Base" cId="IconBot03_14" s="items/base/consumables/clothing/bot03/bot03_14_icon_sweatpant_a.png"/>
+    <c sId="IconBot03_14Base" c="7237230" a="1.00" b="71.7" ct="0.68" lId="Bot03_14Color1" lw="N"/>
+    <s id="IconBot03_14Decal" cId="IconBot03_14" s="items/base/consumables/clothing/bot03/bot03_14_icon_sweatpant_b.png" pri="1"/>
+    <c sId="IconBot03_14Decal" c="5570560" a="0.87" b="44.3" ct="0.71" lId="Bot03_14Color2" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Bot03_14Color1" name="Color 1" desc="Choose a color" sel="Grey" seld="Grey">
+      <c id="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="97.8" ct="0.05" lId="Bot03_14Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7237230" a="1.00" b="71.7" ct="0.68" lId="Bot03_14Color1"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16226221" a="1.00" b="49.2" ct="0.17" lId="Bot03_14Color1"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.88" b="38.3" ct="0.50" lId="Bot03_14Color1"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="8101831" a="1.00" b="51.1" ct="0.51" lId="Bot03_14Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="5907555" a="1.00" b="68.1" ct="0.93" lId="Bot03_14Color1"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11767366" a="0.99" b="34.6" ct="0.21" lId="Bot03_14Color1"/>
+      <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="5058827" a="1.00" b="60.5" ct="0.81" lId="Bot03_14Color1"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.87" b="44.3" ct="0.71" lId="Bot03_14Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="4013373" a="1.00" b="44.3" ct="0.74" lId="Bot03_14Color1"/>
+    </b>
+    <b id="Bot03_14Color2" name="Color 2" desc="Choose a color" sel="Burgandy" seld="Burgandy">
+      <c id="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="59.2" ct="0.05" lId="Bot03_14Color2"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7237230" a="1.00" b="71.7" ct="0.68" lId="Bot03_14Color2"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16226221" a="1.00" b="49.2" ct="0.17" lId="Bot03_14Color2"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.88" b="38.3" ct="0.50" lId="Bot03_14Color2"/>
+      <c id="LightBlue" name="Stone wash" icon="$bu/icon_stonewash.png" c="8101831" a="1.00" b="51.1" ct="0.51" lId="Bot03_14Color2"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="5907555" a="1.00" b="68.1" ct="0.93" lId="Bot03_14Color2"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11767366" a="0.99" b="34.6" ct="0.21" lId="Bot03_14Color2"/>
+      <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="5058827" a="1.00" b="60.5" ct="0.81" lId="Bot03_14Color2"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.87" b="44.3" ct="0.71" lId="Bot03_14Color2"/>
+      <c id="Black" icon="$bu/icon_black.png" c="4013373" a="1.00" b="45.8" ct="0.74" lId="Bot03_14Color2"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color 1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot03_14Color1"/>
+      <wizchoice id="Color2" name="Color 2" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Bot03_14Color2"/>
+    </wizbox>
+  </g>
+  <ds id="JSBottom"/>
+</f>

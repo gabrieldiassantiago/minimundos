@@ -1,0 +1,58 @@
+<item.SpriteItem id="0" name="D handbag" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_846_boxbag_wear.png" cols="4" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="handbag01" texture="Texture">
+          <view angle="0" col="1" x="-46" y="57" hm="true"/>
+          <view angle="45" x="-35" y="43"/>
+          <view angle="90" col="3" row="1" y="37"/>
+          <view angle="135" col="2" row="1" x="28" y="43"/>
+          <view angle="180" col="1" row="1" x="47" y="59"/>
+          <view angle="225" row="1" x="34" y="74"/>
+          <view angle="270" col="3" x="1" y="82"/>
+          <view angle="315" x="-32" y="75" hm="true"/>
+        </layer>
+        <layer id="handbag02" texture="Texture">
+          <view angle="0" col="1" row="1" x="-42" y="90" hm="true"/>
+          <view angle="45" row="1" x="-32" y="80"/>
+          <view angle="90" col="2" row="1" x="-5" y="72"/>
+          <view angle="135" row="1" x="21" y="75" hm="true"/>
+          <view angle="180" col="1" row="1" x="42" y="85"/>
+          <view angle="225" row="1" x="36" y="100"/>
+          <view angle="270" col="2" row="1" x="6" y="108" hm="true"/>
+          <view angle="315" row="1" x="-26" y="105" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="handbag01"/>
+        </frame>
+        <frame id="Walk01">
+          <layerref id="handbag02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Idle"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

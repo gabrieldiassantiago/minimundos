@@ -1,0 +1,37 @@
+<item.SpriteItem id="7353" name="Bolo de Natal Voador" desc="Jogue o bolo na cara deles! [14 de 25]" tags="rare,consumable,actionbar,group_arcane,real,bad,usable,stackable,action_consumable_target" icon="items/base/consumables/clothing/accessory/acc_903_icon_adventbox_bear.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.1,0.25"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="10"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="action_attributes_secondary" value="health+25,speed+25"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_throw.png"/>
+  </data>
+  <textures>
+    <texture id="pie" source="items/base/consumables/clothing/accessory/acc_903_icon_adventbox_bear.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="pie">
+      <box min="-0.25,0,-0.25" max="0.25,0.1,0.25"/>
+      <layers>
+        <layer id="pie" texture="pie">
+          <view angle="45" y="21"/>
+          <view angle="135" y="21" hm="true"/>
+          <view angle="225" y="21"/>
+          <view angle="315" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

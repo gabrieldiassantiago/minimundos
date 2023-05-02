@@ -1,0 +1,34 @@
+<item.SpriteItem id="4202" name="Adoption Billboard" desc="Enter Now!" tags="admin,floor" icon="items/base/urban/icon_u_zoosign_competition.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0.49,0,-0.49" max="0.51,0.5,0.49"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_zoocomp.as"/>
+    <event id="select" script="scripts/item/select_zoocomp.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <navigate accessibleRange="10" usableRange="10"/>
+  <data>
+    <entry key="itemFacebook" value="More Information"/>
+    <entry key="itemFacebookTip" value="Enter to Win!"/>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="zoo" source="items/base/urban/u_zoosign_competition.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="billboard" x="0.5">
+      <box min="-0.01,0,-0.49" max="0.01,0.5,0.49"/>
+      <layers>
+        <layer id="zoo" texture="zoo" y="18">
+          <view angle="45" y="80" alpha="0" hm="true"/>
+          <view angle="135" x="-31" y="65"/>
+          <view angle="225" y="80" alpha="0" hm="true"/>
+          <view angle="315" x="-31" y="65" alpha="0"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

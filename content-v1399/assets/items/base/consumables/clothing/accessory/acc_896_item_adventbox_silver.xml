@@ -1,0 +1,49 @@
+<item.ChairItem id="7350" name="Cadeira Espiral" desc="Uma linda cadeira em espiral [7 de 25]" tags="rare,chair,misc" icon="items/base/consumables/clothing/accessory/acc_896_icon_adventbox_silver.png" price="250" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <seats>
+    <seat x="0.05" y="0.4">
+      <ap x="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.28,0,-0.28" max="0.28,0.5,0.28"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="stool" source="items/base/consumables/clothing/accessory/acc_896_item_adventbox_silver.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Seat">
+      <box min="-0.28,0,-0.28" max="0.28,0.5,0.28"/>
+      <layers>
+        <layer id="Stool" texture="stool">
+          <view angle="45" x="1" y="19"/>
+          <view angle="135" y="19" hm="true"/>
+          <view angle="225" x="1" y="19"/>
+          <view angle="315" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.ChairItem>

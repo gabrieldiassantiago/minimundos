@@ -1,0 +1,447 @@
+<item.SpriteItem id="0" name="Butterfly" desc="Bobz" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bobz" source="items/base/mystery/mystery_15_wear.png" cols="4" rows="3"/>
+    <texture id="fx" source="items/base/consumables/bobz/bobz_fx_arcaneburst.png" cols="4" rows="2"/>
+    <texture id="sparkles" source="items/base/mystery/mystery_15_sparkles.png" cols="3" rows="2"/>
+    <texture id="snow" source="items/base/mystery/mystery_15_snow.png" cols="4" rows="1"/>
+    <texture id="vapor" source="items/base/mystery/mystery_15_vapor.png" cols="3" rows="1"/>
+    <texture id="diffuse" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="lensflare" source="items/base/mystery/mystery_15_lensflare.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0.2,0.1"/>
+      <layers>
+        <layer id="bobz01" texture="bobz">
+          <view angle="0" col="3" row="1" x="-5"/>
+          <view angle="45" row="1" x="-5" y="1"/>
+          <view angle="90" col="2" row="1" x="-6" y="-5"/>
+          <view angle="135" row="1" x="-5" y="1" hm="true"/>
+          <view angle="180" col="3" row="1" x="-5" hm="true"/>
+          <view angle="225" col="1" row="1" x="-10" y="-5" hm="true"/>
+          <view angle="270" col="2" row="1" x="-6" y="-5"/>
+          <view angle="315" col="1" row="1" y="-5"/>
+        </layer>
+        <layer id="bobz02" texture="bobz">
+          <view angle="0" col="3" x="-5" y="-2"/>
+          <view angle="45" x="-5" y="-1"/>
+          <view angle="90" col="2" x="-6" y="-7"/>
+          <view angle="135" x="-5" y="-1" hm="true"/>
+          <view angle="180" col="3" x="-5" y="-2" hm="true"/>
+          <view angle="225" col="1" x="-10" y="-7" hm="true"/>
+          <view angle="270" col="2" x="-6" y="-7"/>
+          <view angle="315" col="1" y="-7"/>
+        </layer>
+        <layer id="bobz03" texture="bobz">
+          <view angle="0" col="3" row="2" x="-5" y="-4"/>
+          <view angle="45" row="2" x="-5" y="-3"/>
+          <view angle="90" col="2" row="2" x="-6" y="-9"/>
+          <view angle="135" row="2" x="-5" y="-3" hm="true"/>
+          <view angle="180" col="3" row="2" x="-5" y="-4" hm="true"/>
+          <view angle="225" col="1" row="2" x="-10" y="-9" hm="true"/>
+          <view angle="270" col="2" row="2" x="-6" y="-9"/>
+          <view angle="315" col="1" row="2" y="-9"/>
+        </layer>
+        <layer id="fx_01" texture="fx" y="22">
+          <view/>
+        </layer>
+        <layer id="fx_02" texture="fx" y="20">
+          <view col="1"/>
+        </layer>
+        <layer id="fx_03" texture="fx" y="20">
+          <view col="2"/>
+        </layer>
+        <layer id="fx_04" texture="fx" y="20">
+          <view col="3"/>
+        </layer>
+        <layer id="fx_05" texture="fx" y="20">
+          <view row="1"/>
+        </layer>
+        <layer id="fx_06" texture="fx" y="20">
+          <view col="1" row="1"/>
+        </layer>
+        <layer id="fx_07" texture="fx" y="20">
+          <view col="2" row="1"/>
+        </layer>
+        <layer id="fx_08" texture="fx" y="20">
+          <view col="3" row="1"/>
+        </layer>
+        <layer id="sparkles_01" texture="sparkles">
+          <view x="-4" y="10"/>
+        </layer>
+        <layer id="sparkles_02" texture="sparkles">
+          <view col="1" x="-4" y="10"/>
+        </layer>
+        <layer id="sparkles_03" texture="sparkles">
+          <view col="2" x="-4" y="10"/>
+        </layer>
+        <layer id="sparkles_04" texture="sparkles">
+          <view row="1" x="-4" y="10"/>
+        </layer>
+        <layer id="sparkles_05" texture="sparkles">
+          <view col="1" row="1" x="-4" y="10"/>
+        </layer>
+        <layer id="sparkles_06" texture="sparkles">
+          <view col="2" row="1" x="-4" y="10"/>
+        </layer>
+        <layer id="snow_01" texture="snow">
+          <view x="-4" y="22"/>
+        </layer>
+        <layer id="snow_02" texture="snow">
+          <view col="1" x="-4" y="22"/>
+        </layer>
+        <layer id="snow_03" texture="snow">
+          <view col="2" x="-4" y="22"/>
+        </layer>
+        <layer id="snow_04" texture="snow">
+          <view col="3" x="-4" y="22"/>
+        </layer>
+        <layer id="vapor_01" texture="vapor">
+          <view x="-3" y="15"/>
+        </layer>
+        <layer id="vapor_02" texture="vapor">
+          <view col="1" x="-3" y="15"/>
+        </layer>
+        <layer id="vapor_03" texture="vapor">
+          <view col="2" x="-3" y="15"/>
+        </layer>
+        <layer id="lensflare" texture="lensflare">
+          <view y="39"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle01">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_01" a="0.3"/>
+          <layerref id="snow_01" a="0.25"/>
+          <layerref id="sparkles_01"/>
+          <layerref id="bobz01"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_02" a="0.3"/>
+          <layerref id="snow_02" a="0.25"/>
+          <layerref id="sparkles_02"/>
+          <layerref id="bobz02"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_03" a="0.2"/>
+          <layerref id="snow_03" a="0.25"/>
+          <layerref id="sparkles_03"/>
+          <layerref id="bobz03"/>
+        </frame>
+        <frame id="Idle04">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="snow_04" a="0.25"/>
+          <layerref id="sparkles_01"/>
+          <layerref id="bobz02"/>
+        </frame>
+        <frame id="Idle05">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_02" a="0.2"/>
+          <layerref id="snow_01" a="0.25"/>
+          <layerref id="sparkles_05"/>
+          <layerref id="bobz01"/>
+        </frame>
+        <frame id="Idle06">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_01" a="0.3"/>
+          <layerref id="snow_02" a="0.25"/>
+          <layerref id="sparkles_06"/>
+          <layerref id="bobz02"/>
+        </frame>
+        <frame id="Idle07">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_02" a="0.3"/>
+          <layerref id="snow_03" a="0.25"/>
+          <layerref id="sparkles_04"/>
+          <layerref id="bobz03"/>
+        </frame>
+        <frame id="Idle08">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_01" a="0.2"/>
+          <layerref id="snow_04" a="0.25"/>
+          <layerref id="sparkles_05"/>
+          <layerref id="bobz02"/>
+        </frame>
+        <frame id="Start00">
+          <layerref id="bobz02" y="3" a="0"/>
+        </frame>
+        <frame id="Start01">
+          <layerref id="lensflare" a="0.1"/>
+          <layerref id="vapor_01" a="0.1"/>
+          <layerref id="snow_01" a="0.1"/>
+          <layerref id="sparkles_01" a="0.1"/>
+          <layerref id="bobz02" y="3" a="0.1" blend="screen"/>
+          <layerref id="fx_01" x="-5" y="-20" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Start02">
+          <layerref id="lensflare" a="0.2"/>
+          <layerref id="vapor_02" a="0.2"/>
+          <layerref id="snow_02" a="0.25"/>
+          <layerref id="sparkles_02" a="0.3"/>
+          <layerref id="bobz01" y="3" a="0.3" blend="screen"/>
+          <layerref id="fx_02" x="-5" y="-20" a="0.3" blend="add"/>
+        </frame>
+        <frame id="Start03">
+          <layerref id="lensflare" a="0.3"/>
+          <layerref id="vapor_03" a="0.2"/>
+          <layerref id="snow_03" a="0.25"/>
+          <layerref id="sparkles_03" a="0.7"/>
+          <layerref id="bobz02" y="3" a="0.7" blend="screen"/>
+          <layerref id="fx_03" x="-5" y="-20" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Start04">
+          <layerref id="lensflare" a="0.4"/>
+          <layerref id="snow_04" a="0.25"/>
+          <layerref id="sparkles_01"/>
+          <layerref id="bobz01" y="3" blend="screen"/>
+          <layerref id="fx_04" x="-5" y="-20" a="0.6" blend="add"/>
+        </frame>
+        <frame id="Start05">
+          <layerref id="lensflare" a="0.6"/>
+          <layerref id="vapor_02" a="0.2"/>
+          <layerref id="snow_01" a="0.25"/>
+          <layerref id="sparkles_05" a="0.6"/>
+          <layerref id="bobz02" y="2" a="0.6"/>
+          <layerref id="fx_05" x="-5" y="-20" a="0.7" blend="add"/>
+        </frame>
+        <frame id="Start06">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_01" a="0.2"/>
+          <layerref id="snow_02" a="0.25"/>
+          <layerref id="sparkles_06" a="0.7"/>
+          <layerref id="bobz01" y="1" a="0.7"/>
+          <layerref id="fx_06" x="-5" y="-20" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Start07">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_02" a="0.2"/>
+          <layerref id="snow_03" a="0.25"/>
+          <layerref id="sparkles_04" a="0.8"/>
+          <layerref id="bobz02" a="0.8"/>
+          <layerref id="fx_07" x="-5" y="-20" a="0.3" blend="add"/>
+        </frame>
+        <frame id="Start08">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_01" a="0.2"/>
+          <layerref id="snow_04" a="0.25"/>
+          <layerref id="sparkles_05" a="0.9"/>
+          <layerref id="bobz01" a="0.9"/>
+          <layerref id="fx_08" x="-5" y="-20" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Start09">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_02" a="0.2"/>
+          <layerref id="snow_01" a="0.25"/>
+          <layerref id="sparkles_06"/>
+          <layerref id="bobz02"/>
+          <layerref id="fx_08" x="-5" y="-20" a="0" blend="add"/>
+        </frame>
+        <frame id="Bored01">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_01" y="-6" a="0.3"/>
+          <layerref id="snow_01" y="-6" a="0.25"/>
+          <layerref id="sparkles_01" y="-6"/>
+          <layerref id="bobz01" y="-6"/>
+        </frame>
+        <frame id="Bored02">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_02" x="3" y="-3" a="0.3"/>
+          <layerref id="snow_02" x="3" y="-3" a="0.25"/>
+          <layerref id="sparkles_02" x="3" y="-3"/>
+          <layerref id="bobz02" x="3" y="-3"/>
+        </frame>
+        <frame id="Bored03">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_03" x="6" a="0.2"/>
+          <layerref id="snow_03" x="6" a="0.25"/>
+          <layerref id="sparkles_03" x="6"/>
+          <layerref id="bobz03" x="6"/>
+        </frame>
+        <frame id="Bored04">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="snow_04" x="3" y="3" a="0.25"/>
+          <layerref id="sparkles_01" x="3" y="3"/>
+          <layerref id="bobz02" x="3" y="3"/>
+        </frame>
+        <frame id="Bored05">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_02" y="6" a="0.2"/>
+          <layerref id="snow_01" y="6" a="0.25"/>
+          <layerref id="sparkles_05" y="6"/>
+          <layerref id="bobz01" y="6"/>
+        </frame>
+        <frame id="Bored06">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_01" x="-3" y="3" a="0.3"/>
+          <layerref id="snow_02" x="-3" y="3" a="0.25"/>
+          <layerref id="sparkles_06" x="-3" y="3"/>
+          <layerref id="bobz02" x="-3" y="3"/>
+        </frame>
+        <frame id="Bored07">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_02" x="-6" a="0.3"/>
+          <layerref id="snow_03" x="-6" a="0.25"/>
+          <layerref id="sparkles_04" x="-6"/>
+          <layerref id="bobz03" x="-6"/>
+        </frame>
+        <frame id="Bored08">
+          <layerref id="lensflare" a="0.5"/>
+          <layerref id="vapor_01" x="-3" y="-3" a="0.2"/>
+          <layerref id="snow_04" x="-3" y="-3" a="0.25"/>
+          <layerref id="sparkles_05" x="-3" y="-3"/>
+          <layerref id="bobz02" x="-3" y="-3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle05"/>
+          <frameref id="Idle06"/>
+          <frameref id="Idle07"/>
+          <frameref id="Idle08"/>
+        </animation>
+        <animation id="Move" framerate="9">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle04"/>
+          <frameref id="Idle05"/>
+          <frameref id="Idle06"/>
+          <frameref id="Idle07"/>
+          <frameref id="Idle08"/>
+        </animation>
+        <animation id="Start" framerate="7" loop="false">
+          <frameref id="Start01"/>
+          <frameref id="Start02"/>
+          <frameref id="Start03"/>
+          <frameref id="Start04"/>
+          <frameref id="Start05"/>
+          <frameref id="Start06"/>
+          <frameref id="Start07"/>
+          <frameref id="Start08"/>
+          <frameref id="Start09"/>
+        </animation>
+        <animation id="Stop" framerate="7" loop="false">
+          <frameref id="Start08"/>
+          <frameref id="Start07"/>
+          <frameref id="Start06"/>
+          <frameref id="Start05"/>
+          <frameref id="Start04"/>
+          <frameref id="Start03"/>
+          <frameref id="Start02"/>
+          <frameref id="Start01"/>
+          <frameref id="Start00"/>
+        </animation>
+        <animation id="Bored" framerate="7">
+          <frameref id="Bored03"/>
+          <frameref id="Bored04"/>
+          <frameref id="Bored05"/>
+          <frameref id="Bored06"/>
+          <frameref id="Bored07"/>
+          <frameref id="Bored08"/>
+          <frameref id="Bored01"/>
+          <frameref id="Bored02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.05" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="light" texture="diffuse" align="middle" y="-20">
+          <view x="-1" y="7"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="light" color="0xa4e1f1" a="0.15"/>
+        </frame>
+        <frame id="02">
+          <layerref id="light" color="0xa4e1f1" a="0.38"/>
+        </frame>
+        <frame id="03">
+          <layerref id="light" color="0xa4e1f1" a="0.62"/>
+        </frame>
+        <frame id="04">
+          <layerref id="light" color="0xa4e1f1" a="0.85"/>
+        </frame>
+        <frame id="05">
+          <layerref id="light" color="0xa4e1f1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="9">
+          <frameref id="05"/>
+        </animation>
+        <animation id="Move" framerate="10">
+          <frameref id="05"/>
+        </animation>
+        <animation id="Start" framerate="7" loop="false">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+        </animation>
+        <animation id="Stop" framerate="7" loop="false">
+          <frameref id="05"/>
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+        </animation>
+        <animation id="Bored" framerate="7">
+          <frameref id="05"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="Bored" framerate="7" loop="false" overridable="false">
+      <frame id="01">
+        <noderef id="Node" frame="Idle01"/>
+        <noderef id="Diffuse" animation="Idle"/>
+      </frame>
+      <frame id="02">
+        <noderef id="Node" frame="Bored01"/>
+        <noderef id="Diffuse" animation="Idle"/>
+      </frame>
+      <frame id="03">
+        <noderef id="Node" frame="Bored02"/>
+        <noderef id="Diffuse" animation="Idle"/>
+      </frame>
+      <frame id="04">
+        <noderef id="Node" frame="Bored03"/>
+        <noderef id="Diffuse" animation="Idle"/>
+      </frame>
+      <frame id="05">
+        <noderef id="Node" frame="Bored04"/>
+        <noderef id="Diffuse" animation="Idle"/>
+      </frame>
+      <frame id="06">
+        <noderef id="Node" frame="Bored05"/>
+        <noderef id="Diffuse" animation="Idle"/>
+      </frame>
+      <frame id="07">
+        <noderef id="Node" frame="Idle05"/>
+        <noderef id="Diffuse" animation="Idle"/>
+      </frame>
+      <frame id="08">
+        <noderef id="Node" frame="Idle06"/>
+        <noderef id="Diffuse" animation="Idle"/>
+      </frame>
+    </animation>
+  </animations>
+</item.SpriteItem>

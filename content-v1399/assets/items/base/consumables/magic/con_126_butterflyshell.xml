@@ -1,0 +1,58 @@
+<item.SpriteItem id="0" name="Halo" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+  </volume>
+  <textures>
+    <texture id="halo" source="items/base/consumables/magic/con_126_butterflyshell.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="Chrysalis_01" texture="halo">
+          <view x="-2" y="-3"/>
+        </layer>
+        <layer id="Chrysalis_02" texture="halo">
+          <view col="1" x="-1" y="-5"/>
+        </layer>
+        <layer id="Chrysalis_03" texture="halo">
+          <view col="2" y="-5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="loop01">
+          <layerref id="Chrysalis_01" a="0.5"/>
+        </frame>
+        <frame id="loop02">
+          <layerref id="Chrysalis_02" a="0.85"/>
+        </frame>
+        <frame id="loop03">
+          <layerref id="Chrysalis_03"/>
+        </frame>
+        <frame id="loop04">
+          <layerref id="Chrysalis_01" a="0.2"/>
+        </frame>
+        <frame id="loop05">
+          <layerref id="Chrysalis_01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="In" framerate="4" loop="false">
+          <frameref id="loop01"/>
+          <frameref id="loop02"/>
+          <frameref id="loop03" duration="6"/>
+        </animation>
+        <animation id="Loop" framerate="4">
+          <frameref id="loop03" duration="6"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false">
+          <frameref id="loop03"/>
+          <frameref id="loop02"/>
+          <frameref id="loop01"/>
+          <frameref id="loop04"/>
+          <frameref id="loop05"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

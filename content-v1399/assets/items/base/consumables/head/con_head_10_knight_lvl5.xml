@@ -1,0 +1,47 @@
+<item.SpriteItem desc="A knights helmet" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" entity="false" icon="items/base/consumables/head/icon_con_head_10_knight.png" name="Knight Helmet">
+  <volume>
+    <box max="0.3,1,0.3" min="-0.3,0,-0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="5" id="Texture" rows="1" source="items/base/consumables/head/con_head_10_knight_base.png"/>
+    <texture cols="5" id="lvl5" rows="1" source="items/base/consumables/head/con_head_10_knight_lvl5.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.3,1,0.3" min="-0.3,0,-0.3"/>
+      <layers>
+        <layer id="helmet" texture="Texture" y="40">
+          <view angle="0" x="3" y="-18"/>
+          <view angle="45" col="1" x="1" y="-18"/>
+          <view angle="90" col="2" x="-1" y="-18"/>
+          <view angle="135" col="1" hm="true" x="-2" y="-18"/>
+          <view angle="180" hm="true" x="-4" y="-18"/>
+          <view angle="225" col="3" y="-18"/>
+          <view angle="270" col="4" x="1" y="-18"/>
+          <view angle="315" col="3" hm="true" x="-1" y="-18"/>
+        </layer>
+        <layer id="lvl5" texture="lvl5" y="40">
+          <view angle="0" x="-3" y="-14"/>
+          <view angle="45" col="1" x="2" y="-14"/>
+          <view angle="90" col="2" y="-14"/>
+          <view angle="135" col="1" hm="true" x="-2" y="-14"/>
+          <view angle="180" hm="true" x="3" y="-14"/>
+          <view angle="225" col="3" x="4" y="-14"/>
+          <view angle="270" col="4" y="-14"/>
+          <view angle="315" col="3" hm="true" x="-5" y="-14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="helmet"/>
+          <layerref id="lvl5"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

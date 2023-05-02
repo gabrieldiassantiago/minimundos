@@ -1,0 +1,45 @@
+<item.SpriteItem id="2449" name="Estátua de Golfinho" desc="Três golfinhos no mais fino mármore italiano." tags="rare,misc" icon="items/base/antique/icon_a_collect_16_dolphin.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="150" minLevelType="4">
+  <volume>
+    <box min="-0.25,0,-0.22" max="0.25,1.25,0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="box" source="items/base/antique/a_collect_16_dolphin.png" cols="2" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.22" max="0.25,1.25,0.22"/>
+      <layers>
+        <layer id="box" texture="box" y="15">
+          <view angle="45" y="13"/>
+          <view angle="135" y="13" hm="true"/>
+          <view angle="225" col="1" y="16"/>
+          <view angle="315" col="1" y="16" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" y="0.64" s="3.3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="2" y="2"/>
+          <view angle="135" y="2" hm="true"/>
+          <view angle="225" x="1" y="1"/>
+          <view angle="315" x="2" y="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" a="0.5"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

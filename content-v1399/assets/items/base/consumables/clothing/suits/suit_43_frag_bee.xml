@@ -1,0 +1,64 @@
+<f id="BeeSuit" parentId="Suits">
+  <g id="BeeSuit">
+    <c id="BeeColorMaster" sId="ZombieSkeletonTorso" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor"/>
+    <s id="BeeTorso" cId="Torso" s="items/base/consumables/clothing/suits/suit_42_ant_torso.png" pri="1"/>
+    <c sId="BeeTorso" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+    <g id="BeeArms" icon="$bm/icon_m_retro.png">
+      <s id="BeeArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_42_ant_arm_idle.png" pri="1"/>
+      <s id="BeeArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_42_ant_arm_walk1.png" pri="1"/>
+      <s id="BeeArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_42_ant_arm_walk2.png" pri="1"/>
+      <s id="BeeArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_42_ant_arm_walk3.png" pri="1"/>
+      <s id="BeeArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_42_ant_arm_sit.png" pri="1"/>
+      <c sId="BeeArmIdleBase" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeArmWalk1Base" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeArmWalk2Base" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeArmWalk3Base" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeArmSitBase" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <s id="BeeArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_42_ant_arm_throw.png" pri="1"/>
+      <s id="BeeArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_42_ant_arm_raise.png" pri="1"/>
+      <c sId="BeeArmThrowBase" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeArmRaiseBase" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <s id="BeeHandIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_42_ant_hands_idle.png" pri="3"/>
+      <s id="BeeHandWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_42_ant_hands_walk1.png" pri="3"/>
+      <s id="BeeHandWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_42_ant_hands_walk2.png" pri="3"/>
+      <s id="BeeHandWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_42_ant_hands_walk3.png" pri="3"/>
+      <s id="BeeHandSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_42_ant_hands_sit.png" pri="3"/>
+      <c sId="BeeHandIdleBase" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeHandWalk1Base" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeHandWalk2Base" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeHandWalk3Base" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeHandSitBase" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <s id="BeeHandWave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_42_ant_hands_wave1.png" pri="1"/>
+      <s id="BeeHandWave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_42_ant_hands_wave2.png" pri="1"/>
+      <s id="BeeHandHold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_42_ant_hands_hold.png"/>
+      <s id="BeeHandOpen" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_42_ant_hands_open.png" pri="1"/>
+      <s id="BeeHandPoint" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_42_ant_hands_point.png" pri="1"/>
+      <s id="BeeHandStop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_42_ant_hands_stop.png" pri="1"/>
+      <s id="BeeHandThrow" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_42_ant_hands_throw.png" pri="1"/>
+      <s id="BeeHandThumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_42_ant_hands_thumbs.png" pri="1"/>
+      <c sId="BeeHandWave1" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeHandWave2" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeHandHold" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeHandOpen" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeHandPoint" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeHandStop" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeHandThrow" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+      <c sId="BeeHandThumbs" c="16770597" a="0.72" b="27.3" ct="1.09" lId="BeeColor" lw="N"/>
+    </g>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+</f>

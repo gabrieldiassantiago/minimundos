@@ -1,0 +1,30 @@
+<item.SpriteItem id="2833" name="Tapete de Banheiro de Luxo Rosa" desc="Perfeito para princesas sairem do banho." tags="misc" icon="items/base/modern/icon_m_bathroom_34_bathmat_pink.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="40">
+  <volume>
+    <box min="-0.4872,-0.001,-0.6667" max="0.4872,0,0.6667"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/modern/m_bathroom_34_bathmat_pink.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="bathmat" layer="surface">
+      <box min="-0.4872,-0.001,-0.6667" max="0.4872,0,0.6667"/>
+      <layers>
+        <layer id="mat" texture="base">
+          <view angle="45" y="44"/>
+          <view angle="135" y="44" hm="true"/>
+          <view angle="225" y="44"/>
+          <view angle="315" y="44" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

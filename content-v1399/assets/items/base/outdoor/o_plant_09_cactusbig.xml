@@ -1,0 +1,77 @@
+<item.SpriteItem id="2011" name="Cacto Alto" desc="Reserva de água dentro." tags="plant" icon="items/base/outdoor/icon_o_plant_09_cactusbig.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="60">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.5,0.49"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="State_01" state="true" event="animate(01)"/>
+    <action id="State_02" state="true" event="animate(02)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="count" value="2"/>
+    <entry key="01" value="State_01"/>
+    <entry key="02" value="State_02"/>
+  </data>
+  <textures>
+    <texture id="cactus" source="items/base/outdoor/o_plant_09_cactusbig.png" cols="1" rows="1"/>
+    <texture id="decal" source="items/base/outdoor/o_plant_09_cactusbig_decal.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="cactus">
+      <box min="-0.49,0,-0.49" max="0.49,2.5,0.49"/>
+      <layers>
+        <layer id="decal" texture="decal">
+          <view angle="45" x="-32" y="21" hm="true"/>
+          <view angle="135" x="-30" y="24" hm="true"/>
+          <view angle="225" x="-32" y="21"/>
+          <view angle="315" x="-30" y="24" hm="true"/>
+        </layer>
+        <layer id="decal01" texture="decal">
+          <view angle="45" x="27" y="21"/>
+          <view angle="135" x="26" y="24" hm="true"/>
+          <view angle="225" x="27" y="21"/>
+          <view angle="315" x="26" y="24" hm="true"/>
+        </layer>
+        <layer id="cactus" texture="cactus">
+          <view angle="45" x="-3" y="24"/>
+          <view angle="135" y="24" hm="true"/>
+          <view angle="225" x="-3" y="24"/>
+          <view angle="315" y="24" hm="true"/>
+        </layer>
+        <layer id="decal02" texture="decal">
+          <view angle="45" x="1" y="45"/>
+          <view angle="135" x="-7" y="43" hm="true"/>
+          <view angle="225" x="1" y="45"/>
+          <view angle="315" x="-7" y="43" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="frame_01">
+          <layerref id="cactus"/>
+        </frame>
+        <frame id="frame_02">
+          <layerref id="decal"/>
+          <layerref id="decal01"/>
+          <layerref id="cactus"/>
+          <layerref id="decal02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="01" framerate="4">
+          <frameref id="frame_01"/>
+        </animation>
+        <animation id="02" framerate="4">
+          <frameref id="frame_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

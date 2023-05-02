@@ -1,0 +1,43 @@
+<item.SpriteItem desc="Um par de asas de arara." dropTargetClamp="none" dropTargetList="floor,table,avatar" dropTargetType="none" icon="items/base/consumables/back/icon_con_bak_71_parrotwings.png" id="2497" name="Asas de Arara" tags="craftable4,consumable,animal,actionbar,wear,stackable,back,action_wearable_toggle,market" minLevel="40" minCPLevel="1" price="150" minLevelType="1">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,0.49,0.49"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="ingredient_1" value="1138"/>
+    <entry key="ingredient_2" value="2394"/>
+    <entry key="ingredient_quantity_1" value="1"/>
+    <entry key="ingredient_quantity_2" value="1"/>
+    <entry key="product_quantity" value="1"/>
+    <entry key="xp_level_required" value="105"/>
+    <entry key="xp_rewarded" value="1000"/>
+    <entry key="action_attributes" value="nature+10"/>
+    <entry key="action_attributes_secondary" value="spoeed+30,health+40"/>
+  </data>
+  <textures>
+    <texture id="Parrot Wings" source="items/base/consumables/back/con_bak_item_71_parrotwings.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,0.49,0.49"/>
+      <layers>
+        <layer id="Parrot" texture="Parrot Wings">
+          <view angle="45" y="36"/>
+          <view angle="135" y="36" hm="true"/>
+          <view angle="225" col="1" x="2" y="36"/>
+          <view angle="315" col="1" y="36" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

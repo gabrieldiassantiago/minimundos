@@ -1,0 +1,632 @@
+<item.WidgetItem id="1555" name="Combobulador" desc="Um aparelho de transformação." tags="admin,widget" icon="items/base/lab/icon_l_combobulator.png" minLevel="1" minLevelType="2" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" widget="widgets/widget_combobulator.swf" minCPLevel="1">
+  <volume>
+    <box min="-1.49,0,-1.49" max="1.49,2.5,1.49"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="widget_min_load_wait" value="30000"/>
+    <entry key="widget_max_load_wait" value="31000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="hasEditSecurity" value="true"/>
+    <entry key="widget_background_override" value="widget/labBG.jpg"/>
+  </data>
+  <navigate usableRange="-1.00"/>
+  <textures>
+    <texture id="orb" source="items/base/lab/l_combobulator_orb.png" cols="2" rows="2"/>
+    <texture id="base" source="items/base/lab/l_combobulator_base.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_comobulator.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Lightcone" source="items/base/shared/s_fx_flare_cone.png" cols="1" rows="1"/>
+    <texture id="blades" source="items/base/lab/l_combobulator_blades.png" cols="1" rows="1"/>
+    <texture id="minilight" source="items/base/shared/s_fx_flare_mini.png" cols="1" rows="1"/>
+    <texture id="Lightning" source="items/base/lab/l_combobulator_lightning.png" cols="2" rows="1"/>
+    <texture id="steamjet" source="items/base/lab/l_combobulator_steamjet.png" cols="2" rows="1"/>
+    <texture id="sparks" source="items/base/lab/l_combobulator_sparkles.png" cols="4" rows="1"/>
+    <texture id="halospread" source="items/base/shared/s_fx_flare_halo_spread.png" cols="1" rows="1"/>
+    <texture id="Cogs" source="items/base/lab/l_combobulator_cogs.png" cols="1" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Combobulator">
+      <box min="-1.49,0,-1.49" max="1.49,2.5,1.49"/>
+      <layers>
+        <layer id="orb01" texture="orb" y="-52">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="orb02" texture="orb" y="-52">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+        <layer id="orb03" texture="orb" y="-52">
+          <view angle="45" row="1"/>
+          <view angle="135" row="1" hm="true"/>
+          <view angle="225" row="1"/>
+          <view angle="315" row="1" hm="true"/>
+        </layer>
+        <layer id="orb04" texture="orb" y="-52">
+          <view angle="45" col="1" row="1"/>
+          <view angle="135" col="1" row="1" hm="true"/>
+          <view angle="225" col="1" row="1"/>
+          <view angle="315" col="1" row="1" hm="true"/>
+        </layer>
+        <layer id="blades" texture="blades" y="-48">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="blades01" texture="blades" y="-48">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="steamjet_A_01" texture="steamjet" y="-5">
+          <view angle="45" x="-68" y="-15"/>
+          <view angle="135" x="68" y="-15" hm="true"/>
+          <view angle="225" x="-68" y="-15"/>
+          <view angle="315" x="68" y="-15" hm="true"/>
+        </layer>
+        <layer id="steamjet_A_02" texture="steamjet" y="-5">
+          <view angle="45" col="1" x="-68" y="-15"/>
+          <view angle="135" col="1" x="68" y="-15" hm="true"/>
+          <view angle="225" col="1" x="-68" y="-15"/>
+          <view angle="315" col="1" x="68" y="-15" hm="true"/>
+        </layer>
+        <layer id="steamjet_B_01" texture="steamjet" y="-5">
+          <view angle="45" x="64" y="13" hm="true"/>
+          <view angle="135" x="-64" y="13"/>
+          <view angle="225" x="64" y="13" hm="true"/>
+          <view angle="315" x="-64" y="13"/>
+        </layer>
+        <layer id="steamjet_B_02" texture="steamjet" y="-5">
+          <view angle="45" col="1" x="64" y="13" hm="true"/>
+          <view angle="135" col="1" x="-64" y="13"/>
+          <view angle="225" col="1" x="64" y="13" hm="true"/>
+          <view angle="315" col="1" x="-64" y="13"/>
+        </layer>
+        <layer id="steamjet_C_01" texture="steamjet" y="-5">
+          <view angle="45" x="63" y="6" hm="true" vm="true"/>
+          <view angle="135" x="-63" y="6" vm="true"/>
+          <view angle="225" x="63" y="6" hm="true" vm="true"/>
+          <view angle="315" x="-63" y="6" vm="true"/>
+        </layer>
+        <layer id="steamjet_C_02" texture="steamjet" y="-5">
+          <view angle="45" col="1" x="63" y="6" hm="true" vm="true"/>
+          <view angle="135" col="1" x="-63" y="6" vm="true"/>
+          <view angle="225" col="1" x="63" y="6" hm="true" vm="true"/>
+          <view angle="315" col="1" x="-63" y="6" vm="true"/>
+        </layer>
+        <layer id="steamjet_D_01" texture="steamjet" y="-5">
+          <view angle="45" x="124" y="-105" hm="true" vm="true"/>
+          <view angle="135" x="-124" y="-105" vm="true"/>
+          <view angle="225" x="124" y="-105" hm="true" vm="true"/>
+          <view angle="315" x="-124" y="-105" vm="true"/>
+        </layer>
+        <layer id="steamjet_D_02" texture="steamjet" y="-5">
+          <view angle="45" col="1" x="124" y="-105" hm="true" vm="true"/>
+          <view angle="135" col="1" x="-124" y="-105" vm="true"/>
+          <view angle="225" col="1" x="124" y="-105" hm="true" vm="true"/>
+          <view angle="315" col="1" x="-124" y="-105" vm="true"/>
+        </layer>
+        <layer id="steamjet_E_01" texture="steamjet" y="-5">
+          <view angle="45" x="-107" y="-113" vm="true"/>
+          <view angle="135" x="108" y="-113" hm="true" vm="true"/>
+          <view angle="225" x="-108" y="-113" vm="true"/>
+          <view angle="315" x="108" y="-113" hm="true" vm="true"/>
+        </layer>
+        <layer id="steamjet_E_02" texture="steamjet" y="-5">
+          <view angle="45" col="1" x="-108" y="-113" vm="true"/>
+          <view angle="135" col="1" x="108" y="-113" hm="true" vm="true"/>
+          <view angle="225" col="1" x="-108" y="-113" vm="true"/>
+          <view angle="315" col="1" x="108" y="-113" hm="true" vm="true"/>
+        </layer>
+        <layer id="cog_01" texture="Cogs">
+          <view angle="45" x="-46" y="9"/>
+          <view angle="135" x="46" y="9" hm="true"/>
+          <view angle="225" x="-46" y="9"/>
+          <view angle="315" x="46" y="9" hm="true"/>
+        </layer>
+        <layer id="cog_02" texture="Cogs">
+          <view angle="45" row="1" x="-46" y="9"/>
+          <view angle="135" row="1" x="46" y="9" hm="true"/>
+          <view angle="225" row="1" x="-46" y="9"/>
+          <view angle="315" row="1" x="46" y="9" hm="true"/>
+        </layer>
+        <layer id="cog_03" texture="Cogs">
+          <view angle="45" row="2" x="-46" y="9"/>
+          <view angle="135" row="2" x="46" y="9" hm="true"/>
+          <view angle="225" row="2" x="-46" y="9"/>
+          <view angle="315" row="2" x="46" y="9" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="orb01"/>
+          <layerref id="blades"/>
+        </frame>
+        <frame id="02">
+          <layerref id="orb02"/>
+          <layerref id="blades"/>
+        </frame>
+        <frame id="03">
+          <layerref id="orb03"/>
+          <layerref id="blades"/>
+        </frame>
+        <frame id="04">
+          <layerref id="orb04"/>
+          <layerref id="blades"/>
+        </frame>
+        <frame id="01_steamjet_A">
+          <layerref id="orb01"/>
+          <layerref id="blades"/>
+          <layerref id="steamjet_A_01" a="0.6"/>
+          <layerref id="steamjet_A_02" a="0.3"/>
+          <layerref id="cog_01"/>
+        </frame>
+        <frame id="02_steamjet_A">
+          <layerref id="orb02"/>
+          <layerref id="blades"/>
+          <layerref id="steamjet_A_01" a="0.1"/>
+          <layerref id="steamjet_A_02" a="0.6"/>
+          <layerref id="cog_02"/>
+        </frame>
+        <frame id="03_steamjet_A">
+          <layerref id="orb03"/>
+          <layerref id="blades"/>
+          <layerref id="steamjet_A_01" a="0"/>
+          <layerref id="steamjet_A_02" a="0.2"/>
+          <layerref id="cog_03"/>
+        </frame>
+        <frame id="01_steamjet_B">
+          <layerref id="orb01"/>
+          <layerref id="blades"/>
+          <layerref id="steamjet_B_01" a="0.6"/>
+          <layerref id="steamjet_B_02" a="0.3"/>
+          <layerref id="cog_01"/>
+        </frame>
+        <frame id="02_steamjet_B">
+          <layerref id="orb02"/>
+          <layerref id="blades"/>
+          <layerref id="steamjet_B_01" a="0.1"/>
+          <layerref id="steamjet_B_02" a="0.6"/>
+          <layerref id="cog_02"/>
+        </frame>
+        <frame id="03_steamjet_B">
+          <layerref id="orb03"/>
+          <layerref id="blades"/>
+          <layerref id="steamjet_B_01" a="0"/>
+          <layerref id="steamjet_B_02" a="0.2"/>
+          <layerref id="cog_03"/>
+        </frame>
+        <frame id="01_steamjet_C">
+          <layerref id="orb01"/>
+          <layerref id="blades"/>
+          <layerref id="steamjet_C_01" a="0.6"/>
+          <layerref id="steamjet_C_02" a="0.3"/>
+        </frame>
+        <frame id="02_steamjet_C">
+          <layerref id="orb02"/>
+          <layerref id="blades"/>
+          <layerref id="steamjet_C_01" a="0.1"/>
+          <layerref id="steamjet_C_02" a="0.6"/>
+        </frame>
+        <frame id="03_steamjet_C">
+          <layerref id="orb03"/>
+          <layerref id="blades"/>
+          <layerref id="steamjet_C_01" a="0"/>
+          <layerref id="steamjet_C_02" a="0.2"/>
+        </frame>
+        <frame id="01_steamjet_D">
+          <layerref id="orb01"/>
+          <layerref id="blades"/>
+          <layerref id="steamjet_D_01" a="0.6"/>
+          <layerref id="steamjet_D_02" a="0.3"/>
+          <layerref id="cog_01"/>
+        </frame>
+        <frame id="02_steamjet_D">
+          <layerref id="orb02"/>
+          <layerref id="blades"/>
+          <layerref id="steamjet_D_01" a="0.1"/>
+          <layerref id="steamjet_D_02" a="0.6"/>
+          <layerref id="cog_02"/>
+        </frame>
+        <frame id="03_steamjet_D">
+          <layerref id="orb03"/>
+          <layerref id="blades"/>
+          <layerref id="steamjet_D_01" a="0"/>
+          <layerref id="steamjet_D_02" a="0.2"/>
+          <layerref id="cog_03"/>
+        </frame>
+        <frame id="01_steamjet_E">
+          <layerref id="steamjet_E_01" a="0.6"/>
+          <layerref id="steamjet_E_02" a="0.3"/>
+          <layerref id="orb01"/>
+          <layerref id="blades"/>
+          <layerref id="cog_01"/>
+        </frame>
+        <frame id="02_steamjet_E">
+          <layerref id="steamjet_E_01" a="0.1"/>
+          <layerref id="steamjet_E_02" a="0.6"/>
+          <layerref id="orb02"/>
+          <layerref id="blades"/>
+        </frame>
+        <frame id="03_steamjet_E">
+          <layerref id="steamjet_E_01" a="0"/>
+          <layerref id="steamjet_E_02" a="0.2"/>
+          <layerref id="orb03"/>
+          <layerref id="blades"/>
+          <layerref id="cog_02"/>
+        </frame>
+        <frame id="04_lightning">
+          <layerref id="orb04"/>
+          <layerref id="blades"/>
+          <layerref id="blades01" color="0x86d7ed" a="0.3" blend="add"/>
+          <layerref id="cog_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4" syncOffsets="1,2">
+          <frameref id="01_steamjet_A"/>
+          <frameref id="02_steamjet_A"/>
+          <frameref id="03_steamjet_A"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_B"/>
+          <frameref id="02_steamjet_B"/>
+          <frameref id="03_steamjet_B"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_E"/>
+          <frameref id="02_steamjet_E"/>
+          <frameref id="03_steamjet_E"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_D"/>
+          <frameref id="02_steamjet_D"/>
+          <frameref id="03_steamjet_D"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_E"/>
+          <frameref id="02_steamjet_E"/>
+          <frameref id="03_steamjet_E"/>
+          <frameref id="04"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_C"/>
+          <frameref id="02_steamjet_C"/>
+          <frameref id="03_steamjet_C"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_B"/>
+          <frameref id="02_steamjet_B"/>
+          <frameref id="03_steamjet_B"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_A"/>
+          <frameref id="02_steamjet_A"/>
+          <frameref id="03_steamjet_A"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_C"/>
+          <frameref id="02_steamjet_C"/>
+          <frameref id="03_steamjet_C"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_E"/>
+          <frameref id="02_steamjet_E"/>
+          <frameref id="03_steamjet_E"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_A"/>
+          <frameref id="02_steamjet_A"/>
+          <frameref id="03_steamjet_A"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_C"/>
+          <frameref id="02_steamjet_C"/>
+          <frameref id="03_steamjet_C"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_D"/>
+          <frameref id="02_steamjet_D"/>
+          <frameref id="03_steamjet_D"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_E"/>
+          <frameref id="02_steamjet_E"/>
+          <frameref id="03_steamjet_E"/>
+          <frameref id="04"/>
+          <frameref id="01_steamjet_D"/>
+          <frameref id="02_steamjet_D"/>
+          <frameref id="03_steamjet_D"/>
+          <frameref id="04"/>
+          <frameref id="04_lightning" duration="16"/>
+        </animation>
+        <animation id="On" framerate="4" syncOffsets="1,2">
+          <frameref id="04_lightning" duration="16"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Base" depthBias="1">
+      <box min="-1.49,0,-1.49" max="1.49,2.5,1.49"/>
+      <layers>
+        <layer id="base" texture="base" y="91">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="base"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4" syncOffsets="1,2">
+          <frameref id="01"/>
+        </animation>
+        <animation id="On" framerate="4" syncOffsets="1,2">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.6" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="1"/>
+          <view angle="135" x="1" y="1" hm="true"/>
+          <view angle="225" y="1"/>
+          <view angle="315" x="1" y="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="Light" color="0x7cfeff"/>
+        </frame>
+        <frame id="on01">
+          <layerref id="Light" color="0x7cfeff"/>
+          <layerref id="Light" color="0x62b2ea"/>
+        </frame>
+        <frame id="on02">
+          <layerref id="Light" color="0x7cfeff" a="0.9"/>
+          <layerref id="Light" color="0x73a5ef"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="off" duration="64"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse02" y="1" s="8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="diffuse" texture="Intense" align="middle">
+          <view/>
+        </layer>
+        <layer id="Lightcone" texture="Lightcone">
+          <view y="21"/>
+        </layer>
+        <layer id="halospread" texture="halospread">
+          <view y="20" vm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="on01">
+          <layerref id="diffuse" color="0x75e8e9" a="0.8"/>
+          <layerref id="halospread" color="0x45e0e1"/>
+        </frame>
+        <frame id="on02">
+          <layerref id="diffuse" color="0x75e8e9"/>
+          <layerref id="halospread" color="0x45e0e1"/>
+        </frame>
+        <frame id="off">
+          <layerref id="diffuse" color="0x75e8e9" a="0.3"/>
+          <layerref id="Lightcone" color="0x3dd8d9" a="0.8"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="off" duration="64"/>
+          <frameref id="on01" duration="16"/>
+        </animation>
+        <animation id="On">
+          <frameref id="on01" duration="3"/>
+          <frameref id="on02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense03" y="2.2" s="2.7" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="sparks" align="middle">
+          <view/>
+        </layer>
+        <layer id="Light01" texture="sparks" align="middle">
+          <view col="1"/>
+        </layer>
+        <layer id="Light02" texture="sparks" align="middle">
+          <view col="2"/>
+        </layer>
+        <layer id="Light03" texture="sparks" align="middle">
+          <view col="3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light" color="0x222686"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light01" color="0x222686"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Light02" color="0x222686"/>
+        </frame>
+        <frame id="On04">
+          <layerref id="Light03" color="0x222686"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="2.2" s="1.7" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Intense" texture="Intense" align="middle">
+          <view y="-9"/>
+        </layer>
+        <layer id="Mini01" texture="minilight" align="middle">
+          <view x="1" y="60"/>
+        </layer>
+        <layer id="Mini02" texture="minilight" align="middle">
+          <view x="-29" y="54"/>
+        </layer>
+        <layer id="Mini05" texture="minilight" align="middle">
+          <view x="33" y="54"/>
+        </layer>
+        <layer id="Mini03" texture="minilight" align="middle">
+          <view x="-49" y="40"/>
+        </layer>
+        <layer id="Mini04" texture="minilight" align="middle">
+          <view x="52" y="40"/>
+        </layer>
+        <layer id="Mini06" texture="minilight" align="middle">
+          <view x="52" y="24"/>
+        </layer>
+        <layer id="Mini07" texture="minilight" align="middle">
+          <view x="-49" y="24"/>
+        </layer>
+        <layer id="Lightning" texture="Lightning" align="middle" y="-6">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Lightning01" texture="Lightning" align="middle" y="-6">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Intense" color="0xaeffff" a="0.4"/>
+        </frame>
+        <frame id="01">
+          <layerref id="Intense" color="0x45e0e1"/>
+          <layerref id="Mini01" color="0x7cfeff" a="0"/>
+          <layerref id="Mini02" color="0x7cfeff"/>
+          <layerref id="Mini03" color="0x7cfeff" a="0"/>
+          <layerref id="Mini04" color="0x7cfeff" a="0"/>
+          <layerref id="Mini05" color="0x7cfeff"/>
+          <layerref id="Mini06" color="0x7cfeff" a="0.4"/>
+          <layerref id="Mini07" color="0x7cfeff" a="0.4"/>
+          <layerref id="Lightning" color="0x6fe7e8" a="0.7"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Intense" color="0x45e0e1" a="0.8"/>
+          <layerref id="Mini01" color="0x7cfeff"/>
+          <layerref id="Mini02" color="0x7cfeff" a="0"/>
+          <layerref id="Mini03" color="0x7cfeff"/>
+          <layerref id="Mini04" color="0x7cfeff"/>
+          <layerref id="Mini05" color="0x7cfeff" a="0"/>
+          <layerref id="Mini06" color="0x7cfeff" a="0"/>
+          <layerref id="Mini07" color="0x7cfeff" a="0"/>
+          <layerref id="Lightning01" color="0x6fe7e8" a="0.7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4" syncOffsets="1,2">
+          <frameref id="Off" duration="64"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On" framerate="4" syncOffsets="1,2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

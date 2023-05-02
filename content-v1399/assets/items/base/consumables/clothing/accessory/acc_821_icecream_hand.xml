@@ -1,0 +1,34 @@
+<item.SpriteItem id="0" name="Bully" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="icecream" source="items/base/consumables/clothing/accessory/acc_821_icecream_hand.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Sparkles">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="icecream" texture="icecream">
+          <view angle="0" x="-3" y="9"/>
+          <view angle="45" x="1" y="5"/>
+          <view angle="90" x="3" y="10"/>
+          <view angle="135" x="1" y="8"/>
+          <view angle="180" x="2" y="10" hm="true"/>
+          <view angle="225" y="10" hm="true"/>
+          <view angle="270" y="10"/>
+          <view angle="315" x="-1" y="8"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

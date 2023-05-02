@@ -1,0 +1,146 @@
+<item.SpriteItem id="1940" name="Canto da Parede de Madeira Velha" desc="Uma canto de parede de madeira antiga." tags="fence" icon="items/base/gothic/icon_g_fence_03_wooden_cnr.png" price="35" tokens="350" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.2,0.49"/>
+  </volume>
+  <events>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Corner" state="true" event="animate(00)"/>
+    <action id="T Junction" state="true" event="animate(01)"/>
+    <action id="X Junction" state="true" event="animate(02)"/>
+    <action id="Straight" state="true" event="animate(03)"/>
+    <action id="End" state="true" event="animate(04)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="00" value="Corner"/>
+    <entry key="01" value="T Junction"/>
+    <entry key="02" value="X Junction"/>
+    <entry key="03" value="Straight"/>
+    <entry key="04" value="End"/>
+    <entry key="count" value="5"/>
+  </data>
+  <textures>
+    <texture id="wall" source="items/base/gothic/g_fence_03_wooden_cnr_wall.png" cols="2" rows="1"/>
+    <texture id="post" source="items/base/gothic/g_fence_03_wooden_cnr.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Pillar">
+      <box min="-0.49,0,-0.49" max="0.49,2.2,0.49"/>
+      <layers>
+        <layer id="pillar" texture="post">
+          <view angle="45" y="36"/>
+          <view angle="135" y="36" hm="true"/>
+          <view angle="225" y="36"/>
+          <view angle="315" y="36" hm="true"/>
+        </layer>
+        <layer id="wall +z" texture="wall">
+          <view angle="45" col="1" x="36"/>
+          <view angle="135" x="26" y="26" hm="true"/>
+          <view angle="225" x="-26" y="26"/>
+          <view angle="315" col="1" x="-36" hm="true"/>
+        </layer>
+        <layer id="wall -z" texture="wall">
+          <view angle="45" x="-26" y="26"/>
+          <view angle="135" col="1" x="-36" hm="true"/>
+          <view angle="225" col="1" x="36"/>
+          <view angle="315" x="26" y="26" hm="true"/>
+        </layer>
+        <layer id="L wall in front" texture="wall">
+          <view angle="45" col="1" x="36"/>
+          <view angle="135" x="-26" y="26"/>
+          <view angle="225" col="1" x="-36" hm="true"/>
+          <view angle="315" col="1" x="36"/>
+        </layer>
+        <layer id="L wall behind" texture="wall">
+          <view angle="45" x="26" y="26" hm="true"/>
+          <view angle="135" x="26" y="26" hm="true"/>
+          <view angle="225" x="-26" y="26"/>
+          <view angle="315" col="1" x="-36" hm="true"/>
+        </layer>
+        <layer id="T wall in front" texture="wall">
+          <view angle="45" x="-26" y="26" hm="true"/>
+          <view angle="135" x="-26" y="26"/>
+          <view angle="225" col="1" x="36"/>
+          <view angle="315" x="26" y="26" hm="true"/>
+        </layer>
+        <layer id="T wall middle" texture="wall">
+          <view angle="45" x="26" y="26"/>
+          <view angle="135" x="26" y="26" hm="true"/>
+          <view angle="225" x="-26" y="26"/>
+          <view angle="315" col="1" x="-36" hm="true"/>
+        </layer>
+        <layer id="T wall behind" texture="wall">
+          <view angle="45" col="1" x="36"/>
+          <view angle="135" col="1" x="-36" hm="true"/>
+          <view angle="225" col="1" x="-36" hm="true"/>
+          <view angle="315" col="1" x="36"/>
+        </layer>
+        <layer id="X wall in front L" texture="wall">
+          <view x="-26" y="26"/>
+        </layer>
+        <layer id="X wall in front R" texture="wall">
+          <view x="26" y="26" hm="true"/>
+        </layer>
+        <layer id="X wall behind L" texture="wall">
+          <view col="1" x="-36" hm="true"/>
+        </layer>
+        <layer id="X wall behind R" texture="wall">
+          <view col="1" x="36"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="L corner">
+          <layerref id="pillar"/>
+          <layerref id="L wall in front"/>
+          <layerref id="L wall behind"/>
+        </frame>
+        <frame id="T junction">
+          <layerref id="pillar"/>
+          <layerref id="T wall behind"/>
+          <layerref id="T wall middle"/>
+          <layerref id="T wall in front"/>
+        </frame>
+        <frame id="X junction">
+          <layerref id="pillar"/>
+          <layerref id="X wall behind L"/>
+          <layerref id="X wall behind R"/>
+          <layerref id="X wall in front L"/>
+          <layerref id="X wall in front R"/>
+        </frame>
+        <frame id="straight">
+          <layerref id="pillar"/>
+          <layerref id="wall +z" a="2"/>
+          <layerref id="wall -z" a="2"/>
+        </frame>
+        <frame id="end">
+          <layerref id="pillar"/>
+          <layerref id="wall +z" a="2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="2" loop="false">
+          <frameref id="L corner"/>
+        </animation>
+        <animation id="01" framerate="2" loop="false">
+          <frameref id="T junction"/>
+        </animation>
+        <animation id="02" framerate="2" loop="false">
+          <frameref id="X junction"/>
+        </animation>
+        <animation id="03" framerate="2" loop="false">
+          <frameref id="straight"/>
+        </animation>
+        <animation id="04" framerate="2" loop="false">
+          <frameref id="end"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,154 @@
+<item.SpriteItem id="6484" name="Fonte do Cupido" desc="Uma linda fonte de mármore" tags="rare,misc,decoration" icon="items/base/outdoor/o_fountain_cupid_icon.png" price="2017" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.55,0,-0.55" max="0.55,3.1,0.55"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="water" source="items/base/outdoor/o_fountain_cupid_water.png" cols="3" rows="1"/>
+    <texture id="fountain" source="items/base/outdoor/o_fountain_cupid_base.png" cols="1" rows="1"/>
+    <texture id="water_decal" source="items/base/outdoor/o_fountain_cupid_waterfall.png" cols="3" rows="1"/>
+    <texture id="cupid" source="items/base/outdoor/o_fountain_cupid_top.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" x="0.5" z="0.5">
+      <box min="-1.05,0,-1.05" max="0.05,3.1,0.05"/>
+      <layers>
+        <layer id="fountain" texture="fountain" y="15">
+          <view angle="45" x="-65" y="13"/>
+          <view angle="135" y="-19" hm="true"/>
+          <view angle="225" x="63" y="12"/>
+          <view angle="315" y="44" hm="true"/>
+        </layer>
+        <layer id="water01" texture="water" y="15">
+          <view angle="45" x="-65" y="-85"/>
+          <view angle="135" x="-1" y="-117" hm="true"/>
+          <view angle="225" x="63" y="-86"/>
+          <view angle="315" x="-1" y="-54" hm="true"/>
+        </layer>
+        <layer id="water02" texture="water" y="15">
+          <view angle="45" col="1" x="-65" y="-85"/>
+          <view angle="135" col="1" x="-1" y="-117" hm="true"/>
+          <view angle="225" col="1" x="63" y="-86"/>
+          <view angle="315" col="1" x="-1" y="-54" hm="true"/>
+        </layer>
+        <layer id="water03" texture="water" y="15">
+          <view angle="45" col="2" x="-65" y="-85"/>
+          <view angle="135" col="2" x="-1" y="-117" hm="true"/>
+          <view angle="225" col="2" x="63" y="-86"/>
+          <view angle="315" col="2" x="-1" y="-54" hm="true"/>
+        </layer>
+        <layer id="water_decal_01" texture="water_decal" y="15">
+          <view angle="45" x="-65" y="-102"/>
+          <view angle="135" y="-134" hm="true"/>
+          <view angle="225" x="63" y="-103"/>
+          <view angle="315" y="-71" hm="true"/>
+        </layer>
+        <layer id="water_decal_02" texture="water_decal" y="15">
+          <view angle="45" col="1" x="-65" y="-102"/>
+          <view angle="135" col="1" y="-134" hm="true"/>
+          <view angle="225" col="1" x="63" y="-103"/>
+          <view angle="315" col="1" y="-71" hm="true"/>
+        </layer>
+        <layer id="water_decal_03" texture="water_decal" y="15">
+          <view angle="45" col="2" x="-65" y="-102"/>
+          <view angle="135" col="2" y="-134" hm="true"/>
+          <view angle="225" col="2" x="63" y="-103"/>
+          <view angle="315" col="2" y="-71" hm="true"/>
+        </layer>
+        <layer id="cupid_01" texture="cupid">
+          <view angle="45" x="-65" y="-184"/>
+          <view angle="135" x="-2" y="-216" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="cupid_02" texture="cupid">
+          <view angle="45" x="1" y="-160" alpha="0"/>
+          <view angle="135" x="-2" y="-160" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="63" y="-185"/>
+          <view angle="315" col="1" x="-1" y="-153" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="fountain"/>
+          <layerref id="water01"/>
+          <layerref id="cupid_01"/>
+          <layerref id="cupid_02"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="fountain"/>
+          <layerref id="water02"/>
+          <layerref id="cupid_01"/>
+          <layerref id="cupid_02"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="fountain"/>
+          <layerref id="water03"/>
+          <layerref id="cupid_01"/>
+          <layerref id="cupid_02"/>
+        </frame>
+        <frame id="on01">
+          <layerref id="fountain"/>
+          <layerref id="water01"/>
+          <layerref id="water_decal_01" a="0.8"/>
+          <layerref id="cupid_01"/>
+          <layerref id="cupid_02"/>
+        </frame>
+        <frame id="on02">
+          <layerref id="fountain"/>
+          <layerref id="water02"/>
+          <layerref id="water_decal_02" a="0.8"/>
+          <layerref id="cupid_01"/>
+          <layerref id="cupid_02"/>
+        </frame>
+        <frame id="on03">
+          <layerref id="fountain"/>
+          <layerref id="water03"/>
+          <layerref id="water_decal_03" a="0.8"/>
+          <layerref id="cupid_01"/>
+          <layerref id="cupid_02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="2">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="on01"/>
+          <frameref id="on02"/>
+          <frameref id="on03"/>
+          <frameref id="on02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="12" y="-5"/>
+          <view angle="135" x="1" hm="true"/>
+          <view angle="225" x="-10" y="-6"/>
+          <view angle="315" x="1" y="-11" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xbdf4f4" a="0.5"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

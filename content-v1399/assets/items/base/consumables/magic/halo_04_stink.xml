@@ -1,0 +1,260 @@
+<item.SpriteItem desc="A stink halo" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" entity="false" name="Stink Halo">
+  <volume>
+    <box max="0.28,0.06,0.28" min="-0.28,0,-0.28"/>
+  </volume>
+  <textures>
+    <texture cols="1" id="glow" rows="1" source="items/base/consumables/magic/halo_glow.png"/>
+    <texture cols="4" id="stink" rows="1" source="items/base/consumables/magic/halo_04_stink_haze.png"/>
+    <texture cols="4" id="flies" rows="1" source="items/base/consumables/magic/halo_04_stink_flies.png"/>
+  </textures>
+  <sounds>
+    <sound id="flies" source="items/base/consumables/magic/sndfx_flies.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Behind">
+      <box max="0.28,0.06,-0.22" min="0.22,0,-0.28"/>
+      <layers>
+        <layer id="Glow" texture="glow">
+          <view y="32"/>
+        </layer>
+        <layer id="Haze 01 L" texture="stink">
+          <view x="-10" y="-10"/>
+        </layer>
+        <layer id="Haze 02 L" texture="stink">
+          <view col="1" x="-10" y="-10"/>
+        </layer>
+        <layer id="Haze 03 L" texture="stink">
+          <view col="2" x="-10" y="-10"/>
+        </layer>
+        <layer id="Haze 04 L" texture="stink">
+          <view col="3" x="-10" y="-10"/>
+        </layer>
+        <layer id="Haze 01 R" texture="stink">
+          <view x="10" y="-10"/>
+        </layer>
+        <layer id="Haze 02 R" texture="stink">
+          <view col="1" x="10" y="-10"/>
+        </layer>
+        <layer id="Haze 03 R" texture="stink">
+          <view col="2" x="10" y="-10"/>
+        </layer>
+        <layer id="Haze 04 R" texture="stink">
+          <view col="3" x="10" y="-10"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In 01">
+          <layerref a="0.2" color="0xd5c95e" id="Glow"/>
+        </frame>
+        <frame id="In 02">
+          <layerref a="0.1" blend="screen" id="Haze 02 L"/>
+          <layerref a="0.1" blend="screen" id="Haze 03 R"/>
+          <layerref a="0.3" color="0xd5c95e" id="Glow"/>
+        </frame>
+        <frame id="In 03">
+          <layerref a="0.2" blend="screen" id="Haze 03 L"/>
+          <layerref a="0.2" blend="screen" id="Haze 04 R"/>
+          <layerref a="0.4" color="0xd5c95e" id="Glow"/>
+        </frame>
+        <frame id="In 04">
+          <layerref a="0.3" blend="screen" id="Haze 04 L"/>
+          <layerref a="0.3" blend="screen" id="Haze 01 R"/>
+          <layerref a="0.5" color="0xd5c95e" id="Glow"/>
+        </frame>
+        <frame id="Loop 01">
+          <layerref a="0.4" blend="screen" id="Haze 01 L"/>
+          <layerref a="0.4" blend="screen" id="Haze 02 R"/>
+          <layerref a="0.6" color="0xd5c95e" id="Glow"/>
+        </frame>
+        <frame id="Loop 02">
+          <layerref a="0.4" blend="screen" id="Haze 02 L"/>
+          <layerref a="0.4" blend="screen" id="Haze 03 R"/>
+          <layerref a="0.6" color="0xd5c95e" id="Glow"/>
+        </frame>
+        <frame id="Loop 03">
+          <layerref a="0.4" blend="screen" id="Haze 03 L"/>
+          <layerref a="0.4" blend="screen" id="Haze 04 R"/>
+          <layerref a="0.6" color="0xd5c95e" id="Glow"/>
+        </frame>
+        <frame id="Loop 04">
+          <layerref a="0.4" blend="screen" id="Haze 04 L"/>
+          <layerref a="0.4" blend="screen" id="Haze 01 R"/>
+          <layerref a="0.6" color="0xd5c95e" id="Glow"/>
+        </frame>
+        <frame id="Out 01">
+          <layerref a="0.3" blend="screen" id="Haze 04 L"/>
+          <layerref a="0.3" blend="screen" id="Haze 02 R"/>
+          <layerref a="0.5" color="0xd5c95e" id="Glow"/>
+        </frame>
+        <frame id="Out 02">
+          <layerref a="0.2" blend="screen" id="Haze 01 L"/>
+          <layerref a="0.2" blend="screen" id="Haze 03 R"/>
+          <layerref a="0.4" color="0xd5c95e" id="Glow"/>
+        </frame>
+        <frame id="Out 03">
+          <layerref a="0.1" blend="screen" id="Haze 02 L"/>
+          <layerref a="0.1" blend="screen" id="Haze 04 R"/>
+          <layerref a="0.3" color="0xd5c95e" id="Glow"/>
+        </frame>
+        <frame id="Out 04">
+          <layerref a="0.1" blend="screen" id="Haze 03 L"/>
+          <layerref a="0.1" blend="screen" id="Haze 01 R"/>
+          <layerref a="0.2" color="0xd5c95e" id="Glow"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="In" loop="false">
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+          <frameref id="In 04"/>
+        </animation>
+        <animation framerate="4" id="Loop">
+          <frameref id="Loop 01"/>
+          <frameref id="Loop 02"/>
+          <frameref id="Loop 03"/>
+          <frameref id="Loop 04"/>
+        </animation>
+        <animation framerate="4" id="Out" loop="false">
+          <frameref id="Out 01"/>
+          <frameref id="Out 02"/>
+          <frameref id="Out 03"/>
+          <frameref id="Out 04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box max="-0.22,0.06,0.28" min="-0.28,0,0.22"/>
+      <layers>
+        <layer id="Flies 01" texture="flies">
+          <view y="-120"/>
+        </layer>
+        <layer id="Flies 02" texture="flies">
+          <view col="1" y="-120"/>
+        </layer>
+        <layer id="Flies 03" texture="flies">
+          <view col="2" y="-120"/>
+        </layer>
+        <layer id="Flies 04" texture="flies">
+          <view col="3" y="-120"/>
+        </layer>
+        <layer id="Haze 01 L" texture="stink">
+          <view x="-15" y="-30"/>
+        </layer>
+        <layer id="Haze 02 L" texture="stink">
+          <view col="1" x="-15" y="-30"/>
+        </layer>
+        <layer id="Haze 03 L" texture="stink">
+          <view col="2" x="-15" y="-30"/>
+        </layer>
+        <layer id="Haze 04 L" texture="stink">
+          <view col="3" x="-15" y="-30"/>
+        </layer>
+        <layer id="Haze 01 mid" texture="stink">
+          <view y="-40"/>
+        </layer>
+        <layer id="Haze 02 mid" texture="stink">
+          <view col="1" y="-40"/>
+        </layer>
+        <layer id="Haze 03 mid" texture="stink">
+          <view col="2" y="-40"/>
+        </layer>
+        <layer id="Haze 04 mid" texture="stink">
+          <view col="3" y="-40"/>
+        </layer>
+        <layer id="Haze 01 R" texture="stink">
+          <view x="15" y="-30"/>
+        </layer>
+        <layer id="Haze 02 R" texture="stink">
+          <view col="1" x="15" y="-30"/>
+        </layer>
+        <layer id="Haze 03 R" texture="stink">
+          <view col="2" x="15" y="-30"/>
+        </layer>
+        <layer id="Haze 04 R" texture="stink">
+          <view col="3" x="15" y="-30"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Wait">
+          <layerref a="0.01" id="Haze 01 L"/>
+        </frame>
+        <frame id="In 01">
+          <layerref a="0.05" blend="screen" id="Haze 04 L"/>
+          <layerref a="0.05" blend="screen" id="Haze 01 mid"/>
+          <layerref a="0.05" blend="screen" id="Haze 02 R"/>
+        </frame>
+        <frame id="In 02">
+          <layerref a="0.2" blend="screen" id="Haze 01 L"/>
+          <layerref a="0.2" blend="screen" id="Haze 02 mid"/>
+          <layerref a="0.2" blend="screen" id="Haze 03 R"/>
+        </frame>
+        <frame id="In 03">
+          <layerref a="0.4" blend="screen" id="Haze 02 L"/>
+          <layerref a="0.2" blend="screen" id="Haze 03 mid"/>
+          <layerref a="0.4" blend="screen" id="Haze 04 R"/>
+        </frame>
+        <frame id="Loop 01">
+          <layerref a="0.6" blend="screen" id="Haze 03 L"/>
+          <layerref a="0.6" blend="screen" id="Haze 04 mid"/>
+          <layerref a="0.6" blend="screen" id="Haze 01 R"/>
+          <layerref id="Flies 01"/>
+        </frame>
+        <frame id="Loop 02">
+          <layerref a="0.6" blend="screen" id="Haze 04 L"/>
+          <layerref a="0.6" blend="screen" id="Haze 01 mid"/>
+          <layerref a="0.6" blend="screen" id="Haze 02 R"/>
+          <layerref id="Flies 02"/>
+        </frame>
+        <frame id="Loop 03">
+          <layerref a="0.6" blend="screen" id="Haze 01 L"/>
+          <layerref a="0.6" blend="screen" id="Haze 02 mid"/>
+          <layerref a="0.6" blend="screen" id="Haze 03 R"/>
+          <layerref id="Flies 03"/>
+        </frame>
+        <frame id="Loop 04">
+          <layerref a="0.6" blend="screen" id="Haze 02 L"/>
+          <layerref a="0.6" blend="screen" id="Haze 03 mid"/>
+          <layerref a="0.6" blend="screen" id="Haze 04 R"/>
+          <layerref id="Flies 04"/>
+        </frame>
+        <frame id="Out 01">
+          <layerref a="0.4" blend="screen" id="Haze 03 L"/>
+          <layerref a="0.2" blend="screen" id="Haze 04 mid"/>
+          <layerref a="0.4" blend="screen" id="Haze 01 R"/>
+        </frame>
+        <frame id="Out 02">
+          <layerref a="0.2" blend="screen" id="Haze 04 L"/>
+          <layerref a="0.2" blend="screen" id="Haze 01 mid"/>
+          <layerref a="0.2" blend="screen" id="Haze 02 R"/>
+        </frame>
+        <frame id="Out 03">
+          <layerref a="0.05" blend="screen" id="Haze 01 L"/>
+          <layerref a="0.05" blend="screen" id="Haze 02 mid"/>
+          <layerref a="0.05" blend="screen" id="Haze 03 R"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="In" loop="false">
+          <frameref id="Wait"/>
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+        </animation>
+        <animation framerate="4" id="Loop">
+          <frameref id="Loop 01">
+            <sample id="flies" loops="-1"/>
+          </frameref>
+          <frameref id="Loop 02"/>
+          <frameref id="Loop 03"/>
+          <frameref id="Loop 04"/>
+        </animation>
+        <animation framerate="4" id="Out" loop="false">
+          <frameref id="Out 01"/>
+          <frameref id="Out 02"/>
+          <frameref id="Out 03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

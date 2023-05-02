@@ -1,0 +1,27 @@
+<item.SpriteItem id="2533" name="Balcão de Cozinha Marfim" desc="Um balcão de cozinha de coleção Marfim." tags="table" icon="items/base/modern/icon_m_bar_06_unit.png" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" minLevel="1" minCPLevel="1" price="27" minLevelType="2">
+  <volume>
+    <box min="-0.4,0,-0.49" max="0.4,1.2,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Counter" source="items/base/modern/m_bar_06_unit.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.49" max="0.4,1.2,0.49"/>
+      <layers>
+        <layer id="Layer" texture="Counter">
+          <view angle="45" y="34"/>
+          <view angle="135" y="34" hm="true"/>
+          <view angle="225" y="34"/>
+          <view angle="315" y="34" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

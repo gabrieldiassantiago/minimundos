@@ -1,0 +1,50 @@
+<item.SpriteItem id="2325" name="Comunicador Alien" desc="Não estamos sozinhos" tags="consumable,actionbar,usable,stackable,action_consumable,market" icon="items/base/consumables/magic/icon_con_item_89_aliencom.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="3" tokens="30">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.05,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_target_consumable.as"/>
+    <event id="action" script="scripts/item/action_target_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="targets" value="avatar"/>
+    <entry key="targetRange" value="10"/>
+  </data>
+  <textures>
+    <texture id="com" source="items/base/consumables/magic/icon_con_item_89_aliencom.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.15" max="0.15,0.05,0.15"/>
+      <layers>
+        <layer id="com" texture="com" y="10">
+          <view angle="45" y="12"/>
+          <view angle="135" y="12" hm="true"/>
+          <view angle="225" y="12"/>
+          <view angle="315" y="12" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="0.9" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-7" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xabffb4" a="0.3"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

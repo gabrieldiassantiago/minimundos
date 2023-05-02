@@ -1,0 +1,227 @@
+<item.SpriteItem id="0" name="VIP jetpack level_01" desc="VIP Jetpack" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.05,0,-0.135" max="-0.05,0,-0.135"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/back/con_bak_179_gold_jetpack.png" cols="5" rows="1"/>
+    <texture id="decals" source="items/base/consumables/back/con_bak_179_gold_detail.png" cols="5" rows="1"/>
+    <texture id="flame" source="items/base/consumables/back/con_bak_01_jetpack_flame2.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" x="-0.05" z="-0.135" depthBias="0.01">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="flame01_a" texture="flame" y="1">
+          <view angle="0" x="-1" y="49"/>
+          <view angle="45" x="-1" y="49"/>
+          <view angle="90" x="-1" y="49"/>
+          <view angle="135" x="-1" y="49"/>
+          <view angle="180" x="-1" y="49"/>
+          <view angle="225" y="49"/>
+          <view angle="270" y="49"/>
+          <view angle="315" y="49"/>
+        </layer>
+        <layer id="flame02_a" texture="flame" y="1">
+          <view angle="0" x="-1" y="49" hm="true"/>
+          <view angle="45" x="-1" y="49" hm="true"/>
+          <view angle="90" x="-1" y="49" hm="true"/>
+          <view angle="135" x="-1" y="49" hm="true"/>
+          <view angle="180" x="-1" y="49" hm="true"/>
+          <view angle="225" y="49" hm="true"/>
+          <view angle="270" y="49" hm="true"/>
+          <view angle="315" y="49" hm="true"/>
+        </layer>
+        <layer id="flame03_a" texture="flame" y="1">
+          <view angle="0" x="-1" y="50"/>
+          <view angle="45" x="-1" y="50"/>
+          <view angle="90" x="-1" y="50"/>
+          <view angle="135" x="-1" y="50"/>
+          <view angle="180" x="-1" y="50"/>
+          <view angle="225" y="50"/>
+          <view angle="270" y="50"/>
+          <view angle="315" y="50"/>
+        </layer>
+        <layer id="base" texture="base" y="1">
+          <view angle="0" col="2" x="-1" y="36" hm="true"/>
+          <view angle="45" col="3" x="6" y="40" hm="true"/>
+          <view angle="90" col="4" x="11" y="42"/>
+          <view angle="135" col="3" x="9" y="49"/>
+          <view angle="180" col="2" x="-1" y="46"/>
+          <view angle="225" x="-11" y="49" hm="true"/>
+          <view angle="270" col="1" x="-13" y="42"/>
+          <view angle="315" x="-8" y="40"/>
+        </layer>
+        <layer id="decals" texture="decals" y="1">
+          <view angle="0" col="2" y="24"/>
+          <view angle="45" col="3" x="8" y="27" hm="true"/>
+          <view angle="90" col="4" x="12" y="31"/>
+          <view angle="135" col="3" x="8" y="36"/>
+          <view angle="180" col="2" x="-1" y="34" hm="true"/>
+          <view angle="225" x="-9" y="36" hm="true"/>
+          <view angle="270" col="1" x="-12" y="31"/>
+          <view angle="315" x="-9" y="27"/>
+        </layer>
+        <layer id="flame01_b" texture="flame" y="1">
+          <view angle="0" x="-2" y="48"/>
+          <view angle="45" x="18" y="39"/>
+          <view angle="90" x="22" y="49"/>
+          <view angle="135" x="17" y="59"/>
+          <view angle="180" y="59"/>
+          <view angle="225" x="-19" y="58"/>
+          <view angle="270" x="-25" y="49"/>
+          <view angle="315" x="-18" y="40"/>
+        </layer>
+        <layer id="flame02_b" texture="flame" y="1">
+          <view angle="0" x="-2" y="49"/>
+          <view angle="45" x="18" y="40"/>
+          <view angle="90" x="22" y="50"/>
+          <view angle="135" x="17" y="60"/>
+          <view angle="180" y="60"/>
+          <view angle="225" x="-19" y="59"/>
+          <view angle="270" x="-25" y="50"/>
+          <view angle="315" x="-18" y="41"/>
+        </layer>
+        <layer id="flame03_b" texture="flame" y="1">
+          <view angle="0" x="-2" y="48" hm="true"/>
+          <view angle="45" x="18" y="39" hm="true"/>
+          <view angle="90" x="22" y="49" hm="true"/>
+          <view angle="135" x="17" y="59" hm="true"/>
+          <view angle="180" y="59" hm="true"/>
+          <view angle="225" x="-19" y="58" hm="true"/>
+          <view angle="270" x="-25" y="50" hm="true"/>
+          <view angle="315" x="-18" y="40" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="flame01_a" color="0xffff66"/>
+          <layerref id="flame01_b" color="0xffff66"/>
+          <layerref id="base"/>
+          <layerref id="decals"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="flame02_a" color="0xffff66"/>
+          <layerref id="flame02_b" color="0xffff66"/>
+          <layerref id="base"/>
+          <layerref id="decals"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="flame03_a" color="0xffff66"/>
+          <layerref id="flame03_b" color="0xffff66"/>
+          <layerref id="base"/>
+          <layerref id="decals"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="flame03_a" color="0xffff66" a="0"/>
+          <layerref id="base" a="0"/>
+          <layerref id="decals" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="Frame01">
+            <sample id="engine" loops="-1"/>
+          </frameref>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="-0.12" y="-0.5" s="0.8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-3" y="10"/>
+          <view angle="135" x="-8" alpha="0.5"/>
+          <view angle="225" x="-15" y="7"/>
+          <view angle="315" x="-3" y="-3"/>
+          <view angle="0" x="6" y="-3"/>
+          <view angle="90" x="-9"/>
+          <view angle="180" x="-2"/>
+          <view angle="270" x="14"/>
+        </layer>
+        <layer id="Light2" texture="Light" align="middle">
+          <view angle="45" x="16" y="2" alpha="0.5"/>
+          <view angle="135" x="11" y="10"/>
+          <view angle="225" x="11" y="-3"/>
+          <view angle="315" x="23" y="7"/>
+          <view angle="0" x="6" y="10"/>
+          <view angle="90" x="17"/>
+          <view angle="180" x="-2" y="10"/>
+          <view angle="270" x="-8"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf2f0b1"/>
+          <layerref id="Light2" color="0xf2f0b1"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xf0eea5" a="0.95"/>
+          <layerref id="Light2" color="0xf0eea5" a="0.95"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" x="-0.12" y="-0.5" s="0.3" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-7" y="23"/>
+          <view angle="135" x="-22" y="-7" alpha="0.5"/>
+          <view angle="225" x="-52" y="10"/>
+          <view angle="315" x="59" y="7"/>
+          <view angle="0" x="16" alpha="0"/>
+          <view angle="90" x="-33"/>
+          <view angle="180" x="-8" alpha="0"/>
+          <view angle="270" x="-34"/>
+        </layer>
+        <layer id="Light2" texture="Light" align="middle">
+          <view angle="45" x="58" alpha="0.5"/>
+          <view angle="135" x="22" y="12"/>
+          <view angle="225" x="23" y="-19"/>
+          <view angle="315" x="-10" y="-20"/>
+          <view angle="0" x="16" y="13"/>
+          <view angle="90" x="47"/>
+          <view angle="180" x="-8" y="11"/>
+          <view angle="270" x="46"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf2f0b1" a="0.5"/>
+          <layerref id="Light2" color="0xf2f0b1" a="0.5"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

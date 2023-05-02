@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="1651" name="Lava Geiser" desc="Um geiser soltando lava." tags="admin,misc,trap,real,turret" icon="items/base/outdoor/icon_o_lava_geyser.png" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.8,0.49"/>
+  </volume>
+  <events>
+    <event id="fire" script="scripts/item/action_turret.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle_turret.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Fire" event="fire"/>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(Idle)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="action_attributes" value="fire-10"/>
+    <entry key="action_attributes_secondary" value="health-40"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/outdoor/o_lava_geyser.png" cols="1" rows="1"/>
+    <texture id="steam" source="items/base/outdoor/o_lava_geyser_steam.png" cols="1" rows="1"/>
+    <texture id="splurt" source="items/base/outdoor/o_lava_geyser_splurt.png" cols="3" rows="1"/>
+    <texture id="spread" source="items/base/outdoor/o_lava_geyser_splurt_spread.png" cols="2" rows="4"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="bubble" source="items/base/outdoor/o_lava_geyser_bubble.png" cols="3" rows="1"/>
+    <texture id="puddle" source="items/base/outdoor/o_lava_geyser_puddle.png" cols="1" rows="3"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="0.49,2.8,0.49"/>
+      <layers>
+        <layer id="base" texture="base" y="36">
+          <view angle="45" x="1"/>
+          <view angle="135" x="-4" hm="true"/>
+          <view angle="225" x="1"/>
+          <view angle="315" x="-4" hm="true"/>
+        </layer>
+        <layer id="steam" texture="steam" y="-70">
+          <view/>
+        </layer>
+        <layer id="steam_hrz" texture="steam" y="-70">
+          <view hm="true"/>
+        </layer>
+        <layer id="splurt_base" texture="splurt" y="-78">
+          <view/>
+        </layer>
+        <layer id="splurt_base_hrz" texture="splurt" y="-78">
+          <view hm="true"/>
+        </layer>
+        <layer id="splurt_01" texture="splurt" y="-80">
+          <view col="1"/>
+        </layer>
+        <layer id="splurt_02" texture="splurt" y="-80">
+          <view col="2"/>
+        </layer>
+        <layer id="spread_a_01" texture="spread">
+          <view x="15" y="-134"/>
+        </layer>
+        <layer id="spread_a_02" texture="spread">
+          <view row="1" x="44" y="-89"/>
+        </layer>
+        <layer id="spread_a_03" texture="spread">
+          <view row="2" x="43" y="-17"/>
+        </layer>
+        <layer id="spread_a_04" texture="spread">
+          <view row="3" x="53" y="57"/>
+        </layer>
+        <layer id="spread_b_01" texture="spread">
+          <view col="1" x="12" y="-120"/>
+        </layer>
+        <layer id="spread_b_02" texture="spread">
+          <view col="1" row="1" x="40" y="-71"/>
+        </layer>
+        <layer id="spread_b_03" texture="spread">
+          <view col="1" row="2" x="67" y="-47"/>
+        </layer>
+        <layer id="spread_b_04" texture="spread">
+          <view col="1" row="3" x="66" y="14"/>
+        </layer>
+        <layer id="spread_a_01_hrz" texture="spread">
+          <view x="-15" y="-134" hm="true"/>
+        </layer>
+        <layer id="spread_a_02_hrz" texture="spread">
+          <view row="1" x="-23" y="-89" hm="true"/>
+        </layer>
+        <layer id="spread_a_03_hrz" texture="spread">
+          <view row="2" x="-24" y="-17" hm="true"/>
+        </layer>
+        <layer id="spread_a_04_hrz" texture="spread">
+          <view row="3" x="-33" y="38" hm="true"/>
+        </layer>
+        <layer id="spread_B_01_hrz" texture="spread">
+          <view col="1" x="-21" y="-132" hm="true"/>
+        </layer>
+        <layer id="spread_B_02_hrz" texture="spread">
+          <view col="1" row="1" x="-33" y="-80" hm="true"/>
+        </layer>
+        <layer id="spread_B_03_hrz" texture="spread">
+          <view col="1" row="2" x="-60" y="-47" hm="true"/>
+        </layer>
+        <layer id="spread_B_04_hrz" texture="spread">
+          <view col="1" row="3" x="-66" y="15" hm="true"/>
+        </layer>
+        <layer id="bubble_01" texture="bubble" y="-78">
+          <view x="-1"/>
+        </layer>
+        <layer id="bubble_02" texture="bubble" y="-78">
+          <view col="1" x="-1"/>
+        </layer>
+        <layer id="bubble_03" texture="bubble" y="-78">
+          <view col="2" x="-1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="steam"/>
+          <layerref id="splurt_base"/>
+          <layerref id="splurt_01"/>
+          <layerref id="spread_a_01"/>
+          <layerref id="spread_b_03"/>
+          <layerref id="spread_a_02_hrz"/>
+          <layerref id="spread_B_04_hrz"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="steam_hrz"/>
+          <layerref id="splurt_base_hrz"/>
+          <layerref id="splurt_02"/>
+          <layerref id="spread_a_02"/>
+          <layerref id="spread_b_04"/>
+          <layerref id="spread_a_03_hrz"/>
+          <layerref id="spread_B_01_hrz"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="steam"/>
+          <layerref id="splurt_base"/>
+          <layerref id="spread_a_03"/>
+          <layerref id="spread_b_01"/>
+          <layerref id="spread_a_04_hrz"/>
+          <layerref id="spread_B_02_hrz"/>
+          <layerref id="spread_a_01" x="50" y="100"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="steam_hrz"/>
+          <layerref id="splurt_base_hrz" a="0"/>
+          <layerref id="splurt_02"/>
+          <layerref id="spread_a_04"/>
+          <layerref id="spread_b_02"/>
+          <layerref id="spread_a_01_hrz"/>
+          <layerref id="spread_B_03_hrz"/>
+        </frame>
+        <frame id="off">
+          <layerref id="steam" a="0"/>
+        </frame>
+        <frame id="In_01">
+          <layerref id="bubble_01"/>
+        </frame>
+        <frame id="In_02">
+          <layerref id="bubble_02"/>
+        </frame>
+        <frame id="In_03">
+          <layerref id="bubble_03"/>
+        </frame>
+        <frame id="In_05">
+          <layerref id="steam"/>
+          <layerref id="splurt_base" a="0"/>
+          <layerref id="splurt_01" a="0.5"/>
+          <layerref id="spread_a_01"/>
+          <layerref id="spread_b_03" a="0"/>
+          <layerref id="spread_a_02_hrz"/>
+          <layerref id="spread_B_04_hrz" a="0"/>
+        </frame>
+        <frame id="In_06">
+          <layerref id="steam_hrz"/>
+          <layerref id="splurt_base_hrz"/>
+          <layerref id="splurt_02"/>
+          <layerref id="spread_a_02"/>
+          <layerref id="spread_b_04" a="0"/>
+          <layerref id="spread_a_03_hrz"/>
+          <layerref id="spread_B_01_hrz"/>
+        </frame>
+        <frame id="In_07">
+          <layerref id="steam"/>
+          <layerref id="splurt_base"/>
+          <layerref id="spread_a_03"/>
+          <layerref id="spread_b_01"/>
+          <layerref id="spread_a_04_hrz"/>
+          <layerref id="spread_B_02_hrz"/>
+          <layerref id="spread_a_01" x="50" y="100"/>
+        </frame>
+        <frame id="In_08">
+          <layerref id="steam_hrz"/>
+          <layerref id="splurt_base_hrz" a="0"/>
+          <layerref id="splurt_02"/>
+          <layerref id="spread_a_04"/>
+          <layerref id="spread_b_02"/>
+          <layerref id="spread_a_01_hrz"/>
+          <layerref id="spread_B_03_hrz"/>
+        </frame>
+        <frame id="Out_01">
+          <layerref id="steam" a="0.75"/>
+          <layerref id="splurt_base"/>
+          <layerref id="splurt_01"/>
+          <layerref id="spread_a_01"/>
+          <layerref id="spread_b_03" a="0.5"/>
+          <layerref id="spread_a_02_hrz"/>
+          <layerref id="spread_B_04_hrz"/>
+        </frame>
+        <frame id="Out_02">
+          <layerref id="steam_hrz" a="0.5"/>
+          <layerref id="splurt_02"/>
+          <layerref id="spread_a_02"/>
+          <layerref id="spread_a_03_hrz"/>
+        </frame>
+        <frame id="Out_03">
+          <layerref id="steam" a="0.1"/>
+          <layerref id="spread_a_03" a="0.5"/>
+          <layerref id="spread_a_04_hrz" a="0.5"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncFrames="false">
+          <frameref id="In_01" duration="2"/>
+          <frameref id="In_02" duration="2"/>
+          <frameref id="In_03" duration="3"/>
+          <frameref id="In_02"/>
+          <frameref id="In_05"/>
+          <frameref id="In_06"/>
+          <frameref id="In_07"/>
+          <frameref id="In_08"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncFrames="false">
+          <frameref id="Out_01"/>
+          <frameref id="Out_02"/>
+          <frameref id="Out_03"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Node01" depthBias="1">
+      <box min="-0.49,0,-0.49" max="0.49,2.8,0.49"/>
+      <layers>
+        <layer id="base" texture="base" y="36">
+          <view angle="45" x="1"/>
+          <view angle="135" x="-4" hm="true"/>
+          <view angle="225" x="1"/>
+          <view angle="315" x="-4" hm="true"/>
+        </layer>
+        <layer id="puddle01" texture="puddle">
+          <view x="-49" y="51"/>
+        </layer>
+        <layer id="puddle02" texture="puddle">
+          <view row="1" x="77" y="9"/>
+        </layer>
+        <layer id="puddle03" texture="puddle">
+          <view row="2" x="50" y="64"/>
+        </layer>
+        <layer id="puddle04" texture="puddle">
+          <view x="-87" y="41"/>
+        </layer>
+        <layer id="puddle05" texture="puddle">
+          <view row="1" x="-90" y="6"/>
+        </layer>
+        <layer id="puddle06" texture="puddle">
+          <view row="2" x="70" y="-21" hm="true"/>
+        </layer>
+        <layer id="puddle07" texture="puddle">
+          <view row="2" x="-60" y="-32" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="base">
+          <layerref id="base"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="puddle01"/>
+          <layerref id="puddle02" a="0.75"/>
+          <layerref id="puddle03" a="0.5"/>
+          <layerref id="puddle04" a="0.25"/>
+          <layerref id="puddle05"/>
+          <layerref id="puddle06" a="0.75"/>
+          <layerref id="puddle07" a="0.5"/>
+          <layerref id="base"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="puddle01" a="0.75"/>
+          <layerref id="puddle02" a="0.5"/>
+          <layerref id="puddle03" a="0.25"/>
+          <layerref id="puddle04"/>
+          <layerref id="puddle05" a="0.75"/>
+          <layerref id="puddle06" a="0.5"/>
+          <layerref id="puddle07" a="0.25"/>
+          <layerref id="base"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="puddle01" a="0.5"/>
+          <layerref id="puddle02" a="0.25"/>
+          <layerref id="puddle03"/>
+          <layerref id="puddle04" a="0.75"/>
+          <layerref id="puddle05" a="0.5"/>
+          <layerref id="puddle06" a="0.25"/>
+          <layerref id="puddle07"/>
+          <layerref id="base"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="puddle01" a="0.25"/>
+          <layerref id="puddle02"/>
+          <layerref id="puddle03" a="0.75"/>
+          <layerref id="puddle04" a="0.5"/>
+          <layerref id="puddle05" a="0.25"/>
+          <layerref id="puddle06"/>
+          <layerref id="puddle07" a="0.75"/>
+          <layerref id="base"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+        <animation id="In" syncFrames="false">
+          <frameref id="base"/>
+        </animation>
+        <animation id="Out" syncFrames="false">
+          <frameref id="base"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="base"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.2" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xef775e"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="In" syncFrames="false">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Out" syncFrames="false">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

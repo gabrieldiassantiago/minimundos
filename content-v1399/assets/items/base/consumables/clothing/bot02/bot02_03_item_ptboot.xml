@@ -1,0 +1,37 @@
+<item.SpriteItem id="1802" name="Botas de Couro" desc="Puro charme." tags="consumable,clothing,clothing_basic,actionbar,wear,bot02,action_wearable_toggle" icon="items/base/consumables/clothing/bot02/bot02_03_icon_ptboot_a.png" price="900" tokens="9000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" premium="Y">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.1539,0.2"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/bot02/bot02_03_frag_ptboot.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="cape" source="items/base/consumables/clothing/bot02/bot02_03_item_ptboot.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,0.1539,0.2"/>
+      <layers>
+        <layer id="Layer" texture="cape" y="19">
+          <view angle="45" y="-8"/>
+          <view angle="135" x="1" y="-8" hm="true"/>
+          <view angle="225" col="1" x="5" y="-4" hm="true"/>
+          <view angle="315" col="1" x="-3" y="-3"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

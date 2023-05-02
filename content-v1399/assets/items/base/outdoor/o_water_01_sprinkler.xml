@@ -1,0 +1,101 @@
+<item.SpriteItem id="2656" name="Borrifador de Jardim" desc="Um borrifador para aguar o seu jardim." tags="misc,stackable,craftable4,market" icon="items/base/outdoor/icon_o_water_01_sprinkler.png" minLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" minCPLevel="1" price="50">
+  <volume>
+    <box min="-0.21,0,-0.21" max="0.21,0.2052,0.21"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="ingredient_1" value="1462"/>
+    <entry key="ingredient_2" value="2028"/>
+    <entry key="ingredient_3" value="2457"/>
+    <entry key="ingredient_quantity_1" value="1"/>
+    <entry key="ingredient_quantity_2" value="3"/>
+    <entry key="ingredient_quantity_3" value="3"/>
+    <entry key="product_quantity" value="1"/>
+    <entry key="xp_level_required" value="100"/>
+    <entry key="xp_rewarded" value="1000"/>
+  </data>
+  <textures>
+    <texture id="Spray" source="items/base/outdoor/o_water_01_spray.png" cols="2" rows="1"/>
+    <texture id="Base" source="items/base/outdoor/o_water_01_sprinkler.png" cols="2" rows="1"/>
+    <texture id="Rainbow" source="items/base/outdoor/o_water_01_rainbow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Sprinkler">
+      <box min="-0.21,0,-0.21" max="0.21,0.2052,0.21"/>
+      <layers>
+        <layer id="Base" texture="Base">
+          <view angle="45" y="15"/>
+          <view angle="135" y="15" hm="true"/>
+          <view angle="225" col="1" y="15"/>
+          <view angle="315" col="1" y="15" hm="true"/>
+        </layer>
+        <layer id="rainbow" texture="Rainbow">
+          <view angle="45" y="-46" alpha="0.6"/>
+          <view angle="135" y="-46" alpha="0.6" hm="true"/>
+          <view angle="225" y="-46" alpha="0.6"/>
+          <view angle="315" y="-46" alpha="0.6" hm="true"/>
+        </layer>
+        <layer id="Spray01" texture="Spray">
+          <view x="1" alpha="0.6"/>
+        </layer>
+        <layer id="Spray02" texture="Spray">
+          <view col="1" x="-1" alpha="0.6"/>
+        </layer>
+        <layer id="Spray03" texture="Spray">
+          <view x="-2" alpha="0.6" hm="true"/>
+        </layer>
+        <layer id="Spray04" texture="Spray">
+          <view col="1" alpha="0.6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="OFF">
+          <layerref id="Base"/>
+        </frame>
+        <frame id="Spray01">
+          <layerref id="Base"/>
+          <layerref id="Spray01" a="2" blend="screen"/>
+          <layerref id="rainbow" blend="screen"/>
+        </frame>
+        <frame id="Spray02">
+          <layerref id="Base"/>
+          <layerref id="Spray02" a="2" blend="screen"/>
+          <layerref id="rainbow" blend="screen"/>
+        </frame>
+        <frame id="Spray03">
+          <layerref id="Base"/>
+          <layerref id="Spray03" a="2" blend="screen"/>
+          <layerref id="rainbow" blend="screen"/>
+        </frame>
+        <frame id="Spray04">
+          <layerref id="Base"/>
+          <layerref id="Spray04" a="2" blend="screen"/>
+          <layerref id="rainbow" blend="screen"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="OFF"/>
+        </animation>
+        <animation id="On" framerate="2">
+          <frameref id="Spray01"/>
+          <frameref id="Spray02"/>
+          <frameref id="Spray03"/>
+          <frameref id="Spray04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

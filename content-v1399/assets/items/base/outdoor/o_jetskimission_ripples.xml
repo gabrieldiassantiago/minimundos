@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="3234" name="Ondulações" desc="Ondulações de água." tags="admin,misc" icon="items/base/outdoor/icon_o_jetskimission_ripples.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.45,-0.001,-0.45" max="0.45,0,0.45"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="singleClickNavigate" value="true"/>
+    <entry key="selectable" value="false"/>
+  </data>
+  <textures>
+    <texture id="Ripples" source="items/base/outdoor/o_jetskimission_ripples.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" layer="surface">
+      <box min="-0.45,-0.001,-0.45" max="0.45,0,0.45"/>
+      <layers>
+        <layer id="Ripples01" texture="Ripples">
+          <view y="43"/>
+        </layer>
+        <layer id="Ripples02" texture="Ripples">
+          <view col="1" y="43"/>
+        </layer>
+        <layer id="Ripples03" texture="Ripples">
+          <view col="2" y="43"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Ripples01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Ripples02"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Ripples03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation">
+          <frameref id="01" duration="2"/>
+          <frameref id="02" duration="2"/>
+          <frameref id="03" duration="2"/>
+          <frameref id="02" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

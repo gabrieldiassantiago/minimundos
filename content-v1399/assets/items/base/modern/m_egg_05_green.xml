@@ -1,0 +1,76 @@
+<item.SpriteItem id="1993" name="Ovo de Páscoa Verde" desc="Da cor da natureza." tags="rare,misc,pickup,easter" icon="items/base/modern/icon_m_egg_05_green.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="75">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.02,0.15"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_pick_up.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_pick_up.as"/>
+  </events>
+  <actions>
+    <action id="Pick Up"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_egg_05_green.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Egg" layer="floor">
+      <box min="-0.15,0,-0.15" max="0.15,0.02,0.15"/>
+      <layers>
+        <layer id="Layer_01" texture="Texture" y="24">
+          <view angle="45" y="-13"/>
+          <view angle="135" y="-13" hm="true"/>
+          <view angle="225" y="-13"/>
+          <view angle="315" y="-13" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Layer_01"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Layer_01" a="0.8"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Layer_01" a="0.6"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Layer_01" a="0.4"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Layer_01" a="0.2"/>
+        </frame>
+        <frame id="Frame06">
+          <layerref id="Layer_01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Visible" framerate="4" syncFrames="false">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Invisible" framerate="4" syncFrames="false">
+          <frameref id="Frame06"/>
+        </animation>
+        <animation id="Show" framerate="8" loop="false" syncFrames="false">
+          <frameref id="Frame06"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Hide" framerate="8" loop="false" syncFrames="false">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05"/>
+          <frameref id="Frame06"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

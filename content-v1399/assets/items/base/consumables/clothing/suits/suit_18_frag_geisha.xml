@@ -1,0 +1,105 @@
+<f id="GeishaSuit" parentId="Suits">
+  <g id="GeishaSuit">
+    <c id="KimonoBase" sId="KimonoTorsoBase" c="16711680" a="0.28" b="-27.3" ct="1.54" lId="KimonoTorsoBase"/>
+    <c id="KimonoPattern" sId="KimonoTorsoPattern" c="16765470" b="62.1" ct="1.69" lId="KimonoTorsoPattern"/>
+    <b id="GeishaChest" min="2" max="2" sel="KimonoTorsoBase,KimonoTorsoPattern">
+      <s id="KimonoTorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_18_torso_base.png" pri="1"/>
+      <s id="KimonoTorsoPattern" cId="Torso" s="items/base/consumables/clothing/suits/suit_18_torso_overlay.png" pri="1.1"/>
+    </b>
+    <b id="GeishaLegs" min="2" max="2" sel="KimonoBottomPattern,KimonoBottomBase">
+      <g id="KimonoBottomBase" icon="$bu/icon_legs_trouser.png">
+        <s id="KimonoPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_18_leg_base_idle.png" pri="3"/>
+        <s id="KimonoPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_18_leg_base_walk1.png" pri="3"/>
+        <s id="KimonoPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_18_leg_base_walk2.png" pri="3"/>
+        <s id="KimonoPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_18_leg_base_walk3.png" pri="3"/>
+        <s id="KimonoPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_18_leg_base_walk4.png" pri="3"/>
+        <s id="KimonoSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_18_leg_base_sit_upper.png" pri="3"/>
+        <s id="KimonoSitLowerBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_18_leg_base_sit_lower.png" pri="3"/>
+        <c sId="KimonoPantIdleBase" c="16711680" a="0.28" b="-57.7" ct="1.03" lId="KimonoPantIdleBase"/>
+        <c sId="KimonoPantWalk1Base" c="16711680" a="0.28" b="-57.7" ct="1.03" lId="KimonoPantIdleBase"/>
+        <c sId="KimonoPantWalk2Base" c="16711680" a="0.28" b="-57.7" ct="1.03" lId="KimonoPantIdleBase"/>
+        <c sId="KimonoPantWalk3Base" c="16711680" a="0.28" b="-57.7" ct="1.03" lId="KimonoPantIdleBase"/>
+        <c sId="KimonoPantWalk4Base" c="16711680" a="0.28" b="-57.7" ct="1.03" lId="KimonoPantIdleBase"/>
+        <c sId="KimonoSitUpperBase" c="16711680" a="0.28" b="-57.7" ct="1.03" lId="KimonoPantIdleBase"/>
+        <c sId="KimonoSitLowerBase" c="16711680" a="0.28" b="-57.7" ct="1.03" lId="KimonoPantIdleBase"/>
+      </g>
+      <g id="KimonoBottomPattern" icon="$bu/icon_legs_trouser.png">
+        <s id="KimonoPantIdleOverlay" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_18_leg_overlay_idle.png" pri="3.1"/>
+        <s id="KimonoPantWalk1Overlay" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_18_leg_overlay_walk1.png" pri="3.1"/>
+        <s id="KimonoPantWalk2Overlay" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_18_leg_overlay_walk2.png" pri="3.1"/>
+        <s id="KimonoPantWalk3Overlay" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_18_leg_overlay_walk3.png" pri="3.1"/>
+        <s id="KimonoPantWalk4Overlay" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_18_leg_overlay_walk4.png" pri="3.1"/>
+        <s id="KimonoSitUpperOverlay" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_18_leg_overlay_sit_upper.png" pri="3.1"/>
+        <s id="KimonoSitLowerOverlay" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_18_leg_overlay_sit_lower.png" pri="3.1"/>
+        <c sId="KimonoPantIdleOverlay" c="16777215" b="41.5" ct="1.63" lId="KimonoPantIdleOverlay"/>
+        <c sId="KimonoPantWalk1Overlay" c="16777215" b="41.5" ct="1.63" lId="KimonoPantIdleOverlay"/>
+        <c sId="KimonoPantWalk2Overlay" c="16777215" b="41.5" ct="1.63" lId="KimonoPantIdleOverlay"/>
+        <c sId="KimonoPantWalk3Overlay" c="16777215" b="41.5" ct="1.63" lId="KimonoPantIdleOverlay"/>
+        <c sId="KimonoPantWalk4Overlay" c="16777215" b="41.5" ct="1.63" lId="KimonoPantIdleOverlay"/>
+        <c sId="KimonoSitUpperOverlay" c="16777215" b="41.5" ct="1.63" lId="KimonoPantIdleOverlay"/>
+        <c sId="KimonoSitLowerOverlay" c="16777215" b="41.5" ct="1.63" lId="KimonoPantIdleOverlay"/>
+      </g>
+    </b>
+    <b id="GeishaArms" min="2" max="2" sel="KimonoArmsPattern,KimonoArmsBase">
+      <g id="KimonoArmsBase" icon="$bm/icon_m_retro.png">
+        <s id="KimonoArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_18_arm_base_idle.png" pri="1"/>
+        <s id="KimonoArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_18_arm_base_walk1.png" pri="1"/>
+        <s id="KimonoArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_18_arm_base_walk2.png" pri="1"/>
+        <s id="KimonoArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_18_arm_base_walk3.png" pri="1"/>
+        <s id="KimonoArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_18_arm_base_sit.png" pri="1"/>
+        <s id="KimonoArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_18_arm_base_throw.png" pri="1"/>
+        <s id="KimonoArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_18_arm_base_raise.png" pri="1"/>
+        <c sId="KimonoArmIdleBase" c="16711680" a="0.28" b="-24.1" ct="1.84" lId="KimonoArmsBase"/>
+        <c sId="KimonoArmWalk1Base" c="16711680" a="0.28" b="-24.1" ct="1.84" lId="KimonoArmsBase"/>
+        <c sId="KimonoArmWalk2Base" c="16711680" a="0.28" b="-24.1" ct="1.84" lId="KimonoArmsBase"/>
+        <c sId="KimonoArmWalk3Base" c="16711680" a="0.28" b="-24.1" ct="1.84" lId="KimonoArmsBase"/>
+        <c sId="KimonoArmSitBase" c="16711680" a="0.28" b="-24.1" ct="1.84" lId="KimonoArmsBase"/>
+        <c sId="KimonoArmThrowBase" c="16711680" a="0.28" b="-24.1" ct="1.84" lId="KimonoArmsBase"/>
+        <c sId="KimonoArmRaiseBase" c="16711680" a="0.28" b="-24.1" ct="1.84" lId="KimonoArmsBase"/>
+      </g>
+      <g id="KimonoArmsPattern" icon="$bm/icon_m_retro.png">
+        <s id="KimonoArmIdleOverlay" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_18_arm_overlay_idle.png" pri="2"/>
+        <s id="KimonoArmWalk1Overlay" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_18_arm_overlay_walk1.png" pri="2"/>
+        <s id="KimonoArmWalk2Overlay" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_18_arm_overlay_walk2.png" pri="2"/>
+        <s id="KimonoArmWalk3Overlay" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_18_arm_overlay_walk3.png" pri="2"/>
+        <s id="KimonoArmSitOverlay" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_18_arm_overlay_sit.png" pri="2"/>
+        <s id="KimonoArmThrowOverlay" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_18_arm_overlay_throw.png" pri="2"/>
+        <s id="KimonoArmRaiseOverlay" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_18_arm_overlay_raise.png" pri="2"/>
+        <c sId="KimonoArmIdleOverlay" c="16777215" b="41.1" ct="1.63" lId="KimonoArmsPattern"/>
+        <c sId="KimonoArmWalk1Overlay" c="16777215" b="41.7" ct="1.63" lId="KimonoArmsPattern"/>
+        <c sId="KimonoArmWalk2Overlay" c="16777215" b="41.0" ct="1.63" lId="KimonoArmsPattern"/>
+        <c sId="KimonoArmWalk3Overlay" c="16777215" b="41.1" ct="1.63" lId="KimonoArmsPattern"/>
+        <c sId="KimonoArmSitOverlay" c="16777215" b="41.4" ct="1.63" lId="KimonoArmsPattern"/>
+        <c sId="KimonoArmThrowOverlay" c="16777215" b="41.0" ct="1.63" lId="KimonoArmsPattern"/>
+        <c sId="KimonoArmRaiseOverlay" c="16777215" b="41.7" ct="1.63" lId="KimonoArmsPattern"/>
+      </g>
+    </b>
+    <b id="GeishaBelt" min="2" max="2" sel="KimonoBelt">
+      <s id="KimonoBelt" cId="Torso" s="items/base/consumables/clothing/suits/suit_18_torso_belt.png" pri="1"/>
+    </b>
+    <b id="GeishaShoes" min="2" max="2" sel="GeishaShoes">
+      <g id="GeishaShoes" icon="$bu/icon_shoe_chuck.png">
+        <s id="KimonoShoeIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_18_foot_idle.png" pri="2"/>
+        <s id="KimonoShoeWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_18_foot_walk1.png" pri="2"/>
+        <s id="KimonoShoeWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_18_foot_walk2.png" pri="2"/>
+        <s id="KimonoShoeWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_18_foot_walk3.png" pri="2"/>
+        <s id="KimonoShoeWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_18_foot_walk4.png" pri="2"/>
+        <s id="KimonoShoeSit" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_18_foot_sit.png" pri="2"/>
+        <c name="shoe" sId="Bot02_06IdleBase" c="12092186" a="0.99" b="35.0" ct="1.38" lId="Bot02_Color1" lw="N"/>
+      </g>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top06"/>
+</f>

@@ -1,0 +1,53 @@
+<item.SpriteItem id="0" name="Kudos Star Balloon" desc="An item" tags="misc" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.4,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="held_balloons" source="items/base/consumables/clothing/accessory/acc_914_hand_adventbox_tartan.png" cols="4" rows="2"/>
+    <texture id="String" source="items/base/consumables/clothing/accessory/acc_914_hand_adventbox_tartan_string.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,0.4,0.25"/>
+      <layers>
+        <layer id="held" texture="held_balloons">
+          <view angle="0" x="2" y="-57"/>
+          <view angle="45" col="1" x="2" y="-50"/>
+          <view angle="90" col="2" x="3" y="-81" hm="true"/>
+          <view angle="135" col="3" x="-4" y="-75"/>
+          <view angle="180" row="1" x="-2" y="-66"/>
+          <view angle="225" col="1" row="1" x="1" y="-46"/>
+          <view angle="270" col="2" row="1" x="-8" y="-53"/>
+          <view angle="315" col="3" row="1" x="-2" y="-46"/>
+        </layer>
+        <layer id="String" texture="String">
+          <view angle="0" x="-4" y="49" hm="true"/>
+          <view angle="45" y="62"/>
+          <view angle="90" x="2" y="41" hm="true"/>
+          <view angle="135" x="-1" y="42" hm="true"/>
+          <view angle="180" x="4" y="30" hm="true"/>
+          <view angle="225" x="-5" y="41"/>
+          <view angle="270" x="-11" y="33"/>
+          <view angle="315" x="-6" y="39" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="String" y="-18"/>
+          <layerref id="held"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

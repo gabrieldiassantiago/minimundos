@@ -1,0 +1,69 @@
+<item.SpriteItem id="0" name="bfly" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/consumables/back/con_bak_277_bronzestarwing.png" cols="1" rows="6"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="skin" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="frame1" texture="base">
+          <view angle="0" row="4" x="-2" y="48"/>
+          <view angle="45" x="5" y="46"/>
+          <view angle="90" row="2" y="55"/>
+          <view angle="135" x="-5" y="46" hm="true"/>
+          <view angle="180" row="4" x="1" y="48" hm="true"/>
+          <view angle="225" x="3" y="43"/>
+          <view angle="270" row="2" y="45"/>
+          <view angle="315" x="-3" y="43" hm="true"/>
+        </layer>
+        <layer id="frame02" texture="base">
+          <view angle="0" row="5" x="-2" y="48"/>
+          <view angle="45" row="1" x="5" y="46"/>
+          <view angle="90" row="3" y="55"/>
+          <view angle="135" row="1" x="-5" y="46" hm="true"/>
+          <view angle="180" row="5" x="1" y="48" hm="true"/>
+          <view angle="225" row="1" x="3" y="43"/>
+          <view angle="270" row="3" y="45"/>
+          <view angle="315" row="1" x="-3" y="43" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="frame1"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="frame02"/>
+        </frame>
+        <frame id="alpha"/>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="Frame_01">
+            <sample id="flap"/>
+          </frameref>
+          <frameref id="Frame_02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

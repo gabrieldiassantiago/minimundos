@@ -1,0 +1,35 @@
+<item.SpriteItem id="4735" name="Asas a Vapor Play" desc="Deslize pelo céu com essa bela criação" tags="rare,consumable,actionbar,wear,back,halloween,action_wearable_toggle" icon="items/base/consumables/back/icon_con_bak_item_212_steampwing.png" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="4750">
+  <volume>
+    <box min="-0.43,0,-0.45" max="0.43,0.11,0.45"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+35"/>
+  </data>
+  <textures>
+    <texture id="wings" source="items/base/consumables/back/con_bak_item_212_steampwing.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.43,0,-0.45" max="0.43,0.11,0.45"/>
+      <layers>
+        <layer id="wings" texture="wings">
+          <view angle="45" y="34"/>
+          <view angle="135" y="34" hm="true"/>
+          <view angle="225" col="1" y="34"/>
+          <view angle="315" col="1" y="34" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

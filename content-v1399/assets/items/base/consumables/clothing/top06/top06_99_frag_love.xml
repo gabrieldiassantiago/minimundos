@@ -1,0 +1,25 @@
+<f id="Top06_99_Love" parentId="Top06">
+  <b id="Gender" sel="Female">
+    <g id="Male" name="Male" icon="$bf/icon_legs_longskirt.png">
+      <s id="Top06_99TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_99_love_torso_m.png" pri="6"/>
+    </g>
+    <g id="Female" name="Female" icon="$bf/icon_legs_longskirt.png">
+      <s id="Top06_99TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_99_love_torso_f.png" pri="6"/>
+    </g>
+  </b>
+  <g id="Arm" name="Arm" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_99ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_99_idle.png" pri="6"/>
+    <s id="Top06_99ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_99_walk1.png" pri="6"/>
+    <s id="Top06_99ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_99_walk2.png" pri="6"/>
+    <s id="Top06_99ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_99_walk3.png" pri="6"/>
+    <s id="Top06_99ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_99_sit.png" pri="6"/>
+    <s id="Top06_99ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_99_throw.png" pri="6"/>
+    <s id="Top06_99ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_99_raise.png" pri="6"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_99" icon="items/base/consumables/clothing/top06/top06_99_love_icon.png" w="48" h="48"/>
+    <s id="IconTop06_99Rare" cId="IconTop06_99" s="items/base/consumables/clothing/top01/top01_rare.png" pri="1.1"/>
+    <s id="IconTop06_99Base" cId="IconTop06_99" s="items/base/consumables/clothing/top06/top06_99_love_icon.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

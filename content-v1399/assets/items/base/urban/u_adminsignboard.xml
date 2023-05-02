@@ -1,0 +1,83 @@
+<item.WidgetItem name="Admin Release Sign" desc="A glass sign board" tags="admin,widget" icon="items/base/urban/icon_u_adminsignboard.png" minLevel="1" minLevelType="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" widget="widgets/widget_sign.swf" id="4291">
+  <volume>
+    <box min="-0.1,0,-1.49" max="0.1,2.8,0.49"/>
+  </volume>
+  <events>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+  </events>
+  <actions>
+    <action id="Show" trigger="false" event="widget_action(SHOW)"/>
+    <action id="Hide" trigger="false" event="widget_action(HIDE)"/>
+    <action id="Set Text" trigger="false" event="widget_action(SETMESSAGE)">
+      <params>
+        <param type="string" id="Text" label="Set signboard text"/>
+      </params>
+    </action>
+  </actions>
+  <navigate sitRange="4.00" standRange="3.00" targetRange="1.00" usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+  </data>
+  <textures>
+    <texture id="frame" source="items/base/shop/clothes/cl_sign_plaque_glass.png" cols="1" rows="1"/>
+    <texture id="shadow" source="items/base/modern/m_poster_02_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Signboard">
+      <box min="-0.1,0,-1.49" max="0.1,2.8,0.49"/>
+      <layers>
+        <layer id="shadow" texture="shadow" align="middle">
+          <view angle="45" x="-30" y="18"/>
+          <view angle="135" x="-34" y="-16" hm="true"/>
+          <view angle="225" x="35" y="-16"/>
+          <view angle="315" x="32" y="24" hm="true"/>
+        </layer>
+        <layer id="WidgetLayer" type="panel" texture="Texture" w="2.24" h="2.7" y="-105">
+          <view angle="45" x="-34" y="4"/>
+          <view angle="135" col="1" x="-30" y="-29"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="3"/>
+        </layer>
+        <layer id="frame" texture="frame" align="middle">
+          <view angle="45" x="-31" y="-78"/>
+          <view angle="135" x="-32" y="-111" hm="true"/>
+          <view angle="225" x="33" y="-110"/>
+          <view angle="315" x="32" y="-78" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Show">
+          <layerref id="shadow"/>
+          <layerref id="WidgetLayer"/>
+          <layerref id="frame"/>
+        </frame>
+        <frame id="Hide">
+          <layerref id="shadow"/>
+          <layerref id="frame"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Show">
+          <frameref id="Show"/>
+        </animation>
+        <animation id="Hide">
+          <frameref id="Hide"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="Animation">
+      <frame id="Frame">
+        <noderef id="Signboard"/>
+        <noderef id="Signboard01" a="180"/>
+      </frame>
+    </animation>
+  </animations>
+</item.WidgetItem>

@@ -1,0 +1,86 @@
+<item.SpriteItem id="0" name="Superhero head Level 6" desc="Phantom Stalker" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0.05,-0.3" max="0.3,0.66,0.3"/>
+  </volume>
+  <textures>
+    <texture id="level5" source="items/base/consumables/head/con_head_32_phantom.png" cols="5" rows="1"/>
+    <texture id="vial glow" source="items/base/consumables/magic/effect_generic_vialglow.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" y="0.05">
+      <box min="-0.3,0,-0.3" max="0.3,0.61,0.3"/>
+      <layers>
+        <layer id="level5" texture="level5" y="16">
+          <view angle="0" x="9" y="16" hm="true"/>
+          <view angle="45" col="1" x="-5" y="17"/>
+          <view angle="90" col="2" x="-1" y="21"/>
+          <view angle="135" col="1" x="4" y="18" hm="true"/>
+          <view angle="180" x="-9" y="16"/>
+          <view angle="225" col="3" x="2" y="14"/>
+          <view angle="270" col="4" x="-1" y="17"/>
+          <view angle="315" col="3" x="-2" y="14" hm="true"/>
+        </layer>
+        <layer id="righ_eye_glow" texture="vial glow" y="22">
+          <view angle="0" x="32" y="-20" hm="true"/>
+          <view angle="45" x="13" y="-10"/>
+          <view angle="90" x="-7" y="-6"/>
+          <view angle="135" x="-26" y="-14" hm="true"/>
+          <view angle="180" x="-11" y="-1" alpha="0"/>
+          <view angle="225" x="-2" y="2" alpha="0"/>
+          <view angle="270" y="6" alpha="0"/>
+          <view angle="315" x="28" y="-28" hm="true"/>
+        </layer>
+        <layer id="left_eye_glow" texture="vial glow" y="22">
+          <view angle="0" x="15" y="-16" alpha="0" hm="true"/>
+          <view angle="45" x="26" y="-15"/>
+          <view angle="90" x="9" y="-7"/>
+          <view angle="135" col="1" x="-13" y="-9" hm="true"/>
+          <view angle="180" x="-32" y="-20"/>
+          <view angle="225" x="-28" y="-29"/>
+          <view angle="270" y="6" alpha="0"/>
+          <view angle="315" x="2" y="2" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="level5"/>
+          <layerref id="righ_eye_glow" a="0"/>
+          <layerref id="left_eye_glow" a="0"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="level5"/>
+          <layerref id="righ_eye_glow" a="0.1"/>
+          <layerref id="left_eye_glow" a="0.1"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="level5"/>
+          <layerref id="righ_eye_glow" a="0.2"/>
+          <layerref id="left_eye_glow" a="0.2"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="level5"/>
+          <layerref id="righ_eye_glow" a="0.3"/>
+          <layerref id="left_eye_glow" a="0.3"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="level5"/>
+          <layerref id="righ_eye_glow" a="0.42"/>
+          <layerref id="left_eye_glow" a="0.42"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame05" duration="2"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame01" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

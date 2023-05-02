@@ -1,0 +1,142 @@
+<item.SpriteItem id="0" name="Mystery Box" desc="A Small Mysterious Box" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.2" max="0.15,0.55,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="base" source="items/base/mystery/mystery_02_item.png" cols="5" rows="1"/>
+    <texture id="bunny" source="items/base/mystery/mystery_02_hand.png" cols="5" rows="4"/>
+    <texture id="blink" source="items/base/mystery/mystery_02_hand_decal.png" cols="4" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.15,0,-0.2" max="0.15,0.55,0.2"/>
+      <layers>
+        <layer id="Mystery Box" texture="base">
+          <view angle="0" col="2" x="-4" y="13" hm="true"/>
+          <view angle="45" y="13"/>
+          <view angle="90" col="1" y="13"/>
+          <view angle="135" y="13" hm="true"/>
+          <view angle="180" col="2" x="2" y="13"/>
+          <view angle="225" col="3" x="-2" y="15"/>
+          <view angle="270" col="4" y="15"/>
+          <view angle="315" col="3" x="-1" y="14" hm="true"/>
+        </layer>
+        <layer id="bunny_01" texture="bunny">
+          <view angle="0" col="2" row="3" x="-4" y="-16" hm="true"/>
+          <view angle="45" row="3" y="-16"/>
+          <view angle="90" col="1" row="3" y="-16"/>
+          <view angle="135" row="3" y="-16" hm="true"/>
+          <view angle="180" col="2" row="3" x="2" y="-16"/>
+          <view angle="225" col="3" row="3" x="-2" y="-14"/>
+          <view angle="270" col="4" row="3" y="-14"/>
+          <view angle="315" col="3" row="3" x="-1" y="-15" hm="true"/>
+        </layer>
+        <layer id="bunny_02" texture="bunny">
+          <view angle="0" col="2" row="2" x="-4" y="-16" hm="true"/>
+          <view angle="45" row="2" y="-16"/>
+          <view angle="90" col="1" row="2" y="-16"/>
+          <view angle="135" row="2" y="-16" hm="true"/>
+          <view angle="180" col="2" row="2" x="2" y="-16"/>
+          <view angle="225" col="3" row="2" x="-2" y="-14"/>
+          <view angle="270" col="4" row="2" y="-14"/>
+          <view angle="315" col="3" row="2" x="-1" y="-15" hm="true"/>
+        </layer>
+        <layer id="bunny_03" texture="bunny">
+          <view angle="0" col="2" row="1" x="-4" y="-16" hm="true"/>
+          <view angle="45" row="1" y="-16"/>
+          <view angle="90" col="1" row="1" y="-16"/>
+          <view angle="135" row="1" y="-16" hm="true"/>
+          <view angle="180" col="2" row="1" x="2" y="-16"/>
+          <view angle="225" col="3" row="1" x="-2" y="-14"/>
+          <view angle="270" col="4" row="1" y="-14"/>
+          <view angle="315" col="3" row="1" x="-1" y="-15" hm="true"/>
+        </layer>
+        <layer id="bunny_04" texture="bunny">
+          <view angle="0" col="2" x="-4" y="-16" hm="true"/>
+          <view angle="45" y="-16"/>
+          <view angle="90" col="1" y="-16"/>
+          <view angle="135" y="-16" hm="true"/>
+          <view angle="180" col="2" x="2" y="-16"/>
+          <view angle="225" col="3" x="-2" y="-14"/>
+          <view angle="270" col="4" y="-14"/>
+          <view angle="315" col="3" x="-1" y="-15" hm="true"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="2" x="-4" y="-41" hm="true"/>
+          <view angle="45" y="-41"/>
+          <view angle="90" col="1" y="-41"/>
+          <view angle="135" y="-41" hm="true"/>
+          <view angle="180" col="2" x="2" y="-41"/>
+          <view angle="225" col="3" x="-2" y="-40"/>
+          <view angle="270" col="4" y="-14"/>
+          <view angle="315" col="3" x="-1" y="-41" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Mystery Box"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Mystery Box"/>
+          <layerref id="bunny_01"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Mystery Box"/>
+          <layerref id="bunny_02"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Mystery Box"/>
+          <layerref id="bunny_03"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Mystery Box"/>
+          <layerref id="bunny_04"/>
+        </frame>
+        <frame id="blink">
+          <layerref id="Mystery Box"/>
+          <layerref id="bunny_03"/>
+          <layerref id="blink"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="16">
+          <frameref id="01" duration="64"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="05"/>
+          <frameref id="04"/>
+          <frameref id="05" duration="2"/>
+          <frameref id="04" duration="8"/>
+          <frameref id="blink" duration="2"/>
+          <frameref id="04" duration="4"/>
+          <frameref id="blink" duration="2"/>
+          <frameref id="04" duration="8"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01" duration="64"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="05"/>
+          <frameref id="04"/>
+          <frameref id="05" duration="2"/>
+          <frameref id="04" duration="8"/>
+          <frameref id="blink" duration="2"/>
+          <frameref id="04" duration="4"/>
+          <frameref id="blink" duration="2"/>
+          <frameref id="04" duration="16"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01" duration="128"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,149 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="Cloud" source="items/base/consumables/feet/con_feet_100_star.png" cols="4" rows="1"/>
+    <texture id="trail" source="items/base/consumables/feet/con_feet_100_star_tail.png" cols="5" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_ring_b.png" cols="1" rows="1"/>
+    <texture id="glow" source="items/base/consumables/feet/con_feet_100_star_glow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="cloud" texture="Cloud">
+          <view angle="0" col="2" x="-3" y="57"/>
+          <view angle="45" col="1" y="55"/>
+          <view angle="90" col="1" y="56"/>
+          <view angle="135" col="1" y="58" hm="true"/>
+          <view angle="180" col="2" x="3" y="57" hm="true"/>
+          <view angle="225" col="2" y="55" hm="true"/>
+          <view angle="270" col="2" x="-5" y="54"/>
+          <view angle="315" col="2" y="55"/>
+        </layer>
+        <layer id="sit" texture="base">
+          <view angle="45" x="4" y="26" alpha="0" hm="true"/>
+          <view angle="135" x="-5" y="33" alpha="0"/>
+          <view angle="225" x="-5" y="23" alpha="0" hm="true"/>
+          <view angle="315" x="15" y="19" alpha="0"/>
+        </layer>
+        <layer id="trail_01" texture="trail">
+          <view angle="0" col="4" x="-78" y="86"/>
+          <view angle="45" x="-30" y="66"/>
+          <view angle="90" col="1" y="29"/>
+          <view angle="135" x="33" y="68" hm="true"/>
+          <view angle="180" col="4" x="78" y="86" hm="true"/>
+          <view angle="225" col="3" x="35" y="99" hm="true"/>
+          <view angle="270" col="2" x="-4" y="135"/>
+          <view angle="315" col="3" x="-35" y="99"/>
+        </layer>
+        <layer id="glow" texture="glow">
+          <view y="115"/>
+        </layer>
+        <layer id="trail_02" texture="trail">
+          <view angle="0" col="4" x="-80" y="86"/>
+          <view angle="45" x="-32" y="64"/>
+          <view angle="90" col="1" y="27"/>
+          <view angle="135" x="35" y="66" hm="true"/>
+          <view angle="180" col="4" x="80" y="86" hm="true"/>
+          <view angle="225" col="3" x="37" y="101" hm="true"/>
+          <view angle="270" col="2" x="-4" y="137"/>
+          <view angle="315" col="3" x="-37" y="101"/>
+        </layer>
+        <layer id="trail_03" texture="trail">
+          <view angle="0" col="4" x="-82" y="86"/>
+          <view angle="45" x="-34" y="62"/>
+          <view angle="90" col="1" y="25"/>
+          <view angle="135" x="37" y="64" hm="true"/>
+          <view angle="180" col="4" x="82" y="86" hm="true"/>
+          <view angle="225" col="3" x="39" y="103" hm="true"/>
+          <view angle="270" col="2" x="-4" y="139"/>
+          <view angle="315" col="3" x="-39" y="103"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="cloud"/>
+          <layerref id="glow"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="trail_01"/>
+          <layerref id="cloud"/>
+          <layerref id="glow"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="trail_01" a="0.5"/>
+          <layerref id="trail_02" a="0.5"/>
+          <layerref id="cloud"/>
+          <layerref id="glow"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="trail_02" a="0.5"/>
+          <layerref id="trail_03" a="0.5"/>
+          <layerref id="cloud"/>
+          <layerref id="glow"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="trail_03" a="0.5"/>
+          <layerref id="trail_01" a="0.5"/>
+          <layerref id="cloud"/>
+          <layerref id="glow"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="Idle" duration="2"/>
+          <frameref id="Idle" duration="2"/>
+          <frameref id="Idle" duration="2"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="-0.245" y="-0.0312" s="7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="45" x="2" y="-1"/>
+          <view angle="135" x="-2"/>
+          <view angle="225" x="-2" y="-3"/>
+          <view angle="315" x="2" y="-3"/>
+          <view angle="0" x="2" y="-1"/>
+          <view angle="90"/>
+          <view angle="180" x="-3" y="-2"/>
+          <view angle="270" x="-1" y="-3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xcfe568"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="01" duration="2"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="01" duration="5"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

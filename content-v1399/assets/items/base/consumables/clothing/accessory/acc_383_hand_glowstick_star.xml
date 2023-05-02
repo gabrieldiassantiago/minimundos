@@ -1,0 +1,105 @@
+<item.SpriteItem id="0" name="Spade Spear" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Gardening Fork" source="items/base/consumables/clothing/accessory/acc_383_hand_glowstick_star.png" cols="4" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="radiate" source="items/base/consumables/magic/sndfx_radiate.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Gardening Fork">
+      <box min="-0.15,0,-0.15" max="0.15,0.4,0.15"/>
+      <layers>
+        <layer id="Gardening Fork" texture="Gardening Fork">
+          <view angle="0" col="2" x="5" y="45"/>
+          <view angle="45" col="1" x="7" y="45"/>
+          <view angle="90" y="45"/>
+          <view angle="135" col="1" x="-7" y="45" hm="true"/>
+          <view angle="180" col="2" x="-5" y="45" hm="true"/>
+          <view angle="225" col="3" x="-7" y="45" hm="true"/>
+          <view angle="270" x="3" y="35" hm="true"/>
+          <view angle="315" col="3" x="7" y="45"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Gardening Fork"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="light" align="middle">
+          <view angle="0" x="4" y="-10"/>
+          <view angle="45" x="6" y="-10"/>
+          <view angle="90" y="-9"/>
+          <view angle="135" x="-4" y="-10" hm="true"/>
+          <view angle="180" x="-4" y="-11" hm="true"/>
+          <view angle="225" x="-5" y="-13" hm="true"/>
+          <view angle="270" x="2" y="-13" hm="true"/>
+          <view angle="315" x="5" y="-14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0xe73b3b"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0x38bd49"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0x3571cb"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="Light" color="0xe2dd4b"/>
+        </frame>
+        <frame id="Frame05">
+          <layerref id="Light" color="0xa177ef"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame05"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Gardening Fork" align="middle">
+          <view angle="0" col="2" x="8" y="-15"/>
+          <view angle="45" col="1" x="9" y="-18"/>
+          <view angle="90" x="2" y="-18"/>
+          <view angle="135" col="1" x="-4" y="-15" hm="true"/>
+          <view angle="180" col="2" y="-15" hm="true"/>
+          <view angle="225" col="3" x="-1" y="-18" hm="true"/>
+          <view angle="270" x="8" y="-27" hm="true"/>
+          <view angle="315" col="3" x="11" y="-14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" a="0.2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

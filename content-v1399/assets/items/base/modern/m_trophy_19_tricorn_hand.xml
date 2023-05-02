@@ -1,0 +1,39 @@
+<item.SpriteItem id="0" name="Tricorn Trophy" desc="Tricorn Trophy" tags="misc" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.0719,-0.0937,-0.15" max="0.2281,0.1563,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Trophy" source="items/base/modern/m_trophy_19_tricorn_hand.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" x="0.0781" y="-0.0937">
+      <box min="-0.15,0,-0.15" max="0.15,0.25,0.15"/>
+      <layers>
+        <layer id="Trophy" texture="Trophy" y="20">
+          <view angle="0" x="-3" y="22"/>
+          <view angle="45" col="1" x="10" y="23"/>
+          <view angle="90" col="2" x="10" y="29"/>
+          <view angle="135" col="1" x="15" y="36" hm="true"/>
+          <view angle="180" x="5" y="25" hm="true"/>
+          <view angle="225" col="4" x="-9" y="38" hm="true"/>
+          <view angle="270" col="3" x="-9" y="30"/>
+          <view angle="315" col="4" x="-14" y="24"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Trophy"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

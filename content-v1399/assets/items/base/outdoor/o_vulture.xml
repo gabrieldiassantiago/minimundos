@@ -1,0 +1,270 @@
+<item.SpriteItem id="1988" name="Águia Careca" desc="Não que outras tenham cabelo." tags="rare,outdoor,decoration" icon="items/base/outdoor/icon_o_vulture.png" price="25" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,2.3,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="body" source="items/base/outdoor/o_vulture_body.png" cols="2" rows="1"/>
+    <texture id="head" source="items/base/outdoor/o_vulture_head.png" cols="2" rows="2"/>
+    <texture id="feet" source="items/base/outdoor/o_vulture_feet.png" cols="2" rows="1"/>
+    <texture id="tail" source="items/base/outdoor/o_vulture_tail.png" cols="2" rows="2"/>
+    <texture id="wing_01" source="items/base/outdoor/o_vulture_wing01.png" cols="2" rows="2"/>
+    <texture id="wing_02" source="items/base/outdoor/o_vulture_wing02.png" cols="2" rows="2"/>
+    <texture id="house" source="items/base/outdoor/o_vulture_house.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.4" max="0.4,2.3,0.4"/>
+      <layers>
+        <layer id="house_front" texture="house" x="40" y="90">
+          <view angle="45" x="-21" y="-75"/>
+          <view angle="135" x="-23" y="-56" alpha="0" hm="true"/>
+          <view angle="225" x="-104" y="-57" alpha="0"/>
+          <view angle="315" x="-59" y="-75" hm="true"/>
+        </layer>
+        <layer id="house_back" texture="house" x="40" y="90">
+          <view angle="45" x="-21" y="-75" alpha="0"/>
+          <view angle="135" x="-23" y="-56" hm="true"/>
+          <view angle="225" x="-59" y="-56"/>
+          <view angle="315" x="-59" y="-75" alpha="0" hm="true"/>
+        </layer>
+        <layer id="house_decal_front" texture="house" x="40" y="90">
+          <view angle="45" col="1" x="-63" y="-46"/>
+          <view angle="135" col="1" x="-39" y="-25" alpha="0" hm="true"/>
+          <view angle="225" x="-104" y="-57" alpha="0"/>
+          <view angle="315" col="1" x="-36" y="-32" hm="true"/>
+        </layer>
+        <layer id="house_decal_back" texture="house" x="40" y="90">
+          <view angle="45" col="1" x="-63" y="-46" alpha="0"/>
+          <view angle="135" col="1" x="-42" y="-57" hm="true"/>
+          <view angle="225" col="1" x="-18" y="-46"/>
+          <view angle="315" col="1" x="-47" y="-68" alpha="0" hm="true"/>
+        </layer>
+        <layer id="feet" texture="feet" x="40" y="90">
+          <view angle="45" x="-67" y="-167"/>
+          <view angle="135" x="-48" y="-182" hm="true"/>
+          <view angle="225" col="1" x="-14" y="-171"/>
+          <view angle="315" col="1" x="-30" y="-154" hm="true"/>
+        </layer>
+        <layer id="Body_01" texture="body" x="40" y="90">
+          <view angle="45" x="-60" y="-203"/>
+          <view angle="135" x="-55" y="-218" hm="true"/>
+          <view angle="225" col="1" x="-19" y="-208"/>
+          <view angle="315" col="1" x="-25" y="-192" hm="true"/>
+        </layer>
+        <layer id="Head_01" texture="head">
+          <view angle="45" x="10" y="-154"/>
+          <view angle="135" x="-45" y="-169" hm="true"/>
+          <view angle="225" row="1" x="-8" y="-189" hm="true"/>
+          <view angle="315" row="1" x="44" y="-174"/>
+        </layer>
+        <layer id="Head_02" texture="head">
+          <view angle="45" col="1" x="10" y="-154"/>
+          <view angle="135" col="1" x="-45" y="-169" hm="true"/>
+          <view angle="225" col="1" row="1" x="-8" y="-189" hm="true"/>
+          <view angle="315" col="1" row="1" x="44" y="-174"/>
+        </layer>
+        <layer id="wing_back_a_01" texture="wing_01">
+          <view angle="45" x="-18" y="-77"/>
+          <view angle="135" x="-17" y="-93" hm="true"/>
+          <view angle="225" row="1" alpha="0"/>
+          <view angle="315" row="1" alpha="0"/>
+        </layer>
+        <layer id="wing_back_a_02" texture="wing_01">
+          <view angle="45" col="1" x="-18" y="-77"/>
+          <view angle="135" col="1" x="-17" y="-93" hm="true"/>
+          <view angle="225" col="1" row="1" alpha="0"/>
+          <view angle="315" col="1" row="1" alpha="0"/>
+        </layer>
+        <layer id="wing_front_a_01" texture="wing_02">
+          <view angle="45" x="-37" y="-64"/>
+          <view angle="135" x="1" y="-81" hm="true"/>
+          <view angle="225" row="1" alpha="0"/>
+          <view angle="315" row="1" x="-1" y="-59" alpha="0" hm="true"/>
+        </layer>
+        <layer id="wing_front_a_02" texture="wing_02">
+          <view angle="45" col="1" x="-37" y="-64"/>
+          <view angle="135" col="1" x="1" y="-81" hm="true"/>
+          <view angle="225" row="1" alpha="0"/>
+          <view angle="315" col="1" alpha="0"/>
+        </layer>
+        <layer id="wing_back_b_01" texture="wing_02">
+          <view angle="45" x="98" y="-39" alpha="0"/>
+          <view angle="135" x="-32" y="-11" alpha="0" hm="true"/>
+          <view angle="225" row="1" x="36" y="-79"/>
+          <view angle="315" row="1" x="-1" y="-61" hm="true"/>
+        </layer>
+        <layer id="wing_back_b_02" texture="wing_02">
+          <view angle="45" x="98" y="-39" alpha="0"/>
+          <view angle="135" x="-32" y="-11" alpha="0" hm="true"/>
+          <view angle="225" col="1" row="1" x="36" y="-79"/>
+          <view angle="315" col="1" row="1" x="-1" y="-61" hm="true"/>
+        </layer>
+        <layer id="wing_front_b_01" texture="wing_01">
+          <view angle="45" x="19" y="-12" alpha="0"/>
+          <view angle="135" x="46" y="16" alpha="0" hm="true"/>
+          <view angle="225" row="1" x="19" y="-73"/>
+          <view angle="315" row="1" x="16" y="-54" hm="true"/>
+        </layer>
+        <layer id="wing_front_b_02" texture="wing_01">
+          <view angle="45" x="19" y="-12" alpha="0"/>
+          <view angle="135" x="46" y="16" alpha="0" hm="true"/>
+          <view angle="225" col="1" row="1" x="19" y="-73"/>
+          <view angle="315" col="1" row="1" x="16" y="-54" hm="true"/>
+        </layer>
+        <layer id="tail" texture="tail" x="40" y="90">
+          <view angle="45" x="-99" y="-172"/>
+          <view angle="135" x="-16" y="-186" hm="true"/>
+          <view angle="225" row="1" x="13" y="-154" hm="true"/>
+          <view angle="315" row="1" x="-57" y="-137"/>
+        </layer>
+        <layer id="tail01" texture="tail" x="40" y="90">
+          <view angle="45" col="1" x="-99" y="-172"/>
+          <view angle="135" col="1" x="-16" y="-186" hm="true"/>
+          <view angle="225" col="1" row="1" x="13" y="-154" hm="true"/>
+          <view angle="315" col="1" row="1" x="-57" y="-137"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="DClosed_01">
+          <layerref id="house_decal_back"/>
+          <layerref id="house_front"/>
+          <layerref id="house_decal_front"/>
+          <layerref id="wing_back_a_01"/>
+          <layerref id="wing_back_b_01"/>
+          <layerref id="feet"/>
+          <layerref id="tail" y="-2"/>
+          <layerref id="Head_01" y="6"/>
+          <layerref id="Body_01" y="3"/>
+          <layerref id="wing_front_a_01"/>
+          <layerref id="wing_front_b_01"/>
+          <layerref id="house_back"/>
+        </frame>
+        <frame id="DClosed_02">
+          <layerref id="house_decal_back"/>
+          <layerref id="house_front"/>
+          <layerref id="house_decal_front"/>
+          <layerref id="wing_back_a_01" y="1"/>
+          <layerref id="wing_back_b_01" y="1"/>
+          <layerref id="feet"/>
+          <layerref id="tail" y="-1"/>
+          <layerref id="Head_01" y="5"/>
+          <layerref id="Body_01" y="3"/>
+          <layerref id="wing_front_a_01" y="1"/>
+          <layerref id="wing_front_b_01" y="1"/>
+          <layerref id="house_back"/>
+        </frame>
+        <frame id="DClosed_03">
+          <layerref id="house_decal_back"/>
+          <layerref id="house_front"/>
+          <layerref id="house_decal_front"/>
+          <layerref id="wing_back_a_01" y="2"/>
+          <layerref id="wing_back_b_01" y="2"/>
+          <layerref id="feet"/>
+          <layerref id="tail" y="1"/>
+          <layerref id="Head_01" y="4"/>
+          <layerref id="Body_01" y="2"/>
+          <layerref id="wing_front_a_01" y="2"/>
+          <layerref id="wing_front_b_01" y="2"/>
+          <layerref id="house_back"/>
+        </frame>
+        <frame id="DClosed_04">
+          <layerref id="house_decal_back"/>
+          <layerref id="house_front"/>
+          <layerref id="house_decal_front"/>
+          <layerref id="wing_back_a_01" y="3"/>
+          <layerref id="wing_back_b_01" y="3"/>
+          <layerref id="feet"/>
+          <layerref id="tail" y="2"/>
+          <layerref id="Head_01" y="2"/>
+          <layerref id="Body_01" y="1"/>
+          <layerref id="wing_front_a_01" y="3"/>
+          <layerref id="wing_front_b_01" y="3"/>
+          <layerref id="house_back"/>
+        </frame>
+        <frame id="DOpen_01">
+          <layerref id="house_decal_back"/>
+          <layerref id="house_front"/>
+          <layerref id="house_decal_front"/>
+          <layerref id="wing_back_a_01"/>
+          <layerref id="wing_back_b_01"/>
+          <layerref id="feet"/>
+          <layerref id="tail" y="-2"/>
+          <layerref id="Head_01" y="6"/>
+          <layerref id="Body_01" y="3"/>
+          <layerref id="wing_front_a_01"/>
+          <layerref id="wing_front_b_01"/>
+          <layerref id="house_back"/>
+        </frame>
+        <frame id="DOpen_02">
+          <layerref id="house_decal_back"/>
+          <layerref id="house_front"/>
+          <layerref id="house_decal_front"/>
+          <layerref id="wing_back_a_02"/>
+          <layerref id="wing_back_b_02"/>
+          <layerref id="feet"/>
+          <layerref id="tail01" y="-2"/>
+          <layerref id="Head_01" y="6"/>
+          <layerref id="Body_01" y="3"/>
+          <layerref id="wing_front_a_02"/>
+          <layerref id="wing_front_b_02"/>
+          <layerref id="house_back"/>
+        </frame>
+        <frame id="DOpen_03">
+          <layerref id="house_decal_back"/>
+          <layerref id="house_front"/>
+          <layerref id="house_decal_front"/>
+          <layerref id="wing_back_a_01"/>
+          <layerref id="wing_back_b_01"/>
+          <layerref id="feet"/>
+          <layerref id="tail" y="-2"/>
+          <layerref id="Head_02" y="6"/>
+          <layerref id="Body_01" y="3"/>
+          <layerref id="wing_front_a_01"/>
+          <layerref id="wing_front_b_01"/>
+          <layerref id="house_back"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="2">
+          <frameref id="DClosed_01"/>
+          <frameref id="DClosed_02"/>
+          <frameref id="DClosed_03"/>
+          <frameref id="DClosed_04"/>
+          <frameref id="DClosed_04"/>
+          <frameref id="DClosed_03"/>
+          <frameref id="DClosed_02"/>
+        </animation>
+        <animation id="On" framerate="8">
+          <frameref id="DOpen_01"/>
+          <frameref id="DOpen_02"/>
+          <frameref id="DOpen_01"/>
+          <frameref id="DOpen_02"/>
+          <frameref id="DOpen_01"/>
+          <frameref id="DOpen_02"/>
+          <frameref id="DOpen_03"/>
+          <frameref id="DOpen_01" duration="6"/>
+          <frameref id="DOpen_03"/>
+          <frameref id="DOpen_01"/>
+          <frameref id="DOpen_01"/>
+          <frameref id="DOpen_03"/>
+          <frameref id="DOpen_01" duration="4"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

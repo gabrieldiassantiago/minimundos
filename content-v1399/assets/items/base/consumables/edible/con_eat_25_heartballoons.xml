@@ -1,0 +1,55 @@
+<item.SpriteItem id="1436" name="Balões de Coração" desc="Nada mais lindo para expressar o amor." tags="wall,misc,consumable,actionbar,real,hand,usable,stackable,action_consumable,market" icon="items/base/consumables/edible/icon_con_eat_25_heartballoons.png" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="15" minLevel="1" minLevelType="4" minCPLevel="1">
+  <volume>
+    <box min="0,-0.65,-0.9" max="0.4,0.65,0.9"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemConsume" value="Hold"/>
+    <entry key="itemConsumeIcon" value="context/item/action/icon_hold.png"/>
+  </data>
+  <textures>
+    <texture id="heartballoons" source="items/base/consumables/edible/con_eat_25_heartballoons.png" cols="1" rows="1"/>
+    <texture id="deco" source="items/base/consumables/edible/con_eat_25_walldeco.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="balloons">
+      <box min="0,-0.65,-0.9" max="0.4,0.65,0.9"/>
+      <layers>
+        <layer id="heartballoons_L" texture="heartballoons">
+          <view angle="45" x="-25" y="20" hm="true"/>
+          <view angle="135" x="-43" y="-13"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="heartballoons_R" texture="heartballoons">
+          <view angle="45" x="43" y="-13" hm="true"/>
+          <view angle="135" x="25" y="20"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="balloons_deco" texture="deco">
+          <view angle="45" x="16" y="63"/>
+          <view angle="135" x="-16" y="63" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="balloons_deco"/>
+          <layerref id="heartballoons_R"/>
+          <layerref id="heartballoons_L"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

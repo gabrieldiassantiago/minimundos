@@ -1,0 +1,34 @@
+<item.SpriteItem id="3890" name="Emblema Armadura de Corpo" desc="Um emblema recebido por desbloquear o sistema Arid Wastes em Gopher Launch" tags="rare,gopherlaunch,misc" icon="items/base/mobile/gopherlaunch/gl_badge_03_armor_icon.png" price="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.15,0,-0.25" max="0.15,0.65,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data/>
+  <textures>
+    <texture id="scroll" source="items/base/mobile/gopherlaunch/gl_badge_03_armor_item.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="scroll">
+      <box min="-0.15,0,-0.25" max="0.15,0.65,0.25"/>
+      <layers>
+        <layer id="scroll" texture="scroll">
+          <view angle="45" y="22"/>
+          <view angle="135" y="22" hm="true"/>
+          <view angle="225" y="22"/>
+          <view angle="315" y="22" hm="true"/>
+        </layer>
+        <layer id="logo" texture="logo">
+          <view angle="45" x="1" y="-7"/>
+          <view angle="135" x="-2" y="-7" hm="true"/>
+          <view angle="225" x="1" y="-7"/>
+          <view angle="315" x="-1" y="-6" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

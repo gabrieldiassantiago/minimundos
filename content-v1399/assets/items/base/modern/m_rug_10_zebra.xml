@@ -1,0 +1,50 @@
+<item.SpriteItem id="2941" name="Tapete de Zebra" desc="Um tapete 100% produzido com fibra natuaral de excelente qualidade." tags="floor,stackable" icon="items/base/modern/icon_m_rug_10_zebra.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="55">
+  <volume>
+    <box min="-0.1,-0.001,-1.101" max="0.8446,0,0.3574"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="rug" source="items/base/modern/m_rug_10_base.png" cols="1" rows="1"/>
+    <texture id="overlay" source="items/base/modern/m_rug_10_overlay.png" cols="1" rows="1"/>
+    <texture id="spec" source="items/base/modern/m_rug_10_spec.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="rug" layer="surface">
+      <box min="-0.1,-0.001,-1.101" max="0.8446,0,0.3574"/>
+      <layers>
+        <layer id="rug" texture="rug">
+          <view angle="45" y="66"/>
+          <view angle="135" x="-47" y="42" hm="true"/>
+          <view angle="225" y="18"/>
+          <view angle="315" x="46" y="43" hm="true"/>
+        </layer>
+        <layer id="rug01" texture="overlay">
+          <view angle="45" y="66"/>
+          <view angle="135" x="-47" y="42" hm="true"/>
+          <view angle="225" y="18"/>
+          <view angle="315" x="46" y="43" hm="true"/>
+        </layer>
+        <layer id="rug02" texture="spec">
+          <view angle="45" y="66"/>
+          <view angle="135" x="-47" y="42" hm="true"/>
+          <view angle="225" y="18"/>
+          <view angle="315" x="46" y="43" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="rug">
+          <layerref id="rug"/>
+          <layerref id="rug01" blend="overlay"/>
+          <layerref id="rug02" a="0.8" blend="add"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

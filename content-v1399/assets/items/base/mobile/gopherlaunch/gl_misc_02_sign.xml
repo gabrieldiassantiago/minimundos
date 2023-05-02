@@ -1,0 +1,81 @@
+<item.SpriteItem name="Gopher Launch Sign" desc="Gopher Launch!" tags="admin,gopherlaunch,misc" icon="items/base/mobile/gopherlaunch/gl_misc_02_sign_icon.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" id="3907">
+  <volume>
+    <box min="-0.99,0.01,-0.49" max="0,0.05,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="support" source="items/base/mobile/gopherlaunch/gl_misc_02_sign.png" cols="1" rows="1"/>
+    <texture id="lfx" source="items/base/shared/s_fx_flare_fireplace.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Crate">
+      <box min="-0.99,0.01,-0.49" max="0,0.05,0.49"/>
+      <layers>
+        <layer id="support" texture="support">
+          <view x="-62" y="-60"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="support"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="support"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="support"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="2">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="1.5" s="18" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="lfx" align="middle">
+          <view x="-2" y="-31"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light" y="25" color="0xe4df57" a="0.5"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light" y="25" color="0x8a38c9" a="0.7"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Light" y="25" color="0xd88338" a="0.55"/>
+        </frame>
+        <frame id="On04">
+          <layerref id="Light" y="25" color="0xba2f2f" a="0.55"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+          <frameref id="On04"/>
+          <frameref id="On03"/>
+          <frameref id="On02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

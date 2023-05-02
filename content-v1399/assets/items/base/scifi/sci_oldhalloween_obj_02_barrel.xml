@@ -1,0 +1,119 @@
+<item.SpriteItem id="7247" name="Barril Tóxico" desc="Feito em Springfield" tags="rare,misc" icon="items/base/scifi/icon_sci_oldhalloween_obj_02_barrel.png" price="20" tokens="200" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.4" max="0.4,1.1667,0.4"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Open" source="items/base/scifi/sci_oldhalloween_obj_02_barrelopen.png" cols="1" rows="1"/>
+    <texture id="Barrel" source="items/base/scifi/sci_oldhalloween_obj_02_barrel.png" cols="1" rows="1"/>
+    <texture id="waste" source="items/base/scifi/sci_oldhalloween_obj_02_goo.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Crate">
+      <box min="-0.4,0,-0.4" max="0.4,1.1667,0.4"/>
+      <layers>
+        <layer id="Barrel" texture="Barrel">
+          <view angle="45" y="21"/>
+          <view angle="135" y="21" hm="true"/>
+          <view angle="225" y="21"/>
+          <view angle="315" y="21" hm="true"/>
+        </layer>
+        <layer id="Open" texture="Open">
+          <view angle="45" y="-69"/>
+          <view angle="135" y="-69" hm="true"/>
+          <view angle="225" y="-69"/>
+          <view angle="315" y="-69" hm="true"/>
+        </layer>
+        <layer id="Frame1" texture="waste">
+          <view y="-60"/>
+        </layer>
+        <layer id="Frame2" texture="waste">
+          <view col="1" y="-60"/>
+        </layer>
+        <layer id="Frame3" texture="waste">
+          <view col="2" y="-60"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Closed">
+          <layerref id="Barrel"/>
+        </frame>
+        <frame id="Open01">
+          <layerref id="Barrel"/>
+          <layerref id="Open"/>
+          <layerref id="Frame1"/>
+        </frame>
+        <frame id="Open02">
+          <layerref id="Barrel"/>
+          <layerref id="Open"/>
+          <layerref id="Frame2"/>
+        </frame>
+        <frame id="Open03">
+          <layerref id="Barrel"/>
+          <layerref id="Open"/>
+          <layerref id="Frame3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="2">
+          <frameref id="Closed"/>
+        </animation>
+        <animation id="Open" framerate="2">
+          <frameref id="Open01"/>
+          <frameref id="Open02"/>
+          <frameref id="Open03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" y="-15"/>
+          <view angle="135" y="-15"/>
+          <view angle="225" y="-15"/>
+          <view angle="315" y="-15"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Light" color="0x48e680" a="0.5"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Light" color="0x80f177"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0x80f177" a="0.9"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0x80f177" a="0.85"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,37 @@
+<item.SpriteItem id="6168" name="Macacão Saia Jeans Rock" desc="Um macacão jeans" tags="action_wearable_toggle,consumable,clothing,actionbar,wear,top02" icon="items/base/consumables/clothing/top02/top02_74_skirtoverall_icon_a.png" price="1125" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.43,0,-0.4" max="0.9,0.05,0.4"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top02/top02_74_frag_skirtoverall.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="clothes" source="items/base/consumables/clothing/top02/top02_74_skirtoverall_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.43,0,-0.4" max="0.9,0.05,0.4"/>
+      <layers>
+        <layer id="Layer" texture="clothes">
+          <view angle="45" x="15" y="43"/>
+          <view angle="135" x="-15" y="43" hm="true"/>
+          <view angle="225" col="1" x="-15" y="31"/>
+          <view angle="315" col="1" x="15" y="31" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

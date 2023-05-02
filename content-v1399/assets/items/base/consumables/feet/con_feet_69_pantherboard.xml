@@ -1,0 +1,167 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="Flames" source="items/base/consumables/feet/con_feet_69_pantherboard_flames.png" cols="5" rows="1"/>
+    <texture id="intense" source="items/base/consumables/feet/con_feet_69_pantherboard_flames_light.png" cols="5" rows="1"/>
+    <texture id="diffuse" source="items/base/consumables/feet/con_feet_69_pantherboard_light.png" cols="5" rows="1"/>
+    <texture id="Texture" source="items/base/consumables/feet/con_feet_08_hoverboard_dust.png" cols="1" rows="1"/>
+    <texture id="board" source="items/base/consumables/feet/con_feet_69_pantherboard.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="dust01" texture="Texture">
+          <view angle="45"/>
+          <view angle="135" x="5" y="-6"/>
+          <view angle="225" x="5" y="-3"/>
+          <view angle="315"/>
+          <view angle="0" x="8"/>
+          <view angle="90" x="2"/>
+          <view angle="180"/>
+          <view angle="270" x="2"/>
+        </layer>
+        <layer id="dust02" texture="Texture">
+          <view angle="45" hm="true"/>
+          <view angle="135" x="5" y="-6" hm="true"/>
+          <view angle="225" x="5" y="-3" hm="true"/>
+          <view angle="315" hm="true"/>
+          <view angle="0" x="8" hm="true"/>
+          <view angle="90" x="2" hm="true"/>
+          <view angle="180" hm="true"/>
+          <view angle="270" x="2" hm="true"/>
+        </layer>
+        <layer id="sit" texture="board">
+          <view angle="45" x="4" y="26" alpha="0" hm="true"/>
+          <view angle="135" x="-5" y="33" alpha="0"/>
+          <view angle="225" x="-5" y="23" alpha="0" hm="true"/>
+          <view angle="315" x="15" y="19" alpha="0"/>
+        </layer>
+        <layer id="Flame01" texture="Flames">
+          <view angle="45" x="-55" y="12"/>
+          <view angle="135" x="50" y="12" hm="true"/>
+          <view angle="225" col="3" x="49" y="64"/>
+          <view angle="315" col="3" x="-51" y="63" hm="true"/>
+          <view angle="0" col="2" x="-73" y="30" hm="true"/>
+          <view angle="90" col="1" x="-1"/>
+          <view angle="180" col="2" x="73" y="28"/>
+          <view angle="270" col="4" x="-2" y="69"/>
+        </layer>
+        <layer id="Foxboard" texture="board">
+          <view angle="0" col="2" x="2" y="43" hm="true"/>
+          <view angle="45" x="-2" y="39"/>
+          <view angle="90" col="1" y="40"/>
+          <view angle="135" x="-2" y="39" hm="true"/>
+          <view angle="180" col="2" x="-1" y="41"/>
+          <view angle="225" col="3" y="42"/>
+          <view angle="270" col="4" y="37"/>
+          <view angle="315" col="3" x="-1" y="40" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Foxboard"/>
+          <layerref id="Flame01"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit"/>
+        </frame>
+        <frame id="Idle01">
+          <layerref id="dust01" y="45" a="0.35"/>
+          <layerref id="Foxboard"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="dust02" y="45" a="0.35"/>
+          <layerref id="Foxboard"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Frame01">
+            <sample id="engine"/>
+          </frameref>
+        </animation>
+      </animations>
+    </node>
+    <node id="intense" s="2" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="flame01" texture="intense">
+          <view angle="0" col="2" x="-36" y="17" hm="true"/>
+          <view angle="45" x="-26" y="8"/>
+          <view angle="90" col="1" x="1" y="1"/>
+          <view angle="135" x="27" y="7" hm="true"/>
+          <view angle="180" col="2" x="38" y="15"/>
+          <view angle="225" col="3" x="27" y="33"/>
+          <view angle="270" col="4" x="3" y="36"/>
+          <view angle="315" col="3" x="-26" y="33" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="flame01" color="0xe2abf2" a="0.5"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="flame01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="diffuse" align="middle">
+          <view angle="45" y="7"/>
+          <view angle="135" y="6" hm="true"/>
+          <view angle="225" col="3" x="1" y="8"/>
+          <view angle="315" col="3" x="-1" y="6" hm="true"/>
+          <view angle="0" col="2" x="3" y="8" hm="true"/>
+          <view angle="90" col="1" y="7"/>
+          <view angle="180" col="2" x="1" y="8"/>
+          <view angle="270" col="4" x="2" y="5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xe2abf2"/>
+        </frame>
+        <frame id="None">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="None"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

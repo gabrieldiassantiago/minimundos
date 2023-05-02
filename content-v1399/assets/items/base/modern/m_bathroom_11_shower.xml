@@ -1,0 +1,188 @@
+<item.ChairItem id="1527" name="Chuveiro" desc="Um chuveiro moderno." tags="misc" icon="items/base/modern/icon_m_bathroom_11_shower.png" price="80" minLevel="1" minLevelType="2" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" chairType="uprightPool" minCPLevel="1">
+  <seats>
+    <seat z="-0.25" a="270">
+      <ap z="-1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="1" z="-1"/>
+      <ap x="-1"/>
+      <ap x="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.4615,0,-0.4" max="0.3846,0.72,0.4"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_cubicle.as"/>
+    <event id="activate" script="scripts/item/activate_chair.as"/>
+    <event id="deactivate" script="scripts/item/deactivate_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit" label="Sentar"/>
+    <action id="Stand" label="Levantar"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="hygiene-5"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_bathroom_11_shower_base.png" cols="2" rows="1"/>
+    <texture id="Texture01" source="items/base/modern/m_bathroom_11_shower_pipes.png" cols="4" rows="1"/>
+    <texture id="Texture02" source="items/base/modern/m_bathroom_11_shower_water.png" cols="6" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="LeftArm">
+      <box min="-0.4615,0,-0.4" max="0.3846,0.72,0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-1" y="32"/>
+          <view angle="135" col="1" x="-1" y="43" alpha="0"/>
+          <view angle="225" col="1" y="43" alpha="0" hm="true"/>
+          <view angle="315" x="-1" y="32" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view angle="45" col="1" x="23" y="-57" hm="true"/>
+          <view angle="135" col="5" x="23" y="-34" alpha="0"/>
+          <view angle="225" col="4" x="-27" y="-34" alpha="0"/>
+          <view angle="315" col="1" x="-24" y="-57"/>
+        </layer>
+        <layer id="Layer02" texture="Texture01">
+          <view angle="45" x="20" y="-143"/>
+          <view angle="135" col="2" x="20" y="-122"/>
+          <view angle="225" col="2" x="-20" y="-122" hm="true"/>
+          <view angle="315" x="-21" y="-143" hm="true"/>
+        </layer>
+        <layer id="water01" texture="Texture02">
+          <view angle="45" col="3" x="-9" y="-107" alpha="0"/>
+          <view angle="135" col="3" x="-9" y="-101"/>
+          <view angle="225" col="3" x="9" y="-101" hm="true"/>
+          <view angle="315" col="3" x="9" y="-107" alpha="0" hm="true"/>
+        </layer>
+        <layer id="water02" texture="Texture02">
+          <view angle="45" col="3" x="-9" y="-107" alpha="0"/>
+          <view angle="135" col="4" x="-9" y="-101"/>
+          <view angle="225" col="4" x="9" y="-101" hm="true"/>
+          <view angle="315" col="3" x="9" y="-107" alpha="0" hm="true"/>
+        </layer>
+        <layer id="water03" texture="Texture02">
+          <view angle="45" col="3" x="-9" y="-107" alpha="0"/>
+          <view angle="135" col="5" x="-9" y="-101"/>
+          <view angle="225" col="5" x="9" y="-101" hm="true"/>
+          <view angle="315" col="3" x="9" y="-107" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="Layer02"/>
+          <layerref id="water01"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="Layer02"/>
+          <layerref id="water02"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="Layer02"/>
+          <layerref id="water03"/>
+        </frame>
+        <frame id="off">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="Layer02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="off"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="RightArm">
+      <box min="-0.4615,0,-0.4" max="0.3846,0.72,0.4"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="-1" y="32" alpha="0"/>
+          <view angle="135" col="1" x="-1" y="43"/>
+          <view angle="225" col="1" y="43" hm="true"/>
+          <view angle="315" x="-1" y="32" alpha="0" hm="true"/>
+        </layer>
+        <layer id="Layer01" texture="Texture01">
+          <view angle="45" col="1" x="26" y="-56" alpha="0"/>
+          <view angle="135" col="3" x="23" y="-34"/>
+          <view angle="225" col="3" x="-23" y="-34" hm="true"/>
+          <view angle="315" col="2" x="-23" y="-57" alpha="0"/>
+        </layer>
+        <layer id="Layer02" texture="Texture01">
+          <view angle="45" x="20" y="-143" alpha="0"/>
+          <view angle="135" col="2" alpha="0"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" x="-20" y="-143" alpha="0" hm="true"/>
+        </layer>
+        <layer id="water01" texture="Texture02">
+          <view angle="45" x="-9" y="-107"/>
+          <view angle="135" col="1" alpha="0"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" x="9" y="-107" hm="true"/>
+        </layer>
+        <layer id="water02" texture="Texture02">
+          <view angle="45" col="1" x="-9" y="-107"/>
+          <view angle="135" col="1" alpha="0"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="1" x="9" y="-107" hm="true"/>
+        </layer>
+        <layer id="water03" texture="Texture02">
+          <view angle="45" col="2" x="-9" y="-107"/>
+          <view angle="135" col="1" alpha="0"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="2" x="9" y="-107" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="Layer02"/>
+          <layerref id="water01"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="Layer02"/>
+          <layerref id="water02"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="Layer02"/>
+          <layerref id="water03"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Layer"/>
+          <layerref id="Layer01"/>
+          <layerref id="Layer02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On" framerate="4">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

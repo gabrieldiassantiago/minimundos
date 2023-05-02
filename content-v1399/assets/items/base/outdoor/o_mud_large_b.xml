@@ -1,0 +1,31 @@
+<item.SpriteItem id="3484" name="Mud Large b" desc="A ground mud" tags="admin,floor" icon="items/base/outdoor/icon_o_mud_large_b.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0,0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+    <entry key="selectable" value="false"/>
+  </data>
+  <textures>
+    <texture id="mud" source="items/base/outdoor/o_mud_large_b.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" depthBias="2">
+      <box min="-0.1,0,-0.1" max="0.1,0,0.1"/>
+      <layers>
+        <layer id="mud" texture="mud">
+          <view angle="45" y="40"/>
+          <view angle="135" y="40" hm="true"/>
+          <view angle="225" y="40"/>
+          <view angle="315" y="40" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

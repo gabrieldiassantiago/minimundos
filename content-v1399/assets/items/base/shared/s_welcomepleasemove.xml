@@ -1,0 +1,148 @@
+<item.SpriteItem id="5028" name="Por favor Mova-se" desc="Por favor Mova-se" tags="admin,misc" icon="items/base/shared/icon_s_welcomepleasemove.png" price="25" tokens="250" minLevel="1" minCPLevel="1" gridActive="false" gridSnap="true" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.5,-0.01,-0.5" max="0.5,0,0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="animate" script="scripts/item/animate_local.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <textures>
+    <texture id="Succulent" source="items/base/shared/s_welcomepleasemove.png" cols="1" rows="2"/>
+    <texture id="Arrows" source="items/base/shared/s_welcomepleasemove2.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Plant" depthBias="-3">
+      <box min="-0.5,-0.01,-0.5" max="0.5,0,0.5"/>
+      <layers>
+        <layer id="Welcome" texture="Succulent" y="-150">
+          <view x="2" y="2"/>
+        </layer>
+        <layer id="Please" texture="Succulent" y="-150">
+          <view row="1" x="2" y="2"/>
+        </layer>
+        <layer id="Left" texture="Arrows" y="-150">
+          <view x="2" y="2" hm="true"/>
+        </layer>
+        <layer id="Right" texture="Arrows" y="-150">
+          <view x="2" y="2"/>
+        </layer>
+        <layer id="Left01" texture="Arrows" y="-150">
+          <view x="2" y="2" hm="true"/>
+        </layer>
+        <layer id="Right01" texture="Arrows" y="-150">
+          <view x="2" y="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="Welcome" a="0"/>
+        </frame>
+        <frame id="Welcome0">
+          <layerref id="Welcome" y="3" a="0"/>
+        </frame>
+        <frame id="Welcome00">
+          <layerref id="Welcome" y="5" a="0.2"/>
+        </frame>
+        <frame id="Welcome000">
+          <layerref id="Welcome" y="4" a="0.4"/>
+        </frame>
+        <frame id="Welcome0000">
+          <layerref id="Welcome" y="3" a="0.6"/>
+        </frame>
+        <frame id="Welcome01">
+          <layerref id="Welcome" y="2"/>
+        </frame>
+        <frame id="Welcome02">
+          <layerref id="Welcome" y="1"/>
+        </frame>
+        <frame id="Welcome03">
+          <layerref id="Welcome"/>
+        </frame>
+        <frame id="Welcome04">
+          <layerref id="Welcome" y="-1"/>
+        </frame>
+        <frame id="Welcome05">
+          <layerref id="Welcome" y="-1" a="0.8"/>
+          <layerref id="Please" y="28" a="0.2"/>
+        </frame>
+        <frame id="Welcome06">
+          <layerref id="Welcome" y="1" a="0.5"/>
+          <layerref id="Please" y="28" a="0.6"/>
+        </frame>
+        <frame id="Welcome07">
+          <layerref id="Welcome" y="3" a="0.1"/>
+          <layerref id="Please" y="28" a="0.6"/>
+        </frame>
+        <frame id="Welcome08">
+          <layerref id="Please" y="28" a="0.6"/>
+          <layerref id="Left" x="-155" y="15" a="0.2"/>
+          <layerref id="Right" x="152" y="15" a="0.2"/>
+        </frame>
+        <frame id="Welcome09">
+          <layerref id="Please" y="28" a="0.6"/>
+          <layerref id="Left" x="-160" y="15" a="0.5"/>
+          <layerref id="Right" x="157" y="15" a="0.5"/>
+        </frame>
+        <frame id="Welcome10">
+          <layerref id="Please" y="28" a="0.6"/>
+          <layerref id="Left01" x="-175" y="15"/>
+          <layerref id="Right01" x="172" y="15"/>
+        </frame>
+        <frame id="Welcome11">
+          <layerref id="Please" y="28" a="0.6"/>
+          <layerref id="Left" x="-145" y="15" a="0.1"/>
+          <layerref id="Right" x="142" y="15" a="0.1"/>
+          <layerref id="Left01" x="-180" y="15" a="0.75"/>
+          <layerref id="Right01" x="177" y="15" a="0.75"/>
+        </frame>
+        <frame id="Welcome12">
+          <layerref id="Please" y="28" a="0.6"/>
+        </frame>
+        <frame id="Welcome13">
+          <layerref id="Please" y="28" a="0.3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="6" loop="false">
+          <frameref id="Welcome0"/>
+          <frameref id="Welcome00"/>
+          <frameref id="Welcome000"/>
+          <frameref id="Welcome0000"/>
+          <frameref id="Welcome01"/>
+          <frameref id="Welcome02"/>
+          <frameref id="Welcome03"/>
+          <frameref id="Welcome04" duration="8"/>
+          <frameref id="Welcome05"/>
+          <frameref id="Welcome06"/>
+          <frameref id="Welcome07"/>
+          <frameref id="Welcome08"/>
+          <frameref id="Welcome09"/>
+          <frameref id="Welcome10"/>
+          <frameref id="Welcome11"/>
+          <frameref id="Welcome08"/>
+          <frameref id="Welcome09"/>
+          <frameref id="Welcome10"/>
+          <frameref id="Welcome11"/>
+          <frameref id="Welcome08"/>
+          <frameref id="Welcome09"/>
+          <frameref id="Welcome10"/>
+          <frameref id="Welcome11"/>
+          <frameref id="Welcome08"/>
+          <frameref id="Welcome09"/>
+          <frameref id="Welcome10"/>
+          <frameref id="Welcome12" duration="30"/>
+          <frameref id="Welcome13"/>
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

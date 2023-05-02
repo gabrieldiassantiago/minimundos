@@ -1,0 +1,31 @@
+<item.SpriteItem id="0" name="sun lg" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="head" source="items/base/consumables/clothing/accessory/acc_705_treehat_head_red.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="head">
+          <view angle="0" col="1" x="1" y="-22" hm="true"/>
+          <view angle="45" y="-22"/>
+          <view angle="90" col="1" y="-22"/>
+          <view angle="135" y="-22" hm="true"/>
+          <view angle="180" col="1" x="-1" y="-22"/>
+          <view angle="225" y="-25"/>
+          <view angle="270" col="1" y="-22"/>
+          <view angle="315" y="-25" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

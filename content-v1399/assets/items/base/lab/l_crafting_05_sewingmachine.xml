@@ -1,0 +1,56 @@
+<item.WidgetItem id="2987" name="Máquina de Costura" desc="Uma máquina de costura." tags="widget" icon="items/base/lab/icon_l_crafting_05_sewingmachine.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none" widget="widgets/widget_itemcrafter.swf" price="10" tokens="100">
+  <volume>
+    <box min="-0.2,0,-0.3" max="0.2,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select_crafting_table.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="widget_min_load_wait" value="30000"/>
+    <entry key="widget_max_load_wait" value="31000"/>
+    <entry key="hasEditSecurity" value="true"/>
+    <entry key="craft_tag" value="craftable_sewing"/>
+  </data>
+  <textures>
+    <texture id="table" source="items/base/lab/l_crafting_05_sewingmachine.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="crafting tools">
+      <box min="-0.2,0,-0.3" max="0.2,0.5,0.3"/>
+      <layers>
+        <layer id="table" texture="table">
+          <view angle="45" x="1" y="24"/>
+          <view angle="135" col="1" x="1" y="24"/>
+          <view angle="225" col="2" y="27"/>
+          <view angle="315" col="3" x="-2" y="25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="table">
+          <layerref id="table"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1" loop="false">
+          <frameref id="table"/>
+        </animation>
+        <animation id="Off" framerate="1" loop="false">
+          <frameref id="table"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

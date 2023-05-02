@@ -1,0 +1,76 @@
+<item.SpriteItem id="1810" name="Shorts" desc="Nada melhor para um dia de calor." tags="consumable,clothing,clothing_basic,actionbar,wear,bot03,action_wearable_toggle" icon="items/base/consumables/clothing/bot03/bot03_02_icon_shorts_a.png" price="50" tokens="500" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.24,0,-0.38" max="0.4,0.05,0.38"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable_cycle.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/bot03/bot03_02_frag_shorts.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="count" value="3"/>
+    <entry key="00" value="grey"/>
+    <entry key="01" value="jeanblue"/>
+    <entry key="02" value="stonewash"/>
+  </data>
+  <textures>
+    <texture id="grey" source="items/base/consumables/clothing/bot03/bot03_02_item_shorts.png" cols="2" rows="1"/>
+    <texture id="jeanblue" source="items/base/consumables/clothing/bot03/bot03_02_item_shorts_jeanblue.png" cols="2" rows="1"/>
+    <texture id="stonewash" source="items/base/consumables/clothing/bot03/bot03_02_item_shorts_stonewash.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.38" max="0.4,0.05,0.38"/>
+      <layers>
+        <layer id="grey" texture="grey" y="19">
+          <view angle="45" x="11" y="12"/>
+          <view angle="135" x="-11" y="12" hm="true"/>
+          <view angle="225" col="1" x="-10" y="5" hm="true"/>
+          <view angle="315" col="1" x="10" y="5"/>
+        </layer>
+        <layer id="jeanblue" texture="jeanblue" y="19">
+          <view angle="45" x="11" y="12"/>
+          <view angle="135" x="-11" y="12" hm="true"/>
+          <view angle="225" col="1" x="-10" y="5" hm="true"/>
+          <view angle="315" col="1" x="10" y="5"/>
+        </layer>
+        <layer id="stonewash" texture="stonewash" y="19">
+          <view angle="45" x="11" y="12"/>
+          <view angle="135" x="-11" y="12" hm="true"/>
+          <view angle="225" col="1" x="-10" y="5" hm="true"/>
+          <view angle="315" col="1" x="10" y="5"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="grey"/>
+        </frame>
+        <frame id="01">
+          <layerref id="jeanblue"/>
+        </frame>
+        <frame id="02">
+          <layerref id="stonewash"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="2">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01" framerate="2">
+          <frameref id="01"/>
+        </animation>
+        <animation id="02" framerate="2">
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

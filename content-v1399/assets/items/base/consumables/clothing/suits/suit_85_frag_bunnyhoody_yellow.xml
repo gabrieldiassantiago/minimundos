@@ -1,0 +1,32 @@
+<f id="BunnyHoody_Yellow" parentId="Suits">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="BunnyHoody_YellowMBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_torso_m.png" pri="5.1"/>
+    </g>
+    <g id="Female">
+      <s id="BunnyHoody_YellowFBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_torso_f.png" pri="5.1"/>
+    </g>
+  </b>
+  <g id="ArmHands" icon="$bm/icon_m_retro.png">
+    <s id="BunnyHoody_Yellow_Arm_Idle" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_arm_idle.png" pri="5"/>
+    <s id="BunnyHoody_Yellow_Arm_Walk1" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_arm_walk1.png" pri="5"/>
+    <s id="BunnyHoody_Yellow_Arm_Walk2" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_arm_walk2.png" pri="5"/>
+    <s id="BunnyHoody_Yellow_Arm_Walk3" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_arm_walk3.png" pri="5"/>
+    <s id="BunnyHoody_Yellow_Arm_Sit" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_arm_sit.png" pri="5"/>
+    <s id="BunnyHoody_Yellow_Arm_Throw" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_arm_throw.png" pri="5"/>
+    <s id="BunnyHoody_Yellow_Arm_Raise" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_arm_raise.png" pri="5"/>
+  </g>
+  <g id="Legs" icon="$bu/icon_legs_trouser.png">
+    <s id="BunnyHoody_Yellow_Leg_Idle" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_leg_idle_base.png" pri="5"/>
+    <s id="BunnyHoody_Yellow_Leg_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_leg_walk1_base.png" pri="5"/>
+    <s id="BunnyHoody_Yellow_Leg_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_leg_walk2_base.png" pri="5"/>
+    <s id="BunnyHoody_Yellow_Leg_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_leg_walk3_base.png" pri="5"/>
+    <s id="BunnyHoody_Yellow_Leg_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_leg_walk4_base.png" pri="5"/>
+    <s id="BunnyHoody_Yellow_Leg_Sit" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_85_bunnyhoody_yellow_leg_sit_base.png" pri="5"/>
+  </g>
+  <g id="Icon">
+    <t id="Icon_BunnyHoody_Yellow" icon="items/base/consumables/clothing/suits/suit_85_icon_bunnyhoody_yellow.png" w="48" h="48"/>
+    <s id="Icon_BunnyHoody_Yellow_suit" cId="Icon_BunnyHoody_Yellow" s="items/base/consumables/clothing/suits/suit_85_icon_bunnyhoody_yellow.png"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

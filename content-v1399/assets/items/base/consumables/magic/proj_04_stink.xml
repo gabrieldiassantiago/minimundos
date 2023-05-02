@@ -1,0 +1,101 @@
+<item.SpriteItem desc="A stink bomb projectile effect." dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" entity="false" name="Stink Bomb Projectile">
+  <volume>
+    <box max="0.1,0.1,0.1" min="-0.1,-0.1,-0.1"/>
+  </volume>
+  <textures>
+    <texture cols="1" id="item_04_stink_bomb" rows="1" source="items/base/consumables/magic/proj_04_stink_bomb.png"/>
+    <texture cols="3" id="proj_04_stink_trail" rows="2" source="items/base/consumables/magic/proj_04_stink_trail.png"/>
+  </textures>
+  <sounds>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Stink Bomb">
+      <box max="0.1,0.1,0.1" min="-0.1,-0.1,-0.1"/>
+      <layers>
+        <layer id="Proj Stink Bomb" type="group">
+          <layer id="Stink Bomb" texture="item_04_stink_bomb" y="16">
+            <view angle="0"/>
+            <view angle="45"/>
+            <view angle="90"/>
+            <view angle="135"/>
+            <view angle="180"/>
+            <view angle="225"/>
+            <view angle="270"/>
+            <view angle="315"/>
+          </layer>
+          <layer id="Trail 01" texture="proj_04_stink_trail" y="42">
+            <view angle="0" col="2" hm="true" x="-16" y="-20"/>
+            <view angle="45" x="-1" y="-21"/>
+            <view angle="90" col="1" x="2" y="-20"/>
+            <view angle="135" hm="true" x="1" y="-21"/>
+            <view angle="180" col="2" x="15" y="-20"/>
+            <view angle="225" hm="true" vm="true" x="1" y="-12"/>
+            <view angle="270" col="1" vm="true" x="2" y="-12"/>
+            <view angle="315" vm="true" x="-1" y="-12"/>
+          </layer>
+          <layer id="Trail 02" texture="proj_04_stink_trail" y="42">
+            <view angle="0" col="2" hm="true" row="1" x="-17" y="-21"/>
+            <view angle="45" row="1" x="-5" y="-26"/>
+            <view angle="90" col="1" row="1" x="7" y="-26"/>
+            <view angle="135" hm="true" row="1" x="5" y="-26"/>
+            <view angle="180" col="2" row="1" x="16" y="-21"/>
+            <view angle="225" hm="true" row="1" vm="true" x="5" y="-7"/>
+            <view angle="270" col="1" row="1" vm="true" x="7" y="-6"/>
+            <view angle="315" row="1" vm="true" x="-5" y="-7"/>
+          </layer>
+          <layer id="Idle 01" texture="proj_04_stink_trail">
+            <view col="1" x="2" y="22"/>
+          </layer>
+          <layer id="Idle 02" texture="proj_04_stink_trail">
+            <view col="1" row="1" x="7" y="17"/>
+          </layer>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Proj Stink Bomb" type="group">
+          <frame id="Stink bomb 01">
+            <layerref id="Stink Bomb"/>
+            <layerref id="Trail 01"/>
+          </frame>
+          <frame id="Stink bomb 02">
+            <layerref id="Stink Bomb"/>
+            <layerref a="0.6" id="Trail 01"/>
+            <layerref a="0.6" id="Trail 02"/>
+          </frame>
+          <frame id="Stink bomb 03">
+            <layerref id="Stink Bomb"/>
+            <layerref id="Trail 02"/>
+          </frame>
+          <frame id="Stink bomb idle 01">
+            <layerref id="Stink Bomb"/>
+            <layerref id="Idle 01"/>
+          </frame>
+          <frame id="Stink bomb idle 02">
+            <layerref id="Stink Bomb"/>
+            <layerref a="0.6" id="Idle 01"/>
+            <layerref a="0.6" id="Idle 02"/>
+          </frame>
+          <frame id="Stink bomb idle 03">
+            <layerref id="Stink Bomb"/>
+            <layerref id="Idle 02"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation framerate="4" id="Idle">
+          <frameref id="Stink bomb idle 01"/>
+          <frameref id="Stink bomb idle 02"/>
+          <frameref id="Stink bomb idle 03"/>
+        </animation>
+        <animation framerate="4" id="Projectile">
+          <frameref id="Stink bomb 01">
+            <sample id="woosh"/>
+          </frameref>
+          <frameref id="Stink bomb 02"/>
+          <frameref id="Stink bomb 03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

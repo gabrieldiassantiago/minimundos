@@ -1,0 +1,151 @@
+<f id="GhastlyGhoul" parentId="Suits">
+  <g id="Ghoul">
+    <g id="GhoulFeet" name="GhoulFeet" icon="$bf/icon_shoe_bootpoint.png">
+      <s id="Ghoul_IdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_52_shoe_idle.png" pri="2"/>
+      <s id="Ghoul_Walk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_52_shoe_walk1.png" pri="2"/>
+      <s id="Ghoul_Walk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_52_shoe_walk2.png" pri="2"/>
+      <s id="Ghoul_Walk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_52_shoe_walk3.png" pri="2"/>
+      <s id="Ghoul_Walk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_52_shoe_walk4.png" pri="2"/>
+      <s id="Ghoul_Sit" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_52_shoe_sit.png" pri="2"/>
+      <c name="shoe" sId="Ghoul_IdleBase" c="5365247" a="0.95" b="24.0" ct="0.03" lId="Ghoul_Colour3" lw="N"/>
+      <c name="shoe" sId="Ghoul_Walk1Base" c="5365247" a="0.95" b="24.0" ct="0.03" lId="Ghoul_Colour3" lw="N"/>
+      <c name="shoe" sId="Ghoul_Walk2Base" c="5365247" a="0.95" b="24.0" ct="0.03" lId="Ghoul_Colour3" lw="N"/>
+      <c name="shoe" sId="Ghoul_Walk3Base" c="5365247" a="0.95" b="24.0" ct="0.03" lId="Ghoul_Colour3" lw="N"/>
+      <c name="shoe" sId="Ghoul_Walk4Base" c="5365247" a="0.95" b="24.0" ct="0.03" lId="Ghoul_Colour3" lw="N"/>
+      <c name="shoe" sId="Ghoul_Sit" c="5365247" a="0.95" b="24.0" ct="0.03" lId="Ghoul_Colour3" lw="N"/>
+    </g>
+    <g name="Arm" icon="$bm/icon_m_retro.png">
+      <s id="Ghoul_ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_52_arm_long_idle.png" pri="6"/>
+      <s id="Ghoul_ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_52_arm_long_walk1.png" pri="6"/>
+      <s id="Ghoul_ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_52_arm_long_walk2.png" pri="6"/>
+      <s id="Ghoul_ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_52_arm_long_walk3.png" pri="6"/>
+      <s id="Ghoul_ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_52_arm_long_sit.png" pri="6"/>
+      <c sId="Ghoul_ArmIdleBase" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_ArmWalk1Base" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_ArmWalk2Base" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_ArmWalk3Base" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_ArmSitBase" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <s id="Ghoul_ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_52_arm_long_throw.png" pri="6"/>
+      <c sId="Ghoul_ArmThrowBase" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <s id="Ghoul_ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_52_arm_long_raise.png" pri="6"/>
+      <c sId="Ghoul_ArmRaiseBase" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+    </g>
+    <g id="FragmentUI">
+      <wizbox id="UI" uiInitScript="width=300; height=100; setStyle('horizontalGap', 4);" dir="H">
+        <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top06_10Color1"/>
+      </wizbox>
+      <b id="Top06_10Color1" name="Color1" desc="Choose a color" sel="LightBlue" seld="White">
+        <g id="LightBlue" icon="$bu/icon_faded_denim.png">
+          <c c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1"/>
+        </g>
+      </b>
+      <b id="Top06_10Color1" name="Color2" desc="Choose a color" sel="LightBlue2" seld="White">
+        <g id="LightBlue2" icon="$bu/icon_faded_denim.png">
+          <c c="3861503" a="1.00" b="91.2" ct="0.55" lId="Ghoul_Colour2"/>
+        </g>
+      </b>
+      <b id="Top06_10Color1" name="Color2" desc="Choose a color" sel="LightBlue2" seld="White">
+        <g id="LightBlue2" icon="$bu/icon_faded_denim.png">
+          <c c="5365247" a="0.95" b="24.0" ct="0.03" lId="Ghoul_Colour3"/>
+        </g>
+      </b>
+    </g>
+    <g id="Torso">
+      <s id="Ghoul_TorsoBase" cId="Torso" s="items/base/consumables/clothing/suits/suit_52_torso.png" pri="6"/>
+      <c sId="Ghoul_TorsoBase" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <s id="Ghoul_Shirt" cId="Torso" s="items/base/consumables/clothing/suits/suit_52_shirt.png" pri="4"/>
+      <c sId="Ghoul_Shirt" c="5365247" a="0.95" b="24.0" ct="0.03" lId="Ghoul_Colour3" lw="N"/>
+      <s id="Ghoul_Tie" cId="Torso" s="items/base/consumables/clothing/suits/suit_52_tie.png" pri="5"/>
+      <c sId="Ghoul_Tie" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+    </g>
+    <g id="LongSkirt" name="Long skirt" icon="$bf/icon_legs_longskirt.png">
+      <s id="Ghoul_BottomIdle" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_52_leg_idle.png" pri="6"/>
+      <s id="Ghoul_BottomWalk1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_52_leg_walk1.png" pri="6"/>
+      <s id="Ghoul_BottomWalk2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_52_leg_walk2.png" pri="6"/>
+      <s id="Ghoul_BottomWalk3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_52_leg_walk3.png" pri="6"/>
+      <s id="Ghoul_BottomWalk4" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_52_leg_walk4.png" pri="6"/>
+      <s id="Ghoul_BottomSitUpper" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_52_leg_sit_upper.png" pri="6"/>
+      <c sId="Ghoul_BottomIdle" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_BottomWalk1" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_BottomWalk2" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_BottomWalk3" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_BottomWalk4" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_BottomSitUpper" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <s id="Ghoul_BottomSitLower" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_52_leg_sit_lower.png" pri="6"/>
+      <c sId="Ghoul_BottomSitLower" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+    </g>
+    <g id="SkeletonArms" icon="$bm/icon_m_retro.png">
+      <s id="Ghoul_SHandIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_52_hand_idle.png" pri="3"/>
+      <s id="Ghoul_SHandWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_52_hand_walk1.png" pri="3"/>
+      <s id="Ghoul_SHandWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_52_hand_arm_walk2.png" pri="3"/>
+      <s id="Ghoul_SHandWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_52_hand_arm_walk3.png" pri="3"/>
+      <s id="Ghoul_SHandSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_52_hand_sit_arm.png" pri="3"/>
+      <c sId="Ghoul_SHandIdleBase" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_SHandWalk1Base" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_SHandWalk2Base" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_SHandWalk3Base" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_SHandSitBase" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <s id="Ghoul_SHandWave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_52_hand_raise_wave1.png" pri="1"/>
+      <s id="Ghoul_SHandWave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_52_hand_raise_wave2.png" pri="1"/>
+      <s id="Ghoul_SHandHold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_52_hand_throw_hold.png"/>
+      <s id="Ghoul_SHandOpen" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_52_hand_throw_open.png" pri="1"/>
+      <s id="Ghoul_SHandPoint" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_52_hand_throw_point.png" pri="1"/>
+      <s id="Ghoul_SHandStop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_52_hand_throw_stop.png" pri="1"/>
+      <s id="Ghoul_SHandThrow" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_52_hand_throw_throw.png" pri="1"/>
+      <s id="Ghoul_SHandThumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_52_hand_throw_thumbs.png" pri="1"/>
+      <c sId="Ghoul_SHandWave1" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_SHandWave2" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_SHandHold" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_SHandOpen" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_SHandPoint" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_SHandStop" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_SHandThrow" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_SHandThumbs" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+    </g>
+    <g id="Boot" icon="$bu/icon_shoe_skate.png">
+      <s id="Ghoul_BuckleSit" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_52_shoe_sit_decal.png" pri="3.2"/>
+      <s id="Ghoul_Buckle4" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_52_shoe_walk4_decal.png" pri="3.2"/>
+      <s id="Ghoul_Buckle3" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_52_shoe_walk3_decal.png" pri="3.2"/>
+      <s id="Ghoul_Buckle2" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_52_shoe_walk2_decal.png" pri="3.2"/>
+      <s id="Ghoul_Buckle1" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_52_shoe_walk1_decal.png" pri="3.2"/>
+      <s id="Ghoul_BuckleIdle" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_52_shoe_idle_decal.png" pri="3.2"/>
+      <c sId="Ghoul_BuckleSit" c="3861503" a="1.00" b="91.2" ct="0.55" lId="Ghoul_Colour2" lw="N"/>
+      <c sId="Ghoul_Buckle4" c="3861503" a="1.00" b="91.2" ct="0.55" lId="Ghoul_Colour2" lw="N"/>
+      <c sId="Ghoul_Buckle3" c="3861503" a="1.00" b="91.2" ct="0.55" lId="Ghoul_Colour2" lw="N"/>
+      <c sId="Ghoul_Buckle2" c="3861503" a="1.00" b="91.2" ct="0.55" lId="Ghoul_Colour2" lw="N"/>
+      <c sId="Ghoul_Buckle1" c="3861503" a="1.00" b="91.2" ct="0.55" lId="Ghoul_Colour2" lw="N"/>
+      <c sId="Ghoul_BuckleIdle" c="3861503" a="1.00" b="91.2" ct="0.55" lId="Ghoul_Colour2" lw="N"/>
+    </g>
+    <g id="CapeArms" name="CapeArms" icon="$bm/icon_m_retro.png">
+      <s id="Ghoul_CapeArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_52_arm_idle.png" pri="7"/>
+      <s id="Ghoul_CapeArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_52_arm_walk1.png" pri="7"/>
+      <s id="Ghoul_CapeArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_52_arm_walk2.png" pri="7"/>
+      <s id="Ghoul_CapeArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_52_arm_walk3.png" pri="7"/>
+      <s id="Ghoul_CapeArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_52_arm_sit.png" pri="7"/>
+      <c sId="Ghoul_CapeArmIdleBase" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_CapeArmWalk1Base" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_CapeArmWalk2Base" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_CapeArmWalk3Base" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_CapeArmSitBase" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <s id="Ghoul_CapeArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_52_arm_throw.png" pri="7"/>
+      <s id="Ghoul_CapeArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_52_arm_raise.png" pri="7"/>
+      <c sId="Ghoul_CapeArmThrowBase" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+      <c sId="Ghoul_CapeArmRaiseBase" c="5365247" a="0.91" b="49.5" ct="0.50" lId="Ghoul_Colour1" lw="N"/>
+    </g>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="Top06"/>
+  <ds id="JSFeet"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+</f>

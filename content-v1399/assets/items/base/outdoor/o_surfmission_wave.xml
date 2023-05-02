@@ -1,0 +1,73 @@
+<item.SpriteItem id="3461" name="Onda Loop" desc="Um onda de surf." tags="admin,floor" icon="items/base/outdoor/icon_o_surfmission_wave.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.4,0,-0.9" max="0.4,0,0.9"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+    <entry key="selectable" value="false"/>
+  </data>
+  <textures>
+    <texture id="wave" source="items/base/outdoor/o_surfmission_wave.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.4,0,-0.9" max="0.4,0,0.9"/>
+      <layers>
+        <layer id="wave01" texture="wave">
+          <view angle="45" x="-7" y="49"/>
+          <view angle="135" x="6" y="49" hm="true"/>
+          <view angle="225" x="-7" y="49"/>
+          <view angle="315" x="6" y="49" hm="true"/>
+        </layer>
+        <layer id="wave02" texture="wave">
+          <view angle="45" col="1" x="-7" y="49"/>
+          <view angle="135" col="1" x="6" y="49" hm="true"/>
+          <view angle="225" col="1" x="-7" y="49"/>
+          <view angle="315" col="1" x="6" y="49" hm="true"/>
+        </layer>
+        <layer id="wave03" texture="wave">
+          <view angle="45" row="1" x="-7" y="49"/>
+          <view angle="135" row="1" x="6" y="49" hm="true"/>
+          <view angle="225" row="1" x="-7" y="49"/>
+          <view angle="315" row="1" x="6" y="49" hm="true"/>
+        </layer>
+        <layer id="wave04" texture="wave">
+          <view angle="45" col="1" row="1" x="-7" y="49"/>
+          <view angle="135" col="1" row="1" x="6" y="49" hm="true"/>
+          <view angle="225" col="1" row="1" x="-7" y="49"/>
+          <view angle="315" col="1" row="1" x="6" y="49" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="wave01" a="0"/>
+        </frame>
+        <frame id="02">
+          <layerref id="wave01"/>
+        </frame>
+        <frame id="03">
+          <layerref id="wave02"/>
+        </frame>
+        <frame id="04">
+          <layerref id="wave03"/>
+        </frame>
+        <frame id="05">
+          <layerref id="wave04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="01" duration="4"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

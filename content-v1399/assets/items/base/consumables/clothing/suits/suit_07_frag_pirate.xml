@@ -1,0 +1,126 @@
+<f id="PirateSuit" parentId="Suits">
+  <g id="PirateSuit">
+    <c id="PirateSkeletonTorsoColorMaster" sId="PirateSkeletonTorso" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor"/>
+    <c id="PiratePantsColor" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1"/>
+    <s id="PirateSkeletonTorso" cId="Torso" s="items/base/consumables/clothing/suits/suit_04_torso.png" pri="1"/>
+    <g id="SkeletonPants" name="SkeletonLegs" icon="items/base/consumables/clothing/suits/icon_legs_trouser.png">
+      <s id="PirateSkeletonPantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_04_leg_idle.png"/>
+      <s id="PirateSkeletonPantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_04_leg_walk1.png"/>
+      <s id="PirateSkeletonPantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_04_leg_walk2.png"/>
+      <s id="PirateSkeletonPantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_04_leg_walk3.png"/>
+      <s id="PirateSkeletonPantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_04_leg_walk4.png"/>
+      <s id="PirateSkeletonSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/suits/suit_04_sit_lower.png"/>
+      <s id="PirateSkeletonSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_04_sit_lower.png"/>
+      <c sId="PirateSkeletonPantIdleBase" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonPantWalk1Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonPantWalk2Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonPantWalk3Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonPantWalk4Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonSitUpperBase" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonSitLowerBase" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+    </g>
+    <g id="SkeletonArms" icon="$bm/icon_m_retro.png">
+      <s id="PirateSkeletonArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_04_arm_idle.png" pri="1"/>
+      <s id="PirateSkeletonArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_04_arm_walk1.png" pri="1"/>
+      <s id="PirateSkeletonArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_04_arm_walk2.png" pri="1"/>
+      <s id="PirateSkeletonArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_04_arm_walk3.png" pri="1"/>
+      <s id="PirateSkeletonArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_04_arm_sit.png" pri="1"/>
+      <c sId="PirateSkeletonArmIdleBase" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonArmWalk1Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonArmWalk2Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonArmWalk3Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonArmSitBase" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <s id="PirateSkeletonArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/suits/suit_04_arm_throw.png" pri="1"/>
+      <s id="PirateSkeletonArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/suits/suit_04_arm_raise.png" pri="1"/>
+      <c sId="PirateSkeletonArmThrowBase" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonArmRaiseBase" c="16777215" lId="SkeletonJacketColor" lw="N"/>
+      <s id="PirateSkeletonHandIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/suits/suit_04_hand_idle.png" pri="3"/>
+      <s id="PirateSkeletonHandWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/suits/suit_04_hand_walk1.png" pri="3"/>
+      <s id="PirateSkeletonHandWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/suits/suit_04_hand_arm_walk2.png" pri="3"/>
+      <s id="PirateSkeletonHandWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/suits/suit_04_hand_arm_walk3.png" pri="3"/>
+      <s id="PirateSkeletonHandSitBase" cId="ArmSit" s="items/base/consumables/clothing/suits/suit_04_hand_sit_arm.png" pri="3"/>
+      <c sId="PirateSkeletonHandIdleBase" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonHandWalk1Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonHandWalk2Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkeletonHandWalk3Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <s id="PirateSkelHandWave1" cId="ArmRaiseWave1" s="items/base/consumables/clothing/suits/suit_04_hand_raise_wave1.png" pri="1"/>
+      <s id="PirateSkelHandWave2" cId="ArmRaiseWave2" s="items/base/consumables/clothing/suits/suit_04_hand_raise_wave2.png" pri="1"/>
+      <s id="PirateSkelHandHold" cId="ArmThrowHold" s="items/base/consumables/clothing/suits/suit_04_hand_throw_hold.png"/>
+      <s id="PirateSkelHandOpen" cId="ArmThrowOpen" s="items/base/consumables/clothing/suits/suit_04_hand_throw_open.png" pri="1"/>
+      <s id="PirateSkelHandPoint" cId="ArmThrowPoint" s="items/base/consumables/clothing/suits/suit_04_hand_throw_point.png" pri="1"/>
+      <s id="PirateSkelHandStop" cId="ArmThrowStop" s="items/base/consumables/clothing/suits/suit_04_hand_throw_stop.png" pri="1"/>
+      <s id="PirateSkelHandThrow" cId="ArmThrowThrow" s="items/base/consumables/clothing/suits/suit_04_hand_throw_throw.png" pri="1"/>
+      <s id="PirateSkelHandThumbs" cId="ArmThrowThumb" s="items/base/consumables/clothing/suits/suit_04_hand_throw_thumbs.png" pri="1"/>
+      <c sId="PirateSkelHandWave1" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkelHandWave2" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkelHandHold" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkelHandOpen" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkelHandPoint" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkelHandStop" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkelHandThrow" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="PirateSkelHandThumbs" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+    </g>
+    <g id="SkeletonFeet" icon="$bm/icon_shoe_standard.png">
+      <s id="SkeletonFootIdleBase" cId="LegIdle" s="items/base/consumables/clothing/suits/suit_04_foot_idle.png" pri="3"/>
+      <s id="SkeletonFootWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/suits/suit_04_foot_walk1.png" pri="3"/>
+      <s id="SkeletonFootWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/suits/suit_04_foot_walk2.png" pri="3"/>
+      <s id="SkeletonFootWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/suits/suit_04_foot_walk3.png" pri="3"/>
+      <s id="SkeletonFootWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/suits/suit_04_foot_walk4.png" pri="3"/>
+      <s id="SkeletonFootSit" cId="LegSitLower" s="items/base/consumables/clothing/suits/suit_04_foot_sit_lower.png" pri="3"/>
+      <c id="SkelShoeColor" sId="SkeletonFootIdleBase" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="SkeletonFootWalk1Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="SkeletonFootWalk2Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="SkeletonFootWalk3Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="SkeletonFootWalk4Base" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+      <c sId="SkeletonFootSit" c="15399669" a="1.00" ct="1.72" lId="PirateSkeletonColor" lw="N"/>
+    </g>
+    <g id="TurnJeans" name="Pants" icon="$bu/icon_legs_trouser.png">
+      <s id="PiratePantIdleBase" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_06_leg_idle.png" pri="3"/>
+      <s id="PiratePantWalk1Base" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_06_leg_walk1.png" pri="3"/>
+      <s id="PiratePantWalk2Base" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_06_leg_walk2.png" pri="3"/>
+      <s id="PiratePantWalk3Base" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_06_leg_walk3.png" pri="3"/>
+      <s id="PiratePantWalk4Base" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_06_leg_walk4.png" pri="3"/>
+      <s id="PirateSitUpperBase" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_06_sit_upper.png" pri="3"/>
+      <s id="PirateSitLowerBase" cId="LegSitLower" s="items/base/consumables/clothing/bot03/bot03_06_sit_lower.png" pri="3"/>
+      <c sId="PiratePantIdleBase" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+      <c sId="PiratePantWalk1Base" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+      <c sId="PiratePantWalk2Base" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+      <c sId="PiratePantWalk3Base" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+      <c sId="PiratePantWalk4Base" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+      <c sId="PirateSitUpperBase" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+      <c sId="PirateSitLowerBase" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+      <s id="PirateSitUpperTurn" cId="LegSitUpper" s="items/base/consumables/clothing/bot03/bot03_08_sit.png" pri="3"/>
+      <s id="PiratePantWalk4Turn" cId="LegWalk4" s="items/base/consumables/clothing/bot03/bot03_08_walk4.png" pri="3"/>
+      <s id="PiratePantWalk3Turn" cId="LegWalk3" s="items/base/consumables/clothing/bot03/bot03_08_walk3.png" pri="3"/>
+      <s id="PiratePantWalk2Turn" cId="LegWalk2" s="items/base/consumables/clothing/bot03/bot03_08_walk2.png" pri="3"/>
+      <s id="PiratePantWalk1Turn" cId="LegWalk1" s="items/base/consumables/clothing/bot03/bot03_08_walk1.png" pri="3"/>
+      <s id="PiratePantIdleTurn" cId="LegIdle" s="items/base/consumables/clothing/bot03/bot03_08_idle.png" pri="3"/>
+      <c sId="PirateSitUpperTurn" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+      <c sId="PiratePantWalk4Turn" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+      <c sId="PiratePantWalk3Turn" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+      <c sId="PiratePantWalk2Turn" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+      <c sId="PiratePantWalk1Turn" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+      <c sId="PiratePantIdleTurn" c="4534274" a="0.65" b="11.1" ct="0.58" lId="PiratePants_Color1" lw="N"/>
+    </g>
+    <g id="BeltPirate" name="Pirate belt" icon="$bu/icon_beltpirate.png">
+      <s id="BeltPirateSuitBase" cId="Torso" s="items/base/consumables/clothing/top03/top03_05_beltpirate.png" pri="3"/>
+      <s id="BeltPirateSuitBuckleBase" cId="Torso" s="items/base/consumables/clothing/top03/top03_05_buckpirate.png" pri="3"/>
+      <c sId="BeltPirateSuitBase" c="16777215" b="-114.1" ct="-0.20" lId="PirateBelt_Color1"/>
+    </g>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="JSFeet"/>
+  <ds id="Bot01"/>
+  <ds id="Bot02"/>
+  <ds id="Bot03"/>
+  <ds id="Bot04"/>
+  <ds id="Bot05"/>
+  <ds id="Top01"/>
+  <ds id="Top02"/>
+  <ds id="Top03"/>
+  <ds id="Top04"/>
+  <ds id="Top05"/>
+  <ds id="BodySkin" sel="TorsoLying"/>
+  <ds id="Top06"/>
+</f>

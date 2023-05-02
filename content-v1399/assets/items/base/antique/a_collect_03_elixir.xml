@@ -1,0 +1,132 @@
+<item.SpriteItem id="1766" name="Elixir da Vida" desc="O elixir com essência da vida" tags="rare,misc" icon="items/base/antique/icon_a_collect_03_elixir.png" price="150" minLevel="1" minLevelType="4" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.22,0,-0.22" max="0.22,1.25,0.22"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+    <texture id="goblet" source="items/base/antique/a_collect_03_elixir.png" cols="1" rows="1"/>
+    <texture id="orb" source="items/base/antique/a_collect_03_elixir_orb.png" cols="3" rows="1"/>
+    <texture id="flame" source="items/base/antique/a_collect_03_elixir_flame.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.22,0,-0.22" max="0.22,1.25,0.22"/>
+      <layers>
+        <layer id="goblet" texture="goblet" y="15">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="goblet glow" texture="Light" y="15">
+          <view angle="45" y="-48"/>
+          <view angle="135" y="-48" hm="true"/>
+          <view angle="225" y="-48"/>
+          <view angle="315" y="-48" hm="true"/>
+        </layer>
+        <layer id="orb_01" texture="orb" y="22">
+          <view angle="45" y="-58"/>
+          <view angle="135" y="-58" hm="true"/>
+          <view angle="225" y="-58"/>
+          <view angle="315" y="-58" hm="true"/>
+        </layer>
+        <layer id="orb_02" texture="orb" y="22">
+          <view angle="45" col="1" y="-58"/>
+          <view angle="135" col="1" y="-58" hm="true"/>
+          <view angle="225" col="1" y="-58"/>
+          <view angle="315" col="1" y="-58" hm="true"/>
+        </layer>
+        <layer id="orb_03" texture="orb" y="22">
+          <view angle="45" col="2" y="-58"/>
+          <view angle="135" col="2" y="-58" hm="true"/>
+          <view angle="225" col="2" y="-58"/>
+          <view angle="315" col="2" y="-58" hm="true"/>
+        </layer>
+        <layer id="flame_01" texture="flame" y="15">
+          <view angle="45" y="-58"/>
+          <view angle="135" y="-58" hm="true"/>
+          <view angle="225" y="-58"/>
+          <view angle="315" y="-58" hm="true"/>
+        </layer>
+        <layer id="flame_02" texture="flame" y="15">
+          <view angle="45" col="1" y="-58"/>
+          <view angle="135" col="1" y="-58" hm="true"/>
+          <view angle="225" col="1" y="-58"/>
+          <view angle="315" col="1" y="-58" hm="true"/>
+        </layer>
+        <layer id="flame_03" texture="flame" y="15">
+          <view angle="45" col="2" y="-58"/>
+          <view angle="135" col="2" y="-58" hm="true"/>
+          <view angle="225" col="2" y="-58"/>
+          <view angle="315" col="2" y="-58" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="frame 01">
+          <layerref id="flame_01" a="0.6"/>
+          <layerref id="goblet"/>
+          <layerref id="orb_01"/>
+          <layerref id="goblet glow" color="0x5eee52" a="0.13" blend="add"/>
+        </frame>
+        <frame id="frame 02">
+          <layerref id="flame_02" a="0.7"/>
+          <layerref id="goblet"/>
+          <layerref id="orb_02"/>
+          <layerref id="goblet glow" color="0x5eee52" a="0.15" blend="add"/>
+        </frame>
+        <frame id="frame 03">
+          <layerref id="flame_03" a="0.6"/>
+          <layerref id="goblet"/>
+          <layerref id="orb_03"/>
+          <layerref id="goblet glow" color="0x5eee52" a="0.17" blend="add"/>
+        </frame>
+        <frame id="frame 04">
+          <layerref id="goblet"/>
+          <layerref id="orb_02"/>
+          <layerref id="goblet glow" color="0x5eee52" a="0.15" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="frame 01"/>
+          <frameref id="frame 02"/>
+          <frameref id="frame 03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="3.7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x99eeef" a="0.93"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x99eeef" a="0.97" blend="add"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0x99eeef" a="0.95"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0x99eeef"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

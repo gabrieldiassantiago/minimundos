@@ -1,0 +1,103 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="Cloud" source="items/base/consumables/surfaces/sur_14_cracks_surface.png" cols="4" rows="1"/>
+    <texture id="light" source="items/base/shared/s_fx_flare_circle_floor.png" cols="1" rows="1"/>
+    <texture id="highlight" source="items/base/consumables/surfaces/sur_14_cracks_light_surface.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Diffuse" x="-0.245" y="-0.0312" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="light" texture="light">
+          <view angle="0" x="25" y="45" hm="true"/>
+          <view angle="45" x="16" y="50"/>
+          <view angle="90" y="53"/>
+          <view angle="135" x="-16" y="50" hm="true"/>
+          <view angle="180" x="-19" y="45"/>
+          <view angle="225" x="-16" y="37"/>
+          <view angle="270" y="34"/>
+          <view angle="315" x="16" y="37" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="light" color="0x93edee"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="heart_01" texture="Cloud">
+          <view x="1" y="38"/>
+        </layer>
+        <layer id="heart_02" texture="Cloud">
+          <view col="1" x="1" y="38"/>
+        </layer>
+        <layer id="heart_03" texture="Cloud">
+          <view col="2" x="1" y="38"/>
+        </layer>
+        <layer id="heart_04" texture="Cloud">
+          <view col="3" x="1" y="38"/>
+        </layer>
+        <layer id="heart_01.2" texture="Cloud">
+          <view x="1" y="38" hm="true" vm="true"/>
+        </layer>
+        <layer id="heart_02.2" texture="Cloud">
+          <view col="1" x="1" y="38" hm="true" vm="true"/>
+        </layer>
+        <layer id="heart_03.2" texture="Cloud">
+          <view col="2" x="1" y="38" hm="true" vm="true"/>
+        </layer>
+        <layer id="heart_04.2" texture="Cloud">
+          <view col="3" x="1" y="38" hm="true" vm="true"/>
+        </layer>
+        <layer id="highlight_01" texture="highlight">
+          <view x="9" y="44" alpha="0.1"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="heart_01">
+          <layerref id="highlight_01" a="0.7"/>
+          <layerref id="heart_01"/>
+          <layerref id="heart_04.2"/>
+        </frame>
+        <frame id="heart_02">
+          <layerref id="highlight_01" a="0.5"/>
+          <layerref id="heart_02"/>
+          <layerref id="heart_03.2"/>
+        </frame>
+        <frame id="heart_03">
+          <layerref id="highlight_01" a="0.5"/>
+          <layerref id="heart_03"/>
+          <layerref id="heart_02.2"/>
+        </frame>
+        <frame id="heart_04">
+          <layerref id="highlight_01"/>
+          <layerref id="heart_04"/>
+          <layerref id="heart_01.2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" loop="false">
+          <frameref id="heart_01"/>
+          <frameref id="heart_02"/>
+          <frameref id="heart_03"/>
+          <frameref id="heart_04"/>
+        </animation>
+        <animation id="Walk">
+          <frameref id="heart_01"/>
+          <frameref id="heart_02"/>
+          <frameref id="heart_03"/>
+          <frameref id="heart_04"/>
+          <frameref id="heart_03"/>
+          <frameref id="heart_02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

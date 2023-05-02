@@ -1,0 +1,157 @@
+<item.SpriteItem id="1430" name="Ovo de Dragão Chama" desc="Um ovo de dragão raríssimo" tags="destroy,rare,misc" icon="items/base/modern/icon_m_collect_01_degg.png" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="150" minLevel="1" minLevelType="4" minCPLevel="1">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,1.0897,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_collect_01_degg.png" cols="4" rows="1"/>
+    <texture id="Glow" source="items/base/modern/m_collect_01_degg_glow.png" cols="1" rows="1"/>
+    <texture id="Flame" source="items/base/modern/m_collect_01_flame.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,1.0897,0.25"/>
+      <layers>
+        <layer id="Egg" texture="Texture" y="15">
+          <view angle="45" col="2"/>
+          <view angle="135" col="3"/>
+          <view angle="225"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="Glow" texture="Glow" x="-1" y="-43">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="Flame1" texture="Flame" x="-1" y="-30">
+          <view angle="45"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+        <layer id="Flame2" texture="Flame" x="-1" y="-30">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1"/>
+        </layer>
+        <layer id="Flame3" texture="Flame" x="-1" y="-30">
+          <view angle="45" col="2"/>
+          <view angle="135" col="2"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="2"/>
+        </layer>
+        <layer id="Flame4" texture="Flame" x="-1" y="-30">
+          <view angle="45" col="3"/>
+          <view angle="135" col="3"/>
+          <view angle="225" col="3"/>
+          <view angle="315" col="3"/>
+        </layer>
+        <layer id="Flame5" texture="Flame" x="-1" y="-30">
+          <view angle="45" col="4"/>
+          <view angle="135" col="4"/>
+          <view angle="225" col="4"/>
+          <view angle="315" col="4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="1">
+          <layerref id="Flame1" a="0.25" blend="add"/>
+          <layerref id="Egg"/>
+          <layerref id="Glow" a="0.8" blend="add"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Flame2" a="0.25" blend="add"/>
+          <layerref id="Egg"/>
+          <layerref id="Glow" a="0.6" blend="add"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Flame3" a="0.25" blend="add"/>
+          <layerref id="Egg"/>
+          <layerref id="Glow" a="0.5" blend="add"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Flame4" a="0.25" blend="add"/>
+          <layerref id="Egg"/>
+          <layerref id="Glow" a="0.4" blend="add"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Flame5" a="0.25" blend="add"/>
+          <layerref id="Egg"/>
+          <layerref id="Glow" a="0.35" blend="add"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Flame1" a="0.25" blend="add"/>
+          <layerref id="Egg"/>
+          <layerref id="Glow" a="0.4" blend="add"/>
+        </frame>
+        <frame id="07">
+          <layerref id="Flame2" a="0.25" blend="add"/>
+          <layerref id="Egg"/>
+          <layerref id="Glow" a="0.5" blend="add"/>
+        </frame>
+        <frame id="08">
+          <layerref id="Flame3" a="0.25" blend="add"/>
+          <layerref id="Egg"/>
+          <layerref id="Glow" a="0.6" blend="add"/>
+        </frame>
+        <frame id="09">
+          <layerref id="Flame4" a="0.25" blend="add"/>
+          <layerref id="Egg"/>
+          <layerref id="Glow" a="0.7" blend="add"/>
+        </frame>
+        <frame id="10">
+          <layerref id="Flame5" a="0.25" blend="add"/>
+          <layerref id="Egg"/>
+          <layerref id="Glow" a="0.75" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="1"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+          <frameref id="07"/>
+          <frameref id="08"/>
+          <frameref id="09"/>
+          <frameref id="10"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.57" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xf9b6b6"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xf9b6b6" a="0.96"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xf9b6b6" a="0.94"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,68 @@
+<item.SpriteItem id="7245" name="Vassoura Turbinada Zoom" desc="Deixe as outras Bruxas para trás" tags="rare,consumable,actionbar,nopvp,wear,feet,action_ridable_toggle" icon="items/base/consumables/feet/con_feet_192_skullstick_icon.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.49" max="0.2,0.3,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="fire+50"/>
+    <entry key="action_attributes_secondary" value="health+50,speed+75"/>
+  </data>
+  <textures>
+    <texture id="torch" source="items/base/consumables/feet/con_feet_192_skullstick_item.png" cols="2" rows="2"/>
+    <texture id="shadow" source="items/base/consumables/feet/icon_con_feet_37_shadow.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.49" max="0.2,0.3,0.49"/>
+      <layers>
+        <layer id="broom" texture="torch">
+          <view angle="45" x="15" y="19"/>
+          <view angle="135" col="1" x="11" y="39"/>
+          <view angle="225" row="1" x="-5" y="39"/>
+          <view angle="315" col="1" row="1" x="-20" y="20"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" x="-4" y="34" hm="true"/>
+          <view angle="135" x="-8" y="35"/>
+          <view angle="225" x="10" y="32" hm="true"/>
+          <view angle="315" x="5" y="36"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="shadow"/>
+          <layerref id="broom"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="shadow"/>
+          <layerref id="broom" y="1"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="shadow"/>
+          <layerref id="broom" y="2"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="shadow"/>
+          <layerref id="broom" y="3"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

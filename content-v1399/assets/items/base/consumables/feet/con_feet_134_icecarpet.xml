@@ -1,0 +1,361 @@
+<item.SpriteItem id="0" name="Magic Carpet" desc="Reach the sky on a Magic Carpet" tokens="0" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.7,0,-0.45" max="0.7,0.1,0.45"/>
+  </volume>
+  <textures>
+    <texture id="middle" source="items/base/consumables/feet/con_feet_134_icecarpet_base.png" cols="3" rows="3"/>
+    <texture id="flat" source="items/base/consumables/feet/con_feet_134_icecarpet_flat.png" cols="3" rows="4"/>
+    <texture id="curve" source="items/base/consumables/feet/con_feet_134_icecarpet_curve.png" cols="3" rows="5"/>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_85_mcarpetgold_shadow.png" cols="3" rows="1"/>
+    <texture id="sparkle" source="items/base/consumables/feet/con_feet_134_icecarpet_sparkle.png" cols="3" rows="2"/>
+    <texture id="trail" source="items/base/consumables/feet/con_feet_134_icecarpet_trail.png" cols="3" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Glow" source="items/base/consumables/feet/con_feet_134_icecarpet_glow.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.7,0,-0.45" max="0.7,0.1,0.45"/>
+      <layers>
+        <layer id="middle01" texture="middle">
+          <view angle="0" row="2" x="-16" y="47" hm="true"/>
+          <view angle="45" x="6" y="41"/>
+          <view angle="90" row="1" x="-2" y="40"/>
+          <view angle="135" x="-9" y="40" hm="true"/>
+          <view angle="180" row="2" x="16" y="42"/>
+          <view angle="225" x="-5" y="29"/>
+          <view angle="270" row="1" x="-1" y="42" vm="true"/>
+          <view angle="315" x="8" y="34" hm="true"/>
+        </layer>
+        <layer id="middle02" texture="middle">
+          <view angle="0" col="1" row="2" x="-16" y="47" hm="true"/>
+          <view angle="45" col="1" x="6" y="41"/>
+          <view angle="90" col="1" row="1" x="-2" y="40"/>
+          <view angle="135" col="1" x="-9" y="40" hm="true"/>
+          <view angle="180" col="1" row="2" x="16" y="42"/>
+          <view angle="225" col="1" x="-5" y="29"/>
+          <view angle="270" col="1" row="1" x="-1" y="42" vm="true"/>
+          <view angle="315" col="1" x="8" y="34" hm="true"/>
+        </layer>
+        <layer id="middle03" texture="middle">
+          <view angle="0" col="2" row="2" x="-16" y="47" hm="true"/>
+          <view angle="45" col="2" x="6" y="41"/>
+          <view angle="90" col="2" row="1" x="-2" y="40"/>
+          <view angle="135" col="2" x="-9" y="40" hm="true"/>
+          <view angle="180" col="2" row="2" x="16" y="42"/>
+          <view angle="225" col="2" x="-5" y="29"/>
+          <view angle="270" col="2" row="1" x="-1" y="42" vm="true"/>
+          <view angle="315" col="2" x="8" y="34" hm="true"/>
+        </layer>
+        <layer id="flat_front01" texture="flat">
+          <view angle="0" row="3" x="59" y="41" hm="true"/>
+          <view angle="45" x="53" y="59"/>
+          <view angle="90" row="2" x="-2" y="73"/>
+          <view angle="135" x="-57" y="58" hm="true"/>
+          <view angle="180" row="3" x="-60" y="36"/>
+          <view angle="225" row="1" x="-52" y="5"/>
+          <view angle="270" row="2" x="-1" y="-8" vm="true"/>
+          <view angle="315" row="1" x="54" y="10" hm="true"/>
+        </layer>
+        <layer id="flat_front02" texture="flat">
+          <view angle="0" col="1" row="3" x="58" y="41" hm="true"/>
+          <view angle="45" col="1" x="53" y="59"/>
+          <view angle="90" col="1" row="2" x="-2" y="73"/>
+          <view angle="135" col="1" x="-57" y="58" hm="true"/>
+          <view angle="180" col="1" row="3" x="-59" y="36"/>
+          <view angle="225" col="1" row="1" x="-52" y="5"/>
+          <view angle="270" col="1" row="2" x="-1" y="-8" vm="true"/>
+          <view angle="315" col="1" row="1" x="54" y="10" hm="true"/>
+        </layer>
+        <layer id="flat_front03" texture="flat">
+          <view angle="0" col="2" row="3" x="58" y="41" hm="true"/>
+          <view angle="45" col="2" x="53" y="59"/>
+          <view angle="90" col="2" row="2" x="-2" y="73"/>
+          <view angle="135" col="2" x="-57" y="58" hm="true"/>
+          <view angle="180" col="2" row="3" x="-59" y="36"/>
+          <view angle="225" col="2" row="1" x="-52" y="5"/>
+          <view angle="270" col="2" row="2" x="-1" y="-8" vm="true"/>
+          <view angle="315" col="2" row="1" x="54" y="10" hm="true"/>
+        </layer>
+        <layer id="flat_back01" texture="flat">
+          <view angle="0" col="2" x="1" y="34" alpha="0"/>
+          <view angle="45" row="1" x="-41" y="17"/>
+          <view angle="90" col="1" x="2" y="35" alpha="0"/>
+          <view angle="135" row="1" x="37" y="16" hm="true"/>
+          <view angle="180" col="2" x="1" y="34" alpha="0"/>
+          <view angle="225" x="42" y="47"/>
+          <view angle="270" row="2" x="2" y="35" alpha="0"/>
+          <view angle="315" x="-40" y="52" hm="true"/>
+        </layer>
+        <layer id="flat_back02" texture="flat">
+          <view angle="0" col="1" x="1" y="34" alpha="0"/>
+          <view angle="45" col="1" row="1" x="-41" y="17"/>
+          <view angle="90" col="1" x="2" y="35" alpha="0"/>
+          <view angle="135" col="1" row="1" x="37" y="16" hm="true"/>
+          <view angle="180" col="1" x="1" y="34" alpha="0"/>
+          <view angle="225" col="1" x="42" y="47"/>
+          <view angle="270" col="1" row="2" x="2" y="35" alpha="0"/>
+          <view angle="315" col="1" x="-40" y="52" hm="true"/>
+        </layer>
+        <layer id="flat_back03" texture="flat">
+          <view angle="0" col="2" x="1" y="34" alpha="0"/>
+          <view angle="45" col="2" row="1" x="-41" y="17"/>
+          <view angle="90" col="2" x="2" y="35" alpha="0"/>
+          <view angle="135" col="2" row="1" x="37" y="16" hm="true"/>
+          <view angle="180" col="2" x="1" y="34" alpha="0"/>
+          <view angle="225" col="2" x="42" y="47"/>
+          <view angle="270" col="2" row="2" x="2" y="35" alpha="0"/>
+          <view angle="315" col="2" x="-40" y="52" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow" y="70">
+          <view angle="45" y="6" alpha="0.3"/>
+          <view angle="135" y="4" alpha="0.3" hm="true"/>
+          <view angle="225" y="1" alpha="0.3"/>
+          <view angle="315" y="7" alpha="0.3" hm="true"/>
+          <view angle="0" col="2" y="13" alpha="0.3"/>
+          <view angle="90" col="1" y="23" alpha="0.3"/>
+          <view angle="180" col="2" y="11" alpha="0.3"/>
+          <view angle="270" col="1" y="7" alpha="0.3"/>
+        </layer>
+        <layer id="curve_front1" texture="curve">
+          <view angle="0" row="2" x="54" y="32" hm="true"/>
+          <view angle="45" x="38" y="41"/>
+          <view angle="90" row="3" x="-2" y="67"/>
+          <view angle="135" x="-41" y="40" hm="true"/>
+          <view angle="180" row="2" x="-54" y="27"/>
+          <view angle="225" row="1" x="-43" y="-1"/>
+          <view angle="270" row="4" y="10"/>
+          <view angle="315" row="1" x="47" y="3" hm="true"/>
+        </layer>
+        <layer id="curve_front2" texture="curve">
+          <view angle="0" col="1" row="2" x="54" y="32" hm="true"/>
+          <view angle="45" col="1" x="38" y="41"/>
+          <view angle="90" col="1" row="3" x="-2" y="67"/>
+          <view angle="135" col="1" x="-41" y="40" hm="true"/>
+          <view angle="180" col="1" row="2" x="-54" y="27"/>
+          <view angle="225" col="1" row="1" x="-43" y="-1"/>
+          <view angle="270" col="1" row="4" y="10"/>
+          <view angle="315" col="1" row="1" x="46" y="4" hm="true"/>
+        </layer>
+        <layer id="curve_front3" texture="curve">
+          <view angle="0" col="2" row="2" x="54" y="32" hm="true"/>
+          <view angle="45" col="2" x="37" y="41"/>
+          <view angle="90" col="2" row="3" x="-1" y="68" hm="true"/>
+          <view angle="135" col="2" x="-40" y="40" hm="true"/>
+          <view angle="180" col="2" row="2" x="-54" y="27"/>
+          <view angle="225" col="2" row="1" x="-43" y="-1"/>
+          <view angle="270" col="2" row="4" y="10"/>
+          <view angle="315" col="2" row="1" x="47" y="3" hm="true"/>
+        </layer>
+        <layer id="sparkle01" texture="sparkle">
+          <view angle="0" col="2" x="3" y="73" hm="true"/>
+          <view angle="45" x="6" y="71"/>
+          <view angle="90" col="1" x="-7" y="74"/>
+          <view angle="135" x="-9" y="71" hm="true"/>
+          <view angle="180" col="2" x="-6" y="70"/>
+          <view angle="225" x="-5" y="58"/>
+          <view angle="270" col="1" x="-6" y="63" vm="true"/>
+          <view angle="315" x="8" y="58" hm="true"/>
+        </layer>
+        <layer id="sparkle02" texture="sparkle">
+          <view angle="0" col="2" row="1" x="3" y="73" hm="true"/>
+          <view angle="45" row="1" x="6" y="71"/>
+          <view angle="90" col="1" row="1" x="-7" y="74"/>
+          <view angle="135" row="1" x="-9" y="71" hm="true"/>
+          <view angle="180" col="2" row="1" x="-6" y="70"/>
+          <view angle="225" row="1" x="-5" y="58"/>
+          <view angle="270" col="1" row="1" x="-6" y="63" vm="true"/>
+          <view angle="315" row="1" x="8" y="58" hm="true"/>
+        </layer>
+        <layer id="trail01" texture="trail">
+          <view angle="0" col="2" x="-114" y="51" hm="true"/>
+          <view angle="45" x="-73" y="22"/>
+          <view angle="90" col="1" x="3" y="-39"/>
+          <view angle="135" x="73" y="22" hm="true"/>
+          <view angle="180" col="2" x="114" y="51"/>
+          <view angle="225" x="63" y="68" hm="true" vm="true"/>
+          <view angle="270" col="1" x="7" y="123" vm="true"/>
+          <view angle="315" x="-63" y="68" hm="true" vm="true"/>
+        </layer>
+        <layer id="trail02" texture="trail">
+          <view angle="0" col="2" row="1" x="-114" y="51" hm="true"/>
+          <view angle="45" row="1" x="-73" y="22"/>
+          <view angle="90" col="1" row="1" x="3" y="-39"/>
+          <view angle="135" row="1" x="73" y="22" hm="true"/>
+          <view angle="180" col="2" row="1" x="114" y="51"/>
+          <view angle="225" row="1" x="63" y="68" hm="true" vm="true"/>
+          <view angle="270" col="1" row="1" x="7" y="123" vm="true"/>
+          <view angle="315" row="1" x="-63" y="68" hm="true" vm="true"/>
+        </layer>
+        <layer id="glow" texture="Glow">
+          <view angle="0" x="-2" y="177" hm="true"/>
+          <view angle="45" x="6" y="177"/>
+          <view angle="90" x="10" y="177"/>
+          <view angle="135" x="-9" y="177" hm="true"/>
+          <view angle="180" x="16" y="177"/>
+          <view angle="225" x="3" y="163"/>
+          <view angle="270" x="7" y="177" vm="true"/>
+          <view angle="315" x="8" y="177" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="f1">
+          <layerref id="glow"/>
+          <layerref id="shadow"/>
+          <layerref id="flat_front01"/>
+          <layerref id="flat_back01"/>
+          <layerref id="middle01"/>
+          <layerref id="sparkle01"/>
+        </frame>
+        <frame id="f2">
+          <layerref id="glow"/>
+          <layerref id="shadow"/>
+          <layerref id="flat_front02"/>
+          <layerref id="flat_back02"/>
+          <layerref id="middle02"/>
+          <layerref id="sparkle02"/>
+        </frame>
+        <frame id="f3">
+          <layerref id="glow"/>
+          <layerref id="shadow"/>
+          <layerref id="flat_front03"/>
+          <layerref id="flat_back03"/>
+          <layerref id="middle03"/>
+          <layerref id="sparkle01"/>
+        </frame>
+        <frame id="f4">
+          <layerref id="glow"/>
+          <layerref id="shadow"/>
+          <layerref id="flat_front01"/>
+          <layerref id="flat_back01"/>
+          <layerref id="middle01"/>
+          <layerref id="sparkle02"/>
+        </frame>
+        <frame id="f5">
+          <layerref id="glow"/>
+          <layerref id="shadow"/>
+          <layerref id="flat_front02"/>
+          <layerref id="flat_back02"/>
+          <layerref id="middle02"/>
+          <layerref id="sparkle01"/>
+        </frame>
+        <frame id="f6">
+          <layerref id="glow"/>
+          <layerref id="shadow"/>
+          <layerref id="flat_front03"/>
+          <layerref id="flat_back03"/>
+          <layerref id="middle03"/>
+          <layerref id="sparkle02"/>
+        </frame>
+        <frame id="Frame">
+          <layerref id="middle01" a="0"/>
+        </frame>
+        <frame id="c1">
+          <layerref id="glow"/>
+          <layerref id="shadow"/>
+          <layerref id="flat_back01"/>
+          <layerref id="middle01"/>
+          <layerref id="curve_front1"/>
+          <layerref id="sparkle01"/>
+          <layerref id="trail01"/>
+        </frame>
+        <frame id="c2">
+          <layerref id="glow"/>
+          <layerref id="shadow"/>
+          <layerref id="flat_back02"/>
+          <layerref id="middle02"/>
+          <layerref id="curve_front2"/>
+          <layerref id="sparkle02"/>
+          <layerref id="trail02"/>
+        </frame>
+        <frame id="c3">
+          <layerref id="glow"/>
+          <layerref id="shadow"/>
+          <layerref id="flat_back03"/>
+          <layerref id="middle03"/>
+          <layerref id="curve_front3"/>
+          <layerref id="sparkle01"/>
+          <layerref id="trail01"/>
+        </frame>
+        <frame id="c4">
+          <layerref id="glow"/>
+          <layerref id="shadow"/>
+          <layerref id="flat_back01"/>
+          <layerref id="middle01"/>
+          <layerref id="curve_front1"/>
+          <layerref id="sparkle02"/>
+          <layerref id="trail02"/>
+        </frame>
+        <frame id="c5">
+          <layerref id="glow"/>
+          <layerref id="shadow"/>
+          <layerref id="flat_back02"/>
+          <layerref id="middle02"/>
+          <layerref id="curve_front2"/>
+          <layerref id="sparkle01"/>
+          <layerref id="trail01"/>
+        </frame>
+        <frame id="c6">
+          <layerref id="glow"/>
+          <layerref id="shadow"/>
+          <layerref id="flat_back03"/>
+          <layerref id="middle03"/>
+          <layerref id="curve_front3"/>
+          <layerref id="sparkle02"/>
+          <layerref id="trail02"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="f1"/>
+          <frameref id="f2"/>
+          <frameref id="f3"/>
+          <frameref id="f4"/>
+          <frameref id="f5"/>
+          <frameref id="f6"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="c1"/>
+          <frameref id="c2"/>
+          <frameref id="c3"/>
+          <frameref id="c4"/>
+          <frameref id="c5"/>
+          <frameref id="c6"/>
+        </animation>
+        <animation id="Sit" framerate="2">
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="0" hm="true"/>
+          <view angle="45"/>
+          <view angle="90"/>
+          <view angle="135" hm="true"/>
+          <view angle="180"/>
+          <view angle="225"/>
+          <view angle="270"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

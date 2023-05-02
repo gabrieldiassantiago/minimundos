@@ -1,0 +1,117 @@
+<item.WidgetItem id="4095" name="Combobulator" desc="A very large and powerful energy-source device" tags="kudos,widget,rare" icon="items/base/lab/icon_l_new_combobulator.png" price="4000" minLevel="1" minLevelType="7" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1.49,0,-1.49" max="1.49,2.5,1.49"/>
+  </volume>
+  <events>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/widget/select_crafting_table.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <navigate usableRange="20" standRange="20" accessibleRange="20"/>
+  <data>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="widget_min_load_wait" value="30000"/>
+    <entry key="widget_max_load_wait" value="31000"/>
+    <entry key="hasEditSecurity" value="true"/>
+    <entry key="craft_tag" value="craftable_kudos"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/lab/l_new_combobulator_base.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_comobulator.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Lightning" source="items/base/lab/l_combobulator_lightning.png" cols="2" rows="1"/>
+    <texture id="Cogs" source="items/base/lab/l_new_combobulator_dial.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Base" depthBias="1">
+      <box min="-1.49,0,-1.49" max="1.49,2.5,1.49"/>
+      <layers>
+        <layer id="Lightning" texture="Lightning" align="middle" y="-196">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Lightning01" texture="Lightning" align="middle" y="-196">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+        <layer id="base" texture="base" y="91">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="cog_01" texture="Cogs">
+          <view angle="45" x="-46" y="9"/>
+          <view angle="135" x="46" y="9" hm="true"/>
+          <view angle="225" x="-46" y="9"/>
+          <view angle="315" x="46" y="9" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="base"/>
+          <layerref id="Lightning"/>
+          <layerref id="cog_01"/>
+        </frame>
+        <frame id="02">
+          <layerref id="base"/>
+          <layerref id="Lightning01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="6">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse02" y="1" s="8" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="diffuse" texture="Intense" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="off">
+          <layerref id="diffuse" color="0x75e8e9" a="0.65"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle"/>
+      </animations>
+    </node>
+    <node id="Intense" s="6" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Intense" texture="Light" align="middle">
+          <view angle="45" y="-20"/>
+          <view angle="135" y="-20" hm="true"/>
+          <view angle="225" y="-20"/>
+          <view angle="315" y="-20" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="Intense" color="0x75e8e9" a="0.65"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,40 @@
+<f id="Top05_25Suspenders" parentId="Top05">
+  <b id="Gender" sel="Male">
+    <g id="Male">
+      <s id="Top05_25_MSuspendersBase1" cId="Torso" s="items/base/consumables/clothing/top05/top05_26_suspendersM.png" pri="4.5"/>
+      <c sId="Top05_25_MSuspendersBase1" c="10420224" a="0.87" b="48.8" ct="0.96" lId="Top05_Color1" lw="N"/>
+    </g>
+    <g id="Female">
+      <s id="Top05_25_FSuspendersBase1" cId="Torso" s="items/base/consumables/clothing/top05/top05_26_suspendersF.png" pri="4.5"/>
+      <c sId="Top05_25_FSuspendersBase1" c="10420224" a="0.87" b="48.8" ct="0.96" lId="Top05_Color1" lw="N"/>
+    </g>
+  </b>
+  <g id="Icon">
+    <t id="IconTop05_25" icon="items/base/consumables/clothing/top05/top05_26_icon_suspenders_a.png" w="48" h="48"/>
+    <s id="IconTop05_25Suspenders" cId="IconTop05_25" s="items/base/consumables/clothing/top05/top05_26_icon_suspenders_1.png" pri="1"/>
+    <c sId="IconTop05_25Suspenders" c="10420224" a="0.87" b="48.8" ct="0.96" lId="Top05_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top05_25Color1" name="Color 1" desc="Choose a color" sel="Red" seld="Red">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top05_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="0.99" b="52.0" ct="1.34" lId="Top05_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="1.00" b="23.1" ct="0.63" lId="Top05_Color1"/>
+      <c id="Pink" icon="$bu/icon_pink.png" c="16216719" a="1.00" b="44.3" ct="0.99" lId="Top05_Color1"/>
+      <c id="Red" icon="$bu/icon_red.png" c="10420224" a="0.87" b="48.8" ct="0.96" lId="Top05_Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="53.9" ct="0.53" lId="Top05_Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top05_Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="17.2" ct="0.26" lId="Top05_Color1"/>
+      <c id="BlueGreen" icon="$bu/icon_bluegreen.png" c="2851707" a="0.84" b="38.3" ct="1.61" lId="Top05_Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Top05_Color1"/>
+      <c id="NavyBlue" icon="$bu/icon_medblue.png" c="2858731" a="0.67" b="1.3" ct="1.61" lId="Top05_Color1"/>
+      <c id="Purple" icon="$bu/icon_purple.png" c="9515132" a="1.00" b="58.1" ct="0.85" lId="Top05_Color1"/>
+      <c id="Tan" icon="$bu/icon_tan.png" c="11239465" a="0.99" b="37.8" ct="1.09" lId="Top05_Color1"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.99" b="67.0" ct="1.61" lId="Top05_Color1"/>
+      <c id="Burgandy" icon="$bu/icon_burgandy.png" c="5570560" a="0.87" b="49.1" ct="1.05" lId="Top05_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="1.00" b="21.3" ct="0.47" lId="Top05_Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=325; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color1" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top05_25Color1"/>
+    </wizbox>
+  </g>
+</f>

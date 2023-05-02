@@ -1,0 +1,44 @@
+<item.SpriteItem desc="Weapon s" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" entity="false" name="Weapon S" id="0">
+  <volume>
+    <box min="-0.3,0.05,-0.3" max="0.3,0.66,0.3"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/head/con_head_84_wolverine.png" cols="5" rows="1"/>
+    <texture id="skin" source="items/base/consumables/head/con_head_84_wolverine_skin.png" cols="5" rows="1"/>
+    <texture id="smoke" source="items/base/consumables/magic/halo_05_bomb_smoke.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" y="0.05">
+      <box min="-0.3,0,-0.3" max="0.3,0.61,0.3"/>
+      <layers>
+        <layer id="helmet" texture="base" y="10">
+          <view angle="0" x="8" y="9" hm="true"/>
+          <view angle="45" col="1" x="-3" y="12"/>
+          <view angle="90" col="2" x="-3" y="13"/>
+          <view angle="135" col="1" x="1" y="12" hm="true"/>
+          <view angle="180" x="-9" y="9"/>
+          <view angle="225" col="3" x="-7" y="9"/>
+          <view angle="270" col="4" x="-3" y="8"/>
+          <view angle="315" col="3" x="6" y="9" hm="true"/>
+        </layer>
+        <layer id="Bare" texture="skin" y="19">
+          <view angle="0" x="8" hm="true"/>
+          <view angle="45" col="1" x="-3" y="3"/>
+          <view angle="90" col="2" x="-3" y="4"/>
+          <view angle="135" col="1" x="1" y="3" hm="true"/>
+          <view angle="180" x="-9"/>
+          <view angle="225" col="3" x="-7" y="-1"/>
+          <view angle="270" col="4" x="-4" y="6" alpha="0"/>
+          <view angle="315" col="3" x="6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Bare"/>
+          <layerref id="helmet"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

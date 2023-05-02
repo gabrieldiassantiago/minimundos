@@ -1,0 +1,88 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_175_snowmobile_back.png" cols="1" rows="3"/>
+    <texture id="boots" source="items/base/consumables/feet/con_feet_175_snowmobile_front.png" cols="4" rows="1"/>
+    <texture id="snowpuff" source="items/base/consumables/feet/con_feet_23_snowmobile_snow.png" cols="1" rows="5"/>
+    <texture id="shadow" source="items/base/consumables/feet/con_feet_175_snowmobile_shadow.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="boots" texture="base">
+          <view angle="0" x="-4" y="56"/>
+          <view angle="45" y="24" alpha="0"/>
+          <view angle="90" x="-2" y="30" alpha="0"/>
+          <view angle="135" y="21" alpha="0" hm="true"/>
+          <view angle="180" x="3" y="56" hm="true"/>
+          <view angle="225" row="2" x="3" y="46" hm="true"/>
+          <view angle="270" row="1" x="-1" y="52"/>
+          <view angle="315" row="2" x="-4" y="46"/>
+        </layer>
+        <layer id="board" texture="boots">
+          <view angle="0" col="2" x="-14" y="26" alpha="0" hm="true"/>
+          <view angle="45" col="2" x="-27" y="28"/>
+          <view angle="90" col="3" x="7" y="38"/>
+          <view angle="135" col="2" x="26" y="28" hm="true"/>
+          <view angle="180" col="2" x="22" y="26" alpha="0"/>
+          <view angle="225" col="3" x="36" y="70" alpha="0"/>
+          <view angle="270" col="2" x="-2" y="45" alpha="0"/>
+          <view angle="315" col="3" x="-11" y="39" alpha="0" hm="true"/>
+        </layer>
+        <layer id="snow" texture="snowpuff">
+          <view angle="0" row="2" x="-64" y="45" hm="true"/>
+          <view angle="45" row="1" x="-49" y="29"/>
+          <view angle="90" row="4" x="1" y="72"/>
+          <view angle="135" row="1" x="49" y="29" hm="true"/>
+          <view angle="180" row="2" x="64" y="45"/>
+          <view angle="225" x="38" y="68"/>
+          <view angle="270" row="3" x="-2" y="82"/>
+          <view angle="315" x="-38" y="68" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="0" col="1" x="-7" y="76"/>
+          <view angle="45" x="-14" y="60"/>
+          <view angle="90" col="2" x="4" y="73"/>
+          <view angle="135" x="14" y="60" hm="true"/>
+          <view angle="180" col="1" x="7" y="76"/>
+          <view angle="225" x="2" y="67"/>
+          <view angle="270" col="2" y="77"/>
+          <view angle="315" x="-2" y="67" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="shadow"/>
+          <layerref id="boots"/>
+          <layerref id="board"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="boots" a="0"/>
+        </frame>
+        <frame id="Walk01">
+          <layerref id="shadow"/>
+          <layerref id="board"/>
+          <layerref id="boots"/>
+          <layerref id="snow"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Walk01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

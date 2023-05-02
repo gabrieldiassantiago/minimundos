@@ -1,0 +1,34 @@
+<item.SpriteItem name="Ticket MiniFicha Pônei Branco" desc="Passe Único - Pônei Branco - Texas Club" tags="npc_sell,hand,actionbar,misc,action_consumable" icon="items/base/cards/ticket_05_pony_white_token_icon.png" price="50" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none" id="3464" tokens="150">
+  <volume>
+    <box min="-0.19,0,-0.12" max="0.19,0.01,0.12"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_consumable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_consumable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_consumable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_consumable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="largeIcon" value="items/base/cards/ticket_05_pony_white_token_icon_large.png"/>
+  </data>
+  <textures>
+    <texture id="card" source="items/base/cards/ticket_05_pony_white_token_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Card" layer="floor">
+      <box min="-0.19,0,-0.12" max="0.19,0.01,0.12"/>
+      <layers>
+        <layer id="card" texture="card">
+          <view angle="45" y="12"/>
+          <view angle="135" y="12" hm="true"/>
+          <view angle="225" col="1" y="12"/>
+          <view angle="315" col="1" y="12" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,36 @@
+<item.SpriteItem desc="Um rolo de tecido xadrez." dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" icon="items/base/crafting/icon_cra_fabric_05_fine_check.png" id="2503" name="Tecido Fino Xadrez" tags="misc,stackable,craftable3,craftable_sewing,materials,market" minLevel="1" minCPLevel="1" price="15">
+  <volume>
+    <box min="-0.1,0,-0.3949" max="0.2282,0.1205,0.4333"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="ingredient_1" value="2379"/>
+    <entry key="ingredient_2" value="1969"/>
+    <entry key="ingredient_quantity_1" value="2"/>
+    <entry key="ingredient_quantity_2" value="2"/>
+    <entry key="product_quantity" value="3"/>
+    <entry key="xp_level_required" value="65"/>
+    <entry key="xp_rewarded" value="650"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/crafting/cra_fabric_05_fine_check.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.3949" max="0.2282,0.1205,0.4333"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="13">
+          <view angle="45" x="4" y="11" hm="true"/>
+          <view angle="135" x="-4" y="11"/>
+          <view angle="225" col="1" x="-4" y="11" hm="true"/>
+          <view angle="315" col="1" x="4" y="11"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

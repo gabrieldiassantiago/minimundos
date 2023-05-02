@@ -1,0 +1,37 @@
+<item.SpriteItem id="5897" name="Pantufas Piscada Play" desc="Um par de pantufas piscada" tags="rare,consumable,action_wearable_toggle,clothing,actionbar,wear,bot02" icon="items/base/consumables/clothing/bot02/bot02_89_winkslipper_icon.png" price="1175" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" tokens="11750">
+  <volume>
+    <box min="-0.26,0,-0.25" max="0.26,0.12,0.26"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/bot02/bot02_89_frag_winkslipper.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="brown" source="items/base/consumables/clothing/bot02/bot02_89_winkslipper_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.26,0,-0.25" max="0.26,0.12,0.26"/>
+      <layers>
+        <layer id="brown" texture="brown" y="19">
+          <view angle="45" x="2"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" col="1" y="-2"/>
+          <view angle="315" col="1" y="-2" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem name="Sobretudo Masculino" desc="Um ar misterioso..." tags="consumable,clothing,actionbar,wear,top06,action_wearable_toggle" icon="items/base/consumables/clothing/top06/top06_07_icon_trenchcoat_a.png" price="2500" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" id="2022">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,1.65,0.24"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/top06/top06_07_frag_trenchcoat.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+  </data>
+  <textures>
+    <texture id="clothes" source="items/base/consumables/clothing/top06/top06_07_item_trenchcoat.png" cols="2" rows="1"/>
+    <texture id="mannequin" source="items/base/consumables/clothing/top02/top02_mannequin.png" cols="2" rows="1"/>
+    <texture id="backing" source="items/base/consumables/clothing/top06/top06_07_item_trenchcoat_backing.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,1.65,0.24"/>
+      <layers>
+        <layer id="dressbacking" texture="backing">
+          <view angle="45" x="4" y="-36"/>
+          <view angle="135" x="-4" y="-36" hm="true"/>
+          <view angle="225" x="5" y="-25" alpha="0"/>
+          <view angle="315" x="-5" y="-25" alpha="0" hm="true"/>
+        </layer>
+        <layer id="mannequin" texture="mannequin">
+          <view angle="45" x="-2" y="12"/>
+          <view angle="135" x="2" y="12" hm="true"/>
+          <view angle="225" col="1" x="6" y="16"/>
+          <view angle="315" col="1" x="-6" y="16" hm="true"/>
+        </layer>
+        <layer id="dress" texture="clothes">
+          <view angle="45" y="-31"/>
+          <view angle="135" x="1" y="-31" hm="true"/>
+          <view angle="225" col="1" x="5" y="-25"/>
+          <view angle="315" col="1" x="-5" y="-25" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

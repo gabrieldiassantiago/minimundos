@@ -1,0 +1,191 @@
+<item.SpriteItem id="3038" name="Mesa de Mixagem Sonix" desc="Uma mesa profissional." tags="misc" icon="items/base/modern/icon_m_danceset_dj_01.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="1200">
+  <volume>
+    <box min="-0.25,0,-0.2" max="0.25,0.1,0.2"/>
+  </volume>
+  <events>
+    <event id="action" script="items/base/instruments/turntable/show_danceset_dj_01.as"/>
+    <event id="animate" script="items/base/instruments/animate_instrument.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="items/base/instruments/turntable/select_danceset_dj_01.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/modern/m_danceset_dj_01_halo.png" cols="1" rows="1"/>
+    <texture id="DJ" source="items/base/modern/m_danceset_dj_01.png" cols="2" rows="1"/>
+    <texture id="Decal" source="items/base/modern/m_danceset_dj_01_animation.png" cols="2" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="scratch_01" source="items/base/instruments/turntable/snfx_scratch_01.mp3"/>
+    <sound id="scratch_02" source="items/base/instruments/turntable/snfx_scratch_02.mp3"/>
+    <sound id="scratch_03" source="items/base/instruments/turntable/snfx_scratch_03.mp3"/>
+    <sound id="scratch_04" source="items/base/instruments/turntable/snfx_scratch_04.mp3"/>
+    <sound id="loop_01" source="items/base/instruments/turntable/snfx_turntable_loop_01.mp3"/>
+    <sound id="loop_02" source="items/base/instruments/turntable/snfx_turntable_loop_02.mp3"/>
+    <sound id="loop_03" source="items/base/instruments/turntable/snfx_turntable_loop_03.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="DJ">
+      <box min="-0.25,0,-0.2" max="0.25,0.1,0.2"/>
+      <layers>
+        <layer id="DJ" texture="DJ">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="20"/>
+          <view angle="315" col="1" y="20" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="DJ01">
+      <box min="-0.25,0,-0.2" max="0.25,0.1,0.2"/>
+      <layers>
+        <layer id="DJ" texture="DJ">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="20"/>
+          <view angle="315" col="1" y="20" hm="true"/>
+        </layer>
+        <layer id="Decal01" texture="Decal">
+          <view angle="45" x="-4" y="-1"/>
+          <view angle="135" x="3" y="-1"/>
+          <view angle="225" x="3" y="2"/>
+          <view angle="315" x="-4" y="2"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="DJ02">
+      <box min="-0.25,0,-0.2" max="0.25,0.1,0.2"/>
+      <layers>
+        <layer id="DJ" texture="DJ">
+          <view angle="45" y="20"/>
+          <view angle="135" y="20" hm="true"/>
+          <view angle="225" col="1" y="20"/>
+          <view angle="315" col="1" y="20" hm="true"/>
+        </layer>
+        <layer id="Decal02" texture="Decal">
+          <view angle="45" col="1" x="-4" y="-1"/>
+          <view angle="135" col="1" x="3" y="-1"/>
+          <view angle="225" col="1" x="3" y="2"/>
+          <view angle="315" col="1" x="-4" y="2"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="Idle" framerate="4">
+      <frame id="Frame">
+        <noderef id="DJ"/>
+        <noderef id="Diffuse"/>
+      </frame>
+    </animation>
+    <animation id="scratch_01" framerate="4" loop="false">
+      <frame id="Frame01">
+        <noderef id="DJ01">
+          <sample id="scratch_01"/>
+        </noderef>
+        <noderef id="Diffuse"/>
+      </frame>
+      <frame id="Frame02">
+        <noderef id="DJ02"/>
+        <noderef id="Diffuse"/>
+      </frame>
+    </animation>
+    <animation id="scratch_02" framerate="4" loop="false">
+      <frame id="Frame01">
+        <noderef id="DJ01">
+          <sample id="scratch_02"/>
+        </noderef>
+        <noderef id="Diffuse"/>
+      </frame>
+      <frame id="Frame02">
+        <noderef id="DJ02"/>
+        <noderef id="Diffuse"/>
+      </frame>
+    </animation>
+    <animation id="scratch_03" framerate="4" loop="false">
+      <frame id="Frame01">
+        <noderef id="DJ01">
+          <sample id="scratch_03"/>
+        </noderef>
+        <noderef id="Diffuse"/>
+      </frame>
+      <frame id="Frame02">
+        <noderef id="DJ02"/>
+        <noderef id="Diffuse"/>
+      </frame>
+    </animation>
+    <animation id="scratch_04" framerate="4" loop="false">
+      <frame id="Frame01">
+        <noderef id="DJ01">
+          <sample id="scratch_04"/>
+        </noderef>
+        <noderef id="Diffuse"/>
+      </frame>
+      <frame id="Frame02">
+        <noderef id="DJ02"/>
+        <noderef id="Diffuse"/>
+      </frame>
+    </animation>
+    <animation id="loop_01" framerate="4">
+      <frame id="01">
+        <noderef id="DJ01">
+          <sample id="loop_01" loops="-1"/>
+        </noderef>
+        <noderef id="Diffuse"/>
+      </frame>
+      <frame id="02">
+        <noderef id="DJ02"/>
+        <noderef id="Diffuse"/>
+      </frame>
+    </animation>
+    <animation id="loop_02" framerate="4">
+      <frame id="01">
+        <noderef id="DJ01">
+          <sample id="loop_02" loops="-1"/>
+        </noderef>
+        <noderef id="Diffuse"/>
+      </frame>
+      <frame id="02">
+        <noderef id="DJ02"/>
+        <noderef id="Diffuse"/>
+      </frame>
+    </animation>
+    <animation id="loop_03" framerate="4">
+      <frame id="01">
+        <noderef id="DJ01">
+          <sample id="loop_03" loops="-1"/>
+        </noderef>
+        <noderef id="Diffuse" frame="On"/>
+      </frame>
+      <frame id="02">
+        <noderef id="DJ02"/>
+        <noderef id="Diffuse" frame="On"/>
+      </frame>
+    </animation>
+  </animations>
+</item.SpriteItem>

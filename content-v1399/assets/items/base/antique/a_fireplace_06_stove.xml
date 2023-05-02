@@ -1,0 +1,208 @@
+<item.SpriteItem id="3539" name="Fogão à Lenha do Terror" desc="Um fogão à lenha com chama verde." tags="light,halloween,rare" icon="items/base/antique/icon_a_fireplace_06_stove.png" price="95" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="avatar,floor" dropTargetClamp="floor">
+  <volume>
+    <box min="-0.35,0,-0.2" max="0.35,1.25,1.2"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="itemTurnOnIcon" value="context/item/action/icon_fire_light.png"/>
+    <entry key="itemTurnOn" value="Light"/>
+    <entry key="itemTurnOffIcon" value="context/item/action/icon_fire_put_out.png"/>
+    <entry key="itemTurnOff" value="Put Out"/>
+  </data>
+  <textures>
+    <texture id="inside" source="items/base/antique/a_fireplace_03_stove_back.png" cols="1" rows="1"/>
+    <texture id="fire" source="items/base/shared/s_fireplace_fire_g.png" cols="2" rows="2"/>
+    <texture id="front" source="items/base/antique/a_fireplace_03_stove.png" cols="3" rows="1"/>
+    <texture id="logs" source="items/base/shared/s_fireplace_logs.png" cols="1" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_fireplace.png" cols="2" rows="1"/>
+    <texture id="Chimney" source="items/base/antique/a_fireplace_03_stove_chimney.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="fireplace" x="-0.15" z="0.5">
+      <box min="-0.2,0,-0.7" max="0.5,1.25,0.7"/>
+      <layers>
+        <layer id="front" texture="front" y="-5">
+          <view angle="45" x="9" y="51"/>
+          <view angle="135" col="1" x="-9" y="51"/>
+          <view angle="225" col="2" x="-13" y="40"/>
+          <view angle="315" col="2" x="13" y="40" hm="true"/>
+        </layer>
+        <layer id="fire01" texture="fire">
+          <view angle="45" x="-12" y="5"/>
+          <view angle="135" x="-32" y="-14" hm="true"/>
+          <view angle="225" y="26" alpha="0"/>
+          <view angle="315" y="26" alpha="0"/>
+        </layer>
+        <layer id="fire02" texture="fire">
+          <view angle="45" col="1" x="-12" y="5"/>
+          <view angle="135" col="1" x="-32" y="-14" hm="true"/>
+          <view angle="225" col="1" y="26" alpha="0"/>
+          <view angle="315" col="1" y="26" alpha="0"/>
+        </layer>
+        <layer id="fire03" texture="fire">
+          <view angle="45" row="1" x="-12" y="5"/>
+          <view angle="135" row="1" x="-32" y="-14" hm="true"/>
+          <view angle="225" row="1" y="26" alpha="0"/>
+          <view angle="315" row="1" y="26" alpha="0"/>
+        </layer>
+        <layer id="fire04" texture="fire">
+          <view angle="45" col="1" row="1" x="-12" y="5"/>
+          <view angle="135" col="1" row="1" x="-32" y="-14" hm="true"/>
+          <view angle="225" col="1" row="1" y="26" alpha="0"/>
+          <view angle="315" col="1" row="1" y="26" alpha="0"/>
+        </layer>
+        <layer id="inside" texture="inside">
+          <view angle="45" x="9" y="-10"/>
+          <view angle="135" x="-47" y="-37" hm="true"/>
+          <view angle="225" col="2"/>
+          <view angle="315" col="3"/>
+        </layer>
+        <layer id="logs" texture="logs">
+          <view angle="45" x="-12" y="5"/>
+          <view angle="135" x="-32" y="-14" hm="true"/>
+          <view angle="225" y="26" alpha="0"/>
+          <view angle="315" y="26" alpha="0"/>
+        </layer>
+        <layer id="burned logs" texture="logs">
+          <view angle="45" row="1" x="-12" y="5"/>
+          <view angle="135" row="1" x="-32" y="-14" hm="true"/>
+          <view angle="225" row="1" y="26" alpha="0"/>
+          <view angle="315" row="1" y="26" alpha="0"/>
+        </layer>
+        <layer id="chimney" texture="Chimney">
+          <view angle="45" x="-14" y="-127"/>
+          <view angle="135" x="18" y="-127"/>
+          <view angle="225" x="14" y="-113"/>
+          <view angle="315" x="-13" y="-113" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="fire 01">
+          <layerref id="inside"/>
+          <layerref id="burned logs"/>
+          <layerref id="fire01" blend="add"/>
+          <layerref id="front"/>
+          <layerref id="chimney"/>
+        </frame>
+        <frame id="fire 02">
+          <layerref id="inside"/>
+          <layerref id="burned logs"/>
+          <layerref id="fire02" blend="add"/>
+          <layerref id="front"/>
+          <layerref id="chimney"/>
+        </frame>
+        <frame id="fire 03">
+          <layerref id="inside"/>
+          <layerref id="burned logs"/>
+          <layerref id="fire03" blend="add"/>
+          <layerref id="front"/>
+          <layerref id="chimney"/>
+        </frame>
+        <frame id="fire 04">
+          <layerref id="inside"/>
+          <layerref id="burned logs"/>
+          <layerref id="fire04" blend="add"/>
+          <layerref id="front"/>
+          <layerref id="chimney"/>
+        </frame>
+        <frame id="off">
+          <layerref id="inside"/>
+          <layerref id="logs"/>
+          <layerref id="front"/>
+          <layerref id="chimney"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="8">
+          <frameref id="fire 01">
+            <sample id="fire" loops="-1"/>
+          </frameref>
+          <frameref id="fire 02"/>
+          <frameref id="fire 03"/>
+          <frameref id="fire 04"/>
+        </animation>
+        <animation id="Off" framerate="1">
+          <frameref id="off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.5" s="4.7" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="8" y="1"/>
+          <view angle="135" x="3" y="3" hm="true"/>
+          <view angle="225" col="1" x="-13" y="1"/>
+          <view angle="315" col="1" y="-6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On 01">
+          <layerref id="Light" color="0xadf5b7"/>
+        </frame>
+        <frame id="On 02">
+          <layerref id="Light" color="0xadf5b7" a="0.97"/>
+        </frame>
+        <frame id="On 03">
+          <layerref id="Light" color="0xadf5b7" a="0.87"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On 01" duration="2"/>
+          <frameref id="On 02"/>
+          <frameref id="On 03" duration="2"/>
+          <frameref id="On 01"/>
+          <frameref id="On 02"/>
+          <frameref id="On 01"/>
+          <frameref id="On 03"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" y="0.5" z="1" s="1.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-22" y="8"/>
+          <view angle="135" x="-48" y="-21" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xffffcc" a="0.3"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

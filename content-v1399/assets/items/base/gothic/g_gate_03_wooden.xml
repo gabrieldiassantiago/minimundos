@@ -1,0 +1,162 @@
+<item.SpriteItem id="1936" name="Entrada de Madeira Velha" desc="Uma porta/portão de madeira antiga." tags="gate" icon="items/base/gothic/icon_g_gate_03_wooden.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="135">
+  <volume>
+    <box min="-0.15,0,-0.49" max="0.45,2.4,1.49"/>
+  </volume>
+  <events>
+    <event id="close" script="scripts/item/close_gate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+    <event id="action" script="scripts/item/action_gate.as"/>
+  </events>
+  <actions>
+    <action id="Open" state="true" event="open"/>
+    <action id="Close" state="true" event="close"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/gothic/g_gate_03_wooden.png" cols="2" rows="1"/>
+    <texture id="Texture01" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="open right" z="1">
+      <box min="-0.15,0,0.45" max="0.45,2.4,0.49"/>
+      <layers>
+        <layer id="post behind" texture="Texture01" y="58">
+          <view angle="45" col="1" x="30" y="-64"/>
+          <view angle="135" col="1" x="-34" y="-16" alpha="0" hm="true"/>
+          <view angle="225" col="1" x="34" y="-16" alpha="0"/>
+          <view angle="315" col="1" x="-29" y="-64" hm="true"/>
+        </layer>
+        <layer id="gate" texture="Texture" y="58">
+          <view angle="45" col="1" x="45" y="-26" hm="true"/>
+          <view angle="135" col="1" x="-7" y="-6"/>
+          <view angle="225" x="-47" y="-35" hm="true"/>
+          <view angle="315" x="5" y="-55"/>
+        </layer>
+        <layer id="post in front" texture="Texture01" y="58">
+          <view angle="45" x="-34" y="16" alpha="0"/>
+          <view angle="135" x="22" y="-35" hm="true"/>
+          <view angle="225" x="-24" y="-36"/>
+          <view angle="315" x="34" y="16" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="post behind"/>
+          <layerref id="gate"/>
+          <layerref id="post in front"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="post behind" a="0"/>
+          <layerref id="gate" a="0"/>
+          <layerref id="post in front" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open left" z="1">
+      <box min="-0.15,0,-1.49" max="0.45,2.4,-1.45"/>
+      <layers>
+        <layer id="post behind" texture="Texture01" y="58">
+          <view angle="45" col="1" x="-34" y="16" alpha="0"/>
+          <view angle="135" col="1" x="-96" y="-94" hm="true"/>
+          <view angle="225" col="1" x="96" y="-96"/>
+          <view angle="315" col="1" x="34" y="16" alpha="0" hm="true"/>
+        </layer>
+        <layer id="gate" texture="Texture" y="58">
+          <view angle="45" col="1" x="-60" y="27" hm="true"/>
+          <view angle="135" col="1" x="-112" y="-61"/>
+          <view angle="225" x="59" y="-89" hm="true"/>
+          <view angle="315" x="112" y="-2"/>
+        </layer>
+        <layer id="post in front" texture="Texture01" y="58">
+          <view angle="45" x="-91" y="-4"/>
+          <view angle="135" x="-34" y="-16" alpha="0" hm="true"/>
+          <view angle="225" x="34" y="-16" alpha="0"/>
+          <view angle="315" x="90" y="-4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="post behind"/>
+          <layerref id="gate"/>
+          <layerref id="post in front"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="post behind" a="0"/>
+          <layerref id="gate" a="0"/>
+          <layerref id="post in front" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="closed" z="1">
+      <box min="-0.15,0,-1.49" max="0.15,2.4,0.49"/>
+      <layers>
+        <layer id="post behind" texture="Texture01" y="58">
+          <view angle="45" col="1" x="30" y="-64"/>
+          <view angle="135" col="1" x="-96" y="-94" hm="true"/>
+          <view angle="225" col="1" x="96" y="-96"/>
+          <view angle="315" col="1" x="-29" y="-64" hm="true"/>
+        </layer>
+        <layer id="closed behind" texture="Texture" y="58">
+          <view angle="45" col="1" x="-6" y="-30"/>
+          <view angle="135" col="1" x="-61" y="-63" hm="true"/>
+          <view angle="225" col="1" x="60" y="-63"/>
+          <view angle="315" col="1" x="5" y="-30" hm="true"/>
+        </layer>
+        <layer id="closed in front" texture="Texture" y="58">
+          <view angle="45" x="-65"/>
+          <view angle="135" x="-1" y="-33" hm="true"/>
+          <view angle="225" y="-33"/>
+          <view angle="315" x="65" hm="true"/>
+        </layer>
+        <layer id="post in front" texture="Texture01" y="58">
+          <view angle="45" x="-91" y="-4"/>
+          <view angle="135" x="22" y="-35" hm="true"/>
+          <view angle="225" x="-24" y="-36"/>
+          <view angle="315" x="90" y="-4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="closed">
+          <layerref id="post behind"/>
+          <layerref id="closed behind"/>
+          <layerref id="closed in front"/>
+          <layerref id="post in front"/>
+        </frame>
+        <frame id="open">
+          <layerref id="post behind" a="0"/>
+          <layerref id="closed behind" a="0"/>
+          <layerref id="closed in front" a="0"/>
+          <layerref id="post in front" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

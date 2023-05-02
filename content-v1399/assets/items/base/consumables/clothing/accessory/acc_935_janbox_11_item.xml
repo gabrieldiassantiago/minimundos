@@ -1,0 +1,30 @@
+<item.SpriteItem id="7470" name="Tapete de Urso Polar" desc="Um tapete de urso polar [11 of 25]" tags="rare,floor,misc" icon="items/base/consumables/clothing/accessory/acc_935_janbox_11_icon.png" price="250" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1,-0.001,-1" max="1,0,1"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_935_janbox_11_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Rug" layer="surface">
+      <box min="-1,-0.001,-1" max="1,0,1"/>
+      <layers>
+        <layer id="Rug" texture="Texture" align="middle">
+          <view angle="45" x="-5" y="3"/>
+          <view angle="135" x="5" y="3" hm="true"/>
+          <view angle="225" col="1" x="5" y="3"/>
+          <view angle="315" col="1" x="-5" y="3" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

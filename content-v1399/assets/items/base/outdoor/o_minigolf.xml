@@ -1,0 +1,407 @@
+<item.WidgetItem id="843" name="Mini Golf" desc="Golf em miniatura, jogo de verdade." tags="widget" icon="items/base/outdoor/icon_o_minigolf.png" price="300" tokens="3000" minLevel="1" minLevelType="3" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" viewDirection="vertical" widget="widgets/widget_minigolf.swf">
+  <volume>
+    <box min="-0.38,0,-0.49" max="1.38,1.4,2.49"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <actions>
+    <action id="Win">
+      <eval>
+        <func type="relational" id="Opponent Name" input="opponent" operator="equal"/>
+      </eval>
+    </action>
+    <action id="Complete">
+      <eval>
+        <func type="relational" id="Opponent Name" input="opponent" operator="equal"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="widget_load_policy" value="show"/>
+    <entry key="widget_unload_policy" value="hide"/>
+    <entry key="widget_min_load_wait" value="200"/>
+    <entry key="widget_max_load_wait" value="400"/>
+    <entry key="control_xml_path" value="widgets/assets/minigolf/control-ui.mxml"/>
+    <entry key="config_xml_path" value="widgets/assets/minigolf/config-ui.mxml"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="fun-5"/>
+  </data>
+  <navigate sitRange="3.00" standRange="3.00" targetRange="3.00" usableRange="-1.00"/>
+  <textures>
+    <texture id="border" source="items/base/outdoor/o_minigolf_border.png" cols="1" rows="2"/>
+    <texture id="details" source="items/base/outdoor/o_minigolf_details.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="mini golf" x="0.5" z="1">
+      <box min="-0.88,0,-1.49" max="0.88,1.4,1.49"/>
+      <layers>
+        <layer id="ball A 01 (pause)" texture="details">
+          <view angle="45" col="3" x="-79" y="65"/>
+          <view angle="135" col="3" x="-78" y="-12"/>
+          <view angle="225" col="3" x="84" y="-13"/>
+          <view angle="315" col="3" x="85" y="65"/>
+        </layer>
+        <layer id="ball A 02" texture="details">
+          <view angle="45" col="3" x="-63" y="60"/>
+          <view angle="135" col="3" x="-63" y="-5"/>
+          <view angle="225" col="3" x="68" y="-5"/>
+          <view angle="315" col="3" x="69" y="60"/>
+        </layer>
+        <layer id="ball A 03" texture="details">
+          <view angle="45" col="3" x="-50" y="57"/>
+          <view angle="135" col="3" x="-51" y="5"/>
+          <view angle="225" col="3" x="57" y="5"/>
+          <view angle="315" col="3" x="56" y="57"/>
+        </layer>
+        <layer id="ball A 04" texture="details">
+          <view angle="45" col="3" x="-40" y="53"/>
+          <view angle="135" col="3" x="-40" y="13"/>
+          <view angle="225" col="3" x="46" y="13"/>
+          <view angle="315" col="3" x="46" y="53"/>
+        </layer>
+        <layer id="ball A 05" texture="details">
+          <view angle="45" col="3" x="-32" y="45"/>
+          <view angle="135" col="3" x="-28" y="16"/>
+          <view angle="225" col="3" x="34" y="16"/>
+          <view angle="315" col="3" x="38" y="45"/>
+        </layer>
+        <layer id="ball A 06" texture="details">
+          <view angle="45" col="3" x="-25" y="40"/>
+          <view angle="135" col="3" x="-17" y="18"/>
+          <view angle="225" col="3" x="23" y="18"/>
+          <view angle="315" col="3" x="31" y="40"/>
+        </layer>
+        <layer id="ball A 07" texture="details">
+          <view angle="45" col="3" x="-18" y="35"/>
+          <view angle="135" col="3" x="-9" y="21"/>
+          <view angle="225" col="3" x="15" y="21"/>
+          <view angle="315" col="3" x="24" y="35"/>
+        </layer>
+        <layer id="ball A 08" texture="details">
+          <view angle="45" col="3" x="-12" y="31"/>
+          <view angle="135" col="3" x="-2" y="24"/>
+          <view angle="225" col="3" x="8" y="24"/>
+          <view angle="315" col="3" x="18" y="31"/>
+        </layer>
+        <layer id="ball A 09" texture="details">
+          <view angle="45" col="3" x="-6" y="27"/>
+          <view angle="135" col="3" x="3" y="26"/>
+          <view angle="225" col="3" x="2" y="27"/>
+          <view angle="315" col="3" x="12" y="27"/>
+        </layer>
+        <layer id="ball A 10" texture="details">
+          <view angle="45" col="3" x="-1" y="24"/>
+          <view angle="135" col="3" x="6" y="27"/>
+          <view angle="225" col="3" x="-2" y="29"/>
+          <view angle="315" col="3" x="8" y="24"/>
+        </layer>
+        <layer id="ball A 11" texture="details">
+          <view angle="45" col="3" x="3" y="22"/>
+          <view angle="135" col="3" x="9" y="29"/>
+          <view angle="225" col="3" x="-5" y="30"/>
+          <view angle="315" col="3" x="4" y="22"/>
+        </layer>
+        <layer id="ball A 12" texture="details">
+          <view angle="45" col="3" x="6" y="20"/>
+          <view angle="135" col="3" x="11" y="30"/>
+          <view angle="225" col="3" x="-7" y="31"/>
+          <view angle="315" col="3" x="1" y="20"/>
+        </layer>
+        <layer id="ball A 13" texture="details">
+          <view angle="45" col="3" x="8" y="19"/>
+          <view angle="135" col="3" x="13" y="31"/>
+          <view angle="225" col="3" x="-8" y="31"/>
+          <view angle="315" col="3" x="-1" y="19"/>
+        </layer>
+        <layer id="ball A 14 (stop)" texture="details">
+          <view angle="45" col="3" x="9" y="18"/>
+          <view angle="135" col="3" x="14" y="31"/>
+          <view angle="225" col="3" x="-9" y="31"/>
+          <view angle="315" col="3" x="-2" y="18"/>
+        </layer>
+        <layer id="ball B 01" texture="details">
+          <view angle="45" col="3" x="22" y="13"/>
+          <view angle="135" col="3" x="26" y="39"/>
+          <view angle="225" col="3" x="-21" y="38"/>
+          <view angle="315" col="3" x="-16" y="13"/>
+        </layer>
+        <layer id="ball B 02" texture="details">
+          <view angle="45" col="3" x="37" y="8"/>
+          <view angle="135" col="3" x="37" y="47"/>
+          <view angle="225" col="3" x="-32" y="47"/>
+          <view angle="315" col="3" x="-31" y="7"/>
+        </layer>
+        <layer id="ball B 03" texture="details">
+          <view angle="45" col="3" x="51" y="3"/>
+          <view angle="135" col="3" x="49" y="54"/>
+          <view angle="225" col="3" x="-44" y="54"/>
+          <view angle="315" col="3" x="-44" y="2"/>
+        </layer>
+        <layer id="ball B 04" texture="details">
+          <view angle="45" col="3" x="63" y="-2"/>
+          <view angle="135" col="3" x="67" y="65"/>
+          <view angle="225" col="3" x="-53" y="58"/>
+          <view angle="315" col="3" x="-56" y="-3"/>
+        </layer>
+        <layer id="ball B 05" texture="details">
+          <view angle="45" col="3" x="74" y="-6"/>
+          <view angle="135" col="3" x="76" y="70"/>
+          <view angle="225" col="3" x="-63" y="61"/>
+          <view angle="315" col="3" x="-66" y="-9"/>
+        </layer>
+        <layer id="ball B 06" texture="details">
+          <view angle="45" col="3" x="82" y="-9"/>
+          <view angle="135" col="3" x="82" y="73"/>
+          <view angle="225" col="3" x="-72" y="64"/>
+          <view angle="315" col="3" x="-73" y="-13"/>
+        </layer>
+        <layer id="ball B 07" texture="details">
+          <view angle="45" col="3" x="87" y="-12"/>
+          <view angle="135" col="3" x="85" y="73"/>
+          <view angle="225" col="3" x="-79" y="67"/>
+          <view angle="315" col="3" x="-79" y="-16"/>
+        </layer>
+        <layer id="ball B 08" texture="details">
+          <view angle="45" col="3" x="89" y="-14"/>
+          <view angle="135" col="3" x="88" y="72"/>
+          <view angle="225" col="3" x="-81" y="68"/>
+          <view angle="315" col="3" x="-82" y="-15"/>
+        </layer>
+        <layer id="ball B 09" texture="details">
+          <view angle="45" col="3" x="88" y="-16"/>
+          <view angle="135" col="3" x="88" y="69"/>
+          <view angle="225" col="3" x="-82" y="70"/>
+          <view angle="315" col="3" x="-83" y="-13"/>
+        </layer>
+        <layer id="ball B 10" texture="details">
+          <view angle="45" col="3" x="86" y="-16"/>
+          <view angle="135" col="3" x="86" y="68"/>
+          <view angle="225" col="3" x="-80" y="72"/>
+          <view angle="315" col="3" x="-81" y="-12"/>
+        </layer>
+        <layer id="ball B 11 (slight pause)" texture="details">
+          <view angle="45" col="3" x="85" y="-16"/>
+          <view angle="135" col="3" x="85" y="69"/>
+          <view angle="225" col="3" x="-78" y="72"/>
+          <view angle="315" col="3" x="-80" y="-13"/>
+        </layer>
+        <layer id="border" texture="border">
+          <view angle="45" y="62"/>
+          <view angle="135" row="1" y="64"/>
+          <view angle="225" row="1" y="64" hm="true"/>
+          <view angle="315" y="62" hm="true"/>
+        </layer>
+        <layer id="tower" texture="details">
+          <view angle="45" x="44" y="-4"/>
+          <view angle="135" x="44" y="44" hm="true"/>
+          <view angle="225" x="-44" y="44"/>
+          <view angle="315" x="-44" y="-4" hm="true"/>
+        </layer>
+        <layer id="flag" texture="details">
+          <view angle="45" col="1" x="98" y="-31"/>
+          <view angle="135" col="2" x="74" y="53"/>
+          <view angle="225" col="1" x="-98" y="54" hm="true"/>
+          <view angle="315" col="1" x="-67" y="-30"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="ball" type="group">
+          <frame id="stroke a 01 (pause)">
+            <layerref id="border"/>
+            <layerref id="ball A 01 (pause)"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="Frame01"/>
+          <frame id="stroke a 02">
+            <layerref id="border"/>
+            <layerref id="ball A 02"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke a  03">
+            <layerref id="border"/>
+            <layerref id="ball A 03"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke a  04">
+            <layerref id="border"/>
+            <layerref id="ball A 04"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke a  05">
+            <layerref id="border"/>
+            <layerref id="ball A 05"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke a 06">
+            <layerref id="border"/>
+            <layerref id="ball A 06"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke a 07">
+            <layerref id="border"/>
+            <layerref id="ball A 07"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke a 08">
+            <layerref id="border"/>
+            <layerref id="ball A 08"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke a 09">
+            <layerref id="border"/>
+            <layerref id="ball A 09"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke a 10">
+            <layerref id="border"/>
+            <layerref id="ball A 10"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke a 11">
+            <layerref id="border"/>
+            <layerref id="ball A 11"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke a 12">
+            <layerref id="border"/>
+            <layerref id="ball A 12"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke a 13">
+            <layerref id="border"/>
+            <layerref id="ball A 13"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke a 14 (pause)">
+            <layerref id="border"/>
+            <layerref id="ball A 14 (stop)"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke b 01">
+            <layerref id="border"/>
+            <layerref id="ball B 01"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke b 02">
+            <layerref id="border"/>
+            <layerref id="ball B 02"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke b 03">
+            <layerref id="border"/>
+            <layerref id="ball B 03"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke b 04">
+            <layerref id="border"/>
+            <layerref id="ball B 04"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke b 05">
+            <layerref id="border"/>
+            <layerref id="ball B 05"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke b 06">
+            <layerref id="border"/>
+            <layerref id="ball B 06"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke b 07">
+            <layerref id="border"/>
+            <layerref id="ball B 07"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke b 08">
+            <layerref id="border"/>
+            <layerref id="ball B 08"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke b 09">
+            <layerref id="border"/>
+            <layerref id="ball B 09"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke b 10 ">
+            <layerref id="border"/>
+            <layerref id="ball B 10"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="no ball">
+            <layerref id="border"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+          <frame id="stroke b 11 (slight pause)">
+            <layerref id="border"/>
+            <layerref id="ball B 11 (slight pause)"/>
+            <layerref id="tower"/>
+            <layerref id="flag"/>
+          </frame>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Stopped" framerate="4">
+          <frameref id="no ball"/>
+        </animation>
+        <animation id="golf anyone?" framerate="8">
+          <frameref id="stroke a 01 (pause)" duration="16"/>
+          <frameref id="stroke a 02"/>
+          <frameref id="stroke a 03"/>
+          <frameref id="stroke a 04"/>
+          <frameref id="stroke a 05"/>
+          <frameref id="stroke a 06"/>
+          <frameref id="stroke a 07"/>
+          <frameref id="stroke a 08"/>
+          <frameref id="stroke a 09"/>
+          <frameref id="stroke a 10"/>
+          <frameref id="stroke a 11"/>
+          <frameref id="stroke a 12"/>
+          <frameref id="stroke a 13"/>
+          <frameref id="stroke a 14 (pause)" duration="32"/>
+          <frameref id="stroke b 01"/>
+          <frameref id="stroke b 02"/>
+          <frameref id="stroke b 03"/>
+          <frameref id="stroke b 04"/>
+          <frameref id="stroke b 05"/>
+          <frameref id="stroke b 06"/>
+          <frameref id="stroke b 07"/>
+          <frameref id="stroke b 08"/>
+          <frameref id="stroke b 09"/>
+          <frameref id="stroke b 10 "/>
+          <frameref id="stroke b 11 (slight pause)" duration="6"/>
+          <frameref id="no ball" duration="16"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

@@ -1,0 +1,51 @@
+<item.SpriteItem id="0" name="Love Cup Cake" desc="A sugary treat" tags="edible, consumable, food, actionbar" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.0156,-0.15" max="0.15,0.2156,0.15"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_edible.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_edible.as"/>
+    <event id="select" script="scripts/item/select_edible.as"/>
+    <event id="action" script="scripts/item/action_edible.as"/>
+  </events>
+  <textures>
+    <texture id="cake" source="items/base/consumables/edible/con_eat_49_heartcupcake.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="eat" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.0156">
+      <box min="-0.15,0,-0.15" max="0.15,0.2,0.15"/>
+      <layers>
+        <layer id="cupcake" texture="cake">
+          <view angle="45" x="1" y="18"/>
+          <view angle="135" x="1" y="18"/>
+          <view angle="225" x="1" y="18"/>
+          <view angle="315" x="1" y="18"/>
+          <view angle="90" y="18" hm="true"/>
+          <view angle="180" y="18" hm="true"/>
+          <view angle="270" y="18" hm="true"/>
+          <view angle="0" y="18" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="cupcake"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

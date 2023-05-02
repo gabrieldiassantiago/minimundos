@@ -1,0 +1,42 @@
+<item.SpriteItem id="4726" name="Carro Esportivo Maravilha Zoom" desc="Um carro esportivo extremamente atrativo" tags="back,hand,rare,consumable,actionbar,wear,feet,action_driveable_toggle" icon="items/base/consumables/feet/con_feet_92_car02_icon.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.9,0,-0.49" max="0.74,0.65,0.49"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_rideable.as"/>
+    <event id="select" script="scripts/item/select_drive.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+70"/>
+    <entry key="action_attributes" value="fire+30"/>
+  </data>
+  <textures>
+    <texture id="Car" source="items/base/consumables/feet/con_feet_92_car02_item.png" cols="2" rows="1"/>
+    <texture id="license Plate" source="items/base/consumables/feet/con_feet_92_car02_usplate.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.9,0,-0.49" max="0.74,0.65,0.49"/>
+      <layers>
+        <layer id="Car" texture="Car">
+          <view angle="45" x="-7" y="37"/>
+          <view angle="135" x="7" y="37" hm="true"/>
+          <view angle="225" col="1" x="4" y="48" hm="true"/>
+          <view angle="315" col="1" x="-4" y="48"/>
+        </layer>
+        <layer id="Plate" texture="license Plate">
+          <view angle="45" x="56" y="28"/>
+          <view angle="135" col="2" x="-55" y="28"/>
+          <view angle="225" x="62" y="28"/>
+          <view angle="315" col="2" x="-62" y="28"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

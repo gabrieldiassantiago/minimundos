@@ -1,0 +1,76 @@
+<item.SpriteItem id="1801" name="Sapatilhas" desc="Um sapato rasteirinho." tags="consumable,clothing,clothing_basic,actionbar,wear,bot02,action_wearable_toggle" icon="items/base/consumables/clothing/bot02/bot02_02_icon_femlow_a.png" price="65" tokens="650" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.1539,0.2"/>
+  </volume>
+  <events>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable_cycle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/bot02/bot02_02_frag_femlow.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="count" value="3"/>
+    <entry key="00" value="white"/>
+    <entry key="01" value="red"/>
+    <entry key="02" value="yellow"/>
+  </data>
+  <textures>
+    <texture id="white" source="items/base/consumables/clothing/bot02/bot02_02_item_femlow.png" cols="2" rows="1"/>
+    <texture id="red" source="items/base/consumables/clothing/bot02/bot02_02_item_femlow_red.png" cols="2" rows="1"/>
+    <texture id="yellow" source="items/base/consumables/clothing/bot02/bot02_02_item_femlow_yellow.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,0.1539,0.2"/>
+      <layers>
+        <layer id="white" texture="white" y="19">
+          <view angle="45" y="-9"/>
+          <view angle="135" y="-10" hm="true"/>
+          <view angle="225" col="1" y="-6" hm="true"/>
+          <view angle="315" col="1" y="-6"/>
+        </layer>
+        <layer id="red" texture="red" y="19">
+          <view angle="45" y="-9"/>
+          <view angle="135" y="-10" hm="true"/>
+          <view angle="225" col="1" y="-6" hm="true"/>
+          <view angle="315" col="1" y="-6"/>
+        </layer>
+        <layer id="yellow" texture="yellow" y="19">
+          <view angle="45" y="-9"/>
+          <view angle="135" y="-10" hm="true"/>
+          <view angle="225" col="1" y="-6" hm="true"/>
+          <view angle="315" col="1" y="-6"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="00">
+          <layerref id="white"/>
+        </frame>
+        <frame id="01">
+          <layerref id="red"/>
+        </frame>
+        <frame id="02">
+          <layerref id="yellow"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="2">
+          <frameref id="00"/>
+        </animation>
+        <animation id="01" framerate="2">
+          <frameref id="01"/>
+        </animation>
+        <animation id="02" framerate="2">
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

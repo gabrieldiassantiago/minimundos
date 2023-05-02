@@ -1,0 +1,289 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="diffuse" source="items/base/shared/s_fx_flare_halo_ninja.png" cols="1" rows="1"/>
+    <texture id="walk" source="items/base/consumables/feet/con_feet_189_jellyfish_walk.png" cols="5" rows="3"/>
+    <texture id="idle" source="items/base/consumables/feet/con_feet_189_jellyfish_idle.png" cols="6" rows="1"/>
+    <texture id="sparkle" source="items/base/consumables/feet/con_feet_189_jellyfish_sparkle.png" cols="6" rows="3"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="idle_01" texture="idle">
+          <view angle="0" x="-4" y="32" hm="true"/>
+          <view angle="45" x="-1" y="32"/>
+          <view angle="90" x="-2" y="32" hm="true"/>
+          <view angle="135" x="1" y="32"/>
+          <view angle="180" y="32" hm="true"/>
+          <view angle="225" x="2" y="32"/>
+          <view angle="270" x="-2" y="32" hm="true"/>
+          <view angle="315" y="32"/>
+        </layer>
+        <layer id="idle_02" texture="idle">
+          <view angle="0" col="1" x="-4" y="32" hm="true"/>
+          <view angle="45" col="1" x="-1" y="32"/>
+          <view angle="90" col="1" x="-2" y="32" hm="true"/>
+          <view angle="135" col="1" x="1" y="32"/>
+          <view angle="180" col="1" y="32" hm="true"/>
+          <view angle="225" col="1" x="2" y="32"/>
+          <view angle="270" col="1" x="-2" y="32" hm="true"/>
+          <view angle="315" col="1" y="32"/>
+        </layer>
+        <layer id="idle_03" texture="idle">
+          <view angle="0" col="2" x="-4" y="32" hm="true"/>
+          <view angle="45" col="2" x="-1" y="32"/>
+          <view angle="90" col="2" x="-2" y="32" hm="true"/>
+          <view angle="135" col="2" x="1" y="32"/>
+          <view angle="180" col="2" y="32" hm="true"/>
+          <view angle="225" col="2" x="2" y="32"/>
+          <view angle="270" col="2" x="-2" y="32" hm="true"/>
+          <view angle="315" col="2" y="32"/>
+        </layer>
+        <layer id="idle_04" texture="idle">
+          <view angle="0" col="3" x="-4" y="32" hm="true"/>
+          <view angle="45" col="3" x="-1" y="32"/>
+          <view angle="90" col="3" x="-2" y="32" hm="true"/>
+          <view angle="135" col="3" x="1" y="32"/>
+          <view angle="180" col="3" y="32" hm="true"/>
+          <view angle="225" col="3" x="2" y="32"/>
+          <view angle="270" col="3" x="-2" y="32" hm="true"/>
+          <view angle="315" col="3" y="32"/>
+        </layer>
+        <layer id="idle_05" texture="idle">
+          <view angle="0" col="4" x="-4" y="32" hm="true"/>
+          <view angle="45" col="4" x="-1" y="32"/>
+          <view angle="90" col="4" x="-2" y="32" hm="true"/>
+          <view angle="135" col="4" x="1" y="32"/>
+          <view angle="180" col="4" y="32" hm="true"/>
+          <view angle="225" col="4" x="2" y="32"/>
+          <view angle="270" col="4" x="-2" y="32" hm="true"/>
+          <view angle="315" col="4" y="32"/>
+        </layer>
+        <layer id="idle_06" texture="idle">
+          <view angle="0" col="5" x="-4" y="32" hm="true"/>
+          <view angle="45" col="5" x="-1" y="32"/>
+          <view angle="90" col="5" x="-2" y="32" hm="true"/>
+          <view angle="135" col="5" x="1" y="32"/>
+          <view angle="180" col="5" y="32" hm="true"/>
+          <view angle="225" col="5" x="2" y="32"/>
+          <view angle="270" col="5" x="-2" y="32" hm="true"/>
+          <view angle="315" col="5" y="32"/>
+        </layer>
+        <layer id="walk_01" texture="walk">
+          <view angle="0" x="-6" y="38"/>
+          <view angle="45" col="1" x="-5" y="39"/>
+          <view angle="90" col="2" x="3" y="38" hm="true"/>
+          <view angle="135" col="1" x="3" y="39" hm="true"/>
+          <view angle="180" x="5" y="38" hm="true"/>
+          <view angle="225" col="3" x="-1" y="39"/>
+          <view angle="270" col="4" x="-3" y="39"/>
+          <view angle="315" col="3" y="39" hm="true"/>
+        </layer>
+        <layer id="walk_02" texture="walk">
+          <view angle="0" row="1" x="-6" y="38"/>
+          <view angle="45" col="1" row="1" x="-5" y="39"/>
+          <view angle="90" col="2" row="1" x="3" y="38" hm="true"/>
+          <view angle="135" col="1" row="1" x="3" y="39" hm="true"/>
+          <view angle="180" row="1" x="5" y="38" hm="true"/>
+          <view angle="225" col="3" row="1" x="-1" y="39"/>
+          <view angle="270" col="4" row="1" x="-3" y="39"/>
+          <view angle="315" col="3" row="1" y="39" hm="true"/>
+        </layer>
+        <layer id="walk_03" texture="walk">
+          <view angle="0" row="2" x="-6" y="38"/>
+          <view angle="45" col="1" row="2" x="-5" y="39"/>
+          <view angle="90" col="2" row="2" x="3" y="38" hm="true"/>
+          <view angle="135" col="1" row="2" x="3" y="39" hm="true"/>
+          <view angle="180" row="2" x="5" y="38" hm="true"/>
+          <view angle="225" col="3" row="2" x="-1" y="39"/>
+          <view angle="270" col="4" row="2" x="-3" y="39"/>
+          <view angle="315" col="3" row="2" y="39" hm="true"/>
+        </layer>
+        <layer id="spark_idle_01" texture="sparkle">
+          <view angle="0" x="-4" y="41" hm="true"/>
+          <view angle="45" x="-1" y="41"/>
+          <view angle="90" x="-2" y="41" hm="true"/>
+          <view angle="135" x="1" y="41"/>
+          <view angle="180" y="41" hm="true"/>
+          <view angle="225" x="2" y="41"/>
+          <view angle="270" x="-2" y="41" hm="true"/>
+          <view angle="315" y="41"/>
+        </layer>
+        <layer id="spark_idle_02" texture="sparkle">
+          <view angle="0" row="1" x="-4" y="41" hm="true"/>
+          <view angle="45" row="1" x="-1" y="41"/>
+          <view angle="90" row="1" x="-2" y="41" hm="true"/>
+          <view angle="135" row="1" x="1" y="41"/>
+          <view angle="180" row="1" y="41" hm="true"/>
+          <view angle="225" row="1" x="2" y="41"/>
+          <view angle="270" row="1" x="-2" y="41" hm="true"/>
+          <view angle="315" row="1" y="41"/>
+        </layer>
+        <layer id="spark_idle_03" texture="sparkle">
+          <view angle="0" row="2" x="-4" y="41" hm="true"/>
+          <view angle="45" row="2" x="-1" y="41"/>
+          <view angle="90" row="2" x="-2" y="41" hm="true"/>
+          <view angle="135" row="2" x="1" y="41"/>
+          <view angle="180" row="2" y="41" hm="true"/>
+          <view angle="225" row="2" x="2" y="41"/>
+          <view angle="270" row="2" x="-2" y="41" hm="true"/>
+          <view angle="315" row="2" y="41"/>
+        </layer>
+        <layer id="spark_walk_01" texture="sparkle">
+          <view angle="0" col="1" x="-16" y="38"/>
+          <view angle="45" col="2" x="-9" y="34"/>
+          <view angle="90" col="3" x="-4" y="31" hm="true"/>
+          <view angle="135" col="2" x="8" y="34" hm="true"/>
+          <view angle="180" col="1" x="16" y="38" hm="true"/>
+          <view angle="225" col="4" x="16" y="43"/>
+          <view angle="270" col="5" x="5" y="48"/>
+          <view angle="315" col="4" x="-16" y="43" hm="true"/>
+        </layer>
+        <layer id="spark_walk_02" texture="sparkle">
+          <view angle="0" col="1" row="1" x="-16" y="38"/>
+          <view angle="45" col="2" row="1" x="-9" y="34"/>
+          <view angle="90" col="3" row="1" x="-4" y="31" hm="true"/>
+          <view angle="135" col="2" row="1" x="8" y="34" hm="true"/>
+          <view angle="180" col="1" row="1" x="16" y="38" hm="true"/>
+          <view angle="225" col="4" row="1" x="16" y="43"/>
+          <view angle="270" col="5" row="1" x="5" y="48"/>
+          <view angle="315" col="4" row="1" x="-16" y="43" hm="true"/>
+        </layer>
+        <layer id="spark_walk_03" texture="sparkle">
+          <view angle="0" col="1" row="2" x="-16" y="38"/>
+          <view angle="45" col="2" row="2" x="-9" y="34"/>
+          <view angle="90" col="3" row="2" x="-4" y="31" hm="true"/>
+          <view angle="135" col="2" row="2" x="8" y="34" hm="true"/>
+          <view angle="180" col="1" row="2" x="16" y="38" hm="true"/>
+          <view angle="225" col="4" row="2" x="16" y="43"/>
+          <view angle="270" col="5" row="2" x="5" y="48"/>
+          <view angle="315" col="4" row="2" x="-16" y="43" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="sit">
+          <layerref id="idle_01" a="0"/>
+        </frame>
+        <frame id="idle01">
+          <layerref id="idle_01"/>
+          <layerref id="spark_idle_01" a="0.2"/>
+        </frame>
+        <frame id="idle02">
+          <layerref id="idle_02"/>
+          <layerref id="spark_idle_02" a="0.6"/>
+        </frame>
+        <frame id="idle03">
+          <layerref id="idle_03"/>
+          <layerref id="spark_idle_03"/>
+        </frame>
+        <frame id="idle04">
+          <layerref id="idle_04"/>
+          <layerref id="spark_idle_01" a="0.8"/>
+        </frame>
+        <frame id="idle05">
+          <layerref id="idle_05"/>
+          <layerref id="spark_idle_02" a="0.6"/>
+        </frame>
+        <frame id="idle06">
+          <layerref id="idle_06"/>
+          <layerref id="spark_idle_03" a="0.4"/>
+        </frame>
+        <frame id="walk01">
+          <layerref id="walk_01"/>
+          <layerref id="spark_walk_01"/>
+        </frame>
+        <frame id="walk02">
+          <layerref id="walk_02"/>
+          <layerref id="spark_walk_02"/>
+        </frame>
+        <frame id="walk03">
+          <layerref id="walk_03"/>
+          <layerref id="spark_walk_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="idle01"/>
+          <frameref id="idle02"/>
+          <frameref id="idle03"/>
+          <frameref id="idle04"/>
+          <frameref id="idle05"/>
+          <frameref id="idle06"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="walk01"/>
+          <frameref id="walk02"/>
+          <frameref id="walk03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="-0.245" y="-0.0312" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="diffuse" align="middle" y="-5">
+          <view angle="45" x="2" y="1"/>
+          <view angle="135" x="-3" y="1"/>
+          <view angle="225" x="-2" y="-2"/>
+          <view angle="315" x="2" y="-2"/>
+          <view angle="0" x="2" y="-2"/>
+          <view angle="90" x="-1" y="1"/>
+          <view angle="180" x="-3" y="-2"/>
+          <view angle="270" y="-2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+        <frame id="01">
+          <layerref id="Light" color="0xf6c8ed"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xced0fb"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xd5f8f1"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xdcfbda"/>
+        </frame>
+        <frame id="05">
+          <layerref id="Light" color="0xf9f8db"/>
+        </frame>
+        <frame id="06">
+          <layerref id="Light" color="0xfbe8e0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="05"/>
+          <frameref id="06"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,106 @@
+<item.SpriteItem id="2614" name="Torta de Maçã" desc="Uma delícia para comer quentinha no inverno." tags="rare,consumable,food,actionbar,group_edible,edible,stackable,action_edible" icon="items/base/consumables/edible/icon_con_eat_39_applepie.png" price="80" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.1,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_edible.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_edible.as"/>
+    <event id="select" script="scripts/item/select_edible.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_edible.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="food-100"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture id="pizza" source="items/base/consumables/edible/con_eat_39_applepie.png" cols="1" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/edible/con_eat_38_pumpkinpie_shadow.png" cols="1" rows="1"/>
+    <texture id="steam" source="items/base/consumables/edible/con_eat_39_steam.png" cols="3" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="eat" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.25" max="0.25,0.1,0.25"/>
+      <layers>
+        <layer id="steam_4" texture="steam">
+          <view angle="45" col="1" x="3" y="-5"/>
+          <view angle="135" col="1" x="3" y="-5"/>
+          <view angle="225" col="1" x="3" y="-5"/>
+          <view angle="315" col="1" x="3" y="-5"/>
+        </layer>
+        <layer id="steam_3" texture="steam">
+          <view angle="45" col="2" x="3" y="-5"/>
+          <view angle="135" col="2" x="3" y="-5"/>
+          <view angle="225" col="2" x="3" y="-5"/>
+          <view angle="315" col="2" x="3" y="-5"/>
+        </layer>
+        <layer id="steam_2" texture="steam">
+          <view angle="45" col="1" x="3" y="-5"/>
+          <view angle="135" col="1" x="3" y="-5"/>
+          <view angle="225" col="1" x="3" y="-5"/>
+          <view angle="315" col="1" x="3" y="-5"/>
+        </layer>
+        <layer id="steam_1" texture="steam">
+          <view angle="45" x="3" y="-5"/>
+          <view angle="135" x="3" y="-5"/>
+          <view angle="225" x="3" y="-5"/>
+          <view angle="315" x="3" y="-5"/>
+        </layer>
+        <layer id="Pie" texture="pizza">
+          <view angle="45" y="15"/>
+          <view angle="135" y="15" hm="true"/>
+          <view angle="225" y="15"/>
+          <view angle="315" y="15" hm="true"/>
+        </layer>
+        <layer id="Shadow" texture="shadow">
+          <view angle="45" y="22"/>
+          <view angle="135" y="22" hm="true"/>
+          <view angle="225" y="22"/>
+          <view angle="315" y="22" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Shadow"/>
+          <layerref id="Pie"/>
+          <layerref id="steam_1"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Shadow"/>
+          <layerref id="Pie"/>
+          <layerref id="steam_2"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Shadow"/>
+          <layerref id="Pie"/>
+          <layerref id="steam_3"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Shadow"/>
+          <layerref id="Pie"/>
+          <layerref id="steam_4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="2">
+          <frameref id="Frame"/>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,93 @@
+<item.SpriteItem id="0" name="Halo" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+  </volume>
+  <textures>
+    <texture id="halo" source="items/base/consumables/clothing/accessory/acc_774_eggbubble_wear.png" cols="3" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="Halo_01" texture="halo" y="20">
+          <view angle="0" y="50"/>
+          <view angle="45" y="50"/>
+          <view angle="90" y="50" hm="true"/>
+          <view angle="135" y="50" hm="true"/>
+          <view angle="180" y="50"/>
+          <view angle="225" y="50"/>
+          <view angle="270" y="50" hm="true"/>
+          <view angle="315" y="50" hm="true"/>
+        </layer>
+        <layer id="Halo_02" texture="halo" y="20">
+          <view angle="0" col="1" y="50"/>
+          <view angle="45" col="1" y="50"/>
+          <view angle="90" col="1" y="50" hm="true"/>
+          <view angle="135" col="1" y="50" hm="true"/>
+          <view angle="180" col="1" y="50"/>
+          <view angle="225" col="1" y="50"/>
+          <view angle="270" col="1" y="50" hm="true"/>
+          <view angle="315" col="1" y="50" hm="true"/>
+        </layer>
+        <layer id="Halo_03" texture="halo" y="20">
+          <view angle="0" col="2" y="50"/>
+          <view angle="45" col="2" y="50"/>
+          <view angle="90" col="2" y="50" hm="true"/>
+          <view angle="135" col="2" y="50" hm="true"/>
+          <view angle="180" col="2" y="50"/>
+          <view angle="225" col="2" y="50"/>
+          <view angle="270" col="2" y="50" hm="true"/>
+          <view angle="315" col="2" y="50" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="loop01">
+          <layerref id="Halo_01"/>
+        </frame>
+        <frame id="loop02">
+          <layerref id="Halo_02"/>
+        </frame>
+        <frame id="loop03">
+          <layerref id="Halo_03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="loop01"/>
+          <frameref id="loop02"/>
+          <frameref id="loop03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view y="-15"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+        <frame id="01">
+          <layerref id="Light" color="0xbdf4f4"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xbdf4f4" a="0.9"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xbdf4f4" a="0.85"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="2">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

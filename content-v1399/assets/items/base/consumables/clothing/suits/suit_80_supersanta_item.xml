@@ -1,0 +1,219 @@
+<item.SpriteItem id="5512" name="Super Traje Papai Noel" desc="Um maravilhoso e poderoso traje" tags="rare,consumable,nopvp,action_wearable_toggle,back,clothing,actionbar,wear,suits" icon="items/base/consumables/clothing/suits/suit_80_supersanta_icon.png" price="1000" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/suits/suit_80_frag_supersanta.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes" value="frost+50"/>
+    <entry key="action_attributes_secondary" value="speed+100,health+100"/>
+  </data>
+  <textures>
+    <texture id="robot" source="items/base/consumables/clothing/suits/suit_80_supersanta_item.png" cols="2" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/feet/icon_con_feet_37_shadow.png" cols="2" rows="1"/>
+    <texture id="dust" source="items/base/consumables/clothing/suits/suit_79_adamantium_dust.png" cols="1" rows="1"/>
+    <texture id="swirl" source="items/base/consumables/clothing/suits/suit_79_adamantium_swirl.png" cols="4" rows="1"/>
+    <texture id="jetpack" source="items/base/consumables/clothing/suits/suit_80_supersanta_jetpack.png" cols="5" rows="1"/>
+    <texture id="surface" source="items/base/consumables/clothing/suits/suit_80_supersanta_surface.png" cols="4" rows="1"/>
+    <texture id="flame" source="items/base/consumables/back/con_bak_01_jetpack_flame_large.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.35,0,-0.35" max="0.35,1.66,0.35"/>
+      <layers>
+        <layer id="Robot" texture="robot" y="15">
+          <view angle="45" y="-50"/>
+          <view angle="135" y="-50" hm="true"/>
+          <view angle="225" col="1" x="1" y="-50"/>
+          <view angle="315" col="1" x="1" y="-50" hm="true"/>
+        </layer>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="30"/>
+          <view angle="135" y="30"/>
+          <view angle="225" y="30"/>
+          <view angle="315" y="30"/>
+        </layer>
+        <layer id="dust_01" texture="dust">
+          <view y="30"/>
+        </layer>
+        <layer id="dust_02" texture="dust">
+          <view y="30" hm="true"/>
+        </layer>
+        <layer id="swirl_01" texture="swirl">
+          <view y="50"/>
+        </layer>
+        <layer id="swirl_02" texture="swirl">
+          <view col="1" y="50"/>
+        </layer>
+        <layer id="swirl_03" texture="swirl">
+          <view col="2" y="50"/>
+        </layer>
+        <layer id="swirl_04" texture="swirl">
+          <view col="3" y="50"/>
+        </layer>
+        <layer id="jetpack_back" texture="jetpack">
+          <view angle="45" x="-10" y="-100"/>
+          <view angle="135" x="10" y="-100" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="jetpack_front" texture="jetpack">
+          <view angle="45" x="-10" y="-100" alpha="0"/>
+          <view angle="135" x="10" y="-100" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="5" y="-95" hm="true"/>
+          <view angle="315" col="3" x="-5" y="-95"/>
+        </layer>
+        <layer id="flame_back" texture="flame">
+          <view angle="45" x="-10" y="-85"/>
+          <view angle="135" x="10" y="-85"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="flame_front" texture="flame">
+          <view angle="45" x="-10" y="-85" alpha="0"/>
+          <view angle="135" x="10" y="-85" alpha="0"/>
+          <view angle="225" x="7" y="-80"/>
+          <view angle="315" x="-7" y="-80"/>
+        </layer>
+        <layer id="surface_01" texture="surface">
+          <view y="29" alpha="0.4"/>
+        </layer>
+        <layer id="surface_02" texture="surface">
+          <view col="1" y="29" alpha="0.4"/>
+        </layer>
+        <layer id="surface_03" texture="surface">
+          <view col="2" y="29" alpha="0.4"/>
+        </layer>
+        <layer id="surface_04" texture="surface">
+          <view col="3" y="29" alpha="0.4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="flame_back"/>
+          <layerref id="jetpack_back"/>
+          <layerref id="shadow"/>
+          <layerref id="surface_01" a="0.9"/>
+          <layerref id="swirl_02" a="0.1"/>
+          <layerref id="swirl_01" a="0.1"/>
+          <layerref id="dust_01" a="0.5"/>
+          <layerref id="Robot"/>
+          <layerref id="flame_front"/>
+          <layerref id="jetpack_front"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="flame_back" y="1"/>
+          <layerref id="jetpack_back" y="1"/>
+          <layerref id="shadow"/>
+          <layerref id="surface_02" a="0.9"/>
+          <layerref id="swirl_03" a="0.1"/>
+          <layerref id="swirl_02" a="0.1"/>
+          <layerref id="dust_02" a="0.5"/>
+          <layerref id="Robot" y="1"/>
+          <layerref id="flame_front" y="1"/>
+          <layerref id="jetpack_front" y="1"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="flame_back" y="2" a="0.9"/>
+          <layerref id="jetpack_back" y="2"/>
+          <layerref id="shadow"/>
+          <layerref id="surface_03" a="0.9"/>
+          <layerref id="swirl_04" a="0.1"/>
+          <layerref id="swirl_03" a="0.1"/>
+          <layerref id="dust_01" a="0.5"/>
+          <layerref id="Robot" y="2"/>
+          <layerref id="flame_front" y="2" a="0.9"/>
+          <layerref id="jetpack_front" y="2"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="flame_back" y="1" a="0.9"/>
+          <layerref id="jetpack_back" y="1"/>
+          <layerref id="shadow"/>
+          <layerref id="surface_04" a="0.9"/>
+          <layerref id="swirl_01" a="0.1"/>
+          <layerref id="swirl_04" a="0.1"/>
+          <layerref id="dust_02" a="0.5"/>
+          <layerref id="Robot" y="1"/>
+          <layerref id="flame_front" y="1" a="0.9"/>
+          <layerref id="jetpack_front" y="1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="flame_back" texture="flame">
+          <view angle="45" x="-10" y="-85"/>
+          <view angle="135" x="10" y="-85"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="flame_front" texture="flame">
+          <view angle="45" x="-10" y="-85" alpha="0"/>
+          <view angle="135" x="10" y="-85" alpha="0"/>
+          <view angle="225" x="7" y="-80"/>
+          <view angle="315" x="-7" y="-80"/>
+        </layer>
+        <layer id="surface_01" texture="surface">
+          <view y="29"/>
+        </layer>
+        <layer id="surface_02" texture="surface">
+          <view col="1" y="29"/>
+        </layer>
+        <layer id="surface_03" texture="surface">
+          <view col="2" y="29"/>
+        </layer>
+        <layer id="surface_04" texture="surface">
+          <view col="3" y="29"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On_01">
+          <layerref id="flame_back"/>
+          <layerref id="flame_front"/>
+          <layerref id="surface_01"/>
+        </frame>
+        <frame id="On_02">
+          <layerref id="flame_back"/>
+          <layerref id="flame_front"/>
+          <layerref id="surface_02"/>
+        </frame>
+        <frame id="On_03">
+          <layerref id="flame_back" a="0.9"/>
+          <layerref id="flame_front" a="0.9"/>
+          <layerref id="surface_03"/>
+        </frame>
+        <frame id="On_04">
+          <layerref id="flame_back" a="0.9"/>
+          <layerref id="flame_front" a="0.9"/>
+          <layerref id="surface_04"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="On_01"/>
+          <frameref id="On_02"/>
+          <frameref id="On_03"/>
+          <frameref id="On_04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

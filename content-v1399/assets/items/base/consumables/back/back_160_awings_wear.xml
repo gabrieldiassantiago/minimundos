@@ -1,0 +1,64 @@
+<item.SpriteItem id="0" name="Angel Wings" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.15,0.1094,-0.15" max="0.15,0.7094,0.15"/>
+  </volume>
+  <data>
+    <entry key="targets" value="avatar"/>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="head" source="items/base/consumables/back/back_160_awings_wear.png" cols="1" rows="6"/>
+  </textures>
+  <sounds>
+    <sound id="flap" source="items/base/consumables/back/sndfx_flap.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node" y="0.1094">
+      <box min="-0.15,0,-0.15" max="0.15,0.6,0.15"/>
+      <layers>
+        <layer id="frame1" texture="head">
+          <view angle="0" row="4" x="1" y="35"/>
+          <view angle="45" row="2" x="5" y="32"/>
+          <view angle="90" y="38"/>
+          <view angle="135" row="2" x="-7" y="31" hm="true"/>
+          <view angle="180" row="4" x="-2" y="36" hm="true"/>
+          <view angle="225" row="2" y="28"/>
+          <view angle="270" y="25"/>
+          <view angle="315" row="2" y="28" hm="true"/>
+        </layer>
+        <layer id="frame2" texture="head">
+          <view angle="0" row="5" x="1" y="38"/>
+          <view angle="45" row="3" x="5" y="40"/>
+          <view angle="90" row="1" y="39"/>
+          <view angle="135" row="3" x="-7" y="39" hm="true"/>
+          <view angle="180" row="5" x="-2" y="39" hm="true"/>
+          <view angle="225" row="3" y="36"/>
+          <view angle="270" row="1" y="25"/>
+          <view angle="315" row="3" y="36" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame_01">
+          <layerref id="frame1"/>
+        </frame>
+        <frame id="Frame_02">
+          <layerref id="frame2"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="frame2" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame_01">
+            <sample id="flap" loops="-1"/>
+          </frameref>
+          <frameref id="Frame_02"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

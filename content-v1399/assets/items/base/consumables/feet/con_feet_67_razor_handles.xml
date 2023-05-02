@@ -1,0 +1,42 @@
+<item.SpriteItem id="0" name="Item" desc="An item" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,-0.7,0.12" max="0,-0.7,0.12"/>
+  </volume>
+  <textures>
+    <texture id="Bars" source="items/base/consumables/feet/con_feet_67_razor_handles.png" cols="4" rows="2"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Segway" y="-0.7" z="0.12">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Bars" texture="Bars">
+          <view angle="0" x="26" y="-51"/>
+          <view angle="45" col="1" x="10" y="-38"/>
+          <view angle="90" col="2" x="-8" y="-32"/>
+          <view angle="135" col="3" x="-26" y="-36"/>
+          <view angle="180" row="1" x="-29" y="-50"/>
+          <view angle="225" col="1" row="1" x="-18" y="-60"/>
+          <view angle="270" col="2" row="1" x="6" y="-23"/>
+          <view angle="315" col="1" row="1" x="26" y="-54" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="Bars"/>
+        </frame>
+        <frame id="Sit"/>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Sit"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

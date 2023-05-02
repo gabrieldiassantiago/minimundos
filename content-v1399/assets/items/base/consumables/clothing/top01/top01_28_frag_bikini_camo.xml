@@ -1,0 +1,49 @@
+<f id="Top01_26BikiniCamo" parentId="Top01">
+  <g name="bikini" icon="$bm/icon_m_vest.png">
+    <s id="Top01_26Torso" cId="Torso" s="items/base/consumables/clothing/top01/top01_13_bikini.png" pri="1.1"/>
+    <s id="Top01_26Skin" cId="Torso" s="items/base/consumables/clothing/top01/top01_13_bikini_skin.png" pri="1"/>
+    <c sId="Top01_26Torso" c="3816204" a="1.00" b="88.8" ct="1.00" lId="Top01_26_Color1" lw="N"/>
+    <c sId="Top01_26Skin" c="13405800" a="0.44" b="12.0" ct="0.26" lId="SkinColor" lw="N"/>
+    <s id="Top01_26Decal" cId="Torso" s="items/base/consumables/clothing/top01/top01_28_bikini_camo.png" pri="1.1"/>
+    <c sId="Top01_26Decal" c="2175503" a="1.00" b="33.4" ct="0.12" lId="Top01_26_Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_26" icon="items/base/consumables/clothing/top01/top01_28_item_icon.png" w="48" h="48"/>
+    <s id="Icon01_26Base" cId="IconTop01_26" s="items/base/consumables/clothing/top01/top01_13_icon_base.png"/>
+    <c sId="Icon01_26Base" c="2175503" a="1.00" b="33.4" ct="0.12" lId="Top01_26_Color2" lw="N"/>
+    <s id="Icon01_26Decal" cId="IconTop01_26" s="items/base/consumables/clothing/top01/top01_28_icon_decal.png"/>
+    <c sId="Icon01_26Decal" c="3816204" a="1.00" b="88.8" ct="1.00" lId="Top01_26_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top01_26_Color1"/>
+    </wizbox>
+    <b id="Top01_26_Color1" name="Color " desc="Choose a color" sel="Green" seld="Green">
+      <g id="Green" name="Green" icon="$bu/icon_greendark.png">
+        <c id="Green" name="Green" icon="$bu/icon_olive.png" c="2175503" a="1.00" b="33.4" ct="0.12" lId="Top01_26_Color2"/>
+        <c id="Olive" name="Olive" icon="$bu/icon_olive.png" c="3816204" a="1.00" b="88.8" ct="1.00" lId="Top01_26_Color1"/>
+      </g>
+      <g id="Pink" name="Pink" icon="$bu/icon_pink.png">
+        <c id="PinkDark" name="PinkDark" icon="$bu/icon_lightpink.png" c="16218790" a="0.68" b="84.0" ct="0.64" lId="Top01_26_Color2"/>
+        <c id="Pink" name="Pink" icon="$bu/icon_lightpink.png" c="16218790" a="0.86" b="52.8" ct="1.13" lId="Top01_26_Color1"/>
+      </g>
+      <g id="White" name="White" icon="$bu/icon_white.png">
+        <c id="LightGrey" name="LightGrey" icon="$bu/icon_white.png" c="12105912" a="0.76" b="83.0" ct="0.19" lId="Top01_26_Color2"/>
+        <c id="White" name="White" icon="$bu/icon_white.png" c="12105912" a="1.00" b="32.9" ct="1.16" lId="Top01_26_Color1"/>
+      </g>
+      <g id="Brown" name="Brown" icon="$bu/icon_tan.png">
+        <c id="Brown" name="Brown" icon="$bu/icon_brown.png" c="4338962" a="1.00" b="73.4" ct="1.54" lId="Top01_26_Color2"/>
+        <c id="Kaki" name="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="60.1" ct="0.76" lId="Top01_26_Color1"/>
+      </g>
+      <g id="LightBrown" name="LightBrown" icon="$bu/icon_kaki.png">
+        <c id="Brown" name="Brown" icon="$bu/icon_tan.png" c="4338962" a="0.96" b="82.8" ct="1.65" lId="Top01_26_Color2"/>
+        <c id="Kaki" name="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.66" b="68.5" ct="0.88" lId="Top01_26_Color1"/>
+      </g>
+      <g id="Black" name="Black" icon="$bu/icon_black.png">
+        <c id="DarkBlack" name="DarkBlack" icon="$bu/icon_black.png" c="4013373" a="1.00" b="66.6" ct="2.00" lId="Top01_26_Color2"/>
+        <c id="Black" name="Black" icon="$bu/icon_black.png" c="4013373" a="1.00" b="84.4" ct="2.00" lId="Top01_26_Color1"/>
+      </g>
+    </b>
+  </g>
+  <ds id="JSTop"/>
+</f>

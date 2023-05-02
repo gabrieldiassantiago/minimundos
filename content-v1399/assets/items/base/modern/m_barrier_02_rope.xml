@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="1427" name="Cordão para Organizar Filas" desc="Para organizar as filas." tags="misc" icon="items/base/modern/icon_m_barrier_02_rope.png" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="30" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box min="-0.2,0,-0.49" max="0.2,1.07,0.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="rope" source="items/base/modern/m_barrier_02_rope.png" cols="2" rows="1"/>
+    <texture id="pole" source="items/base/modern/m_barrier_02_rope_pole.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="barrier">
+      <box min="-0.2,0,-0.49" max="0.2,1.07,0.49"/>
+      <layers>
+        <layer id="pole +z" texture="pole">
+          <view angle="45" x="32" y="-9"/>
+          <view angle="135" x="32" y="23" hm="true"/>
+          <view angle="225" x="-32" y="23"/>
+          <view angle="315" x="-32" y="-9" hm="true"/>
+        </layer>
+        <layer id="pole -z" texture="pole">
+          <view angle="45" x="-32" y="23"/>
+          <view angle="135" x="-32" y="-9" hm="true"/>
+          <view angle="225" x="32" y="-9"/>
+          <view angle="315" x="32" y="23" hm="true"/>
+        </layer>
+        <layer id="rope" texture="rope">
+          <view angle="45" y="21"/>
+          <view angle="135" y="21" hm="true"/>
+          <view angle="225" y="21"/>
+          <view angle="315" y="21" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

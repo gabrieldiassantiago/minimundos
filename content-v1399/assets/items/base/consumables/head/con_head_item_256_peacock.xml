@@ -1,0 +1,57 @@
+<item.SpriteItem id="6800" name="Penny, a Pavoa" desc="Colecionável Mensal (Junho 2017)" tags="rare,consumable,actionbar,wear,head,costume,animal,collectible,action_wearable_toggle" icon="items/base/consumables/head/icon_con_head_item_256_peacock.png" price="2000" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.28,0,-0.28" max="0.28,0.7,0.28"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="nature+10"/>
+    <entry key="action_attributes_secondary" value="health+10,speed+30"/>
+  </data>
+  <textures>
+    <texture id="head" source="items/base/consumables/head/con_head_256_peacock.png" cols="5" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/head/con_head_generic_dropshadow.png" cols="1" rows="1"/>
+    <texture id="tail" source="items/base/consumables/back/con_bak_313_peacock.png" cols="5" rows="1"/>
+    <texture id="eye" source="items/base/consumables/head/con_head_256_peacock_eye.png" cols="4" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.28,0,-0.28" max="0.28,0.7,0.28"/>
+      <layers>
+        <layer id="shadow" texture="shadow">
+          <view angle="45" y="21"/>
+          <view angle="135" y="21"/>
+          <view angle="225" y="21"/>
+          <view angle="315" y="21"/>
+        </layer>
+        <layer id="tail" texture="tail">
+          <view angle="45" x="-5" y="11"/>
+          <view angle="135" x="5" y="11" hm="true"/>
+          <view angle="225" col="3" x="10" y="20" hm="true"/>
+          <view angle="315" col="3" x="-10" y="20"/>
+        </layer>
+        <layer id="head" texture="head">
+          <view angle="45" x="-6" y="4"/>
+          <view angle="135" x="6" y="4" hm="true"/>
+          <view angle="225" col="3" x="10" y="8"/>
+          <view angle="315" col="3" x="-10" y="8" hm="true"/>
+        </layer>
+        <layer id="eye" texture="eye">
+          <view angle="45" x="5" y="-16"/>
+          <view angle="135" x="-4" y="-16" hm="true"/>
+          <view angle="225" col="3" x="-17" y="-23"/>
+          <view angle="315" col="3" x="18" y="-23" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

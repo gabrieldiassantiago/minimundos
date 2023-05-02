@@ -1,0 +1,27 @@
+<item.SpriteItem desc="Uma mesa de jantar retro" dropTargetClamp="none" dropTargetList="floor" dropTargetType="table" icon="items/base/modern/icon_m_coffee_03_50diner.png" id="1051" name="Mesa de Jantar Nordic" tags="table" price="40" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.5,0.77,0.5" min="-0.5,0,-0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="1" id="Texture" rows="1" source="items/base/modern/m_coffee_03_50diner.png"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box max="0.5,0.77,0.5" min="-0.5,0,-0.5"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" y="25"/>
+          <view angle="135" hm="true" y="25"/>
+          <view angle="225" y="25"/>
+          <view angle="315" hm="true" y="25"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

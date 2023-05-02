@@ -1,0 +1,56 @@
+<f id="Top01_30TLogoS" parentId="Top01">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Top01_30TorsoBase" cId="Torso" s="$bm/tshirt_torso.png" pri="1"/>
+      <s id="Top01_30TorsoLogoM" name="Logo_M" cId="Torso" s="items/base/consumables/clothing/top01/top01_33_retrotshirt_logo_m.png" pri="2"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_30TorsoBase" cId="Torso" s="$bf/tshirt_torso.png" pri="1"/>
+      <s id="Top01_30TorsoLogoF" name="Logo_F" cId="Torso" s="items/base/consumables/clothing/top01/top01_33_retrotshirt_logo_f.png" pri="2"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Top01_30ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/shr_short_arm_idle.png" pri="1"/>
+    <s id="Top01_30ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/shr_short_arm_walk1.png" pri="1"/>
+    <s id="Top01_30ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/shr_short_arm_walk2.png" pri="1"/>
+    <s id="Top01_30ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/shr_short_arm_walk3.png" pri="1"/>
+    <s id="Top01_30ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/shr_short_arm_sit.png" pri="1"/>
+    <c sId="Top01_30ArmIdleBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_30_Color1" lw="N"/>
+    <c sId="Top01_30ArmWalk1Base" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_30_Color1" lw="N"/>
+    <c sId="Top01_30ArmWalk2Base" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_30_Color1" lw="N"/>
+    <c sId="Top01_30ArmWalk3Base" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_30_Color1" lw="N"/>
+    <c sId="Top01_30ArmSitBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_30_Color1" lw="N"/>
+    <c sId="Top01_30TorsoBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_30_Color1" lw="N"/>
+    <s id="Top01_30ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/shr_short_arm_throw.png" pri="1"/>
+    <s id="Top01_30ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/shr_short_arm_raise.png" pri="1"/>
+    <c sId="Top01_30ArmThrowBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_30_Color1" lw="N"/>
+    <c sId="Top01_30ArmRaiseBase" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_30_Color1" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_30" icon="items/base/consumables/clothing/top01/top01_01_icon_singlet_1.png" w="48" h="48"/>
+    <s id="IconTop01_30Logo" cId="IconTop01_30" s="items/base/consumables/clothing/top01/top01_33_icon_logo.png" pri="1.1"/>
+    <s id="IconTop01_30Base" cId="IconTop01_30" s="items/base/consumables/clothing/top01/top01_03_icon_tlogo_1.png" pri="1"/>
+    <c sId="IconTop01_30Base" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_30_Color1" lw="N"/>
+  </g>
+  <g id="FragmentUI">
+    <b id="Top01_30_Color1" name="Color" desc="Choose a color" sel="White" seld="White">
+      <c id="White" icon="$bu/icon_white.png" c="10592673" a="0.88" b="70.9" ct="1.66" lId="Top01_30_Color1"/>
+      <c id="Grey" icon="$bu/icon_grey.png" c="7895160" a="1.00" b="56.4" ct="1.90" lId="Top01_30_Color1"/>
+      <c id="Lilac" icon="$bu/icon_lilac.png" c="16751599" a="0.99" b="46.3" ct="1.14" lId="Top01_30_Color1"/>
+      <c id="LightPink" icon="$bu/icon_lightpink.png" c="16238289" a="1.00" b="28.8" ct="1.95" lId="Top01_30_Color1"/>
+      <c id="Orange" icon="$bu/icon_orange.png" c="16221202" a="1.00" b="53.9" ct="1.95" lId="Top01_30_Color1"/>
+      <c id="Yellow" icon="$bu/icon_yellow.png" c="16776960" a="0.94" b="42.6" ct="0.36" lId="Top01_30_Color1"/>
+      <c id="Green" icon="$bu/icon_green.png" c="908049" a="1.00" b="18.8" ct="1.04" lId="Top01_30_Color1"/>
+      <c id="Indigo" icon="$bu/icon_indigo.png" c="1561765" a="0.99" b="46.3" ct="1.14" lId="Top01_30_Color1"/>
+      <c id="Blue" icon="$bu/icon_blue.png" c="2858731" a="0.84" b="38.3" ct="1.61" lId="Top01_30_Color1"/>
+      <c id="Kaki" icon="$bu/icon_kaki.png" c="11769952" a="0.99" b="34.6" ct="0.76" lId="Top01_30_Color1"/>
+      <c id="Olive" icon="$bu/icon_olive.png" c="5195281" a="0.99" b="71.8" ct="1.61" lId="Top01_30_Color1"/>
+      <c id="Brown" icon="$bu/icon_brown.png" c="4534275" a="0.99" b="67.0" ct="1.61" lId="Top01_30_Color1"/>
+      <c id="Black" icon="$bu/icon_black.png" c="5395026" a="1.00" b="21.3" ct="0.47" lId="Top01_30_Color1"/>
+    </b>
+    <wizbox id="UI" uiInitScript="width=200; height=100; setStyle('horizontalGap', 4);" dir="H">
+      <wizchoice id="Color1" name="Color" uiClassName="com.smallworlds.start.intro.avatar.ui.AvatarComboChoiceUI" bId="Top01_30_Color1"/>
+    </wizbox>
+  </g>
+  <ds id="JSTop"/>
+</f>

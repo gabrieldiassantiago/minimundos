@@ -1,0 +1,58 @@
+<item.SpriteItem id="2808" name="Espelhinho de Luxo" desc="Com espelho de aumento e base dourada." tags="misc" icon="items/base/modern/icon_m_bathroom_14_mirrorsmall.png" price="40" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.7,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="smirror" source="items/base/modern/m_bathroom_14_mirrorsmall.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,0.7,0.2"/>
+      <layers>
+        <layer id="smirror" texture="smirror" y="15">
+          <view angle="45" y="-4"/>
+          <view angle="135" y="-4" hm="true"/>
+          <view angle="225" col="1" y="-4"/>
+          <view angle="315" col="1" y="-4" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle01">
+          <layerref id="smirror"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4"/>
+        <animation id="On" framerate="1"/>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.64" s="2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="glow">
+          <view angle="45" x="2" y="15"/>
+          <view angle="135" x="-1" y="15"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light01" color="0xf7cff7"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="4"/>
+        <animation id="On" framerate="4"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,41 @@
+<item.SpriteItem desc="A tail from a black dragon suit" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" entity="false" name="Black Dragon Suit Tail" tags="consumable, wearable, actionbar" id="0">
+  <volume>
+    <box min="-0.24,-1,-0.24" max="0.24,0,0.24"/>
+  </volume>
+  <textures>
+    <texture id="black dragon tail" source="items/base/consumables/back/con_bak_73_blackdragon.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,-1,-0.24" max="0.24,0,0.24"/>
+      <layers>
+        <layer id="black dragon tail" texture="black dragon tail" y="60">
+          <view angle="0" col="1" x="-13" y="11" hm="true"/>
+          <view angle="45" x="-10" y="11"/>
+          <view angle="90" alpha="0"/>
+          <view angle="135" x="9" y="11" hm="true"/>
+          <view angle="180" col="1" x="13" y="11"/>
+          <view angle="225" col="3" x="12" y="14"/>
+          <view angle="270" col="2" y="13"/>
+          <view angle="315" col="3" x="-9" y="14" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="black dragon tail"/>
+        </frame>
+        <frame id="alpha">
+          <layerref id="black dragon tail" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="alpha"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

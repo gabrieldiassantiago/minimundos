@@ -1,0 +1,86 @@
+<item.SpriteItem id="6917" name="Celular Celebridade Deluxe" desc="Um celular incrívelmente lindo [5 de 7]" tags="rare,hand,nopvp,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_842_icon_phone03.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.27,0,-0.27" max="0.27,0.51,0.27"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+50"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="Phone" source="items/base/consumables/clothing/accessory/acc_842_item_phone03_base.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="FruitPhoneGen1">
+      <box min="-0.27,0,-0.27" max="0.27,0.51,0.27"/>
+      <layers>
+        <layer id="Phone" texture="Phone">
+          <view angle="45" y="16"/>
+          <view angle="135" y="16" hm="true"/>
+          <view angle="225" col="1" y="16"/>
+          <view angle="315" col="1" y="16" hm="true"/>
+        </layer>
+        <layer id="Screen" texture="Phone">
+          <view angle="45" col="2" y="16"/>
+          <view angle="135" col="2" y="16" hm="true"/>
+          <view angle="225" col="1" y="16"/>
+          <view angle="315" col="1" y="16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Phone On">
+          <layerref id="Phone"/>
+        </frame>
+        <frame id="Phone Off">
+          <layerref id="Phone"/>
+          <layerref id="Screen"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1">
+          <frameref id="Phone Off" duration="10"/>
+          <frameref id="Phone On" duration="10"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light On" texture="Light" align="middle">
+          <view angle="45" x="6" y="-20"/>
+          <view angle="135" x="-6" y="-20"/>
+          <view angle="225" x="-3" y="-25"/>
+          <view angle="315" x="9" y="-25"/>
+        </layer>
+        <layer id="Light Off" texture="Light" align="middle">
+          <view angle="45" x="6" y="-20"/>
+          <view angle="135" x="-6" y="-20"/>
+          <view angle="225" x="-3" y="-25"/>
+          <view angle="315" x="9" y="-25"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Light Off" color="0x80f177"/>
+        </frame>
+        <frame id="On">
+          <layerref id="Light On" color="0x9feff0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="1">
+          <frameref id="Off" duration="10"/>
+          <frameref id="On" duration="10"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

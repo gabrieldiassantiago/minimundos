@@ -1,0 +1,135 @@
+<item.SpriteItem id="395" name="Luminária Lava Verde" desc="Anime seus ambientes com esta luminária de lava colorida." tags="light,decoration" icon="items/base/modern/icon_m_lava_lamp_01.png" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="13" minLevel="1" minCPLevel="1">
+  <volume>
+    <box min="-0.16,0,-0.16" max="0.16,0.68,0.16"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_lava_lamp_01.png" cols="2" rows="2"/>
+    <texture id="lavaglo" source="items/base/modern/m_lava_lamp_01_lavaglo.png" cols="2" rows="2"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_oval.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Lamp">
+      <box min="-0.16,0,-0.16" max="0.16,0.68,0.16"/>
+      <layers>
+        <layer id="Layer_01" texture="Texture">
+          <view y="4"/>
+        </layer>
+        <layer id="Layer_02" texture="Texture">
+          <view col="1" y="4"/>
+        </layer>
+        <layer id="Layer_03" texture="Texture">
+          <view row="1" y="4"/>
+        </layer>
+        <layer id="Layer_04" texture="Texture">
+          <view col="1" row="1" y="4"/>
+        </layer>
+        <layer id="Layer_01_s" texture="lavaglo">
+          <view y="4"/>
+        </layer>
+        <layer id="Layer_02_s" texture="lavaglo">
+          <view col="1" y="4"/>
+        </layer>
+        <layer id="Layer_03_s" texture="lavaglo">
+          <view row="1" y="4"/>
+        </layer>
+        <layer id="Layer_04_s" texture="lavaglo">
+          <view col="1" row="1" y="4"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Layer_01"/>
+        </frame>
+        <frame id="Frame01">
+          <layerref id="Layer_02"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Layer_03"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Layer_04"/>
+        </frame>
+        <frame id="on 01">
+          <layerref id="Layer_01"/>
+          <layerref id="Layer_01_s" a="0.4" blend="add"/>
+        </frame>
+        <frame id="on 02">
+          <layerref id="Layer_02"/>
+          <layerref id="Layer_02_s" a="0.4" blend="add"/>
+        </frame>
+        <frame id="on 03">
+          <layerref id="Layer_03"/>
+          <layerref id="Layer_03_s" a="0.4" blend="add"/>
+        </frame>
+        <frame id="on 04">
+          <layerref id="Layer_04"/>
+          <layerref id="Layer_04_s" a="0.4" blend="add"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="on 01" duration="2"/>
+          <frameref id="on 02" duration="2"/>
+          <frameref id="on 03" duration="2"/>
+          <frameref id="on 04" duration="2"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Frame" duration="2"/>
+          <frameref id="Frame01" duration="2"/>
+          <frameref id="Frame02" duration="2"/>
+          <frameref id="Frame03" duration="2"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="0.25" s="3.4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light 01" texture="Light" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light 01" color="0x63ee58"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light 01" color="0x63ee58" a="0.97"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light 01" color="0x63ee58" a="0.95"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light 01" color="0x63ee58" a="0.98"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light 01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

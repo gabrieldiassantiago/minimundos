@@ -1,0 +1,87 @@
+<f id="Top06_14_WizardSuit" parentId="Top06">
+  <g name="Wizard" icon="$bm/icon_m_retro.png">
+    <s id="Top06_14TorsoBase" cId="Torso" s="items/base/consumables/clothing/top06/top06_14_torso_wizard_male.png" pri="6"/>
+    <c sId="Top06_14TorsoBase" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <s id="Top06_14ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/shared/arm_jacket_idle.png" pri="6"/>
+    <s id="Top06_14ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/shared/arm_jacket_walk1.png" pri="6"/>
+    <s id="Top06_14ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/shared/arm_jacket_walk2.png" pri="6"/>
+    <s id="Top06_14ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/shared/arm_jacket_walk3.png" pri="6"/>
+    <s id="Top06_14ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/shared/arm_jacket_sit.png" pri="6"/>
+    <c sId="Top06_14ArmIdleBase" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <c sId="Top06_14ArmWalk1Base" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <c sId="Top06_14ArmWalk2Base" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <c sId="Top06_14ArmWalk3Base" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <c sId="Top06_14ArmSitBase" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <s id="Top06_14ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/shared/arm_jacket_throw.png" pri="6"/>
+    <c sId="Top06_14ArmThrowBase" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <s id="Top06_14ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/shared/arm_jacket_raise.png" pri="6"/>
+    <c sId="Top06_14ArmRaiseBase" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+  </g>
+  <g name="WizardDetails" icon="$bm/icon_m_retro.png">
+    <s id="Top06_14TorsoScarf" cId="Torso" s="items/base/consumables/clothing/top06/top06_14_torso_wizard_malescarf.png" pri="6.2"/>
+    <s id="Top06_14TorsoDetail" cId="Torso" s="items/base/consumables/clothing/top06/top06_14_torso_detail.png" pri="6.1"/>
+    <c sId="Top06_14TorsoDetail" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+    <s id="Top06_14ArmIdleDetail" cId="ArmIdle" s="items/base/consumables/clothing/top06/top06_14_arm_idle.png" pri="6.1"/>
+    <s id="Top06_14ArmWalk1Detail" cId="ArmWalk1" s="items/base/consumables/clothing/top06/top06_14_arm_walk1.png" pri="6.1"/>
+    <s id="Top06_14ArmWalk2Detail" cId="ArmWalk2" s="items/base/consumables/clothing/top06/top06_14_arm_walk2.png" pri="6.1"/>
+    <s id="Top06_14ArmWalk3Detail" cId="ArmWalk3" s="items/base/consumables/clothing/top06/top06_14_arm_walk3.png" pri="6.1"/>
+    <s id="Top06_14ArmSitDetail" cId="ArmSit" s="items/base/consumables/clothing/top06/top06_14_arm_sit.png" pri="6.1"/>
+    <c sId="Top06_14ArmIdleDetail" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+    <c sId="Top06_14ArmWalk1Detail" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+    <c sId="Top06_14ArmWalk2Detail" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+    <c sId="Top06_14ArmWalk3Detail" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+    <c sId="Top06_14ArmSitDetail" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+    <s id="Top06_14ArmThrowDetail" cId="ArmThrow" s="items/base/consumables/clothing/top06/top06_14_arm_throw.png" pri="6.1"/>
+    <c sId="Top06_14ArmThrowDetail" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+    <s id="Top06_14ArmRaiseDetail" cId="ArmRaise" s="items/base/consumables/clothing/top06/top06_14_arm_raise.png" pri="6.1"/>
+    <c sId="Top06_14ArmRaiseDetail" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop06_14" icon="items/base/consumables/head/icon_con_head_item_85_wizardhat.png" w="48" h="48"/>
+    <s id="IconTop06_14Base" cId="IconTop06_07" s="items/base/consumables/head/icon_con_head_item_85_wizardhat.png" pri="1"/>
+  </g>
+  <g id="FragmentUI">
+    <c name="Blue" icon="$bu/icon_grey.png" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1"/>
+    <c name="Red" icon="$bu/icon_grey.png" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2"/>
+  </g>
+  <g id="LongSkirt" name="Long skirt" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_14BottomIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_14_leg_idle.png" pri="6"/>
+    <s id="Top06_14BottomWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_14_leg_walk1.png" pri="6"/>
+    <s id="Top06_14BottomWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_14_leg_walk2.png" pri="6"/>
+    <s id="Top06_14BottomWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_14_leg_walk3.png" pri="6"/>
+    <s id="Top06_14BottomWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_14_leg_walk4.png" pri="6"/>
+    <s id="Top06_14BottomSitUpper" cId="LegSitUpper" s="items/base/consumables/clothing/top06/top06_14_leg_sit.png" pri="6"/>
+    <c sId="Top06_14BottomIdle" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <c sId="Top06_14BottomWalk1" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <c sId="Top06_14BottomWalk2" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <c sId="Top06_14BottomWalk3" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <c sId="Top06_14BottomWalk4" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <c sId="Top06_14BottomSitUpper" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <s id="Top06_14BottomBackIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_07_back.png" tx="5" ty="2.5" pri="0.1" dr="0,0,23,54"/>
+    <c sId="Top06_14BottomBackIdle" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <s id="Top06_14BottomBackWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_07_back.png" tx="12" ty="3" pri="0.5" dr="0,0,30,54"/>
+    <s id="Top06_14BottomBackWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_07_back.png" tx="7" ty="-1" pri="0.5" dr="0,0,25,54"/>
+    <s id="Top06_14BottomBackWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_07_back.png" tx="8" ty="3" pri="0.5" dr="9,0,17,54"/>
+    <s id="Top06_14BottomBackWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_07_back.png" tx="10" pri="0.5" dr="0,0,28,54"/>
+    <c sId="Top06_14BottomBackWalk1" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <c sId="Top06_14BottomBackWalk2" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <c sId="Top06_14BottomBackWalk3" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+    <c sId="Top06_14BottomBackWalk4" c="1258348" a="0.57" b="-38.7" ct="0.30" lId="Top06_14Color1" lw="N"/>
+  </g>
+  <g id="LongSkirtDetails" name="Long skirt details" icon="$bf/icon_legs_longskirt.png">
+    <s id="Top06_14DetailIdle" cId="LegIdle" s="items/base/consumables/clothing/top06/top06_14_legdetails_idle.png" pri="6.1"/>
+    <s id="Top06_14DetailWalk1" cId="LegWalk1" s="items/base/consumables/clothing/top06/top06_14_legdetails_walk1.png" pri="6.1"/>
+    <s id="Top06_14DetailWalk2" cId="LegWalk2" s="items/base/consumables/clothing/top06/top06_14_legdetails_walk2.png" pri="6.1"/>
+    <s id="Top06_14DetailWalk3" cId="LegWalk3" s="items/base/consumables/clothing/top06/top06_14_legdetails_walk3.png" pri="6.1"/>
+    <s id="Top06_14DetailWalk4" cId="LegWalk4" s="items/base/consumables/clothing/top06/top06_14_legdetails_walk4.png" pri="6.1"/>
+    <s id="Top06_14DetailSitUpper" cId="LegSitUpper" s="items/base/consumables/clothing/top06/top06_14_legdetails_sit.png" pri="6.1"/>
+    <c sId="Top06_14DetailIdle" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+    <c sId="Top06_14DetailWalk1" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+    <c sId="Top06_14DetailWalk2" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+    <c sId="Top06_14DetailWalk3" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+    <c sId="Top06_14DetailWalk4" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+    <c sId="Top06_14DetailSitUpper" c="15597592" a="0.66" b="-22.5" ct="0.30" lId="Top06_14Color2" lw="N"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="Top05"/>
+</f>

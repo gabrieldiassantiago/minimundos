@@ -1,0 +1,47 @@
+<item.SpriteItem id="3134" name="Ovos de Páscoa" desc="Um monte de ovinhos de páscoa coloridos." tags="rare,consumable,food,actionbar,group_edible,edible,stackable,action_edible" icon="items/base/consumables/edible/icon_con_eat_51_eggs.png" price="30" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.28,0,-0.28" max="0.28,0.1,0.28"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_edible.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_edible.as"/>
+    <event id="select" script="scripts/item/select_edible.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_edible.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="aiUseInWorldEffects" value="food-100"/>
+    <entry key="action_attributes_secondary" value="speed+25"/>
+  </data>
+  <textures>
+    <texture id="pizza" source="items/base/consumables/edible/con_eat_51_eggs.png" cols="1" rows="1"/>
+    <texture id="shadow" source="items/base/consumables/edible/con_eat_38_pumpkinpie_shadow.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="eat" source="items/base/consumables/edible/sndfx_eat.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.28,0,-0.28" max="0.28,0.1,0.28"/>
+      <layers>
+        <layer id="Shadow" texture="shadow">
+          <view angle="45" y="22"/>
+          <view angle="135" y="22" hm="true"/>
+          <view angle="225" y="22"/>
+          <view angle="315" y="22" hm="true"/>
+        </layer>
+        <layer id="Pie" texture="pizza" y="2">
+          <view angle="45" y="11"/>
+          <view angle="135" y="11" hm="true"/>
+          <view angle="225" y="11"/>
+          <view angle="315" y="11" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations>
+        <animation id="Idle" framerate="2"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

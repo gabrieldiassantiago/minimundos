@@ -1,0 +1,79 @@
+<item.SpriteItem id="0" name="Bird" desc="An item" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+  </volume>
+  <textures>
+    <texture id="Bird01" source="items/base/consumables/clothing/accessory/acc_147_hand_brazilparrot.png" cols="2" rows="1"/>
+    <texture id="Bird02" source="items/base/consumables/clothing/accessory/acc_147_hand_brazilparrot_02.png" cols="3" rows="1"/>
+    <texture id="blink" source="items/base/consumables/clothing/accessory/acc_147_hand_brazilparrot_blink.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.24" max="0.24,0.6,0.24"/>
+      <layers>
+        <layer id="bird1" texture="Bird01">
+          <view angle="0" col="1" x="4" y="-14" alpha="0" hm="true"/>
+          <view angle="45" col="1" x="-6" y="-16" alpha="0" hm="true"/>
+          <view angle="90" col="1" x="-7" y="27" hm="true"/>
+          <view angle="135" x="2" y="35" hm="true"/>
+          <view angle="180" col="1" x="16" y="35"/>
+          <view angle="225" col="1" x="1" y="-14" alpha="0"/>
+          <view angle="270" x="-17" y="-21" alpha="0"/>
+          <view angle="315" x="-2" y="-12" alpha="0" hm="true"/>
+        </layer>
+        <layer id="bird2" texture="Bird02">
+          <view angle="0" col="1" x="-27" y="56" hm="true"/>
+          <view angle="45" x="-19" y="54" hm="true"/>
+          <view angle="90" col="1" y="-22" alpha="0"/>
+          <view angle="135" x="-2" y="-20" alpha="0"/>
+          <view angle="180" y="-17" alpha="0"/>
+          <view angle="225" x="8" y="54"/>
+          <view angle="270" col="1" x="13" y="53"/>
+          <view angle="315" col="2" x="-14" y="60"/>
+        </layer>
+        <layer id="blink" texture="blink">
+          <view angle="0" col="1" x="4" y="-29" hm="true"/>
+          <view angle="45" x="11" y="-23"/>
+          <view angle="90" col="3" x="7" y="-27" hm="true"/>
+          <view angle="135" col="2" x="-2" y="-18" hm="true"/>
+          <view angle="180" col="3" x="3" y="-19"/>
+          <view angle="225" x="-22" y="-23" hm="true"/>
+          <view angle="270" col="1" x="-18" y="-32"/>
+          <view angle="315" col="3" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Blink">
+          <layerref id="bird1"/>
+          <layerref id="bird2"/>
+          <layerref id="blink"/>
+        </frame>
+        <frame id="Idle">
+          <layerref id="bird1"/>
+          <layerref id="bird2"/>
+        </frame>
+        <frame id="Sit">
+          <layerref id="bird2"/>
+        </frame>
+        <frame id="Walk">
+          <layerref id="bird1"/>
+          <layerref id="bird2"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="3">
+          <frameref id="Idle" duration="18"/>
+          <frameref id="Blink"/>
+        </animation>
+        <animation id="Sit" framerate="3">
+          <frameref id="Sit" duration="18"/>
+          <frameref id="Blink"/>
+        </animation>
+        <animation id="Walk" framerate="3">
+          <frameref id="Idle" duration="18"/>
+          <frameref id="Blink"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,402 @@
+<item.SpriteItem id="0" name="Lightning" desc="Bobz" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,0.25,-0.1" max="0.1,0.65,0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="bobz" source="items/base/consumables/bobz/bobz_73_villain_wear.png" cols="5" rows="3"/>
+    <texture id="fx" source="items/base/consumables/bobz/bobz_fx_arcaneburst.png" cols="4" rows="2"/>
+    <texture id="diffuse" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+    <texture id="intense" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+    <texture id="sparkle" source="items/base/consumables/clothing/accessory/acc_482_goldhula_sparkle.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" y="0.45">
+      <box min="-0.1,-0.2,-0.1" max="0.1,0.2,0.1"/>
+      <layers>
+        <layer id="fx_01" texture="fx" y="22">
+          <view/>
+        </layer>
+        <layer id="fx_02" texture="fx" y="22">
+          <view col="1"/>
+        </layer>
+        <layer id="fx_03" texture="fx" y="22">
+          <view col="2"/>
+        </layer>
+        <layer id="fx_04" texture="fx" y="22">
+          <view col="3"/>
+        </layer>
+        <layer id="fx_05" texture="fx" y="22">
+          <view row="1"/>
+        </layer>
+        <layer id="fx_06" texture="fx" y="22">
+          <view col="1" row="1"/>
+        </layer>
+        <layer id="fx_07" texture="fx" y="22">
+          <view col="2" row="1"/>
+        </layer>
+        <layer id="fx_08" texture="fx" y="22">
+          <view col="3" row="1"/>
+        </layer>
+        <layer id="bobz01" texture="bobz" y="18">
+          <view angle="0" col="2" x="-10" y="35"/>
+          <view angle="45" x="1" y="35"/>
+          <view angle="90" col="1" x="8" y="35"/>
+          <view angle="135" x="-1" y="35" hm="true"/>
+          <view angle="180" col="2" x="15" y="35" hm="true"/>
+          <view angle="225" col="3" x="15" y="35" hm="true"/>
+          <view angle="270" col="4" x="5" y="35" hm="true"/>
+          <view angle="315" col="3" x="-8" y="35"/>
+        </layer>
+        <layer id="bobz02" texture="bobz" y="18">
+          <view angle="0" col="2" row="1" x="-10" y="35"/>
+          <view angle="45" row="1" x="1" y="35"/>
+          <view angle="90" col="1" row="1" x="8" y="35"/>
+          <view angle="135" row="1" x="-1" y="35" hm="true"/>
+          <view angle="180" col="2" row="1" x="15" y="35" hm="true"/>
+          <view angle="225" col="3" row="1" x="15" y="35" hm="true"/>
+          <view angle="270" col="4" row="1" x="5" y="35" hm="true"/>
+          <view angle="315" col="3" row="1" x="-8" y="35"/>
+        </layer>
+        <layer id="bobz03" texture="bobz" y="18">
+          <view angle="0" col="2" row="2" x="-10" y="35"/>
+          <view angle="45" row="2" x="1" y="35"/>
+          <view angle="90" col="1" row="2" x="8" y="35"/>
+          <view angle="135" row="2" x="-1" y="35" hm="true"/>
+          <view angle="180" col="2" row="2" x="15" y="35" hm="true"/>
+          <view angle="225" col="3" row="2" x="15" y="35" hm="true"/>
+          <view angle="270" col="4" row="2" x="5" y="35" hm="true"/>
+          <view angle="315" col="3" row="2" x="-8" y="35"/>
+        </layer>
+        <layer id="sparkle_01" texture="sparkle">
+          <view angle="0" x="-14" y="13"/>
+          <view angle="45" y="9"/>
+          <view angle="90" x="14" y="18"/>
+          <view angle="135" y="9"/>
+          <view angle="180" x="17" y="13"/>
+          <view angle="225" x="18" y="13"/>
+          <view angle="270" x="3" y="8"/>
+          <view angle="315" x="-10" y="13"/>
+        </layer>
+        <layer id="sparkle_02" texture="sparkle">
+          <view angle="0" col="1" x="-14" y="13"/>
+          <view angle="45" col="1" y="9"/>
+          <view angle="90" col="1" x="14" y="18"/>
+          <view angle="135" col="1" y="9"/>
+          <view angle="180" col="1" x="17" y="13"/>
+          <view angle="225" col="1" x="18" y="13"/>
+          <view angle="270" col="1" x="3" y="8"/>
+          <view angle="315" col="1" x="-10" y="13"/>
+        </layer>
+        <layer id="sparkle_03" texture="sparkle">
+          <view angle="0" col="2" x="-14" y="13"/>
+          <view angle="45" col="2" y="9"/>
+          <view angle="90" col="2" x="14" y="18"/>
+          <view angle="135" col="2" y="9"/>
+          <view angle="180" col="2" x="17" y="13"/>
+          <view angle="225" col="2" x="18" y="13"/>
+          <view angle="270" col="2" x="3" y="8"/>
+          <view angle="315" col="2" x="-10" y="13"/>
+        </layer>
+        <layer id="sparkle_04" texture="sparkle">
+          <view angle="0" col="1" x="-14" y="13" hm="true"/>
+          <view angle="45" col="1" y="9" hm="true"/>
+          <view angle="90" col="1" x="14" y="18" hm="true"/>
+          <view angle="135" col="1" y="9" hm="true"/>
+          <view angle="180" col="1" x="17" y="13" hm="true"/>
+          <view angle="225" col="1" x="18" y="13" hm="true"/>
+          <view angle="270" col="1" x="3" y="8" hm="true"/>
+          <view angle="315" col="1" x="-10" y="13" hm="true"/>
+        </layer>
+        <layer id="sparkle_05" texture="sparkle">
+          <view angle="0" x="-14" y="13" hm="true"/>
+          <view angle="45" y="9" hm="true"/>
+          <view angle="90" x="14" y="18" hm="true"/>
+          <view angle="135" y="9" hm="true"/>
+          <view angle="180" x="17" y="13" hm="true"/>
+          <view angle="225" x="18" y="13" hm="true"/>
+          <view angle="270" x="3" y="8" hm="true"/>
+          <view angle="315" x="-10" y="13" hm="true"/>
+        </layer>
+        <layer id="sparkle_a" texture="sparkle">
+          <view angle="0" x="12" y="17"/>
+          <view angle="45" x="-6" y="28"/>
+          <view angle="90" x="2" y="8"/>
+          <view angle="135" x="6" y="28"/>
+          <view angle="180" x="-8" y="17"/>
+          <view angle="225" x="-1" y="9"/>
+          <view angle="270" x="11" y="23"/>
+          <view angle="315" x="6" y="9"/>
+        </layer>
+        <layer id="sparkle_b" texture="sparkle">
+          <view angle="0" col="1" x="12" y="17"/>
+          <view angle="45" col="1" x="-6" y="28"/>
+          <view angle="90" col="1" x="2" y="8"/>
+          <view angle="135" col="1" x="6" y="28"/>
+          <view angle="180" col="1" x="-8" y="17"/>
+          <view angle="225" col="1" x="-1" y="9"/>
+          <view angle="270" col="1" x="11" y="23"/>
+          <view angle="315" col="1" x="6" y="9"/>
+        </layer>
+        <layer id="sparkle_c" texture="sparkle">
+          <view angle="0" col="2" x="12" y="17"/>
+          <view angle="45" col="2" x="-6" y="28"/>
+          <view angle="90" col="2" x="2" y="8"/>
+          <view angle="135" col="2" x="6" y="28"/>
+          <view angle="180" col="2" x="-8" y="17"/>
+          <view angle="225" col="2" x="-1" y="9"/>
+          <view angle="270" col="2" x="11" y="23"/>
+          <view angle="315" col="2" x="6" y="9"/>
+        </layer>
+        <layer id="sparkle_d" texture="sparkle">
+          <view angle="0" col="1" x="12" y="17" hm="true"/>
+          <view angle="45" col="1" x="-6" y="28" hm="true"/>
+          <view angle="90" col="1" x="2" y="8" hm="true"/>
+          <view angle="135" col="1" x="6" y="28" hm="true"/>
+          <view angle="180" col="1" x="-8" y="17" hm="true"/>
+          <view angle="225" col="1" x="-1" y="9" hm="true"/>
+          <view angle="270" col="1" x="11" y="23" hm="true"/>
+          <view angle="315" col="1" x="6" y="9" hm="true"/>
+        </layer>
+        <layer id="sparkle_e" texture="sparkle">
+          <view angle="0" x="12" y="17" hm="true"/>
+          <view angle="45" x="-6" y="28" hm="true"/>
+          <view angle="90" x="2" y="8" hm="true"/>
+          <view angle="135" x="6" y="28" hm="true"/>
+          <view angle="180" x="-8" y="17" hm="true"/>
+          <view angle="225" x="-1" y="9" hm="true"/>
+          <view angle="270" x="11" y="23" hm="true"/>
+          <view angle="315" x="6" y="9" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Sparkle01">
+          <layerref id="bobz01"/>
+          <layerref id="sparkle_01"/>
+        </frame>
+        <frame id="Sparkle02">
+          <layerref id="bobz02" y="-2"/>
+          <layerref id="sparkle_02" y="-2"/>
+        </frame>
+        <frame id="Sparkle03">
+          <layerref id="bobz03" y="-4"/>
+          <layerref id="sparkle_03" y="-4"/>
+        </frame>
+        <frame id="Sparkle04">
+          <layerref id="bobz02" y="-2"/>
+          <layerref id="sparkle_05" y="-2"/>
+        </frame>
+        <frame id="Sparkle05">
+          <layerref id="bobz01"/>
+          <layerref id="sparkle_05"/>
+        </frame>
+        <frame id="Idle01">
+          <layerref id="bobz01"/>
+        </frame>
+        <frame id="Idle02">
+          <layerref id="bobz02" y="-2"/>
+        </frame>
+        <frame id="Idle03">
+          <layerref id="bobz03" y="-4"/>
+        </frame>
+        <frame id="Start00">
+          <layerref id="bobz01" y="-1" a="0"/>
+        </frame>
+        <frame id="Start01">
+          <layerref id="bobz01" y="-2" a="0.1" blend="add"/>
+          <layerref id="fx_01" color="0x93edee" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Start02">
+          <layerref id="bobz01" y="-3" a="0.2" blend="add"/>
+          <layerref id="fx_02" color="0x93edee" a="0.2" blend="add"/>
+        </frame>
+        <frame id="Start03">
+          <layerref id="bobz01" y="-3" a="0.3" blend="add"/>
+          <layerref id="fx_03" color="0x93edee" a="0.2" blend="add"/>
+        </frame>
+        <frame id="Start04">
+          <layerref id="bobz02" y="-4" blend="screen"/>
+          <layerref id="fx_04" color="0x93edee" a="0.4" blend="add"/>
+          <layerref id="fx_01" color="0x93edee" a="0.5" blend="screen"/>
+        </frame>
+        <frame id="Start05">
+          <layerref id="bobz02" y="-3" a="0.6" blend="screen"/>
+          <layerref id="fx_05" color="0x93edee" a="0.5" blend="add"/>
+          <layerref id="fx_02" color="0x93edee" a="0.2" blend="add"/>
+        </frame>
+        <frame id="Start06">
+          <layerref id="bobz03" y="-2" a="0.7" blend="screen"/>
+          <layerref id="fx_06" color="0x93edee" a="0.5" blend="add"/>
+        </frame>
+        <frame id="Start07">
+          <layerref id="bobz03" y="-1" a="0.5"/>
+          <layerref id="fx_07" color="0x93edee" a="0.4" blend="add"/>
+        </frame>
+        <frame id="Start08">
+          <layerref id="fx_08" color="0x93edee" a="0.2" blend="add"/>
+        </frame>
+        <frame id="Start09">
+          <layerref id="fx_08" color="0x93edee" a="0.1" blend="add"/>
+        </frame>
+        <frame id="Bored01">
+          <layerref id="bobz01" y="-6"/>
+        </frame>
+        <frame id="Bored02">
+          <layerref id="bobz02" y="-10"/>
+        </frame>
+        <frame id="Bored03">
+          <layerref id="bobz03" y="-10"/>
+        </frame>
+        <frame id="Bored04">
+          <layerref id="bobz03" y="-12"/>
+        </frame>
+        <frame id="Bored05">
+          <layerref id="bobz02" y="-8"/>
+        </frame>
+        <frame id="Bored06">
+          <layerref id="bobz01" y="-4"/>
+        </frame>
+        <frame id="Bored07">
+          <layerref id="bobz03"/>
+        </frame>
+        <frame id="Sparkle_a">
+          <layerref id="bobz01"/>
+          <layerref id="sparkle_a"/>
+        </frame>
+        <frame id="Sparkle_b">
+          <layerref id="bobz02" y="-2"/>
+          <layerref id="sparkle_b" y="-2"/>
+        </frame>
+        <frame id="Sparkle_c">
+          <layerref id="bobz03" y="-4"/>
+          <layerref id="sparkle_c" y="-4"/>
+        </frame>
+        <frame id="Sparkle_d">
+          <layerref id="bobz02" y="-2"/>
+          <layerref id="sparkle_e" y="-2"/>
+        </frame>
+        <frame id="Sparkle_e">
+          <layerref id="bobz01"/>
+          <layerref id="sparkle_e"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="6">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle02"/>
+          <frameref id="Sparkle01"/>
+          <frameref id="Sparkle02"/>
+          <frameref id="Sparkle03"/>
+          <frameref id="Sparkle04"/>
+          <frameref id="Sparkle_a"/>
+          <frameref id="Sparkle_b"/>
+          <frameref id="Sparkle_c"/>
+          <frameref id="Sparkle_d"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle02"/>
+          <frameref id="Sparkle01"/>
+          <frameref id="Sparkle02"/>
+          <frameref id="Sparkle03"/>
+          <frameref id="Sparkle04"/>
+        </animation>
+        <animation id="Start" framerate="11" loop="false">
+          <frameref id="Start01"/>
+          <frameref id="Start02"/>
+          <frameref id="Start03"/>
+          <frameref id="Start04"/>
+          <frameref id="Start05"/>
+          <frameref id="Start06"/>
+          <frameref id="Start07"/>
+          <frameref id="Start08"/>
+          <frameref id="Start09"/>
+        </animation>
+        <animation id="Stop" framerate="11" loop="false">
+          <frameref id="Start08"/>
+          <frameref id="Start07"/>
+          <frameref id="Start06"/>
+          <frameref id="Start05"/>
+          <frameref id="Start04"/>
+          <frameref id="Start03"/>
+          <frameref id="Start02"/>
+          <frameref id="Start01"/>
+          <frameref id="Start00"/>
+        </animation>
+        <animation id="Move" framerate="8">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Idle03"/>
+          <frameref id="Idle02"/>
+        </animation>
+        <animation id="Bored" framerate="8">
+          <frameref id="Idle01"/>
+          <frameref id="Idle02"/>
+          <frameref id="Bored03"/>
+          <frameref id="Bored04"/>
+          <frameref id="Bored02"/>
+          <frameref id="Bored05"/>
+          <frameref id="Bored01"/>
+          <frameref id="Bored06"/>
+          <frameref id="Idle02"/>
+          <frameref id="Bored07"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+  <animations>
+    <animation id="Bored" framerate="7">
+      <frame id="Frame01">
+        <noderef id="Node" frame="Idle01"/>
+      </frame>
+      <frame id="Frame02">
+        <noderef id="Node" frame="Idle02"/>
+      </frame>
+      <frame id="Frame03">
+        <noderef id="Node" frame="Bored03"/>
+      </frame>
+      <frame id="Frame04">
+        <noderef id="Node" frame="Bored04"/>
+      </frame>
+      <frame id="Frame05">
+        <noderef id="Node" frame="Bored02"/>
+      </frame>
+      <frame id="Frame06">
+        <noderef id="Node" frame="Bored05"/>
+      </frame>
+      <frame id="Frame07">
+        <noderef id="Node" frame="Bored01"/>
+      </frame>
+      <frame id="Frame08">
+        <noderef id="Node" frame="Bored06"/>
+      </frame>
+      <frame id="Frame09">
+        <noderef id="Node" frame="Idle02"/>
+      </frame>
+      <frame id="Frame10">
+        <noderef id="Node" frame="Bored07"/>
+      </frame>
+    </animation>
+  </animations>
+</item.SpriteItem>

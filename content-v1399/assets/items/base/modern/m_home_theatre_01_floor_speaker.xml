@@ -1,0 +1,70 @@
+<item.SpriteItem id="2992" name="Alto-falante de Chão" desc="Um alto-falante do Home Theatre." tags="misc" icon="items/base/modern/icon_m_home_theatre_01_floor_speaker.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table, avatar" dropTargetClamp="none" price="220">
+  <volume>
+    <box min="-0.21,0,-0.1" max="0.14,1.02,0.18"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_home_theatre_01_floor_speaker_base.png" cols="1" rows="1"/>
+    <texture id="wobble" source="items/base/modern/m_home_theatre_01_floor_speaker_wobble.png" cols="1" rows="1"/>
+    <texture id="cone" source="items/base/modern/m_home_theatre_01_floor_speaker_cone.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.21,0,-0.1" max="0.14,1.02,0.18"/>
+      <layers>
+        <layer id="box" texture="Texture" y="-21">
+          <view angle="45" x="1" y="39"/>
+          <view angle="135" x="-1" y="39" hm="true"/>
+          <view angle="225" y="39"/>
+          <view angle="315" y="39" hm="true"/>
+        </layer>
+        <layer id="cone" texture="cone" y="-22">
+          <view angle="45" x="12" y="-14"/>
+          <view angle="135" x="-13" y="-14" hm="true"/>
+          <view angle="225" col="1" x="-1" y="40" alpha="0"/>
+          <view angle="315" col="1" x="1" y="40" alpha="0" hm="true"/>
+        </layer>
+        <layer id="wobble" texture="wobble">
+          <view angle="45" x="12" y="-33"/>
+          <view angle="135" x="-13" y="-33" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Wobble01">
+          <layerref id="box"/>
+          <layerref id="cone"/>
+        </frame>
+        <frame id="Wobble02">
+          <layerref id="box"/>
+          <layerref id="cone"/>
+          <layerref id="wobble"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off" framerate="2">
+          <frameref id="Wobble01"/>
+        </animation>
+        <animation id="On" framerate="6">
+          <frameref id="Wobble01"/>
+          <frameref id="Wobble02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

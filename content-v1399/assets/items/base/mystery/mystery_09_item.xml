@@ -1,0 +1,55 @@
+<item.SpriteItem id="5007" name="Flor Mecânica Sr. Charada" desc="Uma flor criada peça por peça pelo Sr. Charada" tags="rare,misc,hand,usable,wear,action_holdable_toggle" icon="items/base/mystery/mystery_09_icon.png" price="999" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.38,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/mystery/mystery_09_item.png" cols="2" rows="1"/>
+    <texture id="Texture01" source="items/base/shared/s_fx_flare_ring_b.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Mystery Box">
+      <box min="-0.2,0,-0.2" max="0.2,0.38,0.2"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="5" y="20"/>
+          <view angle="135" x="-4" y="20" hm="true"/>
+          <view angle="225" col="1" x="-4" y="19"/>
+          <view angle="315" col="1" x="4" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+    <node id="Diffuse" s="6" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Texture01" align="middle" y="-3">
+          <view angle="45"/>
+          <view angle="135" x="-3"/>
+          <view angle="225" x="-4"/>
+          <view angle="315" x="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" y="-15" color="0x79a9ef"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,43 @@
+<item.SpriteItem desc="Red Hero" dropTargetClamp="none" dropTargetList="floor, table,avatar" dropTargetType="none" entity="false" name="Superhero head Level 1">
+  <volume>
+    <box max="0.3,0.66,0.3" min="-0.3,0.05,-0.3"/>
+  </volume>
+  <textures>
+    <texture cols="5" id="base" rows="1" source="items/base/consumables/head/con_head_18_superhero_lv1.png"/>
+    <texture cols="3" id="skin" rows="1" source="items/base/consumables/head/con_head_18_superhero_lv1a.png"/>
+  </textures>
+  <nodes>
+    <node id="Node" y="0.05">
+      <box max="0.3,0.61,0.3" min="-0.3,0,-0.3"/>
+      <layers>
+        <layer id="helmet" texture="base" y="10">
+          <view angle="0" hm="true" x="11" y="5"/>
+          <view angle="45" col="1" x="-3" y="11"/>
+          <view angle="90" col="2" y="13"/>
+          <view angle="135" col="1" hm="true" x="3" y="11"/>
+          <view angle="180" x="-11" y="5"/>
+          <view angle="225" col="3" x="-2" y="2"/>
+          <view angle="270" col="4" y="6"/>
+          <view angle="315" col="3" hm="true" x="2" y="2"/>
+        </layer>
+        <layer id="Bare" texture="skin" y="19">
+          <view angle="0" hm="true" x="26" y="-6"/>
+          <view angle="45" col="1" x="14" y="5"/>
+          <view angle="90" col="2" x="3" y="7"/>
+          <view angle="135" col="1" hm="true" x="-14" y="5"/>
+          <view angle="180" x="-26" y="-6"/>
+          <view angle="225" col="3" x="-2" y="2"/>
+          <view angle="270" col="4" y="6"/>
+          <view angle="315" col="3" hm="true" x="2" y="2"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="helmet"/>
+          <layerref id="Bare"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

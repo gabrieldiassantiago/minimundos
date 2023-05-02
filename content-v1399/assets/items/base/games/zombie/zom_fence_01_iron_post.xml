@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem id="1619" name="Cerca de Cemitério com Poste" desc="Não pule! Você pode ser amaldiçoado!" tags="rare,misc,ctf" icon="items/base/games/zombie/icon_zom_fence_01_iron_post.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="30" tokens="300">
+  <volume>
+    <box min="-0.3,0,-0.49" max="0.3,2.7,1.49"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="fence" source="items/base/games/zombie/zom_fence_01_iron_short.png" cols="1" rows="1"/>
+    <texture id="post" source="items/base/games/zombie/zom_fence_01_iron_post.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" z="0.5">
+      <box min="-0.3,0,-0.99" max="0.3,2.7,0.99"/>
+      <layers>
+        <layer id="post behind" texture="post">
+          <view angle="45" x="-46" y="40" alpha="0"/>
+          <view angle="135" x="-46" y="-6"/>
+          <view angle="225" x="46" y="-6"/>
+          <view angle="315" x="46" y="40" alpha="0"/>
+        </layer>
+        <layer id="fence" texture="fence">
+          <view angle="45" x="20" y="22"/>
+          <view angle="135" x="16" y="38" hm="true"/>
+          <view angle="225" x="-16" y="38"/>
+          <view angle="315" x="-20" y="22" hm="true"/>
+        </layer>
+        <layer id="post in front" texture="post">
+          <view angle="45" x="-46" y="40"/>
+          <view angle="135" x="-46" y="-6" alpha="0"/>
+          <view angle="225" x="46" y="-6" alpha="0"/>
+          <view angle="315" x="46" y="40"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

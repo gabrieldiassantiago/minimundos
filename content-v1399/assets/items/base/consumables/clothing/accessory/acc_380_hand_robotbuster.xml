@@ -1,0 +1,205 @@
+<item.SpriteItem id="5160" name="Robot Buster" desc="A robot buster" tags="actionbar,consumable,hand,usable,wear" icon="items/base/consumables/clothing/accessory/acc_380_icon_robotbuster.png" price="3" tokens="30" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_edible.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_edible.as"/>
+    <event id="action" script="scripts/item/action_edible.as"/>
+    <event id="select" script="scripts/item/select_edible.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="food-100"/>
+    <entry key="action_attributes_secondary" value="speed+5,health+5"/>
+  </data>
+  <textures>
+    <texture id="Effect" source="items/base/consumables/clothing/accessory/acc_380_hand_robotbuster_effect.png" cols="3" rows="1"/>
+    <texture id="Robot Buster" source="items/base/consumables/clothing/accessory/acc_380_hand_robotbuster.png" cols="5" rows="3"/>
+    <texture id="Texture" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Sparkles">
+      <box min="0.22,0,-0.28" max="0.28,0.06,-0.22"/>
+      <layers>
+        <layer id="Mid" texture="Robot Buster">
+          <view angle="0" col="2" row="1" x="-1" y="49" hm="true"/>
+          <view angle="45" row="1" y="45"/>
+          <view angle="90" col="1" row="1" y="45"/>
+          <view angle="135" row="1" x="-3" y="47" hm="true"/>
+          <view angle="180" col="2" row="1" x="2" y="50"/>
+          <view angle="225" col="3" row="1" x="-3" y="49"/>
+          <view angle="270" col="4" row="1" x="-2" y="45"/>
+          <view angle="315" col="3" row="1" x="-3" y="49" hm="true"/>
+        </layer>
+        <layer id="Effect1" texture="Effect">
+          <view angle="0" x="17" y="53" hm="true"/>
+          <view angle="45" x="14" y="57"/>
+          <view angle="90" y="61"/>
+          <view angle="135" x="-16" y="59" hm="true"/>
+          <view angle="180" x="-17" y="53"/>
+          <view angle="225" x="-16" y="45"/>
+          <view angle="270" x="-2" y="45"/>
+          <view angle="315" x="12" y="46" hm="true"/>
+        </layer>
+        <layer id="Off" texture="Robot Buster">
+          <view angle="0" col="2" x="-1" y="49" hm="true"/>
+          <view angle="45" y="45"/>
+          <view angle="90" col="1" y="45"/>
+          <view angle="135" x="-3" y="47" hm="true"/>
+          <view angle="180" col="2" x="2" y="50"/>
+          <view angle="225" col="3" x="-3" y="49"/>
+          <view angle="270" col="4" x="-2" y="45"/>
+          <view angle="315" col="3" x="-3" y="49" hm="true"/>
+        </layer>
+        <layer id="On" texture="Robot Buster">
+          <view angle="0" col="2" row="2" x="-1" y="49" hm="true"/>
+          <view angle="45" row="2" y="45"/>
+          <view angle="90" col="1" row="2" y="45"/>
+          <view angle="135" row="2" x="-3" y="47" hm="true"/>
+          <view angle="180" col="2" row="2" x="2" y="50"/>
+          <view angle="225" col="3" row="2" x="-3" y="49"/>
+          <view angle="270" col="4" row="2" x="-2" y="45"/>
+          <view angle="315" col="3" row="2" x="-3" y="49" hm="true"/>
+        </layer>
+        <layer id="Effect2" texture="Effect">
+          <view angle="0" col="1" x="17" y="53" hm="true"/>
+          <view angle="45" col="1" x="14" y="57"/>
+          <view angle="90" col="1" y="61"/>
+          <view angle="135" col="1" x="-16" y="59" hm="true"/>
+          <view angle="180" col="1" x="-17" y="53"/>
+          <view angle="225" col="1" x="-16" y="45"/>
+          <view angle="270" col="1" x="-2" y="45"/>
+          <view angle="315" col="1" x="12" y="46" hm="true"/>
+        </layer>
+        <layer id="Effect3" texture="Effect">
+          <view angle="0" col="2" x="17" y="53" hm="true"/>
+          <view angle="45" col="2" x="14" y="57"/>
+          <view angle="90" col="2" y="61"/>
+          <view angle="135" col="2" x="-16" y="59" hm="true"/>
+          <view angle="180" col="2" x="-17" y="53"/>
+          <view angle="225" col="2" x="-16" y="45"/>
+          <view angle="270" col="2" x="-2" y="45"/>
+          <view angle="315" col="2" x="12" y="46" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="Off"/>
+        </frame>
+        <frame id="1">
+          <layerref id="Mid"/>
+          <layerref id="Effect1" blend="overlay"/>
+        </frame>
+        <frame id="2">
+          <layerref id="On"/>
+          <layerref id="Effect2" blend="overlay"/>
+        </frame>
+        <frame id="3">
+          <layerref id="Mid"/>
+          <layerref id="Effect3" blend="overlay"/>
+        </frame>
+        <frame id="4">
+          <layerref id="On"/>
+          <layerref id="Effect1" blend="overlay"/>
+        </frame>
+        <frame id="5">
+          <layerref id="Mid"/>
+          <layerref id="Effect2" blend="overlay"/>
+        </frame>
+        <frame id="6">
+          <layerref id="On"/>
+          <layerref id="Effect3" blend="overlay"/>
+        </frame>
+        <frame id="7">
+          <layerref id="Mid"/>
+          <layerref id="Effect1" a="0.5"/>
+        </frame>
+        <frame id="8">
+          <layerref id="On"/>
+          <layerref id="Effect2" a="0.2"/>
+        </frame>
+        <frame id="9">
+          <layerref id="Mid"/>
+          <layerref id="Effect3" a="0.1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Robot Buster02" framerate="10">
+          <frameref id="Off" duration="15"/>
+          <frameref id="1"/>
+          <frameref id="2"/>
+          <frameref id="3"/>
+          <frameref id="4"/>
+          <frameref id="5"/>
+          <frameref id="6"/>
+          <frameref id="7"/>
+          <frameref id="8"/>
+          <frameref id="9"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="-0.12" y="-0.5" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Texture" align="middle">
+          <view angle="45" x="6" y="-11"/>
+          <view angle="135" x="-5" y="-10"/>
+          <view angle="225" x="-5" y="-13"/>
+          <view angle="315" x="6" y="-15"/>
+          <view angle="0" x="7" y="-11"/>
+          <view angle="90" x="-1" y="-5"/>
+          <view angle="180" x="-5" y="-8"/>
+          <view angle="270" x="1" y="-16"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xb3f6bc"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0xb3f6bc" a="0.95"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0x45e0e1" a="0"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0xb3f6bc" a="0.5"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0xb3f6bc" a="0.1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="10">
+          <frameref id="Off" duration="15"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Sit" framerate="10">
+          <frameref id="Off" duration="15"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

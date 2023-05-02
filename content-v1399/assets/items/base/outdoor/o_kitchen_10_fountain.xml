@@ -1,0 +1,86 @@
+<item.SpriteItem id="3136" name="Fonte de Jardim Eco" desc="Uma rara e impressionante fonte de jardim." tags="rare,misc" icon="items/base/outdoor/icon_o_kitchen_10_fountain.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" price="800">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,1.06,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/outdoor/o_kitchen_10_fountain.png" cols="2" rows="1"/>
+    <texture id="Water" source="items/base/outdoor/o_kitchen_10_water.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Unit">
+      <box min="-0.48,0,-0.48" max="0.48,1.06,0.48"/>
+      <layers>
+        <layer id="Base" texture="base">
+          <view angle="45" x="-4" y="36"/>
+          <view angle="135" x="4" y="36" hm="true"/>
+          <view angle="225" col="1" x="3" y="44"/>
+          <view angle="315" col="1" x="-4" y="44" hm="true"/>
+        </layer>
+        <layer id="Shadow" texture="Water">
+          <view angle="45" x="-10" y="-25" alpha="0.3"/>
+          <view angle="135" x="10" y="-22" alpha="0.3" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="Water01" texture="Water">
+          <view angle="45" col="1" y="-25"/>
+          <view angle="135" col="1" y="-25" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="Water02" texture="Water">
+          <view angle="45" col="2" y="-25"/>
+          <view angle="135" col="2" y="-25" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+        <layer id="Water03" texture="Water">
+          <view angle="45" col="3" x="2" y="-25"/>
+          <view angle="135" col="3" x="-2" y="-25" hm="true"/>
+          <view angle="225" col="2" alpha="0"/>
+          <view angle="315" col="3" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Base">
+          <layerref id="Base"/>
+        </frame>
+        <frame id="Water01">
+          <layerref id="Base"/>
+          <layerref id="Shadow"/>
+          <layerref id="Water01"/>
+        </frame>
+        <frame id="Water02">
+          <layerref id="Base"/>
+          <layerref id="Shadow"/>
+          <layerref id="Water02"/>
+        </frame>
+        <frame id="Water03">
+          <layerref id="Base"/>
+          <layerref id="Shadow"/>
+          <layerref id="Water03"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Base"/>
+        </animation>
+        <animation id="On" framerate="2">
+          <frameref id="Water01"/>
+          <frameref id="Water02"/>
+          <frameref id="Water03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,56 @@
+<item.SpriteItem id="5228" name="Superfície de Setas Play" desc="Um efeito indicador sob os seus pés" tags="usable,feet,surface,consumable,wear,actionbar,nopvp,action_wearable_toggle" icon="items/base/consumables/surfaces/sur_13_arrows_icon.png" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="1530">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,0.55,0.25"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="fire+10"/>
+    <entry key="action_attributes_secondary" value="health+15,speed+15"/>
+  </data>
+  <textures>
+    <texture id="hat" source="items/base/consumables/surfaces/sur_13_arrows_item.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2962,0,-0.2962" max="0.3346,0.2,0.2962"/>
+      <layers>
+        <layer id="hat" texture="hat">
+          <view angle="45" y="33"/>
+          <view angle="135" y="33" hm="true"/>
+          <view angle="225" y="33"/>
+          <view angle="315" y="33" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="hat"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="hat"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="hat"/>
+        </frame>
+        <frame id="Frame04">
+          <layerref id="hat"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="3">
+          <frameref id="Frame01"/>
+          <frameref id="Frame03"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame04"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

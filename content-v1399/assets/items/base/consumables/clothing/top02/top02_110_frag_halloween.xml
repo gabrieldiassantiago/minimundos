@@ -1,0 +1,35 @@
+<f id="Top02_110_Halloween" parentId="Top02">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Top02_110TorsoMaleBase" cId="Torso" s="items/base/consumables/clothing/top02/top02_110_torso_m.png" pri="2"/>
+    </g>
+    <g id="Female">
+      <s id="Top02_110TorsoFemaleBase" cId="Torso" s="items/base/consumables/clothing/top02/top02_110_torso_f.png" pri="2"/>
+    </g>
+  </b>
+  <g id="Arm" name="Arm" icon="$bm/icon_m_tshirt.png">
+    <s id="Top02_110ArmIdleStripe" cId="ArmIdle" s="items/base/consumables/clothing/top02/top02_110_arm_idle.png" pri="4.1"/>
+    <s id="Top02_110ArmWalk1Stripe" cId="ArmWalk1" s="items/base/consumables/clothing/top02/top02_110_arm_walk1.png" pri="4.1"/>
+    <s id="Top02_110ArmWalk2Stripe" cId="ArmWalk2" s="items/base/consumables/clothing/top02/top02_110_arm_walk2.png" pri="4.1"/>
+    <s id="Top02_110ArmWalk3Stripe" cId="ArmWalk3" s="items/base/consumables/clothing/top02/top02_110_arm_walk3.png" pri="4.1"/>
+    <s id="Top02_110ArmThrowStripe" cId="ArmThrow" s="items/base/consumables/clothing/top02/top02_110_arm_throw.png" pri="4.1"/>
+    <s id="Top02_110ArmSitStripe" cId="ArmSit" s="items/base/consumables/clothing/top02/top02_110_arm_sit.png" pri="4.1"/>
+    <s id="Top02_110ArmRaiseStripe" cId="ArmRaise" s="items/base/consumables/clothing/top02/top02_110_arm_raise.png" pri="4.1"/>
+  </g>
+  <g id="Legs" icon="items/base/consumables/clothing/top02/top02_24_icon_piratedress.png">
+    <s id="Top02_110_leg_Idle" cId="LegIdle" s="items/base/consumables/clothing/top02/top02_110_leg_idle.png" pri="4.1"/>
+    <s id="Top02_110_leg_Walk1" cId="LegWalk1" s="items/base/consumables/clothing/top02/top02_110_leg_walk1.png" pri="4.1"/>
+    <s id="Top02_110_leg_Walk2" cId="LegWalk2" s="items/base/consumables/clothing/top02/top02_110_leg_walk2.png" pri="4.1"/>
+    <s id="Top02_110_leg_Walk3" cId="LegWalk3" s="items/base/consumables/clothing/top02/top02_110_leg_walk3.png" pri="4.1"/>
+    <s id="Top02_110_leg_Walk4" cId="LegWalk4" s="items/base/consumables/clothing/top02/top02_110_leg_walk4.png" pri="4.1"/>
+    <s id="Top02_110_leg_Sit_upper" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_110_leg_sit_upper.png" pri="4.1"/>
+    <s id="Top02_110_leg_Sit_lower" cId="LegSitUpper" s="items/base/consumables/clothing/top02/top02_110_leg_sit_lower.png" pri="4.1"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop02_110" icon="items/base/consumables/clothing/top02/top02_110_halloween_icon.png" w="48" h="48"/>
+    <s id="IconTop02_110base" cId="IconTop02_110" s="items/base/consumables/clothing/top02/top02_110_halloween_icon.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+  <ds id="JSBottom"/>
+  <ds id="Bot03"/>
+</f>

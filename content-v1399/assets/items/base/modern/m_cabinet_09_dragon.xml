@@ -1,0 +1,56 @@
+<item.SpriteItem id="6889" name="Mostruário de Colecionáveis Tulsa" desc="Um mostruário de itens valiosos" tags="rare,table,misc" icon="items/base/modern/icon_m_cabinet_09_dragon.png" price="100" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.48,0,-0.5" max="1.25,2.8,1.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Closed" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/modern/m_cabinet_09_dragonbase.png" cols="1" rows="1"/>
+    <texture id="Glass" source="items/base/modern/m_cabinet_09_dragonglass.png" cols="1" rows="1"/>
+    <texture id="Shelves" source="items/base/modern/m_cabinet_09_dragonshelves.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.48,0,-0.5" max="1.25,2.8,1.5"/>
+      <layers>
+        <layer id="Cabinet" texture="Base">
+          <view angle="45" x="54" y="66"/>
+          <view angle="135" x="10" y="97" hm="true"/>
+          <view angle="225" x="-48" y="79"/>
+          <view angle="315" x="-16" y="47" hm="true"/>
+        </layer>
+        <layer id="Glass" texture="Glass">
+          <view angle="45" x="58" y="-21"/>
+          <view angle="135" x="9" y="10" hm="true"/>
+          <view angle="225" x="-45" y="-8"/>
+          <view angle="315" x="-17" y="-39" hm="true"/>
+        </layer>
+        <layer id="Shelves" texture="Shelves">
+          <view angle="45" x="60" y="10"/>
+          <view angle="135" x="8" y="42" hm="true"/>
+          <view angle="225" col="1" x="-49" y="21"/>
+          <view angle="315" col="1" x="-14" y="-12" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Glass"/>
+          <layerref id="Shelves"/>
+          <layerref id="Shelves"/>
+          <layerref id="Cabinet"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

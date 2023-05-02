@@ -1,0 +1,47 @@
+<item.SpriteItem id="2556" name="Cajado de Dragão" desc="Um cajado mitológico que ilumina e sopra fogo." tags="rare,consumable,light,actionbar,wear,hand,real,usable,action_holdable_toggle" icon="items/base/consumables/magic/icon_con_item_92_dragonstaff.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="800">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,2.25,0.2"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="torch" source="items/base/consumables/magic/con_item_92_dragonstaff.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.2,0,-0.2" max="0.2,2.25,0.2"/>
+      <layers>
+        <layer id="mistletoe" texture="torch">
+          <view angle="45" y="19"/>
+          <view angle="135" y="19" hm="true"/>
+          <view angle="225" col="1" y="19"/>
+          <view angle="315" col="1" y="19" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="mistletoe"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

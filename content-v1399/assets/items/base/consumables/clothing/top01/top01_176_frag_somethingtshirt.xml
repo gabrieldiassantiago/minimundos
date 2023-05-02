@@ -1,0 +1,26 @@
+<f id="Top01_176_SomethingTop" parentId="Top01">
+  <b id="Gender" sel="Female">
+    <g id="Male">
+      <s id="Top01_176TorsoBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_176_torso_base_m.png" pri="1"/>
+      <s id="Top01_176TorsoLogo" name="Logo" cId="Torso" s="items/base/consumables/clothing/top01/top01_176_torso_decal_m.png" pri="2"/>
+    </g>
+    <g id="Female">
+      <s id="Top01_176TorsoBase" cId="Torso" s="items/base/consumables/clothing/top01/top01_176_torso_base_f.png" pri="1"/>
+      <s id="Top01_176TorsoLogo" name="Logo" cId="Torso" s="items/base/consumables/clothing/top01/top01_176_torso_decal_f.png" pri="2"/>
+    </g>
+  </b>
+  <g id="TopTshirtLogo" name="Tshirt" icon="$bm/icon_m_tshirt.png">
+    <s id="Top01_176ArmIdleBase" cId="ArmIdle" s="items/base/consumables/clothing/top01/top01_176_idle.png" pri="1"/>
+    <s id="Top01_176ArmWalk1Base" cId="ArmWalk1" s="items/base/consumables/clothing/top01/top01_176_walk1.png" pri="1"/>
+    <s id="Top01_176ArmWalk2Base" cId="ArmWalk2" s="items/base/consumables/clothing/top01/top01_176_walk2.png" pri="1"/>
+    <s id="Top01_176ArmWalk3Base" cId="ArmWalk3" s="items/base/consumables/clothing/top01/top01_176_walk3.png" pri="1"/>
+    <s id="Top01_176ArmSitBase" cId="ArmSit" s="items/base/consumables/clothing/top01/top01_176_sit.png" pri="1"/>
+    <s id="Top01_176ArmThrowBase" cId="ArmThrow" s="items/base/consumables/clothing/top01/top01_176_throw.png" pri="1"/>
+    <s id="Top01_176ArmRaiseBase" cId="ArmRaise" s="items/base/consumables/clothing/top01/top01_176_raise.png" pri="1"/>
+  </g>
+  <g id="Icon">
+    <t id="IconTop01_176" icon="items/base/consumables/clothing/top01/top01_176_icon_somethingtop_a.png" w="48" h="48"/>
+    <s id="IconTop01_176Base" cId="IconTop01_176" s="items/base/consumables/clothing/top01/top01_176_icon_somethingtop_a.png" pri="1"/>
+  </g>
+  <ds id="JSTop"/>
+</f>

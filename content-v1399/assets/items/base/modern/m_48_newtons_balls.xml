@@ -1,0 +1,66 @@
+<item.SpriteItem id="3296" name="Bolinhas de Newton" desc="Um acessório cromado." tags="rare,misc" icon="items/base/modern/icon_m_48_newtons_balls.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" price="25">
+  <volume>
+    <box min="-0.25,0,-0.15" max="0.25,0.32,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="On" state="true" event="animate(On)"/>
+    <action id="Off" state="true" event="animate(Off)"/>
+  </actions>
+  <textures>
+    <texture id="Newtons Balls" source="items/base/modern/m_48_newtons_balls.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.15" max="0.25,0.32,0.15"/>
+      <layers>
+        <layer id="Main" texture="Newtons Balls" y="14">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+        <layer id="Swing_Front" texture="Newtons Balls" y="14">
+          <view angle="45" col="2" x="1"/>
+          <view angle="135" col="2" x="-1" hm="true"/>
+          <view angle="225" col="1"/>
+          <view angle="315" col="1" hm="true"/>
+        </layer>
+        <layer id="Swing_Back" texture="Newtons Balls" y="14">
+          <view angle="45" col="1"/>
+          <view angle="135" col="1" hm="true"/>
+          <view angle="225" col="2" x="1"/>
+          <view angle="315" col="2" x="-1" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Main">
+          <layerref id="Main"/>
+        </frame>
+        <frame id="Swing_Front">
+          <layerref id="Swing_Front"/>
+        </frame>
+        <frame id="Swing_Back">
+          <layerref id="Swing_Back"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="Main"/>
+          <frameref id="Swing_Front" duration="2"/>
+          <frameref id="Main"/>
+          <frameref id="Swing_Back" duration="2"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="Main"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

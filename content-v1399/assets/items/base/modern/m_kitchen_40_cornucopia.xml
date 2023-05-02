@@ -1,0 +1,35 @@
+<item.SpriteItem id="2851" name="Cornucópia" desc="Uma cornucópia para decorar" tags="rare,misc,thanksgiving,independenceday" icon="items/base/modern/icon_m_kitchen_40_cornucopia.png" price="220" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,0.8,0.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="jar" source="items/base/modern/m_kitchen_40_cornucopia.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.48,0,-0.48" max="0.48,0.8,0.48"/>
+      <layers>
+        <layer id="jar" texture="jar" y="15">
+          <view angle="45" y="6"/>
+          <view angle="135" col="1" y="6"/>
+          <view angle="225" col="1" y="6" hm="true"/>
+          <view angle="315" y="6" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle01">
+          <layerref id="jar"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,197 @@
+<item.SpriteItem id="2148" name="Flores de Plástico" desc="Não morrem." tags="admin,misc" icon="items/base/plants/icon_p_plant_fake.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar,table" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,1.2,0.3"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_cycle.as"/>
+    <event id="cycle" script="scripts/item/cycle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select_cycle.as"/>
+  </events>
+  <actions>
+    <action id="Cycle" trigger="false" event="cycle"/>
+    <action id="Corner" state="true" event="animate(00)"/>
+    <action id="T Junction" state="true" event="animate(01)"/>
+    <action id="X Junction" state="true" event="animate(02)"/>
+    <action id="Straight" state="true" event="animate(03)"/>
+    <action id="End" state="true" event="animate(04)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="00" value="Azure Trumpet"/>
+    <entry key="01" value="Azure Trumpet Flowering"/>
+    <entry key="02" value="Morning Star"/>
+    <entry key="03" value="Morning Star Flowering"/>
+    <entry key="04" value="Coral Plant"/>
+    <entry key="05" value="Coral Plant Flowering"/>
+    <entry key="06" value="White Buttertree"/>
+    <entry key="07" value="Whit Buttertree Flowering"/>
+    <entry key="count" value="8"/>
+  </data>
+  <textures>
+    <texture id="01 flowers" source="items/base/plants/p_01_01_azuretrumpet_flowers.png" cols="1" rows="1"/>
+    <texture id="01 leaves" source="items/base/plants/p_01_01_azuretrumpet_leaves2.png" cols="1" rows="1"/>
+    <texture id="01 branches" source="items/base/plants/p_01_01_azuretrumpet_branches2.png" cols="1" rows="1"/>
+    <texture id="02 flowers" source="items/base/plants/p_01_02_morningstar_flowers.png" cols="1" rows="1"/>
+    <texture id="02 leaves" source="items/base/plants/p_01_02_morningstar_leaves2.png" cols="1" rows="1"/>
+    <texture id="02 branches" source="items/base/plants/p_01_02_morningstar_branches2.png" cols="1" rows="1"/>
+    <texture id="03 flowers" source="items/base/plants/p_01_03_coralplant_flowers.png" cols="1" rows="1"/>
+    <texture id="03 leaves" source="items/base/plants/p_01_03_coralplant_leaves2.png" cols="1" rows="1"/>
+    <texture id="03 branches" source="items/base/plants/p_01_03_coralplant_branches2.png" cols="1" rows="1"/>
+    <texture id="04 flowers" source="items/base/plants/p_01_04_whitebuttertree_flowers.png" cols="1" rows="1"/>
+    <texture id="04 leaves" source="items/base/plants/p_01_04_whitebuttertree_leaves2.png" cols="1" rows="1"/>
+    <texture id="04 branches" source="items/base/plants/p_01_04_whitebuttertree_branches2.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Plant">
+      <box min="-0.3,0,-0.3" max="0.3,1.2,0.3"/>
+      <layers>
+        <layer id="01 azure trumpet" type="group">
+          <layer id="01 leaves" texture="01 leaves">
+            <view angle="45" x="5" y="-35"/>
+            <view angle="135" x="-5" y="-35" hm="true"/>
+            <view angle="225" x="5" y="-35"/>
+            <view angle="315" x="-5" y="-35" hm="true"/>
+          </layer>
+          <layer id="01 branches" texture="01 branches">
+            <view angle="45" y="5"/>
+            <view angle="135" y="5" hm="true"/>
+            <view angle="225" y="5"/>
+            <view angle="315" y="5" hm="true"/>
+          </layer>
+          <layer id="01 flowers" texture="01 flowers">
+            <view angle="45" x="5" y="-42"/>
+            <view angle="135" x="-5" y="-42" hm="true"/>
+            <view angle="225" x="5" y="-42" hm="true"/>
+            <view angle="315" x="-5" y="-42" hm="true"/>
+          </layer>
+        </layer>
+        <layer id="02 morning star" type="group">
+          <layer id="02 leaves" texture="02 leaves">
+            <view angle="45" x="-2" y="-51"/>
+            <view angle="135" x="2" y="-51" hm="true"/>
+            <view angle="225" x="-2" y="-51"/>
+            <view angle="315" x="2" y="-51" hm="true"/>
+          </layer>
+          <layer id="02 branches" texture="02 branches">
+            <view angle="45" y="8"/>
+            <view angle="135" y="8" hm="true"/>
+            <view angle="225" y="8"/>
+            <view angle="315" y="8" hm="true"/>
+          </layer>
+          <layer id="02 flowers" texture="02 flowers">
+            <view angle="45" x="-4" y="-26"/>
+            <view angle="135" x="4" y="-26" hm="true"/>
+            <view angle="225" x="-4" y="-26"/>
+            <view angle="315" x="4" y="-26" hm="true"/>
+          </layer>
+        </layer>
+        <layer id="03 coral plant" type="group">
+          <layer id="03 leaves" texture="03 leaves">
+            <view angle="45" x="6" y="-49"/>
+            <view angle="135" x="-6" y="-49" hm="true"/>
+            <view angle="225" x="6" y="-49"/>
+            <view angle="315" x="-6" y="-49" hm="true"/>
+          </layer>
+          <layer id="03 branches" texture="03 branches">
+            <view angle="45" y="5"/>
+            <view angle="135" y="5" hm="true"/>
+            <view angle="225" y="5"/>
+            <view angle="315" y="5" hm="true"/>
+          </layer>
+          <layer id="03 flowers" texture="03 flowers">
+            <view angle="45" x="4" y="-58"/>
+            <view angle="135" x="-4" y="-58" hm="true"/>
+            <view angle="225" x="4" y="-58"/>
+            <view angle="315" x="-4" y="-58" hm="true"/>
+          </layer>
+        </layer>
+        <layer id="04 white buttertree" type="group">
+          <layer id="04 leaves" texture="04 leaves">
+            <view angle="45" x="-11" y="-17"/>
+            <view angle="135" x="11" y="-17" hm="true"/>
+            <view angle="225" x="-11" y="-17"/>
+            <view angle="315" x="11" y="-17" hm="true"/>
+          </layer>
+          <layer id="04 branches" texture="04 branches">
+            <view angle="45" y="5"/>
+            <view angle="135" y="5" hm="true"/>
+            <view angle="225" y="5"/>
+            <view angle="315" y="5" hm="true"/>
+          </layer>
+          <layer id="04 flowers" texture="04 flowers">
+            <view angle="45" x="-12" y="-24"/>
+            <view angle="135" x="12" y="-24" hm="true"/>
+            <view angle="225" x="-12" y="-24"/>
+            <view angle="315" x="12" y="-24" hm="true"/>
+          </layer>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="azure trumpet">
+          <layerref id="01 branches"/>
+          <layerref id="01 leaves"/>
+        </frame>
+        <frame id="azure trumpet flowering">
+          <layerref id="01 branches"/>
+          <layerref id="01 leaves"/>
+          <layerref id="01 flowers"/>
+        </frame>
+        <frame id="morning star">
+          <layerref id="02 branches"/>
+          <layerref id="02 leaves"/>
+        </frame>
+        <frame id="morning star flowering">
+          <layerref id="02 branches"/>
+          <layerref id="02 leaves"/>
+          <layerref id="02 flowers"/>
+        </frame>
+        <frame id="coral plant">
+          <layerref id="03 branches"/>
+          <layerref id="03 leaves"/>
+        </frame>
+        <frame id="coral plant flowering">
+          <layerref id="03 branches"/>
+          <layerref id="03 leaves"/>
+          <layerref id="03 flowers"/>
+        </frame>
+        <frame id="white buttertree">
+          <layerref id="04 branches"/>
+          <layerref id="04 leaves"/>
+        </frame>
+        <frame id="white buttertree flowering">
+          <layerref id="04 branches"/>
+          <layerref id="04 leaves"/>
+          <layerref id="04 flowers"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="00" framerate="2" loop="false">
+          <frameref id="azure trumpet"/>
+        </animation>
+        <animation id="01" framerate="2" loop="false">
+          <frameref id="azure trumpet flowering"/>
+        </animation>
+        <animation id="02" framerate="2" loop="false">
+          <frameref id="morning star"/>
+        </animation>
+        <animation id="03" framerate="2" loop="false">
+          <frameref id="morning star flowering"/>
+        </animation>
+        <animation id="04" framerate="2" loop="false">
+          <frameref id="coral plant"/>
+        </animation>
+        <animation id="05" framerate="2" loop="false">
+          <frameref id="coral plant flowering"/>
+        </animation>
+        <animation id="06" framerate="2" loop="false">
+          <frameref id="white buttertree"/>
+        </animation>
+        <animation id="07" framerate="2" loop="false">
+          <frameref id="white buttertree flowering"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

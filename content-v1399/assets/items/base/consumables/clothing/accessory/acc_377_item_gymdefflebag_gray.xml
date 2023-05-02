@@ -1,0 +1,34 @@
+<item.SpriteItem id="5084" name="Saco de Ginástica Cinza Style" desc="Um saco esportivo para sua academia" tags="seasonal,consumable,actionbar,wear,hand,usable,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_377_icon_gymdefflebag_gray.png" price="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.3,0,-0.1556" max="0.3385,0.3692,0.1044"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+  </data>
+  <textures>
+    <texture id="Gray Gym Duffle Bag" source="items/base/consumables/clothing/accessory/acc_377_item_gymdefflebag_gray.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="handbag">
+      <box min="-0.3,0,-0.1556" max="0.3385,0.3692,0.1044"/>
+      <layers>
+        <layer id="Gray Gym Duffle Bag" texture="Gray Gym Duffle Bag">
+          <view angle="45" x="-1" y="18"/>
+          <view angle="135" col="1" x="1" y="18"/>
+          <view angle="225" col="1" x="3" y="15" hm="true"/>
+          <view angle="315" x="4" y="17" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

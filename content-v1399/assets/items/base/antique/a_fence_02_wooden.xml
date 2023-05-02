@@ -1,0 +1,27 @@
+<item.SpriteItem desc="Uma cerca de madeira" dropTargetClamp="none" dropTargetList="floor,avatar" dropTargetType="none" icon="items/base/antique/icon_a_fence_02_wooden.png" id="1062" name="Cerca de Madeira" tags="misc" price="13" tokens="130" minLevel="1" minLevelType="2" minCPLevel="1">
+  <volume>
+    <box max="0.2,1,1.5" min="-0.2,0,-0.5"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="2" id="fence" rows="1" source="items/base/antique/a_fence_02_wooden.png"/>
+  </textures>
+  <nodes>
+    <node id="fence" z="0.5">
+      <box max="0.2,1,1" min="-0.2,0,-1"/>
+      <layers>
+        <layer id="fence" texture="fence" y="44">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225"/>
+          <view angle="315" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

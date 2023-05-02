@@ -1,0 +1,65 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="base" source="items/base/consumables/feet/con_feet_175_snowmobile_back.png" cols="5" rows="1"/>
+    <texture id="boots" source="items/base/consumables/feet/con_feet_175_snowmobile_front.png" cols="4" rows="1"/>
+    <texture id="sit" source="items/base/consumables/feet/con_feet_23_ski_boots_sit.png" cols="1" rows="1"/>
+    <texture id="snowpuff" source="items/base/shared/s_snowpuff.png" cols="2" rows="1"/>
+    <texture id="snowpuff_length" source="items/base/shared/s_snowpuff_length.png" cols="1" rows="1"/>
+    <texture id="snowpuff_diagonal" source="items/base/shared/s_snowpuff_diagonal.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="boots" texture="boots">
+          <view angle="0" col="2" x="58" y="40" alpha="0" hm="true"/>
+          <view angle="45" x="28" y="54"/>
+          <view angle="90" col="1" x="2" y="62"/>
+          <view angle="135" x="-29" y="54" hm="true"/>
+          <view angle="180" col="2" x="-40" y="50" alpha="0"/>
+          <view angle="225" col="3" x="-38" y="22" alpha="0"/>
+          <view angle="270" col="4" y="20" alpha="0"/>
+          <view angle="315" col="3" x="38" y="20" alpha="0" hm="true"/>
+        </layer>
+        <layer id="sit" texture="boots">
+          <view angle="45" x="-2" y="22" alpha="0"/>
+          <view angle="135" x="1" y="22" alpha="0" hm="true"/>
+          <view angle="225" col="3" x="2" y="22" alpha="0"/>
+          <view angle="315" col="3" x="-1" y="22" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="boots"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit" a="0"/>
+        </frame>
+        <frame id="Walk01">
+          <layerref id="boots"/>
+        </frame>
+        <frame id="Walk02">
+          <layerref id="boots"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame01"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="Walk01"/>
+          <frameref id="Walk02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

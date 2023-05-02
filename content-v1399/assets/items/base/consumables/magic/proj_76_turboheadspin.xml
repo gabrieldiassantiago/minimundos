@@ -1,0 +1,58 @@
+<item.SpriteItem id="0" name="Turbo Head Spin Projectile" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.12,-0.12,-0.12" max="0.12,0.12,0.12"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_proj_diff.png" cols="1" rows="1"/>
+    <texture id="spinning top" source="items/base/consumables/magic/proj_76_turboheadspin.png" cols="2" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Item">
+      <box min="-0.12,-0.12,-0.12" max="0.12,0.12,0.12"/>
+      <layers>
+        <layer id="top 01" texture="spinning top">
+          <view y="16"/>
+        </layer>
+        <layer id="top 02" texture="spinning top">
+          <view y="16" hm="true"/>
+        </layer>
+        <layer id="spin 01" texture="spinning top">
+          <view col="1" y="16"/>
+        </layer>
+        <layer id="spin 02" texture="spinning top">
+          <view col="1" y="16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="projectile 01">
+          <layerref id="top 01"/>
+          <layerref id="spin 01"/>
+          <layerref id="spin 02" a="0.25"/>
+        </frame>
+        <frame id="projectile 02">
+          <layerref id="top 02"/>
+          <layerref id="spin 02"/>
+          <layerref id="spin 01" a="0.25"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="projectile 01"/>
+          <frameref id="projectile 02"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="projectile 01">
+            <sample id="woosh"/>
+          </frameref>
+          <frameref id="projectile 02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

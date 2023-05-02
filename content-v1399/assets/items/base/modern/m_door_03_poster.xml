@@ -1,0 +1,118 @@
+<item.WidgetItem id="1997" name="Porta Flicker" desc="Personalizável com imagens do Flickr." tags="wall,widget,user_content" icon="items/base/modern/icon_m_door_03_poster.png" price="200" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="floor" widget="widgets/widget_flickr.swf" tokens="2000" minLevelType="1">
+  <volume>
+    <box min="0,-1.1936,-0.85" max="0.11,1.2,0.85"/>
+  </volume>
+  <events>
+    <event id="configure" script="scripts/widget/configure.as"/>
+    <event id="action" script="scripts/widget/show.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="show" script="scripts/widget/show.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="widget_action" script="scripts/widget/exec_widget_action.as"/>
+  </events>
+  <actions>
+    <action id="First" trigger="false" event="widget_action(FIRST)"/>
+    <action id="Last" trigger="false" event="widget_action(LAST)"/>
+    <action id="Next" trigger="false" event="widget_action(NEXT)"/>
+    <action id="Previous" trigger="false" event="widget_action(PREVIOUS)"/>
+    <action id="Show Specific Image" trigger="false" event="widget_action(SHOWIMAGE)">
+      <params>
+        <param type="string" id="Image Title" label="Enter image title"/>
+      </params>
+    </action>
+    <action id="Image Change">
+      <eval>
+        <func type="relational" id="Image Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+    <action id="Enlarge Image">
+      <eval>
+        <func type="relational" id="Image Title" input="title" operator="equal" maxChars="60" partialMatch="true"/>
+      </eval>
+    </action>
+  </actions>
+  <data>
+    <entry key="renderWidth" value="640"/>
+    <entry key="renderHeight" value="480"/>
+    <entry key="scale" value="0.5"/>
+    <entry key="widget_load_policy" value="interact"/>
+    <entry key="widget_min_load_wait" value="2000"/>
+    <entry key="widget_max_load_wait" value="4000"/>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="cacheInWorldBitmap" value="true"/>
+    <entry key="frame" value="blank"/>
+  </data>
+  <navigate position="infront" sitRange="1.00" standRange="1.00" usableRange="-1.00" accessibleRange="2.00"/>
+  <textures>
+    <texture id="Texture01" source="items/base/modern/m_door_handle.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/games/zombie/icon_zom_door_01_sign_light.png" cols="1" rows="1"/>
+    <texture id="Sci Door" source="items/base/modern/m_door_02_white.png" cols="1" rows="1"/>
+    <texture id="poster" source="items/base/modern/m_door_03_poster.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Poster">
+      <box min="0,-1.1936,-0.85" max="0.11,1.2,0.85"/>
+      <layers>
+        <layer id="Dungeon back" texture="Back" align="middle" y="-205">
+          <view angle="45" y="-6"/>
+          <view angle="135" y="-6" hm="true"/>
+          <view angle="225" x="-20" y="-15" alpha="0.55"/>
+          <view angle="315" x="18" y="-16" alpha="0.55" hm="true"/>
+        </layer>
+        <layer id="Dungeon frame" texture="poster" align="middle" y="-159">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" x="-8" alpha="0.55"/>
+          <view angle="315" x="4" y="-4" alpha="0.55" hm="true"/>
+        </layer>
+        <layer id="WidgetLayer" type="panel" texture="Texture" w="1.7" h="1" y="-160"/>
+        <layer id="Dungeon Door" texture="Sci Door" align="middle">
+          <view angle="45" x="4"/>
+          <view angle="135" x="-5" hm="true"/>
+          <view angle="225" x="-4" y="-4" alpha="0.55"/>
+          <view angle="315" x="3" y="-3" alpha="0.55" hm="true"/>
+        </layer>
+        <layer id="handle" texture="Texture01" align="middle">
+          <view angle="45" x="-18" y="18"/>
+          <view angle="135" col="1" x="-21" y="-5"/>
+          <view angle="225" col="1" x="13" y="-5" alpha="0.55" hm="true"/>
+          <view angle="315" x="25" y="18" alpha="0.55" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="null"/>
+        </animation>
+        <animation id="Off" framerate="4"/>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="1" y="-38"/>
+          <view angle="135" y="-38" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.WidgetItem>

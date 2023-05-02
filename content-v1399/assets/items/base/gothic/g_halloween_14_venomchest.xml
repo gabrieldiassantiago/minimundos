@@ -1,0 +1,161 @@
+<item.SpriteItem id="5388" name="Baú Venenoso" desc="Um baú que contém um veneno poderoso" tags="misc,rare" icon="items/base/gothic/icon_g_halloween_14_venomchest.png" price="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.15,0,-0.15" max="0.15,0.35,0.15"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_container.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" trigger="false" event="toggle"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Close" state="true" event="animate(Closed)"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Light" source="items/base/shared/s_fx_flare_linear.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_ring.png" cols="1" rows="1"/>
+    <texture id="Box" source="items/base/gothic/g_halloween_14_venomchest.png" cols="2" rows="2"/>
+    <texture id="Gem" source="items/base/gothic/g_halloween_14_venomchestgem.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Box">
+      <box min="-0.15,0,-0.15" max="0.15,0.35,0.15"/>
+      <layers>
+        <layer id="BoxOpen" texture="Box">
+          <view angle="45" x="-3" y="32"/>
+          <view angle="135" x="3" y="32" hm="true"/>
+          <view angle="225" row="1" x="4" y="37"/>
+          <view angle="315" row="1" x="-4" y="37" hm="true"/>
+        </layer>
+        <layer id="Gem01" texture="Gem" x="-2" y="-70">
+          <view angle="45" x="5" y="35"/>
+          <view angle="135" x="-5" y="35"/>
+          <view angle="225" x="-7" y="33" hm="true"/>
+          <view angle="315" x="12" y="33"/>
+        </layer>
+        <layer id="Gem02" texture="Gem" x="-2" y="-70">
+          <view angle="45" col="1" x="5" y="35"/>
+          <view angle="135" col="1" x="-5" y="35"/>
+          <view angle="225" col="1" x="-7" y="33" hm="true"/>
+          <view angle="315" col="1" x="12" y="33"/>
+        </layer>
+        <layer id="Gem03" texture="Gem" x="-2" y="-70">
+          <view angle="45" col="2" x="5" y="35"/>
+          <view angle="135" col="2" x="-5" y="35"/>
+          <view angle="225" col="2" x="-7" y="33" hm="true"/>
+          <view angle="315" col="2" x="12" y="33"/>
+        </layer>
+        <layer id="BoxClose" texture="Box">
+          <view angle="45" col="1" x="1" y="44"/>
+          <view angle="135" col="1" x="-1" y="44" hm="true"/>
+          <view angle="225" col="1" row="1" x="-6" y="41"/>
+          <view angle="315" col="1" row="1" x="6" y="41" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="gem_front_01">
+          <layerref id="BoxOpen"/>
+          <layerref id="Gem01"/>
+        </frame>
+        <frame id="gem_front_02">
+          <layerref id="BoxOpen"/>
+          <layerref id="Gem02"/>
+        </frame>
+        <frame id="gem_front_03">
+          <layerref id="BoxOpen"/>
+          <layerref id="Gem03"/>
+        </frame>
+        <frame id="gem_front_00">
+          <layerref id="BoxClose"/>
+          <layerref id="Gem01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="8">
+          <frameref id="gem_front_00"/>
+        </animation>
+        <animation id="Open" framerate="8">
+          <frameref id="gem_front_01"/>
+          <frameref id="gem_front_02"/>
+          <frameref id="gem_front_03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="3" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="2" y="-18"/>
+          <view angle="135" x="-2" y="-18"/>
+          <view angle="225" x="-5" y="-18"/>
+          <view angle="315" x="5" y="-18"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="Light" color="0x33b5b6"/>
+        </frame>
+        <frame id="Frame02">
+          <layerref id="Light" color="0x33b5b6" a="0.97"/>
+        </frame>
+        <frame id="Frame03">
+          <layerref id="Light" color="0x33b5b6" a="0.95"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="Frame01"/>
+          <frameref id="Frame02"/>
+          <frameref id="Frame03"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="1.1" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light01" texture="Intense" align="middle">
+          <view angle="45" x="4" y="-46"/>
+          <view angle="135" x="-4" y="-46"/>
+          <view angle="225" x="-6" y="-50"/>
+          <view angle="315" x="10" y="-50"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On01">
+          <layerref id="Light01" color="0xaae3f2" a="0.33"/>
+        </frame>
+        <frame id="On02">
+          <layerref id="Light01" color="0xaae3f2" a="0.3"/>
+        </frame>
+        <frame id="On03">
+          <layerref id="Light01" color="0xaae3f2" a="0.35"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open" framerate="4">
+          <frameref id="On01"/>
+          <frameref id="On02"/>
+          <frameref id="On03"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

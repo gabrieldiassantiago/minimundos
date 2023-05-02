@@ -1,0 +1,67 @@
+<item.ChairItem id="6828" name="Boia de Piscina Pizza" desc="Uma boia para piscina divertida" tags="chair,misc" icon="items/base/modern/m_pool_10_pizza_icon.png" price="50" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="water,floor,avatar" dropTargetClamp="none" chairType="lilo">
+  <seats>
+    <seat y="0.2">
+      <ap x="2"/>
+      <ap z="-1"/>
+      <ap z="1"/>
+      <ap x="1" z="-1"/>
+      <ap x="1" z="1"/>
+      <ap x="-1" z="-1"/>
+      <ap x="-1" z="1"/>
+      <ap x="-1"/>
+      <ap x="2" z="-1"/>
+      <ap x="2" z="1"/>
+    </seat>
+  </seats>
+  <volume>
+    <box min="-0.48,0,-0.48" max="0.48,0,0.48"/>
+  </volume>
+  <events>
+    <event id="select" script="scripts/item/select_chair.as"/>
+    <event id="activate" script="scripts/item/activate_chair.as"/>
+    <event id="deactivate" script="scripts/item/deactivate_chair.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_chair.as"/>
+  </events>
+  <actions>
+    <action id="Sit"/>
+    <action id="Stand"/>
+  </actions>
+  <navigate usableRange="-1.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+    <entry key="aiUseInWorldEffects" value="rest-3"/>
+  </data>
+  <textures>
+    <texture id="base" source="items/base/modern/m_pool_10_pizza_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind">
+      <box min="-0.48,0,-0.48" max="0.48,0,0.48"/>
+      <layers>
+        <layer id="base" texture="base" align="middle">
+          <view angle="45" x="16" y="-3"/>
+          <view angle="135" x="-11" y="-3" hm="true"/>
+          <view angle="225" col="1" x="-12" y="-8"/>
+          <view angle="315" col="1" x="18" y="-16" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Off">
+          <layerref id="base"/>
+        </frame>
+        <frame id="On">
+          <layerref id="base"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Off">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="On">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.ChairItem>

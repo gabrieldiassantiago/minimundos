@@ -1,0 +1,28 @@
+<item.SpriteItem id="0" name="Immunity" desc="Immunity Against Naughty or Nice" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+  </volume>
+  <textures>
+    <texture id="cross" source="items/base/consumables/head/con_head_97_naughty_immunity.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="icon" texture="cross">
+          <view y="-175"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Loop">
+          <layerref id="icon"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Loop" framerate="4">
+          <frameref id="Loop"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

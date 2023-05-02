@@ -1,0 +1,155 @@
+<item.SpriteItem id="0" name="Waterlord" desc="Collectible" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="redpanda" source="items/base/consumables/head/con_219_head_waterlord.png" cols="5" rows="1"/>
+    <texture id="mouth" source="items/base/consumables/head/con_219_head_mouth.png" cols="4" rows="2"/>
+    <texture id="eye" source="items/base/consumables/head/con_219_head_eye.png" cols="4" rows="1"/>
+    <texture id="Fin" source="items/base/consumables/head/con_219_head_dorsal.png" cols="5" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.3,0,-0.3" max="0.3,0.5,0.3"/>
+      <layers>
+        <layer id="head" texture="redpanda">
+          <view angle="0" x="-6" y="23"/>
+          <view angle="45" col="1" x="2" y="24"/>
+          <view angle="90" col="2" y="22"/>
+          <view angle="135" col="1" x="-2" y="24" hm="true"/>
+          <view angle="180" x="6" y="23" hm="true"/>
+          <view angle="225" col="4" x="3" y="25" hm="true"/>
+          <view angle="270" col="3" y="25"/>
+          <view angle="315" col="4" x="-3" y="25"/>
+        </layer>
+        <layer id="mouth_01" texture="mouth">
+          <view angle="0" x="22" y="8"/>
+          <view angle="45" col="1" x="12" y="19"/>
+          <view angle="90" col="2" y="23"/>
+          <view angle="135" col="1" x="-12" y="19" hm="true"/>
+          <view angle="180" x="-22" y="8" hm="true"/>
+          <view angle="225" col="3" x="-25" y="2" hm="true"/>
+          <view angle="270" col="4" y="18" alpha="0"/>
+          <view angle="315" col="3" x="25" y="2"/>
+        </layer>
+        <layer id="mouth_02" texture="mouth">
+          <view angle="0" row="1" x="22" y="8"/>
+          <view angle="45" col="1" row="1" x="13" y="18"/>
+          <view angle="90" col="2" row="1" y="22"/>
+          <view angle="135" col="1" row="1" x="-13" y="18" hm="true"/>
+          <view angle="180" row="1" x="-22" y="8" hm="true"/>
+          <view angle="225" col="3" row="1" x="-26" y="1" hm="true"/>
+          <view angle="270" col="4" y="18" alpha="0"/>
+          <view angle="315" col="3" row="1" x="26" y="1"/>
+        </layer>
+        <layer id="Fin01" texture="Fin">
+          <view angle="0" x="-7" y="14"/>
+          <view angle="45" col="1" x="2" y="14"/>
+          <view angle="90" col="2" y="13"/>
+          <view angle="135" col="1" x="-2" y="15" hm="true"/>
+          <view angle="180" x="7" y="14" hm="true"/>
+          <view angle="225" col="4" x="3" y="16" hm="true"/>
+          <view angle="270" col="3" y="16"/>
+          <view angle="315" col="4" x="-3" y="16"/>
+        </layer>
+        <layer id="Fin02" texture="Fin">
+          <view angle="0" row="1" x="-7" y="14"/>
+          <view angle="45" col="1" row="1" x="1" y="14"/>
+          <view angle="90" col="2" row="1" y="12"/>
+          <view angle="135" col="1" x="-1" y="14" hm="true"/>
+          <view angle="180" x="7" y="14" hm="true"/>
+          <view angle="225" col="4" x="3" y="15" hm="true"/>
+          <view angle="270" col="3" row="1" y="16"/>
+          <view angle="315" col="4" x="-3" y="15"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="idle">
+          <layerref id="mouth_02"/>
+          <layerref id="head"/>
+          <layerref id="Fin01"/>
+        </frame>
+        <frame id="01">
+          <layerref id="mouth_01"/>
+          <layerref id="head"/>
+          <layerref id="Fin02"/>
+        </frame>
+        <frame id="02">
+          <layerref id="mouth_01" x="1" y="1"/>
+          <layerref id="head" x="1" y="1"/>
+          <layerref id="Fin02" x="1" y="1"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="12">
+          <frameref id="idle" duration="46"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="eye" align="middle">
+          <view angle="0" x="20" y="-18"/>
+          <view angle="45" col="1" x="17" y="-11"/>
+          <view angle="90" col="2" x="1" y="-11"/>
+          <view angle="135" col="1" x="-17" y="-11" hm="true"/>
+          <view angle="180" x="-17" y="-18" hm="true"/>
+          <view angle="225" col="3" x="-21" y="-27" hm="true"/>
+          <view angle="270" col="4" x="5" y="-36"/>
+          <view angle="315" col="3" x="24" y="-27"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0x51e2e3"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Off" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

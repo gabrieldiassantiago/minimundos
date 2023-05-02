@@ -1,0 +1,290 @@
+<item.SpriteItem id="1708" name="Planta Carnívora" desc="Uma planta muito perigosa" tags="rare,trap,misc,magic,turret,kudos,craftable_kudos,market" icon="items/base/gothic/icon_g_turret_06_venus.png" price="150" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="1.5,2.5,1.49"/>
+  </volume>
+  <events>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="fire" script="scripts/item/action_turret.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <actions>
+    <action id="Fire" event="fire"/>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Closed" state="true" event="animate(Closed)"/>
+  </actions>
+  <textures>
+    <texture id="Body" source="items/base/gothic/g_turret_06_venus_body.png" cols="2" rows="1"/>
+    <texture id="HeadFront" source="items/base/gothic/g_turret_06_venus_head.png" cols="2" rows="2"/>
+    <texture id="feet" source="items/base/gothic/g_turret_06_venus_feet.png" cols="2" rows="1"/>
+    <texture id="radiate" source="items/base/consumables/magic/hit_generic_radiate.png" cols="4" rows="1"/>
+    <texture id="shockball" source="items/base/consumables/magic/proj_generic_shockball.png" cols="1" rows="3"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="Sound" source="items/base/consumables/magic/sndfx_transform.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.49,0,-0.49" max="1.5,2.5,1.49"/>
+      <layers>
+        <layer id="feet" texture="feet" x="40" y="90">
+          <view angle="45" x="34" y="-46" hm="true"/>
+          <view angle="135" x="-51" y="-15"/>
+          <view angle="225" col="1" x="-118" y="-52"/>
+          <view angle="315" col="1" x="-29" y="-84" hm="true"/>
+        </layer>
+        <layer id="Body_01" texture="Body" x="40" y="90">
+          <view angle="45" col="1" x="21" y="-89" hm="true"/>
+          <view angle="135" col="1" x="-37" y="-58"/>
+          <view angle="225" x="-109" y="-86"/>
+          <view angle="315" x="-38" y="-118" hm="true"/>
+        </layer>
+        <layer id="HeadClose_01" texture="HeadFront">
+          <view angle="45" x="83" y="-77" hm="true"/>
+          <view angle="135" x="-19" y="-45"/>
+          <view angle="225" col="1" x="-95" y="-114"/>
+          <view angle="315" col="1" x="29" y="-147" hm="true"/>
+        </layer>
+        <layer id="HeadOpen_01" texture="HeadFront">
+          <view angle="45" row="1" x="83" y="-80" hm="true"/>
+          <view angle="135" row="1" x="-19" y="-48"/>
+          <view angle="225" col="1" row="1" x="-95" y="-117"/>
+          <view angle="315" col="1" row="1" x="29" y="-150" hm="true"/>
+        </layer>
+        <layer id="shockball 01" texture="shockball" y="-73">
+          <view angle="45" x="98" y="-18"/>
+          <view angle="135" x="-37" y="15"/>
+          <view angle="225" x="-124" y="-61"/>
+          <view angle="315" x="56" y="-93"/>
+        </layer>
+        <layer id="shockball 02" texture="shockball" y="-73">
+          <view angle="45" row="1" x="98" y="-18"/>
+          <view angle="135" row="1" x="-37" y="15"/>
+          <view angle="225" row="1" x="-124" y="-61"/>
+          <view angle="315" row="1" x="56" y="-93"/>
+        </layer>
+        <layer id="shockball 03" texture="shockball" y="-73">
+          <view angle="45" row="2" x="98" y="-18"/>
+          <view angle="135" row="2" x="-37" y="15"/>
+          <view angle="225" row="2" x="-124" y="-61"/>
+          <view angle="315" row="2" x="56" y="-93"/>
+        </layer>
+        <layer id="radiate 01" texture="radiate" y="-73">
+          <view angle="45" x="100" y="8"/>
+          <view angle="135" x="-34" y="41"/>
+          <view angle="225" x="-124" y="-35"/>
+          <view angle="315" x="57" y="-68"/>
+        </layer>
+        <layer id="radiate 02" texture="radiate" y="-73">
+          <view angle="45" col="1" x="100" y="8"/>
+          <view angle="135" col="1" x="-34" y="41"/>
+          <view angle="225" col="1" x="-124" y="-35"/>
+          <view angle="315" col="1" x="57" y="-68"/>
+        </layer>
+        <layer id="radiate 03" texture="radiate" y="-73">
+          <view angle="45" col="2" x="100" y="8"/>
+          <view angle="135" col="2" x="-34" y="41"/>
+          <view angle="225" col="2" x="-124" y="-35"/>
+          <view angle="315" col="2" x="57" y="-68"/>
+        </layer>
+        <layer id="radiate 04" texture="radiate" y="-73">
+          <view angle="45" col="3" x="100" y="8"/>
+          <view angle="135" col="3" x="-34" y="41"/>
+          <view angle="225" col="3" x="-124" y="-35"/>
+          <view angle="315" col="3" x="57" y="-68"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="DClosed_01">
+          <layerref id="feet"/>
+          <layerref id="HeadClose_01" y="2"/>
+          <layerref id="Body_01" y="1"/>
+        </frame>
+        <frame id="DClosed_02">
+          <layerref id="feet"/>
+          <layerref id="HeadClose_01" y="1"/>
+          <layerref id="Body_01" y="1"/>
+        </frame>
+        <frame id="DClosed_03">
+          <layerref id="feet"/>
+          <layerref id="HeadClose_01" y="-1"/>
+          <layerref id="Body_01"/>
+        </frame>
+        <frame id="DClosed_04">
+          <layerref id="feet"/>
+          <layerref id="HeadClose_01" y="-2"/>
+          <layerref id="Body_01" y="-1"/>
+        </frame>
+        <frame id="DClosed_05">
+          <layerref id="feet"/>
+          <layerref id="HeadClose_01" y="-4"/>
+          <layerref id="Body_01" y="-2"/>
+        </frame>
+        <frame id="DClosed_06">
+          <layerref id="feet"/>
+          <layerref id="HeadClose_01" y="-5"/>
+          <layerref id="Body_01" y="-2"/>
+        </frame>
+        <frame id="DOpen_00">
+          <layerref id="feet"/>
+          <layerref id="HeadOpen_01"/>
+          <layerref id="Body_01"/>
+        </frame>
+        <frame id="DOpen_01">
+          <layerref id="feet"/>
+          <layerref id="HeadOpen_01"/>
+          <layerref id="Body_01"/>
+          <layerref id="shockball 01" color="0x6ded7e" a="0.33" blend="add"/>
+        </frame>
+        <frame id="DOpen_02">
+          <layerref id="feet"/>
+          <layerref id="HeadOpen_01"/>
+          <layerref id="Body_01"/>
+          <layerref id="shockball 02" color="0x90f19d" a="0.66" blend="add"/>
+        </frame>
+        <frame id="DOpen_03">
+          <layerref id="feet"/>
+          <layerref id="HeadOpen_01"/>
+          <layerref id="Body_01"/>
+          <layerref id="radiate 01" color="0x7af171" a="0.25" blend="add"/>
+          <layerref id="shockball 03" color="0xc5f9c1" blend="add"/>
+        </frame>
+        <frame id="DOpen_04">
+          <layerref id="feet"/>
+          <layerref id="HeadOpen_01"/>
+          <layerref id="Body_01"/>
+          <layerref id="radiate 02" color="0x7af171" a="0.5" blend="add"/>
+          <layerref id="shockball 01" color="0xc5f9c1" blend="add"/>
+        </frame>
+        <frame id="DOpen_05">
+          <layerref id="feet"/>
+          <layerref id="HeadOpen_01"/>
+          <layerref id="Body_01"/>
+          <layerref id="radiate 03" color="0x7af171" blend="add"/>
+          <layerref id="shockball 02" color="0xd1facd" blend="add"/>
+        </frame>
+        <frame id="DOpen_06">
+          <layerref id="feet"/>
+          <layerref id="HeadOpen_01"/>
+          <layerref id="Body_01"/>
+          <layerref id="radiate 04" color="0x7af171" a="0.5" blend="add"/>
+          <layerref id="shockball 03" color="0xc5f9c1" a="0.75" blend="add"/>
+        </frame>
+        <frame id="DOpen_07">
+          <layerref id="feet"/>
+          <layerref id="HeadOpen_01"/>
+          <layerref id="Body_01"/>
+          <layerref id="radiate 01" color="0x7af171" a="0.25" blend="add"/>
+          <layerref id="shockball 01" color="0x90f19d" a="0.5" blend="add"/>
+        </frame>
+        <frame id="DOpen_08">
+          <layerref id="feet"/>
+          <layerref id="HeadOpen_01"/>
+          <layerref id="Body_01"/>
+          <layerref id="shockball 02" color="0x6ded7e" a="0.25" blend="add"/>
+        </frame>
+        <frame id="DOpen_09">
+          <layerref id="feet"/>
+          <layerref id="HeadOpen_01"/>
+          <layerref id="Body_01"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="DClosed_01"/>
+          <frameref id="DClosed_02"/>
+          <frameref id="DClosed_03"/>
+          <frameref id="DClosed_04"/>
+          <frameref id="DClosed_05"/>
+          <frameref id="DClosed_06"/>
+          <frameref id="DClosed_05"/>
+          <frameref id="DClosed_04"/>
+          <frameref id="DClosed_03"/>
+          <frameref id="DClosed_02"/>
+        </animation>
+        <animation id="In" framerate="8" loop="false">
+          <frameref id="DOpen_00">
+            <sample id="Sound"/>
+          </frameref>
+          <frameref id="DOpen_01"/>
+          <frameref id="DOpen_02"/>
+          <frameref id="DOpen_03"/>
+          <frameref id="DOpen_04"/>
+          <frameref id="DOpen_05"/>
+        </animation>
+        <animation id="Out" framerate="8" loop="false">
+          <frameref id="DOpen_06"/>
+          <frameref id="DOpen_07"/>
+          <frameref id="DOpen_08"/>
+          <frameref id="DOpen_09"/>
+          <frameref id="DClosed_01"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="DOpen_01" duration="2"/>
+        </animation>
+        <animation id="Close" framerate="4" loop="false">
+          <frameref id="DClosed_01"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" x="0.6719" y="2.05" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="11" y="2"/>
+          <view angle="135" x="3" y="8"/>
+          <view angle="225" x="-14" y="3"/>
+          <view angle="315" x="1" y="-3"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x48a62a" a="0.2"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x48a62a" a="0.4"/>
+        </frame>
+        <frame id="03">
+          <layerref id="Light" color="0x48a62a" a="0.8"/>
+        </frame>
+        <frame id="04">
+          <layerref id="Light" color="0x48a62a"/>
+        </frame>
+        <frame id="Idle">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="In" framerate="4" loop="false" syncFrames="false">
+          <frameref id="01"/>
+          <frameref id="02"/>
+          <frameref id="03"/>
+          <frameref id="04"/>
+        </animation>
+        <animation id="Out" framerate="4" loop="false" syncFrames="false">
+          <frameref id="04"/>
+          <frameref id="03"/>
+          <frameref id="02"/>
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+  <data>
+    <entry key="ingredient_1" value="1580"/>
+    <entry key="ingredient_2" value="1644"/>
+    <entry key="ingredient_3" value="1705"/>
+    <entry key="ingredient_quantity_1" value="1"/>
+    <entry key="ingredient_quantity_2" value="1"/>
+    <entry key="ingredient_quantity_3" value="1"/>
+    <entry key="product_quantity" value="1"/>
+    <entry key="xp_level_required" value="0"/>
+    <entry key="xp_rewarded" value="1000"/>
+    <entry key="action_attributes" value="nature-10"/>
+    <entry key="action_attributes_secondary" value="health-40"/>
+  </data>
+</item.SpriteItem>

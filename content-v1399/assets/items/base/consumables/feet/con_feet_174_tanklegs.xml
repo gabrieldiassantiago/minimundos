@@ -1,0 +1,68 @@
+<item.SpriteItem id="0" name="Item" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="Tire" source="items/base/consumables/feet/con_feet_174_tanklegs_tire.png" cols="5" rows="1"/>
+    <texture id="Tank" source="items/base/consumables/feet/con_feet_174_tanklegs.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="engine" source="items/base/consumables/back/sndfx_engine.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="sit" texture="board">
+          <view angle="45" x="4" y="26" alpha="0" hm="true"/>
+          <view angle="135" x="-5" y="33" alpha="0"/>
+          <view angle="225" x="-5" y="23" alpha="0" hm="true"/>
+          <view angle="315" x="15" y="19" alpha="0"/>
+        </layer>
+        <layer id="Tank" texture="Tank">
+          <view angle="0" col="2" y="33"/>
+          <view angle="45" y="33"/>
+          <view angle="90" col="1" x="1" y="33"/>
+          <view angle="135" y="33" hm="true"/>
+          <view angle="180" col="2" x="1" y="33" hm="true"/>
+          <view angle="225" col="3" y="33" hm="true"/>
+          <view angle="270" col="4" y="35"/>
+          <view angle="315" col="3" y="33"/>
+        </layer>
+        <layer id="Tire" texture="Tire">
+          <view angle="0" col="2" y="27"/>
+          <view angle="45" y="27"/>
+          <view angle="90" col="1" x="1" y="27"/>
+          <view angle="135" y="27" hm="true"/>
+          <view angle="180" col="2" x="1" y="27" hm="true"/>
+          <view angle="225" col="3" y="27" alpha="0" hm="true"/>
+          <view angle="270" col="4" y="29"/>
+          <view angle="315" col="3" y="27"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Idle">
+          <layerref id="Tank"/>
+        </frame>
+        <frame id="walk">
+          <layerref id="Tank"/>
+          <layerref id="Tire"/>
+        </frame>
+        <frame id="sit">
+          <layerref id="sit"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="sit"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="walk"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

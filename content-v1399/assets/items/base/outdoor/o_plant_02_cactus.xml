@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item.SpriteItem desc="A wild desert cactus" dropTargetClamp="none" dropTargetList="floor" dropTargetType="none" icon="items/base/outdoor/icon_o_plant_02_cactus.png" id="846" name="Wild Cactus" tags="plant" price="40" tokens="400" minLevel="1" minCPLevel="1">
+  <volume>
+    <box max="0.3,2,0.3" min="-0.3,0,-0.3"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture cols="2" id="cactus" rows="1" source="items/base/outdoor/o_plant_02_cactus.png"/>
+  </textures>
+  <nodes>
+    <node id="cactus">
+      <box max="0.3,2,0.3" min="-0.3,0,-0.3"/>
+      <layers>
+        <layer id="cactus" texture="cactus">
+          <view angle="45" y="17"/>
+          <view angle="135" col="1" mirror="true" y="17"/>
+          <view angle="225" y="17"/>
+          <view angle="315" col="1" x="-2" y="17"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

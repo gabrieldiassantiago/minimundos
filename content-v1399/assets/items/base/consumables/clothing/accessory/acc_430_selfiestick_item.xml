@@ -1,0 +1,48 @@
+<item.SpriteItem id="5360" name="Bastão de Selfie Play" desc="Um imagem vale mais do que mil palavras" tags="rare,consumable,actionbar,wear,hand,usable,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_430_selfiestick_icon.png" price="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.45,0,-0.2" max="0.45,0.05,0.2"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+50"/>
+  </data>
+  <textures>
+    <texture id="staff" source="items/base/consumables/clothing/accessory/acc_430_selfiestick_item.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.45,0,-0.2" max="0.45,0.05,0.2"/>
+      <layers>
+        <layer id="Staff" texture="staff">
+          <view angle="45" x="-6" y="24"/>
+          <view angle="135" x="6" y="24" hm="true"/>
+          <view angle="225" col="1" x="6" y="29"/>
+          <view angle="315" col="1" x="-6" y="29" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Staff"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Consume" framerate="2">
+          <frameref id="Frame">
+            <sample id="eat"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

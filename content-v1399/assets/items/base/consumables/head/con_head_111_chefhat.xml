@@ -1,0 +1,31 @@
+<item.SpriteItem id="0" name="Chef Hat" desc="A puffy chef hat" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="horns" source="items/base/consumables/head/con_head_111_chefhat.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="horns" texture="horns">
+          <view angle="0" y="-15" hm="true"/>
+          <view angle="45" x="-4" y="-15"/>
+          <view angle="90" x="2" y="-15" hm="true"/>
+          <view angle="135" x="-2" y="-15"/>
+          <view angle="180" y="-15" hm="true"/>
+          <view angle="225" y="-15"/>
+          <view angle="270" y="-15" hm="true"/>
+          <view angle="315" y="-15"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="horns"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

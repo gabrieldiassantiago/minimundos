@@ -1,0 +1,116 @@
+<item.SpriteItem id="0" name="Starwand Projectile" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.1,-0.1,-0.1" max="0.1,0.1,0.1"/>
+  </volume>
+  <data>
+    <entry key="default" value="Default"/>
+  </data>
+  <textures>
+    <texture id="proj_generic" source="items/base/consumables/magic/proj_63_starwand.png" cols="2" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_ring_b.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_small_sharp.png" cols="1" rows="1"/>
+    <texture id="mag_effect_vialglow" source="items/base/consumables/magic/con_mag_effect_vialglow.png" cols="2" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="laser" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,-0.1,-0.1" max="0.1,0.1,0.1"/>
+      <layers>
+        <layer id="FX 01" texture="proj_generic" y="25">
+          <view/>
+        </layer>
+        <layer id="FX 02" texture="proj_generic" y="25">
+          <view col="1"/>
+        </layer>
+        <layer id="FX 03" texture="proj_generic" y="42">
+          <view angle="0" col="1" x="-28" y="-13" hm="true" vm="true"/>
+          <view angle="45" col="1" x="-28" y="-27" hm="true" vm="true"/>
+          <view angle="90" col="1" y="-38" hm="true" vm="true"/>
+          <view angle="135" col="1" x="20" y="-21" hm="true" vm="true"/>
+          <view angle="180" col="1" x="29" y="-13" hm="true" vm="true"/>
+          <view angle="225" col="1" x="22" hm="true" vm="true"/>
+          <view angle="270" col="1" y="13"/>
+          <view angle="315" col="1" x="-21" y="-3" hm="true" vm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="FX 01"/>
+          <layerref id="FX 02" a="0.4"/>
+          <layerref id="FX 03" a="0.5"/>
+        </frame>
+        <frame id="02">
+          <layerref id="FX 01" a="0.6"/>
+          <layerref id="FX 02" a="0.8"/>
+          <layerref id="FX 03" a="0.2"/>
+        </frame>
+        <frame id="Idle 01"/>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Idle 01"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="01">
+            <sample id="laser"/>
+          </frameref>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="2.2" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0x3a64ff"/>
+        </frame>
+        <frame id="02">
+          <layerref id="Light" color="0x3a64ff" a="0.95"/>
+        </frame>
+        <frame id="_BLANK">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="_BLANK"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" s="2.5" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Intense" align="middle">
+          <view/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="Light" color="0xe1dc45" a="0.6"/>
+        </frame>
+        <frame id="_BLANK">
+          <layerref id="Light" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4" syncOffsets="0,1">
+          <frameref id="_BLANK"/>
+        </animation>
+        <animation id="Projectile" framerate="4" syncOffsets="0,1">
+          <frameref id="01"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

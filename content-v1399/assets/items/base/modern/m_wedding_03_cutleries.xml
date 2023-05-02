@@ -1,0 +1,30 @@
+<item.SpriteItem id="2976" name="Conjunto de Jantar Elegance" desc="Um elegante conjunto de jantar de casamento." tags="misc,decoration" icon="items/base/modern/icon_m_wedding_03_cutleries.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" price="30">
+  <volume>
+    <box min="-0.1,0,-0.1" max="0.1,0,0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="cutlery" source="items/base/modern/m_wedding_03_cutleries.png" cols="4" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.1,0,-0.1" max="0.1,0,0.1"/>
+      <layers>
+        <layer id="cutlery" texture="cutlery" y="-7">
+          <view angle="45" y="23"/>
+          <view angle="135" col="1" x="4" y="23"/>
+          <view angle="225" col="2" x="1" y="31"/>
+          <view angle="315" col="3" x="-1" y="30"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

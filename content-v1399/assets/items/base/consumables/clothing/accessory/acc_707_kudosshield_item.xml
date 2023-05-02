@@ -1,0 +1,47 @@
+<item.SpriteItem id="6410" name="Escudo de Estrela Glória" desc="Obrigado por jogar MiniMundos" tags="rare,actionbar,kudos,consumable,hand,usable,wear,action_holdable_toggle" icon="items/base/consumables/clothing/accessory/acc_707_kudosshield_icon.png" price="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.1,0,-0.22" max="0.1,0.7,0.22"/>
+  </volume>
+  <events>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="action_hold" script="scripts/item/action_wearable.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="toggle" script="scripts/item/toggle_container.as"/>
+    <event id="select" script="scripts/item/select_holdable_container.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes_secondary" value="health+20,speed+5"/>
+  </data>
+  <textures>
+    <texture id="Base" source="items/base/consumables/clothing/accessory/acc_707_kudosshield_item.png" cols="2" rows="1"/>
+    <texture id="Shield" source="items/base/consumables/clothing/accessory/acc_707_kudosshield_hand.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="tablet">
+      <box min="-0.1,0,-0.22" max="0.1,0.7,0.22"/>
+      <layers>
+        <layer id="Shield" texture="Shield" y="45">
+          <view angle="45" col="1" y="-25"/>
+          <view angle="135" col="1" y="-25" hm="true"/>
+          <view angle="225" col="4" x="-1" y="-23" hm="true"/>
+          <view angle="315" col="4" x="1" y="-23"/>
+        </layer>
+        <layer id="base" texture="Base" y="-11">
+          <view angle="45" y="24"/>
+          <view angle="135" y="24" hm="true"/>
+          <view angle="225" col="1" y="24"/>
+          <view angle="315" col="1" y="24" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations>
+        <animation id="Open" framerate="2"/>
+        <animation id="Closed"/>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

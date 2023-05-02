@@ -1,0 +1,31 @@
+<item.SpriteItem id="0" name="Red Ear Muff" desc="A red ear muff" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="0,0,0" max="0,0,0"/>
+  </volume>
+  <textures>
+    <texture id="horns" source="items/base/consumables/clothing/accessory/acc_160_head_earmuffred.png" cols="3" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="horns" texture="horns">
+          <view angle="0" col="2" y="7" hm="true"/>
+          <view angle="45" y="7"/>
+          <view angle="90" col="1" x="1" y="7"/>
+          <view angle="135" y="7" hm="true"/>
+          <view angle="180" col="2" y="7"/>
+          <view angle="225" x="-1" y="7"/>
+          <view angle="270" col="1" x="1" y="3"/>
+          <view angle="315" x="1" y="7" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="horns"/>
+        </frame>
+      </frames>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

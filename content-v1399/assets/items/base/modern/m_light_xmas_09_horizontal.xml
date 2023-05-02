@@ -1,0 +1,97 @@
+<item.SpriteItem id="2901" name="Luzinhas Horizontais" desc="Para montar o desenho que quiser." tags="misc,wall" icon="items/base/modern/icon_m_light_xmas_09_horizontal.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="wall,avatar" dropTargetClamp="none" price="20" tokens="200">
+  <volume>
+    <box min="0,-0.1,-0.1" max="0,0.1,0.1"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="toggle" script="scripts/item/toggle.as"/>
+    <event id="action" script="scripts/item/action_toggle.as"/>
+    <event id="select" script="scripts/item/select_toggle.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+  </events>
+  <actions>
+    <action id="Toggle" label="Alternar" trigger="false" event="toggle"/>
+    <action id="On" label="Ligar" state="true" event="animate(On)"/>
+    <action id="Off" label="Desligar" state="true" event="animate(Off)"/>
+  </actions>
+  <navigate position="infront" accessibleRange="2.00"/>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="light glow" source="items/base/modern/m_light_xmas_09_horizontal_glow.png" cols="1" rows="1"/>
+    <texture id="light on" source="items/base/modern/m_light_xmas_09_horizontal_on.png" cols="1" rows="1"/>
+    <texture id="light off" source="items/base/modern/m_light_xmas_09_horizontal_off.png" cols="1" rows="1"/>
+    <texture id="light glowspread" source="items/base/modern/m_light_xmas_09_horizontal_glowspread.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="nodes">
+      <box min="0,-0.1,-0.1" max="0,0.1,0.1"/>
+      <layers>
+        <layer id="light_on" texture="light on" y="100">
+          <view angle="45" y="-67"/>
+          <view angle="135" y="-67" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+        <layer id="light_off" texture="light off" y="100">
+          <view angle="45" y="-67"/>
+          <view angle="135" y="-67" hm="true"/>
+          <view angle="225" alpha="0"/>
+          <view angle="315" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="frame01">
+          <layerref id="light_on"/>
+        </frame>
+        <frame id="frame02">
+          <layerref id="light_off"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On" framerate="16">
+          <frameref id="frame01"/>
+        </animation>
+        <animation id="Off" framerate="16">
+          <frameref id="frame02"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="4" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="light glow" texture="light glow" align="middle">
+          <view angle="45" y="1"/>
+          <view angle="135" y="1" hm="true"/>
+          <view angle="225" y="-10" alpha="0"/>
+          <view angle="315" y="-10" alpha="0"/>
+        </layer>
+        <layer id="light glowspread" texture="light glowspread" align="middle">
+          <view angle="45"/>
+          <view angle="135" hm="true"/>
+          <view angle="225" y="-10" alpha="0"/>
+          <view angle="315" y="-10" alpha="0"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="01">
+          <layerref id="light glow"/>
+          <layerref id="light glowspread"/>
+        </frame>
+        <frame id="02">
+          <layerref id="light glow" a="0"/>
+          <layerref id="light glowspread" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="On">
+          <frameref id="01"/>
+        </animation>
+        <animation id="Off">
+          <frameref id="02"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

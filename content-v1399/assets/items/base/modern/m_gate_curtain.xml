@@ -1,0 +1,144 @@
+<item.SpriteItem id="2051" name="Cortina de Vestiário" desc="Para o mini não passar vergonha ao se trocar na miniFábrica." tags="admin,misc" icon="items/base/modern/icon_m_gate_curtain.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="0.1,0,-0.5" max="0.5,2.92,0.5"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/item/action_gate.as"/>
+    <event id="open" script="scripts/item/open_gate.as"/>
+    <event id="select" script="scripts/item/select_gate.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="close" script="scripts/item/close_gate.as"/>
+  </events>
+  <actions>
+    <action id="Open" state="true" event="open"/>
+    <action id="Close" state="true" event="close"/>
+  </actions>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <navigate usableRange="-1.00" accessibleRange="2.00"/>
+  <textures>
+    <texture id="pole" source="items/base/modern/m_gate_curtain_pole.png" cols="1" rows="1"/>
+    <texture id="closed" source="items/base/modern/m_gate_curtain_closed.png" cols="1" rows="1"/>
+    <texture id="open" source="items/base/modern/m_gate_curtain_open.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="closed" x="0.3">
+      <box min="-0.2,0,-0.5" max="0.2,2.92,0.5"/>
+      <layers>
+        <layer id="pole" texture="pole" y="-20">
+          <view angle="45" x="12" y="-153"/>
+          <view angle="135" x="-12" y="-153" hm="true"/>
+          <view angle="225" x="8" y="-153"/>
+          <view angle="315" x="-8" y="-153" hm="true"/>
+        </layer>
+        <layer id="closed curtain" texture="closed" y="-20">
+          <view angle="45" x="5" y="40"/>
+          <view angle="135" x="-5" y="40" hm="true"/>
+          <view angle="225" x="2" y="40"/>
+          <view angle="315" x="-4" y="40" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="closed_hidden">
+          <layerref id="pole" a="0"/>
+          <layerref id="closed curtain" a="0"/>
+        </frame>
+        <frame id="closed">
+          <layerref id="pole"/>
+          <layerref id="closed curtain"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="closed"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="closed_hidden"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open right" x="0.3">
+      <box min="-0.2,0,0.41" max="0.2,2.7,0.49"/>
+      <layers>
+        <layer id="pole" texture="pole" y="-20">
+          <view angle="45" x="12" alpha="0"/>
+          <view angle="135" x="-12" y="-153" hm="true"/>
+          <view angle="225" x="8" y="-153"/>
+          <view angle="315" x="-8" alpha="0" hm="true"/>
+        </layer>
+        <layer id="curtain" texture="open" y="-20">
+          <view angle="45" x="35" y="-8" alpha="0"/>
+          <view angle="135" x="-42" y="-3" hm="true"/>
+          <view angle="225" x="36" y="-2"/>
+          <view angle="315" x="-35" y="-19" alpha="0" hm="true"/>
+        </layer>
+        <layer id="curtain01" texture="open" y="-20">
+          <view angle="45" x="35" y="-8" alpha="0"/>
+          <view angle="135" x="44" y="38" hm="true"/>
+          <view angle="225" x="-44" y="38"/>
+          <view angle="315" x="-35" y="-19" alpha="0" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="pole"/>
+          <layerref id="curtain"/>
+          <layerref id="curtain01"/>
+        </frame>
+        <frame id="hidden">
+          <layerref id="pole" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="hidden"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="open left" x="0.3">
+      <box min="-0.2,0,-0.45" max="0.2,2.7,-0.32"/>
+      <layers>
+        <layer id="pole" texture="pole" y="-20">
+          <view angle="45" x="12" y="-153"/>
+          <view angle="135" x="-12" alpha="0" hm="true"/>
+          <view angle="225" x="8" alpha="0"/>
+          <view angle="315" x="-8" y="-153" hm="true"/>
+        </layer>
+        <layer id="curtain" texture="open" y="-20">
+          <view angle="45" x="38" y="-2"/>
+          <view angle="135" x="-35" y="-19" alpha="0" hm="true"/>
+          <view angle="225" x="35" y="-19" alpha="0"/>
+          <view angle="315" x="-38" y="-4" hm="true"/>
+        </layer>
+        <layer id="curtain01" texture="open" y="-20">
+          <view angle="45" x="-44" y="39"/>
+          <view angle="135" x="-35" y="-19" alpha="0" hm="true"/>
+          <view angle="225" x="35" y="-19" alpha="0"/>
+          <view angle="315" x="44" y="38" hm="true"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="open">
+          <layerref id="pole"/>
+          <layerref id="curtain"/>
+          <layerref id="curtain01"/>
+        </frame>
+        <frame id="hidden">
+          <layerref id="pole" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Closed" framerate="4" loop="false">
+          <frameref id="hidden"/>
+        </animation>
+        <animation id="Open" framerate="4" loop="false">
+          <frameref id="open"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

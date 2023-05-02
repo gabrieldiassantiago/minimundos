@@ -1,0 +1,30 @@
+<item.SpriteItem id="7463" name="Lago Congelado" desc="Um pequeno lago congelado [18 of 25]" tags="rare,misc" icon="items/base/consumables/clothing/accessory/acc_942_janbox_18_icon.png" price="250" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-1.48,-0.001,-1.48" max="1.48,0,1.48"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="singleClickNavigate" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/consumables/clothing/accessory/acc_942_janbox_18_item.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Rug" layer="surface">
+      <box min="-1.48,-0.001,-1.48" max="1.48,0,1.48"/>
+      <layers>
+        <layer id="Rug" texture="Texture" align="middle">
+          <view angle="45" y="5"/>
+          <view angle="135" y="5" hm="true"/>
+          <view angle="225" y="5"/>
+          <view angle="315" y="5" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

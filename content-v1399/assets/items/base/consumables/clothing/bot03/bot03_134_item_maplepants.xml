@@ -1,0 +1,38 @@
+<item.SpriteItem id="6972" name="Calças Coleção Maple Apex" desc="Um par de calças casual criadas por Austin Kincaid" tags="rare,consumable,clothing,actionbar,wear,nopvp,bot03,action_wearable_toggle" icon="items/base/consumables/clothing/bot03/bot03_134_icon_maplepants_a.png" price="1" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.24,0,-0.21" max="0.86,0.09,0.21"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+    <event id="action_try" script="scripts/item/action_wearable_try.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="fragmentURL" value="items/base/consumables/clothing/bot03/bot03_134_frag_maplepants.xml"/>
+    <entry key="fragmentUIGroup" value="FragmentUI"/>
+    <entry key="fragmentUIID" value="UI"/>
+    <entry key="action_attributes_secondary" value="health+5"/>
+  </data>
+  <textures>
+    <texture id="jean" source="items/base/consumables/clothing/bot03/bot03_134_item_maplepants.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.24,0,-0.21" max="0.86,0.09,0.21"/>
+      <layers>
+        <layer id="Layer" texture="jean" y="19">
+          <view angle="45" x="22" y="27"/>
+          <view angle="135" x="-22" y="27" hm="true"/>
+          <view angle="225" col="1" x="-23" y="7"/>
+          <view angle="315" col="1" x="23" y="7" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

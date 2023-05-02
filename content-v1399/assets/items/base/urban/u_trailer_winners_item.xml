@@ -1,0 +1,60 @@
+<item.SpriteItem id="6921" name="Trailer Winners" desc="Congratulations!" tags="admin,misc" icon="items/base/urban/u_trailer_winners_icon.png" minLevel="1" minCPLevel="1" gridActive="false" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.2,0,-0.2" max="0.2,0.2,0.2"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="action" source="items/base/urban/u_trailer_winners_item.png" cols="1" rows="1"/>
+    <texture id="Texture" source="items/base/shared/s_fx_flare_diffuse_64.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node" depthBias="-2">
+      <box min="-0.2,0,-0.2" max="0.2,0.2,0.2"/>
+      <layers>
+        <layer id="action" texture="action" align="middle" y="-50">
+          <view angle="45" y="-260"/>
+          <view angle="135" y="-2" hm="true"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame01">
+          <layerref id="action"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="1">
+          <frameref id="Frame01" duration="10"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" y="2" s="15" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Texture" align="middle" y="-3">
+          <view angle="45" y="-10" hm="true"/>
+          <view angle="135"/>
+          <view angle="225"/>
+          <view angle="315"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xbdf4f4"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Animation" framerate="4">
+          <frameref id="On"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

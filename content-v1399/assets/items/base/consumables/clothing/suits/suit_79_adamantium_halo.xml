@@ -1,0 +1,145 @@
+<item.SpriteItem id="0" name="Halo" desc="An item" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+  </volume>
+  <textures>
+    <texture id="halo" source="items/base/consumables/clothing/suits/suit_79_adamantium_halo.png" cols="5" rows="1"/>
+    <texture id="Light" source="items/base/shared/s_fx_flare_diffuse.png" cols="1" rows="1"/>
+    <texture id="Lens" source="items/base/consumables/clothing/suits/suit_79_adamantium_lensflare.png" cols="5" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Infront">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="Halo_01" texture="halo" y="20">
+          <view angle="0" col="2" x="-10" y="42"/>
+          <view angle="45" col="1" x="-10" y="42"/>
+          <view angle="90" y="42"/>
+          <view angle="135" col="1" x="10" y="40" hm="true"/>
+          <view angle="180" col="2" x="10" y="42" hm="true"/>
+          <view angle="225" col="3" x="10" y="44" hm="true"/>
+          <view angle="270" col="4" y="42"/>
+          <view angle="315" col="3" x="-10" y="42"/>
+        </layer>
+        <layer id="Lens" texture="Lens" y="20">
+          <view angle="0" col="2" x="-10" y="42"/>
+          <view angle="45" col="1" x="-10" y="42"/>
+          <view angle="90" y="42"/>
+          <view angle="135" col="1" x="10" y="40" hm="true"/>
+          <view angle="180" col="2" x="10" y="42" hm="true"/>
+          <view angle="225" col="3" x="10" y="44" hm="true"/>
+          <view angle="270" col="4" y="42"/>
+          <view angle="315" col="3" x="-10" y="42"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="In 01">
+          <layerref id="Halo_01"/>
+          <layerref id="Lens"/>
+        </frame>
+        <frame id="In 02">
+          <layerref id="Halo_01" y="1"/>
+          <layerref id="Lens"/>
+        </frame>
+        <frame id="In 03">
+          <layerref id="Halo_01" a="0.9"/>
+          <layerref id="Lens"/>
+        </frame>
+        <frame id="In 04">
+          <layerref id="Halo_01" y="1" a="0.9"/>
+          <layerref id="Lens"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Halo_01" y="1" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="8">
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+          <frameref id="In 04"/>
+        </animation>
+        <animation id="Walk" framerate="8">
+          <frameref id="In 01"/>
+          <frameref id="In 02"/>
+          <frameref id="In 03"/>
+          <frameref id="In 04"/>
+        </animation>
+        <animation id="Sit" framerate="8">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Intense" buffer="intense" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Halo_01" texture="halo" y="20">
+          <view angle="0" col="2" x="-10" y="42"/>
+          <view angle="45" col="1" x="-10" y="42"/>
+          <view angle="90" y="42"/>
+          <view angle="135" col="1" x="10" y="40" hm="true"/>
+          <view angle="180" col="2" x="10" y="42" hm="true"/>
+          <view angle="225" col="3" x="10" y="44" hm="true"/>
+          <view angle="270" col="4" y="42"/>
+          <view angle="315" col="3" x="-10" y="42"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Halo_01"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Halo_01" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Diffuse" s="5" buffer="diffuse" type="light">
+      <box min="0,0,0" max="0,0,0"/>
+      <layers>
+        <layer id="Light" texture="Light" align="middle">
+          <view angle="45" x="-3" y="-9"/>
+          <view angle="135" x="3" y="-9"/>
+          <view angle="225" x="3" y="-9"/>
+          <view angle="315" x="-3" y="-9"/>
+          <view angle="0" x="-3" y="-9"/>
+          <view angle="180" x="3" y="-9"/>
+          <view angle="270" y="-9"/>
+          <view angle="90" y="-9"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="On">
+          <layerref id="Light" color="0xb6dbf5"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Light" color="0xb6dbf5" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Walk" framerate="4">
+          <frameref id="On"/>
+        </animation>
+        <animation id="Sit" framerate="4">
+          <frameref id="Off">
+            <sample/>
+          </frameref>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

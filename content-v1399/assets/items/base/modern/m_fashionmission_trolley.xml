@@ -1,0 +1,27 @@
+<item.SpriteItem id="3325" name="Carrinho de Acessórios Luxe" desc="Um carrinho de acessórios para salão profissional." tags="table" icon="items/base/modern/icon_m_fashionmission_trolley.png" minLevel="1" minCPLevel="1" dropTargetType="table" dropTargetList="floor,avatar" dropTargetClamp="none" price="70">
+  <volume>
+    <box min="-0.275,0,-0.275" max="0.275,0.875,0.275"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_fashionmission_trolley.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.275,0,-0.275" max="0.275,0.875,0.275"/>
+      <layers>
+        <layer id="Layer" texture="Texture">
+          <view angle="45" x="3" y="18" hm="true"/>
+          <view angle="135" x="-3" y="18"/>
+          <view angle="225" col="1" x="-3" y="18" hm="true"/>
+          <view angle="315" col="1" x="3" y="18"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

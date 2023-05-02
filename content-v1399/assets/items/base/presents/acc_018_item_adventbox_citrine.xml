@@ -1,0 +1,27 @@
+<item.SpriteItem name="Caixa de Presente Aberta Citrino" desc="Uma caixa de presentes vazia do Natal de 2017 [18 of 25]" tags="rare,misc" icon="items/base/presents/acc_018_icon_adventbox_citrine.png" price="10" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" id="7501">
+  <volume>
+    <box min="-0.15,0,-0.35" max="0.15,0.6,0.35"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select" script="scripts/item/select.as"/>
+  </events>
+  <textures>
+    <texture id="Base" source="items/base/presents/acc_018_item_adventbox_citrine.png" cols="2" rows="2"/>
+  </textures>
+  <nodes>
+    <node id="Node01">
+      <box min="-0.15,0,-0.35" max="0.15,0.6,0.35"/>
+      <layers>
+        <layer id="Base" texture="Base" y="16">
+          <view angle="45" x="3" y="-2"/>
+          <view angle="135" col="1" x="-2" y="-3"/>
+          <view angle="225" row="1" x="-1" y="-4"/>
+          <view angle="315" col="1" row="1" y="-3"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,34 @@
+<item.SpriteItem id="4588" name="Barbatana de Tubarão Play" desc="Uma barbatana mortal de tubarão play" tags="rare,consumable,back,wear,actionbar,action_wearable_toggle" icon="items/base/consumables/clothing/accessory/acc_228_icon_sharkfin.png" price="725" minLevel="1" minLevelType="2" minCPLevel="1" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.25,0,-0.15" max="0.25,0.32,0.15"/>
+  </volume>
+  <events>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="select" script="scripts/item/select_wearable.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_wearable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="false"/>
+    <entry key="action_attributes" value="speed+40"/>
+  </data>
+  <textures>
+    <texture id="hat" source="items/base/consumables/clothing/accessory/acc_228_item_sharkfin.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Node">
+      <box min="-0.25,0,-0.15" max="0.25,0.32,0.15"/>
+      <layers>
+        <layer id="hat" texture="hat">
+          <view angle="45" y="12"/>
+          <view angle="135" y="12" hm="true"/>
+          <view angle="225" col="1" y="16"/>
+          <view angle="315" col="1" y="16" hm="true"/>
+        </layer>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

@@ -1,0 +1,28 @@
+<item.SpriteItem id="4540" name="Troféu do Campeão" desc="Um troféu para o campeão" icon="items/base/modern/icon_m_trophy_11_goldtrophy.png" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,table,avatar" dropTargetClamp="none" tags="usable,rare,hand,action_holdable_toggle" price="10">
+  <volume>
+    <box min="-0.25,0,-0.25" max="0.25,1.3,0.25"/>
+  </volume>
+  <events>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="select_inventory" script="scripts/item/select_inventory_holdable.as"/>
+    <event id="action" script="scripts/item/action_wearable.as"/>
+    <event id="action_inventory" script="scripts/item/action_inventory_wearable.as"/>
+    <event id="select" script="scripts/item/select_holdable.as"/>
+  </events>
+  <data>
+    <entry key="hasAccessSecurity" value="true"/>
+  </data>
+  <textures>
+    <texture id="Texture" source="items/base/modern/m_trophy_11_goldtrophy.png" cols="2" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Gold Trophy">
+      <box min="-0.25,0,-0.25" max="0.25,1.3,0.25"/>
+      <layers>
+        <layer id="Layer" texture="Texture" y="12"/>
+      </layers>
+      <frames/>
+      <animations/>
+    </node>
+  </nodes>
+</item.SpriteItem>

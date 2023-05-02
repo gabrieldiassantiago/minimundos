@@ -1,0 +1,101 @@
+<item.SpriteItem id="1697" name="Escultura de Moderador" desc="Nobre moderador que deve ser honrado com prestígio." tags="decoration" icon="items/base/entrance/icon_e_statue_01_dan.png" price="95" tokens="950" minLevel="1" minCPLevel="1" dropTargetType="none" dropTargetList="floor,avatar" dropTargetClamp="none">
+  <volume>
+    <box min="-0.49,0,-0.49" max="0.49,2.5,0.49"/>
+  </volume>
+  <events>
+    <event id="action" script="scripts/widget/action_navigate.as"/>
+    <event id="activate" script="scripts/widget/activate_navigate.as"/>
+    <event id="select" script="scripts/widget/select.as"/>
+    <event id="manipulate" script="scripts/item/manipulate.as"/>
+    <event id="animate" script="scripts/item/animate.as"/>
+    <event id="show" script="scripts/widget/show_dialog.as"/>
+  </events>
+  <actions>
+    <action id="Open" state="true" event="animate(Open)"/>
+    <action id="Closed" state="true" event="animate(Closed)"/>
+    <action id="Open2" state="true" event="animate(Open2)"/>
+  </actions>
+  <textures>
+    <texture id="Starburst" source="items/base/consumables/magic/effect_starburst.png" cols="1" rows="1"/>
+    <texture id="Glow Head" source="items/base/consumables/magic/effect_glow_head.png" cols="1" rows="1"/>
+    <texture id="icon" source="items/base/consumables/back/con_bak_04_headhalo_mod.png" cols="1" rows="1"/>
+    <texture id="Light" source="items/base/consumables/magic/halo_glow_lighting.png" cols="1" rows="1"/>
+    <texture id="Intense" source="items/base/shared/s_fx_flare_halo_mod.png" cols="1" rows="1"/>
+    <texture id="sym" source="items/base/shared/s_fx_flare_halo_mod_sym.png" cols="1" rows="1"/>
+    <texture id="dan" source="items/base/entrance/e_statue_01_dan.png" cols="2" rows="1"/>
+    <texture id="helper" source="items/base/consumables/back/con_bak_04_headhalo_help.png" cols="1" rows="1"/>
+  </textures>
+  <nodes>
+    <node id="Behind" depthBias="1">
+      <box min="-0.28,0,0.22" max="-0.22,0.06,0.28"/>
+      <layers>
+        <layer id="StarBurst" texture="Starburst">
+          <view y="44"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Starburst Mod">
+          <layerref id="StarBurst" color="0xf2c2ab" a="0.6" blend="add"/>
+        </frame>
+        <frame id="Starburst Help">
+          <layerref id="StarBurst" color="0xb6ffb6" a="0.6" blend="add"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="StarBurst" a="0"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="4">
+          <frameref id="Starburst Mod"/>
+        </animation>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open2" framerate="4">
+          <frameref id="Starburst Mod"/>
+        </animation>
+      </animations>
+    </node>
+    <node id="Infront">
+      <box min="-0.49,0,-0.49" max="0.49,2.5,0.49"/>
+      <layers>
+        <layer id="moderator" texture="icon" y="-40">
+          <view y="-156"/>
+        </layer>
+        <layer id="Dan" texture="dan" y="26">
+          <view angle="45" x="-1" y="-1"/>
+          <view angle="135" x="1" y="-1" hm="true"/>
+          <view angle="225" col="1" x="3" y="-3"/>
+          <view angle="315" col="1" x="-3" y="-2" hm="true"/>
+        </layer>
+        <layer id="helper" texture="helper" y="-40">
+          <view y="-156"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Mod">
+          <layerref id="moderator"/>
+          <layerref id="Dan"/>
+        </frame>
+        <frame id="Off">
+          <layerref id="Dan"/>
+        </frame>
+        <frame id="Help">
+          <layerref id="Dan"/>
+          <layerref id="helper" a="0.88"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Open" framerate="4">
+          <frameref id="Mod"/>
+        </animation>
+        <animation id="Closed" framerate="4">
+          <frameref id="Off"/>
+        </animation>
+        <animation id="Open2" framerate="4">
+          <frameref id="Help"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>

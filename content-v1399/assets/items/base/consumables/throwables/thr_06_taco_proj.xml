@@ -1,0 +1,44 @@
+<item.SpriteItem id="0" name="Taco projectile" desc="Taco effect" tags="light" dropTargetType="none" dropTargetList="floor, table,avatar" dropTargetClamp="none" entity="false">
+  <volume>
+    <box min="-0.08,-0.15,-0.1" max="0.05,0.25,0.1"/>
+  </volume>
+  <textures>
+    <texture id="Taco" source="items/base/consumables/throwables/thr_06_taco_proj.png" cols="5" rows="1"/>
+  </textures>
+  <sounds>
+    <sound id="woosh" source="items/base/consumables/magic/sndfx_woosh.mp3"/>
+  </sounds>
+  <nodes>
+    <node id="Taco">
+      <box min="-0.08,-0.15,-0.1" max="0.05,0.25,0.1"/>
+      <layers>
+        <layer id="Taco" texture="Taco">
+          <view angle="0" y="14"/>
+          <view angle="45" col="1" y="14"/>
+          <view angle="90" col="2" y="14" hm="true"/>
+          <view angle="135" col="1" y="14" hm="true"/>
+          <view angle="180" y="14" hm="true"/>
+          <view angle="225" col="4" y="14" hm="true"/>
+          <view angle="270" col="3" y="14"/>
+          <view angle="315" col="4" y="14"/>
+        </layer>
+      </layers>
+      <frames>
+        <frame id="Frame">
+          <layerref id="Taco"/>
+        </frame>
+      </frames>
+      <animations>
+        <animation id="Idle" framerate="4">
+          <frameref id="Frame"/>
+        </animation>
+        <animation id="Projectile" framerate="4">
+          <frameref id="Frame">
+            <sample id="woosh"/>
+          </frameref>
+          <frameref id="Frame"/>
+        </animation>
+      </animations>
+    </node>
+  </nodes>
+</item.SpriteItem>
